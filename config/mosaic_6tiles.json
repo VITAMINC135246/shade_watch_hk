@@ -1,0 +1,21 @@
+{
+  "output_mode": "native_mosaic",
+  "custom_width_m": 600,
+  "custom_height_m": 450,
+  "search_distance_m": 1000,
+  "buffer_m": 1000,
+  "workers": 3,
+  "memory_budget_mb": 4096,
+  "preview_max_side_px": 1500,
+  "output_directory": "outputs/native_mosaic_6tiles_1km_20260929",
+  "cache_directory": "data/processed/horizon_cache_1km",
+  "core_mode": "native_tile",
+  "native_tile_names": [
+    "11NE10B(e844n822,e845n822).tif",
+    "12NW6A(e845n822,e845n822).tif",
+    "11NE10D(e844n821,e845n822).tif",
+    "12NW6C(e845n821,e845n822).tif",
+    "11NE15B(e844n821,e845n821).tif",
+    "12NW11A(e845n821,e845n821).tif"
+  ]
+}

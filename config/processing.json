@@ -1,0 +1,13 @@
+{
+  "output_mode": "native_tile",
+  "custom_width_m": 600,
+  "custom_height_m": 450,
+  "search_distance_m": 1000,
+  "buffer_m": 1000,
+  "workers": 1,
+  "memory_budget_mb": 4096,
+  "preview_max_side_px": 1500,
+  "output_directory": "outputs/native_tile_geometric_1km_20260929",
+  "cache_directory": "data/processed/horizon_cache_1km",
+  "core_mode": "native_tile"
+}

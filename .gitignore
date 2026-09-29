@@ -1,0 +1,39 @@
+# Local environments, tools, and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+node_modules/
+.DS_Store
+*.log
+
+# Local configuration and credentials
+.env
+.env.*
+*.pem
+*.key
+credentials*.json
+secrets*.json
+config/*local*
+
+# Papers, supplementary files, and source data stay local
+/references/*
+!/references/README.md
+/data/raw/dsm/*
+!/data/raw/dsm/README.md
+/data/raw/validation/*
+!/data/raw/validation/README.md
+/data/raw/basemap/*
+!/data/raw/basemap/README.md
+
+# Derived data and generated deliverables
+/data/processed/*
+!/data/processed/README.md
+/outputs/*
+!/outputs/README.md
+/web/dist/
+/web/build/

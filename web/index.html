@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shade Watch HK — local timeline</title>
+  <style>
+    :root { font-family: system-ui, -apple-system, sans-serif; color: #111; background: #fff; }
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 24px; }
+    main { max-width: 1580px; margin: auto; }
+    h1 { margin: 0 0 5px; font-size: 1.9rem; }
+    .sub { margin: 0 0 21px; color: #444; }
+    .layout { display: grid; grid-template-columns: minmax(0, 1200px) minmax(260px, 320px); gap: 24px; align-items: start; }
+    .map-wrap, .panel { background: white; border: 1px solid #111; }
+    .map-wrap { padding: 10px; }
+    .map-header { display: flex; justify-content: space-between; margin: 0 2px 10px; font-weight: 700; }
+    canvas { display: block; width: 100%; aspect-ratio: 4 / 3; image-rendering: auto; border: 1px solid #111; }
+    .map-footer { display: flex; justify-content: space-between; gap: 10px; font-size: .88rem; color: #444; margin: 10px 2px 0; }
+    .panel { padding: 21px; }
+    .time { font-size: 1.45rem; font-weight: 750; margin-bottom: 4px; }
+    .utc { color: #444; margin-bottom: 22px; }
+    input[type=range] { width: 100%; accent-color: #111; }
+    .controls { display: flex; gap: 10px; align-items: center; margin-top: 10px; }
+    button { background: #111; color: white; border: 1px solid #111; padding: 9px 15px; font-size: 1rem; cursor: pointer; }
+    button:focus-visible, input:focus-visible { outline: 3px solid #777; outline-offset: 2px; }
+    .tick { color: #444; font-variant-numeric: tabular-nums; }
+    .legend { margin-top: 27px; display: grid; gap: 10px; }
+    .key { display: flex; align-items: center; gap: 10px; }
+    .swatch { width: 21px; height: 21px; border: 1px solid #111; }
+    dl { display: grid; grid-template-columns: auto 1fr; gap: 7px 16px; font-size: .93rem; margin: 24px 0; }
+    dt { color: #444; } dd { margin: 0; font-variant-numeric: tabular-nums; }
+    .note { font-size: .86rem; color: #444; line-height: 1.45; border-top: 1px solid #bbb; padding-top: 15px; }
+    @media (max-width: 1100px) { body { padding: 14px; } .layout { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Shade Watch HK</h1>
+    <p class="sub">HKUST • 600 m × 450 m • 0.5 m pixels • 7 January 2026</p>
+    <div class="layout">
+      <section class="map-wrap" aria-label="Georeferenced binary shade map">
+        <div class="map-header"><span>Clear-sky direct sun at DSM surface</span><span>↑ N</span></div>
+        <canvas id="map" width="1200" height="900" aria-label="Pixel-level shade classification"></canvas>
+        <div class="map-footer"><span id="position">Move pointer over map for EPSG:2326 coordinates</span><span>0 ━━━ 100 m</span></div>
+      </section>
+      <section class="panel">
+        <div class="time" id="time">Loading…</div>
+        <div class="utc" id="utc"></div>
+        <label for="timeline">Simulated time</label>
+        <input id="timeline" type="range" min="0" max="0" value="0" step="1">
+        <div class="controls"><button id="play" type="button">Play</button><span class="tick" id="count"></span></div>
+        <div class="legend" aria-label="Legend">
+          <div class="key"><span class="swatch" style="background:#000"></span>Shaded (1)</div>
+          <div class="key"><span class="swatch" style="background:#fff"></span>Sunlit (0)</div>
+          <div class="key"><span class="swatch" style="background:#a0a0a0"></span>Invalid or uncertain (NoData)</div>
+        </div>
+        <dl>
+          <dt>Sun azimuth</dt><dd id="azimuth">—</dd>
+          <dt>Sun elevation</dt><dd id="elevation">—</dd>
+          <dt>Valid pixels</dt><dd id="valid">—</dd>
+          <dt>Centre</dt><dd id="centre">—</dd>
+          <dt>Output bounds</dt><dd id="bounds">—</dd>
+        </dl>
+        <p class="note">Each stop is a computed 10-minute result. The viewer does not blend or invent intermediate frames. Source: CEDD 2020 LiDAR DSM. Data owner: Government of the Hong Kong Special Administrative Region. Not yet validated against real-world observations.</p>
+      </section>
+    </div>
+  </main>
+  <script>
+    const colors = {0: [255, 255, 255], 1: [0, 0, 0], 255: [160, 160, 160]};
+    const canvas = document.getElementById('map');
+    const context = canvas.getContext('2d', {willReadFrequently: true});
+    const timeline = document.getElementById('timeline');
+    const play = document.getElementById('play');
+    let inventory, index = 0, timer = null, requestId = 0, labels = null;
+
+    function text(id, value) { document.getElementById(id).textContent = value; }
+    function stop() { if (timer) clearInterval(timer); timer = null; play.textContent = 'Play'; }
+    async function show(nextIndex) {
+      index = nextIndex;
+      timeline.value = String(index);
+      const frame = inventory.frames[index];
+      const currentRequest = ++requestId;
+      const image = new Image();
+      image.src = '../' + frame.png;
+      await image.decode();
+      if (currentRequest !== requestId) return;
+      const width = canvas.width, height = canvas.height;
+      if (image.naturalWidth !== width || image.naturalHeight !== height) throw new Error('Unexpected raster dimensions');
+      context.clearRect(0, 0, width, height);
+      context.drawImage(image, 0, 0);
+      const pixels = context.getImageData(0, 0, width, height);
+      labels = new Uint8Array(width * height);
+      for (let i = 0; i < labels.length; i++) {
+        const offset = i * 4;
+        const value = pixels.data[offset + 3] === 0 ? 255 : pixels.data[offset];
+        labels[i] = value;
+        const color = colors[value];
+        if (!color) throw new Error('Unexpected classification value: ' + value);
+        pixels.data[offset] = color[0]; pixels.data[offset + 1] = color[1];
+        pixels.data[offset + 2] = color[2]; pixels.data[offset + 3] = 255;
+      }
+      context.putImageData(pixels, 0, 0);
+      text('time', frame.local_time.slice(0, 16).replace('T', ' ') + ' HKT');
+      text('utc', 'UTC ' + frame.utc_time.slice(11, 16));
+      text('count', `${index + 1} / ${inventory.frames.length}`);
+      text('azimuth', frame.azimuth_deg.toFixed(1) + '° clockwise from north');
+      text('elevation', frame.apparent_elevation_deg.toFixed(1) + '° above horizon');
+      const valid = frame.counts.sunlit + frame.counts.shaded;
+      text('valid', `${(100 * valid / labels.length).toFixed(1)}% (${valid.toLocaleString()} / ${labels.length.toLocaleString()})`);
+    }
+    timeline.addEventListener('input', () => { stop(); show(Number(timeline.value)); });
+    play.addEventListener('click', () => {
+      if (timer) { stop(); return; }
+      play.textContent = 'Pause';
+      timer = setInterval(() => {
+        if (index >= inventory.frames.length - 1) { stop(); return; }
+        show(index + 1);
+      }, 250);
+    });
+    canvas.addEventListener('mousemove', event => {
+      if (!inventory || !labels) return;
+      const rect = canvas.getBoundingClientRect();
+      const col = Math.max(0, Math.min(canvas.width - 1, Math.floor((event.clientX - rect.left) / rect.width * canvas.width)));
+      const row = Math.max(0, Math.min(canvas.height - 1, Math.floor((event.clientY - rect.top) / rect.height * canvas.height)));
+      const [west, , , north] = inventory.study.output_bounds_m;
+      const e = west + (col + .5) * .5;
+      const n = north - (row + .5) * .5;
+      const value = labels[row * canvas.width + col];
+      text('position', `E ${e.toFixed(2)} m, N ${n.toFixed(2)} m · ${value === 255 ? 'Invalid/uncertain' : value === 1 ? 'Shaded' : 'Sunlit'}`);
+    });
+    canvas.addEventListener('mouseleave', () => text('position', 'Move pointer over map for EPSG:2326 coordinates'));
+    (async () => {
+      const response = await fetch('../outputs/600x450/result_inventory.json');
+      if (!response.ok) throw new Error('Run the project from its root with a local HTTP server.');
+      inventory = await response.json();
+      const [width, height] = inventory.study.output_pixels;
+      canvas.width = width; canvas.height = height;
+      timeline.max = String(inventory.frames.length - 1);
+      text('centre', `${inventory.study.latitude_wgs84.toFixed(6)}° N, ${inventory.study.longitude_wgs84.toFixed(6)}° E`);
+      const [w, s, e, n] = inventory.study.output_bounds_m;
+      text('bounds', `E ${w.toFixed(2)}–${e.toFixed(2)} m; N ${s.toFixed(2)}–${n.toFixed(2)} m (EPSG:2326)`);
+      await show(0);
+    })().catch(error => text('time', error.message));
+  </script>
+</body>
+</html>
