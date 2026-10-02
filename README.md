@@ -1,5 +1,11 @@
 # Shade Watch HK
 
+V1 arbitrary-date/time queries are available through `python -m src.v1` and
+`plan_shade` / `run_shade`. See the [V1 API/CLI guide](docs/v1/GUIDE.md),
+[versioned scientific policy and migration](docs/v1/POLICY.md), and
+[development evidence](docs/v1/DEVELOPMENT_REPORT.md). The commands below retain
+the historical pipeline and its documented scientific policy.
+
 For a folder-by-folder explanation of inputs, computation, outputs, and metadata dependencies, see [项目架构与数据流说明](docs/ARCHITECTURE.md).
 
 Local CPU reconstruction of clear-sky direct-sun obstruction on the supplied CEDD 2020 DSM. **Not yet validated against real-world observations.** The configured tile-selector location, 7 January 2026 simulation date, Asia/Hong_Kong time zone, 10-minute daylight sampling, 5° nearest-direction LUT, and conservative uncertainty rules are preserved.
