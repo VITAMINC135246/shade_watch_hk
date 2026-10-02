@@ -171,7 +171,7 @@ def plan_shade(*, instants=None, dates=None, interval_minutes=10,
                latitude=None, longitude=None, mode="native", bounds=None,
                width_m=None, height_m=None, crop=None, direction_method="nearest5",
                jpg=False, mp4=False, workers=1, memory_budget_mb=8192,
-               output_dir=None, cache_dir=None, dsm_dir=None):
+               output_dir=None, cache_dir=None, dsm_dir=None, _records=None):
     """Inspect inputs/cache without horizon calls or scientific/media writes.
 
     Locations are WGS84; custom bounds are EPSG:2326. Output/cache paths are
@@ -210,7 +210,9 @@ def plan_shade(*, instants=None, dates=None, interval_minutes=10,
     if mode == "custom" and names is not None:
         raise ValueError("Tile-name selection requires native mode")
     source_directory = Path(dsm_dir or RAW).resolve()
-    records = index_sources(source_directory)
+    # V2 supplies one request-local, freshly indexed catalogue for batch planning.
+    # V1 execution still independently rehashes the actual input dependencies.
+    records = index_sources(source_directory) if _records is None else _records
     if mode == "native":
         if names is not None:
             grid = native_mosaic_grid(records, names)

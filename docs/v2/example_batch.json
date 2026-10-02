@@ -1,0 +1,21 @@
+{
+  "workers": 2,
+  "statistics": true,
+  "logical_mosaic": true,
+  "requests": [
+    {
+      "id": "north",
+      "tile": "11NE10B(e844n822,e845n822).tif",
+      "instants": ["2026-01-07T14:31:27+08:00"],
+      "output_dir": "outputs/v2_example/north",
+      "cache_dir": "data/processed/shade_v1/v2_example"
+    },
+    {
+      "id": "south",
+      "tile": "11NE10D(e844n821,e845n822).tif",
+      "instants": ["2026-01-08T14:31:27+08:00"],
+      "output_dir": "outputs/v2_example/south",
+      "cache_dir": "data/processed/shade_v1/v2_example"
+    }
+  ]
+}

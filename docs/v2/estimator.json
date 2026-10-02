@@ -1,0 +1,57 @@
+{
+  "schema": "shade-watch-v2-estimator-1.0",
+  "calibrated": true,
+  "frozen_utc": "2026-10-02T18:01:21.775661+00:00",
+  "coefficients": {
+    "catalog_seconds": 0.25,
+    "startup_seconds": 0.75,
+    "direction_seconds": 10.842382625000027,
+    "frame_seconds": 0.2746130117187704,
+    "hit_seconds": 0.04,
+    "media_frame_seconds": 0.15,
+    "controller_task_seconds": 0.0,
+    "classification_seconds": 0.018901864437452787
+  },
+  "efficiency": {
+    "1": 1.0,
+    "2": 0.6216601185166459
+  },
+  "domain": {
+    "max_tiles": 2,
+    "max_native_frames": 320,
+    "max_union_directions": 12,
+    "outputs": "native scientific only",
+    "hardware": "Mac arm64 macOS15.7.4, 10 logical CPUs, 24 GiB, local HFS disk",
+    "tile_shape": [
+      1500,
+      1200
+    ],
+    "source_tiles": [
+      "11NE10B(e844n822,e845n822).tif",
+      "11NE10D(e844n821,e845n822).tif"
+    ],
+    "caveat": "local mostly-valid tiles; new terrain/NoData distributions and media uncalibrated"
+  },
+  "methodology": {
+    "direction": "full native union-task wall divided by missing native directions",
+    "frame": "matched warm complete run minus fixed startup/catalog, divided by native frames",
+    "efficiency": "one/two-worker matched warm work after fixed costs; capped at 1",
+    "startup_catalog": "fixed engineering allowance checked against phase/whole-run timings",
+    "frame_worker_seconds": 0.20359012765607076,
+    "warm_overhead_seconds": 3.272732290006388,
+    "excluded": "planning/submission and OS-cache flush; run API includes final verification",
+    "memory_disk": "conservative V1 allocation and uncompressed bytes plus temporary/metadata headroom",
+    "uncalibrated_terms": "media, final hits and four-worker costs are provisional",
+    "component_revision": "Separate measured directional and output concurrency; classification split from frame cost. Derived only from calibration, before any hold-out outcomes."
+  },
+  "calibration_records": [
+    "outputs/v2_development/evidence/cal_cold_1.json",
+    "outputs/v2_development/evidence/cal_cold_2.json",
+    "outputs/v2_development/evidence/cal_warm_1.json",
+    "outputs/v2_development/evidence/cal_warm_2.json"
+  ],
+  "direction_efficiency": {
+    "1": 1.0,
+    "2": 1.0
+  }
+}
