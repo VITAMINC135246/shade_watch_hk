@@ -304,3 +304,22 @@ def test_native_mosaic_preserves_source_bounds_and_shared_center(tmp_path):
         native_mosaic_grid([records[0],distant],names)
     with pytest.raises(ValueError,match='uniform'):
         native_mosaic_grid([records[0],{**records[1],'width':34}],names)
+
+
+def test_explicit_native_filename_selects_its_own_bounds_and_center(tmp_path):
+    from src.pipeline import resolve_output, resolve_core_layout
+    records, _ = fixture_tiles(tmp_path)
+    config = dict(output_mode='native_tile',native_tile_name=Path(records[1]['path']).name,core_mode='native_tile')
+    # The selector is deliberately outside the source grid: filename selection wins.
+    grid, center, placement = resolve_output(config,records,dict(latitude=0,longitude=0))
+    assert grid.mode == 'native_tile'
+    assert grid.bounds() == records[1]['bounds']
+    assert grid.selected_source == records[1]['path']
+    assert center['easting_m'] == 800026.25
+    assert center['northing_m'] == 819984
+    size,_ = resolve_core_layout(config,records,placement,grid)
+    assert list(cores(grid,size)) == [(0,0,35,64)]
+    with pytest.raises(ValueError,match='requires output_mode'):
+        resolve_output({**config,'output_mode':'custom'},records,placement)
+    with pytest.raises(ValueError,match='missing'):
+        resolve_output({**config,'native_tile_name':'absent.tif'},records,placement)

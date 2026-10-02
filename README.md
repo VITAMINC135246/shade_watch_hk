@@ -1,5 +1,7 @@
 # Shade Watch HK
 
+For a folder-by-folder explanation of inputs, computation, outputs, and metadata dependencies, see [项目架构与数据流说明](docs/ARCHITECTURE.md).
+
 Local CPU reconstruction of clear-sky direct-sun obstruction on the supplied CEDD 2020 DSM. **Not yet validated against real-world observations.** The configured tile-selector location, 7 January 2026 simulation date, Asia/Hong_Kong time zone, 10-minute daylight sampling, 5° nearest-direction LUT, and conservative uncertainty rules are preserved.
 
 The default output and spatial work unit are the original DSM tile containing the configured centre: for the current files, **750 × 600 m, 1,500 columns × 1,200 rows, 0.5 m, EPSG:2326**. These properties come from GeoTIFF metadata. This tile is processed as one spatial task, with one buffered DSM read and the required azimuths calculated within that task. The saved location selects the tile; the effective output and shared solar reference use that tile’s geometric centre. The saved location is preserved. Only explicitly requested custom mode changes the placement. The existing exactly centred **600 × 450 m** extent remains available as custom mode.
@@ -18,6 +20,8 @@ Use the existing project environment; no downloads or new dependencies are requi
 ```
 
 Settings are in `config/processing.json`; location/date remain in `config/study_area.md`. A different grid, date, DSM, or scientific configuration requires a new output directory. Repeating the same command resumes the run, verifies completed caches and scientific outputs, and regenerates presentation files. Do not run two writers against the same output or horizon cache; exclusive locks reject that situation. Old outputs are preserved in `outputs/` and `outputs/600x450/`.
+
+Use `--tile '12NW6A(e845n822,e845n822).tif'` to select a specific native source tile. To run all six separately with recorded serial timings, use `.venv/bin/python -m src.batch_tiles --config config/mosaic_6tiles.json --output outputs/individual_6tiles_20261001`. See [individual-tile commands and timing notes](docs/RUN_INDIVIDUAL_TILES.md).
 
 ## Three independent spatial concepts
 

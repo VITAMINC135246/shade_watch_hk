@@ -3,7 +3,7 @@ from __future__ import annotations
 import argparse
 from concurrent.futures import ProcessPoolExecutor, wait, FIRST_COMPLETED
 from contextlib import contextmanager
-from dataclasses import asdict
+from dataclasses import asdict, replace
 from datetime import timezone
 import hashlib
 import json
@@ -377,7 +377,12 @@ def resolve_output(config, records, study):
         placement = {**study, **explicit}
     else:
         placement = study
-    if mode == 'native_mosaic':
+    tile_name = config.get('native_tile_name')
+    if tile_name is not None:
+        if mode != 'native_tile':
+            raise ValueError('native_tile_name requires output_mode=native_tile')
+        grid = replace(native_mosaic_grid(records, [tile_name]), mode='native_tile')
+    elif mode == 'native_mosaic':
         grid = native_mosaic_grid(records, config.get('native_tile_names'))
     else:
         grid = target_grid(records, placement, mode, config['custom_width_m'], config['custom_height_m'])
@@ -466,6 +471,7 @@ def _run_locked(config, out, cache_root, workers, started):
             azimuths = sorted({nearest_bin(s.azimuth_deg) for s in suns})
             atomic_json(cache/'definition.json', identity)
             jobs = dict(computed=0, reused=0, completed_cores=0, max_worker_rss_bytes=0)
+            horizon_started = time.perf_counter()
             # Calibrate requested parallelism with one real task before starting the pool.
             iterator = execute(records, grid, size, 1 if workers == 1 else workers, azimuths, cache, key)
             if workers > 1:
@@ -481,6 +487,7 @@ def _run_locked(config, out, cache_root, workers, started):
                     jobs['completed_cores'] += 1
                     jobs['max_worker_rss_bytes'] = max(jobs['max_worker_rss_bytes'], result['peak_rss_bytes'])
                     print(f"Core {result['core']}: computed {result['computed']}, reused {result['reused']}, {result['seconds']:.1f}s", flush=True)
+            export_started = time.perf_counter()
             frames = []
             media_pids = set()
             media_monitoring = {}
@@ -518,7 +525,11 @@ def _run_locked(config, out, cache_root, workers, started):
                           daylight=dict(sunrise_local=sunrise.isoformat(), sunset_local=sunset.isoformat(),
                                         interval_minutes=10, frames=len(times), decoded_video_frames=decoded_count),
                           frames=frames, jobs=jobs, display=display,
-                          performance=dict(seconds=time.perf_counter()-started, **memory, **media_monitoring),
+                          performance=dict(seconds=time.perf_counter()-started,
+                                           preprocessing_seconds=horizon_started-started,
+                                           horizon_seconds=export_started-horizon_started,
+                                           export_seconds=time.perf_counter()-export_started,
+                                           **memory, **media_monitoring),
                           environment=dict(python=platform.python_version(), rasterio=rasterio.__version__, numpy=np.__version__),
                           validation_status='Not yet validated against real-world observations',
                           model_boundary='1 km limits influence; it does not prove farther terrain cannot cast shadows')
@@ -531,6 +542,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--config', type=Path, default=ROOT/'config/processing.json')
     parser.add_argument('--output-mode', choices=['native_tile','native_mosaic','custom'])
+    parser.add_argument('--tile', help='Exact native DSM filename; selects native_tile output')
     parser.add_argument('--width-m', type=float); parser.add_argument('--height-m', type=float)
     parser.add_argument('--center-lat', type=float); parser.add_argument('--center-lon', type=float)
     parser.add_argument('--core-mode', choices=['native_tile', 'fixed'])
@@ -543,6 +555,11 @@ def main():
                        ('core_mode','core_mode'), ('core_size','core_size_px'), ('workers','workers'), ('output','output_directory')]:
         if getattr(args, arg) is not None:
             config[field] = getattr(args, arg)
+    if args.tile is not None:
+        if args.output_mode not in (None, 'native_tile'):
+            parser.error('--tile requires native_tile output')
+        config['output_mode'] = 'native_tile'
+        config['native_tile_name'] = args.tile
     if (args.center_lat is None) != (args.center_lon is None):
         parser.error('--center-lat and --center-lon must be supplied together')
     if args.center_lat is not None:
