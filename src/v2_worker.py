@@ -167,17 +167,25 @@ def execute_task(kind, payload, plans, batch, store_directory, cancel, send, mem
             media = json.loads((out / "media/index.json").read_text())
             if media["frame_times"] != [f["utc_time"] for f in frames]:
                 raise ValueError("Media timestamps do not match the scientific request")
-        index = dict(schema="shade-watch-v2-result-1.0", policy=v1.POLICY, plan_key=plan.key,
-                     batch_id=batch, request_id=payload["request"], state_directory=str(store_directory),
+        # Shared scientific output must not depend on its scheduling context.
+        # The first publisher's immutable definition supplies relocation-sensitive provenance.
+        canonical = json.loads((out / "run_definition.json").read_text())["plan"]
+        index = dict(schema="shade-watch-v2-result-1.1", policy=v1.POLICY, plan_key=plan.key,
                      grid=asdict(plan.grid), request=asdict(plan.request),
                      requested_bounds=plan.request.requested_bounds, resolved_bounds=plan.grid.bounds(),
                      coverage=plan.coverage, tile_dependencies=[dict(key=t.spatial_key,
                      sources=t.dependency_identities) for t in plan.tiles],
-                     frames=frames, media=media, cache_directory=plan.cache_directory,
+                     frames=frames, media=media, cache_directory=canonical["cache_directory"],
                      quality_reasons=v1.QUALITY,
                      observational_validation="NOT VERIFIED; no registered observations")
         atomic_json(out / "result_index.json", index)
-        return dict(artifacts=[artifact(out / "result_index.json", "result_index")], metrics={})
+        from .pipeline import fingerprint
+        receipt = Path(store_directory) / "receipts" / batch / (fingerprint(payload["request"]) + ".json")
+        atomic_json(receipt, dict(batch_id=batch, request_id=payload["request"],
+                    state_directory=str(store_directory), cache_directory=plan.cache_directory,
+                    plan_key=plan.key, result_index=str(out / "result_index.json")))
+        return dict(artifacts=[artifact(out / "result_index.json", "result_index"),
+                               artifact(receipt, "execution_receipt")], metrics={})
 
 
 def classify_failure(exc):

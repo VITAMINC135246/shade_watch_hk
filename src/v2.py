@@ -280,13 +280,13 @@ def plan_batch(requests, *, workers=1, memory_budget_mb=12288, artifact_budget_b
                                      estimated_peak_new_bytes=retained + temporary, request_metadata_bytes=metadata_bytes),
                       tasks=tasks, final_hits=hits)
     # Runtime measurements/cache availability are not request identity.
+    engine_code = {name: digest_file(Path(__file__).with_name(name))
+                   for name in ("v2.py", "v2_worker.py", "v2_runner.py", "v2_state.py")}
     identity = dict(requests={n: p["key"] for n, p in plans.items()},
                     directories={n: [p["output_directory"], p["cache_directory"]] for n, p in plans.items()},
-                    settings=definition["settings"], engine=digest_file(Path(__file__)),
-                    worker=digest_file(Path(__file__).with_name("v2_worker.py")))
+                    settings=definition["settings"], engine_code=engine_code)
     definition=json_metadata(definition)
-    definition["engine_code"] = {name: digest_file(Path(__file__).with_name(name))
-                                 for name in ("v2.py", "v2_worker.py", "v2_runner.py", "v2_state.py")}
+    definition["engine_code"] = engine_code
     definition["id"] = fingerprint(identity)
     definition["integrity"] = fingerprint(definition)
     return BatchPlan(definition, estimate_batch(definition, load_model(model_path)), time.perf_counter() - started)

@@ -365,3 +365,37 @@ def test_worker_losses_exhaust_fixed_attempt_ceiling(batch_scene):
     finally:
         store.close()
         if proc.poll() is None: proc.terminate();proc.wait(timeout=5)
+
+
+@pytest.mark.parametrize('filename', ['v2_runner.py', 'v2_state.py'])
+def test_replan_tracks_every_validated_engine_file(batch_scene, filename):
+    original = v2.plan_batch([requests(batch_scene)])
+    real_digest = v2.digest_file
+    with patch.object(v2, 'digest_file', side_effect=lambda p: 'changed-engine' if Path(p).name == filename else real_digest(p)):
+        changed = v2.plan_batch([requests(batch_scene)])
+    assert changed.id != original.id
+    v2.submit_batch(original, state_dir='outputs/state')
+    bid = v2.submit_batch(changed, state_dir='outputs/state')
+    store = Store(v1.ROOT / 'outputs/state')
+    saved = json.loads(store.batch(bid)['definition'])
+    store.close()
+    assert saved['definition']['engine_code'][filename] == 'changed-engine'
+
+
+def test_compatible_publishers_keep_shared_index_and_distinct_receipts(batch_scene):
+    first = v2.plan_batch([requests(batch_scene)])
+    bid = v2.submit_batch(first, state_dir='outputs/state_a')
+    assert v2.run_batch(bid, state_dir='outputs/state_a')['state'] == 'SUCCEEDED'
+    index = v1.ROOT / 'outputs/a/result_index.json'
+    before = index.read_bytes()
+    req = requests(batch_scene)
+    req['id'] = 'renamed-request'
+    req['cache_dir'] = 'data/processed/shade_v1/other_cache'
+    second = v2.plan_batch([req], workers=2)
+    bid2 = v2.submit_batch(second, state_dir='outputs/state_b')
+    assert v2.run_batch(bid2, state_dir='outputs/state_b')['state'] == 'SUCCEEDED'
+    assert index.read_bytes() == before
+    assert v2.status_batch(bid, state_dir='outputs/state_a')['state'] == 'SUCCEEDED'
+    receipts = list((v1.ROOT/'outputs').glob('state_*/receipts/*/*.json'))
+    assert len(receipts) == 2
+    assert {json.loads(p.read_text())['request_id'] for p in receipts} == {'a', 'renamed-request'}

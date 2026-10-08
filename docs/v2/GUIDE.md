@@ -133,3 +133,22 @@ an OS cgroup or a guarantee against sub-sample peaks/power failure.
 Read [ESTIMATOR.md](ESTIMATOR.md) for calibrated scope and prediction errors and
 [DEVELOPMENT_REPORT.md](DEVELOPMENT_REPORT.md) for verification/evidence. Local
 engineering acceptance does not establish observed physical shade accuracy.
+
+## October 2026 closeout compatibility
+
+Batch identity includes all four V2 engine files validated during execution.
+After an engine update, make a new plan; unchanged scientific frames/directions
+can still be reused. Old immutable batches continue to reject changed code.
+
+Result schema `shade-watch-v2-result-1.1` stores shared scientific provenance.
+Execution-specific `batch_id`, `request_id`, `state_directory` and the current
+cache location are in `<state>/receipts/<batch>/<request-hash>.json`, retained as
+verified task artifacts. Compatible publishers in different state stores may
+share the output without changing its index bytes. The shared index's cache
+location comes from the first publisher's immutable `run_definition.json`.
+
+The full download is now under `data/raw/dsm/2020/D12.DSM.TIFF`; the original
+19-file calibration set is under `data/raw/dsm/2020_HKUST_Around/D12.DSM.TIFF`.
+Pass `dsm_dir` explicitly for historical comparisons. Adding nearby support
+files can legitimately change spatial cache identities and quality flags.
+Existing cached results are not evidence for the expanded support dataset.
