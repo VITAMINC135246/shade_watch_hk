@@ -399,3 +399,26 @@ def test_compatible_publishers_keep_shared_index_and_distinct_receipts(batch_sce
     receipts = list((v1.ROOT/'outputs').glob('state_*/receipts/*/*.json'))
     assert len(receipts) == 2
     assert {json.loads(p.read_text())['request_id'] for p in receipts} == {'a', 'renamed-request'}
+
+
+@pytest.mark.parametrize('schema', ['shade-watch-v1-result-1.0', 'shade-watch-v2-result-1.0'])
+def test_legacy_index_is_not_implicitly_migrated(batch_scene, schema):
+    req = requests(batch_scene)
+    v1.run_shade(v1.plan_shade(**{k:v for k,v in req.items() if k != 'id'}))
+    index = v1.ROOT / 'outputs/a/result_index.json'
+    value = json.loads(index.read_text())
+    value['schema'] = schema
+    index.write_text(json.dumps(value))
+    before = {str(p):p.read_bytes() for p in index.parent.rglob('*') if p.is_file()}
+    plan = v2.plan_batch([req])
+    bid = v2.submit_batch(plan, state_dir='outputs/new_state')
+    result = v2.run_batch(bid, state_dir='outputs/new_state')
+    assert result['state'] == 'FAILED'
+    assert any('Legacy result index is read-only' in f['error'] for f in result['failures'])
+    assert {str(p):p.read_bytes() for p in index.parent.rglob('*') if p.is_file()} == before
+    req['output_dir'] = 'outputs/fresh_after_upgrade'
+    req['cache_dir'] = 'data/processed/shade_v1/default'
+    fresh = v2.plan_batch([req])
+    bid2 = v2.submit_batch(fresh,state_dir='outputs/new_state')
+    recovered = v2.run_batch(bid2,state_dir='outputs/new_state')
+    assert recovered['state'] == 'SUCCEEDED' and recovered['metrics']['horizon_calls'] == 0

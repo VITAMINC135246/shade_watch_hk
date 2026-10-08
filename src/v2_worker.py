@@ -40,6 +40,15 @@ def artifacts_valid(items):
 def _prepare(plan):
     from .v2 import json_metadata
     out = Path(plan.output_directory)
+    # Upgrading index schema in place would invalidate the old store's committed
+    # checksum. Legacy results remain read-only; scientific caches can be reused
+    # explicitly with a fresh output namespace.
+    try:
+        prior_schema = json.loads((out / "result_index.json").read_text()).get("schema")
+    except (OSError, ValueError, AttributeError):
+        prior_schema = None
+    if prior_schema in {"shade-watch-v1-result-1.0", "shade-watch-v2-result-1.0"}:
+        raise ValueError("Legacy result index is read-only; choose a fresh output directory")
     items = [p.name for p in out.iterdir() if p.name != ".writer.lock"] if out.exists() else []
     definition = out / "run_definition.json"
     if items:

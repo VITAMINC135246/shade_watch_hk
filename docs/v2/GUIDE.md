@@ -152,3 +152,10 @@ The full download is now under `data/raw/dsm/2020/D12.DSM.TIFF`; the original
 Pass `dsm_dir` explicitly for historical comparisons. Adding nearby support
 files can legitimately change spatial cache identities and quality flags.
 Existing cached results are not evidence for the expanded support dataset.
+
+Legacy `shade-watch-v1-result-1.0` and `shade-watch-v2-result-1.0` indexes are
+read-only to the new V2 publisher. A batch pointing at such an output is rejected
+before modifying any output file. Choose a fresh output directory and explicitly
+reuse the compatible scientific cache. There is no automatic result-schema
+migration; historical store checksums and result indexes remain valid. The
+schema-1.1 sharing guarantee applies between current-version publishers.
