@@ -1,0 +1,425 @@
+{
+  "schema": "shade-watch-v3-pilot-preparation-1.0",
+  "campaign_id": "hk2020_seven_scene_pilots",
+  "scope": "regional_pilots_only",
+  "execution_authorized": false,
+  "data": {
+    "root": "data/raw/dsm/2020/D12.DSM.TIFF",
+    "year": 2020,
+    "observed_files": 3310,
+    "header_inventory_bytes": 26043475302,
+    "crs": "EPSG:2326",
+    "pixel_m": 0.5,
+    "vertical_units": "metre; confirm source vertical datum before target-machine execution",
+    "vertical_datum": null,
+    "authoritative_boundary": null,
+    "coverage_claim": "File inventory only; administrative land coverage not verified",
+    "known_header_issues": {
+      "shifted_files": 4,
+      "strict_overlap_pairs": 7,
+      "maximum_observed_offset_m": 9.4e-08,
+      "handling": "Reject ambiguous overlaps; resolve with an explicit versioned V3 ingestion policy before full-catalog planning. Raw files stay unchanged.",
+      "affects_selected_pilot_support": false,
+      "files": [
+        "14NE15A(e828n809,e829n809).tif",
+        "14NE15B(e829n809,e830n809).tif",
+        "14NE15C(e828n808,e829n809).tif",
+        "14NE15D(e829n808,e830n809).tif"
+      ]
+    }
+  },
+  "machine": {
+    "hostname": null,
+    "system": "Linux",
+    "python": "3.12",
+    "min_available_memory_gib": 14,
+    "minimum_free_disk_gib": 25,
+    "local_storage_required": true
+  },
+  "budgets": {
+    "workers": 1,
+    "memory_mb": 12288,
+    "artifact_bytes": 21474836480,
+    "wall_seconds": 3600,
+    "max_attempts": 3
+  },
+  "science": {
+    "policy": "SW-V1-POLICY-1.0",
+    "direction_method": "nearest5",
+    "pixel_m": 0.5,
+    "search_m": 1000
+  },
+  "instants": [
+    "2027-01-15T09:17:23+08:00",
+    "2027-01-15T15:43:37+08:00",
+    "2027-03-21T12:13:41+08:00",
+    "2027-06-21T08:37:29+08:00",
+    "2027-06-21T16:21:17+08:00"
+  ],
+  "regions": [
+    {
+      "id": "central",
+      "label": "Central / Mid-Levels",
+      "scene_hypothesis": "dense high-rise and urban slope",
+      "selection": "2 x 2 native tiles: anchor tile plus east/south neighbors; predeclared geographic sample, not exhaustive terrain classification",
+      "anchor_wgs84": [
+        114.158,
+        22.282
+      ],
+      "tiles": [
+        "11SW8D(e833n815,e834n816).tif",
+        "11SW9C(e834n815,e835n816).tif",
+        "11SW13B(e833n815,e834n815).tif",
+        "11SW14A(e834n815,e835n815).tif"
+      ],
+      "bounds": [
+        833750.0,
+        815000.0,
+        835250.0,
+        816200.0
+      ],
+      "coarse_dsm_samples": [
+        {
+          "tile": "11SW8D(e833n815,e834n816).tif",
+          "sampled_valid_fraction": 1.0,
+          "sampled_height_p05_m": 3.796973705291748,
+          "sampled_height_p95_m": 144.09422302246094
+        },
+        {
+          "tile": "11SW9C(e834n815,e835n816).tif",
+          "sampled_valid_fraction": 0.9035,
+          "sampled_height_p05_m": 3.8740081787109375,
+          "sampled_height_p95_m": 92.07194519042969
+        },
+        {
+          "tile": "11SW13B(e833n815,e834n815).tif",
+          "sampled_valid_fraction": 1.0,
+          "sampled_height_p05_m": 41.18617630004883,
+          "sampled_height_p95_m": 188.2376708984375
+        },
+        {
+          "tile": "11SW14A(e834n815,e835n815).tif",
+          "sampled_valid_fraction": 1.0,
+          "sampled_height_p05_m": 6.2058820724487305,
+          "sampled_height_p95_m": 153.8402099609375
+        }
+      ]
+    },
+    {
+      "id": "mongkok",
+      "label": "Mong Kok",
+      "scene_hypothesis": "dense urban plain",
+      "selection": "2 x 2 native tiles: anchor tile plus east/south neighbors; predeclared geographic sample, not exhaustive terrain classification",
+      "anchor_wgs84": [
+        114.17,
+        22.32
+      ],
+      "tiles": [
+        "11NW19B(e835n819,e836n820).tif",
+        "11NW20A(e836n819,e836n820).tif",
+        "11NW19D(e835n819,e836n819).tif",
+        "11NW20C(e836n819,e836n819).tif"
+      ],
+      "bounds": [
+        835250.0,
+        819200.0,
+        836750.0,
+        820400.0
+      ],
+      "coarse_dsm_samples": [
+        {
+          "tile": "11NW19B(e835n819,e836n820).tif",
+          "sampled_valid_fraction": 1.0,
+          "sampled_height_p05_m": 4.759063243865967,
+          "sampled_height_p95_m": 77.99710083007812
+        },
+        {
+          "tile": "11NW20A(e836n819,e836n820).tif",
+          "sampled_valid_fraction": 1.0,
+          "sampled_height_p05_m": 11.25550651550293,
+          "sampled_height_p95_m": 87.38041687011719
+        },
+        {
+          "tile": "11NW19D(e835n819,e836n819).tif",
+          "sampled_valid_fraction": 1.0,
+          "sampled_height_p05_m": 3.767557382583618,
+          "sampled_height_p95_m": 78.30184173583984
+        },
+        {
+          "tile": "11NW20C(e836n819,e836n819).tif",
+          "sampled_valid_fraction": 1.0,
+          "sampled_height_p05_m": 13.6395263671875,
+          "sampled_height_p95_m": 89.8842544555664
+        }
+      ]
+    },
+    {
+      "id": "taimoshan",
+      "label": "Tai Mo Shan",
+      "scene_hypothesis": "high mountain and ridge",
+      "selection": "2 x 2 native tiles: anchor tile plus east/south neighbors; predeclared geographic sample, not exhaustive terrain classification",
+      "anchor_wgs84": [
+        114.124,
+        22.409
+      ],
+      "tiles": [
+        "7SW1B(e830n829,e831n830).tif",
+        "7SW2A(e831n829,e832n830).tif",
+        "7SW1D(e830n828,e831n829).tif",
+        "7SW2C(e831n828,e832n829).tif"
+      ],
+      "bounds": [
+        830750.0,
+        828800.0,
+        832250.0,
+        830000.0
+      ],
+      "coarse_dsm_samples": [
+        {
+          "tile": "7SW1B(e830n829,e831n830).tif",
+          "sampled_valid_fraction": 1.0,
+          "sampled_height_p05_m": 748.2173461914062,
+          "sampled_height_p95_m": 883.951171875
+        },
+        {
+          "tile": "7SW2A(e831n829,e832n830).tif",
+          "sampled_valid_fraction": 1.0,
+          "sampled_height_p05_m": 469.2193908691406,
+          "sampled_height_p95_m": 755.8297729492188
+        },
+        {
+          "tile": "7SW1D(e830n828,e831n829).tif",
+          "sampled_valid_fraction": 1.0,
+          "sampled_height_p05_m": 538.9386596679688,
+          "sampled_height_p95_m": 753.9656982421875
+        },
+        {
+          "tile": "7SW2C(e831n828,e832n829).tif",
+          "sampled_valid_fraction": 1.0,
+          "sampled_height_p05_m": 448.2819519042969,
+          "sampled_height_p95_m": 741.3893432617188
+        }
+      ]
+    },
+    {
+      "id": "yuenlong",
+      "label": "Yuen Long",
+      "scene_hypothesis": "lowland and mixed development",
+      "selection": "2 x 2 native tiles: anchor tile plus east/south neighbors; predeclared geographic sample, not exhaustive terrain classification",
+      "anchor_wgs84": [
+        114.025,
+        22.445
+      ],
+      "tiles": [
+        "6NW9D(e820n833,e821n834).tif",
+        "6NW10C(e821n833,e821n834).tif",
+        "6NW14B(e820n833,e821n833).tif",
+        "6NW15A(e821n833,e821n833).tif"
+      ],
+      "bounds": [
+        820250.0,
+        833000.0,
+        821750.0,
+        834200.0
+      ],
+      "coarse_dsm_samples": [
+        {
+          "tile": "6NW9D(e820n833,e821n834).tif",
+          "sampled_valid_fraction": 1.0,
+          "sampled_height_p05_m": 3.9294915199279785,
+          "sampled_height_p95_m": 46.04833984375
+        },
+        {
+          "tile": "6NW10C(e821n833,e821n834).tif",
+          "sampled_valid_fraction": 1.0,
+          "sampled_height_p05_m": 3.7522401809692383,
+          "sampled_height_p95_m": 57.11063003540039
+        },
+        {
+          "tile": "6NW14B(e820n833,e821n833).tif",
+          "sampled_valid_fraction": 1.0,
+          "sampled_height_p05_m": 3.9490084648132324,
+          "sampled_height_p95_m": 24.61312484741211
+        },
+        {
+          "tile": "6NW15A(e821n833,e821n833).tif",
+          "sampled_valid_fraction": 1.0,
+          "sampled_height_p05_m": 4.6941728591918945,
+          "sampled_height_p95_m": 43.771541595458984
+        }
+      ]
+    },
+    {
+      "id": "lantau",
+      "label": "Lantau South",
+      "scene_hypothesis": "steep mountain and coast",
+      "selection": "2 x 2 native tiles: anchor tile plus east/south neighbors; predeclared geographic sample, not exhaustive terrain classification",
+      "anchor_wgs84": [
+        113.943,
+        22.249
+      ],
+      "tiles": [
+        "9SE24C(e812n812,e812n812).tif",
+        "9SE24D(e812n812,e813n812).tif",
+        "13NE4A(e812n811,e812n812).tif",
+        "13NE4B(e812n811,e813n812).tif"
+      ],
+      "bounds": [
+        812000.0,
+        811400.0,
+        813500.0,
+        812600.0
+      ],
+      "coarse_dsm_samples": [
+        {
+          "tile": "9SE24C(e812n812,e812n812).tif",
+          "sampled_valid_fraction": 1.0,
+          "sampled_height_p05_m": 301.0001525878906,
+          "sampled_height_p95_m": 531.04052734375
+        },
+        {
+          "tile": "9SE24D(e812n812,e813n812).tif",
+          "sampled_valid_fraction": 1.0,
+          "sampled_height_p05_m": 370.2912902832031,
+          "sampled_height_p95_m": 626.6748046875
+        },
+        {
+          "tile": "13NE4A(e812n811,e812n812).tif",
+          "sampled_valid_fraction": 1.0,
+          "sampled_height_p05_m": 182.6471710205078,
+          "sampled_height_p95_m": 336.3598327636719
+        },
+        {
+          "tile": "13NE4B(e812n811,e813n812).tif",
+          "sampled_valid_fraction": 1.0,
+          "sampled_height_p05_m": 219.2412872314453,
+          "sampled_height_p95_m": 411.5459289550781
+        }
+      ]
+    },
+    {
+      "id": "cheungchau",
+      "label": "Cheung Chau",
+      "scene_hypothesis": "island and missing-water support",
+      "selection": "2 x 2 native tiles: anchor tile plus east/south neighbors; predeclared geographic sample, not exhaustive terrain classification",
+      "anchor_wgs84": [
+        114.028,
+        22.209
+      ],
+      "tiles": [
+        "14NW19B(e820n807,e821n808).tif",
+        "14NW20A(e821n807,e821n808).tif",
+        "14NW19D(e820n807,e821n807).tif",
+        "14NW20C(e821n807,e821n807).tif"
+      ],
+      "bounds": [
+        820250.0,
+        807200.0,
+        821750.0,
+        808400.0
+      ],
+      "coarse_dsm_samples": [
+        {
+          "tile": "14NW19B(e820n807,e821n808).tif",
+          "sampled_valid_fraction": 0.44475,
+          "sampled_height_p05_m": 3.671444892883301,
+          "sampled_height_p95_m": 44.44623947143555
+        },
+        {
+          "tile": "14NW20A(e821n807,e821n808).tif",
+          "sampled_valid_fraction": 0.13175,
+          "sampled_height_p05_m": 1.7269541025161743,
+          "sampled_height_p95_m": 18.344240188598633
+        },
+        {
+          "tile": "14NW19D(e820n807,e821n807).tif",
+          "sampled_valid_fraction": 0.397875,
+          "sampled_height_p05_m": 3.712926149368286,
+          "sampled_height_p95_m": 31.654775619506836
+        },
+        {
+          "tile": "14NW20C(e821n807,e821n807).tif",
+          "sampled_valid_fraction": 0.872375,
+          "sampled_height_p05_m": 5.320652961730957,
+          "sampled_height_p95_m": 49.52653884887695
+        }
+      ]
+    },
+    {
+      "id": "hkust",
+      "label": "HKUST / Clear Water Bay",
+      "scene_hypothesis": "coastal slope and baseline continuity",
+      "selection": "2 x 2 native tiles: anchor tile plus east/south neighbors; predeclared geographic sample, not exhaustive terrain classification",
+      "anchor_wgs84": [
+        114.264,
+        22.336
+      ],
+      "tiles": [
+        "12NW6C(e845n821,e845n822).tif",
+        "12NW6D(e845n821,e846n822).tif",
+        "12NW11A(e845n821,e845n821).tif",
+        "12NW11B(e845n821,e846n821).tif"
+      ],
+      "bounds": [
+        845000.0,
+        821000.0,
+        846500.0,
+        822200.0
+      ],
+      "coarse_dsm_samples": [
+        {
+          "tile": "12NW6C(e845n821,e845n822).tif",
+          "sampled_valid_fraction": 0.962875,
+          "sampled_height_p05_m": 12.18486499786377,
+          "sampled_height_p95_m": 155.7786102294922
+        },
+        {
+          "tile": "12NW6D(e845n821,e846n822).tif",
+          "sampled_valid_fraction": 0.1235,
+          "sampled_height_p05_m": 2.407092809677124,
+          "sampled_height_p95_m": 83.94575500488281
+        },
+        {
+          "tile": "12NW11A(e845n821,e845n821).tif",
+          "sampled_valid_fraction": 1.0,
+          "sampled_height_p05_m": 69.28450775146484,
+          "sampled_height_p95_m": 174.31314086914062
+        },
+        {
+          "tile": "12NW11B(e845n821,e846n821).tif",
+          "sampled_valid_fraction": 0.335,
+          "sampled_height_p05_m": 3.5945169925689697,
+          "sampled_height_p95_m": 89.96751403808594
+        }
+      ]
+    }
+  ],
+  "outputs": {
+    "scientific": true,
+    "logical_mosaic": true,
+    "statistics": true,
+    "jpg": false,
+    "mp4": false
+  },
+  "stop_conditions": [
+    "Any failed/incomplete required batch",
+    "Cumulative wall or disk ceiling",
+    "Input/code/profile identity change",
+    "Missing designated host or data provenance"
+  ],
+  "expected_checks": [
+    "Native versus bounded combined shade/quality equality at exact instants",
+    "Cross-tile seam and georeferencing equality",
+    "Resume keeps committed horizons and original failures",
+    "Cold/warm measurements separate, local Mac estimator explicitly extrapolated",
+    "Missing target/support never recoded as sunlight"
+  ],
+  "accepted_v2_commit": "356f611d7b775ce31006904b80ca31d3c1c484b2",
+  "accepted_v2_report": "docs/v2/INDEPENDENT_ACCEPTANCE_356f611.md",
+  "accepted_v2_report_sha256": "441e6befd492f0c1c0ac02c3c10ad14fa72329bc2c26294224478b10b4406487",
+  "contracts_sha256": {
+    "docs/prompts/v1/ACCEPTANCE_CONTRACT.md": "04e205a87390fe606fc1b61c25aa774413e1cdf41a91be0b9df77eb107e38d31",
+    "docs/prompts/v2/ACCEPTANCE_CONTRACT.md": "236198cdc0cc202d5e4278b6db7baa7c79c3ef710d123faa51b1683e5537b0ac",
+    "docs/prompts/v3/ACCEPTANCE_CONTRACT.md": "82ed7944cf4bf2034dbd5c25375af05ef1dad4d08792d14bf96ccec0a29efdb7"
+  }
+}

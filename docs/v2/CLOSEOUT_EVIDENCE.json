@@ -1,0 +1,104 @@
+{
+  "data": {
+    "files": 3310,
+    "bytes": 26043475302,
+    "crs": {
+      "EPSG:2326": 3310
+    },
+    "shapes": {
+      "(1500, 1200)": 3310
+    },
+    "pixel_m": 0.5,
+    "old_hkust_files": 19,
+    "strict_header_overlap_pairs": 7,
+    "shifted_headers": 4,
+    "coverage": "Administrative completeness/full raster validity NOT VERIFIED; four submicrometre offsets require explicit V3 ingestion handling, unmodified V2 rejects strict overlaps",
+    "original_19_match_full_download": true
+  },
+  "v2_new_data": {
+    "wall_seconds": 43.96872079197783,
+    "total_with_reference_seconds": 47.439739791996544,
+    "generated_bytes": 38828658,
+    "metrics": {
+      "parent_peak_rss_bytes": 154468352,
+      "workers_peak_rss_bytes": 654606336,
+      "media_peak_rss_bytes": 0,
+      "peak_tree_rss_bytes": 807960576,
+      "peak_new_disk_bytes": 37488301,
+      "max_in_flight": 1,
+      "computed": 4,
+      "reused": 0,
+      "horizon_calls": 4,
+      "final_result_hits": 0,
+      "input_inventory_calls": 1,
+      "memory_sample_seconds": 0.02,
+      "media_tracking": "known worker-reported PIDs; sub-sample spikes may be missed",
+      "monitoring_gaps": "input admission sampled at start/end; continuous 20 ms loop starts after spawn",
+      "run_wall_seconds": 43.93745341702015
+    },
+    "support_files": 29,
+    "checks": [
+      {
+        "utc": "2026-12-17T01:43:29+00:00",
+        "native_combined_logical_identical": true,
+        "counts": {
+          "0": 1478549,
+          "1": 2121451,
+          "255": 0
+        },
+        "quality_counts": {
+          "0": 3600000,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        }
+      },
+      {
+        "utc": "2027-03-23T07:21:41+00:00",
+        "native_combined_logical_identical": true,
+        "counts": {
+          "0": 1409055,
+          "1": 2190945,
+          "255": 0
+        },
+        "quality_counts": {
+          "0": 3600000,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        }
+      }
+    ],
+    "v1_equal": true
+  },
+  "evidence": {
+    "data_headers.json": "3a362efcbeeac473382d9dbfb9e2aa7de8ab365102ce745a78374866999d4418",
+    "header_geometry.json": "1254ec0b03492ef2da98da3ccfb5b3e269cf843cbf11b6c72882e9a7680354bd",
+    "new_data_manifest.json": "8cb594496eb3db2e8de65241565c8dbd5d117f4eba8f044f5a44ef4768c8c119",
+    "new_data_prediction.json": "e34887b73f8a177cbaabe18f3814a9ca4dbf19d49f63dcf477a36ec0ff1925db",
+    "new_data_result.json": "b6ecf9bcf6acb9e468634ad43ed95fdd2b0a84dfd79637eb490792c64b97a29f",
+    "v3_static_preparation.json": "6d6d953c4ab2eedca2331c8f4be668996efbe6389b19607e6c5294a46af048cd",
+    "old_new_19_identity.json": "438e9016818850fa30c3308e7c5d20396285ec7cfcfaffa192e3dd90c7978ea4",
+    "updated_example_plan.json": "85fc3d8b7debd3890f8fa55598fdd1af7335888bec1d390c928ca7f604c3f44f",
+    "updated_example_plan_356f611.json": "495cde6d0bb1894b6713572b97d951d5a065e78de6faa974b1acb5bbe2354ccf",
+    "v3_static_preparation_final.json": "2e1dccf8b89db4bfc67607269f12ecaa912cefac13816d866c23361cb671423d"
+  },
+  "v3_executed": false,
+  "supplement_measured_candidate": "f3dac3175706988591387b22a56ee9857afad276",
+  "accepted_v2_candidate": "356f611d7b775ce31006904b80ca31d3c1c484b2",
+  "accepted_v2_report_sha256": "441e6befd492f0c1c0ac02c3c10ad14fa72329bc2c26294224478b10b4406487",
+  "v3_static_preparation": {
+    "v3_execution": false,
+    "checks": "AST parsing, JSON decoding, profile tile existence and link checks only; no V3 imports or entrypoints invoked",
+    "accepted_v2_report_sha256": "441e6befd492f0c1c0ac02c3c10ad14fa72329bc2c26294224478b10b4406487",
+    "sha256": {
+      "tools/v3_campaign.py": "9a76abb7a05dbf59592f4af12d3f5fea0ad03ff3918276ad7076e2144b2becd5",
+      "config/v3/pilots.template.json": "242d7123a40dc29fadfe510b305db9a766bdc4c3fa48a9aa684dad7476e518be",
+      "docs/v3/RUNBOOK.md": "0a4a6db5783751372b2438835330f40eb201231409e4a438899cc016b9173f3b",
+      "docs/v3/SCENE_PLAN.md": "5a672f61c76cf3f092f1da2c7fd2266ecbe1ba84d5a76bd2b53a84814bf951bf",
+      "docs/v3/STATUS.md": "33f2926d429b5e2032fe6fffddc7abf919d7d898ad894990b5ba8e8d341c20cd"
+    }
+  }
+}

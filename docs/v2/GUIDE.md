@@ -10,11 +10,12 @@ legacy commands remain available. Scientific policy is still
 from src.v2 import (plan_batch, submit_batch, run_batch, status_batch,
                     cancel_batch, resume_batch)
 
+historical_dsm = "data/raw/dsm/2020_HKUST_Around/D12.DSM.TIFF"
 plan = plan_batch([
-    dict(id="jan", tile="11NE10B(e844n822,e845n822).tif",
+    dict(id="jan", dsm_dir=historical_dsm, tile="11NE10B(e844n822,e845n822).tif",
          instants=["2026-01-07T14:31:27+08:00"],
          output_dir="outputs/my_v2/jan"),
-    dict(id="feb", tile="11NE10B(e844n822,e845n822).tif",
+    dict(id="feb", dsm_dir=historical_dsm, tile="11NE10B(e844n822,e845n822).tif",
          instants=["2026-02-07T14:31:29+08:00"],
          output_dir="outputs/my_v2/feb", jpg=True),
 ], workers=2, statistics=True, logical_mosaic=True)

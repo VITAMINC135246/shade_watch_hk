@@ -23,3 +23,12 @@ Budget defaults are ceilings, not promises or instructions to consume the alloca
 V3 external benchmarks, regional pilots and territory campaigns require explicit data/machine/campaign profiles and their own authorized budgets. They are not included in the local-engineering ceilings. Report engineering readiness, actual deployment validation and production completion separately. Missing territory data or research-machine access cannot be replaced by synthetic evidence.
 
 PASS / FAIL / NOT VERIFIED must map to concrete evidence. Numerical consistency, approximation error, performance and observational accuracy are separate conclusions. None of these prompts authorizes automatic progression into the next version, unbounded computation, public deployment or a GitHub push.
+
+## Current handoff (2026-10-09)
+
+See [`docs/v2/CLOSEOUT.md`](../v2/CLOSEOUT.md) for the V2 repair/acceptance
+lineage and new DSM data status. Preserve failed-candidate reports as evidence;
+use the final independently accepted candidate recorded there as V3's baseline.
+The [V3 regional execution package](../v3/RUNBOOK.md) is prepared but unexecuted.
+The user has explicitly excluded V3 execution on the current Mac. Its templates
+and static checks do not satisfy the V3 engineering/deployment acceptance gates.

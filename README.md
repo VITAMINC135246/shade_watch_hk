@@ -1,5 +1,19 @@
 # Shade Watch HK
 
+V2 closeout and independent reacceptance: [release report](docs/v2/CLOSEOUT.md).
+V3 future-machine pilot launcher, seven multi-tile profiles and commands are
+[prepared but not executed](docs/v3/RUNBOOK.md); this is not V3 acceptance.
+The full DSM download contains 3,310 files; the original 19-file HKUST set is now
+in `data/raw/dsm/2020_HKUST_Around/D12.DSM.TIFF/`. See [data status](data/raw/dsm/README.md).
+Four full-catalog headers produce submicrometre overlaps under strict V2 checks;
+use explicit validated regional inputs, not the complete directory as an accepted
+V2 calibration set. Full-territory ingestion remains V3 work.
+
+For the current bounded V2 example, start with
+`.venv/bin/python -m src.v2 plan --requests docs/v2/example_batch.json` and follow
+the [V2 guide](docs/v2/GUIDE.md). This example explicitly selects the preserved
+19-file input set; the commands below describe the historical pipeline.
+
 V1 arbitrary-date/time queries are available through `python -m src.v1` and
 `plan_shade` / `run_shade`. See the [V1 API/CLI guide](docs/v1/GUIDE.md),
 [versioned scientific policy and migration](docs/v1/POLICY.md), and
