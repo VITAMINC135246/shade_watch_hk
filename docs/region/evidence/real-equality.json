@@ -1,0 +1,46 @@
+{
+  "frames": [
+    {
+      "instant": "2026-01-07T06:31:27+00:00",
+      "shade_equal": true,
+      "quality_equal": true,
+      "transform_equal": true,
+      "shape": [
+        10,
+        24
+      ],
+      "shade_counts": {
+        "0": 182,
+        "1": 58
+      },
+      "quality_counts": {
+        "0": 240
+      }
+    },
+    {
+      "instant": "2026-01-07T06:31:28+00:00",
+      "shade_equal": true,
+      "quality_equal": true,
+      "transform_equal": true,
+      "shape": [
+        10,
+        24
+      ],
+      "shade_counts": {
+        "0": 182,
+        "1": 58
+      },
+      "quality_counts": {
+        "0": 240
+      }
+    }
+  ],
+  "baseline_jobs": {
+    "computed": 0,
+    "reused": 2,
+    "horizon_calls": 0,
+    "final_result_hits": 0
+  },
+  "v1_elapsed_seconds": 0.591317791986512,
+  "batch_id": "541aceae8845d146ddaa18a54a0701a02a78bb93436d07337256013f471d9184"
+}

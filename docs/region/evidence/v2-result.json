@@ -1,0 +1,114 @@
+{
+  "result": {
+    "id": "541aceae8845d146ddaa18a54a0701a02a78bb93436d07337256013f471d9184",
+    "state": "SUCCEEDED",
+    "persisted_state": "SUCCEEDED",
+    "cancelled": false,
+    "tasks": {
+      "SUCCEEDED": 9
+    },
+    "invalid_artifacts": [],
+    "metrics": {
+      "parent_peak_rss_bytes": 149667840,
+      "workers_peak_rss_bytes": 501645312,
+      "media_peak_rss_bytes": 0,
+      "peak_tree_rss_bytes": 651313152,
+      "peak_new_disk_bytes": 17885775,
+      "max_in_flight": 1,
+      "computed": 2,
+      "reused": 0,
+      "horizon_calls": 2,
+      "final_result_hits": 0,
+      "input_inventory_calls": 1,
+      "memory_sample_seconds": 0.02,
+      "media_tracking": "known worker-reported PIDs; sub-sample spikes may be missed",
+      "monitoring_gaps": "input admission sampled at start/end; continuous 20 ms loop starts after spawn",
+      "run_wall_seconds": 22.605459457990946
+    },
+    "attempts": [
+      {
+        "task": "541aceae8845d146ddaa18a54a0701a02a78bb93436d07337256013f471d9184:horizon_aefc3f4f1744a1ff735babf795cf8db616a98a4502769dd98da0f063dd0e7652",
+        "number": 1,
+        "started": 1793277322.5701902,
+        "ended": 1793277332.604055,
+        "state": "SUCCEEDED",
+        "owner": "{\"pid\": 63443, \"create_time\": 1793277320.728055, \"token\": \"deb10347e3da4eae957ada2ef92d3888\", \"owner_file\": \"/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/region_dev_validation/state/workers/deb10347e3da4eae957ada2ef92d3888.json\"}",
+        "error": "null"
+      },
+      {
+        "task": "541aceae8845d146ddaa18a54a0701a02a78bb93436d07337256013f471d9184:horizon_df864dda0486704a19c253d4dee414bc261115585e5d6c5f8e2e1ce1d1f492fc",
+        "number": 1,
+        "started": 1793277332.611711,
+        "ended": 1793277342.399403,
+        "state": "SUCCEEDED",
+        "owner": "{\"pid\": 63443, \"create_time\": 1793277320.728055, \"token\": \"deb10347e3da4eae957ada2ef92d3888\", \"owner_file\": \"/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/region_dev_validation/state/workers/deb10347e3da4eae957ada2ef92d3888.json\"}",
+        "error": "null"
+      },
+      {
+        "task": "541aceae8845d146ddaa18a54a0701a02a78bb93436d07337256013f471d9184:frame_9bbc943f5b2328f215de9b1119479de02cc633a8b3565f0c2c58ad9149b825c3_0",
+        "number": 1,
+        "started": 1793277342.4047449,
+        "ended": 1793277342.4863548,
+        "state": "SUCCEEDED",
+        "owner": "{\"pid\": 63443, \"create_time\": 1793277320.728055, \"token\": \"deb10347e3da4eae957ada2ef92d3888\", \"owner_file\": \"/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/region_dev_validation/state/workers/deb10347e3da4eae957ada2ef92d3888.json\"}",
+        "error": "null"
+      },
+      {
+        "task": "541aceae8845d146ddaa18a54a0701a02a78bb93436d07337256013f471d9184:frame_9bbc943f5b2328f215de9b1119479de02cc633a8b3565f0c2c58ad9149b825c3_1",
+        "number": 1,
+        "started": 1793277342.490701,
+        "ended": 1793277342.525444,
+        "state": "SUCCEEDED",
+        "owner": "{\"pid\": 63443, \"create_time\": 1793277320.728055, \"token\": \"deb10347e3da4eae957ada2ef92d3888\", \"owner_file\": \"/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/region_dev_validation/state/workers/deb10347e3da4eae957ada2ef92d3888.json\"}",
+        "error": "null"
+      },
+      {
+        "task": "541aceae8845d146ddaa18a54a0701a02a78bb93436d07337256013f471d9184:index_9bbc943f5b2328f215de9b1119479de02cc633a8b3565f0c2c58ad9149b825c3",
+        "number": 1,
+        "started": 1793277342.5296278,
+        "ended": 1793277342.563883,
+        "state": "SUCCEEDED",
+        "owner": "{\"pid\": 63443, \"create_time\": 1793277320.728055, \"token\": \"deb10347e3da4eae957ada2ef92d3888\", \"owner_file\": \"/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/region_dev_validation/state/workers/deb10347e3da4eae957ada2ef92d3888.json\"}",
+        "error": "null"
+      },
+      {
+        "task": "541aceae8845d146ddaa18a54a0701a02a78bb93436d07337256013f471d9184:frame_ffd1d69c78da6cb62e56c34712e593b8ea3704c8630c4a84f1f592818e17ab43_0",
+        "number": 1,
+        "started": 1793277342.568179,
+        "ended": 1793277342.663593,
+        "state": "SUCCEEDED",
+        "owner": "{\"pid\": 63443, \"create_time\": 1793277320.728055, \"token\": \"deb10347e3da4eae957ada2ef92d3888\", \"owner_file\": \"/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/region_dev_validation/state/workers/deb10347e3da4eae957ada2ef92d3888.json\"}",
+        "error": "null"
+      },
+      {
+        "task": "541aceae8845d146ddaa18a54a0701a02a78bb93436d07337256013f471d9184:frame_ffd1d69c78da6cb62e56c34712e593b8ea3704c8630c4a84f1f592818e17ab43_1",
+        "number": 1,
+        "started": 1793277342.668372,
+        "ended": 1793277342.7027671,
+        "state": "SUCCEEDED",
+        "owner": "{\"pid\": 63443, \"create_time\": 1793277320.728055, \"token\": \"deb10347e3da4eae957ada2ef92d3888\", \"owner_file\": \"/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/region_dev_validation/state/workers/deb10347e3da4eae957ada2ef92d3888.json\"}",
+        "error": "null"
+      },
+      {
+        "task": "541aceae8845d146ddaa18a54a0701a02a78bb93436d07337256013f471d9184:index_ffd1d69c78da6cb62e56c34712e593b8ea3704c8630c4a84f1f592818e17ab43",
+        "number": 1,
+        "started": 1793277342.7251,
+        "ended": 1793277342.759308,
+        "state": "SUCCEEDED",
+        "owner": "{\"pid\": 63443, \"create_time\": 1793277320.728055, \"token\": \"deb10347e3da4eae957ada2ef92d3888\", \"owner_file\": \"/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/region_dev_validation/state/workers/deb10347e3da4eae957ada2ef92d3888.json\"}",
+        "error": "null"
+      },
+      {
+        "task": "541aceae8845d146ddaa18a54a0701a02a78bb93436d07337256013f471d9184:mosaic",
+        "number": 1,
+        "started": 1793277342.763504,
+        "ended": 1793277342.7974489,
+        "state": "SUCCEEDED",
+        "owner": "{\"pid\": 63443, \"create_time\": 1793277320.728055, \"token\": \"deb10347e3da4eae957ada2ef92d3888\", \"owner_file\": \"/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/region_dev_validation/state/workers/deb10347e3da4eae957ada2ef92d3888.json\"}",
+        "error": "null"
+      }
+    ],
+    "failures": []
+  },
+  "elapsed_seconds": 22.637124916014727
+}

@@ -1,0 +1,272 @@
+{
+  "halo": [
+    843250.0,
+    820600.0,
+    846000.0,
+    823800.0
+  ],
+  "selection": "all source footprints intersecting union of two owners plus 1000 m buffer",
+  "sources": [
+    {
+      "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10A(e843n822,e844n822).tif",
+      "bounds": [
+        843500.0,
+        822200.0,
+        844250.0,
+        822800.0
+      ]
+    },
+    {
+      "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10B(e844n822,e845n822).tif",
+      "bounds": [
+        844250.0,
+        822200.0,
+        845000.0,
+        822800.0
+      ]
+    },
+    {
+      "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10C(e843n821,e844n822).tif",
+      "bounds": [
+        843500.0,
+        821600.0,
+        844250.0,
+        822200.0
+      ]
+    },
+    {
+      "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10D(e844n821,e845n822).tif",
+      "bounds": [
+        844250.0,
+        821600.0,
+        845000.0,
+        822200.0
+      ]
+    },
+    {
+      "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE14B(e842n821,e843n821).tif",
+      "bounds": [
+        842750.0,
+        821000.0,
+        843500.0,
+        821600.0
+      ]
+    },
+    {
+      "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE14D(e842n820,e843n821).tif",
+      "bounds": [
+        842750.0,
+        820400.0,
+        843500.0,
+        821000.0
+      ]
+    },
+    {
+      "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE15A(e843n821,e844n821).tif",
+      "bounds": [
+        843500.0,
+        821000.0,
+        844250.0,
+        821600.0
+      ]
+    },
+    {
+      "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE15B(e844n821,e845n821).tif",
+      "bounds": [
+        844250.0,
+        821000.0,
+        845000.0,
+        821600.0
+      ]
+    },
+    {
+      "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE15C(e843n820,e844n821).tif",
+      "bounds": [
+        843500.0,
+        820400.0,
+        844250.0,
+        821000.0
+      ]
+    },
+    {
+      "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE15D(e844n820,e845n821).tif",
+      "bounds": [
+        844250.0,
+        820400.0,
+        845000.0,
+        821000.0
+      ]
+    },
+    {
+      "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE4B(e842n823,e843n824).tif",
+      "bounds": [
+        842750.0,
+        823400.0,
+        843500.0,
+        824000.0
+      ]
+    },
+    {
+      "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE4D(e842n822,e843n823).tif",
+      "bounds": [
+        842750.0,
+        822800.0,
+        843500.0,
+        823400.0
+      ]
+    },
+    {
+      "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE5A(e843n823,e844n824).tif",
+      "bounds": [
+        843500.0,
+        823400.0,
+        844250.0,
+        824000.0
+      ]
+    },
+    {
+      "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE5B(e844n823,e845n824).tif",
+      "bounds": [
+        844250.0,
+        823400.0,
+        845000.0,
+        824000.0
+      ]
+    },
+    {
+      "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE5C(e843n822,e844n823).tif",
+      "bounds": [
+        843500.0,
+        822800.0,
+        844250.0,
+        823400.0
+      ]
+    },
+    {
+      "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE5D(e844n822,e845n823).tif",
+      "bounds": [
+        844250.0,
+        822800.0,
+        845000.0,
+        823400.0
+      ]
+    },
+    {
+      "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE9B(e842n822,e843n822).tif",
+      "bounds": [
+        842750.0,
+        822200.0,
+        843500.0,
+        822800.0
+      ]
+    },
+    {
+      "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE9D(e842n821,e843n822).tif",
+      "bounds": [
+        842750.0,
+        821600.0,
+        843500.0,
+        822200.0
+      ]
+    },
+    {
+      "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW11A(e845n821,e845n821).tif",
+      "bounds": [
+        845000.0,
+        821000.0,
+        845750.0,
+        821600.0
+      ]
+    },
+    {
+      "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW11B(e845n821,e846n821).tif",
+      "bounds": [
+        845750.0,
+        821000.0,
+        846500.0,
+        821600.0
+      ]
+    },
+    {
+      "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW11C(e845n820,e845n821).tif",
+      "bounds": [
+        845000.0,
+        820400.0,
+        845750.0,
+        821000.0
+      ]
+    },
+    {
+      "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW11D(e845n820,e846n821).tif",
+      "bounds": [
+        845750.0,
+        820400.0,
+        846500.0,
+        821000.0
+      ]
+    },
+    {
+      "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW1A(e845n823,e845n824).tif",
+      "bounds": [
+        845000.0,
+        823400.0,
+        845750.0,
+        824000.0
+      ]
+    },
+    {
+      "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW1B(e845n823,e846n824).tif",
+      "bounds": [
+        845750.0,
+        823400.0,
+        846500.0,
+        824000.0
+      ]
+    },
+    {
+      "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW1C(e845n822,e845n823).tif",
+      "bounds": [
+        845000.0,
+        822800.0,
+        845750.0,
+        823400.0
+      ]
+    },
+    {
+      "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW1D(e845n822,e846n823).tif",
+      "bounds": [
+        845750.0,
+        822800.0,
+        846500.0,
+        823400.0
+      ]
+    },
+    {
+      "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW6A(e845n822,e845n822).tif",
+      "bounds": [
+        845000.0,
+        822200.0,
+        845750.0,
+        822800.0
+      ]
+    },
+    {
+      "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW6C(e845n821,e845n822).tif",
+      "bounds": [
+        845000.0,
+        821600.0,
+        845750.0,
+        822200.0
+      ]
+    },
+    {
+      "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW6D(e845n821,e846n822).tif",
+      "bounds": [
+        845750.0,
+        821600.0,
+        846500.0,
+        822200.0
+      ]
+    }
+  ]
+}

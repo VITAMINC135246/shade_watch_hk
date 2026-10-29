@@ -1,0 +1,10 @@
+{
+  "ceiling_seconds": 1200,
+  "ceiling_memory_bytes": 8589934592,
+  "ceiling_artifact_bytes": 5368709120,
+  "status": "RUNNING",
+  "wall_seconds": 0,
+  "peak_tree_rss_bytes": 0,
+  "generated_bytes": 0,
+  "scope": "entire real exercise including catalogue selection, planning, V2 run, V1 run and equality checks; read-only initial full-catalogue inspection excluded"
+}

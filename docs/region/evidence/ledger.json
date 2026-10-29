@@ -1,0 +1,13 @@
+{
+  "status": "STOPPED: whole-catalogue incompatibility; no further real runs",
+  "real_job_wall_seconds": 23.217960749025224,
+  "real_exercise_elapsed_seconds_from_file_timestamps": 64.0,
+  "conservative_total_elapsed_charge_seconds": 391.0,
+  "measured_engine_peak_tree_rss_bytes": 651313152,
+  "generated_bytes": 18264101,
+  "ceiling_seconds": 1200,
+  "ceiling_memory_bytes": 8589934592,
+  "ceiling_artifact_bytes": 5368709120,
+  "outer_watchdog": "Incomplete: parent ledger never updated beyond launch; process enumeration denied in restricted environment. Subsequent unrestricted check found no remaining development processes. Engine measurements available; no claim of complete outer peak measurement.",
+  "accounting": "Symlinks reference read-only raw sources and are not counted as new raster bytes. Conservative elapsed charge includes initial whole-catalogue inspection and intervening authoring, rounded with 2 seconds headroom."
+}

@@ -1,0 +1,6 @@
+{
+  "error": "Incompatible CRS, resolution, or grid alignment",
+  "source": "data/raw/dsm/2020/D12.DSM.TIFF/14NE15A(e828n809,e829n809).tif",
+  "command": "v1.index_sources('data/raw/dsm/2020/D12.DSM.TIFF')",
+  "action": "Raw file unchanged. Stopped further real work at blocker; bounded child already completed on a 29-source halo catalogue."
+}

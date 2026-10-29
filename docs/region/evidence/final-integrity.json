@@ -1,0 +1,20 @@
+{
+  "pinned_files_match": true,
+  "src_diff_empty": true,
+  "protected_external_drift": [
+    "presentations/shade_watch_wk4_ppt169_20261009/live_preview/lock.json",
+    "presentations/shade_watch_wk4_ppt169_20261009/live_preview/server.log"
+  ],
+  "pinned": {
+    "v1.py": "3d572726b41e7608a418f20043020e93c0a16bc82cee9a3ca5f56d4f05a92905",
+    "v1_cache.py": "96a576d12ada9186319e4c8c5f1e626b06ab0aac5f7345a9c6083b9f1b6fe479",
+    "horizon.py": "afb46c37742767e7480220d82527873ed389bb184623fef78b4a3a1d19e8144e",
+    "solar.py": "eaa845d3ab1aa952c57a24019bb21a748702a8aece960693424938ab7e1b7899",
+    "spatial.py": "5ecc0495dd102596ab41903b5e174c142888ffc14664b81009164fbf176d3aa7",
+    "shade_watch.py": "cfb5d1185af5a39521ecf4edaeddd375b76e1abc877675c63a428de21e546ea7",
+    "v2.py": "60245b28a30a10ae5f6b6152de6cd9247c4cfe2eb242c70c4d55c674e5861e5e",
+    "v2_worker.py": "4a880785a6bd6451c47c780aab9279096256379a976edced5ac00eb34ae830ff",
+    "v2_runner.py": "0ebbfdcfd47def2e3e27d82bec4a4e8bad8d3246fde11273cc1ceca644f3b6f0",
+    "v2_state.py": "82964df5f3097cb3458073eabc44de9878ae1a714aeb05efb747a835b6c7f808"
+  }
+}

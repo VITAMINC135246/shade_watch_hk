@@ -1,0 +1,291 @@
+{
+  "schema": "shade-watch-region-request-1.0",
+  "contract": "SW-RGN-AC-1.0",
+  "original_corners": [
+    [
+      844701.5,
+      822197.5
+    ],
+    [
+      844713.5,
+      822202.5
+    ]
+  ],
+  "crs": "hk1980",
+  "coordinate_order": "easting,northing",
+  "projected_corners": [
+    [
+      844701.5,
+      822197.5
+    ],
+    [
+      844713.5,
+      822202.5
+    ]
+  ],
+  "transformer_description": "Inverse of Hong Kong 1980 to WGS 84 (1) + Hong Kong 1980 Grid (with axis order normalized for visualization)",
+  "transformation_applied": false,
+  "pyproj_version": "3.8.0",
+  "proj_version": "9.8.1",
+  "requested_bounds": [
+    844701.5,
+    822197.5,
+    844713.5,
+    822202.5
+  ],
+  "resolved_bounds": [
+    844701.5,
+    822197.5,
+    844713.5,
+    822202.5
+  ],
+  "resolved_grid": {
+    "width": 24,
+    "height": 10,
+    "transform": [
+      0.5,
+      0.0,
+      844701.5,
+      0.0,
+      -0.5,
+      822202.5
+    ],
+    "crs": "EPSG:2326",
+    "mode": "custom",
+    "selected_source": null,
+    "selected_sources": []
+  },
+  "native_lattice": {
+    "x": [
+      842750.0,
+      843500.0,
+      844250.0,
+      845000.0,
+      845750.0,
+      846500.0
+    ],
+    "y": [
+      820400.0,
+      821000.0,
+      821600.0,
+      822200.0,
+      822800.0,
+      823400.0,
+      824000.0
+    ]
+  },
+  "partition": [
+    {
+      "id": "region_0000",
+      "requested_bounds": [
+        844701.5,
+        822197.5,
+        844713.5,
+        822200.0
+      ],
+      "resolved_bounds": [
+        844701.5,
+        822197.5,
+        844713.5,
+        822200.0
+      ],
+      "grid": {
+        "width": 24,
+        "height": 5,
+        "transform": [
+          0.5,
+          0.0,
+          844701.5,
+          0.0,
+          -0.5,
+          822200.0
+        ],
+        "crs": "EPSG:2326",
+        "mode": "custom",
+        "selected_source": null,
+        "selected_sources": []
+      },
+      "key": "f3dc0eafc882550e04e0dab676396b3093a8fb20b9e75b98ec46b1305690512c",
+      "tiles": [
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10D(e844n821,e845n822).tif"
+      ],
+      "resources": {
+        "workers": 1,
+        "estimated_peak_bytes": 763430400,
+        "memory_budget_bytes": 8589934592,
+        "estimated_new_bytes": 38377696,
+        "artifact_budget_bytes": 10737418240,
+        "expected_direction_jobs": 1,
+        "missing_direction_jobs": 1,
+        "frames": 2
+      }
+    },
+    {
+      "id": "region_0001",
+      "requested_bounds": [
+        844701.5,
+        822200.0,
+        844713.5,
+        822202.5
+      ],
+      "resolved_bounds": [
+        844701.5,
+        822200.0,
+        844713.5,
+        822202.5
+      ],
+      "grid": {
+        "width": 24,
+        "height": 5,
+        "transform": [
+          0.5,
+          0.0,
+          844701.5,
+          0.0,
+          -0.5,
+          822202.5
+        ],
+        "crs": "EPSG:2326",
+        "mode": "custom",
+        "selected_source": null,
+        "selected_sources": []
+      },
+      "key": "068bee477c90cc2c5462b27271c27116ff214cb248e6e92770a125bc13406dfd",
+      "tiles": [
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10B(e844n822,e845n822).tif"
+      ],
+      "resources": {
+        "workers": 1,
+        "estimated_peak_bytes": 763430400,
+        "memory_budget_bytes": 8589934592,
+        "estimated_new_bytes": 38377696,
+        "artifact_budget_bytes": 10737418240,
+        "expected_direction_jobs": 1,
+        "missing_direction_jobs": 1,
+        "frames": 2
+      }
+    }
+  ],
+  "generated_request_ids": [
+    "region_0000",
+    "region_0001"
+  ],
+  "batches": [
+    {
+      "id": "541aceae8845d146ddaa18a54a0701a02a78bb93436d07337256013f471d9184",
+      "estimate": {
+        "model": {
+          "schema": "shade-watch-v2-estimator-1.0",
+          "calibrated": true,
+          "frozen_utc": "2026-10-02T18:01:21.775661+00:00",
+          "coefficients": {
+            "catalog_seconds": 0.25,
+            "startup_seconds": 0.75,
+            "direction_seconds": 10.842382625000027,
+            "frame_seconds": 0.2746130117187704,
+            "hit_seconds": 0.04,
+            "media_frame_seconds": 0.15,
+            "controller_task_seconds": 0.0,
+            "classification_seconds": 0.018901864437452787
+          },
+          "efficiency": {
+            "1": 1.0,
+            "2": 0.6216601185166459
+          },
+          "domain": {
+            "max_tiles": 2,
+            "max_native_frames": 320,
+            "max_union_directions": 12,
+            "outputs": "native scientific only",
+            "hardware": "Mac arm64 macOS15.7.4, 10 logical CPUs, 24 GiB, local HFS disk",
+            "tile_shape": [
+              1500,
+              1200
+            ],
+            "source_tiles": [
+              "11NE10B(e844n822,e845n822).tif",
+              "11NE10D(e844n821,e845n822).tif"
+            ],
+            "caveat": "local mostly-valid tiles; new terrain/NoData distributions and media uncalibrated"
+          },
+          "methodology": {
+            "direction": "full native union-task wall divided by missing native directions",
+            "frame": "matched warm complete run minus fixed startup/catalog, divided by native frames",
+            "efficiency": "one/two-worker matched warm work after fixed costs; capped at 1",
+            "startup_catalog": "fixed engineering allowance checked against phase/whole-run timings",
+            "frame_worker_seconds": 0.20359012765607076,
+            "warm_overhead_seconds": 3.272732290006388,
+            "excluded": "planning/submission and OS-cache flush; run API includes final verification",
+            "memory_disk": "conservative V1 allocation and uncompressed bytes plus temporary/metadata headroom",
+            "uncalibrated_terms": "media, final hits and four-worker costs are provisional",
+            "component_revision": "Separate measured directional and output concurrency; classification split from frame cost. Derived only from calibration, before any hold-out outcomes."
+          },
+          "calibration_records": [
+            "outputs/v2_development/evidence/cal_cold_1.json",
+            "outputs/v2_development/evidence/cal_cold_2.json",
+            "outputs/v2_development/evidence/cal_warm_1.json",
+            "outputs/v2_development/evidence/cal_warm_2.json"
+          ],
+          "direction_efficiency": {
+            "1": 1.0,
+            "2": 1.0
+          },
+          "model_sha256": "ad6939e4455d9e80495d27e382438d635f5cb9f0920601959e09bbbe2e721469"
+        },
+        "phases": {
+          "catalog_validation_seconds": 0.25,
+          "startup_seconds": 0.75,
+          "missing_direction_seconds": 21.684765250000055,
+          "warm_classification_seconds": 5.040497183320743e-06,
+          "output_compression_validation_seconds": 6.818963927501803e-05,
+          "final_hit_seconds": 0.0,
+          "media_seconds": 0.0,
+          "controller_validation_seconds": 0.0
+        },
+        "total_wall_seconds": 22.684838480136513,
+        "indicative_range_seconds": [
+          14.745145012088734,
+          36.295741568218425
+        ],
+        "range_note": "engineering variation allowance, not a fitted confidence interval",
+        "calibrated_domain": false,
+        "extrapolated": true,
+        "missing_direction_units": 2.0,
+        "union_direction_entries": 2,
+        "warm_native_frame_units": 0.0002666666666666667,
+        "final_result_hits": 0,
+        "resources": {
+          "estimated_peak_bytes": 1224775234,
+          "memory_budget_bytes": 8589934592,
+          "retained_new_bytes": 43200960,
+          "temporary_new_bytes": 38672128,
+          "estimated_peak_new_bytes": 81873088,
+          "request_metadata_bytes": 19233
+        },
+        "assumptions": [
+          "local same-machine filesystem; warm OS/JIT code cache",
+          "cold means empty directional cache, not flushed OS cache",
+          "effective-pixel/terrain changes affect directional cost",
+          "outputs include lossless compression/readback; media separate",
+          "whole-territory estimates require explicit profile and are extrapolations"
+        ]
+      },
+      "resources": {
+        "estimated_peak_bytes": 1224775234,
+        "memory_budget_bytes": 8589934592,
+        "retained_new_bytes": 43200960,
+        "temporary_new_bytes": 38672128,
+        "estimated_peak_new_bytes": 81873088,
+        "request_metadata_bytes": 19233
+      },
+      "horizon_tasks": 2,
+      "request_ids": [
+        "region_0000",
+        "region_0001"
+      ]
+    }
+  ],
+  "request_files": [
+    "batch_0000.json"
+  ]
+}
