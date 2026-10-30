@@ -1,0 +1,4 @@
+diagnostic h0 complete
+diagnostic h3 complete
+diagnostic band2_5 complete
+diagnostic band5 complete

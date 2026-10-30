@@ -1,0 +1,18 @@
+{
+  "pinned_ten_match_356f611": true,
+  "src_diff_empty": true,
+  "no_new_src_files": true,
+  "engine_environment_unchanged": true,
+  "historical_files_checked": 17141,
+  "historical_changes": [],
+  "protected_external_drift": [
+    "presentations/shade_watch_wk4_ppt169_20261009/live_preview/lock.json",
+    "presentations/shade_watch_wk4_ppt169_20261009/live_preview/server.log"
+  ],
+  "fgdb_all_hashes_unchanged": true,
+  "fgdb_files": 411,
+  "verification_wall_seconds": 9.215407792013139,
+  "after_all_runs_historical_changes": [],
+  "scoped_raw_dsm_hashes_unchanged": true,
+  "final_source_verification_seconds": 2.78507504198933
+}

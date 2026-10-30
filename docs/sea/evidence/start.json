@@ -1,0 +1,22 @@
+{
+  "head": "374a70df58a1e8faea09c8736b63c1739b30ed41",
+  "branch": "feature",
+  "status": " M .gitignore\n M docs/prompts/README.md\n?? data/raw/coastline/\n?? docs/PROJECT_STATUS_2026-10-29.zh-TW.md\n?? docs/prompts/region/\n?? docs/prompts/runner/\n?? docs/prompts/sea/\n?? docs/ui/\n?? docs/v3/WSL2_SMOKE_TEST.md\n?? presentations/\n?? tools/wsl2_smoke/\n",
+  "contract_sha256": "9742e8a34df90c6f5139c3823f53d363cb0fedee9e8905823ba3b7bfb3b66a27",
+  "pinned_files": {
+    "v1.py": "3d572726b41e7608a418f20043020e93c0a16bc82cee9a3ca5f56d4f05a92905",
+    "v1_cache.py": "96a576d12ada9186319e4c8c5f1e626b06ab0aac5f7345a9c6083b9f1b6fe479",
+    "horizon.py": "afb46c37742767e7480220d82527873ed389bb184623fef78b4a3a1d19e8144e",
+    "solar.py": "eaa845d3ab1aa952c57a24019bb21a748702a8aece960693424938ab7e1b7899",
+    "spatial.py": "5ecc0495dd102596ab41903b5e174c142888ffc14664b81009164fbf176d3aa7",
+    "shade_watch.py": "cfb5d1185af5a39521ecf4edaeddd375b76e1abc877675c63a428de21e546ea7",
+    "v2.py": "60245b28a30a10ae5f6b6152de6cd9247c4cfe2eb242c70c4d55c674e5861e5e",
+    "v2_worker.py": "4a880785a6bd6451c47c780aab9279096256379a976edced5ac00eb34ae830ff",
+    "v2_runner.py": "0ebbfdcfd47def2e3e27d82bec4a4e8bad8d3246fde11273cc1ceca644f3b6f0",
+    "v2_state.py": "82964df5f3097cb3458073eabc44de9878ae1a714aeb05efb747a835b6c7f808"
+  },
+  "engine_python": "3.12.5 (main, Sep 24 2026, 01:05:04) [Clang 17.0.0 (clang-1700.0.13.5)]",
+  "engine_executable": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/.venv/bin/python",
+  "engine_lock_sha256": "ffcc5e7fb9bc57c599c1b76778f10d7edb23f4cf6d301530dccc2126526451e0",
+  "engine_environment": "affine==3.0.1\nattrs==26.1.0\ncertifi==2026.7.22\nclick==8.5.0\nImageIO==2.37.4\nimageio-ffmpeg==0.6.0\niniconfig==2.3.0\nllvmlite==0.49.0\nnumba==0.67.0\nnumpy==2.5.3\npackaging==26.3\npillow==12.3.0\npluggy==1.6.0\npsutil==7.2.2\nPygments==2.21.0\npyparsing==3.3.3\npyproj==3.8.0\npytest==9.1.1\nrasterio==1.5.1\nscipy==1.18.1\n"
+}

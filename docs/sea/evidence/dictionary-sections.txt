@@ -1,0 +1,90 @@
+PDF page 83
+Data Dictionary Digital Topographic Map - iB5000
+V-33 Version 1.3 Survey  and  Mapping Office
+Lands Department
+
+
+
+
+
+Feature Dataset Hydrography
+Feature class HydrographyPoly
+Description A polygon feature class storing the polygons for filter bed, fountain, dam, catchwater, stream course
+DataTheme Hydrographic Polygon
+ShapeType Polygon
+FeatureType Simple
+ShapeFieldName Shape
+SubtypeFieldName FEATURESUBTYPE
+
+
+Field DataType Length Byte Description Domain Default Value Allow Null
+OBJECTID ObjectID  4 An objectID is a unique, not
+null integer column used to
+identify record in table
+ NULL False
+LASTUPDATEDATE Date   Creation or last modification
+date of the record
+ NULL False
+FEATURE_ID Integer  4 Feature identifier  NULL True
+FEATURESUBTYPE Integer  4 Subtype field for feature
+classification
+ 1 False
+FEATURECODE String 3  Type of feature  NULL False
+DATASTATUS String 3  Flag indicating whether the
+features is a proposed or
+existing feature
+dDataStatus E False
+
+PDF page 84
+Data Dictionary Digital Topographic Map - iB5000
+V-34 Version 1.3 Survey  and  Mapping Office
+Lands Department
+
+
+
+
+
+Field DataType Length Byte Description Domain Default Value Allow Null
+DATASOURCE SmallInteger  2 Source of data in data
+collection or data conversion
+dSource 2 False
+DATALEVEL String 4  Drawing sequence of data dDataLevel OG False
+EASTING Double  8 Easting coordinate  NULL False
+NORTHING Double  8 Northing coordinate  NULL False
+ENGLISHNAME String 255  Name of feature in English  NULL True
+CHINESENAME String 255  Name of feature in Chinese  NULL True
+DISTRICT String 3  Abbreviation of the DC
+District
+dDistrict NULL False
+SHAPE Geometry   The geometry type of the
+feature
+ NULL True
+PLACEPOINT_ID Integer  4 Placepoint feature identifier  NULL True
+SHAPE.LEN Double  8 The length of the feature  NULL True
+SHAPE.AREA Double  8 The area of the feature  NULL True
+
+
+
+SubTypeCode SubTypeName Field Domain Default
+1 EnclosedWaterBody FEATURECODE dEnclosedWaterBody
+2 HydrographyFurniture FEATURECODE dHydrographyFurniture
+3 CoastLine FEATURECODE dCoastLine
+4 StreamCourse FEATURECODE dStreamCourse
+
+PDF page 318
+Data Dictionary Digital Topographic Map - iB5000
+V-268 Version 1.3 Survey  and  Mapping Office
+Lands Department
+
+
+
+
+Domain Class
+Domain Class dCoastLine
+FieldType String
+DomainType CodedValue
+
+
+Code Name
+LAF Coastline And LandFill
+SEF Sea Fill

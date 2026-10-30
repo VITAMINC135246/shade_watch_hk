@@ -1,0 +1,17 @@
+{
+  "nodata_PIL_land_rasterio_sea": {
+    "n": 20,
+    "all_match": true,
+    "max_distance_to_land_boundary_m": 0.41165275147158503
+  },
+  "nodata_rasterio_land_PIL_sea": {
+    "n": 20,
+    "all_match": true,
+    "max_distance_to_land_boundary_m": 0.132891473381036
+  },
+  "valid_PIL_land_rasterio_sea": {
+    "n": 20,
+    "all_match": true,
+    "max_distance_to_land_boundary_m": 0.3101113143884338
+  }
+}

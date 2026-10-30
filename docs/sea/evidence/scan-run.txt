@@ -1,0 +1,67 @@
+scanned 100
+scanned 200
+scanned 300
+scanned 400
+scanned 500
+scanned 600
+scanned 700
+scanned 800
+scanned 900
+scanned 1000
+scanned 1100
+scanned 1200
+scanned 1300
+scanned 1400
+scanned 1500
+scanned 1600
+scanned 1700
+scanned 1800
+scanned 1900
+scanned 2000
+scanned 2100
+scanned 2200
+scanned 2300
+scanned 2400
+scanned 2500
+scanned 2600
+scanned 2700
+scanned 2800
+scanned 2900
+scanned 3000
+scanned 3100
+scanned 3200
+scanned 3300
+{
+  "status": "PASS",
+  "tiles_completed": 3310,
+  "synthetic_cells_checked": 1549,
+  "wall_seconds": 536.9901224589848,
+  "peak_rss_bytes": 401391616,
+  "ceiling_seconds": 1800,
+  "quantile_method": "exact numpy percentile, linear interpolation of float32 samples",
+  "adjacency": "8-neighbour centres on each target native grid, including 1 pixel halo and no-source sea support",
+  "footprint_accounting": "sum of supplied tile footprints; per-tile grids retained",
+  "catalogue_metadata_sha256": "7c76d53e3eeb227ef70af96833a4a081911a48456a90d923f840aafac0e01f32",
+  "catalogue_tiles": 3310,
+  "map_vector_sha256": "ef8def691f184e58d69bc41b56668f1d3030ed8477442f0570a398b0f7e70194",
+  "coastal_tiles": 1399,
+  "n": 2989697,
+  "neither_class_pixels": 48642752,
+  "neither_class_area_m2": 12160688.0,
+  "shifted_origins_preserved": [
+    "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/14NE15A(e828n809,e829n809).tif",
+    "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/14NE15B(e829n809,e830n809).tif",
+    "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/14NE15C(e828n808,e829n809).tif",
+    "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/14NE15D(e829n808,e830n809).tif"
+  ],
+  "quantiles_m": {
+    "p5": 0.8679426312446594,
+    "p25": 1.1325498819351196,
+    "p50": 1.3690766096115112,
+    "p75": 1.6872034072875977,
+    "p95": 3.9022360801696747
+  },
+  "elevation_gate_pass": true,
+  "synthetic_cells_required": 1421,
+  "synthetic_sea_pixels": 2545158876
+}

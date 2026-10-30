@@ -1,0 +1,20 @@
+{
+  "policy": {
+    "engine_policy": "SW-V1-POLICY-1.0",
+    "surface_policy": "SW-SEA-POLICY-1.0",
+    "view_id": "a3c26a13169456eb99cdc7e860f29902a1ba4b80c1d6b5967a5d591b589dd74e",
+    "diagnostic": false,
+    "manifest": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/processed/dsm_views/sea_fill_v1/a3c26a13169456eb99cdc7e860f29902a1ba4b80c1d6b5967a5d591b589dd74e/manifest.json"
+  },
+  "shape": [
+    2400,
+    3000
+  ],
+  "transform_equal": true,
+  "odd_crop_equal": true,
+  "surface_counts": {
+    "0": 3322313,
+    "1": 3867935,
+    "255": 9752
+  }
+}

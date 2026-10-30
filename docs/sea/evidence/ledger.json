@@ -1,0 +1,67 @@
+{
+  "real_job_wall_seconds": 1369.5885175000003,
+  "scan_seconds": 536.9901224589848,
+  "peak_tree_rss_bytes": 1680687104,
+  "entries": [
+    {
+      "action": "build",
+      "status": "SUCCEEDED",
+      "wall_seconds": 202.93707575000008,
+      "peak_tree_rss_bytes": 503300096
+    },
+    {
+      "action": "cheung_chau",
+      "status": "SUCCEEDED",
+      "wall_seconds": 679.2425038749934,
+      "peak_tree_rss_bytes": 1680687104
+    },
+    {
+      "action": "compare_cheung_chau",
+      "status": "SUCCEEDED",
+      "wall_seconds": 9.969541875005234,
+      "peak_tree_rss_bytes": 425459712
+    },
+    {
+      "action": "central",
+      "status": "SUCCEEDED",
+      "wall_seconds": 141.26275483399513,
+      "peak_tree_rss_bytes": 1534902272
+    },
+    {
+      "action": "compare_central",
+      "status": "SUCCEEDED",
+      "wall_seconds": 1.051409625011729,
+      "peak_tree_rss_bytes": 114819072
+    },
+    {
+      "action": "rays",
+      "status": "SUCCEEDED",
+      "wall_seconds": 4.213139833009336,
+      "peak_tree_rss_bytes": 404176896
+    },
+    {
+      "action": "sensitivity",
+      "status": "SUCCEEDED",
+      "wall_seconds": 247.0180676660093,
+      "peak_tree_rss_bytes": 1052819456
+    },
+    {
+      "action": "final_source_and_environment_audits",
+      "status": "SUCCEEDED",
+      "wall_seconds": 12.000482834002469,
+      "accounting": "Conservatively charged to real jobs; includes FGDB and scoped raw DSM hash audits"
+    }
+  ],
+  "ceilings": {
+    "real_job_wall_seconds": 3600,
+    "scan_seconds": 1800,
+    "memory_bytes": 12884901888,
+    "artifact_bytes": 21474836480
+  },
+  "generated_bytes": 1691597055,
+  "tools_environment_bytes": 109533744,
+  "status": "COMPLETED_DEVELOPMENT_NOT_ACCEPTANCE",
+  "new_code_and_tool_files_bytes": 156620,
+  "accounting_note": "Logical file bytes include new runtime data, reports/evidence, tools (including bytecode), test source and tools lock. External tools environment separately counted and also included in conservative all-new total. Synthetic pytest temporary fixtures are excluded from scientific-artifact accounting.",
+  "total_including_external_tools_environment_bytes": 1801130799
+}

@@ -1,0 +1,1781 @@
+{
+  "scope": "cheung_chau",
+  "frames": [
+    {
+      "utc": "2026-01-06T23:10:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 0,
+        "1": 402,
+        "255": 45630
+      },
+      "water_counts": {
+        "0": 0,
+        "1": 2827923,
+        "255": 1040012
+      },
+      "water_fractions": {
+        "0": 0.0,
+        "1": 0.7311195767250483,
+        "255": 0.2688804232749516
+      }
+    },
+    {
+      "utc": "2026-01-06T23:20:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 0,
+        "1": 812,
+        "255": 97671
+      },
+      "water_counts": {
+        "0": 0,
+        "1": 2299971,
+        "255": 1567964
+      },
+      "water_fractions": {
+        "0": 0.0,
+        "1": 0.5946250389419677,
+        "255": 0.4053749610580323
+      }
+    },
+    {
+      "utc": "2026-01-06T23:30:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 0,
+        "1": 728,
+        "255": 175502
+      },
+      "water_counts": {
+        "0": 0,
+        "1": 1261312,
+        "255": 2606623
+      },
+      "water_fractions": {
+        "0": 0.0,
+        "1": 0.32609441471999917,
+        "255": 0.6739055852800008
+      }
+    },
+    {
+      "utc": "2026-01-06T23:40:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 246867,
+        "1": 651,
+        "255": 26182
+      },
+      "water_counts": {
+        "0": 2564016,
+        "1": 864315,
+        "255": 439604
+      },
+      "water_fractions": {
+        "0": 0.6628901468096026,
+        "1": 0.22345644381304236,
+        "255": 0.1136534093773551
+      }
+    },
+    {
+      "utc": "2026-01-06T23:50:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 326332,
+        "1": 538,
+        "255": 39058
+      },
+      "water_counts": {
+        "0": 2808870,
+        "1": 582342,
+        "255": 476723
+      },
+      "water_fractions": {
+        "0": 0.7261936925000032,
+        "1": 0.15055630459146807,
+        "255": 0.12325000290852871
+      }
+    },
+    {
+      "utc": "2026-01-07T00:00:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 408713,
+        "1": 432,
+        "255": 49018
+      },
+      "water_counts": {
+        "0": 2953785,
+        "1": 417752,
+        "255": 496398
+      },
+      "water_fractions": {
+        "0": 0.7636594203366913,
+        "1": 0.10800388320899912,
+        "255": 0.1283366964543096
+      }
+    },
+    {
+      "utc": "2026-01-07T00:10:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 490852,
+        "1": 349,
+        "255": 58559
+      },
+      "water_counts": {
+        "0": 3045411,
+        "1": 313444,
+        "255": 509080
+      },
+      "water_fractions": {
+        "0": 0.7873480293748473,
+        "1": 0.08103652207185488,
+        "255": 0.13161544855329782
+      }
+    },
+    {
+      "utc": "2026-01-07T00:20:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 564310,
+        "1": 285,
+        "255": 67488
+      },
+      "water_counts": {
+        "0": 3112326,
+        "1": 238429,
+        "255": 517180
+      },
+      "water_fractions": {
+        "0": 0.8046479581482109,
+        "1": 0.061642452626530696,
+        "255": 0.13370958922525844
+      }
+    },
+    {
+      "utc": "2026-01-07T00:30:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 659506,
+        "1": 174,
+        "255": 81267
+      },
+      "water_counts": {
+        "0": 3150045,
+        "1": 189278,
+        "255": 528612
+      },
+      "water_fractions": {
+        "0": 0.8143996732106408,
+        "1": 0.048935155321896566,
+        "255": 0.13666517146746263
+      }
+    },
+    {
+      "utc": "2026-01-07T00:40:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 725771,
+        "1": 144,
+        "255": 88900
+      },
+      "water_counts": {
+        "0": 3185240,
+        "1": 148841,
+        "255": 533854
+      },
+      "water_fractions": {
+        "0": 0.8234988436982524,
+        "1": 0.038480739722875384,
+        "255": 0.13802041657887218
+      }
+    },
+    {
+      "utc": "2026-01-07T00:50:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 787763,
+        "1": 122,
+        "255": 96243
+      },
+      "water_counts": {
+        "0": 3210481,
+        "1": 119648,
+        "255": 537806
+      },
+      "water_fractions": {
+        "0": 0.8300245479823213,
+        "1": 0.030933301619598053,
+        "255": 0.13904215039808063
+      }
+    },
+    {
+      "utc": "2026-01-07T01:00:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 768507,
+        "1": 121,
+        "255": 129308
+      },
+      "water_counts": {
+        "0": 3275245,
+        "1": 99546,
+        "255": 493144
+      },
+      "water_fractions": {
+        "0": 0.8467683660661309,
+        "1": 0.025736213250739735,
+        "255": 0.12749542068312936
+      }
+    },
+    {
+      "utc": "2026-01-07T01:10:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 821231,
+        "1": 103,
+        "255": 137424
+      },
+      "water_counts": {
+        "0": 3289978,
+        "1": 82194,
+        "255": 495763
+      },
+      "water_fractions": {
+        "0": 0.8505773752661304,
+        "1": 0.02125009856680632,
+        "255": 0.12817252616706332
+      }
+    },
+    {
+      "utc": "2026-01-07T01:20:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 872121,
+        "1": 90,
+        "255": 145253
+      },
+      "water_counts": {
+        "0": 3301847,
+        "1": 68372,
+        "255": 497716
+      },
+      "water_fractions": {
+        "0": 0.8536459376902662,
+        "1": 0.017676615558431048,
+        "255": 0.1286774467513027
+      }
+    },
+    {
+      "utc": "2026-01-07T01:30:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 930822,
+        "1": 80,
+        "255": 161316
+      },
+      "water_counts": {
+        "0": 3390822,
+        "1": 56605,
+        "255": 420508
+      },
+      "water_fractions": {
+        "0": 0.8766491680961547,
+        "1": 0.014634423794608751,
+        "255": 0.10871640810923658
+      }
+    },
+    {
+      "utc": "2026-01-07T01:40:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 976958,
+        "1": 74,
+        "255": 168158
+      },
+      "water_counts": {
+        "0": 3398868,
+        "1": 47516,
+        "255": 421551
+      },
+      "water_fractions": {
+        "0": 0.8787293478303022,
+        "1": 0.012284591131960594,
+        "255": 0.1089860610377372
+      }
+    },
+    {
+      "utc": "2026-01-07T01:50:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 1021948,
+        "1": 67,
+        "255": 174605
+      },
+      "water_counts": {
+        "0": 3405375,
+        "1": 40242,
+        "255": 422318
+      },
+      "water_fractions": {
+        "0": 0.8804116408367773,
+        "1": 0.010404001101362872,
+        "255": 0.10918435806185989
+      }
+    },
+    {
+      "utc": "2026-01-07T02:00:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 1011041,
+        "1": 57,
+        "255": 146976
+      },
+      "water_counts": {
+        "0": 3425628,
+        "1": 35654,
+        "255": 406653
+      },
+      "water_fractions": {
+        "0": 0.8856477681243351,
+        "1": 0.009217838459022708,
+        "255": 0.10513439341664221
+      }
+    },
+    {
+      "utc": "2026-01-07T02:10:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 1050933,
+        "1": 46,
+        "255": 152244
+      },
+      "water_counts": {
+        "0": 3430177,
+        "1": 30412,
+        "255": 407346
+      },
+      "water_fractions": {
+        "0": 0.8868238478671436,
+        "1": 0.007862593347613132,
+        "255": 0.10531355878524329
+      }
+    },
+    {
+      "utc": "2026-01-07T02:20:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 1097926,
+        "1": 41,
+        "255": 154157
+      },
+      "water_counts": {
+        "0": 3467180,
+        "1": 26080,
+        "255": 374675
+      },
+      "water_fractions": {
+        "0": 0.8963904512356077,
+        "1": 0.006742615891942342,
+        "255": 0.09686693287245003
+      }
+    },
+    {
+      "utc": "2026-01-07T02:30:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 1133792,
+        "1": 32,
+        "255": 158898
+      },
+      "water_counts": {
+        "0": 3470030,
+        "1": 22528,
+        "255": 375377
+      },
+      "water_fractions": {
+        "0": 0.8971272785090753,
+        "1": 0.005824296426904796,
+        "255": 0.09704842506401995
+      }
+    },
+    {
+      "utc": "2026-01-07T02:40:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 1167115,
+        "1": 22,
+        "255": 163304
+      },
+      "water_counts": {
+        "0": 3472500,
+        "1": 19485,
+        "255": 375950
+      },
+      "water_fractions": {
+        "0": 0.8977658621460806,
+        "1": 0.005037571727549713,
+        "255": 0.09719656612636976
+      }
+    },
+    {
+      "utc": "2026-01-07T02:50:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 1224876,
+        "1": 15,
+        "255": 187818
+      },
+      "water_counts": {
+        "0": 3520098,
+        "1": 16649,
+        "255": 331188
+      },
+      "water_fractions": {
+        "0": 0.9100716532206462,
+        "1": 0.004304363956478069,
+        "255": 0.08562398282287577
+      }
+    },
+    {
+      "utc": "2026-01-07T03:00:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 1309739,
+        "1": 10,
+        "255": 197917
+      },
+      "water_counts": {
+        "0": 3566270,
+        "1": 14509,
+        "255": 287156
+      },
+      "water_fractions": {
+        "0": 0.9220087721225926,
+        "1": 0.003751097161663782,
+        "255": 0.07424013071574367
+      }
+    },
+    {
+      "utc": "2026-01-07T03:10:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 1337566,
+        "1": 6,
+        "255": 201679
+      },
+      "water_counts": {
+        "0": 3567789,
+        "1": 12828,
+        "255": 287318
+      },
+      "water_fractions": {
+        "0": 0.9224014881325565,
+        "1": 0.0033164983382605964,
+        "255": 0.07428201352918289
+      }
+    },
+    {
+      "utc": "2026-01-07T03:20:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 1379618,
+        "1": 6,
+        "255": 185952
+      },
+      "water_counts": {
+        "0": 3556833,
+        "1": 11041,
+        "255": 300061
+      },
+      "water_fractions": {
+        "0": 0.9195689689718157,
+        "1": 0.002854494711002124,
+        "255": 0.07757653631718217
+      }
+    },
+    {
+      "utc": "2026-01-07T03:30:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 1401372,
+        "1": 5,
+        "255": 188634
+      },
+      "water_counts": {
+        "0": 3557713,
+        "1": 9940,
+        "255": 300282
+      },
+      "water_fractions": {
+        "0": 0.9197964805509917,
+        "1": 0.002569846701146736,
+        "255": 0.07763367274786158
+      }
+    },
+    {
+      "utc": "2026-01-07T03:40:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 1495892,
+        "1": 5,
+        "255": 200569
+      },
+      "water_counts": {
+        "0": 3612397,
+        "1": 8474,
+        "255": 247064
+      },
+      "water_fractions": {
+        "0": 0.9339342569096947,
+        "1": 0.0021908330931104066,
+        "255": 0.06387490999719489
+      }
+    },
+    {
+      "utc": "2026-01-07T03:50:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 1511437,
+        "1": 4,
+        "255": 202510
+      },
+      "water_counts": {
+        "0": 3612873,
+        "1": 7893,
+        "255": 247169
+      },
+      "water_fractions": {
+        "0": 0.934057319991158,
+        "1": 0.0020406237436771816,
+        "255": 0.06390205626516475
+      }
+    },
+    {
+      "utc": "2026-01-07T04:00:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 1546867,
+        "1": 3,
+        "255": 230894
+      },
+      "water_counts": {
+        "0": 3615458,
+        "1": 6862,
+        "255": 245615
+      },
+      "water_fractions": {
+        "0": 0.9347256352549875,
+        "1": 0.0017740732458017003,
+        "255": 0.06350029149921083
+      }
+    },
+    {
+      "utc": "2026-01-07T04:10:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 1597943,
+        "1": 2,
+        "255": 225361
+      },
+      "water_counts": {
+        "0": 3611400,
+        "1": 5866,
+        "255": 250669
+      },
+      "water_fractions": {
+        "0": 0.9336764966319238,
+        "1": 0.0015165715039161722,
+        "255": 0.06480693186416008
+      }
+    },
+    {
+      "utc": "2026-01-07T04:20:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 1603183,
+        "1": 2,
+        "255": 226049
+      },
+      "water_counts": {
+        "0": 3611504,
+        "1": 5740,
+        "255": 250691
+      },
+      "water_fractions": {
+        "0": 0.9337033843640082,
+        "1": 0.0014839959823523404,
+        "255": 0.06481261965363948
+      }
+    },
+    {
+      "utc": "2026-01-07T04:30:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 1546757,
+        "1": 28,
+        "255": 215346
+      },
+      "water_counts": {
+        "0": 3582533,
+        "1": 5425,
+        "255": 279977
+      },
+      "water_fractions": {
+        "0": 0.9262133412272957,
+        "1": 0.0014025571784427608,
+        "255": 0.07238410159426154
+      }
+    },
+    {
+      "utc": "2026-01-07T04:40:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 1623801,
+        "1": 2,
+        "255": 223609
+      },
+      "water_counts": {
+        "0": 3608424,
+        "1": 4962,
+        "255": 254549
+      },
+      "water_fractions": {
+        "0": 0.9329070938368923,
+        "1": 0.0012828550634899501,
+        "255": 0.06581005109961775
+      }
+    },
+    {
+      "utc": "2026-01-07T04:50:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 1617992,
+        "1": 2,
+        "255": 222874
+      },
+      "water_counts": {
+        "0": 3608337,
+        "1": 5065,
+        "255": 254533
+      },
+      "water_fractions": {
+        "0": 0.9328846012148602,
+        "1": 0.0013094842596889555,
+        "255": 0.06580591452545091
+      }
+    },
+    {
+      "utc": "2026-01-07T05:00:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 1577508,
+        "1": 3,
+        "255": 204747
+      },
+      "water_counts": {
+        "0": 3556240,
+        "1": 4930,
+        "255": 306765
+      },
+      "water_fractions": {
+        "0": 0.9194156571917573,
+        "1": 0.0012745819151562786,
+        "255": 0.07930976089308636
+      }
+    },
+    {
+      "utc": "2026-01-07T05:10:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 1515970,
+        "1": 5,
+        "255": 182815
+      },
+      "water_counts": {
+        "0": 3525529,
+        "1": 4839,
+        "255": 337567
+      },
+      "water_fractions": {
+        "0": 0.9114757616144015,
+        "1": 0.0012510551495824,
+        "255": 0.08727318323601611
+      }
+    },
+    {
+      "utc": "2026-01-07T05:20:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 1500199,
+        "1": 5,
+        "255": 180973
+      },
+      "water_counts": {
+        "0": 3525242,
+        "1": 5156,
+        "255": 337537
+      },
+      "water_fractions": {
+        "0": 0.9114015618152839,
+        "1": 0.001333011025262834,
+        "255": 0.0872654271594533
+      }
+    },
+    {
+      "utc": "2026-01-07T05:30:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 1315764,
+        "1": 5,
+        "255": 170477
+      },
+      "water_counts": {
+        "0": 3504020,
+        "1": 5220,
+        "255": 358695
+      },
+      "water_fractions": {
+        "0": 0.905914913254747,
+        "1": 0.0013495573219301773,
+        "255": 0.09273552942332278
+      }
+    },
+    {
+      "utc": "2026-01-07T05:40:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 1295094,
+        "1": 6,
+        "255": 167942
+      },
+      "water_counts": {
+        "0": 3503570,
+        "1": 5737,
+        "255": 358628
+      },
+      "water_fractions": {
+        "0": 0.9057985721063048,
+        "1": 0.0014832203746960588,
+        "255": 0.09271820751899916
+      }
+    },
+    {
+      "utc": "2026-01-07T05:50:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 1198607,
+        "1": 6,
+        "255": 156529
+      },
+      "water_counts": {
+        "0": 3443032,
+        "1": 5873,
+        "255": 419030
+      },
+      "water_fractions": {
+        "0": 0.8901473266743107,
+        "1": 0.001518381255114163,
+        "255": 0.10833429207057513
+      }
+    },
+    {
+      "utc": "2026-01-07T06:00:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 1141549,
+        "1": 56,
+        "255": 164956
+      },
+      "water_counts": {
+        "0": 3338000,
+        "1": 5941,
+        "255": 523994
+      },
+      "water_fractions": {
+        "0": 0.8629927855561171,
+        "1": 0.0015359616953232152,
+        "255": 0.13547125274855965
+      }
+    },
+    {
+      "utc": "2026-01-07T06:10:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 1116463,
+        "1": 67,
+        "255": 161392
+      },
+      "water_counts": {
+        "0": 3337184,
+        "1": 6842,
+        "255": 523909
+      },
+      "water_fractions": {
+        "0": 0.8627818202736085,
+        "1": 0.0017689025280931557,
+        "255": 0.13544927719829833
+      }
+    },
+    {
+      "utc": "2026-01-07T06:20:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 997950,
+        "1": 85,
+        "255": 167246
+      },
+      "water_counts": {
+        "0": 3269494,
+        "1": 7150,
+        "255": 591291
+      },
+      "water_fractions": {
+        "0": 0.8452815261890388,
+        "1": 0.0018485315808047446,
+        "255": 0.1528699422301564
+      }
+    },
+    {
+      "utc": "2026-01-07T06:30:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 971208,
+        "1": 95,
+        "255": 163099
+      },
+      "water_counts": {
+        "0": 3268193,
+        "1": 8635,
+        "255": 591107
+      },
+      "water_fractions": {
+        "0": 0.844945171002098,
+        "1": 0.002232457370664192,
+        "255": 0.1528223716272378
+      }
+    },
+    {
+      "utc": "2026-01-07T06:40:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 865665,
+        "1": 108,
+        "255": 169684
+      },
+      "water_counts": {
+        "0": 3231802,
+        "1": 9024,
+        "255": 627109
+      },
+      "water_fractions": {
+        "0": 0.8355367915955154,
+        "1": 0.0023330278300953866,
+        "255": 0.1621301805743892
+      }
+    },
+    {
+      "utc": "2026-01-07T06:50:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 838318,
+        "1": 129,
+        "255": 164498
+      },
+      "water_counts": {
+        "0": 3230246,
+        "1": 11233,
+        "255": 626456
+      },
+      "water_fractions": {
+        "0": 0.8351345097577907,
+        "1": 0.0029041336010041533,
+        "255": 0.1619613566412052
+      }
+    },
+    {
+      "utc": "2026-01-07T07:00:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 809740,
+        "1": 140,
+        "255": 158936
+      },
+      "water_counts": {
+        "0": 3227930,
+        "1": 14176,
+        "255": 625829
+      },
+      "water_fractions": {
+        "0": 0.8345357406471412,
+        "1": 0.003665004711816512,
+        "255": 0.1617992546410423
+      }
+    },
+    {
+      "utc": "2026-01-07T07:10:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 778526,
+        "1": 157,
+        "255": 191832
+      },
+      "water_counts": {
+        "0": 3272526,
+        "1": 15937,
+        "255": 579472
+      },
+      "water_fractions": {
+        "0": 0.8460654069936543,
+        "1": 0.004120286406053876,
+        "255": 0.14981430660029188
+      }
+    },
+    {
+      "utc": "2026-01-07T07:20:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 749183,
+        "1": 173,
+        "255": 184668
+      },
+      "water_counts": {
+        "0": 3268024,
+        "1": 21060,
+        "255": 578851
+      },
+      "water_fractions": {
+        "0": 0.8449014784374608,
+        "1": 0.005444765747097612,
+        "255": 0.14965375581544157
+      }
+    },
+    {
+      "utc": "2026-01-07T07:30:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 676004,
+        "1": 189,
+        "255": 195642
+      },
+      "water_counts": {
+        "0": 3318902,
+        "1": 26302,
+        "255": 522731
+      },
+      "water_fractions": {
+        "0": 0.8580552672162278,
+        "1": 0.006800010858507188,
+        "255": 0.13514472192526503
+      }
+    },
+    {
+      "utc": "2026-01-07T07:40:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 619476,
+        "1": 226,
+        "255": 189293
+      },
+      "water_counts": {
+        "0": 3311143,
+        "1": 34676,
+        "255": 522116
+      },
+      "water_fractions": {
+        "0": 0.8560492872811979,
+        "1": 0.008964990363074871,
+        "255": 0.13498572235572728
+      }
+    },
+    {
+      "utc": "2026-01-07T07:50:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 587393,
+        "1": 267,
+        "255": 178925
+      },
+      "water_counts": {
+        "0": 3301816,
+        "1": 45437,
+        "255": 520682
+      },
+      "water_fractions": {
+        "0": 0.853637923077818,
+        "1": 0.011747095026157369,
+        "255": 0.1346149818960246
+      }
+    },
+    {
+      "utc": "2026-01-07T08:00:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 553759,
+        "1": 348,
+        "255": 168123
+      },
+      "water_counts": {
+        "0": 3289736,
+        "1": 59431,
+        "255": 518768
+      },
+      "water_fractions": {
+        "0": 0.850514809581857,
+        "1": 0.015365046206826122,
+        "255": 0.1341201442113169
+      }
+    },
+    {
+      "utc": "2026-01-07T08:10:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 533603,
+        "1": 422,
+        "255": 186171
+      },
+      "water_counts": {
+        "0": 3408034,
+        "1": 73448,
+        "255": 386453
+      },
+      "water_fractions": {
+        "0": 0.8810990877561282,
+        "1": 0.018988943712859703,
+        "255": 0.09991196853101203
+      }
+    },
+    {
+      "utc": "2026-01-07T08:20:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 497187,
+        "1": 485,
+        "255": 172350
+      },
+      "water_counts": {
+        "0": 3385647,
+        "1": 99005,
+        "255": 383283
+      },
+      "water_fractions": {
+        "0": 0.8753112448890688,
+        "1": 0.0255963453367236,
+        "255": 0.09909240977420769
+      }
+    },
+    {
+      "utc": "2026-01-07T08:30:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 460255,
+        "1": 532,
+        "255": 157871
+      },
+      "water_counts": {
+        "0": 3354206,
+        "1": 134598,
+        "255": 379131
+      },
+      "water_fractions": {
+        "0": 0.8671826181153509,
+        "1": 0.034798413106735246,
+        "255": 0.0980189687779138
+      }
+    },
+    {
+      "utc": "2026-01-07T08:40:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 458407,
+        "1": 605,
+        "255": 141426
+      },
+      "water_counts": {
+        "0": 3407266,
+        "1": 172322,
+        "255": 288347
+      },
+      "water_fractions": {
+        "0": 0.8809005321961202,
+        "1": 0.04455142084859234,
+        "255": 0.07454804695528751
+      }
+    },
+    {
+      "utc": "2026-01-07T08:50:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 413859,
+        "1": 663,
+        "255": 125502
+      },
+      "water_counts": {
+        "0": 3351011,
+        "1": 236083,
+        "255": 280841
+      },
+      "water_fractions": {
+        "0": 0.8663565959614109,
+        "1": 0.0610359274393184,
+        "255": 0.07260747659927066
+      }
+    },
+    {
+      "utc": "2026-01-07T09:00:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 365544,
+        "1": 762,
+        "255": 107942
+      },
+      "water_counts": {
+        "0": 3272377,
+        "1": 325168,
+        "255": 270390
+      },
+      "water_fractions": {
+        "0": 0.8460268851467255,
+        "1": 0.08406759679260381,
+        "255": 0.06990551806067062
+      }
+    },
+    {
+      "utc": "2026-01-07T09:10:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 314656,
+        "1": 899,
+        "255": 89695
+      },
+      "water_counts": {
+        "0": 3166505,
+        "1": 447409,
+        "255": 254021
+      },
+      "water_fractions": {
+        "0": 0.8186551738847732,
+        "1": 0.11567128196311469,
+        "255": 0.06567354415211217
+      }
+    },
+    {
+      "utc": "2026-01-07T09:20:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 268674,
+        "1": 1065,
+        "255": 53675
+      },
+      "water_counts": {
+        "0": 3085925,
+        "1": 577965,
+        "255": 204045
+      },
+      "water_fractions": {
+        "0": 0.7978223522370463,
+        "1": 0.14942469302095304,
+        "255": 0.05275295474200058
+      }
+    },
+    {
+      "utc": "2026-01-07T09:30:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 0,
+        "1": 1179,
+        "255": 244448
+      },
+      "water_counts": {
+        "0": 0,
+        "1": 844599,
+        "255": 3023336
+      },
+      "water_fractions": {
+        "0": 0.0,
+        "1": 0.21835915029595895,
+        "255": 0.781640849704041
+      }
+    },
+    {
+      "utc": "2026-01-07T09:40:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 0,
+        "1": 1378,
+        "255": 164819
+      },
+      "water_counts": {
+        "0": 0,
+        "1": 1471911,
+        "255": 2396024
+      },
+      "water_fractions": {
+        "0": 0.0,
+        "1": 0.3805418136550899,
+        "255": 0.6194581863449101
+      }
+    },
+    {
+      "utc": "2026-01-07T09:50:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 0,
+        "1": 1226,
+        "255": 88905
+      },
+      "water_counts": {
+        "0": 0,
+        "1": 2734173,
+        "255": 1133762
+      },
+      "water_fractions": {
+        "0": 0.0,
+        "1": 0.7068818374662449,
+        "255": 0.2931181625337551
+      }
+    }
+  ],
+  "thresholds": {
+    "14NW19B(e820n807,e821n808).tif": {
+      "old": 6.309445495910136,
+      "new": 6.309445495910136
+    },
+    "14NW20A(e821n807,e821n808).tif": {
+      "old": 6.143531261324384,
+      "new": 6.143531261324384
+    },
+    "14NW19D(e820n807,e821n807).tif": {
+      "old": 6.147062149327292,
+      "new": 6.147062149327292
+    },
+    "14NW20C(e821n807,e821n807).tif": {
+      "old": 6.141495037400533,
+      "new": 6.141495037400533
+    }
+  },
+  "blocker_examples": [],
+  "gates_pass": true,
+  "attribution": "Every sunlit loss checked: raised threshold and Quality 3, or exact cached maximum-blocker address resolves to surface class 1 with horizon above Sun."
+}

@@ -1,0 +1,14 @@
+{
+  "path": "data/raw/coastline/resources_iB5000_FGDB/iB5000 Data Dictionary - FGDB v1.3.pdf",
+  "sha256": "edce002dd9390a2e2a49e41767e6dfef41278cb6e3c010756d24da5461c88aef",
+  "pages": [
+    83,
+    84,
+    318
+  ],
+  "section_labels": [
+    "V-33",
+    "V-34",
+    "V-268"
+  ]
+}

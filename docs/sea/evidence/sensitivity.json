@@ -1,0 +1,290 @@
+{
+  "h0": {
+    "diagnostic": true,
+    "height": 0.0,
+    "tolerance": 0.0,
+    "view": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/processed/dsm_views/sea_fill_v1/diagnostic/0ec6a6e35e5f508c289e40bb8f39326a474c4a4671bddcd9cc576f4d100894b4",
+    "view_id": "0ec6a6e35e5f508c289e40bb8f39326a474c4a4671bddcd9cc576f4d100894b4",
+    "target": "14NW19B(e820n807,e821n808).tif",
+    "frames": [
+      {
+        "utc": "2026-01-07T00:30:00+00:00",
+        "land_label_changes": 43,
+        "sea_label_changes": 14742,
+        "former_quality2_strict": {
+          "0": 198160,
+          "1": 43,
+          "255": 21281
+        },
+        "former_quality2_variant": {
+          "0": 198196,
+          "1": 0,
+          "255": 21288
+        }
+      },
+      {
+        "utc": "2026-01-07T04:30:00+00:00",
+        "land_label_changes": 22,
+        "sea_label_changes": 2207,
+        "former_quality2_strict": {
+          "0": 352642,
+          "1": 22,
+          "255": 111575
+        },
+        "former_quality2_variant": {
+          "0": 352661,
+          "1": 0,
+          "255": 111578
+        }
+      },
+      {
+        "utc": "2026-01-07T07:10:00+00:00",
+        "land_label_changes": 83,
+        "sea_label_changes": 3200,
+        "former_quality2_strict": {
+          "0": 358219,
+          "1": 83,
+          "255": 44429
+        },
+        "former_quality2_variant": {
+          "0": 358302,
+          "1": 0,
+          "255": 44429
+        }
+      }
+    ],
+    "result_metrics": {
+      "parent_peak_rss_bytes": 368623616,
+      "workers_peak_rss_bytes": 549126144,
+      "media_peak_rss_bytes": 0,
+      "peak_tree_rss_bytes": 917749760,
+      "peak_new_disk_bytes": 26393978,
+      "max_in_flight": 1,
+      "computed": 3,
+      "reused": 0,
+      "horizon_calls": 3,
+      "final_result_hits": 0,
+      "input_inventory_calls": 1,
+      "memory_sample_seconds": 0.02,
+      "media_tracking": "known worker-reported PIDs; sub-sample spikes may be missed",
+      "monitoring_gaps": "input admission sampled at start/end; continuous 20 ms loop starts after spawn",
+      "run_wall_seconds": 30.47618791597779
+    }
+  },
+  "h3": {
+    "diagnostic": true,
+    "height": 3.0,
+    "tolerance": 0.0,
+    "view": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/processed/dsm_views/sea_fill_v1/diagnostic/ccf298a8fe63708cfb7e5b9d180b7f52bd9e15d9c33632d40bfdd7bfec2edb91",
+    "view_id": "ccf298a8fe63708cfb7e5b9d180b7f52bd9e15d9c33632d40bfdd7bfec2edb91",
+    "target": "14NW19B(e820n807,e821n808).tif",
+    "frames": [
+      {
+        "utc": "2026-01-07T00:30:00+00:00",
+        "land_label_changes": 3160,
+        "sea_label_changes": 10662,
+        "former_quality2_strict": {
+          "0": 198160,
+          "1": 43,
+          "255": 21281
+        },
+        "former_quality2_variant": {
+          "0": 196088,
+          "1": 3203,
+          "255": 20193
+        }
+      },
+      {
+        "utc": "2026-01-07T04:30:00+00:00",
+        "land_label_changes": 2624,
+        "sea_label_changes": 362,
+        "former_quality2_strict": {
+          "0": 352642,
+          "1": 22,
+          "255": 111575
+        },
+        "former_quality2_variant": {
+          "0": 350307,
+          "1": 2646,
+          "255": 111286
+        }
+      },
+      {
+        "utc": "2026-01-07T07:10:00+00:00",
+        "land_label_changes": 4736,
+        "sea_label_changes": 880,
+        "former_quality2_strict": {
+          "0": 358219,
+          "1": 83,
+          "255": 44429
+        },
+        "former_quality2_variant": {
+          "0": 353793,
+          "1": 4819,
+          "255": 44119
+        }
+      }
+    ],
+    "result_metrics": {
+      "parent_peak_rss_bytes": 394936320,
+      "workers_peak_rss_bytes": 541933568,
+      "media_peak_rss_bytes": 0,
+      "peak_tree_rss_bytes": 936869888,
+      "peak_new_disk_bytes": 26555143,
+      "max_in_flight": 1,
+      "computed": 3,
+      "reused": 0,
+      "horizon_calls": 3,
+      "final_result_hits": 0,
+      "input_inventory_calls": 1,
+      "memory_sample_seconds": 0.02,
+      "media_tracking": "known worker-reported PIDs; sub-sample spikes may be missed",
+      "monitoring_gaps": "input admission sampled at start/end; continuous 20 ms loop starts after spawn",
+      "run_wall_seconds": 30.287651583988918
+    }
+  },
+  "band2_5": {
+    "diagnostic": true,
+    "height": 1.6,
+    "tolerance": 2.5,
+    "view": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/processed/dsm_views/sea_fill_v1/diagnostic/cc6252ef08979863dc4534ae042445525e87460d53d83d51ad1152e31310168d",
+    "view_id": "cc6252ef08979863dc4534ae042445525e87460d53d83d51ad1152e31310168d",
+    "target": "14NW19B(e820n807,e821n808).tif",
+    "frames": [
+      {
+        "utc": "2026-01-07T00:30:00+00:00",
+        "land_label_changes": 14535,
+        "sea_label_changes": 105311,
+        "former_quality2_strict": {
+          "0": 198160,
+          "1": 43,
+          "255": 21281
+        },
+        "former_quality2_variant": {
+          "0": 212687,
+          "1": 51,
+          "255": 6746
+        }
+      },
+      {
+        "utc": "2026-01-07T04:30:00+00:00",
+        "land_label_changes": 34742,
+        "sea_label_changes": 39118,
+        "former_quality2_strict": {
+          "0": 352642,
+          "1": 22,
+          "255": 111575
+        },
+        "former_quality2_variant": {
+          "0": 387378,
+          "1": 28,
+          "255": 76833
+        }
+      },
+      {
+        "utc": "2026-01-07T07:10:00+00:00",
+        "land_label_changes": 41351,
+        "sea_label_changes": 21102,
+        "former_quality2_strict": {
+          "0": 358219,
+          "1": 83,
+          "255": 44429
+        },
+        "former_quality2_variant": {
+          "0": 399565,
+          "1": 88,
+          "255": 3078
+        }
+      }
+    ],
+    "result_metrics": {
+      "parent_peak_rss_bytes": 445120512,
+      "workers_peak_rss_bytes": 547143680,
+      "media_peak_rss_bytes": 0,
+      "peak_tree_rss_bytes": 992264192,
+      "peak_new_disk_bytes": 26293256,
+      "max_in_flight": 1,
+      "computed": 3,
+      "reused": 0,
+      "horizon_calls": 3,
+      "final_result_hits": 0,
+      "input_inventory_calls": 1,
+      "memory_sample_seconds": 0.02,
+      "media_tracking": "known worker-reported PIDs; sub-sample spikes may be missed",
+      "monitoring_gaps": "input admission sampled at start/end; continuous 20 ms loop starts after spawn",
+      "run_wall_seconds": 30.57494045898784
+    }
+  },
+  "band5": {
+    "diagnostic": true,
+    "height": 1.6,
+    "tolerance": 5.0,
+    "view": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/processed/dsm_views/sea_fill_v1/diagnostic/8e629189a9cf031518288e586ab9cf4c1a19921a7ba7aaa4b01283d37fffaea6",
+    "view_id": "8e629189a9cf031518288e586ab9cf4c1a19921a7ba7aaa4b01283d37fffaea6",
+    "target": "14NW19B(e820n807,e821n808).tif",
+    "frames": [
+      {
+        "utc": "2026-01-07T00:30:00+00:00",
+        "land_label_changes": 15372,
+        "sea_label_changes": 136860,
+        "former_quality2_strict": {
+          "0": 198160,
+          "1": 43,
+          "255": 21281
+        },
+        "former_quality2_variant": {
+          "0": 213524,
+          "1": 51,
+          "255": 5909
+        }
+      },
+      {
+        "utc": "2026-01-07T04:30:00+00:00",
+        "land_label_changes": 38347,
+        "sea_label_changes": 41006,
+        "former_quality2_strict": {
+          "0": 352642,
+          "1": 22,
+          "255": 111575
+        },
+        "former_quality2_variant": {
+          "0": 390983,
+          "1": 28,
+          "255": 73228
+        }
+      },
+      {
+        "utc": "2026-01-07T07:10:00+00:00",
+        "land_label_changes": 41819,
+        "sea_label_changes": 21816,
+        "former_quality2_strict": {
+          "0": 358219,
+          "1": 83,
+          "255": 44429
+        },
+        "former_quality2_variant": {
+          "0": 400033,
+          "1": 88,
+          "255": 2610
+        }
+      }
+    ],
+    "result_metrics": {
+      "parent_peak_rss_bytes": 496566272,
+      "workers_peak_rss_bytes": 552353792,
+      "media_peak_rss_bytes": 0,
+      "peak_tree_rss_bytes": 1048920064,
+      "peak_new_disk_bytes": 26282277,
+      "max_in_flight": 1,
+      "computed": 3,
+      "reused": 0,
+      "horizon_calls": 3,
+      "final_result_hits": 0,
+      "input_inventory_calls": 1,
+      "memory_sample_seconds": 0.02,
+      "media_tracking": "known worker-reported PIDs; sub-sample spikes may be missed",
+      "monitoring_gaps": "input admission sampled at start/end; continuous 20 ms loop starts after spawn",
+      "run_wall_seconds": 30.520946208009264
+    }
+  }
+}

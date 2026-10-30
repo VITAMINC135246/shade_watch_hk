@@ -1,0 +1,122 @@
+{
+  "estimate": {
+    "model": {
+      "schema": "shade-watch-v2-estimator-1.0",
+      "calibrated": true,
+      "frozen_utc": "2026-10-02T18:01:21.775661+00:00",
+      "coefficients": {
+        "catalog_seconds": 0.25,
+        "startup_seconds": 0.75,
+        "direction_seconds": 10.842382625000027,
+        "frame_seconds": 0.2746130117187704,
+        "hit_seconds": 0.04,
+        "media_frame_seconds": 0.15,
+        "controller_task_seconds": 0.0,
+        "classification_seconds": 0.018901864437452787
+      },
+      "efficiency": {
+        "1": 1.0,
+        "2": 0.6216601185166459
+      },
+      "domain": {
+        "max_tiles": 2,
+        "max_native_frames": 320,
+        "max_union_directions": 12,
+        "outputs": "native scientific only",
+        "hardware": "Mac arm64 macOS15.7.4, 10 logical CPUs, 24 GiB, local HFS disk",
+        "tile_shape": [
+          1500,
+          1200
+        ],
+        "source_tiles": [
+          "11NE10B(e844n822,e845n822).tif",
+          "11NE10D(e844n821,e845n822).tif"
+        ],
+        "caveat": "local mostly-valid tiles; new terrain/NoData distributions and media uncalibrated"
+      },
+      "methodology": {
+        "direction": "full native union-task wall divided by missing native directions",
+        "frame": "matched warm complete run minus fixed startup/catalog, divided by native frames",
+        "efficiency": "one/two-worker matched warm work after fixed costs; capped at 1",
+        "startup_catalog": "fixed engineering allowance checked against phase/whole-run timings",
+        "frame_worker_seconds": 0.20359012765607076,
+        "warm_overhead_seconds": 3.272732290006388,
+        "excluded": "planning/submission and OS-cache flush; run API includes final verification",
+        "memory_disk": "conservative V1 allocation and uncompressed bytes plus temporary/metadata headroom",
+        "uncalibrated_terms": "media, final hits and four-worker costs are provisional",
+        "component_revision": "Separate measured directional and output concurrency; classification split from frame cost. Derived only from calibration, before any hold-out outcomes."
+      },
+      "calibration_records": [
+        "outputs/v2_development/evidence/cal_cold_1.json",
+        "outputs/v2_development/evidence/cal_cold_2.json",
+        "outputs/v2_development/evidence/cal_warm_1.json",
+        "outputs/v2_development/evidence/cal_warm_2.json"
+      ],
+      "direction_efficiency": {
+        "1": 1.0,
+        "2": 1.0
+      },
+      "model_sha256": "ad6939e4455d9e80495d27e382438d635f5cb9f0920601959e09bbbe2e721469"
+    },
+    "phases": {
+      "catalog_validation_seconds": 0.25,
+      "startup_seconds": 0.75,
+      "missing_direction_seconds": 65.05429575000016,
+      "warm_classification_seconds": 0.1824327848074429,
+      "output_compression_validation_seconds": 2.4680156213798092,
+      "final_hit_seconds": 0.0,
+      "media_seconds": 0.0,
+      "controller_validation_seconds": 0.0
+    },
+    "total_wall_seconds": 68.70474415618742,
+    "indicative_range_seconds": [
+      44.658083701521825,
+      109.92759064989987
+    ],
+    "range_note": "engineering variation allowance, not a fitted confidence interval",
+    "calibrated_domain": false,
+    "extrapolated": true,
+    "missing_direction_units": 12.0,
+    "union_direction_entries": 12,
+    "warm_native_frame_units": 12.0,
+    "final_result_hits": 0,
+    "resources": {
+      "estimated_peak_bytes": 2030115686,
+      "memory_budget_bytes": 12884901888,
+      "retained_new_bytes": 302400000,
+      "temporary_new_bytes": 60239360,
+      "estimated_peak_new_bytes": 362639360,
+      "request_metadata_bytes": 36275
+    },
+    "assumptions": [
+      "local same-machine filesystem; warm OS/JIT code cache",
+      "cold means empty directional cache, not flushed OS cache",
+      "effective-pixel/terrain changes affect directional cost",
+      "outputs include lossless compression/readback; media separate",
+      "whole-territory estimates require explicit profile and are extrapolations"
+    ]
+  },
+  "resources": {
+    "estimated_peak_bytes": 2030115686,
+    "memory_budget_bytes": 12884901888,
+    "retained_new_bytes": 302400000,
+    "temporary_new_bytes": 60239360,
+    "estimated_peak_new_bytes": 362639360,
+    "request_metadata_bytes": 36275
+  },
+  "view_key": "43279eae0a37292480c9bd3e703292ae81e019c8c213c1a49858a18ded5a2483",
+  "raw_key": "f5afa3d9b33d112809e8c687cd5ea42897732f653320fed22ad34481b802aac1",
+  "view_spatial_keys": [
+    "5d328fd34e3e26bdbe8c788122b1eab574c1941dfba04b6addc984b211871f6b",
+    "4cf91a2abe11aa9a497e0b16031a317f26386c5828d355283f3254b6a8e7c516",
+    "2329ccc3a3690f6832a8acccaf34235c4798f90bba19af150436b93b96175767",
+    "72d831c30e2493ee9aba0d6423c198bdbfe8b7a7490e475eaea73581540de2e3"
+  ],
+  "raw_spatial_keys": [
+    "69e5d17ac860bff12bf7f2f18cba711ecc0c981e771ecaf649a9b366ec18bfdb",
+    "2487fbedd2fcf2a22db5cd33a91b7367a6c0352e861141a1163453323ac9d5ea",
+    "191341fdbde44d3b3a46f2545ca571f2718383235ca327e4ac15f1bb2651c194",
+    "1c317141ecf190f703409b2be943b64a0c565d13726eec4acc0e760b39da1088"
+  ],
+  "frames": 3
+}

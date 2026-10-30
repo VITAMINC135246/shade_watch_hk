@@ -1,0 +1,1 @@
+PASS: deterministic repair of self-intersection, polygon extraction from mixed GeometryCollection, no loss of polygon area.

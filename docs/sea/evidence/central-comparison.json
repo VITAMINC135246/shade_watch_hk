@@ -1,0 +1,107 @@
+{
+  "scope": "central",
+  "frames": [
+    {
+      "utc": "2026-01-07T00:30:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 0,
+        "1": 0,
+        "255": 1088
+      },
+      "water_counts": {
+        "0": 0,
+        "1": 22399,
+        "255": 151095
+      },
+      "water_fractions": {
+        "0": 0.0,
+        "1": 0.1291053292909265,
+        "255": 0.8708946707090736
+      }
+    },
+    {
+      "utc": "2026-01-07T04:30:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 0,
+        "1": 0,
+        "255": 0
+      },
+      "water_counts": {
+        "0": 169679,
+        "1": 3793,
+        "255": 22
+      },
+      "water_fractions": {
+        "0": 0.9780107669429491,
+        "1": 0.02186242751910729,
+        "255": 0.0001268055379436753
+      }
+    },
+    {
+      "utc": "2026-01-07T07:10:00+00:00",
+      "shaded_to_sunlit": 0,
+      "quality1_land_changed": 0,
+      "old_quality1_land_pixels": 0,
+      "sunlit_to_non_sunlit": 0,
+      "explained": {
+        "raised_threshold": 0,
+        "filled_blocker": 0
+      },
+      "unexplained": 0,
+      "former_quality2": {
+        "0": 0,
+        "1": 0,
+        "255": 0
+      },
+      "water_counts": {
+        "0": 166452,
+        "1": 7027,
+        "255": 15
+      },
+      "water_fractions": {
+        "0": 0.9594107000818473,
+        "1": 0.04050284159682756,
+        "255": 8.645832132523315e-05
+      }
+    }
+  ],
+  "thresholds": {
+    "11SW8D(e833n815,e834n816).tif": {
+      "old": 29.55446427542758,
+      "new": 29.55446427542758
+    },
+    "11SW9C(e834n815,e835n816).tif": {
+      "old": 23.87884804677425,
+      "new": 23.87884804677425
+    },
+    "11SW13B(e833n815,e834n815).tif": {
+      "old": 28.173461296722365,
+      "new": 28.173461296722365
+    },
+    "11SW14A(e834n815,e835n815).tif": {
+      "old": 26.999116527181165,
+      "new": 26.999116527181165
+    }
+  },
+  "blocker_examples": [],
+  "gates_pass": true,
+  "attribution": "Every sunlit loss checked: raised threshold and Quality 3, or exact cached maximum-blocker address resolves to surface class 1 with horizon above Sun."
+}

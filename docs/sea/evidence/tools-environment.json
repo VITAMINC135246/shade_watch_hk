@@ -1,0 +1,14 @@
+{
+  "executable": "/private/tmp/shade_watch_tools_20261029/bin/python",
+  "python": "3.12.5 (main, Sep 24 2026, 01:05:04) [Clang 17.0.0 (clang-1700.0.13.5)]",
+  "packages": {
+    "pip": "24.2",
+    "pyogrio": "0.11.1",
+    "numpy": "2.2.6",
+    "packaging": "25.0",
+    "certifi": "2025.8.3",
+    "shapely": "2.1.1"
+  },
+  "lock": "requirements.tools.lock.txt",
+  "outside_repository": true
+}

@@ -1,0 +1,15 @@
+{
+  "engine_python": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/.venv/bin/python",
+  "engine_readers": {
+    "pyogrio": false,
+    "osgeo": false,
+    "fiona": false
+  },
+  "tools_environment": "/private/tmp/shade_watch_tools_20261029",
+  "bundled_runtime_readers": {
+    "pyogrio": false,
+    "osgeo": false,
+    "fiona": false
+  },
+  "system_ogrinfo_found": false
+}
