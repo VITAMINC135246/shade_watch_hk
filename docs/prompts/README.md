@@ -10,6 +10,7 @@ These are English execution prompts and predeclared acceptance contracts, not ev
 | Region request — two-corner rectangle input (no science change) | [Develop](region/DEVELOPMENT_PROMPT.md) | Planning-conversation review | [R01–R08](region/ACCEPTANCE_CONTRACT.md) |
 | Sea-surface support — `SW-SEA-POLICY-1.0` sea-filled DSM view | [Develop](sea/DEVELOPMENT_PROMPT.md) | [Review](sea/INDEPENDENT_ACCEPTANCE_PROMPT.md) | [S01–S14](sea/ACCEPTANCE_CONTRACT.md) |
 | F1.0 — `shade_map` function and CLI (no science change) | [Develop](F1/DEVELOPMENT_PROMPT.md) | [Review](F1/INDEPENDENT_ACCEPTANCE_PROMPT.md) | [F1-01–F1-14](F1/ACCEPTANCE_CONTRACT.md) |
+| B2.0 — DSM-only sea surface `SW-SEA-POLICY-2.0` (starts after F1.0 acceptance) | [Develop](B2/DEVELOPMENT_PROMPT.md) | [Review](B2/INDEPENDENT_ACCEPTANCE_PROMPT.md) | [B2-01–B2-15](B2/ACCEPTANCE_CONTRACT.md) |
 
 ## Numbering rule (from 2026-10-31, decision D-011)
 
