@@ -1,0 +1,153 @@
+{
+  "after_manifest_sha256": "e0412f3b8429e4bda33bf6ad35c020fc1c048e9197adb3fd9f124b36b184d259",
+  "before_manifest_sha256": "2909a173ad9ebb142e2a6d5e982e8f9b9f7df1c4454e7bbf1ac07d834605a9fd",
+  "caches_source_views_other_runs_untouched": true,
+  "complete_rerun": {
+    "computed_batches": 0,
+    "name": "f1_sparse_window",
+    "published_frames": 3,
+    "reused_frames": 3,
+    "run_id": "f57d437a7b16516d5aec8373c31f104dc039ea056b13fd10219b8813d9e27fcb",
+    "schema": "shade-map-result-1.0",
+    "status": "complete",
+    "verified_only": true
+  },
+  "conflict_exit": 2,
+  "conflict_stderr": "invalid input: name: existing run has a different region config\n",
+  "conflict_wrote_nothing": true,
+  "dry_run": {
+    "bytes": 523346,
+    "deleted": false,
+    "files": [
+      {
+        "bytes": 977,
+        "path": "adapter/batch_0000.json"
+      },
+      {
+        "bytes": 11530,
+        "path": "adapter/region_request.json"
+      },
+      {
+        "bytes": 125243,
+        "path": "batch_plans.json"
+      },
+      {
+        "bytes": 0,
+        "path": "engine/part_0000/.writer.lock"
+      },
+      {
+        "bytes": 1893,
+        "path": "engine/part_0000/quality/quality_20260107T043000000000Z.tif"
+      },
+      {
+        "bytes": 1893,
+        "path": "engine/part_0000/quality/quality_20260107T044000000000Z.tif"
+      },
+      {
+        "bytes": 1893,
+        "path": "engine/part_0000/quality/quality_20260107T045000000000Z.tif"
+      },
+      {
+        "bytes": 42651,
+        "path": "engine/part_0000/result_index.json"
+      },
+      {
+        "bytes": 39206,
+        "path": "engine/part_0000/run_definition.json"
+      },
+      {
+        "bytes": 1525,
+        "path": "engine/part_0000/shade/shade_20260107T043000000000Z.tif"
+      },
+      {
+        "bytes": 1525,
+        "path": "engine/part_0000/shade/shade_20260107T044000000000Z.tif"
+      },
+      {
+        "bytes": 1525,
+        "path": "engine/part_0000/shade/shade_20260107T045000000000Z.tif"
+      },
+      {
+        "bytes": 3593,
+        "path": "engine/part_0000/status/20260107T043000000000Z.json"
+      },
+      {
+        "bytes": 3595,
+        "path": "engine/part_0000/status/20260107T044000000000Z.json"
+      },
+      {
+        "bytes": 3595,
+        "path": "engine/part_0000/status/20260107T045000000000Z.json"
+      },
+      {
+        "bytes": 177,
+        "path": "lock.json"
+      },
+      {
+        "bytes": 147,
+        "path": "owner.json"
+      },
+      {
+        "bytes": 0,
+        "path": "state/.schema.lock"
+      },
+      {
+        "bytes": 0,
+        "path": "state/2631033a1e49f9791d4eebc430fd1baeede62619e659f2951937109d769a2f62.controller.lock"
+      },
+      {
+        "bytes": 3018,
+        "path": "state/2631033a1e49f9791d4eebc430fd1baeede62619e659f2951937109d769a2f62.logical_mosaic.json"
+      },
+      {
+        "bytes": 616,
+        "path": "state/receipts/2631033a1e49f9791d4eebc430fd1baeede62619e659f2951937109d769a2f62/b7f5a6edc759d1589de955af4cb07854b117a4a78b3aba7faf6743dbf15a462c.json"
+      },
+      {
+        "bytes": 278528,
+        "path": "state/state.sqlite"
+      },
+      {
+        "bytes": 114,
+        "path": "state/store.json"
+      },
+      {
+        "bytes": 102,
+        "path": "state/workers/26714c73d91a4d239788cf0d96720184.json"
+      }
+    ],
+    "name": "f1_sparse_window",
+    "run_id": "f57d437a7b16516d5aec8373c31f104dc039ea056b13fd10219b8813d9e27fcb",
+    "schema": "shade-map-prune-1.0",
+    "work_folder": "outputs/shade_map_work/f1_sparse_window-f57d437a7b16"
+  },
+  "only_modified_file": [
+    "outputs/shade_map_f1_20261031/f1_sparse_window/run_manifest.json"
+  ],
+  "pruned_work_files": [
+    "outputs/shade_map_work/f1_sparse_window-f57d437a7b16/adapter/batch_0000.json",
+    "outputs/shade_map_work/f1_sparse_window-f57d437a7b16/adapter/region_request.json",
+    "outputs/shade_map_work/f1_sparse_window-f57d437a7b16/batch_plans.json",
+    "outputs/shade_map_work/f1_sparse_window-f57d437a7b16/engine/part_0000/.writer.lock",
+    "outputs/shade_map_work/f1_sparse_window-f57d437a7b16/engine/part_0000/quality/quality_20260107T043000000000Z.tif",
+    "outputs/shade_map_work/f1_sparse_window-f57d437a7b16/engine/part_0000/quality/quality_20260107T044000000000Z.tif",
+    "outputs/shade_map_work/f1_sparse_window-f57d437a7b16/engine/part_0000/quality/quality_20260107T045000000000Z.tif",
+    "outputs/shade_map_work/f1_sparse_window-f57d437a7b16/engine/part_0000/result_index.json",
+    "outputs/shade_map_work/f1_sparse_window-f57d437a7b16/engine/part_0000/run_definition.json",
+    "outputs/shade_map_work/f1_sparse_window-f57d437a7b16/engine/part_0000/shade/shade_20260107T043000000000Z.tif",
+    "outputs/shade_map_work/f1_sparse_window-f57d437a7b16/engine/part_0000/shade/shade_20260107T044000000000Z.tif",
+    "outputs/shade_map_work/f1_sparse_window-f57d437a7b16/engine/part_0000/shade/shade_20260107T045000000000Z.tif",
+    "outputs/shade_map_work/f1_sparse_window-f57d437a7b16/engine/part_0000/status/20260107T043000000000Z.json",
+    "outputs/shade_map_work/f1_sparse_window-f57d437a7b16/engine/part_0000/status/20260107T044000000000Z.json",
+    "outputs/shade_map_work/f1_sparse_window-f57d437a7b16/engine/part_0000/status/20260107T045000000000Z.json",
+    "outputs/shade_map_work/f1_sparse_window-f57d437a7b16/lock.json",
+    "outputs/shade_map_work/f1_sparse_window-f57d437a7b16/owner.json",
+    "outputs/shade_map_work/f1_sparse_window-f57d437a7b16/state/.schema.lock",
+    "outputs/shade_map_work/f1_sparse_window-f57d437a7b16/state/2631033a1e49f9791d4eebc430fd1baeede62619e659f2951937109d769a2f62.controller.lock",
+    "outputs/shade_map_work/f1_sparse_window-f57d437a7b16/state/2631033a1e49f9791d4eebc430fd1baeede62619e659f2951937109d769a2f62.logical_mosaic.json",
+    "outputs/shade_map_work/f1_sparse_window-f57d437a7b16/state/receipts/2631033a1e49f9791d4eebc430fd1baeede62619e659f2951937109d769a2f62/b7f5a6edc759d1589de955af4cb07854b117a4a78b3aba7faf6743dbf15a462c.json",
+    "outputs/shade_map_work/f1_sparse_window-f57d437a7b16/state/state.sqlite",
+    "outputs/shade_map_work/f1_sparse_window-f57d437a7b16/state/store.json",
+    "outputs/shade_map_work/f1_sparse_window-f57d437a7b16/state/workers/26714c73d91a4d239788cf0d96720184.json"
+  ]
+}

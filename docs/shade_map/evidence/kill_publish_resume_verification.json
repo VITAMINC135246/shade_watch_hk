@@ -1,0 +1,120 @@
+{
+  "all_published_hashes_equal": true,
+  "attempts": [
+    {
+      "attempts": 1,
+      "state": "SUCCEEDED",
+      "task": "9335dd104f7c7ae3453476e5c77d4b586285811445d73826c24cd31fab3ec38f:frame_b7f5a6edc759d1589de955af4cb07854b117a4a78b3aba7faf6743dbf15a462c_0"
+    },
+    {
+      "attempts": 1,
+      "state": "SUCCEEDED",
+      "task": "9335dd104f7c7ae3453476e5c77d4b586285811445d73826c24cd31fab3ec38f:frame_b7f5a6edc759d1589de955af4cb07854b117a4a78b3aba7faf6743dbf15a462c_1"
+    },
+    {
+      "attempts": 1,
+      "state": "SUCCEEDED",
+      "task": "9335dd104f7c7ae3453476e5c77d4b586285811445d73826c24cd31fab3ec38f:frame_b7f5a6edc759d1589de955af4cb07854b117a4a78b3aba7faf6743dbf15a462c_2"
+    },
+    {
+      "attempts": 1,
+      "state": "SUCCEEDED",
+      "task": "9335dd104f7c7ae3453476e5c77d4b586285811445d73826c24cd31fab3ec38f:horizon_07a3ea9ddad86c51124a4ae8b1279d693a2f936d83012ba268a9a3bb4c479b21"
+    },
+    {
+      "attempts": 1,
+      "state": "SUCCEEDED",
+      "task": "9335dd104f7c7ae3453476e5c77d4b586285811445d73826c24cd31fab3ec38f:horizon_95c4e31a5153220377a5579b1b21fe5a4f37c11543301c2e4c8840643292beba"
+    },
+    {
+      "attempts": 1,
+      "state": "SUCCEEDED",
+      "task": "9335dd104f7c7ae3453476e5c77d4b586285811445d73826c24cd31fab3ec38f:horizon_e263369fe287bedff98c344aa9b63795a524c4229e845f1b548872ca2a497efa"
+    },
+    {
+      "attempts": 1,
+      "state": "SUCCEEDED",
+      "task": "9335dd104f7c7ae3453476e5c77d4b586285811445d73826c24cd31fab3ec38f:index_b7f5a6edc759d1589de955af4cb07854b117a4a78b3aba7faf6743dbf15a462c"
+    },
+    {
+      "attempts": 1,
+      "state": "SUCCEEDED",
+      "task": "9335dd104f7c7ae3453476e5c77d4b586285811445d73826c24cd31fab3ec38f:mosaic"
+    }
+  ],
+  "completed_tasks_not_redone": true,
+  "engine_events": [
+    {
+      "action": "submit_run",
+      "attempts": 8,
+      "batch_id": "9335dd104f7c7ae3453476e5c77d4b586285811445d73826c24cd31fab3ec38f",
+      "metrics": {
+        "computed": 6,
+        "final_result_hits": 0,
+        "horizon_calls": 6,
+        "input_inventory_calls": 1,
+        "max_in_flight": 1,
+        "media_peak_rss_bytes": 0,
+        "media_tracking": "known worker-reported PIDs; sub-sample spikes may be missed",
+        "memory_sample_seconds": 0.02,
+        "monitoring_gaps": "input admission sampled at start/end; continuous 20 ms loop starts after spawn",
+        "parent_peak_rss_bytes": 162070528,
+        "peak_new_disk_bytes": 16288076,
+        "peak_tree_rss_bytes": 676102144,
+        "reused": 0,
+        "run_wall_seconds": 20.01931383399642,
+        "workers_peak_rss_bytes": 514031616
+      },
+      "state": "SUCCEEDED",
+      "tasks": {
+        "SUCCEEDED": 8
+      }
+    },
+    {
+      "action": "verify",
+      "attempts": 8,
+      "batch_id": "9335dd104f7c7ae3453476e5c77d4b586285811445d73826c24cd31fab3ec38f",
+      "metrics": {
+        "computed": 6,
+        "final_result_hits": 0,
+        "horizon_calls": 6,
+        "input_inventory_calls": 1,
+        "max_in_flight": 1,
+        "media_peak_rss_bytes": 0,
+        "media_tracking": "known worker-reported PIDs; sub-sample spikes may be missed",
+        "memory_sample_seconds": 0.02,
+        "monitoring_gaps": "input admission sampled at start/end; continuous 20 ms loop starts after spawn",
+        "parent_peak_rss_bytes": 162070528,
+        "peak_new_disk_bytes": 16288076,
+        "peak_tree_rss_bytes": 676102144,
+        "reused": 0,
+        "run_wall_seconds": 20.01931383399642,
+        "workers_peak_rss_bytes": 514031616
+      },
+      "state": "SUCCEEDED",
+      "tasks": {
+        "SUCCEEDED": 8
+      }
+    }
+  ],
+  "no_partial_survives": true,
+  "publication_events": [
+    {
+      "action": "published",
+      "date": "20260107",
+      "time": "1230"
+    },
+    {
+      "action": "published",
+      "date": "20260107",
+      "time": "1240"
+    },
+    {
+      "action": "published",
+      "date": "20260107",
+      "time": "1250"
+    }
+  ],
+  "published_file_count": 57,
+  "retained_frame_timestamps_unchanged": true
+}

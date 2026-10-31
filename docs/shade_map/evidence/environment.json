@@ -1,0 +1,19 @@
+{
+  "python": "3.12.5 (main, Sep 24 2026, 01:05:04) [Clang 17.0.0 (clang-1700.0.13.5)]",
+  "executable": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/.venv/bin/python",
+  "platform": "macOS-15.7.4-arm64-arm-64bit",
+  "libraries": {
+    "numpy": "2.5.3",
+    "rasterio": "1.5.1",
+    "pyproj": "3.8.0",
+    "numba": "0.67.0",
+    "psutil": "7.2.2",
+    "pytest": "9.1.1"
+  },
+  "gdal": "3.12.4",
+  "proj": "9.8.1",
+  "lock_files": {
+    "requirements.lock.txt": "ffcc5e7fb9bc57c599c1b76778f10d7edb23f4cf6d301530dccc2126526451e0",
+    "requirements.tools.lock.txt": "98c673a8f17f24ffd629dd8febe223f80687a5ce24c2a578355c34784621cf0e"
+  }
+}

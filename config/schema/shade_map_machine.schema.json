@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "shade_map_machine.schema.json",
+  "type": "object",
+  "properties": {
+    "schema": {
+      "type": "string",
+      "const": "shade-map-machine-1.0"
+    },
+    "dsm_dir": {
+      "type": "string",
+      "minLength": 1
+    },
+    "output_root": {
+      "type": "string",
+      "minLength": 1,
+      "default": "outputs/shade_map"
+    },
+    "cache_namespace": {
+      "type": "string",
+      "minLength": 1,
+      "default": "shade_map_raw"
+    },
+    "workers": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 4,
+      "default": 1
+    },
+    "memory_budget_mb": {
+      "type": "integer",
+      "minimum": 512,
+      "maximum": 12288,
+      "default": 8192
+    },
+    "max_output_bytes": {
+      "type": [
+        "integer",
+        "null"
+      ],
+      "minimum": 0,
+      "default": null
+    }
+  },
+  "required": [
+    "schema",
+    "dsm_dir"
+  ],
+  "additionalProperties": false
+}

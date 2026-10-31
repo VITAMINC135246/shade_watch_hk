@@ -1,0 +1,160 @@
+{
+  "cache_namespaces": {
+    "a": "f1_dev_20261031_a",
+    "b": "f1_dev_20261031_b",
+    "instant": "f1_dev_20261031_instant",
+    "kill_compute": "f1_dev_20261031_kill_compute",
+    "kill_publish": "f1_dev_20261031_kill_publish"
+  },
+  "configs": {
+    "a": {
+      "crs": "hk1980",
+      "lower_left": [
+        820250,
+        807200
+      ],
+      "name": "f1_cheung_chau",
+      "schema": "shade-map-region-1.0",
+      "time": {
+        "dates": [
+          "2026-01-07"
+        ],
+        "interval_minutes": 10,
+        "mode": "daylight"
+      },
+      "upper_right": [
+        821750,
+        808400
+      ]
+    },
+    "b": {
+      "crs": "wgs84",
+      "lower_left": [
+        22.214084216055944,
+        114.0214248316448
+      ],
+      "name": "f1_sparse_window",
+      "schema": "shade-map-region-1.0",
+      "time": {
+        "dates": [
+          "2026-01-07"
+        ],
+        "end": "12:50",
+        "interval_minutes": 10,
+        "mode": "window",
+        "start": "12:30"
+      },
+      "upper_right": [
+        22.214267003200227,
+        114.02162044698147
+      ]
+    },
+    "instant": {
+      "crs": "wgs84",
+      "lower_left": [
+        22.214084216055944,
+        114.0214248316448
+      ],
+      "name": "f1_sparse_instants",
+      "schema": "shade-map-region-1.0",
+      "time": {
+        "instants": [
+          "2026-01-07T12:30",
+          "2026-01-07T00:00"
+        ],
+        "mode": "instants"
+      },
+      "upper_right": [
+        22.214267003200227,
+        114.02162044698147
+      ]
+    },
+    "kill_compute": {
+      "crs": "wgs84",
+      "lower_left": [
+        22.214084216055944,
+        114.0214248316448
+      ],
+      "name": "f1_kill_compute",
+      "schema": "shade-map-region-1.0",
+      "time": {
+        "dates": [
+          "2026-01-07"
+        ],
+        "end": "12:50",
+        "interval_minutes": 10,
+        "mode": "window",
+        "start": "12:30"
+      },
+      "upper_right": [
+        22.214267003200227,
+        114.02162044698147
+      ]
+    },
+    "kill_publish": {
+      "crs": "wgs84",
+      "lower_left": [
+        22.214084216055944,
+        114.0214248316448
+      ],
+      "name": "f1_kill_publish",
+      "schema": "shade-map-region-1.0",
+      "time": {
+        "dates": [
+          "2026-01-07"
+        ],
+        "end": "12:50",
+        "interval_minutes": 10,
+        "mode": "window",
+        "start": "12:30"
+      },
+      "upper_right": [
+        22.214267003200227,
+        114.02162044698147
+      ]
+    }
+  },
+  "frozen_before_execution": true,
+  "projected_input_corners": [
+    [
+      820240.13,
+      808390.17
+    ],
+    [
+      820260.32,
+      808410.39
+    ]
+  ],
+  "region": {
+    "crs": "wgs84",
+    "lower_left": [
+      22.214084216055944,
+      114.0214248316448
+    ],
+    "name": "f1_sparse_window",
+    "schema": "shade-map-region-1.0",
+    "time": {
+      "dates": [
+        "2026-01-07"
+      ],
+      "end": "12:50",
+      "interval_minutes": 10,
+      "mode": "window",
+      "start": "12:30"
+    },
+    "upper_right": [
+      22.214267003200227,
+      114.02162044698147
+    ]
+  },
+  "wgs84_corners": [
+    [
+      22.214084216055944,
+      114.0214248316448
+    ],
+    [
+      22.214267003200227,
+      114.02162044698147
+    ]
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "absolute_paths_only_in_machine": true,
+  "all_cells_engine_equal": true,
+  "all_vrts_portable": true,
+  "frames": [
+    {
+      "all_equal": true,
+      "cells": 4,
+      "date": "20260107",
+      "pixels": 1681,
+      "time": "1230"
+    },
+    {
+      "all_equal": true,
+      "cells": 4,
+      "date": "20260107",
+      "pixels": 1681,
+      "time": "1240"
+    },
+    {
+      "all_equal": true,
+      "cells": 4,
+      "date": "20260107",
+      "pixels": 1681,
+      "time": "1250"
+    }
+  ],
+  "path_count": 61,
+  "reference_equal": true,
+  "sha256_manifest": "2909a173ad9ebb142e2a6d5e982e8f9b9f7df1c4454e7bbf1ac07d834605a9fd",
+  "summary_counts_equal": true,
+  "surface_direct_dsm_equal": true
+}

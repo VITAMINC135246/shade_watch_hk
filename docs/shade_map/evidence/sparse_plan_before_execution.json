@@ -1,0 +1,158 @@
+{
+  "batches": 1,
+  "cells": [
+    {
+      "bounds": [
+        820240.0,
+        808390.0,
+        820250.0,
+        808400.0
+      ],
+      "height": 20,
+      "id": "e819500n807800",
+      "native_bounds": [
+        819500.0,
+        807800.0,
+        820250.0,
+        808400.0
+      ],
+      "source_tile": "14NW19A(e819n807,e820n808).tif",
+      "width": 20
+    },
+    {
+      "bounds": [
+        820250.0,
+        808390.0,
+        820260.5,
+        808400.0
+      ],
+      "height": 20,
+      "id": "e820250n807800",
+      "native_bounds": [
+        820250.0,
+        807800.0,
+        821000.0,
+        808400.0
+      ],
+      "source_tile": "14NW19B(e820n807,e821n808).tif",
+      "width": 21
+    },
+    {
+      "bounds": [
+        820240.0,
+        808400.0,
+        820250.0,
+        808410.5
+      ],
+      "height": 21,
+      "id": "e819500n808400",
+      "native_bounds": [
+        819500.0,
+        808400.0,
+        820250.0,
+        809000.0
+      ],
+      "source_tile": null,
+      "width": 20
+    },
+    {
+      "bounds": [
+        820250.0,
+        808400.0,
+        820260.5,
+        808410.5
+      ],
+      "height": 21,
+      "id": "e820250n808400",
+      "native_bounds": [
+        820250.0,
+        808400.0,
+        821000.0,
+        809000.0
+      ],
+      "source_tile": "14NW14D(e820n808,e821n809).tif",
+      "width": 21
+    }
+  ],
+  "distinct_horizon_directions": 2,
+  "dropped_times": [],
+  "estimates": {
+    "compute_wall_seconds": 66.05506512412133,
+    "estimator_models": [
+      {
+        "extrapolated": true,
+        "schema": "shade-watch-v2-estimator-1.0",
+        "sha256": "ad6939e4455d9e80495d27e382438d635f5cb9f0920601959e09bbbe2e721469"
+      }
+    ],
+    "file_count": {
+      "label": "estimate",
+      "value": 61
+    },
+    "label": "estimate",
+    "published_bytes": {
+      "label": "estimate",
+      "value": 1041970
+    },
+    "working_bytes": {
+      "label": "estimate",
+      "value": 168249446
+    }
+  },
+  "existing_run": {
+    "published_frames": 0,
+    "status": "new",
+    "total_frames": 3
+  },
+  "frames": [
+    {
+      "date": "20260107",
+      "local_time": "2026-01-07T12:30:00+08:00",
+      "time": "1230",
+      "utc_time": "2026-01-07T04:30:00+00:00"
+    },
+    {
+      "date": "20260107",
+      "local_time": "2026-01-07T12:40:00+08:00",
+      "time": "1240",
+      "utc_time": "2026-01-07T04:40:00+00:00"
+    },
+    {
+      "date": "20260107",
+      "local_time": "2026-01-07T12:50:00+08:00",
+      "time": "1250",
+      "utc_time": "2026-01-07T04:50:00+00:00"
+    }
+  ],
+  "full_images": true,
+  "grid": {
+    "crs": "EPSG:2326",
+    "height": 41,
+    "mode": "custom",
+    "selected_source": null,
+    "selected_sources": [],
+    "transform": [
+      0.5,
+      0.0,
+      820240.0,
+      0.0,
+      -0.5,
+      808410.5
+    ],
+    "width": 41
+  },
+  "name": "f1_sparse_window",
+  "pixel_count": 1681,
+  "resolved_bounds": [
+    820240.0,
+    808390.0,
+    820260.5,
+    808410.5
+  ],
+  "run_id": "f57d437a7b16516d5aec8373c31f104dc039ea056b13fd10219b8813d9e27fcb",
+  "schema": "shade-map-plan-1.0",
+  "sub_requests": 1,
+  "warnings": [
+    "No-DSM cells remain shade 255, quality 1, surface 255"
+  ]
+}

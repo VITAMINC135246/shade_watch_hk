@@ -1,0 +1,418 @@
+{
+  "jobs": [
+    {
+      "argv": [
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/.venv/bin/python",
+        "-m",
+        "tools.shade_map",
+        "plan",
+        "--machine",
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/shade_map_f1_diagnostics_20261031/a_machine.json",
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/shade_map_f1_diagnostics_20261031/a_region.json"
+      ],
+      "budget_failure": null,
+      "cumulative_artifact_bytes": 30060,
+      "intentional_sigkill": false,
+      "kill_evidence": null,
+      "label": "a_plan",
+      "peak_tree_rss_bytes": 166068224,
+      "returncode": 0,
+      "stderr": "outputs/shade_map_f1_diagnostics_20261031/a_plan.stderr.txt",
+      "stdout": "outputs/shade_map_f1_diagnostics_20261031/a_plan.stdout.json",
+      "wall_seconds": 45.929630707978504
+    },
+    {
+      "argv": [
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/.venv/bin/python",
+        "-m",
+        "tools.shade_map",
+        "run",
+        "--machine",
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/shade_map_f1_diagnostics_20261031/a_machine.json",
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/shade_map_f1_diagnostics_20261031/a_region.json"
+      ],
+      "budget_failure": null,
+      "cumulative_artifact_bytes": 607078207,
+      "intentional_sigkill": false,
+      "kill_evidence": null,
+      "label": "a_run",
+      "peak_tree_rss_bytes": 779812864,
+      "returncode": 0,
+      "stderr": "outputs/shade_map_f1_diagnostics_20261031/a_run.stderr.txt",
+      "stdout": "outputs/shade_map_f1_diagnostics_20261031/a_run.stdout.json",
+      "wall_seconds": 634.3683982079965
+    },
+    {
+      "budget_failure": null,
+      "cumulative_artifact_bytes": 607078207,
+      "failure": "Harness command dispatch recursion, stopped; pixel comparison had not begun",
+      "intentional_sigkill": false,
+      "label": "a_verify_harness_failure",
+      "measurement": "runtime plus conservative 5 seconds; process-tree RSS sampled immediately before shutdown",
+      "peak_tree_rss_bytes": 6022971392,
+      "returncode": 137,
+      "wall_seconds": 561.0311319828033
+    },
+    {
+      "argv": [
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/.venv/bin/python",
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/tests/shade_map_campaign.py",
+        "verify-internal",
+        "a"
+      ],
+      "budget_failure": null,
+      "cumulative_artifact_bytes": 607079832,
+      "intentional_sigkill": false,
+      "kill_evidence": null,
+      "label": "a_verify_01",
+      "peak_tree_rss_bytes": 399327232,
+      "returncode": 0,
+      "stderr": "outputs/shade_map_f1_diagnostics_20261031/a_verify_01.stderr.txt",
+      "stdout": "outputs/shade_map_f1_diagnostics_20261031/a_verify_01.stdout.json",
+      "wall_seconds": 106.46215812501032
+    },
+    {
+      "argv": [
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/.venv/bin/python",
+        "-m",
+        "tools.shade_map",
+        "plan",
+        "--machine",
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/shade_map_f1_diagnostics_20261031/b_machine.json",
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/shade_map_f1_diagnostics_20261031/b_region.json"
+      ],
+      "budget_failure": null,
+      "cumulative_artifact_bytes": 607098472,
+      "intentional_sigkill": false,
+      "kill_evidence": null,
+      "label": "b_plan",
+      "peak_tree_rss_bytes": 165396480,
+      "returncode": 0,
+      "stderr": "outputs/shade_map_f1_diagnostics_20261031/b_plan.stderr.txt",
+      "stdout": "outputs/shade_map_f1_diagnostics_20261031/b_plan.stdout.json",
+      "wall_seconds": 28.252429457992548
+    },
+    {
+      "argv": [
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/.venv/bin/python",
+        "-m",
+        "tools.shade_map",
+        "run",
+        "--machine",
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/shade_map_f1_diagnostics_20261031/b_machine.json",
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/shade_map_f1_diagnostics_20261031/b_region.json"
+      ],
+      "budget_failure": null,
+      "cumulative_artifact_bytes": 623836491,
+      "intentional_sigkill": false,
+      "kill_evidence": null,
+      "label": "b_run",
+      "peak_tree_rss_bytes": 702152704,
+      "returncode": 0,
+      "stderr": "outputs/shade_map_f1_diagnostics_20261031/b_run.stderr.txt",
+      "stdout": "outputs/shade_map_f1_diagnostics_20261031/b_run.stdout.json",
+      "wall_seconds": 47.47519283299334
+    },
+    {
+      "argv": [
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/.venv/bin/python",
+        "-m",
+        "tools.shade_map",
+        "run",
+        "--machine",
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/shade_map_f1_diagnostics_20261031/instant_machine.json",
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/shade_map_f1_diagnostics_20261031/instant_region.json"
+      ],
+      "budget_failure": null,
+      "cumulative_artifact_bytes": 632488879,
+      "intentional_sigkill": false,
+      "kill_evidence": null,
+      "label": "instant_run",
+      "peak_tree_rss_bytes": 659374080,
+      "returncode": 0,
+      "stderr": "outputs/shade_map_f1_diagnostics_20261031/instant_run.stderr.txt",
+      "stdout": "outputs/shade_map_f1_diagnostics_20261031/instant_run.stdout.json",
+      "wall_seconds": 37.31415545800701
+    },
+    {
+      "argv": [
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/.venv/bin/python",
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/tests/shade_map_campaign.py",
+        "reference-internal"
+      ],
+      "budget_failure": null,
+      "cumulative_artifact_bytes": 648703142,
+      "intentional_sigkill": false,
+      "kill_evidence": null,
+      "label": "independent_v1_reference",
+      "peak_tree_rss_bytes": 556072960,
+      "returncode": 0,
+      "stderr": "outputs/shade_map_f1_diagnostics_20261031/independent_v1_reference.stderr.txt",
+      "stdout": "outputs/shade_map_f1_diagnostics_20261031/independent_v1_reference.stdout.json",
+      "wall_seconds": 47.1396595420083
+    },
+    {
+      "argv": [
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/.venv/bin/python",
+        "-m",
+        "tools.shade_map",
+        "run",
+        "--machine",
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/shade_map_f1_diagnostics_20261031/kill_compute_machine.json",
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/shade_map_f1_diagnostics_20261031/kill_compute_region.json"
+      ],
+      "budget_failure": null,
+      "cumulative_artifact_bytes": 656958546,
+      "intentional_sigkill": true,
+      "kill_evidence": {
+        "attempts": [
+          [
+            "0389454f37a2b2e4fe187ba25af3cb695d9461514e725c1d5fe422cb8fb98b69:horizon_83cbc50df8467a66916db593855f84945e06d4a8656f0224a4166d4ba3b13e83",
+            "SUCCEEDED"
+          ],
+          [
+            "0389454f37a2b2e4fe187ba25af3cb695d9461514e725c1d5fe422cb8fb98b69:horizon_bb06d88e6bc9317b7ca592eb3e1b24c8b6c611dda27f99456c2f4e4be9c7c7c4",
+            "SUCCEEDED"
+          ],
+          [
+            "0389454f37a2b2e4fe187ba25af3cb695d9461514e725c1d5fe422cb8fb98b69:horizon_c898370381d8e72c9deadaf534889af58b2aa05b93cb1ba76bad175d5a0cc733",
+            "RUNNING"
+          ]
+        ],
+        "concurrent_refusal": {
+          "returncode": 2,
+          "seconds": 0.419177417003084,
+          "stderr": "invalid input: name: another run owns the lock for f1_kill_compute\n"
+        },
+        "running": 1,
+        "succeeded": 2
+      },
+      "label": "kill_compute_run",
+      "peak_tree_rss_bytes": 600866816,
+      "returncode": -9,
+      "stderr": "outputs/shade_map_f1_diagnostics_20261031/kill_compute_run.stderr.txt",
+      "stdout": "outputs/shade_map_f1_diagnostics_20261031/kill_compute_run.stdout.json",
+      "wall_seconds": 36.930717083014315
+    },
+    {
+      "argv": [
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/.venv/bin/python",
+        "-m",
+        "tools.shade_map",
+        "run",
+        "--machine",
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/shade_map_f1_diagnostics_20261031/kill_compute_machine.json",
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/shade_map_f1_diagnostics_20261031/kill_compute_region.json"
+      ],
+      "budget_failure": null,
+      "cumulative_artifact_bytes": 665456778,
+      "intentional_sigkill": false,
+      "kill_evidence": null,
+      "label": "kill_compute_run_01",
+      "peak_tree_rss_bytes": 673742848,
+      "returncode": 0,
+      "stderr": "outputs/shade_map_f1_diagnostics_20261031/kill_compute_run_01.stderr.txt",
+      "stdout": "outputs/shade_map_f1_diagnostics_20261031/kill_compute_run_01.stdout.json",
+      "wall_seconds": 57.41373591599404
+    },
+    {
+      "argv": [
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/.venv/bin/python",
+        "-m",
+        "tools.shade_map",
+        "run",
+        "--machine",
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/shade_map_f1_diagnostics_20261031/kill_publish_machine.json",
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/shade_map_f1_diagnostics_20261031/kill_publish_region.json"
+      ],
+      "budget_failure": null,
+      "cumulative_artifact_bytes": 682132443,
+      "intentional_sigkill": true,
+      "kill_evidence": {
+        "partials": [
+          "20260107/1240.partial"
+        ],
+        "published": [
+          "20260107/1230/frame.json"
+        ],
+        "retained_files": {
+          "20260107/1230/frame.json": [
+            "b7133723e1795df2b289d3fe0b77828743a78f0ce8cfc004dd024f326a5614bc",
+            1793451354000000000
+          ],
+          "20260107/1230/quality.tif": [
+            "dee04c85609cd83cb7187bb194faa1ca7c24ce0320b3844ce9c7375eb0390f70",
+            1793451354000000000
+          ],
+          "20260107/1230/quality.vrt": [
+            "0dcc714863374212a317c44b5487cc52a334a6ee1aae5035dcb5a019ffebba6d",
+            1793451354000000000
+          ],
+          "20260107/1230/quality/e819500n807800.tif": [
+            "d3b873d0b722152c75e993198a52122826cc8f201d8e28fd0f5451e83f48ddea",
+            1793451353000000000
+          ],
+          "20260107/1230/quality/e819500n808400.tif": [
+            "2221ffd350a8fe55259841c1902fad525be105cd58ffaa54579aba027ab255b5",
+            1793451354000000000
+          ],
+          "20260107/1230/quality/e820250n807800.tif": [
+            "71dbcd4e80daf609293485b9e30035d030799595994f712bd9d0f87e99e06ca2",
+            1793451354000000000
+          ],
+          "20260107/1230/quality/e820250n808400.tif": [
+            "48157292566a59724ef5959d1faf082cd79f4787678186c3b59eccc515b22c1d",
+            1793451354000000000
+          ],
+          "20260107/1230/shade.tif": [
+            "c42c12719205935dd1f07765c9ac2f371a824b38eb27d91aaa7fff800726822d",
+            1793451354000000000
+          ],
+          "20260107/1230/shade.vrt": [
+            "8fcfbf2fb091ab5faee81f630a19667fc34be7d71542a67ba81c6471257360f4",
+            1793451354000000000
+          ],
+          "20260107/1230/shade/e819500n807800.tif": [
+            "89973c88b9ee6a4ca96421311f65ea4611bfb464cf9c183aad43741520ab1e7a",
+            1793451353000000000
+          ],
+          "20260107/1230/shade/e819500n808400.tif": [
+            "e413450feb4a2b1a5fe407f6c847fa6c70e3f2d6688a52a2e8e060bb5fc07d43",
+            1793451354000000000
+          ],
+          "20260107/1230/shade/e820250n807800.tif": [
+            "5a6eb8bfdbfcbf375412d80f5e6604b9611599264a7090ca2141131fa182641e",
+            1793451354000000000
+          ],
+          "20260107/1230/shade/e820250n808400.tif": [
+            "2952278b0a246fd269878351332210c9477f9eabce5c00d4ed32e74805a733bc",
+            1793451354000000000
+          ],
+          "20260107/1230/surface.tif": [
+            "25e6419b80c0700828af73f90f0e67655bcee1614c8c2641245afa37be17889b",
+            1793451354000000000
+          ],
+          "20260107/1230/surface.vrt": [
+            "3815eb010fcc792db9d2cfdc62dd28ba071d2cbc9987a76cd93fba9b2802418a",
+            1793451354000000000
+          ],
+          "20260107/1230/surface/e819500n807800.tif": [
+            "30477e2ac3e3eaa6dbb16ab920993a1392054f54256250d5d2e2ee0b65c71c20",
+            1793451353000000000
+          ],
+          "20260107/1230/surface/e819500n808400.tif": [
+            "790e3da679f1c2f8e5768595393246751f1990a30f767f4f8ae22901f3afe9ff",
+            1793451354000000000
+          ],
+          "20260107/1230/surface/e820250n807800.tif": [
+            "fa84af9f41fbe66c7b1489a608bbeb10020ce5749a51f2e3dbca9b735a5806f1",
+            1793451354000000000
+          ],
+          "20260107/1230/surface/e820250n808400.tif": [
+            "8822b907a72aa43f65be6fe5ff55c8ff8871b89576c85b83c6e0255c326874ec",
+            1793451354000000000
+          ]
+        }
+      },
+      "label": "kill_publish_run",
+      "peak_tree_rss_bytes": 689111040,
+      "returncode": -9,
+      "stderr": "outputs/shade_map_f1_diagnostics_20261031/kill_publish_run.stderr.txt",
+      "stdout": "outputs/shade_map_f1_diagnostics_20261031/kill_publish_run.stdout.json",
+      "wall_seconds": 48.458015875017736
+    },
+    {
+      "argv": [
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/.venv/bin/python",
+        "-m",
+        "tools.shade_map",
+        "run",
+        "--machine",
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/shade_map_f1_diagnostics_20261031/kill_publish_machine.json",
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/shade_map_f1_diagnostics_20261031/kill_publish_region.json"
+      ],
+      "budget_failure": null,
+      "cumulative_artifact_bytes": 682195809,
+      "intentional_sigkill": false,
+      "kill_evidence": null,
+      "label": "kill_publish_run_01",
+      "peak_tree_rss_bytes": 259276800,
+      "returncode": 0,
+      "stderr": "outputs/shade_map_f1_diagnostics_20261031/kill_publish_run_01.stderr.txt",
+      "stdout": "outputs/shade_map_f1_diagnostics_20261031/kill_publish_run_01.stdout.json",
+      "wall_seconds": 51.15664462497807
+    },
+    {
+      "argv": [
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/.venv/bin/python",
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/tests/shade_map_campaign.py",
+        "verify-internal",
+        "b"
+      ],
+      "budget_failure": null,
+      "cumulative_artifact_bytes": 682195884,
+      "intentional_sigkill": false,
+      "kill_evidence": null,
+      "label": "b_verify",
+      "peak_tree_rss_bytes": 247922688,
+      "returncode": 0,
+      "stderr": "outputs/shade_map_f1_diagnostics_20261031/b_verify.stderr.txt",
+      "stdout": "outputs/shade_map_f1_diagnostics_20261031/b_verify.stdout.json",
+      "wall_seconds": 29.285367292002775
+    },
+    {
+      "argv": [
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/.venv/bin/python",
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/tests/shade_map_campaign.py",
+        "verify-internal",
+        "instant"
+      ],
+      "budget_failure": null,
+      "cumulative_artifact_bytes": 682195915,
+      "intentional_sigkill": false,
+      "kill_evidence": null,
+      "label": "instant_verify",
+      "peak_tree_rss_bytes": 244318208,
+      "returncode": 0,
+      "stderr": "outputs/shade_map_f1_diagnostics_20261031/instant_verify.stderr.txt",
+      "stdout": "outputs/shade_map_f1_diagnostics_20261031/instant_verify.stdout.json",
+      "wall_seconds": 28.593803167022998
+    },
+    {
+      "argv": [
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/.venv/bin/python",
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/tests/shade_map_campaign.py",
+        "finish-internal"
+      ],
+      "budget_failure": null,
+      "cumulative_artifact_bytes": 682196291,
+      "intentional_sigkill": false,
+      "kill_evidence": null,
+      "label": "conflict_and_prune",
+      "peak_tree_rss_bytes": 246431744,
+      "returncode": 0,
+      "stderr": "outputs/shade_map_f1_diagnostics_20261031/conflict_and_prune.stderr.txt",
+      "stdout": "outputs/shade_map_f1_diagnostics_20261031/conflict_and_prune.stdout.json",
+      "wall_seconds": 36.89661774999695
+    }
+  ],
+  "limits": {
+    "new_artifact_bytes": 21474836480,
+    "peak_tree_rss_bytes": 12884901888,
+    "real_job_seconds": 3600
+  },
+  "package_and_evidence_bytes": 5108383,
+  "peak_new_artifact_bytes": 682196291,
+  "peak_note": "Maximum recorded sampled tree RSS includes the failed validation-monitor recursion. The initial read-only plan had no peak-memory measurement; F1-13 is NOT VERIFIED for that evidence gap.",
+  "peak_tree_rss_bytes": 6022971392,
+  "preflight_overhead": {
+    "charged_seconds": 300,
+    "measurement": "conservative upper charge",
+    "monitoring_gap": "Restricted execution denied process enumeration for the initial read-only plan; all real computation was monitored after enabling process access",
+    "peak_memory_measured": false,
+    "scope": "preliminary header inspection and initial read-only plan; source-list readback; final metadata listing audit"
+  },
+  "schema": "shade-map-resource-ledger-1.0",
+  "total_real_job_seconds": 2096.7076580228168,
+  "within_budget": true
+}

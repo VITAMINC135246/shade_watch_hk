@@ -1,0 +1,19 @@
+{
+  "absolute_paths_only_in_machine": true,
+  "all_cells_engine_equal": true,
+  "all_vrts_portable": true,
+  "frames": [
+    {
+      "all_equal": true,
+      "cells": 4,
+      "date": "20260107",
+      "pixels": 1681,
+      "time": "1230"
+    }
+  ],
+  "path_count": 23,
+  "reference_equal": true,
+  "sha256_manifest": "b6ef5ac695d75244d4b3df60d8a9c6bb6feaccf553a78848c911fd56c2cf0526",
+  "summary_counts_equal": true,
+  "surface_direct_dsm_equal": true
+}

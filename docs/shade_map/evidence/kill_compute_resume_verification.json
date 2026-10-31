@@ -1,0 +1,94 @@
+{
+  "all_published_hashes_equal": true,
+  "attempts": [
+    {
+      "attempts": 1,
+      "state": "SUCCEEDED",
+      "task": "0389454f37a2b2e4fe187ba25af3cb695d9461514e725c1d5fe422cb8fb98b69:frame_b7f5a6edc759d1589de955af4cb07854b117a4a78b3aba7faf6743dbf15a462c_0"
+    },
+    {
+      "attempts": 1,
+      "state": "SUCCEEDED",
+      "task": "0389454f37a2b2e4fe187ba25af3cb695d9461514e725c1d5fe422cb8fb98b69:frame_b7f5a6edc759d1589de955af4cb07854b117a4a78b3aba7faf6743dbf15a462c_1"
+    },
+    {
+      "attempts": 1,
+      "state": "SUCCEEDED",
+      "task": "0389454f37a2b2e4fe187ba25af3cb695d9461514e725c1d5fe422cb8fb98b69:frame_b7f5a6edc759d1589de955af4cb07854b117a4a78b3aba7faf6743dbf15a462c_2"
+    },
+    {
+      "attempts": 1,
+      "state": "SUCCEEDED",
+      "task": "0389454f37a2b2e4fe187ba25af3cb695d9461514e725c1d5fe422cb8fb98b69:horizon_83cbc50df8467a66916db593855f84945e06d4a8656f0224a4166d4ba3b13e83"
+    },
+    {
+      "attempts": 1,
+      "state": "SUCCEEDED",
+      "task": "0389454f37a2b2e4fe187ba25af3cb695d9461514e725c1d5fe422cb8fb98b69:horizon_bb06d88e6bc9317b7ca592eb3e1b24c8b6c611dda27f99456c2f4e4be9c7c7c4"
+    },
+    {
+      "attempts": 2,
+      "state": "SUCCEEDED",
+      "task": "0389454f37a2b2e4fe187ba25af3cb695d9461514e725c1d5fe422cb8fb98b69:horizon_c898370381d8e72c9deadaf534889af58b2aa05b93cb1ba76bad175d5a0cc733"
+    },
+    {
+      "attempts": 1,
+      "state": "SUCCEEDED",
+      "task": "0389454f37a2b2e4fe187ba25af3cb695d9461514e725c1d5fe422cb8fb98b69:index_b7f5a6edc759d1589de955af4cb07854b117a4a78b3aba7faf6743dbf15a462c"
+    },
+    {
+      "attempts": 1,
+      "state": "SUCCEEDED",
+      "task": "0389454f37a2b2e4fe187ba25af3cb695d9461514e725c1d5fe422cb8fb98b69:mosaic"
+    }
+  ],
+  "completed_tasks_not_redone": true,
+  "engine_events": [
+    {
+      "action": "resume",
+      "attempts": 9,
+      "batch_id": "0389454f37a2b2e4fe187ba25af3cb695d9461514e725c1d5fe422cb8fb98b69",
+      "metrics": {
+        "computed": 1,
+        "final_result_hits": 0,
+        "horizon_calls": 1,
+        "input_inventory_calls": 1,
+        "max_in_flight": 1,
+        "media_peak_rss_bytes": 0,
+        "media_tracking": "known worker-reported PIDs; sub-sample spikes may be missed",
+        "memory_sample_seconds": 0.02,
+        "monitoring_gaps": "input admission sampled at start/end; continuous 20 ms loop starts after spawn",
+        "parent_peak_rss_bytes": 244826112,
+        "peak_new_disk_bytes": 4203535,
+        "peak_tree_rss_bytes": 662585344,
+        "reused": 1,
+        "run_wall_seconds": 5.476891832979163,
+        "workers_peak_rss_bytes": 417759232
+      },
+      "state": "SUCCEEDED",
+      "tasks": {
+        "SUCCEEDED": 8
+      }
+    }
+  ],
+  "no_partial_survives": true,
+  "publication_events": [
+    {
+      "action": "published",
+      "date": "20260107",
+      "time": "1230"
+    },
+    {
+      "action": "published",
+      "date": "20260107",
+      "time": "1240"
+    },
+    {
+      "action": "published",
+      "date": "20260107",
+      "time": "1250"
+    }
+  ],
+  "published_file_count": 57,
+  "retained_frame_timestamps_unchanged": false
+}

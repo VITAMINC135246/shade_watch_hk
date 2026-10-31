@@ -1,0 +1,135 @@
+{
+  "caveat": "Initial read-only planning peak memory was not captured; all measured computation jobs remained within budget. Independent acceptance is not declared.",
+  "contract": "SW-F1.0",
+  "development_matrix": {
+    "FAIL": [],
+    "NOT VERIFIED": [
+      "F1-13"
+    ],
+    "PASS": [
+      "F1-01",
+      "F1-02",
+      "F1-03",
+      "F1-04",
+      "F1-05",
+      "F1-06",
+      "F1-07",
+      "F1-08",
+      "F1-09",
+      "F1-10",
+      "F1-11",
+      "F1-12",
+      "F1-14"
+    ]
+  },
+  "files": {
+    "docs/shade_map/DESIGN.md": {
+      "bytes": 5628,
+      "sha256": "e03fb207679c59d3f060a56e42d6c2f1e74e1354bb0a00dd94884ee09757fcd4"
+    },
+    "docs/shade_map/DEVELOPMENT_REPORT.md": {
+      "bytes": 13098,
+      "sha256": "8f89cb231ffa217b0778dd038ff8753793542ab5071818a7a1cd8fc3ec3c09e5"
+    },
+    "docs/shade_map/GUIDE.md": {
+      "bytes": 10375,
+      "sha256": "1b7ea13da560ca9f18311fde4cb7a0d6671204b7c408933bcb47594a65cdb2c8"
+    },
+    "docs/shade_map/evidence/a_pixel_verification.json": {
+      "bytes": 8652,
+      "sha256": "0e7d4f9ab598583a64b732201f6e64dd808e628de3d1e8c560a69f01e9ac2b78"
+    },
+    "docs/shade_map/evidence/b_pixel_verification.json": {
+      "bytes": 705,
+      "sha256": "038f2000b994253e2d712a5577b87b87c91ba48fb92f91053801802f3ad79463"
+    },
+    "docs/shade_map/evidence/cheung_chau_1230_summary.json": {
+      "bytes": 188,
+      "sha256": "c09b3026742cc6c14bf22637122dcf08571440bd321247a0446b05afe6db2c70"
+    },
+    "docs/shade_map/evidence/cheung_chau_source_gate.json": {
+      "bytes": 2089,
+      "sha256": "45e2b61dd3e16e21c546449a90ea46bb23a0f7bb1e9524aaffd20a67c5c6c85c"
+    },
+    "docs/shade_map/evidence/conflict_and_prune.json": {
+      "bytes": 6227,
+      "sha256": "7c1b96bb115fc0ce8960a5626d184e8bbc203f52df2ebb0b32e820b5405f980a"
+    },
+    "docs/shade_map/evidence/environment.json": {
+      "bytes": 646,
+      "sha256": "c9b9eb04d0631b1b0754d6d38bbb3b3770e6020c1cc8bbf86555407ffe38e802"
+    },
+    "docs/shade_map/evidence/final_traceability.json": {
+      "bytes": 2170,
+      "sha256": "f50b0901214b0bc5e11cea29d7c12383343183877e04a6a26dd73cab12775e97"
+    },
+    "docs/shade_map/evidence/frozen_sparse_rectangle.json": {
+      "bytes": 3242,
+      "sha256": "4bcde5b7cddb0cf7b4fb67f271b92c2ff42dcab1e1b2405c0bea2b1e0a05c167"
+    },
+    "docs/shade_map/evidence/full_tests.txt": {
+      "bytes": 276,
+      "sha256": "7cdb2ec75fd81ff0d70e9a3075452d60340582f742df8d2d9e50c60d70ac133e"
+    },
+    "docs/shade_map/evidence/full_tests_initial_collection_error.txt": {
+      "bytes": 3461,
+      "sha256": "c933cf5e5ac95ffd5dc4333fccdd82a9189db16571118645b1ee3eb05f50fc06"
+    },
+    "docs/shade_map/evidence/independent_v1_reference.json": {
+      "bytes": 389,
+      "sha256": "a1439e1042e9dc8a7d243ff6bee49cc82fb4a22cd4d5da47dfbb86ca9bef3e46"
+    },
+    "docs/shade_map/evidence/instant_pixel_verification.json": {
+      "bytes": 455,
+      "sha256": "b8e23271221666e3bca308fd2eb2386a14e5e5d3c9a7eb8283c6eb80c93fb1d8"
+    },
+    "docs/shade_map/evidence/interim_protected_audit.json": {
+      "bytes": 67,
+      "sha256": "8c7fad0aa7b1e09b18edda4b31ca99106f8a758f2cfd635d99be6880d6c8d217"
+    },
+    "docs/shade_map/evidence/kill_compute_resume_verification.json": {
+      "bytes": 3097,
+      "sha256": "2340c1d2411f1fb378018f2533287c553bb1e6694db82aef3e83143de2097e60"
+    },
+    "docs/shade_map/evidence/kill_publish_resume_verification.json": {
+      "bytes": 4009,
+      "sha256": "e8bc6b695572eba991092536bc469d2cc4f421069113628e84b558860af57d71"
+    },
+    "docs/shade_map/evidence/protected_after.json": {
+      "bytes": 216233,
+      "sha256": "9c763d1617f2887138c434a7cb0eb3ba3dafd0534248a4dbdb50dfd27059c5b2"
+    },
+    "docs/shade_map/evidence/protected_before.json": {
+      "bytes": 4650754,
+      "sha256": "93c3abca5dd0c07343ab371ef04cb6df65c59379a11e557beaff48d235a1c5f9"
+    },
+    "docs/shade_map/evidence/resource_ledger.json": {
+      "bytes": 17431,
+      "sha256": "db8fbd489943096d3cf52afc749cfa72fc7b8fd7fdaf14f12b16e3a66865ce34"
+    },
+    "docs/shade_map/evidence/schema_rule_coverage.json": {
+      "bytes": 5688,
+      "sha256": "e15e47e5f67f9847d013715e6eb486984ec12d7fcac13b4e0d9ac74dbb895f75"
+    },
+    "docs/shade_map/evidence/sparse_plan_before_execution.json": {
+      "bytes": 3178,
+      "sha256": "5b89d73475d94ca6fffb6c126261d7d51d6b1f5fd28e2036a7a1a96e05839396"
+    },
+    "docs/shade_map/evidence/start.json": {
+      "bytes": 21877,
+      "sha256": "d1552885ea84cacc6db35f249147043200c7d9a1d91be91c70bfe993a5a89b41"
+    },
+    "docs/shade_map/evidence/synthetic_tests.txt": {
+      "bytes": 194,
+      "sha256": "8207af546f1eb3e9d90418a0d188fd1cdbec48bf3f511ae7adbd178467385527"
+    },
+    "docs/shade_map/evidence/verification_harness_recursion.json": {
+      "bytes": 5108,
+      "sha256": "b590e35d051bd2401918cb0f2c20555ab482f811a84adc02f6dd5148653ceb5a"
+    }
+  },
+  "integrity_sha256": "19347c4269e5759b3f986aac4de0aed507d2daa066d33116350eaa63259da957",
+  "numerical_scope": "65 Cheung Chau historical frames; three sparse-window frames plus one kept daylight instant; two SIGKILL resumes",
+  "schema": "shade-map-evidence-1.0",
+  "start_sha": "d1a89c80306e8a3a2f2a5f1edf45149b419919d2"
+}

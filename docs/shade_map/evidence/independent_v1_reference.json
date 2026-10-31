@@ -1,0 +1,20 @@
+{
+  "bounds": [
+    820240.0,
+    808390.0,
+    820260.5,
+    808410.5
+  ],
+  "frames": [
+    "2026-01-07T04:30:00+00:00",
+    "2026-01-07T04:40:00+00:00",
+    "2026-01-07T04:50:00+00:00"
+  ],
+  "index": "outputs/shade_map_work/f1_sparse_reference-f57d437a7b16/v1/result_index.json",
+  "jobs": {
+    "computed": 6,
+    "final_result_hits": 0,
+    "horizon_calls": 6,
+    "reused": 0
+  }
+}
