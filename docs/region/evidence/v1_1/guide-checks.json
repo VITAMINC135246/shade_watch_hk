@@ -1,0 +1,12 @@
+[
+  {
+    "command": ".venv/bin/python -m tools.region_request plan --crs wgs84   --corner1 22.339 114.262 --corner2 22.341 114.264   --at 2026-01-07T14:31:27+08:00 --auto-source-view   --dsm-dir data/raw/dsm/2020/D12.DSM.TIFF   --output outputs/region_dev_v1_1_example_wgs84",
+    "exit_code": 0,
+    "wall_seconds": 68.95924624998588
+  },
+  {
+    "command": ".venv/bin/python -m tools.region_request write --crs hk1980   --corner1 844701.5 822197.5 --corner2 844713.5 822202.5   --at 2026-01-07T14:31:27+08:00 --auto-source-view   --dsm-dir data/raw/dsm/2020/D12.DSM.TIFF   --output outputs/region_dev_v1_1_example_hk1980   --directory outputs/region_dev_v1_1_example_requests",
+    "exit_code": 0,
+    "wall_seconds": 91.84173562499927
+  }
+]

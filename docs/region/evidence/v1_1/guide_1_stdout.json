@@ -1,0 +1,310 @@
+{
+  "schema": "shade-watch-region-request-1.1",
+  "contract": "SW-RGN-AC-1.1",
+  "original_corners": [
+    [
+      844701.5,
+      822197.5
+    ],
+    [
+      844713.5,
+      822202.5
+    ]
+  ],
+  "crs": "hk1980",
+  "coordinate_order": "easting,northing",
+  "projected_corners": [
+    [
+      844701.5,
+      822197.5
+    ],
+    [
+      844713.5,
+      822202.5
+    ]
+  ],
+  "transformer_description": "Inverse of Hong Kong 1980 to WGS 84 (1) + Hong Kong 1980 Grid (with axis order normalized for visualization)",
+  "transformation_applied": false,
+  "pyproj_version": "3.8.0",
+  "proj_version": "9.8.1",
+  "requested_bounds": [
+    844701.5,
+    822197.5,
+    844713.5,
+    822202.5
+  ],
+  "resolved_bounds": [
+    844701.5,
+    822197.5,
+    844713.5,
+    822202.5
+  ],
+  "resolved_grid": {
+    "width": 24,
+    "height": 10,
+    "transform": [
+      0.5,
+      0.0,
+      844701.5,
+      0.0,
+      -0.5,
+      822202.5
+    ],
+    "crs": "EPSG:2326",
+    "mode": "custom",
+    "selected_source": null,
+    "selected_sources": []
+  },
+  "native_lattice": {
+    "method": "single unchanged V1 request"
+  },
+  "partition": [
+    {
+      "id": "part_0000",
+      "requested_bounds": [
+        844701.5,
+        822197.5,
+        844713.5,
+        822202.5
+      ],
+      "resolved_bounds": [
+        844701.5,
+        822197.5,
+        844713.5,
+        822202.5
+      ],
+      "key": "7f142125c2f20b88962a5ea5e94cd748c55a56a398c1f6fe04a256e55d12f06f",
+      "grid": {
+        "width": 24,
+        "height": 10,
+        "transform": [
+          0.5,
+          0.0,
+          844701.5,
+          0.0,
+          -0.5,
+          822202.5
+        ],
+        "crs": "EPSG:2326",
+        "mode": "custom",
+        "selected_source": null,
+        "selected_sources": []
+      },
+      "tiles": [
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10B(e844n822,e845n822).tif",
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10D(e844n821,e845n822).tif"
+      ],
+      "resources": {
+        "workers": 1,
+        "estimated_peak_bytes": 763430400,
+        "memory_budget_bytes": 8589934592,
+        "estimated_new_bytes": 16777696,
+        "artifact_budget_bytes": 10737418240,
+        "expected_direction_jobs": 2,
+        "missing_direction_jobs": 0,
+        "frames": 1
+      }
+    }
+  ],
+  "no_dsm_areas": [],
+  "no_dsm_encoding": {
+    "shade": 255,
+    "quality": 1
+  },
+  "time_groups": [
+    {
+      "input": {
+        "instants": [
+          "2026-01-07T14:31:27+08:00"
+        ],
+        "interval_minutes": 10
+      },
+      "utc_times": [
+        "2026-01-07T06:31:27+00:00"
+      ]
+    }
+  ],
+  "requests": [
+    {
+      "partition_id": "part_0000",
+      "time_group": 0,
+      "key": "7f142125c2f20b88962a5ea5e94cd748c55a56a398c1f6fe04a256e55d12f06f",
+      "grid": {
+        "width": 24,
+        "height": 10,
+        "transform": [
+          0.5,
+          0.0,
+          844701.5,
+          0.0,
+          -0.5,
+          822202.5
+        ],
+        "crs": "EPSG:2326",
+        "mode": "custom",
+        "selected_source": null,
+        "selected_sources": []
+      },
+      "utc_times": [
+        "2026-01-07T06:31:27+00:00"
+      ],
+      "output_directory": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/region_dev_v1_1_example_hk1980/part_0000",
+      "tiles": [
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10B(e844n822,e845n822).tif",
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10D(e844n821,e845n822).tif"
+      ],
+      "resources": {
+        "workers": 1,
+        "estimated_peak_bytes": 763430400,
+        "memory_budget_bytes": 8589934592,
+        "estimated_new_bytes": 16777696,
+        "artifact_budget_bytes": 10737418240,
+        "expected_direction_jobs": 2,
+        "missing_direction_jobs": 0,
+        "frames": 1
+      },
+      "id": "batch_0000.json#request_0000",
+      "batch": 0,
+      "engine_request_id": "request_0000"
+    }
+  ],
+  "generated_request_ids": [
+    "batch_0000.json#request_0000"
+  ],
+  "batches": [
+    {
+      "id": "80d81a5a57ff118414bb9d14280cadb6f6e10b6adc19537a64337be080d1521e",
+      "request_file": "batch_0000.json",
+      "estimate": {
+        "model": {
+          "schema": "shade-watch-v2-estimator-1.0",
+          "calibrated": true,
+          "frozen_utc": "2026-10-02T18:01:21.775661+00:00",
+          "coefficients": {
+            "catalog_seconds": 0.25,
+            "startup_seconds": 0.75,
+            "direction_seconds": 10.842382625000027,
+            "frame_seconds": 0.2746130117187704,
+            "hit_seconds": 0.04,
+            "media_frame_seconds": 0.15,
+            "controller_task_seconds": 0.0,
+            "classification_seconds": 0.018901864437452787
+          },
+          "efficiency": {
+            "1": 1.0,
+            "2": 0.6216601185166459
+          },
+          "domain": {
+            "max_tiles": 2,
+            "max_native_frames": 320,
+            "max_union_directions": 12,
+            "outputs": "native scientific only",
+            "hardware": "Mac arm64 macOS15.7.4, 10 logical CPUs, 24 GiB, local HFS disk",
+            "tile_shape": [
+              1500,
+              1200
+            ],
+            "source_tiles": [
+              "11NE10B(e844n822,e845n822).tif",
+              "11NE10D(e844n821,e845n822).tif"
+            ],
+            "caveat": "local mostly-valid tiles; new terrain/NoData distributions and media uncalibrated"
+          },
+          "methodology": {
+            "direction": "full native union-task wall divided by missing native directions",
+            "frame": "matched warm complete run minus fixed startup/catalog, divided by native frames",
+            "efficiency": "one/two-worker matched warm work after fixed costs; capped at 1",
+            "startup_catalog": "fixed engineering allowance checked against phase/whole-run timings",
+            "frame_worker_seconds": 0.20359012765607076,
+            "warm_overhead_seconds": 3.272732290006388,
+            "excluded": "planning/submission and OS-cache flush; run API includes final verification",
+            "memory_disk": "conservative V1 allocation and uncompressed bytes plus temporary/metadata headroom",
+            "uncalibrated_terms": "media, final hits and four-worker costs are provisional",
+            "component_revision": "Separate measured directional and output concurrency; classification split from frame cost. Derived only from calibration, before any hold-out outcomes."
+          },
+          "calibration_records": [
+            "outputs/v2_development/evidence/cal_cold_1.json",
+            "outputs/v2_development/evidence/cal_cold_2.json",
+            "outputs/v2_development/evidence/cal_warm_1.json",
+            "outputs/v2_development/evidence/cal_warm_2.json"
+          ],
+          "direction_efficiency": {
+            "1": 1.0,
+            "2": 1.0
+          },
+          "model_sha256": "ad6939e4455d9e80495d27e382438d635f5cb9f0920601959e09bbbe2e721469"
+        },
+        "phases": {
+          "catalog_validation_seconds": 0.25,
+          "startup_seconds": 0.75,
+          "missing_direction_seconds": 0.0,
+          "warm_classification_seconds": 2.5202485916603717e-06,
+          "output_compression_validation_seconds": 3.409481963750902e-05,
+          "final_hit_seconds": 0.0,
+          "media_seconds": 0.0,
+          "controller_validation_seconds": 0.0
+        },
+        "total_wall_seconds": 1.0000366150682292,
+        "indicative_range_seconds": [
+          0.650023799794349,
+          1.6000585841091668
+        ],
+        "range_note": "engineering variation allowance, not a fitted confidence interval",
+        "calibrated_domain": false,
+        "extrapolated": true,
+        "missing_direction_units": 0.0,
+        "union_direction_entries": 2,
+        "warm_native_frame_units": 0.00013333333333333334,
+        "final_result_hits": 0,
+        "resources": {
+          "estimated_peak_bytes": 1224770806,
+          "memory_budget_bytes": 8589934592,
+          "retained_new_bytes": 480,
+          "temporary_new_bytes": 38541056,
+          "estimated_peak_new_bytes": 38541536,
+          "request_metadata_bytes": 17019
+        },
+        "assumptions": [
+          "local same-machine filesystem; warm OS/JIT code cache",
+          "cold means empty directional cache, not flushed OS cache",
+          "effective-pixel/terrain changes affect directional cost",
+          "outputs include lossless compression/readback; media separate",
+          "whole-territory estimates require explicit profile and are extrapolations"
+        ]
+      },
+      "resources": {
+        "estimated_peak_bytes": 1224770806,
+        "memory_budget_bytes": 8589934592,
+        "retained_new_bytes": 480,
+        "temporary_new_bytes": 38541056,
+        "estimated_peak_new_bytes": 38541536,
+        "request_metadata_bytes": 17019
+      },
+      "request_ids": [
+        "batch_0000.json#request_0000"
+      ],
+      "utc_times": [
+        "2026-01-07T06:31:27+00:00"
+      ],
+      "horizon_tasks": 2
+    }
+  ],
+  "request_files": [
+    "batch_0000.json"
+  ],
+  "source_directory": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/region_views/01ef8dbf91fc792a63f038634042c065853d89e7f78d39e758a26eae7a574d4c",
+  "source_view": {
+    "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/region_views/01ef8dbf91fc792a63f038634042c065853d89e7f78d39e758a26eae7a574d4c",
+    "identity": "01ef8dbf91fc792a63f038634042c065853d89e7f78d39e758a26eae7a574d4c",
+    "catalogue_tiles": 3310,
+    "source_tiles": 29,
+    "target_tiles": [
+      "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10B(e844n822,e845n822).tif",
+      "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10D(e844n821,e845n822).tif"
+    ],
+    "header_and_view_seconds": 85.45180725000682
+  },
+  "indexing_seconds": 4.246221291978145,
+  "planning_seconds": 91.05979412500164,
+  "v1_command": "'/Volumes/My Passport for Mac/Projects/shade_watch_hk/.venv/bin/python' -m src.v1 query --mode custom --bounds 844701.5 822197.5 844713.5 822202.5 --dsm-dir '/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/region_views/01ef8dbf91fc792a63f038634042c065853d89e7f78d39e758a26eae7a574d4c' --cache '/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/processed/shade_v1/region_dev' --output '/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/region_dev_v1_1_example_hk1980/part_0000' --memory-budget-mb 8192 --interval-minutes 10 --at 2026-01-07T14:31:27+08:00"
+}

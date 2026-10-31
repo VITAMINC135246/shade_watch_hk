@@ -1,0 +1,74 @@
+{
+  "scope": "Controlled complete compatible fixture catalogue including a distant source",
+  "regions": [
+    {
+      "region": "coastal",
+      "full_seconds": 0.020554542017634958,
+      "view_seconds": 0.023006708011962473,
+      "v1_plan_keys": [
+        "e537595a173fe5001d4d5b20e02410656a266ddeb9cd88262108bd5e320ffd38"
+      ],
+      "view_v1_plan_keys": [
+        "e537595a173fe5001d4d5b20e02410656a266ddeb9cd88262108bd5e320ffd38"
+      ],
+      "full_tiles": 5,
+      "view_tiles": 4,
+      "spatial_keys": [
+        "23c5aba15a6d8cdf51d1495dad030c05756cee0bb539804324ece39f0dc12c21",
+        "2b120910e7cc337290cbda59fbdf2b1a56626409f19ad37bcc174938e1062638",
+        "9bc7d2678dda1455f1bce45538daaf1ff8e62caa37bfd34b24306e2829b0ad1b",
+        "c3a83165ee1e8b4e46c5ddf5dc4574c742eeefe0c5595b9fc64c5ceebd82577d"
+      ],
+      "view_spatial_keys": [
+        "23c5aba15a6d8cdf51d1495dad030c05756cee0bb539804324ece39f0dc12c21",
+        "2b120910e7cc337290cbda59fbdf2b1a56626409f19ad37bcc174938e1062638",
+        "9bc7d2678dda1455f1bce45538daaf1ff8e62caa37bfd34b24306e2829b0ad1b",
+        "c3a83165ee1e8b4e46c5ddf5dc4574c742eeefe0c5595b9fc64c5ceebd82577d"
+      ]
+    },
+    {
+      "region": "inland",
+      "full_seconds": 0.01716358301928267,
+      "view_seconds": 0.015630834008334205,
+      "v1_plan_keys": [
+        "a4a1f0698ec36f4989ed309f6e26db16cf7584b8e27f360d6692cb89046506fc"
+      ],
+      "view_v1_plan_keys": [
+        "a4a1f0698ec36f4989ed309f6e26db16cf7584b8e27f360d6692cb89046506fc"
+      ],
+      "full_tiles": 5,
+      "view_tiles": 4,
+      "spatial_keys": [
+        "23c5aba15a6d8cdf51d1495dad030c05756cee0bb539804324ece39f0dc12c21"
+      ],
+      "view_spatial_keys": [
+        "23c5aba15a6d8cdf51d1495dad030c05756cee0bb539804324ece39f0dc12c21"
+      ]
+    },
+    {
+      "region": "tile_corner",
+      "full_seconds": 0.020440416992641985,
+      "view_seconds": 0.01964583300286904,
+      "v1_plan_keys": [
+        "fd32bb377700d349299b51aa3ae2113c59757ea9c2dd1c07a1d15ccbabc5d204"
+      ],
+      "view_v1_plan_keys": [
+        "fd32bb377700d349299b51aa3ae2113c59757ea9c2dd1c07a1d15ccbabc5d204"
+      ],
+      "full_tiles": 5,
+      "view_tiles": 4,
+      "spatial_keys": [
+        "23c5aba15a6d8cdf51d1495dad030c05756cee0bb539804324ece39f0dc12c21",
+        "2b120910e7cc337290cbda59fbdf2b1a56626409f19ad37bcc174938e1062638",
+        "9bc7d2678dda1455f1bce45538daaf1ff8e62caa37bfd34b24306e2829b0ad1b",
+        "c3a83165ee1e8b4e46c5ddf5dc4574c742eeefe0c5595b9fc64c5ceebd82577d"
+      ],
+      "view_spatial_keys": [
+        "23c5aba15a6d8cdf51d1495dad030c05756cee0bb539804324ece39f0dc12c21",
+        "2b120910e7cc337290cbda59fbdf2b1a56626409f19ad37bcc174938e1062638",
+        "9bc7d2678dda1455f1bce45538daaf1ff8e62caa37bfd34b24306e2829b0ad1b",
+        "c3a83165ee1e8b4e46c5ddf5dc4574c742eeefe0c5595b9fc64c5ceebd82577d"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "starting_head": "86dbee663ccec8edcca7f123542a345fa13ca18b",
+  "branch": "feature",
+  "src_diff_empty": true,
+  "all_src_python_unchanged": true,
+  "pinned_ten_match_356f611": true,
+  "contracts_unchanged": true,
+  "protected_drift_since_start": [],
+  "planner_files_never_staged": true,
+  "external_files_snapshot": {
+    "docs/ui/API_REQUEST_SCHEMA.md": "2acc7b2740251ddfffdc5699bfa96d834457e02d18d6c1b2697a2169238e9af4",
+    "docs/ui/DESIGN.md": "cbab4ddf6ec5a36955b37c4da97e573595ff43980fe449227dd6d7363b971a9c",
+    "tools/wsl2_smoke/make_pack.py": "2eb9cee1ed508b00014ff8d6ba6674f064b608b59d31520cbe3f5556d70ee070",
+    "tools/wsl2_smoke/run_smoke.py": "d8dad1493c447f7b77e0fdabc00e6700c03bfd322c388dd5219dcaa67f2109f9",
+    "tools/wsl2_smoke/setup_wsl.sh": "38dd6ebc94c43ec4419034ecb39f3b838ea0797b38cfaef9b365f20aa22ca75f",
+    "tools/wsl2_smoke/__pycache__/make_pack.cpython-310.pyc": "09edc278fa254592dcbbf81eb96744f4029f618bf35d2f5df7df96420533b1a8",
+    "tools/wsl2_smoke/__pycache__/run_smoke.cpython-310.pyc": "3caf16e947c07b51d0a7edf5ee03dffeb1591189fc6572d6b7508be3b141776a",
+    "web/console/api.js": "2f059ed1212afa42ae31f32aea10ca094deb5c8c3b83b3ccc8e167ffc8a0b85b",
+    "web/console/app.js": "e9897aab2c47f8a6df1690e908fdb9d82ccf32a02bc1b1dc94d287340b7813e2",
+    "web/console/index.html": "186856713c9e465529d19f5ff30c4532f1a274db8b7010b5731f1d91862a9072",
+    "web/console/map.js": "aa27293dd420184ff24c9d72ec9b89bc2abf4c35fdc6d64f2804535b3bf4eda4",
+    "web/console/mock.js": "d7b64c93195b861770e4c2001199f37d57502583862e9c96d1a45dd0741f4db6",
+    "web/console/README.md": "dbc49933157b09bb62abf4a72f063001771976d988d367176328a28f3891bba0",
+    "web/console/style.css": "bde9ef19020a8af181d5a85caaf8c07733e2902f051292b1cee68e9978dbda70",
+    "docs/v3/WSL2_SMOKE_TEST.md": "4f25315fe0ae391e942dfe90f41ff5029af8da29244bf03733682b472fb58684"
+  },
+  "raw_stat_identities_still_match": true,
+  "raw_files_checked": 75,
+  "verification_seconds": 0.36506591699435376
+}

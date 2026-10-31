@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites name="pytest tests"><testsuite name="pytest" errors="6" failures="0" skipped="0" tests="6" time="14.366" timestamp="2026-10-30T14:35:23.587658+08:00" hostname="VITAMINC-MACBOOKMacBook-Air-4.local"><testcase classname="" name="tests.test_chunking" time="0.000"><error message="collection failure">import file mismatch:
+imported module 'test_chunking' has this __file__ attribute:
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/sea_review_20261030/worktree/tests/test_chunking.py
+which is not the same as the test file we want to collect:
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/tests/test_chunking.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules</error></testcase><testcase classname="" name="tests.test_core" time="0.000"><error message="collection failure">import file mismatch:
+imported module 'test_core' has this __file__ attribute:
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/sea_review_20261030/worktree/tests/test_core.py
+which is not the same as the test file we want to collect:
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/tests/test_core.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules</error></testcase><testcase classname="" name="tests.test_region_request" time="0.000"><error message="collection failure">import file mismatch:
+imported module 'test_region_request' has this __file__ attribute:
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/sea_review_20261030/worktree/tests/test_region_request.py
+which is not the same as the test file we want to collect:
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/tests/test_region_request.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules</error></testcase><testcase classname="" name="tests.test_sea_masks" time="0.000"><error message="collection failure">import file mismatch:
+imported module 'test_sea_masks' has this __file__ attribute:
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/sea_review_20261030/worktree/tests/test_sea_masks.py
+which is not the same as the test file we want to collect:
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/tests/test_sea_masks.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules</error></testcase><testcase classname="" name="tests.test_v1" time="0.000"><error message="collection failure">import file mismatch:
+imported module 'test_v1' has this __file__ attribute:
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/sea_review_20261030/worktree/tests/test_v1.py
+which is not the same as the test file we want to collect:
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/tests/test_v1.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules</error></testcase><testcase classname="" name="tests.test_v2" time="0.000"><error message="collection failure">import file mismatch:
+imported module 'test_v2' has this __file__ attribute:
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/sea_review_20261030/worktree/tests/test_v2.py
+which is not the same as the test file we want to collect:
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/tests/test_v2.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules</error></testcase></testsuite></testsuites>

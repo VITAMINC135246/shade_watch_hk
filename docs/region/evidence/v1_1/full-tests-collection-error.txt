@@ -1,0 +1,53 @@
+
+==================================== ERRORS ====================================
+___________________ ERROR collecting tests/test_chunking.py ____________________
+import file mismatch:
+imported module 'test_chunking' has this __file__ attribute:
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/sea_review_20261030/worktree/tests/test_chunking.py
+which is not the same as the test file we want to collect:
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/tests/test_chunking.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+_____________________ ERROR collecting tests/test_core.py ______________________
+import file mismatch:
+imported module 'test_core' has this __file__ attribute:
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/sea_review_20261030/worktree/tests/test_core.py
+which is not the same as the test file we want to collect:
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/tests/test_core.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+________________ ERROR collecting tests/test_region_request.py _________________
+import file mismatch:
+imported module 'test_region_request' has this __file__ attribute:
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/sea_review_20261030/worktree/tests/test_region_request.py
+which is not the same as the test file we want to collect:
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/tests/test_region_request.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+___________________ ERROR collecting tests/test_sea_masks.py ___________________
+import file mismatch:
+imported module 'test_sea_masks' has this __file__ attribute:
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/sea_review_20261030/worktree/tests/test_sea_masks.py
+which is not the same as the test file we want to collect:
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/tests/test_sea_masks.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+______________________ ERROR collecting tests/test_v1.py _______________________
+import file mismatch:
+imported module 'test_v1' has this __file__ attribute:
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/sea_review_20261030/worktree/tests/test_v1.py
+which is not the same as the test file we want to collect:
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/tests/test_v1.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+______________________ ERROR collecting tests/test_v2.py _______________________
+import file mismatch:
+imported module 'test_v2' has this __file__ attribute:
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/sea_review_20261030/worktree/tests/test_v2.py
+which is not the same as the test file we want to collect:
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/tests/test_v2.py
+HINT: remove __pycache__ / .pyc files and/or use a unique basename for your test file modules
+=========================== short test summary info ============================
+ERROR tests/test_chunking.py
+ERROR tests/test_core.py
+ERROR tests/test_region_request.py
+ERROR tests/test_sea_masks.py
+ERROR tests/test_v1.py
+ERROR tests/test_v2.py
+!!!!!!!!!!!!!!!!!!! Interrupted: 6 errors during collection !!!!!!!!!!!!!!!!!!!!
+6 errors in 14.49s

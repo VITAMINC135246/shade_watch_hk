@@ -1,0 +1,10 @@
+{
+  "jobs": {
+    "computed": 4,
+    "reused": 0,
+    "horizon_calls": 4,
+    "final_result_hits": 0
+  },
+  "index": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/region_dev_v1_1_validation/v1_reference/result_index.json",
+  "wall_seconds": 39.38434820799739
+}

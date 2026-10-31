@@ -1,0 +1,77 @@
+{
+  "frames": [
+    {
+      "utc": "2026-01-07T01:17:23+00:00",
+      "shape": [
+        10,
+        24
+      ],
+      "shade_equal": true,
+      "quality_equal": true,
+      "transform_equal": true,
+      "region_helper_equal": true,
+      "shade_counts": {
+        "0": 8,
+        "1": 232
+      },
+      "quality_counts": {
+        "0": 240
+      }
+    },
+    {
+      "utc": "2026-01-07T06:31:27+00:00",
+      "shape": [
+        10,
+        24
+      ],
+      "shade_equal": true,
+      "quality_equal": true,
+      "transform_equal": true,
+      "region_helper_equal": true,
+      "shade_counts": {
+        "0": 182,
+        "1": 58
+      },
+      "quality_counts": {
+        "0": 240
+      }
+    }
+  ],
+  "v1_jobs": {
+    "computed": 4,
+    "reused": 0,
+    "horizon_calls": 4,
+    "final_result_hits": 0
+  },
+  "v2_metrics": {
+    "parent_peak_rss_bytes": 150700032,
+    "workers_peak_rss_bytes": 525664256,
+    "media_peak_rss_bytes": 0,
+    "peak_tree_rss_bytes": 676364288,
+    "peak_new_disk_bytes": 35043804,
+    "max_in_flight": 1,
+    "computed": 4,
+    "reused": 0,
+    "horizon_calls": 4,
+    "final_result_hits": 0,
+    "input_inventory_calls": 1,
+    "memory_sample_seconds": 0.02,
+    "media_tracking": "known worker-reported PIDs; sub-sample spikes may be missed",
+    "monitoring_gaps": "input admission sampled at start/end; continuous 20 ms loop starts after spawn",
+    "run_wall_seconds": 43.027755791001255
+  },
+  "directions": {
+    "11NE10B(e844n822,e845n822).tif": [
+      130.0,
+      215.0
+    ],
+    "11NE10D(e844n821,e845n822).tif": [
+      130.0,
+      215.0
+    ]
+  },
+  "v1_cache": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/processed/shade_v1/region_dev_v1_1_v1",
+  "v2_cache": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/processed/shade_v1/region_dev_v1_1_v2",
+  "batch": "6e139dc8d8476845868fac09a9b7aa1e4d46532047ef9d45722d7b4297b93eba",
+  "passed": true
+}

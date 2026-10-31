@@ -1,0 +1,92 @@
+[
+  {
+    "name": "coastal",
+    "corners": [
+      [
+        820990.0,
+        808380.0
+      ],
+      [
+        821010.0,
+        808420.0
+      ]
+    ],
+    "view_seconds": 2.564728333003586,
+    "source_view": {
+      "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/region_views/c6e3a7ab46e5243361ae7887518217bf3e09f87994812dfc2d0487b5f76e6c7f",
+      "identity": "c6e3a7ab46e5243361ae7887518217bf3e09f87994812dfc2d0487b5f76e6c7f",
+      "catalogue_tiles": 3310,
+      "source_tiles": 21,
+      "target_tiles": [
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/14NW14D(e820n808,e821n809).tif",
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/14NW15C(e821n808,e821n809).tif",
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/14NW19B(e820n807,e821n808).tif",
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/14NW20A(e821n807,e821n808).tif"
+      ],
+      "header_and_view_seconds": 0.296406792011112
+    },
+    "plan_keys": [
+      "0b27df683d144de3cbae528e12eae347f6794e0bb4fdf8de54291f85b8b2ac20"
+    ],
+    "full_raw_reference": "Unavailable: v1.index_sources rejects known four shifted-origin 14NE15* sources"
+  },
+  {
+    "name": "inland",
+    "corners": [
+      [
+        834990.0,
+        815990.0
+      ],
+      [
+        835010.0,
+        816010.0
+      ]
+    ],
+    "view_seconds": 3.1002478750015143,
+    "source_view": {
+      "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/region_views/5076620f8d6d53831f67f4f87fe074d96d160024bfba97aa9057121b433fab8f",
+      "identity": "5076620f8d6d53831f67f4f87fe074d96d160024bfba97aa9057121b433fab8f",
+      "catalogue_tiles": 3310,
+      "source_tiles": 24,
+      "target_tiles": [
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11SW9C(e834n815,e835n816).tif"
+      ],
+      "header_and_view_seconds": 0.25834475000738166
+    },
+    "plan_keys": [
+      "fe04ad67e923ec163bac0eaaf4032c88e4d24a172c7e729b31aa917ff53700c3"
+    ],
+    "full_raw_reference": "Unavailable: v1.index_sources rejects known four shifted-origin 14NE15* sources"
+  },
+  {
+    "name": "tile_corner",
+    "corners": [
+      [
+        844990.0,
+        822190.0
+      ],
+      [
+        845010.0,
+        822210.0
+      ]
+    ],
+    "view_seconds": 1.9582713750132825,
+    "source_view": {
+      "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/region_views/32e4678d21ea91221aca227c3f562af6bfbe62ee130e3e3e4fd8d4ebed18c14f",
+      "identity": "32e4678d21ea91221aca227c3f562af6bfbe62ee130e3e3e4fd8d4ebed18c14f",
+      "catalogue_tiles": 3310,
+      "source_tiles": 30,
+      "target_tiles": [
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10B(e844n822,e845n822).tif",
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10D(e844n821,e845n822).tif",
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW6A(e845n822,e845n822).tif",
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW6C(e845n821,e845n822).tif"
+      ],
+      "header_and_view_seconds": 0.24187995799002238
+    },
+    "plan_keys": [
+      "38d3a977a6bce3e77866a97a49f9992d91622e4bd8bd2394e657f9133c08c5ff"
+    ],
+    "full_raw_reference": "Unavailable: v1.index_sources rejects known four shifted-origin 14NE15* sources"
+  }
+]

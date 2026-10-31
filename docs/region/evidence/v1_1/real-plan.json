@@ -1,0 +1,5262 @@
+{
+  "sidecar": {
+    "schema": "shade-watch-region-request-1.1",
+    "contract": "SW-RGN-AC-1.1",
+    "original_corners": [
+      [
+        844701.5,
+        822197.5
+      ],
+      [
+        844713.5,
+        822202.5
+      ]
+    ],
+    "crs": "hk1980",
+    "coordinate_order": "easting,northing",
+    "projected_corners": [
+      [
+        844701.5,
+        822197.5
+      ],
+      [
+        844713.5,
+        822202.5
+      ]
+    ],
+    "transformer_description": "Inverse of Hong Kong 1980 to WGS 84 (1) + Hong Kong 1980 Grid (with axis order normalized for visualization)",
+    "transformation_applied": false,
+    "pyproj_version": "3.8.0",
+    "proj_version": "9.8.1",
+    "requested_bounds": [
+      844701.5,
+      822197.5,
+      844713.5,
+      822202.5
+    ],
+    "resolved_bounds": [
+      844701.5,
+      822197.5,
+      844713.5,
+      822202.5
+    ],
+    "resolved_grid": {
+      "width": 24,
+      "height": 10,
+      "transform": [
+        0.5,
+        0.0,
+        844701.5,
+        0.0,
+        -0.5,
+        822202.5
+      ],
+      "crs": "EPSG:2326",
+      "mode": "custom",
+      "selected_source": null,
+      "selected_sources": []
+    },
+    "native_lattice": {
+      "origin_pixels": [
+        1687000,
+        1644400
+      ],
+      "step_pixels": [
+        1500,
+        1200
+      ],
+      "searched_rectangles": 3,
+      "method": "guillotine search; minimize residual area, then part count"
+    },
+    "partition": [
+      {
+        "id": "part_0000",
+        "requested_bounds": [
+          844701.5,
+          822197.5,
+          844713.5,
+          822200.0
+        ],
+        "resolved_bounds": [
+          844701.5,
+          822197.5,
+          844713.5,
+          822200.0
+        ],
+        "key": "b5b8779a7d047d2718247a9490e3ed5c74a2959c9356719e8febf5198870a8e6",
+        "grid": {
+          "width": 24,
+          "height": 5,
+          "transform": [
+            0.5,
+            0.0,
+            844701.5,
+            0.0,
+            -0.5,
+            822200.0
+          ],
+          "crs": "EPSG:2326",
+          "mode": "custom",
+          "selected_source": null,
+          "selected_sources": []
+        },
+        "tiles": [
+          "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10D(e844n821,e845n822).tif"
+        ],
+        "resources": {
+          "workers": 1,
+          "estimated_peak_bytes": 763430400,
+          "memory_budget_bytes": 8589934592,
+          "estimated_new_bytes": 59977696,
+          "artifact_budget_bytes": 10737418240,
+          "expected_direction_jobs": 2,
+          "missing_direction_jobs": 2,
+          "frames": 2
+        }
+      },
+      {
+        "id": "part_0001",
+        "requested_bounds": [
+          844701.5,
+          822200.0,
+          844713.5,
+          822202.5
+        ],
+        "resolved_bounds": [
+          844701.5,
+          822200.0,
+          844713.5,
+          822202.5
+        ],
+        "key": "b4af27f99ae65c87c7ef187be1d6ff803566fecb801e9cbf28ef45deade44194",
+        "grid": {
+          "width": 24,
+          "height": 5,
+          "transform": [
+            0.5,
+            0.0,
+            844701.5,
+            0.0,
+            -0.5,
+            822202.5
+          ],
+          "crs": "EPSG:2326",
+          "mode": "custom",
+          "selected_source": null,
+          "selected_sources": []
+        },
+        "tiles": [
+          "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10B(e844n822,e845n822).tif"
+        ],
+        "resources": {
+          "workers": 1,
+          "estimated_peak_bytes": 763430400,
+          "memory_budget_bytes": 8589934592,
+          "estimated_new_bytes": 59977696,
+          "artifact_budget_bytes": 10737418240,
+          "expected_direction_jobs": 2,
+          "missing_direction_jobs": 2,
+          "frames": 2
+        }
+      }
+    ],
+    "no_dsm_areas": [],
+    "no_dsm_encoding": {
+      "shade": 255,
+      "quality": 1
+    },
+    "time_groups": [
+      {
+        "input": {
+          "instants": [
+            "2026-01-07T09:17:23+08:00",
+            "2026-01-07T14:31:27+08:00"
+          ],
+          "interval_minutes": 10
+        },
+        "utc_times": [
+          "2026-01-07T01:17:23+00:00",
+          "2026-01-07T06:31:27+00:00"
+        ]
+      }
+    ],
+    "requests": [
+      {
+        "partition_id": "part_0000",
+        "time_group": 0,
+        "key": "b5b8779a7d047d2718247a9490e3ed5c74a2959c9356719e8febf5198870a8e6",
+        "grid": {
+          "width": 24,
+          "height": 5,
+          "transform": [
+            0.5,
+            0.0,
+            844701.5,
+            0.0,
+            -0.5,
+            822200.0
+          ],
+          "crs": "EPSG:2326",
+          "mode": "custom",
+          "selected_source": null,
+          "selected_sources": []
+        },
+        "utc_times": [
+          "2026-01-07T01:17:23+00:00",
+          "2026-01-07T06:31:27+00:00"
+        ],
+        "output_directory": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/region_dev_v1_1_validation/parts/part_0000",
+        "tiles": [
+          "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10D(e844n821,e845n822).tif"
+        ],
+        "resources": {
+          "workers": 1,
+          "estimated_peak_bytes": 763430400,
+          "memory_budget_bytes": 8589934592,
+          "estimated_new_bytes": 59977696,
+          "artifact_budget_bytes": 10737418240,
+          "expected_direction_jobs": 2,
+          "missing_direction_jobs": 2,
+          "frames": 2
+        },
+        "id": "batch_0000.json#request_0000",
+        "batch": 0,
+        "engine_request_id": "request_0000"
+      },
+      {
+        "partition_id": "part_0001",
+        "time_group": 0,
+        "key": "b4af27f99ae65c87c7ef187be1d6ff803566fecb801e9cbf28ef45deade44194",
+        "grid": {
+          "width": 24,
+          "height": 5,
+          "transform": [
+            0.5,
+            0.0,
+            844701.5,
+            0.0,
+            -0.5,
+            822202.5
+          ],
+          "crs": "EPSG:2326",
+          "mode": "custom",
+          "selected_source": null,
+          "selected_sources": []
+        },
+        "utc_times": [
+          "2026-01-07T01:17:23+00:00",
+          "2026-01-07T06:31:27+00:00"
+        ],
+        "output_directory": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/region_dev_v1_1_validation/parts/part_0001",
+        "tiles": [
+          "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10B(e844n822,e845n822).tif"
+        ],
+        "resources": {
+          "workers": 1,
+          "estimated_peak_bytes": 763430400,
+          "memory_budget_bytes": 8589934592,
+          "estimated_new_bytes": 59977696,
+          "artifact_budget_bytes": 10737418240,
+          "expected_direction_jobs": 2,
+          "missing_direction_jobs": 2,
+          "frames": 2
+        },
+        "id": "batch_0000.json#request_0001",
+        "batch": 0,
+        "engine_request_id": "request_0001"
+      }
+    ],
+    "generated_request_ids": [
+      "batch_0000.json#request_0000",
+      "batch_0000.json#request_0001"
+    ],
+    "batches": [
+      {
+        "id": "6e139dc8d8476845868fac09a9b7aa1e4d46532047ef9d45722d7b4297b93eba",
+        "request_file": "batch_0000.json",
+        "estimate": {
+          "model": {
+            "schema": "shade-watch-v2-estimator-1.0",
+            "calibrated": true,
+            "frozen_utc": "2026-10-02T18:01:21.775661+00:00",
+            "coefficients": {
+              "catalog_seconds": 0.25,
+              "startup_seconds": 0.75,
+              "direction_seconds": 10.842382625000027,
+              "frame_seconds": 0.2746130117187704,
+              "hit_seconds": 0.04,
+              "media_frame_seconds": 0.15,
+              "controller_task_seconds": 0.0,
+              "classification_seconds": 0.018901864437452787
+            },
+            "efficiency": {
+              "1": 1.0,
+              "2": 0.6216601185166459
+            },
+            "domain": {
+              "max_tiles": 2,
+              "max_native_frames": 320,
+              "max_union_directions": 12,
+              "outputs": "native scientific only",
+              "hardware": "Mac arm64 macOS15.7.4, 10 logical CPUs, 24 GiB, local HFS disk",
+              "tile_shape": [
+                1500,
+                1200
+              ],
+              "source_tiles": [
+                "11NE10B(e844n822,e845n822).tif",
+                "11NE10D(e844n821,e845n822).tif"
+              ],
+              "caveat": "local mostly-valid tiles; new terrain/NoData distributions and media uncalibrated"
+            },
+            "methodology": {
+              "direction": "full native union-task wall divided by missing native directions",
+              "frame": "matched warm complete run minus fixed startup/catalog, divided by native frames",
+              "efficiency": "one/two-worker matched warm work after fixed costs; capped at 1",
+              "startup_catalog": "fixed engineering allowance checked against phase/whole-run timings",
+              "frame_worker_seconds": 0.20359012765607076,
+              "warm_overhead_seconds": 3.272732290006388,
+              "excluded": "planning/submission and OS-cache flush; run API includes final verification",
+              "memory_disk": "conservative V1 allocation and uncompressed bytes plus temporary/metadata headroom",
+              "uncalibrated_terms": "media, final hits and four-worker costs are provisional",
+              "component_revision": "Separate measured directional and output concurrency; classification split from frame cost. Derived only from calibration, before any hold-out outcomes."
+            },
+            "calibration_records": [
+              "outputs/v2_development/evidence/cal_cold_1.json",
+              "outputs/v2_development/evidence/cal_cold_2.json",
+              "outputs/v2_development/evidence/cal_warm_1.json",
+              "outputs/v2_development/evidence/cal_warm_2.json"
+            ],
+            "direction_efficiency": {
+              "1": 1.0,
+              "2": 1.0
+            },
+            "model_sha256": "ad6939e4455d9e80495d27e382438d635f5cb9f0920601959e09bbbe2e721469"
+          },
+          "phases": {
+            "catalog_validation_seconds": 0.25,
+            "startup_seconds": 0.75,
+            "missing_direction_seconds": 43.36953050000011,
+            "warm_classification_seconds": 5.040497183320743e-06,
+            "output_compression_validation_seconds": 6.818963927501803e-05,
+            "final_hit_seconds": 0.0,
+            "media_seconds": 0.0,
+            "controller_validation_seconds": 0.0
+          },
+          "total_wall_seconds": 44.36960373013657,
+          "indicative_range_seconds": [
+            28.84024242458877,
+            70.99136596821852
+          ],
+          "range_note": "engineering variation allowance, not a fitted confidence interval",
+          "calibrated_domain": false,
+          "extrapolated": true,
+          "missing_direction_units": 4.0,
+          "union_direction_entries": 4,
+          "warm_native_frame_units": 0.0002666666666666667,
+          "final_result_hits": 0,
+          "resources": {
+            "estimated_peak_bytes": 1224775530,
+            "memory_budget_bytes": 8589934592,
+            "retained_new_bytes": 86400960,
+            "temporary_new_bytes": 38672128,
+            "estimated_peak_new_bytes": 125073088,
+            "request_metadata_bytes": 19381
+          },
+          "assumptions": [
+            "local same-machine filesystem; warm OS/JIT code cache",
+            "cold means empty directional cache, not flushed OS cache",
+            "effective-pixel/terrain changes affect directional cost",
+            "outputs include lossless compression/readback; media separate",
+            "whole-territory estimates require explicit profile and are extrapolations"
+          ]
+        },
+        "resources": {
+          "estimated_peak_bytes": 1224775530,
+          "memory_budget_bytes": 8589934592,
+          "retained_new_bytes": 86400960,
+          "temporary_new_bytes": 38672128,
+          "estimated_peak_new_bytes": 125073088,
+          "request_metadata_bytes": 19381
+        },
+        "request_ids": [
+          "batch_0000.json#request_0000",
+          "batch_0000.json#request_0001"
+        ],
+        "utc_times": [
+          "2026-01-07T01:17:23+00:00",
+          "2026-01-07T06:31:27+00:00"
+        ],
+        "horizon_tasks": 2
+      }
+    ],
+    "request_files": [
+      "batch_0000.json"
+    ],
+    "source_directory": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/region_views/01ef8dbf91fc792a63f038634042c065853d89e7f78d39e758a26eae7a574d4c",
+    "source_view": {
+      "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/region_views/01ef8dbf91fc792a63f038634042c065853d89e7f78d39e758a26eae7a574d4c",
+      "identity": "01ef8dbf91fc792a63f038634042c065853d89e7f78d39e758a26eae7a574d4c",
+      "catalogue_tiles": 3310,
+      "source_tiles": 29,
+      "target_tiles": [
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10B(e844n822,e845n822).tif",
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10D(e844n821,e845n822).tif"
+      ],
+      "header_and_view_seconds": 59.59027229200001
+    },
+    "indexing_seconds": 1.3158313750172965,
+    "planning_seconds": 61.37484112501261
+  },
+  "v1_reference": {
+    "schema": "shade-watch-v1-plan-1.0",
+    "request": {
+      "instants": [
+        {
+          "requested": "2026-01-07T09:17:23+08:00",
+          "utc": "2026-01-07T01:17:23+00:00",
+          "local": "2026-01-07T09:17:23+08:00"
+        },
+        {
+          "requested": "2026-01-07T14:31:27+08:00",
+          "utc": "2026-01-07T06:31:27+00:00",
+          "local": "2026-01-07T14:31:27+08:00"
+        }
+      ],
+      "dates": [],
+      "mode": "custom",
+      "selector": null,
+      "requested_bounds": [
+        844701.5,
+        822197.5,
+        844713.5,
+        822202.5
+      ],
+      "crop": null,
+      "interval_minutes": 10,
+      "local_timezone": "Asia/Hong_Kong",
+      "direction_method": "nearest5",
+      "jpg": false,
+      "mp4": false,
+      "workers": 1,
+      "memory_budget_mb": 8192
+    },
+    "grid": {
+      "width": 24,
+      "height": 10,
+      "transform": [
+        0.5,
+        0.0,
+        844701.5,
+        0.0,
+        -0.5,
+        822202.5
+      ],
+      "crs": "EPSG:2326",
+      "mode": "custom",
+      "selected_source": null,
+      "selected_sources": []
+    },
+    "tiles": [
+      {
+        "source": {
+          "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10B(e844n822,e845n822).tif",
+          "width": 1500,
+          "height": 1200,
+          "transform": [
+            0.5,
+            0.0,
+            844250.0,
+            0.0,
+            -0.5,
+            822800.0
+          ],
+          "crs": "EPSG:2326",
+          "bounds": [
+            844250.0,
+            822200.0,
+            845000.0,
+            822800.0
+          ],
+          "nodata": -9999.0,
+          "sha256": "4ea3636f5ec10c14074562020bb3a8320dc5ed54b5b278be2a8116d6d18a881d",
+          "bytes": 7868582
+        },
+        "spatial_key": "fbf15c223c0a06a91ebcdc4a1e2954a7973b60fb4a959af8829224266389f04b",
+        "dependency_identities": [
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              842750.0,
+              0.0,
+              -0.5,
+              822200.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              842750.0,
+              821600.0,
+              843500.0,
+              822200.0
+            ],
+            "sha256": "162e8305832ec22f7fb505f2d336a1e97e51a3d91ce238aea744c93d7225c092",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              844250.0,
+              0.0,
+              -0.5,
+              822800.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              844250.0,
+              822200.0,
+              845000.0,
+              822800.0
+            ],
+            "sha256": "4ea3636f5ec10c14074562020bb3a8320dc5ed54b5b278be2a8116d6d18a881d",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              844250.0,
+              0.0,
+              -0.5,
+              824000.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              844250.0,
+              823400.0,
+              845000.0,
+              824000.0
+            ],
+            "sha256": "fe038ad8c76fab9a5071c3cf2abe9ae9cfb96ec95607389624450fbfb752db67",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              844250.0,
+              0.0,
+              -0.5,
+              822200.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              844250.0,
+              821600.0,
+              845000.0,
+              822200.0
+            ],
+            "sha256": "f229f8b15f4d309b674bc3d85470079e109f84fd304ee1d4cec799105f9a2103",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              843500.0,
+              0.0,
+              -0.5,
+              821600.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              843500.0,
+              821000.0,
+              844250.0,
+              821600.0
+            ],
+            "sha256": "4321715a6d5dfb00eef0241603bbb6fb069068eaaeb270948b830028c1f37511",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              843500.0,
+              0.0,
+              -0.5,
+              822800.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              843500.0,
+              822200.0,
+              844250.0,
+              822800.0
+            ],
+            "sha256": "a5aa1d153c43f0b11fb9176aebeab0c193b0f257e598854a37a81cb1b840f2ba",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              845750.0,
+              0.0,
+              -0.5,
+              824000.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              845750.0,
+              823400.0,
+              846500.0,
+              824000.0
+            ],
+            "sha256": "2dbcc32636cad551a5ea4217537d4fa45d92ee6e1fb2de2109d5bff713a0d8fd",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              845750.0,
+              0.0,
+              -0.5,
+              823400.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              845750.0,
+              822800.0,
+              846500.0,
+              823400.0
+            ],
+            "sha256": "f37085950e06613b7805e5f13f68fc97cdb799399cc1c2567f9a626b7107bd63",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              845750.0,
+              0.0,
+              -0.5,
+              821600.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              845750.0,
+              821000.0,
+              846500.0,
+              821600.0
+            ],
+            "sha256": "c63e75b9a2a530899c7ea02334cc20a7f534131df5155f7aa0188990662f7930",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              845000.0,
+              0.0,
+              -0.5,
+              824000.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              845000.0,
+              823400.0,
+              845750.0,
+              824000.0
+            ],
+            "sha256": "624caa6bb39e4a17923adb84a904cf2da30eea8fdf9990cd789a660bf8ea65d5",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              843500.0,
+              0.0,
+              -0.5,
+              823400.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              843500.0,
+              822800.0,
+              844250.0,
+              823400.0
+            ],
+            "sha256": "12a3a3ce3784c5c5d2d0c3c98d67290bc9f9ad641c0c21dfeb86f6a714937626",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              845000.0,
+              0.0,
+              -0.5,
+              823400.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              845000.0,
+              822800.0,
+              845750.0,
+              823400.0
+            ],
+            "sha256": "daa47099e18e138dfa1e96106ccaaa7f91f366765e9dddb97702310cff9c5888",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              845750.0,
+              0.0,
+              -0.5,
+              822200.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              845750.0,
+              821600.0,
+              846500.0,
+              822200.0
+            ],
+            "sha256": "b43461542a1e2c403473d9dad3b06e5730393b66820d770ad362035db10f1b0c",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              845000.0,
+              0.0,
+              -0.5,
+              821600.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              845000.0,
+              821000.0,
+              845750.0,
+              821600.0
+            ],
+            "sha256": "28d6da773531156279d3b963a89f853f5c8c552e7c3acfb076d28406f165c322",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              842750.0,
+              0.0,
+              -0.5,
+              823400.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              842750.0,
+              822800.0,
+              843500.0,
+              823400.0
+            ],
+            "sha256": "126dca3878ac598aa547a1edd32f91a7b5669bf6e8df1a234b3c2eb107feb98c",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              842750.0,
+              0.0,
+              -0.5,
+              821600.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              842750.0,
+              821000.0,
+              843500.0,
+              821600.0
+            ],
+            "sha256": "89c2e69c5abb8a1369fa28d87ae155e55b005d7ba835fc7d1b41721af25a2295",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              845000.0,
+              0.0,
+              -0.5,
+              822800.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              845000.0,
+              822200.0,
+              845750.0,
+              822800.0
+            ],
+            "sha256": "27de2cbe16fc82bf3ffc745aea2af20e29e9d1a23ce240c2340d2a596f80f089",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              842750.0,
+              0.0,
+              -0.5,
+              824000.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              842750.0,
+              823400.0,
+              843500.0,
+              824000.0
+            ],
+            "sha256": "4b42478d02c369b27b4e9e6567b3be986c1045f976087f9dda6a7ebe7ae5d879",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              842750.0,
+              0.0,
+              -0.5,
+              822800.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              842750.0,
+              822200.0,
+              843500.0,
+              822800.0
+            ],
+            "sha256": "4375bd8f37b7ef9bfbd5025d804a86a71ac5375d4b9eb4ef91e331806c85a938",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              844250.0,
+              0.0,
+              -0.5,
+              823400.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              844250.0,
+              822800.0,
+              845000.0,
+              823400.0
+            ],
+            "sha256": "1ed3fd697de4ae40aefe60ef6508777c782a39183c1fa7d6a17968aad20311c9",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              843500.0,
+              0.0,
+              -0.5,
+              822200.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              843500.0,
+              821600.0,
+              844250.0,
+              822200.0
+            ],
+            "sha256": "3b539258a81bb97b8461480c2cf850a7ed5f934b2833076111a18b3ff133b25e",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              844250.0,
+              0.0,
+              -0.5,
+              821600.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              844250.0,
+              821000.0,
+              845000.0,
+              821600.0
+            ],
+            "sha256": "7e400bb5793f6356932f3e9320402d7bafe74d1ce444e55bc5dc7265e98cc7d6",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              845000.0,
+              0.0,
+              -0.5,
+              822200.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              845000.0,
+              821600.0,
+              845750.0,
+              822200.0
+            ],
+            "sha256": "355cf62f7642115fc7bde3b8646ba71024abf18500ef12a3c2b7b07a18dfefe3",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              843500.0,
+              0.0,
+              -0.5,
+              824000.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              843500.0,
+              823400.0,
+              844250.0,
+              824000.0
+            ],
+            "sha256": "4469ef9aa5b90e6192c03d5ddcef96eca7d86c69b1b5441a84da513b45effe3e",
+            "nodata": -9999.0,
+            "auxiliary": []
+          }
+        ],
+        "reference": {
+          "policy": "canonical_native_tile_geometric_center",
+          "easting_m": 844625.0,
+          "northing_m": 822500.0,
+          "longitude": 114.25799994468181,
+          "latitude": 22.341558875371685,
+          "crs": "EPSG:2326",
+          "role": "fixed reference for owning pixels"
+        },
+        "solar": [
+          {
+            "azimuth_deg": 130.8234087824482,
+            "geometric_elevation_deg": 25.410639752610596,
+            "apparent_elevation_deg": 25.444431517393074,
+            "direction_deg": 130.0
+          },
+          {
+            "azimuth_deg": 215.78360661688112,
+            "geometric_elevation_deg": 36.0742467281783,
+            "apparent_elevation_deg": 36.09634940648653,
+            "direction_deg": 215.0
+          }
+        ],
+        "directions": [
+          130.0,
+          215.0
+        ],
+        "missing_directions": [
+          130.0,
+          215.0
+        ],
+        "buffered_coverage_fraction": 0.9790209790209791
+      },
+      {
+        "source": {
+          "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10D(e844n821,e845n822).tif",
+          "width": 1500,
+          "height": 1200,
+          "transform": [
+            0.5,
+            0.0,
+            844250.0,
+            0.0,
+            -0.5,
+            822200.0
+          ],
+          "crs": "EPSG:2326",
+          "bounds": [
+            844250.0,
+            821600.0,
+            845000.0,
+            822200.0
+          ],
+          "nodata": -9999.0,
+          "sha256": "f229f8b15f4d309b674bc3d85470079e109f84fd304ee1d4cec799105f9a2103",
+          "bytes": 7868582
+        },
+        "spatial_key": "27d843332e5e3d898fe76543d8fbbb00b39f2cc58568a5ff6eb28674a08d6f52",
+        "dependency_identities": [
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              842750.0,
+              0.0,
+              -0.5,
+              822200.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              842750.0,
+              821600.0,
+              843500.0,
+              822200.0
+            ],
+            "sha256": "162e8305832ec22f7fb505f2d336a1e97e51a3d91ce238aea744c93d7225c092",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              843500.0,
+              0.0,
+              -0.5,
+              821000.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              843500.0,
+              820400.0,
+              844250.0,
+              821000.0
+            ],
+            "sha256": "03cc64a319b55f6aa7b37344d3353328114fa278f6dcf2c7c1b48096b3d318a2",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              844250.0,
+              0.0,
+              -0.5,
+              822800.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              844250.0,
+              822200.0,
+              845000.0,
+              822800.0
+            ],
+            "sha256": "4ea3636f5ec10c14074562020bb3a8320dc5ed54b5b278be2a8116d6d18a881d",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              845000.0,
+              0.0,
+              -0.5,
+              821000.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              845000.0,
+              820400.0,
+              845750.0,
+              821000.0
+            ],
+            "sha256": "a8332d2a2776552280dd1f3951f5f9812e1e66e2f01f0e3e2cdf1a827da07edb",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              844250.0,
+              0.0,
+              -0.5,
+              822200.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              844250.0,
+              821600.0,
+              845000.0,
+              822200.0
+            ],
+            "sha256": "f229f8b15f4d309b674bc3d85470079e109f84fd304ee1d4cec799105f9a2103",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              843500.0,
+              0.0,
+              -0.5,
+              821600.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              843500.0,
+              821000.0,
+              844250.0,
+              821600.0
+            ],
+            "sha256": "4321715a6d5dfb00eef0241603bbb6fb069068eaaeb270948b830028c1f37511",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              843500.0,
+              0.0,
+              -0.5,
+              822800.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              843500.0,
+              822200.0,
+              844250.0,
+              822800.0
+            ],
+            "sha256": "a5aa1d153c43f0b11fb9176aebeab0c193b0f257e598854a37a81cb1b840f2ba",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              844250.0,
+              0.0,
+              -0.5,
+              821000.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              844250.0,
+              820400.0,
+              845000.0,
+              821000.0
+            ],
+            "sha256": "ecb8a1c4758820d4a2687d344ff889b807d795d7f40348a9c019e731af7fb690",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              845750.0,
+              0.0,
+              -0.5,
+              823400.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              845750.0,
+              822800.0,
+              846500.0,
+              823400.0
+            ],
+            "sha256": "f37085950e06613b7805e5f13f68fc97cdb799399cc1c2567f9a626b7107bd63",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              845750.0,
+              0.0,
+              -0.5,
+              821600.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              845750.0,
+              821000.0,
+              846500.0,
+              821600.0
+            ],
+            "sha256": "c63e75b9a2a530899c7ea02334cc20a7f534131df5155f7aa0188990662f7930",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              843500.0,
+              0.0,
+              -0.5,
+              823400.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              843500.0,
+              822800.0,
+              844250.0,
+              823400.0
+            ],
+            "sha256": "12a3a3ce3784c5c5d2d0c3c98d67290bc9f9ad641c0c21dfeb86f6a714937626",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              845000.0,
+              0.0,
+              -0.5,
+              823400.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              845000.0,
+              822800.0,
+              845750.0,
+              823400.0
+            ],
+            "sha256": "daa47099e18e138dfa1e96106ccaaa7f91f366765e9dddb97702310cff9c5888",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              845750.0,
+              0.0,
+              -0.5,
+              822200.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              845750.0,
+              821600.0,
+              846500.0,
+              822200.0
+            ],
+            "sha256": "b43461542a1e2c403473d9dad3b06e5730393b66820d770ad362035db10f1b0c",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              845000.0,
+              0.0,
+              -0.5,
+              821600.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              845000.0,
+              821000.0,
+              845750.0,
+              821600.0
+            ],
+            "sha256": "28d6da773531156279d3b963a89f853f5c8c552e7c3acfb076d28406f165c322",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              842750.0,
+              0.0,
+              -0.5,
+              823400.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              842750.0,
+              822800.0,
+              843500.0,
+              823400.0
+            ],
+            "sha256": "126dca3878ac598aa547a1edd32f91a7b5669bf6e8df1a234b3c2eb107feb98c",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              842750.0,
+              0.0,
+              -0.5,
+              821600.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              842750.0,
+              821000.0,
+              843500.0,
+              821600.0
+            ],
+            "sha256": "89c2e69c5abb8a1369fa28d87ae155e55b005d7ba835fc7d1b41721af25a2295",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              845000.0,
+              0.0,
+              -0.5,
+              822800.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              845000.0,
+              822200.0,
+              845750.0,
+              822800.0
+            ],
+            "sha256": "27de2cbe16fc82bf3ffc745aea2af20e29e9d1a23ce240c2340d2a596f80f089",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              845750.0,
+              0.0,
+              -0.5,
+              821000.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              845750.0,
+              820400.0,
+              846500.0,
+              821000.0
+            ],
+            "sha256": "7c93ed5440280022436a8daf38930282023d25aa3fe8aaaa9f877fe0887b463c",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              842750.0,
+              0.0,
+              -0.5,
+              822800.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              842750.0,
+              822200.0,
+              843500.0,
+              822800.0
+            ],
+            "sha256": "4375bd8f37b7ef9bfbd5025d804a86a71ac5375d4b9eb4ef91e331806c85a938",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              844250.0,
+              0.0,
+              -0.5,
+              823400.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              844250.0,
+              822800.0,
+              845000.0,
+              823400.0
+            ],
+            "sha256": "1ed3fd697de4ae40aefe60ef6508777c782a39183c1fa7d6a17968aad20311c9",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              842750.0,
+              0.0,
+              -0.5,
+              821000.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              842750.0,
+              820400.0,
+              843500.0,
+              821000.0
+            ],
+            "sha256": "1a5eabb1f65db8d8d05a24c11e893e94d158733d812ca6504fa11b4b4de35191",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              843500.0,
+              0.0,
+              -0.5,
+              822200.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              843500.0,
+              821600.0,
+              844250.0,
+              822200.0
+            ],
+            "sha256": "3b539258a81bb97b8461480c2cf850a7ed5f934b2833076111a18b3ff133b25e",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              844250.0,
+              0.0,
+              -0.5,
+              821600.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              844250.0,
+              821000.0,
+              845000.0,
+              821600.0
+            ],
+            "sha256": "7e400bb5793f6356932f3e9320402d7bafe74d1ce444e55bc5dc7265e98cc7d6",
+            "nodata": -9999.0,
+            "auxiliary": []
+          },
+          {
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              845000.0,
+              0.0,
+              -0.5,
+              822200.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              845000.0,
+              821600.0,
+              845750.0,
+              822200.0
+            ],
+            "sha256": "355cf62f7642115fc7bde3b8646ba71024abf18500ef12a3c2b7b07a18dfefe3",
+            "nodata": -9999.0,
+            "auxiliary": []
+          }
+        ],
+        "reference": {
+          "policy": "canonical_native_tile_geometric_center",
+          "easting_m": 844625.0,
+          "northing_m": 821900.0,
+          "longitude": 114.25799680843747,
+          "latitude": 22.336140536922674,
+          "crs": "EPSG:2326",
+          "role": "fixed reference for owning pixels"
+        },
+        "solar": [
+          {
+            "azimuth_deg": 130.82145865023182,
+            "geometric_elevation_deg": 25.414179617087836,
+            "apparent_elevation_deg": 25.447966053286702,
+            "direction_deg": 130.0
+          },
+          {
+            "azimuth_deg": 215.78591210144117,
+            "geometric_elevation_deg": 36.07864388564834,
+            "apparent_elevation_deg": 36.100743016336885,
+            "direction_deg": 215.0
+          }
+        ],
+        "directions": [
+          130.0,
+          215.0
+        ],
+        "missing_directions": [
+          130.0,
+          215.0
+        ],
+        "buffered_coverage_fraction": 0.9790209790209791
+      }
+    ],
+    "source_directory": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/region_views/01ef8dbf91fc792a63f038634042c065853d89e7f78d39e758a26eae7a574d4c",
+    "output_directory": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/region_dev_v1_1_validation/v1_reference",
+    "cache_directory": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/processed/shade_v1/region_dev_v1_1_v1",
+    "coverage": {
+      "output_pixels": 240,
+      "source_footprint_pixels": 240,
+      "uncovered_pixels": 0,
+      "limitations": [
+        "Footprints do not establish valid DSM or complete sunward support",
+        "1 km cutoff does not bound unseen farther terrain",
+        "Solar model and tile references are approximations"
+      ],
+      "daylight_reference": {
+        "latitude": 22.3,
+        "longitude": 114.2
+      }
+    },
+    "resources": {
+      "workers": 1,
+      "estimated_peak_bytes": 763430400,
+      "memory_budget_bytes": 8589934592,
+      "estimated_new_bytes": 103178176,
+      "artifact_budget_bytes": 10737418240,
+      "expected_direction_jobs": 4,
+      "missing_direction_jobs": 4,
+      "frames": 2
+    },
+    "planning_seconds": 0.4556262500118464,
+    "key": "c5727833e9ecf2ecbcca404771e3092a25550cf924ee7b5a945b17b022f047ad"
+  },
+  "admitted_batch": {
+    "definition": {
+      "schema": "shade-watch-v2-batch-1.0",
+      "requests": {
+        "request_0000": {
+          "schema": "shade-watch-v1-plan-1.0",
+          "request": {
+            "instants": [
+              {
+                "requested": "2026-01-07T09:17:23+08:00",
+                "utc": "2026-01-07T01:17:23+00:00",
+                "local": "2026-01-07T09:17:23+08:00"
+              },
+              {
+                "requested": "2026-01-07T14:31:27+08:00",
+                "utc": "2026-01-07T06:31:27+00:00",
+                "local": "2026-01-07T14:31:27+08:00"
+              }
+            ],
+            "dates": [],
+            "mode": "custom",
+            "selector": null,
+            "requested_bounds": [
+              844701.5,
+              822197.5,
+              844713.5,
+              822200.0
+            ],
+            "crop": null,
+            "interval_minutes": 10,
+            "local_timezone": "Asia/Hong_Kong",
+            "direction_method": "nearest5",
+            "jpg": false,
+            "mp4": false,
+            "workers": 1,
+            "memory_budget_mb": 8192
+          },
+          "grid": {
+            "width": 24,
+            "height": 5,
+            "transform": [
+              0.5,
+              0.0,
+              844701.5,
+              0.0,
+              -0.5,
+              822200.0
+            ],
+            "crs": "EPSG:2326",
+            "mode": "custom",
+            "selected_source": null,
+            "selected_sources": []
+          },
+          "tiles": [
+            {
+              "source": {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10D(e844n821,e845n822).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  844250.0,
+                  0.0,
+                  -0.5,
+                  822200.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  844250.0,
+                  821600.0,
+                  845000.0,
+                  822200.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "f229f8b15f4d309b674bc3d85470079e109f84fd304ee1d4cec799105f9a2103",
+                "bytes": 7868582
+              },
+              "spatial_key": "27d843332e5e3d898fe76543d8fbbb00b39f2cc58568a5ff6eb28674a08d6f52",
+              "dependency_identities": [
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    842750.0,
+                    0.0,
+                    -0.5,
+                    822200.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    842750.0,
+                    821600.0,
+                    843500.0,
+                    822200.0
+                  ],
+                  "sha256": "162e8305832ec22f7fb505f2d336a1e97e51a3d91ce238aea744c93d7225c092",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    843500.0,
+                    0.0,
+                    -0.5,
+                    821000.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    843500.0,
+                    820400.0,
+                    844250.0,
+                    821000.0
+                  ],
+                  "sha256": "03cc64a319b55f6aa7b37344d3353328114fa278f6dcf2c7c1b48096b3d318a2",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    844250.0,
+                    0.0,
+                    -0.5,
+                    822800.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    844250.0,
+                    822200.0,
+                    845000.0,
+                    822800.0
+                  ],
+                  "sha256": "4ea3636f5ec10c14074562020bb3a8320dc5ed54b5b278be2a8116d6d18a881d",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    845000.0,
+                    0.0,
+                    -0.5,
+                    821000.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    845000.0,
+                    820400.0,
+                    845750.0,
+                    821000.0
+                  ],
+                  "sha256": "a8332d2a2776552280dd1f3951f5f9812e1e66e2f01f0e3e2cdf1a827da07edb",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    844250.0,
+                    0.0,
+                    -0.5,
+                    822200.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    844250.0,
+                    821600.0,
+                    845000.0,
+                    822200.0
+                  ],
+                  "sha256": "f229f8b15f4d309b674bc3d85470079e109f84fd304ee1d4cec799105f9a2103",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    843500.0,
+                    0.0,
+                    -0.5,
+                    821600.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    843500.0,
+                    821000.0,
+                    844250.0,
+                    821600.0
+                  ],
+                  "sha256": "4321715a6d5dfb00eef0241603bbb6fb069068eaaeb270948b830028c1f37511",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    843500.0,
+                    0.0,
+                    -0.5,
+                    822800.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    843500.0,
+                    822200.0,
+                    844250.0,
+                    822800.0
+                  ],
+                  "sha256": "a5aa1d153c43f0b11fb9176aebeab0c193b0f257e598854a37a81cb1b840f2ba",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    844250.0,
+                    0.0,
+                    -0.5,
+                    821000.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    844250.0,
+                    820400.0,
+                    845000.0,
+                    821000.0
+                  ],
+                  "sha256": "ecb8a1c4758820d4a2687d344ff889b807d795d7f40348a9c019e731af7fb690",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    845750.0,
+                    0.0,
+                    -0.5,
+                    823400.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    845750.0,
+                    822800.0,
+                    846500.0,
+                    823400.0
+                  ],
+                  "sha256": "f37085950e06613b7805e5f13f68fc97cdb799399cc1c2567f9a626b7107bd63",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    845750.0,
+                    0.0,
+                    -0.5,
+                    821600.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    845750.0,
+                    821000.0,
+                    846500.0,
+                    821600.0
+                  ],
+                  "sha256": "c63e75b9a2a530899c7ea02334cc20a7f534131df5155f7aa0188990662f7930",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    843500.0,
+                    0.0,
+                    -0.5,
+                    823400.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    843500.0,
+                    822800.0,
+                    844250.0,
+                    823400.0
+                  ],
+                  "sha256": "12a3a3ce3784c5c5d2d0c3c98d67290bc9f9ad641c0c21dfeb86f6a714937626",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    845000.0,
+                    0.0,
+                    -0.5,
+                    823400.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    845000.0,
+                    822800.0,
+                    845750.0,
+                    823400.0
+                  ],
+                  "sha256": "daa47099e18e138dfa1e96106ccaaa7f91f366765e9dddb97702310cff9c5888",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    845750.0,
+                    0.0,
+                    -0.5,
+                    822200.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    845750.0,
+                    821600.0,
+                    846500.0,
+                    822200.0
+                  ],
+                  "sha256": "b43461542a1e2c403473d9dad3b06e5730393b66820d770ad362035db10f1b0c",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    845000.0,
+                    0.0,
+                    -0.5,
+                    821600.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    845000.0,
+                    821000.0,
+                    845750.0,
+                    821600.0
+                  ],
+                  "sha256": "28d6da773531156279d3b963a89f853f5c8c552e7c3acfb076d28406f165c322",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    842750.0,
+                    0.0,
+                    -0.5,
+                    823400.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    842750.0,
+                    822800.0,
+                    843500.0,
+                    823400.0
+                  ],
+                  "sha256": "126dca3878ac598aa547a1edd32f91a7b5669bf6e8df1a234b3c2eb107feb98c",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    842750.0,
+                    0.0,
+                    -0.5,
+                    821600.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    842750.0,
+                    821000.0,
+                    843500.0,
+                    821600.0
+                  ],
+                  "sha256": "89c2e69c5abb8a1369fa28d87ae155e55b005d7ba835fc7d1b41721af25a2295",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    845000.0,
+                    0.0,
+                    -0.5,
+                    822800.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    845000.0,
+                    822200.0,
+                    845750.0,
+                    822800.0
+                  ],
+                  "sha256": "27de2cbe16fc82bf3ffc745aea2af20e29e9d1a23ce240c2340d2a596f80f089",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    845750.0,
+                    0.0,
+                    -0.5,
+                    821000.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    845750.0,
+                    820400.0,
+                    846500.0,
+                    821000.0
+                  ],
+                  "sha256": "7c93ed5440280022436a8daf38930282023d25aa3fe8aaaa9f877fe0887b463c",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    842750.0,
+                    0.0,
+                    -0.5,
+                    822800.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    842750.0,
+                    822200.0,
+                    843500.0,
+                    822800.0
+                  ],
+                  "sha256": "4375bd8f37b7ef9bfbd5025d804a86a71ac5375d4b9eb4ef91e331806c85a938",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    844250.0,
+                    0.0,
+                    -0.5,
+                    823400.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    844250.0,
+                    822800.0,
+                    845000.0,
+                    823400.0
+                  ],
+                  "sha256": "1ed3fd697de4ae40aefe60ef6508777c782a39183c1fa7d6a17968aad20311c9",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    842750.0,
+                    0.0,
+                    -0.5,
+                    821000.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    842750.0,
+                    820400.0,
+                    843500.0,
+                    821000.0
+                  ],
+                  "sha256": "1a5eabb1f65db8d8d05a24c11e893e94d158733d812ca6504fa11b4b4de35191",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    843500.0,
+                    0.0,
+                    -0.5,
+                    822200.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    843500.0,
+                    821600.0,
+                    844250.0,
+                    822200.0
+                  ],
+                  "sha256": "3b539258a81bb97b8461480c2cf850a7ed5f934b2833076111a18b3ff133b25e",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    844250.0,
+                    0.0,
+                    -0.5,
+                    821600.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    844250.0,
+                    821000.0,
+                    845000.0,
+                    821600.0
+                  ],
+                  "sha256": "7e400bb5793f6356932f3e9320402d7bafe74d1ce444e55bc5dc7265e98cc7d6",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    845000.0,
+                    0.0,
+                    -0.5,
+                    822200.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    845000.0,
+                    821600.0,
+                    845750.0,
+                    822200.0
+                  ],
+                  "sha256": "355cf62f7642115fc7bde3b8646ba71024abf18500ef12a3c2b7b07a18dfefe3",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                }
+              ],
+              "reference": {
+                "policy": "canonical_native_tile_geometric_center",
+                "easting_m": 844625.0,
+                "northing_m": 821900.0,
+                "longitude": 114.25799680843747,
+                "latitude": 22.336140536922674,
+                "crs": "EPSG:2326",
+                "role": "fixed reference for owning pixels"
+              },
+              "solar": [
+                {
+                  "azimuth_deg": 130.82145865023182,
+                  "geometric_elevation_deg": 25.414179617087836,
+                  "apparent_elevation_deg": 25.447966053286702,
+                  "direction_deg": 130.0
+                },
+                {
+                  "azimuth_deg": 215.78591210144117,
+                  "geometric_elevation_deg": 36.07864388564834,
+                  "apparent_elevation_deg": 36.100743016336885,
+                  "direction_deg": 215.0
+                }
+              ],
+              "directions": [
+                130.0,
+                215.0
+              ],
+              "missing_directions": [
+                130.0,
+                215.0
+              ],
+              "buffered_coverage_fraction": 0.9790209790209791
+            }
+          ],
+          "source_directory": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/region_views/01ef8dbf91fc792a63f038634042c065853d89e7f78d39e758a26eae7a574d4c",
+          "output_directory": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/region_dev_v1_1_validation/parts/part_0000",
+          "cache_directory": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/processed/shade_v1/region_dev_v1_1_v2",
+          "coverage": {
+            "output_pixels": 120,
+            "source_footprint_pixels": 120,
+            "uncovered_pixels": 0,
+            "limitations": [
+              "Footprints do not establish valid DSM or complete sunward support",
+              "1 km cutoff does not bound unseen farther terrain",
+              "Solar model and tile references are approximations"
+            ],
+            "daylight_reference": {
+              "latitude": 22.3,
+              "longitude": 114.2
+            }
+          },
+          "resources": {
+            "workers": 1,
+            "estimated_peak_bytes": 763430400,
+            "memory_budget_bytes": 8589934592,
+            "estimated_new_bytes": 59977696,
+            "artifact_budget_bytes": 10737418240,
+            "expected_direction_jobs": 2,
+            "missing_direction_jobs": 2,
+            "frames": 2
+          },
+          "planning_seconds": 0.0013982079981360584,
+          "key": "b5b8779a7d047d2718247a9490e3ed5c74a2959c9356719e8febf5198870a8e6"
+        },
+        "request_0001": {
+          "schema": "shade-watch-v1-plan-1.0",
+          "request": {
+            "instants": [
+              {
+                "requested": "2026-01-07T09:17:23+08:00",
+                "utc": "2026-01-07T01:17:23+00:00",
+                "local": "2026-01-07T09:17:23+08:00"
+              },
+              {
+                "requested": "2026-01-07T14:31:27+08:00",
+                "utc": "2026-01-07T06:31:27+00:00",
+                "local": "2026-01-07T14:31:27+08:00"
+              }
+            ],
+            "dates": [],
+            "mode": "custom",
+            "selector": null,
+            "requested_bounds": [
+              844701.5,
+              822200.0,
+              844713.5,
+              822202.5
+            ],
+            "crop": null,
+            "interval_minutes": 10,
+            "local_timezone": "Asia/Hong_Kong",
+            "direction_method": "nearest5",
+            "jpg": false,
+            "mp4": false,
+            "workers": 1,
+            "memory_budget_mb": 8192
+          },
+          "grid": {
+            "width": 24,
+            "height": 5,
+            "transform": [
+              0.5,
+              0.0,
+              844701.5,
+              0.0,
+              -0.5,
+              822202.5
+            ],
+            "crs": "EPSG:2326",
+            "mode": "custom",
+            "selected_source": null,
+            "selected_sources": []
+          },
+          "tiles": [
+            {
+              "source": {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10B(e844n822,e845n822).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  844250.0,
+                  0.0,
+                  -0.5,
+                  822800.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  844250.0,
+                  822200.0,
+                  845000.0,
+                  822800.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "4ea3636f5ec10c14074562020bb3a8320dc5ed54b5b278be2a8116d6d18a881d",
+                "bytes": 7868582
+              },
+              "spatial_key": "fbf15c223c0a06a91ebcdc4a1e2954a7973b60fb4a959af8829224266389f04b",
+              "dependency_identities": [
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    842750.0,
+                    0.0,
+                    -0.5,
+                    822200.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    842750.0,
+                    821600.0,
+                    843500.0,
+                    822200.0
+                  ],
+                  "sha256": "162e8305832ec22f7fb505f2d336a1e97e51a3d91ce238aea744c93d7225c092",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    844250.0,
+                    0.0,
+                    -0.5,
+                    822800.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    844250.0,
+                    822200.0,
+                    845000.0,
+                    822800.0
+                  ],
+                  "sha256": "4ea3636f5ec10c14074562020bb3a8320dc5ed54b5b278be2a8116d6d18a881d",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    844250.0,
+                    0.0,
+                    -0.5,
+                    824000.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    844250.0,
+                    823400.0,
+                    845000.0,
+                    824000.0
+                  ],
+                  "sha256": "fe038ad8c76fab9a5071c3cf2abe9ae9cfb96ec95607389624450fbfb752db67",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    844250.0,
+                    0.0,
+                    -0.5,
+                    822200.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    844250.0,
+                    821600.0,
+                    845000.0,
+                    822200.0
+                  ],
+                  "sha256": "f229f8b15f4d309b674bc3d85470079e109f84fd304ee1d4cec799105f9a2103",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    843500.0,
+                    0.0,
+                    -0.5,
+                    821600.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    843500.0,
+                    821000.0,
+                    844250.0,
+                    821600.0
+                  ],
+                  "sha256": "4321715a6d5dfb00eef0241603bbb6fb069068eaaeb270948b830028c1f37511",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    843500.0,
+                    0.0,
+                    -0.5,
+                    822800.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    843500.0,
+                    822200.0,
+                    844250.0,
+                    822800.0
+                  ],
+                  "sha256": "a5aa1d153c43f0b11fb9176aebeab0c193b0f257e598854a37a81cb1b840f2ba",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    845750.0,
+                    0.0,
+                    -0.5,
+                    824000.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    845750.0,
+                    823400.0,
+                    846500.0,
+                    824000.0
+                  ],
+                  "sha256": "2dbcc32636cad551a5ea4217537d4fa45d92ee6e1fb2de2109d5bff713a0d8fd",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    845750.0,
+                    0.0,
+                    -0.5,
+                    823400.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    845750.0,
+                    822800.0,
+                    846500.0,
+                    823400.0
+                  ],
+                  "sha256": "f37085950e06613b7805e5f13f68fc97cdb799399cc1c2567f9a626b7107bd63",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    845750.0,
+                    0.0,
+                    -0.5,
+                    821600.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    845750.0,
+                    821000.0,
+                    846500.0,
+                    821600.0
+                  ],
+                  "sha256": "c63e75b9a2a530899c7ea02334cc20a7f534131df5155f7aa0188990662f7930",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    845000.0,
+                    0.0,
+                    -0.5,
+                    824000.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    845000.0,
+                    823400.0,
+                    845750.0,
+                    824000.0
+                  ],
+                  "sha256": "624caa6bb39e4a17923adb84a904cf2da30eea8fdf9990cd789a660bf8ea65d5",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    843500.0,
+                    0.0,
+                    -0.5,
+                    823400.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    843500.0,
+                    822800.0,
+                    844250.0,
+                    823400.0
+                  ],
+                  "sha256": "12a3a3ce3784c5c5d2d0c3c98d67290bc9f9ad641c0c21dfeb86f6a714937626",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    845000.0,
+                    0.0,
+                    -0.5,
+                    823400.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    845000.0,
+                    822800.0,
+                    845750.0,
+                    823400.0
+                  ],
+                  "sha256": "daa47099e18e138dfa1e96106ccaaa7f91f366765e9dddb97702310cff9c5888",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    845750.0,
+                    0.0,
+                    -0.5,
+                    822200.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    845750.0,
+                    821600.0,
+                    846500.0,
+                    822200.0
+                  ],
+                  "sha256": "b43461542a1e2c403473d9dad3b06e5730393b66820d770ad362035db10f1b0c",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    845000.0,
+                    0.0,
+                    -0.5,
+                    821600.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    845000.0,
+                    821000.0,
+                    845750.0,
+                    821600.0
+                  ],
+                  "sha256": "28d6da773531156279d3b963a89f853f5c8c552e7c3acfb076d28406f165c322",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    842750.0,
+                    0.0,
+                    -0.5,
+                    823400.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    842750.0,
+                    822800.0,
+                    843500.0,
+                    823400.0
+                  ],
+                  "sha256": "126dca3878ac598aa547a1edd32f91a7b5669bf6e8df1a234b3c2eb107feb98c",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    842750.0,
+                    0.0,
+                    -0.5,
+                    821600.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    842750.0,
+                    821000.0,
+                    843500.0,
+                    821600.0
+                  ],
+                  "sha256": "89c2e69c5abb8a1369fa28d87ae155e55b005d7ba835fc7d1b41721af25a2295",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    845000.0,
+                    0.0,
+                    -0.5,
+                    822800.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    845000.0,
+                    822200.0,
+                    845750.0,
+                    822800.0
+                  ],
+                  "sha256": "27de2cbe16fc82bf3ffc745aea2af20e29e9d1a23ce240c2340d2a596f80f089",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    842750.0,
+                    0.0,
+                    -0.5,
+                    824000.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    842750.0,
+                    823400.0,
+                    843500.0,
+                    824000.0
+                  ],
+                  "sha256": "4b42478d02c369b27b4e9e6567b3be986c1045f976087f9dda6a7ebe7ae5d879",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    842750.0,
+                    0.0,
+                    -0.5,
+                    822800.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    842750.0,
+                    822200.0,
+                    843500.0,
+                    822800.0
+                  ],
+                  "sha256": "4375bd8f37b7ef9bfbd5025d804a86a71ac5375d4b9eb4ef91e331806c85a938",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    844250.0,
+                    0.0,
+                    -0.5,
+                    823400.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    844250.0,
+                    822800.0,
+                    845000.0,
+                    823400.0
+                  ],
+                  "sha256": "1ed3fd697de4ae40aefe60ef6508777c782a39183c1fa7d6a17968aad20311c9",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    843500.0,
+                    0.0,
+                    -0.5,
+                    822200.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    843500.0,
+                    821600.0,
+                    844250.0,
+                    822200.0
+                  ],
+                  "sha256": "3b539258a81bb97b8461480c2cf850a7ed5f934b2833076111a18b3ff133b25e",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    844250.0,
+                    0.0,
+                    -0.5,
+                    821600.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    844250.0,
+                    821000.0,
+                    845000.0,
+                    821600.0
+                  ],
+                  "sha256": "7e400bb5793f6356932f3e9320402d7bafe74d1ce444e55bc5dc7265e98cc7d6",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    845000.0,
+                    0.0,
+                    -0.5,
+                    822200.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    845000.0,
+                    821600.0,
+                    845750.0,
+                    822200.0
+                  ],
+                  "sha256": "355cf62f7642115fc7bde3b8646ba71024abf18500ef12a3c2b7b07a18dfefe3",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                },
+                {
+                  "width": 1500,
+                  "height": 1200,
+                  "transform": [
+                    0.5,
+                    0.0,
+                    843500.0,
+                    0.0,
+                    -0.5,
+                    824000.0
+                  ],
+                  "crs": "EPSG:2326",
+                  "bounds": [
+                    843500.0,
+                    823400.0,
+                    844250.0,
+                    824000.0
+                  ],
+                  "sha256": "4469ef9aa5b90e6192c03d5ddcef96eca7d86c69b1b5441a84da513b45effe3e",
+                  "nodata": -9999.0,
+                  "auxiliary": []
+                }
+              ],
+              "reference": {
+                "policy": "canonical_native_tile_geometric_center",
+                "easting_m": 844625.0,
+                "northing_m": 822500.0,
+                "longitude": 114.25799994468181,
+                "latitude": 22.341558875371685,
+                "crs": "EPSG:2326",
+                "role": "fixed reference for owning pixels"
+              },
+              "solar": [
+                {
+                  "azimuth_deg": 130.8234087824482,
+                  "geometric_elevation_deg": 25.410639752610596,
+                  "apparent_elevation_deg": 25.444431517393074,
+                  "direction_deg": 130.0
+                },
+                {
+                  "azimuth_deg": 215.78360661688112,
+                  "geometric_elevation_deg": 36.0742467281783,
+                  "apparent_elevation_deg": 36.09634940648653,
+                  "direction_deg": 215.0
+                }
+              ],
+              "directions": [
+                130.0,
+                215.0
+              ],
+              "missing_directions": [
+                130.0,
+                215.0
+              ],
+              "buffered_coverage_fraction": 0.9790209790209791
+            }
+          ],
+          "source_directory": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/region_views/01ef8dbf91fc792a63f038634042c065853d89e7f78d39e758a26eae7a574d4c",
+          "output_directory": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/region_dev_v1_1_validation/parts/part_0001",
+          "cache_directory": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/processed/shade_v1/region_dev_v1_1_v2",
+          "coverage": {
+            "output_pixels": 120,
+            "source_footprint_pixels": 120,
+            "uncovered_pixels": 0,
+            "limitations": [
+              "Footprints do not establish valid DSM or complete sunward support",
+              "1 km cutoff does not bound unseen farther terrain",
+              "Solar model and tile references are approximations"
+            ],
+            "daylight_reference": {
+              "latitude": 22.3,
+              "longitude": 114.2
+            }
+          },
+          "resources": {
+            "workers": 1,
+            "estimated_peak_bytes": 763430400,
+            "memory_budget_bytes": 8589934592,
+            "estimated_new_bytes": 59977696,
+            "artifact_budget_bytes": 10737418240,
+            "expected_direction_jobs": 2,
+            "missing_direction_jobs": 2,
+            "frames": 2
+          },
+          "planning_seconds": 0.0011319159821141511,
+          "key": "b4af27f99ae65c87c7ef187be1d6ff803566fecb801e9cbf28ef45deade44194"
+        }
+      },
+      "catalogues": {
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/region_views/01ef8dbf91fc792a63f038634042c065853d89e7f78d39e758a26eae7a574d4c": [
+          {
+            "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10A(e843n822,e844n822).tif",
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              843500.0,
+              0.0,
+              -0.5,
+              822800.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              843500.0,
+              822200.0,
+              844250.0,
+              822800.0
+            ],
+            "nodata": -9999.0,
+            "sha256": "a5aa1d153c43f0b11fb9176aebeab0c193b0f257e598854a37a81cb1b840f2ba",
+            "bytes": 7868582
+          },
+          {
+            "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10B(e844n822,e845n822).tif",
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              844250.0,
+              0.0,
+              -0.5,
+              822800.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              844250.0,
+              822200.0,
+              845000.0,
+              822800.0
+            ],
+            "nodata": -9999.0,
+            "sha256": "4ea3636f5ec10c14074562020bb3a8320dc5ed54b5b278be2a8116d6d18a881d",
+            "bytes": 7868582
+          },
+          {
+            "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10C(e843n821,e844n822).tif",
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              843500.0,
+              0.0,
+              -0.5,
+              822200.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              843500.0,
+              821600.0,
+              844250.0,
+              822200.0
+            ],
+            "nodata": -9999.0,
+            "sha256": "3b539258a81bb97b8461480c2cf850a7ed5f934b2833076111a18b3ff133b25e",
+            "bytes": 7868582
+          },
+          {
+            "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10D(e844n821,e845n822).tif",
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              844250.0,
+              0.0,
+              -0.5,
+              822200.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              844250.0,
+              821600.0,
+              845000.0,
+              822200.0
+            ],
+            "nodata": -9999.0,
+            "sha256": "f229f8b15f4d309b674bc3d85470079e109f84fd304ee1d4cec799105f9a2103",
+            "bytes": 7868582
+          },
+          {
+            "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE14B(e842n821,e843n821).tif",
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              842750.0,
+              0.0,
+              -0.5,
+              821600.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              842750.0,
+              821000.0,
+              843500.0,
+              821600.0
+            ],
+            "nodata": -9999.0,
+            "sha256": "89c2e69c5abb8a1369fa28d87ae155e55b005d7ba835fc7d1b41721af25a2295",
+            "bytes": 7868582
+          },
+          {
+            "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE14D(e842n820,e843n821).tif",
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              842750.0,
+              0.0,
+              -0.5,
+              821000.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              842750.0,
+              820400.0,
+              843500.0,
+              821000.0
+            ],
+            "nodata": -9999.0,
+            "sha256": "1a5eabb1f65db8d8d05a24c11e893e94d158733d812ca6504fa11b4b4de35191",
+            "bytes": 7868582
+          },
+          {
+            "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE15A(e843n821,e844n821).tif",
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              843500.0,
+              0.0,
+              -0.5,
+              821600.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              843500.0,
+              821000.0,
+              844250.0,
+              821600.0
+            ],
+            "nodata": -9999.0,
+            "sha256": "4321715a6d5dfb00eef0241603bbb6fb069068eaaeb270948b830028c1f37511",
+            "bytes": 7868582
+          },
+          {
+            "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE15B(e844n821,e845n821).tif",
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              844250.0,
+              0.0,
+              -0.5,
+              821600.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              844250.0,
+              821000.0,
+              845000.0,
+              821600.0
+            ],
+            "nodata": -9999.0,
+            "sha256": "7e400bb5793f6356932f3e9320402d7bafe74d1ce444e55bc5dc7265e98cc7d6",
+            "bytes": 7868582
+          },
+          {
+            "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE15C(e843n820,e844n821).tif",
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              843500.0,
+              0.0,
+              -0.5,
+              821000.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              843500.0,
+              820400.0,
+              844250.0,
+              821000.0
+            ],
+            "nodata": -9999.0,
+            "sha256": "03cc64a319b55f6aa7b37344d3353328114fa278f6dcf2c7c1b48096b3d318a2",
+            "bytes": 7868582
+          },
+          {
+            "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE15D(e844n820,e845n821).tif",
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              844250.0,
+              0.0,
+              -0.5,
+              821000.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              844250.0,
+              820400.0,
+              845000.0,
+              821000.0
+            ],
+            "nodata": -9999.0,
+            "sha256": "ecb8a1c4758820d4a2687d344ff889b807d795d7f40348a9c019e731af7fb690",
+            "bytes": 7868582
+          },
+          {
+            "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE4B(e842n823,e843n824).tif",
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              842750.0,
+              0.0,
+              -0.5,
+              824000.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              842750.0,
+              823400.0,
+              843500.0,
+              824000.0
+            ],
+            "nodata": -9999.0,
+            "sha256": "4b42478d02c369b27b4e9e6567b3be986c1045f976087f9dda6a7ebe7ae5d879",
+            "bytes": 7868582
+          },
+          {
+            "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE4D(e842n822,e843n823).tif",
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              842750.0,
+              0.0,
+              -0.5,
+              823400.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              842750.0,
+              822800.0,
+              843500.0,
+              823400.0
+            ],
+            "nodata": -9999.0,
+            "sha256": "126dca3878ac598aa547a1edd32f91a7b5669bf6e8df1a234b3c2eb107feb98c",
+            "bytes": 7868582
+          },
+          {
+            "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE5A(e843n823,e844n824).tif",
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              843500.0,
+              0.0,
+              -0.5,
+              824000.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              843500.0,
+              823400.0,
+              844250.0,
+              824000.0
+            ],
+            "nodata": -9999.0,
+            "sha256": "4469ef9aa5b90e6192c03d5ddcef96eca7d86c69b1b5441a84da513b45effe3e",
+            "bytes": 7868582
+          },
+          {
+            "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE5B(e844n823,e845n824).tif",
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              844250.0,
+              0.0,
+              -0.5,
+              824000.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              844250.0,
+              823400.0,
+              845000.0,
+              824000.0
+            ],
+            "nodata": -9999.0,
+            "sha256": "fe038ad8c76fab9a5071c3cf2abe9ae9cfb96ec95607389624450fbfb752db67",
+            "bytes": 7868582
+          },
+          {
+            "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE5C(e843n822,e844n823).tif",
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              843500.0,
+              0.0,
+              -0.5,
+              823400.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              843500.0,
+              822800.0,
+              844250.0,
+              823400.0
+            ],
+            "nodata": -9999.0,
+            "sha256": "12a3a3ce3784c5c5d2d0c3c98d67290bc9f9ad641c0c21dfeb86f6a714937626",
+            "bytes": 7868582
+          },
+          {
+            "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE5D(e844n822,e845n823).tif",
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              844250.0,
+              0.0,
+              -0.5,
+              823400.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              844250.0,
+              822800.0,
+              845000.0,
+              823400.0
+            ],
+            "nodata": -9999.0,
+            "sha256": "1ed3fd697de4ae40aefe60ef6508777c782a39183c1fa7d6a17968aad20311c9",
+            "bytes": 7868582
+          },
+          {
+            "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE9B(e842n822,e843n822).tif",
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              842750.0,
+              0.0,
+              -0.5,
+              822800.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              842750.0,
+              822200.0,
+              843500.0,
+              822800.0
+            ],
+            "nodata": -9999.0,
+            "sha256": "4375bd8f37b7ef9bfbd5025d804a86a71ac5375d4b9eb4ef91e331806c85a938",
+            "bytes": 7868582
+          },
+          {
+            "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE9D(e842n821,e843n822).tif",
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              842750.0,
+              0.0,
+              -0.5,
+              822200.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              842750.0,
+              821600.0,
+              843500.0,
+              822200.0
+            ],
+            "nodata": -9999.0,
+            "sha256": "162e8305832ec22f7fb505f2d336a1e97e51a3d91ce238aea744c93d7225c092",
+            "bytes": 7868582
+          },
+          {
+            "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW11A(e845n821,e845n821).tif",
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              845000.0,
+              0.0,
+              -0.5,
+              821600.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              845000.0,
+              821000.0,
+              845750.0,
+              821600.0
+            ],
+            "nodata": -9999.0,
+            "sha256": "28d6da773531156279d3b963a89f853f5c8c552e7c3acfb076d28406f165c322",
+            "bytes": 7868582
+          },
+          {
+            "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW11B(e845n821,e846n821).tif",
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              845750.0,
+              0.0,
+              -0.5,
+              821600.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              845750.0,
+              821000.0,
+              846500.0,
+              821600.0
+            ],
+            "nodata": -9999.0,
+            "sha256": "c63e75b9a2a530899c7ea02334cc20a7f534131df5155f7aa0188990662f7930",
+            "bytes": 7868582
+          },
+          {
+            "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW11C(e845n820,e845n821).tif",
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              845000.0,
+              0.0,
+              -0.5,
+              821000.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              845000.0,
+              820400.0,
+              845750.0,
+              821000.0
+            ],
+            "nodata": -9999.0,
+            "sha256": "a8332d2a2776552280dd1f3951f5f9812e1e66e2f01f0e3e2cdf1a827da07edb",
+            "bytes": 7868582
+          },
+          {
+            "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW11D(e845n820,e846n821).tif",
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              845750.0,
+              0.0,
+              -0.5,
+              821000.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              845750.0,
+              820400.0,
+              846500.0,
+              821000.0
+            ],
+            "nodata": -9999.0,
+            "sha256": "7c93ed5440280022436a8daf38930282023d25aa3fe8aaaa9f877fe0887b463c",
+            "bytes": 7868582
+          },
+          {
+            "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW1A(e845n823,e845n824).tif",
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              845000.0,
+              0.0,
+              -0.5,
+              824000.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              845000.0,
+              823400.0,
+              845750.0,
+              824000.0
+            ],
+            "nodata": -9999.0,
+            "sha256": "624caa6bb39e4a17923adb84a904cf2da30eea8fdf9990cd789a660bf8ea65d5",
+            "bytes": 7868582
+          },
+          {
+            "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW1B(e845n823,e846n824).tif",
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              845750.0,
+              0.0,
+              -0.5,
+              824000.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              845750.0,
+              823400.0,
+              846500.0,
+              824000.0
+            ],
+            "nodata": -9999.0,
+            "sha256": "2dbcc32636cad551a5ea4217537d4fa45d92ee6e1fb2de2109d5bff713a0d8fd",
+            "bytes": 7868582
+          },
+          {
+            "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW1C(e845n822,e845n823).tif",
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              845000.0,
+              0.0,
+              -0.5,
+              823400.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              845000.0,
+              822800.0,
+              845750.0,
+              823400.0
+            ],
+            "nodata": -9999.0,
+            "sha256": "daa47099e18e138dfa1e96106ccaaa7f91f366765e9dddb97702310cff9c5888",
+            "bytes": 7868582
+          },
+          {
+            "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW1D(e845n822,e846n823).tif",
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              845750.0,
+              0.0,
+              -0.5,
+              823400.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              845750.0,
+              822800.0,
+              846500.0,
+              823400.0
+            ],
+            "nodata": -9999.0,
+            "sha256": "f37085950e06613b7805e5f13f68fc97cdb799399cc1c2567f9a626b7107bd63",
+            "bytes": 7868582
+          },
+          {
+            "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW6A(e845n822,e845n822).tif",
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              845000.0,
+              0.0,
+              -0.5,
+              822800.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              845000.0,
+              822200.0,
+              845750.0,
+              822800.0
+            ],
+            "nodata": -9999.0,
+            "sha256": "27de2cbe16fc82bf3ffc745aea2af20e29e9d1a23ce240c2340d2a596f80f089",
+            "bytes": 7868582
+          },
+          {
+            "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW6C(e845n821,e845n822).tif",
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              845000.0,
+              0.0,
+              -0.5,
+              822200.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              845000.0,
+              821600.0,
+              845750.0,
+              822200.0
+            ],
+            "nodata": -9999.0,
+            "sha256": "355cf62f7642115fc7bde3b8646ba71024abf18500ef12a3c2b7b07a18dfefe3",
+            "bytes": 7868582
+          },
+          {
+            "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW6D(e845n821,e846n822).tif",
+            "width": 1500,
+            "height": 1200,
+            "transform": [
+              0.5,
+              0.0,
+              845750.0,
+              0.0,
+              -0.5,
+              822200.0
+            ],
+            "crs": "EPSG:2326",
+            "bounds": [
+              845750.0,
+              821600.0,
+              846500.0,
+              822200.0
+            ],
+            "nodata": -9999.0,
+            "sha256": "b43461542a1e2c403473d9dad3b06e5730393b66820d770ad362035db10f1b0c",
+            "bytes": 7868582
+          }
+        ]
+      },
+      "signatures": {
+        "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/region_views/01ef8dbf91fc792a63f038634042c065853d89e7f78d39e758a26eae7a574d4c": {
+          "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10A(e843n822,e844n822).tif": [
+            7868582,
+            1606804118000000000,
+            1791466772000000000,
+            90819
+          ],
+          "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10B(e844n822,e845n822).tif": [
+            7868582,
+            1606804120000000000,
+            1791466772000000000,
+            90821
+          ],
+          "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10C(e843n821,e844n822).tif": [
+            7868582,
+            1606804120000000000,
+            1791466772000000000,
+            90823
+          ],
+          "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10D(e844n821,e845n822).tif": [
+            7868582,
+            1606804120000000000,
+            1791466772000000000,
+            90825
+          ],
+          "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE14B(e842n821,e843n821).tif": [
+            7868582,
+            1606804130000000000,
+            1791466772000000000,
+            90853
+          ],
+          "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE14D(e842n820,e843n821).tif": [
+            7868582,
+            1606804130000000000,
+            1791466772000000000,
+            90857
+          ],
+          "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE15A(e843n821,e844n821).tif": [
+            7868582,
+            1606804132000000000,
+            1791466772000000000,
+            90859
+          ],
+          "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE15B(e844n821,e845n821).tif": [
+            7868582,
+            1606804132000000000,
+            1791466772000000000,
+            90861
+          ],
+          "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE15C(e843n820,e844n821).tif": [
+            7868582,
+            1606804132000000000,
+            1791466772000000000,
+            90863
+          ],
+          "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE15D(e844n820,e845n821).tif": [
+            7868582,
+            1606804132000000000,
+            1791466772000000000,
+            90865
+          ],
+          "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE4B(e842n823,e843n824).tif": [
+            7868582,
+            1606804166000000000,
+            1791466772000000000,
+            90969
+          ],
+          "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE4D(e842n822,e843n823).tif": [
+            7868582,
+            1606804166000000000,
+            1791466772000000000,
+            90973
+          ],
+          "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE5A(e843n823,e844n824).tif": [
+            7868582,
+            1606804168000000000,
+            1791466772000000000,
+            90975
+          ],
+          "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE5B(e844n823,e845n824).tif": [
+            7868582,
+            1606804168000000000,
+            1791466772000000000,
+            90977
+          ],
+          "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE5C(e843n822,e844n823).tif": [
+            7868582,
+            1606804168000000000,
+            1791466772000000000,
+            90979
+          ],
+          "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE5D(e844n822,e845n823).tif": [
+            7868582,
+            1606804170000000000,
+            1791466772000000000,
+            90981
+          ],
+          "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE9B(e842n822,e843n822).tif": [
+            7868582,
+            1606804178000000000,
+            1791466772000000000,
+            91009
+          ],
+          "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE9D(e842n821,e843n822).tif": [
+            7868582,
+            1606804180000000000,
+            1791466772000000000,
+            91013
+          ],
+          "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW11A(e845n821,e845n821).tif": [
+            7868582,
+            1606804372000000000,
+            1791466772000000000,
+            91629
+          ],
+          "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW11B(e845n821,e846n821).tif": [
+            7868582,
+            1606804372000000000,
+            1791466772000000000,
+            91631
+          ],
+          "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW11C(e845n820,e845n821).tif": [
+            7868582,
+            1606804372000000000,
+            1791466772000000000,
+            91633
+          ],
+          "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW11D(e845n820,e846n821).tif": [
+            7868582,
+            1606804374000000000,
+            1791466772000000000,
+            91635
+          ],
+          "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW1A(e845n823,e845n824).tif": [
+            7868582,
+            1606804388000000000,
+            1791466772000000000,
+            91681
+          ],
+          "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW1B(e845n823,e846n824).tif": [
+            7868582,
+            1606804388000000000,
+            1791466772000000000,
+            91683
+          ],
+          "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW1C(e845n822,e845n823).tif": [
+            7868582,
+            1606804388000000000,
+            1791466772000000000,
+            91685
+          ],
+          "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW1D(e845n822,e846n823).tif": [
+            7868582,
+            1606804390000000000,
+            1791466772000000000,
+            91687
+          ],
+          "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW6A(e845n822,e845n822).tif": [
+            7868582,
+            1606804410000000000,
+            1791466772000000000,
+            91749
+          ],
+          "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW6C(e845n821,e845n822).tif": [
+            7868582,
+            1606804410000000000,
+            1791466772000000000,
+            91751
+          ],
+          "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW6D(e845n821,e846n822).tif": [
+            7868582,
+            1606804410000000000,
+            1791466772000000000,
+            91753
+          ]
+        }
+      },
+      "settings": {
+        "workers": 1,
+        "memory_budget_mb": 8192,
+        "artifact_budget_bytes": 5368709120,
+        "max_attempts": 3,
+        "logical_mosaic": true,
+        "statistics": false
+      },
+      "resources": {
+        "estimated_peak_bytes": 1224775530,
+        "memory_budget_bytes": 8589934592,
+        "retained_new_bytes": 86400960,
+        "temporary_new_bytes": 38672128,
+        "estimated_peak_new_bytes": 125073088,
+        "request_metadata_bytes": 19381
+      },
+      "tasks": [
+        {
+          "id": "horizon_2af848f824597e6cc5a78b1737242a563246faf1ce04a717b6847a6b4653da6f",
+          "kind": "horizon",
+          "payload": {
+            "source": {
+              "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10D(e844n821,e845n822).tif",
+              "width": 1500,
+              "height": 1200,
+              "transform": [
+                0.5,
+                0.0,
+                844250.0,
+                0.0,
+                -0.5,
+                822200.0
+              ],
+              "crs": "EPSG:2326",
+              "bounds": [
+                844250.0,
+                821600.0,
+                845000.0,
+                822200.0
+              ],
+              "nodata": -9999.0,
+              "sha256": "f229f8b15f4d309b674bc3d85470079e109f84fd304ee1d4cec799105f9a2103",
+              "bytes": 7868582
+            },
+            "key": "27d843332e5e3d898fe76543d8fbbb00b39f2cc58568a5ff6eb28674a08d6f52",
+            "cache": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/processed/shade_v1/region_dev_v1_1_v2",
+            "records": [
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10A(e843n822,e844n822).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  843500.0,
+                  0.0,
+                  -0.5,
+                  822800.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  843500.0,
+                  822200.0,
+                  844250.0,
+                  822800.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "a5aa1d153c43f0b11fb9176aebeab0c193b0f257e598854a37a81cb1b840f2ba",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10B(e844n822,e845n822).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  844250.0,
+                  0.0,
+                  -0.5,
+                  822800.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  844250.0,
+                  822200.0,
+                  845000.0,
+                  822800.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "4ea3636f5ec10c14074562020bb3a8320dc5ed54b5b278be2a8116d6d18a881d",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10C(e843n821,e844n822).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  843500.0,
+                  0.0,
+                  -0.5,
+                  822200.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  843500.0,
+                  821600.0,
+                  844250.0,
+                  822200.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "3b539258a81bb97b8461480c2cf850a7ed5f934b2833076111a18b3ff133b25e",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10D(e844n821,e845n822).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  844250.0,
+                  0.0,
+                  -0.5,
+                  822200.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  844250.0,
+                  821600.0,
+                  845000.0,
+                  822200.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "f229f8b15f4d309b674bc3d85470079e109f84fd304ee1d4cec799105f9a2103",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE14B(e842n821,e843n821).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  842750.0,
+                  0.0,
+                  -0.5,
+                  821600.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  842750.0,
+                  821000.0,
+                  843500.0,
+                  821600.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "89c2e69c5abb8a1369fa28d87ae155e55b005d7ba835fc7d1b41721af25a2295",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE14D(e842n820,e843n821).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  842750.0,
+                  0.0,
+                  -0.5,
+                  821000.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  842750.0,
+                  820400.0,
+                  843500.0,
+                  821000.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "1a5eabb1f65db8d8d05a24c11e893e94d158733d812ca6504fa11b4b4de35191",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE15A(e843n821,e844n821).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  843500.0,
+                  0.0,
+                  -0.5,
+                  821600.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  843500.0,
+                  821000.0,
+                  844250.0,
+                  821600.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "4321715a6d5dfb00eef0241603bbb6fb069068eaaeb270948b830028c1f37511",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE15B(e844n821,e845n821).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  844250.0,
+                  0.0,
+                  -0.5,
+                  821600.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  844250.0,
+                  821000.0,
+                  845000.0,
+                  821600.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "7e400bb5793f6356932f3e9320402d7bafe74d1ce444e55bc5dc7265e98cc7d6",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE15C(e843n820,e844n821).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  843500.0,
+                  0.0,
+                  -0.5,
+                  821000.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  843500.0,
+                  820400.0,
+                  844250.0,
+                  821000.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "03cc64a319b55f6aa7b37344d3353328114fa278f6dcf2c7c1b48096b3d318a2",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE15D(e844n820,e845n821).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  844250.0,
+                  0.0,
+                  -0.5,
+                  821000.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  844250.0,
+                  820400.0,
+                  845000.0,
+                  821000.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "ecb8a1c4758820d4a2687d344ff889b807d795d7f40348a9c019e731af7fb690",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE4D(e842n822,e843n823).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  842750.0,
+                  0.0,
+                  -0.5,
+                  823400.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  842750.0,
+                  822800.0,
+                  843500.0,
+                  823400.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "126dca3878ac598aa547a1edd32f91a7b5669bf6e8df1a234b3c2eb107feb98c",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE5C(e843n822,e844n823).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  843500.0,
+                  0.0,
+                  -0.5,
+                  823400.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  843500.0,
+                  822800.0,
+                  844250.0,
+                  823400.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "12a3a3ce3784c5c5d2d0c3c98d67290bc9f9ad641c0c21dfeb86f6a714937626",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE5D(e844n822,e845n823).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  844250.0,
+                  0.0,
+                  -0.5,
+                  823400.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  844250.0,
+                  822800.0,
+                  845000.0,
+                  823400.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "1ed3fd697de4ae40aefe60ef6508777c782a39183c1fa7d6a17968aad20311c9",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE9B(e842n822,e843n822).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  842750.0,
+                  0.0,
+                  -0.5,
+                  822800.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  842750.0,
+                  822200.0,
+                  843500.0,
+                  822800.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "4375bd8f37b7ef9bfbd5025d804a86a71ac5375d4b9eb4ef91e331806c85a938",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE9D(e842n821,e843n822).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  842750.0,
+                  0.0,
+                  -0.5,
+                  822200.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  842750.0,
+                  821600.0,
+                  843500.0,
+                  822200.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "162e8305832ec22f7fb505f2d336a1e97e51a3d91ce238aea744c93d7225c092",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW11A(e845n821,e845n821).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  845000.0,
+                  0.0,
+                  -0.5,
+                  821600.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  845000.0,
+                  821000.0,
+                  845750.0,
+                  821600.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "28d6da773531156279d3b963a89f853f5c8c552e7c3acfb076d28406f165c322",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW11B(e845n821,e846n821).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  845750.0,
+                  0.0,
+                  -0.5,
+                  821600.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  845750.0,
+                  821000.0,
+                  846500.0,
+                  821600.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "c63e75b9a2a530899c7ea02334cc20a7f534131df5155f7aa0188990662f7930",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW11C(e845n820,e845n821).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  845000.0,
+                  0.0,
+                  -0.5,
+                  821000.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  845000.0,
+                  820400.0,
+                  845750.0,
+                  821000.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "a8332d2a2776552280dd1f3951f5f9812e1e66e2f01f0e3e2cdf1a827da07edb",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW11D(e845n820,e846n821).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  845750.0,
+                  0.0,
+                  -0.5,
+                  821000.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  845750.0,
+                  820400.0,
+                  846500.0,
+                  821000.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "7c93ed5440280022436a8daf38930282023d25aa3fe8aaaa9f877fe0887b463c",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW1C(e845n822,e845n823).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  845000.0,
+                  0.0,
+                  -0.5,
+                  823400.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  845000.0,
+                  822800.0,
+                  845750.0,
+                  823400.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "daa47099e18e138dfa1e96106ccaaa7f91f366765e9dddb97702310cff9c5888",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW1D(e845n822,e846n823).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  845750.0,
+                  0.0,
+                  -0.5,
+                  823400.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  845750.0,
+                  822800.0,
+                  846500.0,
+                  823400.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "f37085950e06613b7805e5f13f68fc97cdb799399cc1c2567f9a626b7107bd63",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW6A(e845n822,e845n822).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  845000.0,
+                  0.0,
+                  -0.5,
+                  822800.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  845000.0,
+                  822200.0,
+                  845750.0,
+                  822800.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "27de2cbe16fc82bf3ffc745aea2af20e29e9d1a23ce240c2340d2a596f80f089",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW6C(e845n821,e845n822).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  845000.0,
+                  0.0,
+                  -0.5,
+                  822200.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  845000.0,
+                  821600.0,
+                  845750.0,
+                  822200.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "355cf62f7642115fc7bde3b8646ba71024abf18500ef12a3c2b7b07a18dfefe3",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW6D(e845n821,e846n822).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  845750.0,
+                  0.0,
+                  -0.5,
+                  822200.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  845750.0,
+                  821600.0,
+                  846500.0,
+                  822200.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "b43461542a1e2c403473d9dad3b06e5730393b66820d770ad362035db10f1b0c",
+                "bytes": 7868582
+              }
+            ],
+            "consumers": [
+              "request_0000"
+            ],
+            "directions": [
+              130.0,
+              215.0
+            ],
+            "missing_directions": [
+              130.0,
+              215.0
+            ],
+            "missing_units": 2.0
+          },
+          "dependencies": []
+        },
+        {
+          "id": "horizon_0f57cb6bebbe80b4053fbf60cf6245aeb41a1471fa93b1c1e9c39ee57554e45f",
+          "kind": "horizon",
+          "payload": {
+            "source": {
+              "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10B(e844n822,e845n822).tif",
+              "width": 1500,
+              "height": 1200,
+              "transform": [
+                0.5,
+                0.0,
+                844250.0,
+                0.0,
+                -0.5,
+                822800.0
+              ],
+              "crs": "EPSG:2326",
+              "bounds": [
+                844250.0,
+                822200.0,
+                845000.0,
+                822800.0
+              ],
+              "nodata": -9999.0,
+              "sha256": "4ea3636f5ec10c14074562020bb3a8320dc5ed54b5b278be2a8116d6d18a881d",
+              "bytes": 7868582
+            },
+            "key": "fbf15c223c0a06a91ebcdc4a1e2954a7973b60fb4a959af8829224266389f04b",
+            "cache": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/processed/shade_v1/region_dev_v1_1_v2",
+            "records": [
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10A(e843n822,e844n822).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  843500.0,
+                  0.0,
+                  -0.5,
+                  822800.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  843500.0,
+                  822200.0,
+                  844250.0,
+                  822800.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "a5aa1d153c43f0b11fb9176aebeab0c193b0f257e598854a37a81cb1b840f2ba",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10B(e844n822,e845n822).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  844250.0,
+                  0.0,
+                  -0.5,
+                  822800.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  844250.0,
+                  822200.0,
+                  845000.0,
+                  822800.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "4ea3636f5ec10c14074562020bb3a8320dc5ed54b5b278be2a8116d6d18a881d",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10C(e843n821,e844n822).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  843500.0,
+                  0.0,
+                  -0.5,
+                  822200.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  843500.0,
+                  821600.0,
+                  844250.0,
+                  822200.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "3b539258a81bb97b8461480c2cf850a7ed5f934b2833076111a18b3ff133b25e",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE10D(e844n821,e845n822).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  844250.0,
+                  0.0,
+                  -0.5,
+                  822200.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  844250.0,
+                  821600.0,
+                  845000.0,
+                  822200.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "f229f8b15f4d309b674bc3d85470079e109f84fd304ee1d4cec799105f9a2103",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE14B(e842n821,e843n821).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  842750.0,
+                  0.0,
+                  -0.5,
+                  821600.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  842750.0,
+                  821000.0,
+                  843500.0,
+                  821600.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "89c2e69c5abb8a1369fa28d87ae155e55b005d7ba835fc7d1b41721af25a2295",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE15A(e843n821,e844n821).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  843500.0,
+                  0.0,
+                  -0.5,
+                  821600.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  843500.0,
+                  821000.0,
+                  844250.0,
+                  821600.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "4321715a6d5dfb00eef0241603bbb6fb069068eaaeb270948b830028c1f37511",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE15B(e844n821,e845n821).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  844250.0,
+                  0.0,
+                  -0.5,
+                  821600.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  844250.0,
+                  821000.0,
+                  845000.0,
+                  821600.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "7e400bb5793f6356932f3e9320402d7bafe74d1ce444e55bc5dc7265e98cc7d6",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE4B(e842n823,e843n824).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  842750.0,
+                  0.0,
+                  -0.5,
+                  824000.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  842750.0,
+                  823400.0,
+                  843500.0,
+                  824000.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "4b42478d02c369b27b4e9e6567b3be986c1045f976087f9dda6a7ebe7ae5d879",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE4D(e842n822,e843n823).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  842750.0,
+                  0.0,
+                  -0.5,
+                  823400.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  842750.0,
+                  822800.0,
+                  843500.0,
+                  823400.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "126dca3878ac598aa547a1edd32f91a7b5669bf6e8df1a234b3c2eb107feb98c",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE5A(e843n823,e844n824).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  843500.0,
+                  0.0,
+                  -0.5,
+                  824000.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  843500.0,
+                  823400.0,
+                  844250.0,
+                  824000.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "4469ef9aa5b90e6192c03d5ddcef96eca7d86c69b1b5441a84da513b45effe3e",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE5B(e844n823,e845n824).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  844250.0,
+                  0.0,
+                  -0.5,
+                  824000.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  844250.0,
+                  823400.0,
+                  845000.0,
+                  824000.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "fe038ad8c76fab9a5071c3cf2abe9ae9cfb96ec95607389624450fbfb752db67",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE5C(e843n822,e844n823).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  843500.0,
+                  0.0,
+                  -0.5,
+                  823400.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  843500.0,
+                  822800.0,
+                  844250.0,
+                  823400.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "12a3a3ce3784c5c5d2d0c3c98d67290bc9f9ad641c0c21dfeb86f6a714937626",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE5D(e844n822,e845n823).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  844250.0,
+                  0.0,
+                  -0.5,
+                  823400.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  844250.0,
+                  822800.0,
+                  845000.0,
+                  823400.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "1ed3fd697de4ae40aefe60ef6508777c782a39183c1fa7d6a17968aad20311c9",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE9B(e842n822,e843n822).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  842750.0,
+                  0.0,
+                  -0.5,
+                  822800.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  842750.0,
+                  822200.0,
+                  843500.0,
+                  822800.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "4375bd8f37b7ef9bfbd5025d804a86a71ac5375d4b9eb4ef91e331806c85a938",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/11NE9D(e842n821,e843n822).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  842750.0,
+                  0.0,
+                  -0.5,
+                  822200.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  842750.0,
+                  821600.0,
+                  843500.0,
+                  822200.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "162e8305832ec22f7fb505f2d336a1e97e51a3d91ce238aea744c93d7225c092",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW11A(e845n821,e845n821).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  845000.0,
+                  0.0,
+                  -0.5,
+                  821600.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  845000.0,
+                  821000.0,
+                  845750.0,
+                  821600.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "28d6da773531156279d3b963a89f853f5c8c552e7c3acfb076d28406f165c322",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW11B(e845n821,e846n821).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  845750.0,
+                  0.0,
+                  -0.5,
+                  821600.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  845750.0,
+                  821000.0,
+                  846500.0,
+                  821600.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "c63e75b9a2a530899c7ea02334cc20a7f534131df5155f7aa0188990662f7930",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW1A(e845n823,e845n824).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  845000.0,
+                  0.0,
+                  -0.5,
+                  824000.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  845000.0,
+                  823400.0,
+                  845750.0,
+                  824000.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "624caa6bb39e4a17923adb84a904cf2da30eea8fdf9990cd789a660bf8ea65d5",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW1B(e845n823,e846n824).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  845750.0,
+                  0.0,
+                  -0.5,
+                  824000.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  845750.0,
+                  823400.0,
+                  846500.0,
+                  824000.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "2dbcc32636cad551a5ea4217537d4fa45d92ee6e1fb2de2109d5bff713a0d8fd",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW1C(e845n822,e845n823).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  845000.0,
+                  0.0,
+                  -0.5,
+                  823400.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  845000.0,
+                  822800.0,
+                  845750.0,
+                  823400.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "daa47099e18e138dfa1e96106ccaaa7f91f366765e9dddb97702310cff9c5888",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW1D(e845n822,e846n823).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  845750.0,
+                  0.0,
+                  -0.5,
+                  823400.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  845750.0,
+                  822800.0,
+                  846500.0,
+                  823400.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "f37085950e06613b7805e5f13f68fc97cdb799399cc1c2567f9a626b7107bd63",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW6A(e845n822,e845n822).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  845000.0,
+                  0.0,
+                  -0.5,
+                  822800.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  845000.0,
+                  822200.0,
+                  845750.0,
+                  822800.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "27de2cbe16fc82bf3ffc745aea2af20e29e9d1a23ce240c2340d2a596f80f089",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW6C(e845n821,e845n822).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  845000.0,
+                  0.0,
+                  -0.5,
+                  822200.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  845000.0,
+                  821600.0,
+                  845750.0,
+                  822200.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "355cf62f7642115fc7bde3b8646ba71024abf18500ef12a3c2b7b07a18dfefe3",
+                "bytes": 7868582
+              },
+              {
+                "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF/12NW6D(e845n821,e846n822).tif",
+                "width": 1500,
+                "height": 1200,
+                "transform": [
+                  0.5,
+                  0.0,
+                  845750.0,
+                  0.0,
+                  -0.5,
+                  822200.0
+                ],
+                "crs": "EPSG:2326",
+                "bounds": [
+                  845750.0,
+                  821600.0,
+                  846500.0,
+                  822200.0
+                ],
+                "nodata": -9999.0,
+                "sha256": "b43461542a1e2c403473d9dad3b06e5730393b66820d770ad362035db10f1b0c",
+                "bytes": 7868582
+              }
+            ],
+            "consumers": [
+              "request_0001"
+            ],
+            "directions": [
+              130.0,
+              215.0
+            ],
+            "missing_directions": [
+              130.0,
+              215.0
+            ],
+            "missing_units": 2.0
+          },
+          "dependencies": []
+        },
+        {
+          "id": "frame_b7f5a6edc759d1589de955af4cb07854b117a4a78b3aba7faf6743dbf15a462c_0",
+          "kind": "frame",
+          "payload": {
+            "request": "request_0000",
+            "index": 0
+          },
+          "dependencies": [
+            "horizon_2af848f824597e6cc5a78b1737242a563246faf1ce04a717b6847a6b4653da6f"
+          ]
+        },
+        {
+          "id": "frame_b7f5a6edc759d1589de955af4cb07854b117a4a78b3aba7faf6743dbf15a462c_1",
+          "kind": "frame",
+          "payload": {
+            "request": "request_0000",
+            "index": 1
+          },
+          "dependencies": [
+            "horizon_2af848f824597e6cc5a78b1737242a563246faf1ce04a717b6847a6b4653da6f"
+          ]
+        },
+        {
+          "id": "index_b7f5a6edc759d1589de955af4cb07854b117a4a78b3aba7faf6743dbf15a462c",
+          "kind": "index",
+          "payload": {
+            "request": "request_0000"
+          },
+          "dependencies": [
+            "frame_b7f5a6edc759d1589de955af4cb07854b117a4a78b3aba7faf6743dbf15a462c_0",
+            "frame_b7f5a6edc759d1589de955af4cb07854b117a4a78b3aba7faf6743dbf15a462c_1"
+          ]
+        },
+        {
+          "id": "frame_e497a2eac274938d1193571bc3b4e092b1ecef05ab00a3bc9ff22ef6964c0103_0",
+          "kind": "frame",
+          "payload": {
+            "request": "request_0001",
+            "index": 0
+          },
+          "dependencies": [
+            "horizon_0f57cb6bebbe80b4053fbf60cf6245aeb41a1471fa93b1c1e9c39ee57554e45f"
+          ]
+        },
+        {
+          "id": "frame_e497a2eac274938d1193571bc3b4e092b1ecef05ab00a3bc9ff22ef6964c0103_1",
+          "kind": "frame",
+          "payload": {
+            "request": "request_0001",
+            "index": 1
+          },
+          "dependencies": [
+            "horizon_0f57cb6bebbe80b4053fbf60cf6245aeb41a1471fa93b1c1e9c39ee57554e45f"
+          ]
+        },
+        {
+          "id": "index_e497a2eac274938d1193571bc3b4e092b1ecef05ab00a3bc9ff22ef6964c0103",
+          "kind": "index",
+          "payload": {
+            "request": "request_0001"
+          },
+          "dependencies": [
+            "frame_e497a2eac274938d1193571bc3b4e092b1ecef05ab00a3bc9ff22ef6964c0103_0",
+            "frame_e497a2eac274938d1193571bc3b4e092b1ecef05ab00a3bc9ff22ef6964c0103_1"
+          ]
+        },
+        {
+          "id": "mosaic",
+          "kind": "mosaic",
+          "payload": {},
+          "dependencies": [
+            "index_b7f5a6edc759d1589de955af4cb07854b117a4a78b3aba7faf6743dbf15a462c",
+            "index_e497a2eac274938d1193571bc3b4e092b1ecef05ab00a3bc9ff22ef6964c0103"
+          ]
+        }
+      ],
+      "final_hits": {
+        "request_0000": 0,
+        "request_0001": 0
+      },
+      "engine_code": {
+        "v2.py": "60245b28a30a10ae5f6b6152de6cd9247c4cfe2eb242c70c4d55c674e5861e5e",
+        "v2_worker.py": "4a880785a6bd6451c47c780aab9279096256379a976edced5ac00eb34ae830ff",
+        "v2_runner.py": "0ebbfdcfd47def2e3e27d82bec4a4e8bad8d3246fde11273cc1ceca644f3b6f0",
+        "v2_state.py": "82964df5f3097cb3458073eabc44de9878ae1a714aeb05efb747a835b6c7f808"
+      },
+      "id": "6e139dc8d8476845868fac09a9b7aa1e4d46532047ef9d45722d7b4297b93eba",
+      "integrity": "9e2adf8b63b780efb34c97a39c992101866308e1f1bd53800e5df51c57aac7f3"
+    },
+    "estimate": {
+      "model": {
+        "schema": "shade-watch-v2-estimator-1.0",
+        "calibrated": true,
+        "frozen_utc": "2026-10-02T18:01:21.775661+00:00",
+        "coefficients": {
+          "catalog_seconds": 0.25,
+          "startup_seconds": 0.75,
+          "direction_seconds": 10.842382625000027,
+          "frame_seconds": 0.2746130117187704,
+          "hit_seconds": 0.04,
+          "media_frame_seconds": 0.15,
+          "controller_task_seconds": 0.0,
+          "classification_seconds": 0.018901864437452787
+        },
+        "efficiency": {
+          "1": 1.0,
+          "2": 0.6216601185166459
+        },
+        "domain": {
+          "max_tiles": 2,
+          "max_native_frames": 320,
+          "max_union_directions": 12,
+          "outputs": "native scientific only",
+          "hardware": "Mac arm64 macOS15.7.4, 10 logical CPUs, 24 GiB, local HFS disk",
+          "tile_shape": [
+            1500,
+            1200
+          ],
+          "source_tiles": [
+            "11NE10B(e844n822,e845n822).tif",
+            "11NE10D(e844n821,e845n822).tif"
+          ],
+          "caveat": "local mostly-valid tiles; new terrain/NoData distributions and media uncalibrated"
+        },
+        "methodology": {
+          "direction": "full native union-task wall divided by missing native directions",
+          "frame": "matched warm complete run minus fixed startup/catalog, divided by native frames",
+          "efficiency": "one/two-worker matched warm work after fixed costs; capped at 1",
+          "startup_catalog": "fixed engineering allowance checked against phase/whole-run timings",
+          "frame_worker_seconds": 0.20359012765607076,
+          "warm_overhead_seconds": 3.272732290006388,
+          "excluded": "planning/submission and OS-cache flush; run API includes final verification",
+          "memory_disk": "conservative V1 allocation and uncompressed bytes plus temporary/metadata headroom",
+          "uncalibrated_terms": "media, final hits and four-worker costs are provisional",
+          "component_revision": "Separate measured directional and output concurrency; classification split from frame cost. Derived only from calibration, before any hold-out outcomes."
+        },
+        "calibration_records": [
+          "outputs/v2_development/evidence/cal_cold_1.json",
+          "outputs/v2_development/evidence/cal_cold_2.json",
+          "outputs/v2_development/evidence/cal_warm_1.json",
+          "outputs/v2_development/evidence/cal_warm_2.json"
+        ],
+        "direction_efficiency": {
+          "1": 1.0,
+          "2": 1.0
+        },
+        "model_sha256": "ad6939e4455d9e80495d27e382438d635f5cb9f0920601959e09bbbe2e721469"
+      },
+      "phases": {
+        "catalog_validation_seconds": 0.25,
+        "startup_seconds": 0.75,
+        "missing_direction_seconds": 43.36953050000011,
+        "warm_classification_seconds": 5.040497183320743e-06,
+        "output_compression_validation_seconds": 6.818963927501803e-05,
+        "final_hit_seconds": 0.0,
+        "media_seconds": 0.0,
+        "controller_validation_seconds": 0.0
+      },
+      "total_wall_seconds": 44.36960373013657,
+      "indicative_range_seconds": [
+        28.84024242458877,
+        70.99136596821852
+      ],
+      "range_note": "engineering variation allowance, not a fitted confidence interval",
+      "calibrated_domain": false,
+      "extrapolated": true,
+      "missing_direction_units": 4.0,
+      "union_direction_entries": 4,
+      "warm_native_frame_units": 0.0002666666666666667,
+      "final_result_hits": 0,
+      "resources": {
+        "estimated_peak_bytes": 1224775530,
+        "memory_budget_bytes": 8589934592,
+        "retained_new_bytes": 86400960,
+        "temporary_new_bytes": 38672128,
+        "estimated_peak_new_bytes": 125073088,
+        "request_metadata_bytes": 19381
+      },
+      "assumptions": [
+        "local same-machine filesystem; warm OS/JIT code cache",
+        "cold means empty directional cache, not flushed OS cache",
+        "effective-pixel/terrain changes affect directional cost",
+        "outputs include lossless compression/readback; media separate",
+        "whole-territory estimates require explicit profile and are extrapolations"
+      ]
+    },
+    "planning_seconds": 0.4571519999881275
+  },
+  "planning_seconds": 62.28930608401424
+}

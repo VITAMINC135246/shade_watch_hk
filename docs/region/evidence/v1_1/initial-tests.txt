@@ -1,0 +1,110 @@
+FFF..............F..                                                     [100%]
+=================================== FAILURES ===================================
+_________________ test_equivalence_order_and_read_only[a0-b0] __________________
+
+catalogue = PosixPath('/private/var/folders/98/rgkcc9kx5z9dqgkmfj7xrmz40000gn/T/pytest-of-vitaminc-macbook/pytest-10/test_equivalence_order_and_rea0/data/raw')
+a = (800001, 819991), b = (800004, 819994)
+
+    @pytest.mark.parametrize('a,b',[
+        ((800001,819991),(800004,819994)),
+        ((800008,819998),(800012,820002)),
+        ((800001.13,819991.04),(800004.43,819994.19)),
+    ])
+    def test_equivalence_order_and_read_only(catalogue,a,b):
+        before=set(v1.ROOT.rglob('*'))
+        with patch('src.v1_cache.pixel_centred_horizon',side_effect=AssertionError('computed')):
+            result=region(catalogue,a,b)
+        assert before==set(v1.ROOT.rglob('*'))
+        req=result['batches'][0]['requests'][0]
+        manual=v1.plan_shade(**{k:v for k,v in req.items() if k!='id'})
+        part=result['sidecar']['partition'][0]
+>       assert part['key']==manual.key
+               ^^^^^^^^^^^
+E       KeyError: 'key'
+
+tests/test_region_request.py:48: KeyError
+_________________ test_equivalence_order_and_read_only[a1-b1] __________________
+
+catalogue = PosixPath('/private/var/folders/98/rgkcc9kx5z9dqgkmfj7xrmz40000gn/T/pytest-of-vitaminc-macbook/pytest-10/test_equivalence_order_and_rea1/data/raw')
+a = (800008, 819998), b = (800012, 820002)
+
+    @pytest.mark.parametrize('a,b',[
+        ((800001,819991),(800004,819994)),
+        ((800008,819998),(800012,820002)),
+        ((800001.13,819991.04),(800004.43,819994.19)),
+    ])
+    def test_equivalence_order_and_read_only(catalogue,a,b):
+        before=set(v1.ROOT.rglob('*'))
+        with patch('src.v1_cache.pixel_centred_horizon',side_effect=AssertionError('computed')):
+            result=region(catalogue,a,b)
+        assert before==set(v1.ROOT.rglob('*'))
+        req=result['batches'][0]['requests'][0]
+        manual=v1.plan_shade(**{k:v for k,v in req.items() if k!='id'})
+        part=result['sidecar']['partition'][0]
+>       assert part['key']==manual.key
+               ^^^^^^^^^^^
+E       KeyError: 'key'
+
+tests/test_region_request.py:48: KeyError
+_________________ test_equivalence_order_and_read_only[a2-b2] __________________
+
+catalogue = PosixPath('/private/var/folders/98/rgkcc9kx5z9dqgkmfj7xrmz40000gn/T/pytest-of-vitaminc-macbook/pytest-10/test_equivalence_order_and_rea2/data/raw')
+a = (800001.13, 819991.04), b = (800004.43, 819994.19)
+
+    @pytest.mark.parametrize('a,b',[
+        ((800001,819991),(800004,819994)),
+        ((800008,819998),(800012,820002)),
+        ((800001.13,819991.04),(800004.43,819994.19)),
+    ])
+    def test_equivalence_order_and_read_only(catalogue,a,b):
+        before=set(v1.ROOT.rglob('*'))
+        with patch('src.v1_cache.pixel_centred_horizon',side_effect=AssertionError('computed')):
+            result=region(catalogue,a,b)
+        assert before==set(v1.ROOT.rglob('*'))
+        req=result['batches'][0]['requests'][0]
+        manual=v1.plan_shade(**{k:v for k,v in req.items() if k!='id'})
+        part=result['sidecar']['partition'][0]
+>       assert part['key']==manual.key
+               ^^^^^^^^^^^
+E       KeyError: 'key'
+
+tests/test_region_request.py:48: KeyError
+______________ test_partition_union_horizon_inventory_and_sidecar ______________
+
+catalogue = PosixPath('/private/var/folders/98/rgkcc9kx5z9dqgkmfj7xrmz40000gn/T/pytest-of-vitaminc-macbook/pytest-10/test_partition_union_horizon_i0/data/raw')
+tmp_path = PosixPath('/private/var/folders/98/rgkcc9kx5z9dqgkmfj7xrmz40000gn/T/pytest-of-vitaminc-macbook/pytest-10/test_partition_union_horizon_i0')
+
+    def test_partition_union_horizon_inventory_and_sidecar(catalogue,tmp_path):
+        result=region(catalogue,max_pixels_per_request=300)
+        sc=result['sidecar']
+        parts=sc['partition']
+        assert len(parts)==4
+        # Exact pixel-address occupancy checks both coverage and pairwise disjointness.
+        occupied=set()
+        for part in parts:
+            l,b,r,t=part['resolved_bounds']
+            pixels={(x,y) for x in range(round(l*2),round(r*2)) for y in range(round(b*2),round(t*2))}
+            assert occupied.isdisjoint(pixels)
+            occupied.update(pixels)
+        l,b,r,t=sc['resolved_bounds']
+        assert occupied=={(x,y) for x in range(round(l*2),round(r*2)) for y in range(round(b*2),round(t*2))}
+        batch=result['batches'][0]
+        checked=v2.plan_batch(**batch)
+        assert sum(t['kind']=='horizon' for t in checked.definition['tasks'])==4
+>       assert len({p for part in parts for p in part['tiles']})==4
+                                                 ^^^^^^^^^^^^^
+E       KeyError: 'tiles'
+
+tests/test_region_request.py:99: KeyError
+=============================== warnings summary ===============================
+tests/test_region_request.py: 123 warnings
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/.venv/lib/python3.12/site-packages/rasterio/transform.py:178: PendingDeprecationWarning: Use `@` matmul instead of `*` mul operator for matrix multiplication
+    return Affine.translation(west, north) * Affine.scale(xsize, -ysize)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_region_request.py::test_equivalence_order_and_read_only[a0-b0]
+FAILED tests/test_region_request.py::test_equivalence_order_and_read_only[a1-b1]
+FAILED tests/test_region_request.py::test_equivalence_order_and_read_only[a2-b2]
+FAILED tests/test_region_request.py::test_partition_union_horizon_inventory_and_sidecar
+4 failed, 16 passed, 123 warnings in 1.24s

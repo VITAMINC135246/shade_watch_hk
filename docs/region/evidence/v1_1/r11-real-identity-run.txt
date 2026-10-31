@@ -1,0 +1,125 @@
+{
+  "scope": "Complete compatible union of all 3310-file raw-catalogue target-halo dependencies for the three benchmark regions",
+  "full_raw_admission": "Rejected by pinned engine: four shifted-origin 14NE15* tiles, unchanged; this control does not claim territory ingestion",
+  "regions": [
+    {
+      "name": "coastal",
+      "corners": [
+        [
+          820990.0,
+          808380.0
+        ],
+        [
+          821010.0,
+          808420.0
+        ]
+      ],
+      "full_catalogue_seconds": 10.662152584001888,
+      "auto_view_seconds": 1.1014070420060307,
+      "full_key_audit_seconds": 1.1149837499833666,
+      "view_key_audit_seconds": 0.317361333000008,
+      "full_plan_keys": [
+        "0b27df683d144de3cbae528e12eae347f6794e0bb4fdf8de54291f85b8b2ac20"
+      ],
+      "auto_view_plan_keys": [
+        "0b27df683d144de3cbae528e12eae347f6794e0bb4fdf8de54291f85b8b2ac20"
+      ],
+      "raw_header_selected_plan_keys": [
+        "0b27df683d144de3cbae528e12eae347f6794e0bb4fdf8de54291f85b8b2ac20"
+      ],
+      "full_spatial_keys": [
+        "bbaa63990504f07efb8c24546b6b80c26f7cc99d709302a411759c8a1d57496d",
+        "43adc0719ee23905f8bcfdbfbfc2b176eed4ad5d1c57af8bc2f2126b167e5ce8",
+        "e8269ede64114453a5e40ab18594583769699e9b7b665c6fe8420597ea817fa6",
+        "3f7ccd732db25bc1e51da0b4c3111eac1b753dffdfd882d999ea788d4c877667"
+      ],
+      "auto_view_spatial_keys": [
+        "bbaa63990504f07efb8c24546b6b80c26f7cc99d709302a411759c8a1d57496d",
+        "43adc0719ee23905f8bcfdbfbfc2b176eed4ad5d1c57af8bc2f2126b167e5ce8",
+        "e8269ede64114453a5e40ab18594583769699e9b7b665c6fe8420597ea817fa6",
+        "3f7ccd732db25bc1e51da0b4c3111eac1b753dffdfd882d999ea788d4c877667"
+      ],
+      "full_source_tiles": 75,
+      "auto_view_source_tiles": 21
+    },
+    {
+      "name": "inland",
+      "corners": [
+        [
+          834990.0,
+          815990.0
+        ],
+        [
+          835010.0,
+          816010.0
+        ]
+      ],
+      "full_catalogue_seconds": 2.2562889169785194,
+      "auto_view_seconds": 0.8420226250018459,
+      "full_key_audit_seconds": 1.126746958005242,
+      "view_key_audit_seconds": 0.36762091601849534,
+      "full_plan_keys": [
+        "fe04ad67e923ec163bac0eaaf4032c88e4d24a172c7e729b31aa917ff53700c3"
+      ],
+      "auto_view_plan_keys": [
+        "fe04ad67e923ec163bac0eaaf4032c88e4d24a172c7e729b31aa917ff53700c3"
+      ],
+      "raw_header_selected_plan_keys": [
+        "fe04ad67e923ec163bac0eaaf4032c88e4d24a172c7e729b31aa917ff53700c3"
+      ],
+      "full_spatial_keys": [
+        "2487fbedd2fcf2a22db5cd33a91b7367a6c0352e861141a1163453323ac9d5ea"
+      ],
+      "auto_view_spatial_keys": [
+        "2487fbedd2fcf2a22db5cd33a91b7367a6c0352e861141a1163453323ac9d5ea"
+      ],
+      "full_source_tiles": 75,
+      "auto_view_source_tiles": 24
+    },
+    {
+      "name": "tile_corner",
+      "corners": [
+        [
+          844990.0,
+          822190.0
+        ],
+        [
+          845010.0,
+          822210.0
+        ]
+      ],
+      "full_catalogue_seconds": 3.210694417008199,
+      "auto_view_seconds": 1.2771356250159442,
+      "full_key_audit_seconds": 1.2439174999890383,
+      "view_key_audit_seconds": 0.5710973340028431,
+      "full_plan_keys": [
+        "38d3a977a6bce3e77866a97a49f9992d91622e4bd8bd2394e657f9133c08c5ff"
+      ],
+      "auto_view_plan_keys": [
+        "38d3a977a6bce3e77866a97a49f9992d91622e4bd8bd2394e657f9133c08c5ff"
+      ],
+      "raw_header_selected_plan_keys": [
+        "38d3a977a6bce3e77866a97a49f9992d91622e4bd8bd2394e657f9133c08c5ff"
+      ],
+      "full_spatial_keys": [
+        "fbf15c223c0a06a91ebcdc4a1e2954a7973b60fb4a959af8829224266389f04b",
+        "2db6bce0185708104f02dfad656f64c96c1d6e8e687ed4d29621e88d0e55765a",
+        "27d843332e5e3d898fe76543d8fbbb00b39f2cc58568a5ff6eb28674a08d6f52",
+        "593a699f99fd7ce7b3da6627c3d8449feb7622ae3923c9920fa735fa25fb24a9"
+      ],
+      "auto_view_spatial_keys": [
+        "fbf15c223c0a06a91ebcdc4a1e2954a7973b60fb4a959af8829224266389f04b",
+        "2db6bce0185708104f02dfad656f64c96c1d6e8e687ed4d29621e88d0e55765a",
+        "27d843332e5e3d898fe76543d8fbbb00b39f2cc58568a5ff6eb28674a08d6f52",
+        "593a699f99fd7ce7b3da6627c3d8449feb7622ae3923c9920fa735fa25fb24a9"
+      ],
+      "full_source_tiles": 75,
+      "auto_view_source_tiles": 30
+    }
+  ],
+  "passed": true,
+  "control_catalogue": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/region_views/a6d7482d3ef015febd66e13b5437d5d78696f493ae0ff359b0e60f0bdcab1c05",
+  "control_source_tiles": 75,
+  "wall_seconds": 24.16501050000079,
+  "peak_rss_bytes": 191610880
+}

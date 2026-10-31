@@ -1,0 +1,19 @@
+{
+  "status": "COMPLETED; R11 FULL-RAW REFERENCE NOT VERIFIED",
+  "previous_conservative_charge_seconds": 391.0,
+  "amendment_real_job_seconds": 338.01407491700957,
+  "cumulative_charged_seconds": 739.0140749170096,
+  "prior_measured_engine_peak_bytes": 651313152,
+  "amendment_peak_tree_rss_bytes": 689487872,
+  "ceiling_seconds": 1200,
+  "ceiling_memory_bytes": 8589934592,
+  "ceiling_artifact_bytes": 5368709120,
+  "r11_full_catalogue_index_seconds": 19.614784125966253,
+  "accounting": "Includes all amendment real-DSM work, guide planning and timing. Original 391-second conservative charge retained. Symlinks are not new DSM bytes.",
+  "generated_bytes": 89025197,
+  "r11_compatible_control_seconds": 24.16501050000079,
+  "r11_indexing_exception_used": false,
+  "r11_reference_scope": "Complete compatible union of all 3310-file raw-catalogue target-halo dependencies for the three benchmark regions",
+  "final_audits_conservative_charge_seconds": 10.0,
+  "r11_full_raw_reference": "Unavailable: pinned engine rejects four shifted-origin 14NE15* tiles; no correction/global exclusion attempted"
+}
