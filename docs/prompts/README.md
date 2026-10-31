@@ -7,6 +7,35 @@ These are English execution prompts and predeclared acceptance contracts, not ev
 | V1 — arbitrary-date/time pixel queries | [Develop](v1/DEVELOPMENT_PROMPT.md) | [Review](v1/INDEPENDENT_ACCEPTANCE_PROMPT.md) | [A01–A14](v1/ACCEPTANCE_CONTRACT.md) |
 | V2 — reliable batches and measured scaling | [Develop](v2/DEVELOPMENT_PROMPT.md) | [Review](v2/INDEPENDENT_ACCEPTANCE_PROMPT.md) | [B01–B14](v2/ACCEPTANCE_CONTRACT.md) |
 | V3 — territory readiness and deployment | [Develop](v3/DEVELOPMENT_PROMPT.md) | [Review](v3/INDEPENDENT_ACCEPTANCE_PROMPT.md) | [C01–C16](v3/ACCEPTANCE_CONTRACT.md) |
+| Region request — two-corner rectangle input (no science change) | [Develop](region/DEVELOPMENT_PROMPT.md) | Planning-conversation review | [R01–R08](region/ACCEPTANCE_CONTRACT.md) |
+| Sea-surface support — `SW-SEA-POLICY-1.0` sea-filled DSM view | [Develop](sea/DEVELOPMENT_PROMPT.md) | [Review](sea/INDEPENDENT_ACCEPTANCE_PROMPT.md) | [S01–S14](sea/ACCEPTANCE_CONTRACT.md) |
+| F1.0 — `shade_map` function and CLI (no science change) | [Develop](F1/DEVELOPMENT_PROMPT.md) | [Review](F1/INDEPENDENT_ACCEPTANCE_PROMPT.md) | [F1-01–F1-14](F1/ACCEPTANCE_CONTRACT.md) |
+
+## Numbering rule (from 2026-10-31, decision D-011)
+
+- **Work packages:**
+  - A: two-corner region input;
+  - B: sea surface;
+  - C: the professor's computer (WSL2);
+  - D: web viewer and request generator;
+  - F: the `shade_map` function.
+
+  V1, V2 and V3 are engine versions, not packages.
+- **Versions:** package letter plus version number, for example A1.1, B2.0, F1.0.
+- **Contract IDs:** `SW-<version>`, for example `SW-F1.0`. An amendment gets the next minor version, for example `SW-F1.1`.
+- **Acceptance items:** `<letter><major version>-<two digits>`, for example `F1-01`. Amendments continue the numbering.
+- **Folders:** `docs/prompts/<letter><major version>/`, for example `docs/prompts/F1/`.
+- **Policy IDs keep their names.** Scientific policy IDs written into data and manifests (`SW-V1-POLICY-1.0`, `SW-SEA-POLICY-*`) are not renamed.
+- **Frozen files keep their original IDs**, because renaming would change their hashes. Mapping:
+
+| Original name | What it is | Reference from now on |
+| --- | --- | --- |
+| V1 contract, items A01–A14 | Engine version V1 (accepted) | V1 |
+| V2 contract, items B01–B14 | Engine version V2 (accepted) | V2 |
+| V3 contract, items C01–C16 | Territory readiness (not executed) | V3 |
+| `SW-RGN-AC-1.0` / `-1.1`, items R01–R12 | Package A, two-corner input (committed and reviewed at `f5f24ac`) | A1.0 / A1.1 |
+| `SW-SEA-AC-1.0`, items S01–S14 | Package B, `SW-SEA-POLICY-1.0` (independent acceptance stopped) | B1.0 |
+| `SW-RUN-AC-1.0` | Package D-2, background runner and API (cancelled) | D (cancelled) |
 
 Use the development prompt in the project, then supply the developer's full implementation commit SHA with the corresponding independent acceptance prompt in a separate review conversation. Both roles must read the same shared contract. Freeze the contract hash before implementation; change proposed scope/tolerances/budgets only before work or through an explicitly approved versioned amendment.
 
