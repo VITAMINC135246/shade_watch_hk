@@ -1,0 +1,20 @@
+# Planning records (snapshot)
+
+This folder holds dated snapshots of the planning records kept in the Claude project `SHADE_WATCH_HK`. The copies let developers (Codex) and independent-acceptance conversations read the decisions and reviews that the contracts in `docs/prompts/` refer to.
+
+- **Master copy:** the Claude project (`claude/DECISIONS.zh-TW.md`, `claude/reviews/`). If a snapshot here disagrees with the master, the master wins.
+- **When it is refreshed:** each time a contract is frozen.
+- **Language:** the decision log is in Traditional Chinese, an exception to the English-only rule for repository documents. The reviews are in English.
+- **These are records, not evidence.** Acceptance verdicts come only from the acceptance reports named in the reviews and contracts.
+
+| File | Content |
+| --- | --- |
+| `DECISIONS.zh-TW.md` | Decision log D-001 to D-014 |
+| `reviews/REGION_REVIEW_precommit_20261029.md` | Static pre-commit review of package A1.0 (working tree, 2026-10-29) |
+| `reviews/REGION_REVIEW_374a70d.md` | Review of A1.0 at `374a70d` |
+| `reviews/SEA_PRECHECK_86dbee6.md` | Static pre-check of B1.0 at `86dbee6` (not an acceptance) |
+| `reviews/REGION_REVIEW_f5f24ac.md` | Review of A1.0 + A1.1 at `f5f24ac` |
+| `reviews/F1_PRECHECK_eb605f5.md` | Static pre-check of the first F1.0 candidate `eb605f5` (later NOT ACCEPTED) |
+| `reviews/F1_PRECHECK_35225fd.md` | Static pre-check of the repaired F1.0 candidate `35225fd` (later ACCEPTED) |
+
+Snapshot taken 2026-11-04 (HKT).
