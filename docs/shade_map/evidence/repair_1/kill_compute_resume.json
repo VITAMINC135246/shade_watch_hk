@@ -1,0 +1,73 @@
+{
+  "all_frame_hashes_equal": true,
+  "completed_tasks_retained": 2,
+  "concurrent_refusal": {
+    "exit": 2,
+    "stderr": "invalid input: name: another run owns the lock for f1r1_kill_compute\n"
+  },
+  "engine_events": [
+    {
+      "action": "resume",
+      "attempts": 9,
+      "batch_id": "9bf4b7d3bc54f855f510682a7da37b33ecc56f323053c10f39a7c4439e6d8281",
+      "metrics": {
+        "computed": 2,
+        "final_result_hits": 0,
+        "horizon_calls": 2,
+        "input_inventory_calls": 1,
+        "max_in_flight": 1,
+        "media_peak_rss_bytes": 0,
+        "media_tracking": "known worker-reported PIDs; sub-sample spikes may be missed",
+        "memory_sample_seconds": 0.02,
+        "monitoring_gaps": "input admission sampled at start/end; continuous 20 ms loop starts after spawn",
+        "parent_peak_rss_bytes": 185417728,
+        "peak_new_disk_bytes": 8376114,
+        "peak_tree_rss_bytes": 644464640,
+        "reused": 0,
+        "run_wall_seconds": 9.429315624991432,
+        "workers_peak_rss_bytes": 459046912
+      },
+      "state": "SUCCEEDED",
+      "tasks": {
+        "SUCCEEDED": 8
+      }
+    }
+  ],
+  "files": 57,
+  "no_partials": true,
+  "published_files_retained": 0,
+  "tasks": {
+    "9bf4b7d3bc54f855f510682a7da37b33ecc56f323053c10f39a7c4439e6d8281:frame_b7f5a6edc759d1589de955af4cb07854b117a4a78b3aba7faf6743dbf15a462c_0": [
+      "SUCCEEDED",
+      1
+    ],
+    "9bf4b7d3bc54f855f510682a7da37b33ecc56f323053c10f39a7c4439e6d8281:frame_b7f5a6edc759d1589de955af4cb07854b117a4a78b3aba7faf6743dbf15a462c_1": [
+      "SUCCEEDED",
+      1
+    ],
+    "9bf4b7d3bc54f855f510682a7da37b33ecc56f323053c10f39a7c4439e6d8281:frame_b7f5a6edc759d1589de955af4cb07854b117a4a78b3aba7faf6743dbf15a462c_2": [
+      "SUCCEEDED",
+      1
+    ],
+    "9bf4b7d3bc54f855f510682a7da37b33ecc56f323053c10f39a7c4439e6d8281:horizon_02257dfb230229c85ae544bc9cd3ac06e221acaf7990099140d4a9d3fb61abb6": [
+      "SUCCEEDED",
+      1
+    ],
+    "9bf4b7d3bc54f855f510682a7da37b33ecc56f323053c10f39a7c4439e6d8281:horizon_59d8e039c3fa40f794229989eb082185fe9f8e15180db6a43f99bc1cf48fe5a9": [
+      "SUCCEEDED",
+      1
+    ],
+    "9bf4b7d3bc54f855f510682a7da37b33ecc56f323053c10f39a7c4439e6d8281:horizon_84e3927c9c705231722a32976e76b0c1bcd2b75bca68abba606ebd88552bdea6": [
+      "SUCCEEDED",
+      2
+    ],
+    "9bf4b7d3bc54f855f510682a7da37b33ecc56f323053c10f39a7c4439e6d8281:index_b7f5a6edc759d1589de955af4cb07854b117a4a78b3aba7faf6743dbf15a462c": [
+      "SUCCEEDED",
+      1
+    ],
+    "9bf4b7d3bc54f855f510682a7da37b33ecc56f323053c10f39a7c4439e6d8281:mosaic": [
+      "SUCCEEDED",
+      1
+    ]
+  }
+}

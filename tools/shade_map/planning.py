@@ -13,10 +13,10 @@ from src.spatial import intersects
 from tools import region_request as adapter
 from .common import (CODE_ROOT, ENGINE_FILES, FORMAT, digest, identity, read_json,
                      verify_seal)
-from .config import InvalidInput, check_document, expanded_time, hkt_time, machine_config, region_config
+from .config import (ROOT_MARKER, InvalidInput, check_document, expanded_time, hkt_time,
+                     machine_config, region_config, validate_output_root)
 from .sources import SourceProvider, provider
 
-ROOT_MARKER = '.shade_map_root.json'
 
 
 def output_location(machine, region):
@@ -25,14 +25,6 @@ def output_location(machine, region):
 
 def ownership(machine, region):
     root = Path(machine['output_root'])
-    # New roots may use the standard outputs container, but may not be nested
-    # within any historical output or other existing project folder.
-    ancestor = root.parent
-    containers = {v1.ROOT.resolve(), (v1.ROOT/'outputs').resolve()}
-    while ancestor.is_relative_to(v1.ROOT.resolve()) and ancestor not in containers:
-        if ancestor.exists() and not (ancestor/ROOT_MARKER).is_file():
-            raise InvalidInput('output_root: lies inside an existing folder F did not create')
-        ancestor = ancestor.parent
     if root.exists():
         marker = root / ROOT_MARKER
         if not marker.is_file() or marker.is_symlink() or read_json(marker) != {'schema': 'shade-map-root-1.0'}:
@@ -136,12 +128,13 @@ class Prepared:
 
 def prepare(region, machine='config/machine.local.json'):
     region, machine = region_config(region), machine_config(machine)
+    source = provider(region['dsm_source'])
+    validate_output_root(machine, (source.catalogue(machine),))
     conflict = None
     try:
         existing = ownership(machine, region)
     except InvalidInput as exc:
         existing, conflict = None, str(exc)
-    source = provider(region['dsm_source'])
     temporal, dropped = expanded_time(region['time'])
     provisional = v1.ROOT/'outputs/shade_map_work'/(region['name']+'-plan')
     try:

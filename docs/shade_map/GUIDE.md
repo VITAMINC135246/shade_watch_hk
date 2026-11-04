@@ -12,9 +12,10 @@ are relative to the repository root. The full catalogue currently lives at
 `data/raw/dsm/2020/D12.DSM.TIFF`.
 
 `output_root` defaults to `outputs/shade_map`. Choose a new publication root;
-F creates an ownership marker there. F refuses existing unmarked roots, foreign
-run folders, roots inside `data/`, and roots nested in historical project output
-folders. Do not point it at a historical run. Subsequent F runs can share the
+F creates an ownership marker there. After resolving symlinks, F refuses existing
+unmarked roots, foreign run folders, roots inside `data/`, DSM catalogues or
+backing source directories, and roots under existing foreign folders inside or
+outside the repository. Do not point it at a historical run. Subsequent F runs can share the
 same F-owned root. `cache_namespace` names an isolated directory under
 `data/processed/shade_v1/`; use a fresh namespace for a cold-cache experiment.
 
@@ -141,7 +142,8 @@ Run the identical command again to resume. A name with a different normalised
 region or source identity is a conflict; choose a new name. A name lock prevents
 concurrent publication. Completed V2 batches are never resubmitted. Incomplete
 batches resume through V2. Published frames are hash-checked and retained. A
-`.partial` frame is removed and rebuilt; a verified renamed frame interrupted
+`.partial` folder is removed on every run, including a completed run. Its final
+frame is retained when verified, or redone when missing or damaged. A verified renamed frame interrupted
 before its manifest update is recovered. Engine work stays under
 `outputs/shade_map_work/<name>-<run_id12>/` until explicitly pruned.
 
@@ -153,8 +155,8 @@ before its manifest update is recovered. Engine work stays under
 Without `--yes`, prune lists files and sizes. With it, prune deletes only this
 run's ownership-checked work folder, after every published frame and hash has
 been verified. It retains published files, source views and horizon caches. A
-later complete `run` verifies and does nothing. Hash corruption is an integrity
-failure, not a licence to overwrite a published frame.
+later complete `run` verifies and clears stale partials. Hash corruption without
+an interrupted `.partial` publication remains an integrity failure.
 
 ## Python
 

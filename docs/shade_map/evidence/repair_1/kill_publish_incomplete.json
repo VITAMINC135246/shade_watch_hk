@@ -1,0 +1,5 @@
+{
+  "manifest_unchanged": true,
+  "prune_refused": true,
+  "reason": "prune: every frame must be published and verified"
+}

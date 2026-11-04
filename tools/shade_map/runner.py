@@ -14,7 +14,7 @@ from src import v1, v2
 from tools import region_request as adapter
 from .common import (CODE_ROOT, CONTRACT, ENGINE_FILES, FORMAT, atomic_json, digest, identity, name_lock,
                      read_json, seal, verify_files, verify_seal)
-from .config import InvalidInput, check_document, machine_config, region_config
+from .config import InvalidInput, check_document, machine_config, region_config, validate_output_root
 from .planning import ROOT_MARKER, ownership, prepare
 from .publication import publish_frame, verify_frame, write_summaries
 from .sources import provider
@@ -49,6 +49,8 @@ def verify_run(folder, manifest=None):
     verify_seal(manifest)
     if manifest['status'] != 'complete' or any(f['status'] != 'published' for f in manifest['frames']):
         raise InvalidInput('prune: every frame must be published and verified')
+    if list(folder.rglob('*.partial')):
+        raise RuntimeError('Partial publication remains; run must resume before completion')
     verify_files(folder, manifest['files'])
     for frame in manifest['frames']:
         verify_frame(folder/frame['date']/frame['time'], frame)
@@ -56,6 +58,36 @@ def verify_run(folder, manifest=None):
     if actual != set(manifest['files']) | {'run_manifest.json'}:
         raise RuntimeError('Unexpected or missing published files')
     return manifest
+
+
+def _recover_partials(folder, manifest):
+    """Discard interrupted publication, retaining only independently verified finals."""
+    redo = False
+    frames = {(f['date'], f['time']): f for f in manifest['frames']}
+    for partial in sorted(folder.glob('*/*.partial')):
+        if partial.parent.is_symlink() or partial.is_symlink() or not partial.is_dir():
+            raise RuntimeError('Partial publication must be a directory, not a symlink')
+        frame = frames.get((partial.parent.name, partial.name.removesuffix('.partial')))
+        if frame is not None:
+            final = partial.with_name(frame['time'])
+            if final.is_symlink():
+                raise RuntimeError('Published frame cannot be a symlink')
+            try:
+                verify_frame(final, frame)
+            except (OSError, ValueError, KeyError, RuntimeError):
+                prefix = frame['date']+'/'+frame['time']+'/'
+                manifest['files'] = {k:v for k,v in manifest['files'].items() if not k.startswith(prefix)}
+                frame.update(status='pending', files={})
+                manifest['status'] = 'incomplete'
+                redo = True
+                # Persist the redo obligation before removing its recovery cue.
+                _save(folder, manifest)
+                if final.exists():
+                    shutil.rmtree(final)
+        shutil.rmtree(partial)
+    if redo:
+        _save(folder, manifest)
+    return redo
 
 
 def _guard(prepared):
@@ -140,6 +172,7 @@ def _engine(prepared, manifest):
 def run_region(region, machine='config/machine.local.json'):
     started=time.perf_counter()
     region,machine=region_config(region),machine_config(machine)
+    validate_output_root(machine, (provider(region['dsm_source']).catalogue(machine),))
     ownership(machine,region)
     work_root=v1.ROOT/'outputs/shade_map_work'
     if (work_root/'.locks'/(region['name']+'.lock')).exists():
@@ -161,11 +194,13 @@ def _run_region(region,machine,started,*,lock_held):
             raise InvalidInput('name: existing run has a different source, engine or publication identity')
         if prior['status']=='complete':
             with (nullcontext() if lock_held else name_lock(v1.ROOT/'outputs/shade_map_work',region['name'],create=False)):
-                verify_run(Path(machine['output_root'])/region['name'],prior)
-                progress('Complete run verified')
-                return dict(schema='shade-map-result-1.0',run_id=prior['run_id'],name=region['name'],
-                            status='complete',published_frames=len(prior['frames']),reused_frames=len(prior['frames']),
-                            computed_batches=0,verified_only=True)
+                folder = Path(machine['output_root'])/region['name']
+                if not _recover_partials(folder, prior):
+                    verify_run(folder,prior)
+                    progress('Complete run verified')
+                    return dict(schema='shade-map-result-1.0',run_id=prior['run_id'],name=region['name'],
+                                status='complete',published_frames=len(prior['frames']),reused_frames=len(prior['frames']),
+                                computed_batches=0,verified_only=True)
     prepared=prepare(region,machine)
     if prepared.document['existing_run']['status']=='conflict':
         raise InvalidInput(prepared.document['existing_run']['reason'])
@@ -177,7 +212,7 @@ def _run_region(region,machine,started,*,lock_held):
         existing=ownership(machine,region)
         if existing and existing['run_id'] != prepared.document['run_id']:
             raise InvalidInput('name: existing run has a different run_id')
-        if existing and existing['status']=='complete':
+        if existing and existing['status']=='complete' and not _recover_partials(prepared.folder, existing):
             verify_run(prepared.folder,existing)
             progress('Complete run verified')
             return dict(schema='shade-map-result-1.0',run_id=existing['run_id'],name=region['name'],
@@ -212,6 +247,7 @@ def _run_region(region,machine,started,*,lock_held):
             manifest=_new_manifest(prepared,digest(sidecar_path))
             manifest['files']['region_config.json']=digest(prepared.folder/'region_config.json')
             _save(prepared.folder,manifest)
+        _recover_partials(prepared.folder, manifest)
         sidecar=read_json(sidecar_path)
         mosaics=_engine(prepared,manifest)
         records=[]
@@ -258,6 +294,7 @@ def _size(path):
 
 def prune_region(region, machine='config/machine.local.json', *, yes=False):
     region,machine=region_config(region),machine_config(machine)
+    validate_output_root(machine, (provider(region['dsm_source']).catalogue(machine),))
     manifest=ownership(machine,region)
     if manifest is None:
         raise InvalidInput('prune: no run with this name')

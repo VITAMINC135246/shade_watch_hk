@@ -1,0 +1,96 @@
+{
+  "all_frame_hashes_equal": true,
+  "completed_tasks_retained": 8,
+  "concurrent_refusal": null,
+  "engine_events": [
+    {
+      "action": "submit_run",
+      "attempts": 8,
+      "batch_id": "fccff6dea61443927a9415fa9ced880e1d3340697a8c50f43462839c0e07c9e3",
+      "metrics": {
+        "computed": 6,
+        "final_result_hits": 0,
+        "horizon_calls": 6,
+        "input_inventory_calls": 1,
+        "max_in_flight": 1,
+        "media_peak_rss_bytes": 0,
+        "media_tracking": "known worker-reported PIDs; sub-sample spikes may be missed",
+        "memory_sample_seconds": 0.02,
+        "monitoring_gaps": "input admission sampled at start/end; continuous 20 ms loop starts after spawn",
+        "parent_peak_rss_bytes": 163299328,
+        "peak_new_disk_bytes": 16292227,
+        "peak_tree_rss_bytes": 697417728,
+        "reused": 0,
+        "run_wall_seconds": 17.700459874991793,
+        "workers_peak_rss_bytes": 534118400
+      },
+      "state": "SUCCEEDED",
+      "tasks": {
+        "SUCCEEDED": 8
+      }
+    },
+    {
+      "action": "verify",
+      "attempts": 8,
+      "batch_id": "fccff6dea61443927a9415fa9ced880e1d3340697a8c50f43462839c0e07c9e3",
+      "metrics": {
+        "computed": 6,
+        "final_result_hits": 0,
+        "horizon_calls": 6,
+        "input_inventory_calls": 1,
+        "max_in_flight": 1,
+        "media_peak_rss_bytes": 0,
+        "media_tracking": "known worker-reported PIDs; sub-sample spikes may be missed",
+        "memory_sample_seconds": 0.02,
+        "monitoring_gaps": "input admission sampled at start/end; continuous 20 ms loop starts after spawn",
+        "parent_peak_rss_bytes": 163299328,
+        "peak_new_disk_bytes": 16292227,
+        "peak_tree_rss_bytes": 697417728,
+        "reused": 0,
+        "run_wall_seconds": 17.700459874991793,
+        "workers_peak_rss_bytes": 534118400
+      },
+      "state": "SUCCEEDED",
+      "tasks": {
+        "SUCCEEDED": 8
+      }
+    }
+  ],
+  "files": 57,
+  "no_partials": true,
+  "published_files_retained": 38,
+  "tasks": {
+    "fccff6dea61443927a9415fa9ced880e1d3340697a8c50f43462839c0e07c9e3:frame_b7f5a6edc759d1589de955af4cb07854b117a4a78b3aba7faf6743dbf15a462c_0": [
+      "SUCCEEDED",
+      1
+    ],
+    "fccff6dea61443927a9415fa9ced880e1d3340697a8c50f43462839c0e07c9e3:frame_b7f5a6edc759d1589de955af4cb07854b117a4a78b3aba7faf6743dbf15a462c_1": [
+      "SUCCEEDED",
+      1
+    ],
+    "fccff6dea61443927a9415fa9ced880e1d3340697a8c50f43462839c0e07c9e3:frame_b7f5a6edc759d1589de955af4cb07854b117a4a78b3aba7faf6743dbf15a462c_2": [
+      "SUCCEEDED",
+      1
+    ],
+    "fccff6dea61443927a9415fa9ced880e1d3340697a8c50f43462839c0e07c9e3:horizon_05abffcff8232fb2f5a6c6e40886580bb7029402929b7bfe8373c05efccacfc8": [
+      "SUCCEEDED",
+      1
+    ],
+    "fccff6dea61443927a9415fa9ced880e1d3340697a8c50f43462839c0e07c9e3:horizon_5b276ef2cb0caf21ee2e8eeeea7e6e5a38f4df2547721797a65965379730185b": [
+      "SUCCEEDED",
+      1
+    ],
+    "fccff6dea61443927a9415fa9ced880e1d3340697a8c50f43462839c0e07c9e3:horizon_bff29edb1e608cdbcc8d9a249e48dd86b672ea5274a35b1e8a9965077af646c0": [
+      "SUCCEEDED",
+      1
+    ],
+    "fccff6dea61443927a9415fa9ced880e1d3340697a8c50f43462839c0e07c9e3:index_b7f5a6edc759d1589de955af4cb07854b117a4a78b3aba7faf6743dbf15a462c": [
+      "SUCCEEDED",
+      1
+    ],
+    "fccff6dea61443927a9415fa9ced880e1d3340697a8c50f43462839c0e07c9e3:mosaic": [
+      "SUCCEEDED",
+      1
+    ]
+  }
+}

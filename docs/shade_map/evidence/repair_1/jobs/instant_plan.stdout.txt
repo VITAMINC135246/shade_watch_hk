@@ -1,0 +1,153 @@
+{
+  "schema": "shade-map-plan-1.0",
+  "run_id": "de547ab2834805a1e1278dcf2197380b4281fbe9a9a2ff90df068ba199661728",
+  "name": "f1r1_instant",
+  "resolved_bounds": [
+    820240.0,
+    808390.0,
+    820260.5,
+    808410.5
+  ],
+  "grid": {
+    "width": 41,
+    "height": 41,
+    "transform": [
+      0.5,
+      0.0,
+      820240.0,
+      0.0,
+      -0.5,
+      808410.5
+    ],
+    "crs": "EPSG:2326",
+    "mode": "custom",
+    "selected_source": null,
+    "selected_sources": []
+  },
+  "pixel_count": 1681,
+  "cells": [
+    {
+      "id": "e819500n807800",
+      "native_bounds": [
+        819500.0,
+        807800.0,
+        820250.0,
+        808400.0
+      ],
+      "bounds": [
+        820240.0,
+        808390.0,
+        820250.0,
+        808400.0
+      ],
+      "width": 20,
+      "height": 20,
+      "source_tile": "14NW19A(e819n807,e820n808).tif"
+    },
+    {
+      "id": "e820250n807800",
+      "native_bounds": [
+        820250.0,
+        807800.0,
+        821000.0,
+        808400.0
+      ],
+      "bounds": [
+        820250.0,
+        808390.0,
+        820260.5,
+        808400.0
+      ],
+      "width": 21,
+      "height": 20,
+      "source_tile": "14NW19B(e820n807,e821n808).tif"
+    },
+    {
+      "id": "e819500n808400",
+      "native_bounds": [
+        819500.0,
+        808400.0,
+        820250.0,
+        809000.0
+      ],
+      "bounds": [
+        820240.0,
+        808400.0,
+        820250.0,
+        808410.5
+      ],
+      "width": 20,
+      "height": 21,
+      "source_tile": null
+    },
+    {
+      "id": "e820250n808400",
+      "native_bounds": [
+        820250.0,
+        808400.0,
+        821000.0,
+        809000.0
+      ],
+      "bounds": [
+        820250.0,
+        808400.0,
+        820260.5,
+        808410.5
+      ],
+      "width": 21,
+      "height": 21,
+      "source_tile": "14NW14D(e820n808,e821n809).tif"
+    }
+  ],
+  "frames": [
+    {
+      "local_time": "2026-01-07T12:30:00+08:00",
+      "utc_time": "2026-01-07T04:30:00+00:00",
+      "date": "20260107",
+      "time": "1230"
+    }
+  ],
+  "dropped_times": [
+    {
+      "local_time": "2026-01-07T00:00:00+08:00",
+      "utc_time": "2026-01-06T16:00:00+00:00",
+      "reason": "outside daylight"
+    }
+  ],
+  "sub_requests": 1,
+  "batches": 1,
+  "distinct_horizon_directions": 1,
+  "estimates": {
+    "label": "estimate",
+    "compute_wall_seconds": 33.52740433304047,
+    "estimator_models": [
+      {
+        "schema": "shade-watch-v2-estimator-1.0",
+        "sha256": "ad6939e4455d9e80495d27e382438d635f5cb9f0920601959e09bbbe2e721469",
+        "extrapolated": true
+      }
+    ],
+    "published_bytes": {
+      "label": "estimate",
+      "value": 391014
+    },
+    "working_bytes": {
+      "label": "estimate",
+      "value": 103377186
+    },
+    "file_count": {
+      "label": "estimate",
+      "value": 23
+    }
+  },
+  "full_images": true,
+  "warnings": [
+    "No-DSM cells remain shade 255, quality 1, surface 255",
+    "1 requested times dropped outside daylight"
+  ],
+  "existing_run": {
+    "status": "new",
+    "published_frames": 0,
+    "total_frames": 1
+  }
+}

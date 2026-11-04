@@ -278,6 +278,72 @@ def test_guards_and_foreign_roots(fixture_map,tmp_path):
     with pytest.raises(InvalidInput,match='data/'): machine_config(dict(machine,output_root='data/published'))
 
 
+@pytest.mark.parametrize('action', ['plan', 'run', 'prune'])
+@pytest.mark.parametrize('location', ['dsm', 'dsm_child', 'foreign', 'dsm_symlink',
+                                      'foreign_symlink', 'data_symlink', 'provider', 'source_file',
+                                      'malformed_marker'])
+def test_repair_output_locations_rejected_before_writes(fixture_map, tmp_path, monkeypatch, capsys,
+                                                       action, location):
+    raw, machine, region = fixture_map
+    repo = tmp_path/'repo'; repo.mkdir()
+    monkeypatch.setattr(v1, 'ROOT', repo)
+    foreign = tmp_path/'foreign'; foreign.mkdir()
+    if location == 'malformed_marker': (foreign/'.shade_map_root.json').write_text('invalid JSON')
+    data = repo/'data'; data.mkdir()
+    alias = repo/'alias'
+    if location in ('dsm_symlink', 'foreign_symlink', 'data_symlink'):
+        alias.symlink_to({'dsm_symlink': raw, 'foreign_symlink': foreign,
+                         'data_symlink': data}[location], target_is_directory=True)
+        output = alias/'published'
+    elif location in ('provider', 'source_file'):
+        catalogue = tmp_path/'provider'; catalogue.mkdir()
+        # Owned-parent markers cannot override the source-directory prohibition.
+        (catalogue/'.shade_map_root.json').write_text('{"schema":"shade-map-root-1.0"}')
+        if location == 'provider':
+            monkeypatch.setattr(RawSource, 'catalogue', lambda self, machine: catalogue)
+        else:
+            (raw/'.shade_map_root.json').write_text('{"schema":"shade-map-root-1.0"}')
+            for path in raw.glob('*.tif'): (catalogue/path.name).symlink_to(path)
+            machine['dsm_dir'] = str(catalogue)
+        output = (catalogue if location == 'provider' else raw)/'published'
+    else:
+        output = {'dsm': raw, 'dsm_child': raw/'published', 'foreign': foreign/'published',
+                  'malformed_marker': foreign/'published'}[location]
+    machine['output_root'] = str(output)
+    mp, rp = tmp_path/'machine.json', tmp_path/'region.json'
+    mp.write_text(json.dumps(machine)); rp.write_text(json.dumps(region))
+    before = listing(tmp_path)
+    paths_before = sorted(p.relative_to(tmp_path).as_posix() for p in tmp_path.rglob('*'))
+    with patch.object(adapter, 'plan_region', side_effect=AssertionError('adapter wrote before guard')):
+        assert main([action, '--machine', str(mp), str(rp)]) == 2
+    captured = capsys.readouterr()
+    assert captured.err.startswith('invalid input: output_root:') and not captured.out
+    assert listing(tmp_path) == before
+    assert sorted(p.relative_to(tmp_path).as_posix() for p in tmp_path.rglob('*')) == paths_before
+
+
+@pytest.mark.parametrize('contents', ['', 'unfinished'])
+@pytest.mark.parametrize('final_state', ['verified', 'missing', 'corrupt'])
+def test_repair_complete_run_discards_orphan_partial(fixture_map, tmp_path, contents, final_state):
+    _, machine, region = fixture_map
+    run_region(region, machine)
+    folder = tmp_path/'outputs/published/fixture'
+    final = folder/'20260107/1230'
+    before = listing(final)
+    expected_files = read_json(final/'frame.json')['files']
+    partial = final.with_name('1230.partial'); partial.mkdir()
+    if contents: (partial/'interrupted.txt').write_text(contents)
+    if final_state == 'missing': shutil.rmtree(final)
+    elif final_state == 'corrupt': (final/'shade.tif').write_bytes(b'interrupted publication')
+    with pytest.raises(RuntimeError, match='Partial publication remains'): verify_run(folder)
+    result = run_region(region, machine)
+    assert result['status'] == 'complete' and not list(folder.rglob('*.partial'))
+    verify_run(folder)
+    assert read_json(final/'frame.json')['files'] == expected_files
+    if final_state == 'verified':
+        assert result['verified_only'] and before == listing(final)
+
+
 def test_full_publication_api_cli_resume_prune(fixture_map,tmp_path,capsys):
     _,machine,region=fixture_map
     mp=tmp_path/'machine.json'; mp.write_text(json.dumps(machine))

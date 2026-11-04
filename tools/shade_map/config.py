@@ -13,6 +13,7 @@ from tools import region_request as adapter
 
 SCHEMAS = Path(__file__).resolve().parents[2] / 'config/schema'
 HKT = timezone(timedelta(hours=8))
+ROOT_MARKER = '.shade_map_root.json'
 
 
 def hkt_time(utc):
@@ -138,8 +139,7 @@ def machine_config(value='config/machine.local.json'):
         value[key] = str((v1.ROOT / value[key]).resolve())
     if not Path(value['dsm_dir']).is_dir():
         raise InvalidInput('dsm_dir: catalogue directory does not exist')
-    if Path(value['output_root']).is_relative_to((v1.ROOT / 'data').resolve()):
-        raise InvalidInput('output_root: must not lie inside data/')
+    validate_output_root(value)
     namespace = value['cache_namespace']
     try:
         v1._owned_path(v1.ROOT/'data/processed/shade_v1'/namespace,
@@ -147,6 +147,35 @@ def machine_config(value='config/machine.local.json'):
     except ValueError as exc:
         raise InvalidInput(f'cache_namespace: {exc}') from exc
     return value
+
+
+def validate_output_root(machine, source_directories=()):
+    """Check resolved write boundaries before the adapter can create a view."""
+    root = Path(machine['output_root']).resolve()
+    if root.is_relative_to((v1.ROOT / 'data').resolve()):
+        raise InvalidInput('output_root: must not lie inside data/')
+    catalogues = {Path(machine['dsm_dir']).resolve(),
+                  *(Path(p).resolve() for p in source_directories)}
+    sources = {*catalogues, (v1.ROOT/'outputs/region_views').resolve()}
+    for catalogue in catalogues:
+        # A provider catalogue can be a view of files in other source directories.
+        sources.update(p.resolve().parent for p in catalogue.iterdir() if p.is_file())
+    if any(root.is_relative_to(source) for source in sources):
+        raise InvalidInput('output_root: must not equal or lie inside a DSM/source directory')
+    containers = {v1.ROOT.resolve(), (v1.ROOT/'outputs').resolve()}
+    ancestor = root.parent
+    while ancestor not in containers:
+        if ancestor.exists():
+            marker = ancestor/ROOT_MARKER
+            try:
+                owned = (not marker.is_symlink() and marker.is_file()
+                         and load_json(marker) == {'schema': 'shade-map-root-1.0'})
+            except InvalidInput:
+                owned = False
+            if owned:
+                break
+            raise InvalidInput('output_root: lies inside an existing folder F did not create')
+        ancestor = ancestor.parent
 
 
 def corners(value):

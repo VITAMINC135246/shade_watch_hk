@@ -1,0 +1,134 @@
+{
+  "after_prune": {
+    "computed_batches": 0,
+    "name": "f1r1_b",
+    "published_frames": 3,
+    "reused_frames": 3,
+    "run_id": "a7b20af36198695719d459d089bbede05138732c9aacec69ee1489f00fdc2422",
+    "schema": "shade-map-result-1.0",
+    "status": "complete",
+    "verified_only": true
+  },
+  "complete_result": {
+    "computed_batches": 0,
+    "name": "f1r1_b",
+    "published_frames": 3,
+    "reused_frames": 3,
+    "run_id": "a7b20af36198695719d459d089bbede05138732c9aacec69ee1489f00fdc2422",
+    "schema": "shade-map-result-1.0",
+    "status": "complete",
+    "verified_only": true
+  },
+  "empty_orphan_removed": true,
+  "prune": {
+    "bytes": 523115,
+    "deleted": true,
+    "files": [
+      {
+        "bytes": 972,
+        "path": "adapter/batch_0000.json"
+      },
+      {
+        "bytes": 11515,
+        "path": "adapter/region_request.json"
+      },
+      {
+        "bytes": 125252,
+        "path": "batch_plans.json"
+      },
+      {
+        "bytes": 0,
+        "path": "engine/part_0000/.writer.lock"
+      },
+      {
+        "bytes": 1893,
+        "path": "engine/part_0000/quality/quality_20260107T043000000000Z.tif"
+      },
+      {
+        "bytes": 1893,
+        "path": "engine/part_0000/quality/quality_20260107T044000000000Z.tif"
+      },
+      {
+        "bytes": 1893,
+        "path": "engine/part_0000/quality/quality_20260107T045000000000Z.tif"
+      },
+      {
+        "bytes": 42594,
+        "path": "engine/part_0000/result_index.json"
+      },
+      {
+        "bytes": 39200,
+        "path": "engine/part_0000/run_definition.json"
+      },
+      {
+        "bytes": 1525,
+        "path": "engine/part_0000/shade/shade_20260107T043000000000Z.tif"
+      },
+      {
+        "bytes": 1525,
+        "path": "engine/part_0000/shade/shade_20260107T044000000000Z.tif"
+      },
+      {
+        "bytes": 1525,
+        "path": "engine/part_0000/shade/shade_20260107T045000000000Z.tif"
+      },
+      {
+        "bytes": 3571,
+        "path": "engine/part_0000/status/20260107T043000000000Z.json"
+      },
+      {
+        "bytes": 3576,
+        "path": "engine/part_0000/status/20260107T044000000000Z.json"
+      },
+      {
+        "bytes": 3574,
+        "path": "engine/part_0000/status/20260107T045000000000Z.json"
+      },
+      {
+        "bytes": 167,
+        "path": "lock.json"
+      },
+      {
+        "bytes": 137,
+        "path": "owner.json"
+      },
+      {
+        "bytes": 0,
+        "path": "state/.schema.lock"
+      },
+      {
+        "bytes": 0,
+        "path": "state/074b374466466e961a8d393271b17116b5c2c5ae93d0dea1311982efef957d3e.controller.lock"
+      },
+      {
+        "bytes": 2958,
+        "path": "state/074b374466466e961a8d393271b17116b5c2c5ae93d0dea1311982efef957d3e.logical_mosaic.json"
+      },
+      {
+        "bytes": 601,
+        "path": "state/receipts/074b374466466e961a8d393271b17116b5c2c5ae93d0dea1311982efef957d3e/b7f5a6edc759d1589de955af4cb07854b117a4a78b3aba7faf6743dbf15a462c.json"
+      },
+      {
+        "bytes": 278528,
+        "path": "state/state.sqlite"
+      },
+      {
+        "bytes": 114,
+        "path": "state/store.json"
+      },
+      {
+        "bytes": 102,
+        "path": "state/workers/3878c6e0abb547c497a4c4e2b6b6a217.json"
+      }
+    ],
+    "name": "f1r1_b",
+    "run_id": "a7b20af36198695719d459d089bbede05138732c9aacec69ee1489f00fdc2422",
+    "schema": "shade-map-prune-1.0",
+    "work_folder": "outputs/shade_map_work/f1r1_b-a7b20af36198"
+  },
+  "real_same_name_conflict": {
+    "exit": 2,
+    "no_writes": true,
+    "stderr": "invalid input: name: existing run has a different region config\n"
+  }
+}

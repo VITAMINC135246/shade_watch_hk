@@ -49,6 +49,10 @@ guards. New publication roots have an F ownership marker; an existing unmarked
 root is refused. A common name lock under `outputs/shade_map_work/.locks/`
 serialises competing runs, including differing identities. The run work folder is
 `outputs/shade_map_work/<name>-<run_id12>/`; its owner record permits safe prune.
+Resolved publication paths are checked against `data/`, the configured and
+provider catalogues, and their resolved backing-file directories before the
+adapter can write a source view. Ancestor ownership is checked outside the
+repository too; only repository/output containers and verified F roots are trusted.
 
 Persist adapter sidecars and immutable batch plans before submission. On resume,
 use saved batch IDs and V2 state: completed batches are verified, never resubmitted;
@@ -58,6 +62,10 @@ against `read_region_window` (including transforms), verifies VRT/full views, th
 renames and atomically updates the manifest. A killed partial is removed and
 rebuilt. A renamed frame not yet recorded is recovered from its verified record.
 Published frames are immutable and reused after hash verification.
+Complete-run paths also discard stale partial directories under the name lock.
+If an associated final cannot be verified, the manifest records its pending redo
+before removing the recovery cue, then the ordinary durable engine/publication
+path restores it. Final verification refuses any remaining `.partial` entry.
 
 Frame records hash every layer file. The run manifest hashes those records,
 region config and summaries. A JSON record cannot hash its own bytes: the run
