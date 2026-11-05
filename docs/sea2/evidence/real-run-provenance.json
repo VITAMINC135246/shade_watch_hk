@@ -1,0 +1,104 @@
+{
+  "sea2_central_raw": {
+    "engine_cache_directories": [
+      "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/processed/shade_v1/sea2_raw_20261104"
+    ],
+    "engine_events": [
+      {
+        "action": "submit_run",
+        "attempts": 9,
+        "batch_id": "f70cb1bd30e3a6f0910c77f10320ebaa7f31cfbd0c3dbc1616c0efa021280ea2",
+        "state": "SUCCEEDED"
+      }
+    ],
+    "engine_plan_keys": [
+      "d243ba0efbe5b49331bdd81a24231935565d246f7365a8be1e5f85b55c038372"
+    ],
+    "frame_count": 3,
+    "manifest_sha256": "89c9c1409fde52938e65b0b7fea10e83f94f1a2d6cff83dff674a94e3c138388",
+    "name": "sea2_central_raw",
+    "policies": {
+      "engine": "SW-V1-POLICY-1.0",
+      "sea": "none"
+    },
+    "profile_sha256": null,
+    "published_frames": 3,
+    "resolved_bounds": [
+      833750.0,
+      815000.0,
+      835250.0,
+      816200.0
+    ],
+    "run_id": "83cfba55f3efc971e78bda142636b6883c977d21989e63f3cb791e323d9898ce",
+    "source_view_id": null,
+    "status": "complete"
+  },
+  "sea2_central_sea": {
+    "engine_cache_directories": [
+      "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/processed/shade_v1/sea_fill_v2_df707ce89852"
+    ],
+    "engine_events": [
+      {
+        "action": "submit_run",
+        "attempts": 9,
+        "batch_id": "b7c2fe2fd212e20c574011ed5803ba8a102e3be30c6a8364c3ccfd129e493844",
+        "state": "SUCCEEDED"
+      }
+    ],
+    "engine_plan_keys": [
+      "56ca6466900385a0fd8f5292e5c490a11afe88cbffd45d30854bdf3cda50135d"
+    ],
+    "frame_count": 3,
+    "manifest_sha256": "b5ededc42a68e07b0f64a439584289b6431dc58a39168cf3c3135a7ac66fef48",
+    "name": "sea2_central_sea",
+    "policies": {
+      "engine": "SW-V1-POLICY-1.0",
+      "sea": "SW-SEA-POLICY-2.0"
+    },
+    "profile_sha256": "f958a307dbae3fa8539cadd1d3d1fd30c41633aba15e3fc2afe161d7215f05c5",
+    "published_frames": 3,
+    "resolved_bounds": [
+      833750.0,
+      815000.0,
+      835250.0,
+      816200.0
+    ],
+    "run_id": "61717ff6c792761038e349488e426d0916572d244d3256b31ce81dd90dcefdd4",
+    "source_view_id": "df707ce89852a65121e3ba4542da99814139db20b6bfc4459bdbf7a3eadcb6e2",
+    "status": "complete"
+  },
+  "sea2_cheung_chau": {
+    "engine_cache_directories": [
+      "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/processed/shade_v1/sea_fill_v2_df707ce89852"
+    ],
+    "engine_events": [
+      {
+        "action": "submit_run",
+        "attempts": 71,
+        "batch_id": "f07abb24a72abf309cb5636590355a8eacf8c630672b179d913072e22af37890",
+        "state": "SUCCEEDED"
+      }
+    ],
+    "engine_plan_keys": [
+      "543b068225490044a2f19347a8b2fb87b3e329c9a56f8436df7584c1e7d8e127"
+    ],
+    "frame_count": 65,
+    "manifest_sha256": "f2ac8657adad858a38c606aa3465bbf09186bb4754dc3233d86b692495878efe",
+    "name": "sea2_cheung_chau",
+    "policies": {
+      "engine": "SW-V1-POLICY-1.0",
+      "sea": "SW-SEA-POLICY-2.0"
+    },
+    "profile_sha256": "f958a307dbae3fa8539cadd1d3d1fd30c41633aba15e3fc2afe161d7215f05c5",
+    "published_frames": 65,
+    "resolved_bounds": [
+      820250.0,
+      807200.0,
+      821750.0,
+      808400.0
+    ],
+    "run_id": "0df94f9cecfd9a64e81a01824f1d1ea34494efabe487a0cff652f524f64ff5bf",
+    "source_view_id": "df707ce89852a65121e3ba4542da99814139db20b6bfc4459bdbf7a3eadcb6e2",
+    "status": "complete"
+  }
+}

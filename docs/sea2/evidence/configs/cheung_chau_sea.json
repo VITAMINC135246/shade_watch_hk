@@ -1,0 +1,22 @@
+{
+  "crs": "hk1980",
+  "dsm_source": "sea-2.0",
+  "full_image": "auto",
+  "lower_left": [
+    820250,
+    807200
+  ],
+  "name": "sea2_cheung_chau",
+  "schema": "shade-map-region-1.0",
+  "time": {
+    "dates": [
+      "2026-01-07"
+    ],
+    "interval_minutes": 10,
+    "mode": "daylight"
+  },
+  "upper_right": [
+    821750,
+    808400
+  ]
+}

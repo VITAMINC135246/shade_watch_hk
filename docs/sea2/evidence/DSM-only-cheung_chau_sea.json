@@ -1,0 +1,14 @@
+{
+  "label": "cheung_chau_sea",
+  "module": "tools.shade_map",
+  "args": [
+    "run",
+    "--machine",
+    "docs/sea2/evidence/configs/machine.json",
+    "docs/sea2/evidence/configs/cheung_chau_sea.json"
+  ],
+  "original_mode": 493,
+  "access_denied": true,
+  "exit_code": 0,
+  "restored_mode": 493
+}

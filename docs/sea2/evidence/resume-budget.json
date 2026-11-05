@@ -1,0 +1,13 @@
+{
+  "contract_hashes": {
+    "ACCEPTANCE_CONTRACT.md": "b8b5473b51af318859d7a1619b616b4acfa7d9cf9ccd63ca0ffaf238fee40e1a",
+    "AMENDMENT_B2_1.md": "18a09995cbbd1cca659c9a548aad9a0cb45c942668a58ce17146d371f9f8450d"
+  },
+  "second_build_budget_seconds": 3600,
+  "second_build_consumed_seconds": 1294.301012992859,
+  "second_build_remaining_seconds": 2305.698987007141,
+  "restarted_command_limit_seconds": 2250,
+  "reserved_for_cleanup_seconds": 55.69898700714111,
+  "real_jobs_consumed_seconds": 118.87191737495596,
+  "budgets_reset_on_resume": false
+}

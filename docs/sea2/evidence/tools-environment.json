@@ -1,0 +1,8 @@
+{
+  "status": "NOT VERIFIED",
+  "expected_lock": "requirements.tools.lock.txt",
+  "expected_lock_sha256": "98c673a8f17f24ffd629dd8febe223f80687a5ce24c2a578355c34784621cf0e",
+  "available": false,
+  "reason": "Historical package directories contain zero files; see reader-availability.json",
+  "downloads": false
+}

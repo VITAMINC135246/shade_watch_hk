@@ -1,0 +1,98 @@
+{
+  "B1_hashes_match": true,
+  "F_changes": [
+    "config/machine.example.json",
+    "config/schema/shade_map_machine.schema.json",
+    "config/schema/shade_map_region.schema.json",
+    "docs/shade_map/GUIDE.md",
+    "tools/shade_map/sources.py"
+  ],
+  "F_publication_matches_accepted": true,
+  "F_publication_sha256": "b08f3c7f92bb30b87b5b0fd70dd1633dcfd9faa34120bfa551a9089c472a3ed8",
+  "adapter_hash_matches": true,
+  "branch": "feature",
+  "engine_adapter_B1_planning_and_contract_diff_empty": true,
+  "expected_start": true,
+  "git_memory": [
+    {
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "peak_rss_bytes": 3997696,
+      "wall_seconds": 0.18102598190307617
+    },
+    {
+      "command": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "exit_code": 0,
+      "peak_rss_bytes": 3866624,
+      "wall_seconds": 0.004609107971191406
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "05c66ab379d87868a787ae78cdecbfb918c1730e",
+        "--",
+        "src/",
+        "tools/region_request.py",
+        "tools/sea_view/",
+        "docs/planning/",
+        "docs/prompts/B2/"
+      ],
+      "exit_code": 0,
+      "peak_rss_bytes": 5406720,
+      "wall_seconds": 0.12990069389343262
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--name-only",
+        "35225fd9547a00e4df202e7ab30204c633b2c845",
+        "--",
+        "tools/shade_map/",
+        "config/schema/shade_map_machine.schema.json",
+        "config/schema/shade_map_region.schema.json",
+        "config/machine.example.json",
+        "docs/shade_map/GUIDE.md"
+      ],
+      "exit_code": 0,
+      "peak_rss_bytes": 5406720,
+      "wall_seconds": 0.1364448070526123
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "35225fd9547a00e4df202e7ab30204c633b2c845",
+        "--",
+        "tools/shade_map/publication.py"
+      ],
+      "exit_code": 0,
+      "peak_rss_bytes": 5357568,
+      "wall_seconds": 0.005295753479003906
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--name-only"
+      ],
+      "exit_code": 0,
+      "peak_rss_bytes": 5357568,
+      "wall_seconds": 0.006306886672973633
+    }
+  ],
+  "head": "05c66ab379d87868a787ae78cdecbfb918c1730e",
+  "pinned_engine_hashes_match": true,
+  "runtime_coastline_or_vector_reader_matches": [],
+  "staged_before_final_add": ""
+}

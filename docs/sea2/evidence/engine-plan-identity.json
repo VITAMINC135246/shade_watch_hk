@@ -1,0 +1,18 @@
+{
+  "raw_plan_keys": [
+    "81c2b4e93f888c4969b25a6e75181c0ae53d0f51a8d2452cc1a5243e88cb6655"
+  ],
+  "sea_plan_keys": [
+    "543b068225490044a2f19347a8b2fb87b3e329c9a56f8436df7584c1e7d8e127"
+  ],
+  "disjoint_plan_keys": true,
+  "cache_directories": [
+    "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/processed/shade_v1/sea_fill_v2_df707ce89852"
+  ],
+  "expected_sea_cache_namespace": "sea_fill_v2_df707ce89852",
+  "policy_pair": {
+    "engine": "SW-V1-POLICY-1.0",
+    "sea": "SW-SEA-POLICY-2.0"
+  },
+  "view_id": "df707ce89852a65121e3ba4542da99814139db20b6bfc4459bdbf7a3eadcb6e2"
+}

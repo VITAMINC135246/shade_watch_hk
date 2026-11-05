@@ -1,0 +1,83 @@
+{
+  "schema": "sea2-development-campaign-1.0",
+  "events": [
+    {
+      "label": "view_facts",
+      "exit_code": 0,
+      "wall_seconds": 4.02124285697937,
+      "launcher_peak_rss_bytes": 364281856
+    },
+    {
+      "label": "sea_plan",
+      "exit_code": 0,
+      "wall_seconds": 77.57577228546143,
+      "launcher_peak_rss_bytes": 247054336
+    },
+    {
+      "label": "cheung_chau_sea",
+      "exit_code": 0,
+      "wall_seconds": 1128.9517590999603,
+      "launcher_peak_rss_bytes": 645103616
+    },
+    {
+      "label": "central_raw",
+      "exit_code": 0,
+      "wall_seconds": 135.46600103378296,
+      "launcher_peak_rss_bytes": 647921664
+    },
+    {
+      "label": "central_sea",
+      "exit_code": 0,
+      "wall_seconds": 154.86944007873535,
+      "launcher_peak_rss_bytes": 617185280
+    },
+    {
+      "label": "cheung_chau_void_impact",
+      "exit_code": 0,
+      "wall_seconds": 885.1900281906128,
+      "launcher_peak_rss_bytes": 639549440
+    },
+    {
+      "label": "cheung_chau_land_comparison",
+      "exit_code": 0,
+      "wall_seconds": 13.995450973510742,
+      "launcher_peak_rss_bytes": 293978112
+    },
+    {
+      "label": "central_land_comparison",
+      "exit_code": 0,
+      "wall_seconds": 3.825411796569824,
+      "launcher_peak_rss_bytes": 260980736
+    },
+    {
+      "label": "cheung_chau_sea_rays",
+      "exit_code": 0,
+      "wall_seconds": 5.650306940078735,
+      "launcher_peak_rss_bytes": 723304448
+    },
+    {
+      "label": "readable_sea_plan",
+      "exit_code": 0,
+      "wall_seconds": 129.27695608139038,
+      "launcher_peak_rss_bytes": 298123264
+    },
+    {
+      "label": "readable_complete_sea_run",
+      "exit_code": 0,
+      "wall_seconds": 68.94801712036133,
+      "launcher_peak_rss_bytes": 221691904
+    },
+    {
+      "label": "readable_void_resume",
+      "exit_code": 0,
+      "wall_seconds": 94.74564814567566,
+      "launcher_peak_rss_bytes": 337182720
+    }
+  ],
+  "view_id": "df707ce89852a65121e3ba4542da99814139db20b6bfc4459bdbf7a3eadcb6e2",
+  "F_publication": {
+    "cheung_chau_sea": true,
+    "central_sea": true
+  },
+  "campaign_stages_finished": true
+}

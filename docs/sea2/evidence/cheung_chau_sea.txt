@@ -1,0 +1,98 @@
+warning: could not open directory 'data/raw/coastline/': Permission denied
+Computing V2 batch f07abb24a72a
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+  File "/Users/vitaminc-macbook/.pyenv/versions/3.12.5/lib/python3.12/multiprocessing/spawn.py", line 122, in spawn_main
+    exitcode = _main(fd, parent_sentinel)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/vitaminc-macbook/.pyenv/versions/3.12.5/lib/python3.12/multiprocessing/spawn.py", line 131, in _main
+    prepare(preparation_data)
+  File "/Users/vitaminc-macbook/.pyenv/versions/3.12.5/lib/python3.12/multiprocessing/spawn.py", line 246, in prepare
+    _fixup_main_from_path(data['init_main_from_path'])
+  File "/Users/vitaminc-macbook/.pyenv/versions/3.12.5/lib/python3.12/multiprocessing/spawn.py", line 297, in _fixup_main_from_path
+    main_content = runpy.run_path(main_path,
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen runpy>", line 286, in run_path
+  File "<frozen runpy>", line 98, in _run_module_code
+  File "<frozen runpy>", line 88, in _run_code
+  File "/private/tmp/b2_blackout.py", line 26, in <module>
+    runpy.run_module(module,run_name='__main__')
+  File "<frozen runpy>", line 222, in run_module
+  File "<frozen runpy>", line 142, in _get_module_details
+ImportError: No module named --machine
+[1979 repeated worker bootstrap tracebacks summarized; full log SHA-256 267d4135a011ded9f102edb1e574696cf7efcfd6b9558bacb4538461440c4a49]
+Publishing 20260107/0710
+Publishing 20260107/0720
+Publishing 20260107/0730
+Publishing 20260107/0740
+Publishing 20260107/0750
+Publishing 20260107/0800
+Publishing 20260107/0810
+Publishing 20260107/0820
+Publishing 20260107/0830
+Publishing 20260107/0840
+Publishing 20260107/0850
+Publishing 20260107/0900
+Publishing 20260107/0910
+Publishing 20260107/0920
+Publishing 20260107/0930
+Publishing 20260107/0940
+Publishing 20260107/0950
+Publishing 20260107/1000
+Publishing 20260107/1010
+Publishing 20260107/1020
+Publishing 20260107/1030
+Publishing 20260107/1040
+Publishing 20260107/1050
+Publishing 20260107/1100
+Publishing 20260107/1110
+Publishing 20260107/1120
+Publishing 20260107/1130
+Publishing 20260107/1140
+Publishing 20260107/1150
+Publishing 20260107/1200
+Publishing 20260107/1210
+Publishing 20260107/1220
+Publishing 20260107/1230
+Publishing 20260107/1240
+Publishing 20260107/1250
+Publishing 20260107/1300
+Publishing 20260107/1310
+Publishing 20260107/1320
+Publishing 20260107/1330
+Publishing 20260107/1340
+Publishing 20260107/1350
+Publishing 20260107/1400
+Publishing 20260107/1410
+Publishing 20260107/1420
+Publishing 20260107/1430
+Publishing 20260107/1440
+Publishing 20260107/1450
+Publishing 20260107/1500
+Publishing 20260107/1510
+Publishing 20260107/1520
+Publishing 20260107/1530
+Publishing 20260107/1540
+Publishing 20260107/1550
+Publishing 20260107/1600
+Publishing 20260107/1610
+Publishing 20260107/1620
+Publishing 20260107/1630
+Publishing 20260107/1640
+Publishing 20260107/1650
+Publishing 20260107/1700
+Publishing 20260107/1710
+Publishing 20260107/1720
+Publishing 20260107/1730
+Publishing 20260107/1740
+Publishing 20260107/1750
+{
+  "schema": "shade-map-result-1.0",
+  "run_id": "0df94f9cecfd9a64e81a01824f1d1ea34494efabe487a0cff652f524f64ff5bf",
+  "name": "sea2_cheung_chau",
+  "status": "complete",
+  "published_frames": 65,
+  "reused_frames": 0,
+  "computed_batches": 1,
+  "verified_only": false
+}

@@ -1,0 +1,156 @@
+{
+  "schema": "shade-map-plan-1.0",
+  "run_id": "0df94f9cecfd9a64e81a01824f1d1ea34494efabe487a0cff652f524f64ff5bf",
+  "name": "sea2_cheung_chau",
+  "resolved_bounds": [
+    820250.0,
+    807200.0,
+    821750.0,
+    808400.0
+  ],
+  "grid": {
+    "width": 3000,
+    "height": 2400,
+    "transform": [
+      0.5,
+      0.0,
+      820250.0,
+      0.0,
+      -0.5,
+      808400.0
+    ],
+    "crs": "EPSG:2326",
+    "mode": "custom",
+    "selected_source": null,
+    "selected_sources": []
+  },
+  "pixel_count": 7200000,
+  "cells": [
+    {
+      "id": "e820250n807200",
+      "native_bounds": [
+        820250.0,
+        807200.0,
+        821000.0,
+        807800.0
+      ],
+      "bounds": [
+        820250.0,
+        807200.0,
+        821000.0,
+        807800.0
+      ],
+      "width": 1500,
+      "height": 1200,
+      "source_tile": "14NW19D(e820n807,e821n807).tif"
+    },
+    {
+      "id": "e821000n807200",
+      "native_bounds": [
+        821000.0,
+        807200.0,
+        821750.0,
+        807800.0
+      ],
+      "bounds": [
+        821000.0,
+        807200.0,
+        821750.0,
+        807800.0
+      ],
+      "width": 1500,
+      "height": 1200,
+      "source_tile": "14NW20C(e821n807,e821n807).tif"
+    },
+    {
+      "id": "e820250n807800",
+      "native_bounds": [
+        820250.0,
+        807800.0,
+        821000.0,
+        808400.0
+      ],
+      "bounds": [
+        820250.0,
+        807800.0,
+        821000.0,
+        808400.0
+      ],
+      "width": 1500,
+      "height": 1200,
+      "source_tile": "14NW19B(e820n807,e821n808).tif"
+    },
+    {
+      "id": "e821000n807800",
+      "native_bounds": [
+        821000.0,
+        807800.0,
+        821750.0,
+        808400.0
+      ],
+      "bounds": [
+        821000.0,
+        807800.0,
+        821750.0,
+        808400.0
+      ],
+      "width": 1500,
+      "height": 1200,
+      "source_tile": "14NW20A(e821n807,e821n808).tif"
+    }
+  ],
+  "dropped_times": [],
+  "sub_requests": 1,
+  "batches": 1,
+  "distinct_horizon_directions": 27,
+  "estimates": {
+    "label": "estimate",
+    "compute_wall_seconds": 3.091174841812199,
+    "estimator_models": [
+      {
+        "schema": "shade-watch-v2-estimator-1.0",
+        "sha256": "ad6939e4455d9e80495d27e382438d635f5cb9f0920601959e09bbbe2e721469",
+        "extrapolated": true
+      }
+    ],
+    "published_bytes": {
+      "label": "estimate",
+      "value": 2828566016
+    },
+    "working_bytes": {
+      "label": "estimate",
+      "value": 62303744
+    },
+    "file_count": {
+      "label": "estimate",
+      "value": 1239
+    }
+  },
+  "full_images": true,
+  "warnings": [],
+  "existing_run": {
+    "status": "complete",
+    "published_frames": 65,
+    "total_frames": 65
+  },
+  "frames": {
+    "count": 65,
+    "sha256_canonical_json": "95450eae415968bd285aed39ed318ff8db5cfeeaa78d32e86499681975cdb1af",
+    "first": {
+      "local_time": "2026-01-07T07:10:00+08:00",
+      "utc_time": "2026-01-06T23:10:00+00:00",
+      "date": "20260107",
+      "time": "0710"
+    },
+    "last": {
+      "local_time": "2026-01-07T17:50:00+08:00",
+      "utc_time": "2026-01-07T09:50:00+00:00",
+      "date": "20260107",
+      "time": "1750"
+    }
+  },
+  "captured_stdout": {
+    "bytes": 12850,
+    "sha256": "bb383c58099a1fca21a31111964c1844e71928d70535d6eadc418bb2c9ea98d5"
+  }
+}

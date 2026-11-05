@@ -1,0 +1,8 @@
+{
+  "stage": "cheung_chau_sea",
+  "observed": "Temporary permission-test launcher was re-imported by multiprocessing spawn; workers failed to start with ImportError: No module named --machine.",
+  "correction": "Guarded the temporary launcher entry point with __name__ == __main__. No repository engine, F or adapter code changed.",
+  "recovery": "The same controller and run ID continued; two worker processes became active and had written eight directional cache rasters at the measured check. No cache or state reset.",
+  "charged_to_same_real_job": true,
+  "observed_traceback": true
+}

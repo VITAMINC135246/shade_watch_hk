@@ -1,0 +1,22 @@
+{
+  "schema": "sea2-diagnostic-result-1.0",
+  "report": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/sea2_f_20261104/_diagnostics/void_impact/sea2_cheung_chau/void_impact.json",
+  "diagnostic_view": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/processed/dsm_views/sea_voidfill_v2_diagnostic/ea60db03d8710a2a9db1f09a77d3cf09b1b6541d0204a52fb1f28d6a8969aef3",
+  "work": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/sea2_diagnostic_work/sea2_cheung_chau-ea60db03d871",
+  "frames": 65,
+  "events": [
+    {
+      "id": "ccc9c9c07b85bcdf80ba67fc4b2a614aa374fd1d2794f46a1f89acee48fba99d",
+      "action": "submit_run",
+      "state": "SUCCEEDED"
+    }
+  ],
+  "dates": [
+    {
+      "date": "20260107",
+      "frames": 65,
+      "mean_void_attributable_fraction": 0.0,
+      "exceeds_10_percent": false
+    }
+  ]
+}

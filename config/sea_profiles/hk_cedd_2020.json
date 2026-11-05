@@ -1,0 +1,11 @@
+{
+  "schema": "sea-profile-1.0",
+  "profile_id": "hk_cedd_2020",
+  "vertical_datum": "HKPD",
+  "h_sea_m": 0.00,
+  "low_shore_margin_m": 5.00,
+  "max_shore_distance_m": 1000,
+  "shore_preference_m": 50,
+  "connectivity": 4,
+  "exclusions": []
+}

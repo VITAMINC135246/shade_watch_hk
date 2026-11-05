@@ -1,0 +1,11 @@
+{
+  "label": "run",
+  "module": "--machine",
+  "args": [
+    "docs/sea2/evidence/configs/machine.json",
+    "docs/sea2/evidence/configs/cheung_chau_sea.json"
+  ],
+  "original_mode": 0,
+  "access_denied": true,
+  "restored_mode": 0
+}

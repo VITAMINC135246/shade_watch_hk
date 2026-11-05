@@ -1,0 +1,21 @@
+{
+  "F_publication": {
+    "central_sea": true,
+    "cheung_chau_sea": true
+  },
+  "after": {
+    "F_manifest": "f2ac8657adad858a38c606aa3465bbf09186bb4754dc3233d86b692495878efe",
+    "diagnostic_csv": "5d7c128ba9ee2bbb7056743f64ed66367df6f38be1a49edf1de6edd2568c647a",
+    "diagnostic_json": "c30b31366eabcf932aba100b8a1c418558a662b48cb5b88c4ce933d1bd7599d7"
+  },
+  "before": {
+    "F_manifest": "f2ac8657adad858a38c606aa3465bbf09186bb4754dc3233d86b692495878efe",
+    "diagnostic_csv": "5d7c128ba9ee2bbb7056743f64ed66367df6f38be1a49edf1de6edd2568c647a",
+    "diagnostic_json": "c30b31366eabcf932aba100b8a1c418558a662b48cb5b88c4ce933d1bd7599d7"
+  },
+  "blackout_plan_run_id": "0df94f9cecfd9a64e81a01824f1d1ea34494efabe487a0cff652f524f64ff5bf",
+  "identical": true,
+  "plan_identity_equal": true,
+  "readable_plan_run_id": "0df94f9cecfd9a64e81a01824f1d1ea34494efabe487a0cff652f524f64ff5bf",
+  "view_id": "df707ce89852a65121e3ba4542da99814139db20b6bfc4459bdbf7a3eadcb6e2"
+}

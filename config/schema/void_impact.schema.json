@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "void_impact.schema.json",
+  "type": "object", "additionalProperties": false,
+  "required": ["schema","diagnostic","name","policy_run_id","sea_view_id","counterfactual_view_id","counterfactual_filled_void_pixels","frames","dates"],
+  "properties": {
+    "schema": {"type":"string","const":"void-impact-1.0"},
+    "diagnostic": {"type":"boolean","const":true},
+    "name": {"type":"string","minLength":1},
+    "policy_run_id": {"$ref":"#/$defs/hash"},
+    "sea_view_id": {"$ref":"#/$defs/hash"},
+    "counterfactual_view_id": {"$ref":"#/$defs/hash"},
+    "counterfactual_filled_void_pixels": {"type":"integer","minimum":0},
+    "frames": {"type":"array","items":{
+      "type":"object","additionalProperties":false,
+      "required":["date","time","utc_time","land_pixels","counts","fractions","void_attributable_fraction"],
+      "properties": {
+        "date":{"type":"string","pattern":"^[0-9]{8}$"},
+        "time":{"type":"string","pattern":"^[0-9]{4}$"},
+        "utc_time":{"type":"string","minLength":1},
+        "land_pixels":{"type":"integer","minimum":0},
+        "counts":{"$ref":"#/$defs/counts"},
+        "fractions":{"$ref":"#/$defs/fractions"},
+        "void_attributable_fraction":{"type":"number","minimum":0,"maximum":1}
+      }
+    }},
+    "dates":{"type":"array","items":{
+      "type":"object","additionalProperties":false,
+      "required":["date","frames","mean_void_attributable_fraction","exceeds_10_percent"],
+      "properties":{
+        "date":{"type":"string","pattern":"^[0-9]{8}$"},"frames":{"type":"integer","minimum":1},
+        "mean_void_attributable_fraction":{"type":"number","minimum":0,"maximum":1},
+        "exceeds_10_percent":{"type":"boolean"}
+      }
+    }}
+  },
+  "$defs": {
+    "hash":{"type":"string","pattern":"^[0-9a-f]{64}$"},
+    "counts":{"type":"object","additionalProperties":false,
+      "required":["void_pixels","void_caused","other_quality2","quality3","sunlit","shaded","quality4","void_caused_sunlit","void_caused_shaded","void_caused_quality3"],
+      "properties":{
+        "void_pixels":{"type":"integer","minimum":0},"void_caused":{"type":"integer","minimum":0},
+        "other_quality2":{"type":"integer","minimum":0},"quality3":{"type":"integer","minimum":0},
+        "sunlit":{"type":"integer","minimum":0},"shaded":{"type":"integer","minimum":0},
+        "quality4":{"type":"integer","minimum":0},"void_caused_sunlit":{"type":"integer","minimum":0},
+        "void_caused_shaded":{"type":"integer","minimum":0},"void_caused_quality3":{"type":"integer","minimum":0}
+      }},
+    "fractions":{"type":"object","additionalProperties":false,
+      "required":["void_pixels","void_caused","other_quality2","quality3","sunlit","shaded","quality4","void_caused_sunlit","void_caused_shaded","void_caused_quality3"],
+      "properties":{
+        "void_pixels":{"type":"number","minimum":0,"maximum":1},"void_caused":{"type":"number","minimum":0,"maximum":1},
+        "other_quality2":{"type":"number","minimum":0,"maximum":1},"quality3":{"type":"number","minimum":0,"maximum":1},
+        "sunlit":{"type":"number","minimum":0,"maximum":1},"shaded":{"type":"number","minimum":0,"maximum":1},
+        "quality4":{"type":"number","minimum":0,"maximum":1},"void_caused_sunlit":{"type":"number","minimum":0,"maximum":1},
+        "void_caused_shaded":{"type":"number","minimum":0,"maximum":1},"void_caused_quality3":{"type":"number","minimum":0,"maximum":1}
+      }}
+  }
+}

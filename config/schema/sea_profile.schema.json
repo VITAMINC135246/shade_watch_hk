@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "sea_profile.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "profile_id", "vertical_datum", "h_sea_m", "low_shore_margin_m", "max_shore_distance_m", "shore_preference_m", "connectivity", "exclusions"],
+  "properties": {
+    "schema": {"type": "string", "const": "sea-profile-1.0"},
+    "profile_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$"},
+    "vertical_datum": {"type": "string", "minLength": 1},
+    "h_sea_m": {"type": "number"},
+    "low_shore_margin_m": {"type": "number", "minimum": 0},
+    "max_shore_distance_m": {"type": "number", "minimum": 0.5},
+    "shore_preference_m": {"type": "number", "minimum": 0},
+    "connectivity": {"type": "integer", "const": 4},
+    "exclusions": {
+      "type": "array",
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["id", "bounds", "reason"],
+        "properties": {
+          "id": {"type": "string", "minLength": 1},
+          "bounds": {"type": "array", "minItems": 4, "maxItems": 4, "items": {"type": "number"}},
+          "reason": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}

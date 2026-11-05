@@ -1,0 +1,44 @@
+[
+  {
+    "command": [
+      "git",
+      "diff",
+      "--name-only"
+    ],
+    "exit_code": 0,
+    "peak_rss_bytes": 4800512
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "35225fd9547a00e4df202e7ab30204c633b2c845",
+      "--",
+      "tools/shade_map/"
+    ],
+    "exit_code": 0,
+    "peak_rss_bytes": 5652480
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "356f611d7b775ce31006904b80ca31d3c1c484b2",
+      "--",
+      "src/"
+    ],
+    "exit_code": 0,
+    "peak_rss_bytes": 5324800
+  },
+  {
+    "command": [
+      "git",
+      "diff",
+      "f5f24ac",
+      "--",
+      "tools/region_request.py"
+    ],
+    "exit_code": 0,
+    "peak_rss_bytes": 5357568
+  }
+]

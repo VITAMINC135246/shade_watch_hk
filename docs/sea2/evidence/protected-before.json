@@ -1,0 +1,17 @@
+{
+  "data/raw": {
+    "files": 7170,
+    "bytes": 26931292458,
+    "inventory_sha256": "eea3b55cbe610bf5c9912a4829da95e2e2c6011044111e1b98f17188de8dc1bc"
+  },
+  "data/processed": {
+    "files": 3365,
+    "bytes": 7687482866,
+    "inventory_sha256": "baa248ef1a0ce3729d75087983ce76d63db479c7aa8032f81fbdb3139b7f1854"
+  },
+  "outputs": {
+    "files": 39702,
+    "bytes": 3388054767,
+    "inventory_sha256": "d2e5b3c9e525ea7e262129817dd7d73733dd1d2fbb3e22c68a6238dddcc89a0f"
+  }
+}

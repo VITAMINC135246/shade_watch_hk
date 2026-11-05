@@ -1,6 +1,7 @@
 {
   "schema": "shade-map-machine-1.0",
   "dsm_dir": "data/raw/dsm/2020/D12.DSM.TIFF",
+  "sea_profile": "hk_cedd_2020",
   "output_root": "outputs/shade_map",
   "cache_namespace": "shade_map_raw",
   "workers": 1,

@@ -1,0 +1,21 @@
+{
+  "view_id": "df707ce89852a65121e3ba4542da99814139db20b6bfc4459bdbf7a3eadcb6e2",
+  "path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/processed/dsm_views/sea_fill_v2/df707ce89852a65121e3ba4542da99814139db20b6bfc4459bdbf7a3eadcb6e2",
+  "profile_sha256": "f958a307dbae3fa8539cadd1d3d1fd30c41633aba15e3fc2afe161d7215f05c5",
+  "cells": 7128,
+  "tiles": 4411,
+  "supplied_tiles": 3310,
+  "synthetic_tiles": 1101,
+  "derived_tiles_checked_in_build": 1472,
+  "water_free_tiles": 1838,
+  "totals": {
+    "0": 4384416867,
+    "1": 1453438606,
+    "2": 1315054618,
+    "254": 5285979918,
+    "255": 93109991
+  },
+  "totals_reconcile": true,
+  "synthetic_inventory_exact": true,
+  "cold_cache_before_plan": true
+}

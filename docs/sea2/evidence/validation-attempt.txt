@@ -1,0 +1,1 @@
+validation NOT VERIFIED: separate tools reader unavailable or not pinned; expected {'certifi': '2025.8.3', 'numpy': '2.2.6', 'packaging': '25.0', 'pyogrio': '0.11.1', 'shapely': '2.1.1'}; found {'certifi': None, 'numpy': None, 'packaging': None, 'pyogrio': None, 'shapely': None}

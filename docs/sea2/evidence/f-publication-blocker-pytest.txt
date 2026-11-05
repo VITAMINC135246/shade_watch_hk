@@ -1,0 +1,121 @@
+........................................................................ [ 26%]
+..................................F..................................... [ 52%]
+........................................................................ [ 79%]
+........................................................                 [100%]
+=================================== FAILURES ===================================
+____________ test_F_publication_preserves_all_five_surface_classes _____________
+
+catalogue = (PosixPath('/private/var/folders/98/rgkcc9kx5z9dqgkmfj7xrmz40000gn/T/pytest-of-vitaminc-macbook/pytest-40/test_F_publi...output_root': 'outputs/published', 'cache_namespace': 'fixture_raw'}, <function catalogue.<locals>.put at 0x10ea2b7e0>)
+
+    def test_F_publication_preserves_all_five_surface_classes(catalogue):
+        from tools.shade_map.runner import run_region
+        raw,p,machine,put=catalogue
+        a=np.ones((6,8),np.float32);a[:,7]=20;a[-1,7]=1;a[0,0]=-9999;a[2,2]=-9999
+        put(0,0,a);result=build(machine,profile=p)
+        region=dict(schema='shade-map-region-1.0',name='five_classes',crs='hk1980',lower_left=[800000,820000],
+                    upper_right=[800006,820003],time=dict(mode='instants',instants=['2026-01-07T12:30']),dsm_source='sea-2.0')
+>       run_region(region,machine)
+
+tests/test_sea2_view.py:149:
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tools/shade_map/runner.py:182: in run_region
+    return _run_region(region,machine,started,lock_held=False)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+tools/shade_map/runner.py:268: in _run_region
+    record,written=publish_frame(prepared,expected,sidecar,mosaics)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+prepared = Prepared(region={'schema': 'shade-map-region-1.0', 'name': 'five_classes', 'crs': 'hk1980', 'lower_left': [800000.0, 8...fj7xrmz40000gn/T/pytest-of-vitaminc-macbook/pytest-40/test_F_publication_preserves_a0/outputs/published/five_classes'))
+frame = {'local_time': '2026-01-07T12:30:00+08:00', 'utc_time': '2026-01-07T04:30:00+00:00', 'date': '20260107', 'time': '1230'}
+sidecar = {'schema': 'shade-watch-region-request-1.1', 'contract': 'SW-RGN-AC-1.1', 'original_corners': [[800000.0, 820000.0], [800006.0, 820003.0]], 'crs': 'hk1980', ...}
+mosaics = [PosixPath('/private/var/folders/98/rgkcc9kx5z9dqgkmfj7xrmz40000gn/T/pytest-of-vitaminc-macbook/pytest-40/test_F_publi...five_classes-92478b4b1c40/state/bef600446f0ec14b2a9cf4221baf2364b66843488b0e7a3e44087d8fb8fa5b48.logical_mosaic.json')]
+
+    def publish_frame(prepared, frame, sidecar, mosaics):
+        """Write -> independently read back -> rename. No source-name branches."""
+        parent = prepared.folder/frame['date']
+        parent.mkdir(parents=True, exist_ok=True)
+        final, partial = parent/frame['time'], parent/(frame['time']+'.partial')
+        if partial.exists():
+            if partial.is_symlink():
+                raise RuntimeError('Partial publication cannot be a symlink')
+            shutil.rmtree(partial)
+        if final.exists():
+            return verify_frame(final, frame), False
+        partial.mkdir()
+        counts = {layer: Counter() for layer in LAYERS}
+        combinations = Counter()
+        plan = prepared.document
+        for cell in plan['cells']:
+            shade, quality, transform = adapter.read_region_window(sidecar, utc_time=frame['utc_time'],
+                                                                   bounds=cell['bounds'], logical_mosaics=mosaics)
+            if transform != raster_profile(cell['bounds'])['transform']:
+                raise RuntimeError('Logical cell transform differs')
+            surface = prepared.source.read_surface(cell['bounds'], prepared.records)
+            for layer, array, allowed in zip(LAYERS, (shade,quality,surface),
+                                             ([0,1,255], list(map(int,v1.QUALITY)), [0,1,255])):
+                if array.dtype != np.uint8 or array.shape != shade.shape or not np.all(np.isin(array, allowed)):
+>                   raise RuntimeError(f'Invalid {layer} provider/engine encoding')
+E                   RuntimeError: Invalid surface provider/engine encoding
+
+tools/shade_map/publication.py:143: RuntimeError
+----------------------------- Captured stderr call -----------------------------
+sea2 connectivity: 1/9
+sea2 connectivity: 9/9
+sea2 surface: 1/9
+sea2 surface: 9/9
+warning: could not open directory 'data/raw/coastline/': Permission denied
+Computing V2 batch bef600446f0e
+Publishing 20260107/1230
+=============================== warnings summary ===============================
+tests/test_chunking.py: 60 warnings
+tests/test_core.py: 2 warnings
+tests/test_region_request.py: 135 warnings
+tests/test_region_request_v1_1.py: 195 warnings
+tests/test_sea2_diagnostic.py: 176 warnings
+tests/test_sea2_view.py: 221 warnings
+tests/test_sea_masks.py: 8 warnings
+tests/test_shade_map.py: 2710 warnings
+tests/test_v1.py: 59 warnings
+tests/test_v2.py: 113 warnings
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/.venv/lib/python3.12/site-packages/rasterio/transform.py:178: PendingDeprecationWarning: Use `@` matmul instead of `*` mul operator for matrix multiplication
+    return Affine.translation(west, north) * Affine.scale(xsize, -ysize)
+
+tests/test_chunking.py: 30 warnings
+tests/test_region_request_v1_1.py: 6 warnings
+tests/test_v1.py: 70 warnings
+tests/test_v2.py: 53 warnings
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/src/spatial.py:49: PendingDeprecationWarning: Use `@` matmul instead of `*` mul operator for matrix multiplication
+    return self.affine * Affine.translation(core[0], core[1])
+
+tests/test_core.py::test_cross_tile_blocker_and_nodata
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/.venv/lib/python3.12/site-packages/rasterio/merge.py:341: PendingDeprecationWarning: Use `@` matmul instead of `*` mul operator for matrix multiplication
+    output_transform = Affine.translation(dst_w, dst_n) * Affine.scale(
+
+tests/test_core.py::test_cross_tile_blocker_and_nodata
+tests/test_core.py::test_cross_tile_blocker_and_nodata
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/.venv/lib/python3.12/site-packages/rasterio/windows.py:387: PendingDeprecationWarning: Use `@` matmul instead of `*` mul operator for matrix multiplication
+    left, bottom = transform * (col_min, row_max)
+
+tests/test_core.py::test_cross_tile_blocker_and_nodata
+tests/test_core.py::test_cross_tile_blocker_and_nodata
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/.venv/lib/python3.12/site-packages/rasterio/windows.py:388: PendingDeprecationWarning: Use `@` matmul instead of `*` mul operator for matrix multiplication
+    right, top = transform * (col_max, row_min)
+
+tests/test_core.py::test_cross_tile_blocker_and_nodata
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/.venv/lib/python3.12/site-packages/rasterio/windows.py:360: PendingDeprecationWarning: Use `@` matmul instead of `*` mul operator for matrix multiplication
+    x, y = transform * (window.col_off or 0.0, window.row_off or 0.0)
+
+tests/test_core.py::test_cross_tile_blocker_and_nodata
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/.venv/lib/python3.12/site-packages/rasterio/windows.py:361: PendingDeprecationWarning: Use `@` matmul instead of `*` mul operator for matrix multiplication
+    return Affine.translation(
+
+tests/test_sea2_diagnostic.py: 6 warnings
+tests/test_shade_map.py: 192 warnings
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/tools/shade_map/publication.py:96: PendingDeprecationWarning: is_tiled will be removed in a future version. Please consider copying the body of this function into your program or module.
+    or ds.compression.value != 'DEFLATE' or not ds.is_tiled
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ============================
+FAILED tests/test_sea2_view.py::test_F_publication_preserves_all_five_surface_classes
+1 failed, 271 passed, 4043 warnings in 74.49s (0:01:14)

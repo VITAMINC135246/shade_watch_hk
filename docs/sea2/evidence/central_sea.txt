@@ -1,0 +1,15 @@
+warning: could not open directory 'data/raw/coastline/': Permission denied
+Computing V2 batch b7c2fe2fd212
+Publishing 20260107/0830
+Publishing 20260107/1230
+Publishing 20260107/1510
+{
+  "schema": "shade-map-result-1.0",
+  "run_id": "61717ff6c792761038e349488e426d0916572d244d3256b31ce81dd90dcefdd4",
+  "name": "sea2_central_sea",
+  "status": "complete",
+  "published_frames": 3,
+  "reused_frames": 0,
+  "computed_batches": 1,
+  "verified_only": false
+}

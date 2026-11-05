@@ -1,0 +1,25 @@
+Waiting for the remaining guarded build to complete
+B2_CAMPAIGN_START view_facts
+B2_CAMPAIGN_END {"label": "view_facts", "exit_code": 0, "wall_seconds": 4.02124285697937, "launcher_peak_rss_bytes": 364281856}
+B2_CAMPAIGN_START sea_plan
+B2_CAMPAIGN_END {"label": "sea_plan", "exit_code": 0, "wall_seconds": 77.57577228546143, "launcher_peak_rss_bytes": 247054336}
+B2_CAMPAIGN_START cheung_chau_sea
+B2_CAMPAIGN_END {"label": "cheung_chau_sea", "exit_code": 0, "wall_seconds": 1128.9517590999603, "launcher_peak_rss_bytes": 645103616}
+B2_CAMPAIGN_START central_raw
+B2_CAMPAIGN_END {"label": "central_raw", "exit_code": 0, "wall_seconds": 135.46600103378296, "launcher_peak_rss_bytes": 647921664}
+B2_CAMPAIGN_START central_sea
+B2_CAMPAIGN_END {"label": "central_sea", "exit_code": 0, "wall_seconds": 154.86944007873535, "launcher_peak_rss_bytes": 617185280}
+B2_CAMPAIGN_START cheung_chau_void_impact
+B2_CAMPAIGN_END {"label": "cheung_chau_void_impact", "exit_code": 0, "wall_seconds": 885.1900281906128, "launcher_peak_rss_bytes": 639549440}
+B2_CAMPAIGN_START cheung_chau_land_comparison
+B2_CAMPAIGN_END {"label": "cheung_chau_land_comparison", "exit_code": 0, "wall_seconds": 13.995450973510742, "launcher_peak_rss_bytes": 293978112}
+B2_CAMPAIGN_START central_land_comparison
+B2_CAMPAIGN_END {"label": "central_land_comparison", "exit_code": 0, "wall_seconds": 3.825411796569824, "launcher_peak_rss_bytes": 260980736}
+B2_CAMPAIGN_START cheung_chau_sea_rays
+B2_CAMPAIGN_END {"label": "cheung_chau_sea_rays", "exit_code": 0, "wall_seconds": 5.650306940078735, "launcher_peak_rss_bytes": 723304448}
+B2_CAMPAIGN_START readable_sea_plan
+B2_CAMPAIGN_END {"label": "readable_sea_plan", "exit_code": 0, "wall_seconds": 129.27695608139038, "launcher_peak_rss_bytes": 298123264}
+B2_CAMPAIGN_START readable_complete_sea_run
+B2_CAMPAIGN_END {"label": "readable_complete_sea_run", "exit_code": 0, "wall_seconds": 68.94801712036133, "launcher_peak_rss_bytes": 221691904}
+B2_CAMPAIGN_START readable_void_resume
+B2_CAMPAIGN_END {"label": "readable_void_resume", "exit_code": 0, "wall_seconds": 94.74564814567566, "launcher_peak_rss_bytes": 337182720}

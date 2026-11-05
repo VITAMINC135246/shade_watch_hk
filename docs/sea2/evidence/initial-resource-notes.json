@@ -1,0 +1,30 @@
+{
+  "note": "Actual measured setup process values retained from the initial tool transcript. Setup discovery without an RSS result is not silently marked measured.",
+  "observed_before_persistent_ledger": [
+    {
+      "label": "contract read and hash verification",
+      "peak_rss_bytes": 16957440
+    },
+    {
+      "label": "initial git status",
+      "peak_rss_bytes": 10223616
+    },
+    {
+      "label": "initial git rev-parse",
+      "peak_rss_bytes": 3932160
+    },
+    {
+      "label": "initial git log",
+      "peak_rss_bytes": 5242880
+    },
+    {
+      "label": "required design read",
+      "peak_rss_bytes": 16728064
+    },
+    {
+      "label": "provider/config/planning/decision read",
+      "peak_rss_bytes": 12075008
+    }
+  ],
+  "standard_time_setup_rss": "unavailable: host denied kern.clockrate"
+}

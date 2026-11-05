@@ -1,0 +1,78 @@
+{
+  "attribution": "Every sunlit loss is counted against a raised owning-tile threshold or a reconstructed maximum blocker on class 1/2 water.",
+  "blocker_examples": [],
+  "frames": [
+    {
+      "date": "20260107",
+      "explained_by_raised_threshold": 0,
+      "former_quality2_to_shade": {
+        "0": 0,
+        "1": 0,
+        "255": 1088
+      },
+      "land_pixels": 7026501,
+      "observed_land_pixels": 7026501,
+      "shaded_to_sunlit": 0,
+      "sunlit_to_non_sunlit": 0,
+      "time": "0830",
+      "unfilled_pixels_with_non255_shade": 0,
+      "utc_time": "2026-01-07T00:30:00+00:00"
+    },
+    {
+      "date": "20260107",
+      "explained_by_raised_threshold": 0,
+      "former_quality2_to_shade": {
+        "0": 0,
+        "1": 0,
+        "255": 0
+      },
+      "land_pixels": 7026501,
+      "observed_land_pixels": 7026501,
+      "shaded_to_sunlit": 0,
+      "sunlit_to_non_sunlit": 0,
+      "time": "1230",
+      "unfilled_pixels_with_non255_shade": 0,
+      "utc_time": "2026-01-07T04:30:00+00:00"
+    },
+    {
+      "date": "20260107",
+      "explained_by_raised_threshold": 0,
+      "former_quality2_to_shade": {
+        "0": 0,
+        "1": 0,
+        "255": 0
+      },
+      "land_pixels": 7026501,
+      "observed_land_pixels": 7026501,
+      "shaded_to_sunlit": 0,
+      "sunlit_to_non_sunlit": 0,
+      "time": "1510",
+      "unfilled_pixels_with_non255_shade": 0,
+      "utc_time": "2026-01-07T07:10:00+00:00"
+    }
+  ],
+  "passed": true,
+  "published_surface_verified": true,
+  "raw_run_id": "83cfba55f3efc971e78bda142636b6883c977d21989e63f3cb791e323d9898ce",
+  "schema": "sea2-land-regression-1.0",
+  "sea_evidence_source": "F publication",
+  "sea_run_id": "61717ff6c792761038e349488e426d0916572d244d3256b31ce81dd90dcefdd4",
+  "thresholds": {
+    "11SW13B(e833n815,e834n815).tif": {
+      "new_threshold_deg": 28.173461296722365,
+      "old_threshold_deg": 28.173461296722365
+    },
+    "11SW14A(e834n815,e835n815).tif": {
+      "new_threshold_deg": 26.999116527181165,
+      "old_threshold_deg": 26.999116527181165
+    },
+    "11SW8D(e833n815,e834n816).tif": {
+      "new_threshold_deg": 29.55446427542758,
+      "old_threshold_deg": 29.55446427542758
+    },
+    "11SW9C(e834n815,e835n816).tif": {
+      "new_threshold_deg": 23.87884804677425,
+      "old_threshold_deg": 23.87884804677425
+    }
+  }
+}

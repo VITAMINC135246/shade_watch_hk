@@ -1,0 +1,25 @@
+{
+  "status": "FAIL",
+  "criterion": "B2-08",
+  "file": "tools/shade_map/publication.py",
+  "line": 141,
+  "file_sha256": "b08f3c7f92bb30b87b5b0fd70dd1633dcfd9faa34120bfa551a9089c472a3ed8",
+  "accepted_F1": "35225fd9547a00e4df202e7ab30204c633b2c845",
+  "existing_surface_allowlist": [
+    0,
+    1,
+    255
+  ],
+  "required_surface_classes": [
+    0,
+    1,
+    2,
+    254,
+    255
+  ],
+  "observed_error": "Invalid surface provider/engine encoding",
+  "test": "tests/test_sea2_view.py::test_F_publication_preserves_all_five_surface_classes",
+  "log": "f-publication-blocker-pytest.txt",
+  "authorized_to_change_publication": false,
+  "proposed_follow_up": "A new agreed amendment could allow only changing the surface allowlist to [0,1,2,254,255]. Keep shade and quality validation unchanged, then rerun the same fixture and both raw identity plans."
+}

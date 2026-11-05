@@ -1,0 +1,8 @@
+{
+  "downloads": false,
+  "engine_environment_changed": false,
+  "environment": "/private/tmp/shade_watch_tools_b2_20261104",
+  "package_origin": "/private/tmp/shade_watch_tools_20261029/lib/python3.12/site-packages",
+  "reason": "Created a separate launcher pointing at the historical package directories. The follow-up audit found zero reader/library files; no usable pinned reader was recovered.",
+  "usable": false
+}

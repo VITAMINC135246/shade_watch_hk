@@ -1,0 +1,6 @@
+{
+  "pid": 30099,
+  "wall_seconds": 1292.2828860282898,
+  "reason": "Code review: retain actual native centre offsets for distance calculations; lattice rounding is connectivity-only",
+  "remaining_seconds": 2307.717113018036
+}

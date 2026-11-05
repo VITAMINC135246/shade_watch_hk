@@ -1,0 +1,14 @@
+{
+  "historical_environment": "/private/tmp/shade_watch_tools_20261029",
+  "historical_reader_package_files": 0,
+  "pinned_reader_available": false,
+  "local_metadata_candidates": [],
+  "offline_wheels_found": {
+    "packaging": {
+      "path": "/Users/vitaminc-macbook/Library/Caches/pip/http-v2/7/b/6/b/b/7b6bbe6761c4b96a22fceae90ae94b84afddc06ce20edb28bf2eaf86.body",
+      "version": "25.0",
+      "metadata": "packaging-25.0.dist-info/METADATA"
+    }
+  },
+  "downloads_performed": false
+}

@@ -175,6 +175,28 @@ keyword arguments are `name`, `crs='wgs84'`,
 The running API writes `region_config.json`, which can be given directly to the
 CLI. Planning and running share their validators and implementation with the CLI.
 
+## Optional DSM-only sea source (B2.0 candidate)
+
+Set the optional machine `sea_profile` to `hk_cedd_2020` (the default), build once
+with `.venv/bin/python -m tools.sea2 build --machine config/machine.local.json`,
+then use a distinct region name with `"dsm_source": "sea-2.0"`. The ordinary
+F plan/run/resume/prune commands and publication layout apply. A missing/stale
+view requires rebuilding; plans never build it automatically. Machine settings
+remain outside `run_id`; the profile reaches identity through the provider's
+view/profile/content hashes. The manifest records both scientific policies and
+the view ID, and the provider selects its isolated view-specific cache.
+
+Surface adds 1 (water in supplied DSM), 2 (water in an empty native cell), 254
+(open unfilled NoData), and 255 (enclosed land void). The provider reads all
+five classes unchanged. The frozen F1.0 publication check accepts only 0/1/255;
+a frame containing 2 or 254 is refused after the engine work completes. This
+blocker needs a new agreed amendment before publication can be changed.
+Unfilled 254/255 targets remain shade 255 in the engine work.
+Read [the B2 guide](../sea2/GUIDE.md) for building, the diagnostic 10% trigger,
+report-only iB5000 validation, frozen-profile rules and limitations. B2 is a
+development candidate pending independent acceptance; observations remain
+NOT VERIFIED, and shade is not cooling or ΔT.
+
 ## Limitations
 
 In F1.0, sea and other DSM NoData remain **255**, so coastal land is often

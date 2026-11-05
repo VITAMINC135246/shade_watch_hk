@@ -1,0 +1,236 @@
+{
+  "config/regions/cheung_chau.json": {
+    "run_id": "c196a09a3a213e0720b8dcb5ea5b4edb32ad217fcabcb70a930a9b17b458878e",
+    "frames": 65,
+    "plan_keys": [
+      "81c2b4e93f888c4969b25a6e75181c0ae53d0f51a8d2452cc1a5243e88cb6655"
+    ],
+    "source_identity": {
+      "provider": "raw",
+      "sources": [
+        {
+          "name": "14NW13B(e818n809,e819n809).tif",
+          "sha256": "a2ab58eeae0b371fdf0b3869c1bbd540ec4c8030c6d7b9ca0c78984c81871741",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW13D(e818n808,e819n809).tif",
+          "sha256": "c040eea09d081888d28010f9eea0b76d13d774a58516fa7b65caec1afc36af4c",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW14A(e819n809,e820n809).tif",
+          "sha256": "fbd6188e6ebf18300ac793e0014670f6a63f838668f27a1ea8513b472e2df695",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW14B(e820n809,e821n809).tif",
+          "sha256": "407a271bb3dc034f6b7a70a35f0800e626d92c3f1b504f97ff63a267071fccfc",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW14D(e820n808,e821n809).tif",
+          "sha256": "c106bec62b247bc61685bdbc45407214b9aa4ae1f18e3f3f01f8651cd274d946",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW15A(e821n809,e821n809).tif",
+          "sha256": "c2f44d47ff894998bb7c6de94244545d83230770c937310b183a6a135aca1284",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW15C(e821n808,e821n809).tif",
+          "sha256": "981f6147c2d08a9775dd8716b9d75caa07dde4a621ca159d268ac65d3893b8bf",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW19A(e819n807,e820n808).tif",
+          "sha256": "6d64eb17e2151d2b48980f00a413c5a87eff40a6d72e11b567763cffc653bba9",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW19B(e820n807,e821n808).tif",
+          "sha256": "b9fe8ffeb55c7fc688d2874ee8991c7007b739b484a532d69f5e7a9c70142341",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW19C(e819n807,e820n807).tif",
+          "sha256": "172f6d70803d85b24a01fc359e04b4150e7f56b2291529db455031b71cac56be",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW19D(e820n807,e821n807).tif",
+          "sha256": "401e5c5fbfa25e4fa69217a0f2378e0f27aeeb9caa4bb92e3d0cbe558ccdc1de",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW20A(e821n807,e821n808).tif",
+          "sha256": "dba86684d89677ae1be23e96500fa98166c564a43b7cf7e36f84f5c711e70daa",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW20B(e821n807,e822n808).tif",
+          "sha256": "ef5b50207cb8171443088b8964c9b0fadad60ad7a876c49ce28cbe424a561b48",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW20C(e821n807,e821n807).tif",
+          "sha256": "be2ff4e4f0f6ea17b450253202ef85e1cf68a161a53b2af6614c0e2c2f7521b2",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW20D(e821n807,e822n807).tif",
+          "sha256": "0400d322b0be365e2c69423009dc614e0a611f0cda122a394e86c8e2816153bd",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW24A(e819n806,e820n807).tif",
+          "sha256": "094cc02740331fb67d29126b635807ee36877536c68974529e1addc47c4dbd8f",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW24B(e820n806,e821n807).tif",
+          "sha256": "73a031f349d752bcdf6b4360c605e07d5c0b809b46c0a50180ad04e5cfad2b67",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW24C(e819n806,e820n806).tif",
+          "sha256": "e4c112838037b105b107edeced6036e76824847ad552bdc9889aa5913e45ec31",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW24D(e820n806,e821n806).tif",
+          "sha256": "c0b813f96361327d26cf595fbca27cd2f649b348002909aae9d27fd7a55c9096",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW25A(e821n806,e821n807).tif",
+          "sha256": "ea289bc0f26d09594a54cfcaab35d6ffedfabbe390ac9b6335bfccdac4feea0a",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW25B(e821n806,e822n807).tif",
+          "sha256": "9b2bd38997633e8ac9b3fb97953ece1e12698b0d028024f9dda13dd8e90241c3",
+          "auxiliary": []
+        }
+      ]
+    }
+  },
+  "docs/sea2/evidence/configs/f1_cheung_chau.json": {
+    "run_id": "e608af7ffe4181f3d097ce3f776f464b5b79fc67f1c1e5dc12bc6806a421b1ca",
+    "frames": 65,
+    "plan_keys": [
+      "81c2b4e93f888c4969b25a6e75181c0ae53d0f51a8d2452cc1a5243e88cb6655"
+    ],
+    "source_identity": {
+      "provider": "raw",
+      "sources": [
+        {
+          "name": "14NW13B(e818n809,e819n809).tif",
+          "sha256": "a2ab58eeae0b371fdf0b3869c1bbd540ec4c8030c6d7b9ca0c78984c81871741",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW13D(e818n808,e819n809).tif",
+          "sha256": "c040eea09d081888d28010f9eea0b76d13d774a58516fa7b65caec1afc36af4c",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW14A(e819n809,e820n809).tif",
+          "sha256": "fbd6188e6ebf18300ac793e0014670f6a63f838668f27a1ea8513b472e2df695",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW14B(e820n809,e821n809).tif",
+          "sha256": "407a271bb3dc034f6b7a70a35f0800e626d92c3f1b504f97ff63a267071fccfc",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW14D(e820n808,e821n809).tif",
+          "sha256": "c106bec62b247bc61685bdbc45407214b9aa4ae1f18e3f3f01f8651cd274d946",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW15A(e821n809,e821n809).tif",
+          "sha256": "c2f44d47ff894998bb7c6de94244545d83230770c937310b183a6a135aca1284",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW15C(e821n808,e821n809).tif",
+          "sha256": "981f6147c2d08a9775dd8716b9d75caa07dde4a621ca159d268ac65d3893b8bf",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW19A(e819n807,e820n808).tif",
+          "sha256": "6d64eb17e2151d2b48980f00a413c5a87eff40a6d72e11b567763cffc653bba9",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW19B(e820n807,e821n808).tif",
+          "sha256": "b9fe8ffeb55c7fc688d2874ee8991c7007b739b484a532d69f5e7a9c70142341",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW19C(e819n807,e820n807).tif",
+          "sha256": "172f6d70803d85b24a01fc359e04b4150e7f56b2291529db455031b71cac56be",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW19D(e820n807,e821n807).tif",
+          "sha256": "401e5c5fbfa25e4fa69217a0f2378e0f27aeeb9caa4bb92e3d0cbe558ccdc1de",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW20A(e821n807,e821n808).tif",
+          "sha256": "dba86684d89677ae1be23e96500fa98166c564a43b7cf7e36f84f5c711e70daa",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW20B(e821n807,e822n808).tif",
+          "sha256": "ef5b50207cb8171443088b8964c9b0fadad60ad7a876c49ce28cbe424a561b48",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW20C(e821n807,e821n807).tif",
+          "sha256": "be2ff4e4f0f6ea17b450253202ef85e1cf68a161a53b2af6614c0e2c2f7521b2",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW20D(e821n807,e822n807).tif",
+          "sha256": "0400d322b0be365e2c69423009dc614e0a611f0cda122a394e86c8e2816153bd",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW24A(e819n806,e820n807).tif",
+          "sha256": "094cc02740331fb67d29126b635807ee36877536c68974529e1addc47c4dbd8f",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW24B(e820n806,e821n807).tif",
+          "sha256": "73a031f349d752bcdf6b4360c605e07d5c0b809b46c0a50180ad04e5cfad2b67",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW24C(e819n806,e820n806).tif",
+          "sha256": "e4c112838037b105b107edeced6036e76824847ad552bdc9889aa5913e45ec31",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW24D(e820n806,e821n806).tif",
+          "sha256": "c0b813f96361327d26cf595fbca27cd2f649b348002909aae9d27fd7a55c9096",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW25A(e821n806,e821n807).tif",
+          "sha256": "ea289bc0f26d09594a54cfcaab35d6ffedfabbe390ac9b6335bfccdac4feea0a",
+          "auxiliary": []
+        },
+        {
+          "name": "14NW25B(e821n806,e822n807).tif",
+          "sha256": "9b2bd38997633e8ac9b3fb97953ece1e12698b0d028024f9dda13dd8e90241c3",
+          "auxiliary": []
+        }
+      ]
+    }
+  }
+}

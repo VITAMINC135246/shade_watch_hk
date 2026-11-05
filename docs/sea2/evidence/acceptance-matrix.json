@@ -1,0 +1,147 @@
+{
+  "B2-01": {
+    "evidence": [
+      "start.json",
+      "final-scope-audit.json",
+      "engine-environment.json",
+      "tools-environment.json"
+    ],
+    "finding": "Engine, adapter, B1 and allowed F diff verified; the separate pinned tools environment could not be instantiated.",
+    "status": "NOT VERIFIED"
+  },
+  "B2-02": {
+    "evidence": [
+      "DSM-only-build-2-corrected.json",
+      "DSM-only-sea_plan.json",
+      "DSM-only-cheung_chau_sea.json",
+      "DSM-only-cheung_chau_void_impact.json",
+      "DSM-only-equivalence.json",
+      "final-scope-audit.json"
+    ],
+    "finding": "Build, plan, F run and void-impact completed while coastline access was denied. The readable plan kept the same view and run IDs; F verification and diagnostic resume preserved the manifest and CSV/JSON hashes. The runtime code audit found no coastline reader.",
+    "status": "PASS"
+  },
+  "B2-03": {
+    "evidence": [
+      "pytest-native-centres.txt",
+      "pytest-full.txt"
+    ],
+    "finding": "Hand-computed open, high/low/preference/range, enclosed and empty cells, diagonal, border and exclusion fixtures.",
+    "status": "PASS"
+  },
+  "B2-04": {
+    "evidence": [
+      "pytest-distance.txt",
+      "pytest-native-centres.txt",
+      "pytest-full.txt"
+    ],
+    "finding": "Overlapping aligned surface requests match; independent one-pass EDT matches tiled and certified blocks.",
+    "status": "PASS"
+  },
+  "B2-05": {
+    "evidence": [
+      "build-2-corrected.txt",
+      "view-facts.json",
+      "catalogue-metadata-groups.json"
+    ],
+    "finding": "All 1,472 changed supplied tiles passed bitwise preservation outside water, exact float32 sea height and metadata checks. Territory and per-cell counts reconcile; the four native transforms and NoData values were retained.",
+    "status": "PASS"
+  },
+  "B2-06": {
+    "evidence": [
+      "view-facts.json",
+      "synthetic-readback.json",
+      "sea_plan.txt",
+      "pytest-full.txt"
+    ],
+    "finding": "Exact synthetic cell inventory, complete synthetic readback and strict overlap evidence; the completed F plan invokes the unchanged request-local index.",
+    "status": "PASS"
+  },
+  "B2-07": {
+    "evidence": [
+      "build-1-budget-stop.json",
+      "resume-budget.json",
+      "engine-plan-identity.json",
+      "real-run-provenance.json"
+    ],
+    "finding": "No pair of complete territory builds. Fixture reproducibility and available engine plan/cache/policy identities are recorded.",
+    "status": "NOT VERIFIED"
+  },
+  "B2-08": {
+    "evidence": [
+      "raw-identity-regression.json",
+      "f-publication-blocker.json",
+      "f-publication-blocker-pytest.txt",
+      "pytest-full.txt"
+    ],
+    "finding": "Both raw identities match and existing F tests pass. The frozen F publisher rejects required surface 2/254; the positive integration test reproduces this exact failure.",
+    "status": "FAIL"
+  },
+  "B2-09": {
+    "evidence": [
+      "cheung_chau-comparison.json",
+      "real-run-provenance.json",
+      "pytest-full.txt"
+    ],
+    "finding": "All 65 F-published frames passed the numerical land gates, with per-frame Quality-2 transitions and per-tile thresholds recorded. The class-254/255 target set was empty; the synthetic fixture covers the unknown shade label.",
+    "status": "PASS"
+  },
+  "B2-10": {
+    "evidence": [
+      "central-comparison.json",
+      "view-facts.json",
+      "reader-availability.json"
+    ],
+    "finding": "Both Central numerical gates passed. All 11,010,914 NoData pixels in the halo became water, so any nonempty Victoria Harbour NoData subset is 100% filled; its map-defined denominator was not verified.",
+    "status": "NOT VERIFIED"
+  },
+  "B2-11": {
+    "evidence": [
+      "cheung_chau-sea-rays.json",
+      "pytest-full.txt"
+    ],
+    "finding": "Independent direct 0.25 m rays at three instants; label comparison uses the engine equality tolerance.",
+    "status": "PASS"
+  },
+  "B2-12": {
+    "evidence": [
+      "cheung_chau_void_impact.txt",
+      "cheung-chau-void-impact.json",
+      "void-impact-readback.json",
+      "counterfactual-view-facts.json",
+      "pytest-full.txt"
+    ],
+    "finding": "All 65 real diagnostic frames reconcile with independently read rasters and the schema. The scope contained zero enclosed void pixels. The synthetic fixtures exercise the fill, report, precondition and resume with enclosed void pixels.",
+    "status": "PASS"
+  },
+  "B2-13": {
+    "evidence": [
+      "validation-attempt.txt",
+      "reader-availability.json",
+      "ib5000-report.json",
+      "sensitivity-report.json"
+    ],
+    "finding": "The pinned reader packages were absent. No iB5000 or nine-variant real report numbers were invented; no downloads or changes to the profile.",
+    "status": "NOT VERIFIED"
+  },
+  "B2-14": {
+    "evidence": [
+      "protected-before.json",
+      "protected-after.json",
+      "resource-summary.json",
+      "resources.jsonl",
+      "build-1-budget-stop.json"
+    ],
+    "finding": "First build exceeded the actual wall cap before the original uptime timer problem was detected. Preserve the failure and all later resource/namespace evidence.",
+    "status": "NOT VERIFIED"
+  },
+  "B2-15": {
+    "evidence": [
+      "pytest-full.txt",
+      "manifest.json",
+      "final-scope-audit.json"
+    ],
+    "finding": "Existing suite passes unchanged; new strict expected failure retains the publication conflict. Code, schemas, docs and this evidence are handed off in one local commit.",
+    "status": "PASS"
+  }
+}

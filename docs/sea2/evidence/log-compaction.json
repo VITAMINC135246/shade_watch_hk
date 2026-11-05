@@ -1,0 +1,16 @@
+{
+  "cheung_chau_sea.txt": {
+    "full_sha256": "267d4135a011ded9f102edb1e574696cf7efcfd6b9558bacb4538461440c4a49",
+    "full_lines": 39677,
+    "retained_lines": 98,
+    "full_backup": "/private/tmp/b2_full_cheung_chau_sea.txt",
+    "resource_records": "resources.jsonl"
+  },
+  "campaign-controller.txt": {
+    "full_sha256": "e755bc5e83751fd25fcbc3d57676865197cd9d7c8d7bee7f10fccd7204c16df5",
+    "full_lines": 37,
+    "retained_lines": 25,
+    "full_backup": "/private/tmp/b2_full_campaign-controller.txt",
+    "resource_records": "resources.jsonl"
+  }
+}

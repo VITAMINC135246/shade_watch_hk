@@ -1,0 +1,11 @@
+Complete run verified
+{
+  "schema": "shade-map-result-1.0",
+  "run_id": "0df94f9cecfd9a64e81a01824f1d1ea34494efabe487a0cff652f524f64ff5bf",
+  "name": "sea2_cheung_chau",
+  "status": "complete",
+  "published_frames": 65,
+  "reused_frames": 65,
+  "computed_batches": 0,
+  "verified_only": true
+}

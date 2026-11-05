@@ -1,0 +1,10 @@
+{
+  "schema": "sea2-validation-unavailable-1.0",
+  "status": "NOT VERIFIED",
+  "computed": false,
+  "reason": "Historical pinned reader packages were purged; no complete offline pinned reader found; downloads forbidden.",
+  "evidence": [
+    "reader-availability.json",
+    "validation-attempt.txt"
+  ]
+}

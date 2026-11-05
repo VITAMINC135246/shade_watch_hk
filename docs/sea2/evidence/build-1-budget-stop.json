@@ -1,0 +1,15 @@
+{
+  "pid": 28695,
+  "actual_wall_seconds": 4300.249109983444,
+  "cpu_seconds": 957.855408128,
+  "rss_bytes": 381140992,
+  "reason": "60-minute actual wall budget exhausted; original monotonic timer excludes system sleep on macOS",
+  "status": "NOT VERIFIED",
+  "partial_stages": [
+    {
+      "name": ".build-_u5csxg8",
+      "surfaces": 920,
+      "tiles": 238
+    }
+  ]
+}

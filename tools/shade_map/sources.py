@@ -83,7 +83,9 @@ class RawSource:
         return result
 
 
-PROVIDERS: dict[str, SourceProvider] = {'raw': RawSource()}
+from tools.sea2.provider import SeaSource
+
+PROVIDERS: dict[str, SourceProvider] = {'raw': RawSource(), 'sea-2.0': SeaSource()}
 
 
 def provider(name):

@@ -1,0 +1,24 @@
+{
+  "raw": {
+    "utc_time": "2026-01-07T04:30:00+00:00",
+    "observed_land_pixels": 3322313,
+    "quality2": 1762131,
+    "quality2_fraction": 0.530392831741019,
+    "shade_counts": {
+      "shaded": 1477090,
+      "sunlit": 83092,
+      "uncertain": 1762131
+    }
+  },
+  "sea-2.0": {
+    "utc_time": "2026-01-07T04:30:00+00:00",
+    "observed_land_pixels": 3322313,
+    "quality2": 0,
+    "quality2_fraction": 0.0,
+    "shade_counts": {
+      "shaded": 1477090,
+      "sunlit": 1845223,
+      "uncertain": 0
+    }
+  }
+}

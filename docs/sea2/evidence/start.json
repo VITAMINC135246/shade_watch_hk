@@ -1,0 +1,49 @@
+{
+  "branch": "feature",
+  "head": "05c66ab379d87868a787ae78cdecbfb918c1730e",
+  "accepted_F1": "35225fd9547a00e4df202e7ab30204c633b2c845",
+  "contract_sha256": "b8b5473b51af318859d7a1619b616b4acfa7d9cf9ccd63ca0ffaf238fee40e1a",
+  "amendment_sha256": "18a09995cbbd1cca659c9a548aad9a0cb45c942668a58ce17146d371f9f8450d",
+  "engine_hashes": {
+    "src/v1.py": "3d572726b41e7608a418f20043020e93c0a16bc82cee9a3ca5f56d4f05a92905",
+    "src/v1_cache.py": "96a576d12ada9186319e4c8c5f1e626b06ab0aac5f7345a9c6083b9f1b6fe479",
+    "src/horizon.py": "afb46c37742767e7480220d82527873ed389bb184623fef78b4a3a1d19e8144e",
+    "src/solar.py": "eaa845d3ab1aa952c57a24019bb21a748702a8aece960693424938ab7e1b7899",
+    "src/spatial.py": "5ecc0495dd102596ab41903b5e174c142888ffc14664b81009164fbf176d3aa7",
+    "src/shade_watch.py": "cfb5d1185af5a39521ecf4edaeddd375b76e1abc877675c63a428de21e546ea7",
+    "src/v2.py": "60245b28a30a10ae5f6b6152de6cd9247c4cfe2eb242c70c4d55c674e5861e5e",
+    "src/v2_worker.py": "4a880785a6bd6451c47c780aab9279096256379a976edced5ac00eb34ae830ff",
+    "src/v2_runner.py": "0ebbfdcfd47def2e3e27d82bec4a4e8bad8d3246fde11273cc1ceca644f3b6f0",
+    "src/v2_state.py": "82964df5f3097cb3458073eabc44de9878ae1a714aeb05efb747a835b6c7f808"
+  },
+  "adapter_sha256": "97d455a4a20bcee6a9378d5c04ac6325ad6abd5d7b329b05135042f8668f6996",
+  "B1_hashes": {
+    "tools/sea_view/build.py": "d0e709583daec50c097d5280ef909cbcbb9439a60be96ed59ddb5e9238f54e46",
+    "tools/sea_view/checks.py": "5a306ac3a59a69a008486375860fe59f0ee0a0e3e1528cc59be1dd1687c641bd",
+    "tools/sea_view/compare.py": "c42777575ac0922a8896ddb0232702f044e6f63e5b6fcfcf58d1592186d93d67",
+    "tools/sea_view/development.py": "2d49c9a7307cf64d035fbd605cfce80c83dc519e6f8f17750059d90d40283c73",
+    "tools/sea_view/edge_diagnostic.py": "6628483956f97fbd7cd4742e6599ece48b0095522063b9e8308962fbd5408ecd",
+    "tools/sea_view/extract.py": "d5003f3c428b13a4059c37fc4079eabc4b5211dca312adeeee933bc3d425cff0",
+    "tools/sea_view/helpers.py": "a26745452d74b832ec311ed5a686faad038e0475efd4c80368fd3cd077dcf934",
+    "tools/sea_view/ledger.py": "19fd965055199b0343e3c64003d55c19062ef3a587f7b58b89bbef048140a2b3",
+    "tools/sea_view/masks.py": "75ef0a0b13f6e0485a7bb3f7179d19dce42a8bf05fe071c59452e6c5ef23357c",
+    "tools/sea_view/rays.py": "f2f561d6dbd243dfcfd01997abed4449b15f021501316f428169a6a1826ce760",
+    "tools/sea_view/scan.py": "171a7122078eae08bc3cb52a80444e0fe29ee52d089c0e82c90802b262dd41d1",
+    "tools/sea_view/sensitivity.py": "a50fc1cfc79a9c6e38fc901aa9bd96004ba0f79439e1ac9e1002de3b505411b2",
+    "tools/sea_view/verify_edges.py": "3503aaf9aa6b065f3024ea1800c8d9c76adf047762336b8bba05ee60e60ed81f"
+  },
+  "dirty_before": [
+    " M .gitignore",
+    "?? data/raw/coastline/",
+    "?? docs/PROJECT_STATUS_2026-10-29.zh-TW.md",
+    "?? docs/prompts/region/",
+    "?? docs/prompts/runner/",
+    "?? docs/prompts/sea/",
+    "?? docs/ui/",
+    "?? docs/v3/WSL2_SMOKE_TEST.md",
+    "?? presentations/",
+    "?? tools/wsl2_smoke/",
+    "?? web/console/"
+  ],
+  "coastline_mode": 493
+}

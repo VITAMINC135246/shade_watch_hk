@@ -1,0 +1,77 @@
+{
+  "artifact_cap_bytes": 32212254720,
+  "final_new_artifact_bytes": 5591808833,
+  "first_build": [
+    {
+      "child_peak_rss_bytes": 11763712,
+      "exit_code": 1,
+      "label": "territory_build_1",
+      "new_artifact_peak_bytes": null,
+      "sampled_process_tree_peak_rss_bytes": 11763712,
+      "stopped_for": null,
+      "wall_seconds": 0.4434743750025518
+    },
+    {
+      "child_peak_rss_bytes": 166182912,
+      "exit_code": 2,
+      "label": "territory_build_1_retry",
+      "new_artifact_peak_bytes": null,
+      "sampled_process_tree_peak_rss_bytes": 165625856,
+      "stopped_for": null,
+      "wall_seconds": 22.07656225003302
+    },
+    {
+      "child_peak_rss_bytes": 435863552,
+      "exit_code": 143,
+      "label": "territory_build_1_native_metadata",
+      "new_artifact_peak_bytes": null,
+      "original_uptime_seconds": 1764.7891860419768,
+      "sampled_process_tree_peak_rss_bytes": 430817280,
+      "stopped_for": null,
+      "wall_seconds": 4300.249109983444,
+      "wall_seconds_source": "process creation time at stop; excludes the final cleanup"
+    }
+  ],
+  "first_build_seconds": 4322.76914660848,
+  "first_partial_build_disk_note": "Conservative upper bound from stopped native tile/surface file counts; not a measured disk peak.",
+  "first_partial_build_uncompressed_size_bound_bytes": 4294967296,
+  "initial_measurement_gap": "First setup discovery used /usr/bin/time -l, whose RSS report was denied by the host. Contract reads and all actual raw/sea plans have resource measurements. See initial-resource-notes.json.",
+  "max_measured_new_artifact_bytes": 5591808837,
+  "max_measured_rss_bytes": 1742487552,
+  "max_real_job_rss_bytes": 1554006016,
+  "memory_cap_bytes": 12884901888,
+  "per_build_cap_seconds": 3600,
+  "real_job_cap_seconds": 3600,
+  "real_job_seconds": 2827.9967088223784,
+  "second_build": [
+    {
+      "child_peak_rss_bytes": 437649408,
+      "exit_code": 143,
+      "label": "territory_build_2",
+      "new_artifact_peak_bytes": 405061882,
+      "sampled_process_tree_peak_rss_bytes": 437649408,
+      "stopped_for": null,
+      "wall_seconds": 1294.301012992859
+    },
+    {
+      "child_peak_rss_bytes": 676773888,
+      "exit_code": 0,
+      "label": "territory_build_2_corrected",
+      "new_artifact_peak_bytes": 3362291237,
+      "sampled_process_tree_peak_rss_bytes": 666435584,
+      "stopped_for": null,
+      "wall_seconds": 2215.028078167001
+    },
+    {
+      "child_peak_rss_bytes": 304349184,
+      "exit_code": 0,
+      "label": "territory_build_2_synthetic_readback",
+      "new_artifact_peak_bytes": null,
+      "sampled_process_tree_peak_rss_bytes": 304332800,
+      "stopped_for": null,
+      "wall_seconds": 49.02218858298147
+    }
+  ],
+  "second_build_seconds": 3558.351279742841,
+  "timing_note": "Initial watchdog used Mac uptime. First actual elapsed time is independently recorded. Later watchdog takes the greater of uptime and wall elapsed. Earlier short commands retain their originally measured timings."
+}

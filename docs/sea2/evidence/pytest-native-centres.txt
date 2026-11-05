@@ -1,0 +1,15 @@
+....................................                                     [100%]
+=============================== warnings summary ===============================
+tests/test_sea2_view.py: 186 warnings
+tests/test_sea2_diagnostic.py: 91 warnings
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/.venv/lib/python3.12/site-packages/rasterio/transform.py:178: PendingDeprecationWarning: Use `@` matmul instead of `*` mul operator for matrix multiplication
+    return Affine.translation(west, north) * Affine.scale(xsize, -ysize)
+
+tests/test_sea2_diagnostic.py::test_diagnostic_end_to_end_and_resume
+tests/test_sea2_diagnostic.py::test_diagnostic_end_to_end_and_resume
+tests/test_sea2_diagnostic.py::test_diagnostic_end_to_end_and_resume
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/tools/shade_map/publication.py:96: PendingDeprecationWarning: is_tiled will be removed in a future version. Please consider copying the body of this function into your program or module.
+    or ds.compression.value != 'DEFLATE' or not ds.is_tiled
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+36 passed, 280 warnings in 10.70s

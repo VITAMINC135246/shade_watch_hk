@@ -1,0 +1,13 @@
+{
+  "label": "build-1",
+  "module": "tools.sea2",
+  "args": [
+    "build",
+    "--machine",
+    "docs/sea2/evidence/configs/machine.json"
+  ],
+  "original_mode": 493,
+  "access_denied": true,
+  "exit_code": 143,
+  "restored_mode": 493
+}

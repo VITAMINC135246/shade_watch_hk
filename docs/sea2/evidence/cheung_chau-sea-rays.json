@@ -1,0 +1,204 @@
+{
+  "engine_evidence_source": "F publication",
+  "frames": [
+    {
+      "mismatch_examples": [],
+      "mismatches": 0,
+      "mismatches_outside_equality": 0,
+      "n": 800,
+      "near_tall_structure": 69,
+      "quality_mismatches": 0,
+      "sample_examples": [
+        {
+          "col": 1020,
+          "equality_neighbourhood": false,
+          "horizon_deg": 58.25694274902344,
+          "label": 1,
+          "matches": true,
+          "near_tall_structure": true,
+          "quality": 0,
+          "reference_label": 1,
+          "reference_quality": 0,
+          "row": 702,
+          "tile": "14NW19D(e820n807,e821n807).tif"
+        },
+        {
+          "col": 1244,
+          "equality_neighbourhood": false,
+          "horizon_deg": 35.57076644897461,
+          "label": 1,
+          "matches": true,
+          "near_tall_structure": true,
+          "quality": 0,
+          "reference_label": 1,
+          "reference_quality": 0,
+          "row": 611,
+          "tile": "14NW19D(e820n807,e821n807).tif"
+        },
+        {
+          "col": 1454,
+          "equality_neighbourhood": false,
+          "horizon_deg": 57.41788864135742,
+          "label": 1,
+          "matches": true,
+          "near_tall_structure": true,
+          "quality": 0,
+          "reference_label": 1,
+          "reference_quality": 0,
+          "row": 32,
+          "tile": "14NW19D(e820n807,e821n807).tif"
+        },
+        {
+          "col": 1224,
+          "equality_neighbourhood": false,
+          "horizon_deg": 56.87601089477539,
+          "label": 1,
+          "matches": true,
+          "near_tall_structure": true,
+          "quality": 0,
+          "reference_label": 1,
+          "reference_quality": 0,
+          "row": 659,
+          "tile": "14NW19D(e820n807,e821n807).tif"
+        }
+      ],
+      "sample_sha256": "60209ab9352ab5ed111d07968c48e9f6f57a5314e847f25f0468c92686fb0bb1",
+      "utc_time": "2026-01-07T00:30:00+00:00"
+    },
+    {
+      "mismatch_examples": [],
+      "mismatches": 0,
+      "mismatches_outside_equality": 0,
+      "n": 800,
+      "near_tall_structure": 69,
+      "quality_mismatches": 0,
+      "sample_examples": [
+        {
+          "col": 1020,
+          "equality_neighbourhood": false,
+          "horizon_deg": 59.63622283935547,
+          "label": 1,
+          "matches": true,
+          "near_tall_structure": true,
+          "quality": 0,
+          "reference_label": 1,
+          "reference_quality": 0,
+          "row": 702,
+          "tile": "14NW19D(e820n807,e821n807).tif"
+        },
+        {
+          "col": 1244,
+          "equality_neighbourhood": false,
+          "horizon_deg": 32.060977935791016,
+          "label": 0,
+          "matches": true,
+          "near_tall_structure": true,
+          "quality": 0,
+          "reference_label": 0,
+          "reference_quality": 0,
+          "row": 611,
+          "tile": "14NW19D(e820n807,e821n807).tif"
+        },
+        {
+          "col": 1454,
+          "equality_neighbourhood": false,
+          "horizon_deg": 6.350490093231201,
+          "label": 0,
+          "matches": true,
+          "near_tall_structure": true,
+          "quality": 0,
+          "reference_label": 0,
+          "reference_quality": 0,
+          "row": 32,
+          "tile": "14NW19D(e820n807,e821n807).tif"
+        },
+        {
+          "col": 1224,
+          "equality_neighbourhood": false,
+          "horizon_deg": 35.872825622558594,
+          "label": 0,
+          "matches": true,
+          "near_tall_structure": true,
+          "quality": 0,
+          "reference_label": 0,
+          "reference_quality": 0,
+          "row": 659,
+          "tile": "14NW19D(e820n807,e821n807).tif"
+        }
+      ],
+      "sample_sha256": "e9bf589c59ca39722461ecc0a40be524ac08118897fc5582f229d669d987e2e7",
+      "utc_time": "2026-01-07T04:30:00+00:00"
+    },
+    {
+      "mismatch_examples": [],
+      "mismatches": 0,
+      "mismatches_outside_equality": 0,
+      "n": 800,
+      "near_tall_structure": 69,
+      "quality_mismatches": 0,
+      "sample_examples": [
+        {
+          "col": 1020,
+          "equality_neighbourhood": false,
+          "horizon_deg": 44.990596771240234,
+          "label": 1,
+          "matches": true,
+          "near_tall_structure": true,
+          "quality": 0,
+          "reference_label": 1,
+          "reference_quality": 0,
+          "row": 702,
+          "tile": "14NW19D(e820n807,e821n807).tif"
+        },
+        {
+          "col": 1244,
+          "equality_neighbourhood": false,
+          "horizon_deg": 13.145820617675781,
+          "label": 0,
+          "matches": true,
+          "near_tall_structure": true,
+          "quality": 0,
+          "reference_label": 0,
+          "reference_quality": 0,
+          "row": 611,
+          "tile": "14NW19D(e820n807,e821n807).tif"
+        },
+        {
+          "col": 1454,
+          "equality_neighbourhood": false,
+          "horizon_deg": 2.3274431228637695,
+          "label": 0,
+          "matches": true,
+          "near_tall_structure": true,
+          "quality": 0,
+          "reference_label": 0,
+          "reference_quality": 0,
+          "row": 32,
+          "tile": "14NW19D(e820n807,e821n807).tif"
+        },
+        {
+          "col": 1224,
+          "equality_neighbourhood": false,
+          "horizon_deg": 23.441743850708008,
+          "label": 0,
+          "matches": true,
+          "near_tall_structure": true,
+          "quality": 0,
+          "reference_label": 0,
+          "reference_quality": 0,
+          "row": 659,
+          "tile": "14NW19D(e820n807,e821n807).tif"
+        }
+      ],
+      "sample_sha256": "f6bacfb8104cb603cf7dbcdc9da97d73589bed86b9d4741f5f7438422d1654bc",
+      "utc_time": "2026-01-07T07:10:00+00:00"
+    }
+  ],
+  "method": "Independent NumPy direct 0.25 m rays with documented canonical parity and radial cutoff; independent classifier; no engine horizon/cache reference.",
+  "near_tall_structure_definition": "water within 16 four-neighbour pixels of observed DSM at least 10 m high",
+  "numerical_consistency_only": true,
+  "observational_accuracy": "NOT VERIFIED",
+  "passed": true,
+  "sample_seed": 20261104,
+  "schema": "sea2-independent-rays-1.0"
+}
