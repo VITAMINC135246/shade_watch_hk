@@ -1,0 +1,16 @@
+View readback 1/7128
+View readback 501/7128
+View readback 1001/7128
+View readback 1501/7128
+View readback 2001/7128
+View readback 2501/7128
+View readback 3001/7128
+View readback 3501/7128
+View readback 4001/7128
+View readback 4501/7128
+View readback 5001/7128
+View readback 5501/7128
+View readback 6001/7128
+View readback 6501/7128
+View readback 7001/7128
+{'verified_derived': 1656, 'verified_synthetic': 3818, 'verified_links': 1654, 'strict_bbox_overlaps': [], 'totals': {'0': 4384416867, '1': 1453438606, '2': 1315054618, '3': 93109991, '4': 5285979918, '255': 0}}

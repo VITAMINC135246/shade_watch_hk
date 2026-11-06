@@ -1,0 +1,50 @@
+{
+  "bootstrap_pip_removed": true,
+  "install_options": "--no-deps --only-binary=:all: --disable-pip-version-check --no-cache-dir",
+  "installer": "24.2",
+  "installer_report_sha256": "900268fc010452286e7940ef0f517c07abd43cfbf9b40b3701e864ab5b332e06",
+  "interpreter": "/Users/vitaminc-macbook/venvs/shade_watch_tools/bin/python",
+  "lock_sha256": "98c673a8f17f24ffd629dd8febe223f80687a5ce24c2a578355c34784621cf0e",
+  "matches_lock": true,
+  "packages": {
+    "certifi": "2025.8.3",
+    "numpy": "2.2.6",
+    "packaging": "25.0",
+    "pyogrio": "0.11.1",
+    "shapely": "2.1.1"
+  },
+  "python": "3.12.5 (main, Sep 24 2026, 01:05:04) [Clang 17.0.0 (clang-1700.0.13.5)]",
+  "wheel_count": 5,
+  "wheels": [
+    {
+      "package": "certifi",
+      "sha256": "f6c12493cfb1b06ba2ff328595af9350c65d6644968e5d3a2ffd78699af217a5",
+      "url": "https://files.pythonhosted.org/packages/e5/48/1549795ba7742c948d2ad169c1c8cdbae65bc450d6cd753d124b17c8cd32/certifi-2025.8.3-py3-none-any.whl",
+      "version": "2025.8.3"
+    },
+    {
+      "package": "numpy",
+      "sha256": "894b3a42502226a1cac872f840030665f33326fc3dac8e57c607905773cdcde3",
+      "url": "https://files.pythonhosted.org/packages/3c/65/4baa99f1c53b30adf0acd9a5519078871ddde8d2339dc5a7fde80d9d87da/numpy-2.2.6-cp312-cp312-macosx_14_0_arm64.whl",
+      "version": "2.2.6"
+    },
+    {
+      "package": "packaging",
+      "sha256": "29572ef2b1f17581046b3a2227d5c611fb25ec70ca1ba8554b24b0e69331a484",
+      "url": "https://files.pythonhosted.org/packages/20/12/38679034af332785aac8774540895e234f4d07f7545804097de4b666afd8/packaging-25.0-py3-none-any.whl",
+      "version": "25.0"
+    },
+    {
+      "package": "pyogrio",
+      "sha256": "f186456ebe5d5f61e7bd883bad25a59d43d6304178d4f0d3e03273f42b40a4cc",
+      "url": "https://files.pythonhosted.org/packages/72/d3/2ba967ca4255cdfa130a6d8b437826488567b4bc1bb417c442bb43d62611/pyogrio-0.11.1-cp312-cp312-macosx_12_0_arm64.whl",
+      "version": "0.11.1"
+    },
+    {
+      "package": "shapely",
+      "sha256": "a9c551f7fa7f1e917af2347fe983f21f212863f1d04f08eece01e9c275903fad",
+      "url": "https://files.pythonhosted.org/packages/07/aa/fb5f545e72e89b6a0f04a0effda144f5be956c9c312c7d4e00dfddbddbcf/shapely-2.1.1-cp312-cp312-macosx_11_0_arm64.whl",
+      "version": "2.1.1"
+    }
+  ]
+}

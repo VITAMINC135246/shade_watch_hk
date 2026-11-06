@@ -1,0 +1,10 @@
+{
+  "blackout_mode": "0o0",
+  "original_mode": "0o755",
+  "read_probe": {
+    "denied": true,
+    "errno": 13,
+    "path": "data/raw/coastline/README.md"
+  },
+  "restored_mode": "0o755"
+}

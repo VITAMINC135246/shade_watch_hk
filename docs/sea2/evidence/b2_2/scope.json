@@ -1,0 +1,31 @@
+{
+  "adapter_sha256": "97d455a4a20bcee6a9378d5c04ac6325ad6abd5d7b329b05135042f8668f6996",
+  "allowed_paths": true,
+  "contract_sha256": "12d79865dda53ce1539560f4d79c047d3c80fd3fd974e4b9f643bf409580f2a9",
+  "cumulative_f_base": "35225fd9547a00e4df202e7ab30204c633b2c845",
+  "cumulative_f_files": [
+    "config/machine.example.json",
+    "config/schema/shade_map_machine.schema.json",
+    "config/schema/shade_map_region.schema.json",
+    "docs/shade_map/DESIGN.md",
+    "docs/shade_map/GUIDE.md",
+    "tools/shade_map/publication.py",
+    "tools/shade_map/sources.py"
+  ],
+  "pinned_engine": {
+    "src/horizon.py": "afb46c37742767e7480220d82527873ed389bb184623fef78b4a3a1d19e8144e",
+    "src/shade_watch.py": "cfb5d1185af5a39521ecf4edaeddd375b76e1abc877675c63a428de21e546ea7",
+    "src/solar.py": "eaa845d3ab1aa952c57a24019bb21a748702a8aece960693424938ab7e1b7899",
+    "src/spatial.py": "5ecc0495dd102596ab41903b5e174c142888ffc14664b81009164fbf176d3aa7",
+    "src/v1.py": "3d572726b41e7608a418f20043020e93c0a16bc82cee9a3ca5f56d4f05a92905",
+    "src/v1_cache.py": "96a576d12ada9186319e4c8c5f1e626b06ab0aac5f7345a9c6083b9f1b6fe479",
+    "src/v2.py": "60245b28a30a10ae5f6b6152de6cd9247c4cfe2eb242c70c4d55c674e5861e5e",
+    "src/v2_runner.py": "0ebbfdcfd47def2e3e27d82bec4a4e8bad8d3246fde11273cc1ceca644f3b6f0",
+    "src/v2_state.py": "82964df5f3097cb3458073eabc44de9878ae1a714aeb05efb747a835b6c7f808",
+    "src/v2_worker.py": "4a880785a6bd6451c47c780aab9279096256379a976edced5ac00eb34ae830ff"
+  },
+  "protected_tracked_diff_empty": true,
+  "publication_only_surface_allowlist": true,
+  "staged_paths": 105,
+  "start": "5b1da9be4246acac53b0488c3587df7884941108"
+}

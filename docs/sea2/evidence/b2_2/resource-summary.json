@@ -1,0 +1,29 @@
+{
+  "artifact_cap_bytes": 32212254720,
+  "artifact_method": "Conservative maximum of apparent and allocated bytes per new file, including temporary job files, validation wheels/environment, evidence, processed data and output. The before inventory itself is the setup listing.",
+  "child_memory_method": "wait4 peak RSS for each primary process plus sampled concurrent RSS of its descendants.",
+  "clock": "macOS mach_continuous_time",
+  "development_builds": 1,
+  "guarded_within_budget": true,
+  "measured_invocations": 31,
+  "memory_cap_bytes": 12884901888,
+  "peak_job_rss_bytes": 2532442112,
+  "peak_new_artifact_bytes": 5549393855,
+  "previous_audit_attempts": [
+    "audit-five_class",
+    "audit-cheung_chau"
+  ],
+  "sleep_prevention": "caffeinate -dims",
+  "wall_caps_seconds": {
+    "build": 3600,
+    "real": 3600,
+    "validation": 1800
+  },
+  "wall_seconds_by_category": {
+    "build": 2048.586732333293,
+    "real": 2492.2472679590574,
+    "setup": 25.131858708220534,
+    "tests": 302.4862040000735,
+    "validation": 906.7571462083142
+  }
+}

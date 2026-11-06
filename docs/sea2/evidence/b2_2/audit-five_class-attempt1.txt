@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/Volumes/My Passport for Mac/Projects/shade_watch_hk/docs/sea2/evidence/b2_2/audit_real.py", line 259, in <module>
+    main()
+  File "/Volumes/My Passport for Mac/Projects/shade_watch_hk/docs/sea2/evidence/b2_2/audit_real.py", line 250, in main
+    audit_run(args.check,view,doc)
+  File "/Volumes/My Passport for Mac/Projects/shade_watch_hk/docs/sea2/evidence/b2_2/audit_real.py", line 217, in audit_run
+    raw = RawCounterfactual(work)
+          ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Volumes/My Passport for Mac/Projects/shade_watch_hk/tools/sea2/checks.py", line 56, in __init__
+    self.mosaics = [self.work/'state'/(p['id']+'.logical_mosaic.json') for p in definition['plans']]
+                                       ~^^^^^^
+KeyError: 'id'

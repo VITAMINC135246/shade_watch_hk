@@ -1,0 +1,270 @@
+{
+  "equality_tolerance_deg": 0.0001,
+  "frames": [
+    {
+      "groups": {
+        "water": {
+          "examples": [
+            {
+              "actual": [
+                1,
+                0
+              ],
+              "col": 1243,
+              "equality_neighbourhood": false,
+              "horizon_deg": 48.4997673034668,
+              "near_tall_structure": true,
+              "reference": [
+                1,
+                0
+              ],
+              "row": 630,
+              "surface": 1,
+              "tile": "14NW19D(e820n807,e821n807).tif"
+            },
+            {
+              "actual": [
+                1,
+                0
+              ],
+              "col": 1223,
+              "equality_neighbourhood": false,
+              "horizon_deg": 45.570438385009766,
+              "near_tall_structure": true,
+              "reference": [
+                1,
+                0
+              ],
+              "row": 661,
+              "surface": 1,
+              "tile": "14NW19D(e820n807,e821n807).tif"
+            },
+            {
+              "actual": [
+                1,
+                0
+              ],
+              "col": 1036,
+              "equality_neighbourhood": false,
+              "horizon_deg": 27.932493209838867,
+              "near_tall_structure": true,
+              "reference": [
+                1,
+                0
+              ],
+              "row": 695,
+              "surface": 1,
+              "tile": "14NW19D(e820n807,e821n807).tif"
+            },
+            {
+              "actual": [
+                1,
+                0
+              ],
+              "col": 1106,
+              "equality_neighbourhood": false,
+              "horizon_deg": 36.38859939575195,
+              "near_tall_structure": true,
+              "reference": [
+                1,
+                0
+              ],
+              "row": 685,
+              "surface": 1,
+              "tile": "14NW19D(e820n807,e821n807).tif"
+            }
+          ],
+          "mismatch_examples": [],
+          "mismatches": 0,
+          "mismatches_outside_equality": 0,
+          "near_tall_structure": 120,
+          "sample_sha256": "493b05d7aa41f327e1eb18173f413484a6802bd25913eb4d2a79f20d24fe5527",
+          "samples": 1080,
+          "surface_counts": {
+            "1": 1080
+          }
+        }
+      },
+      "time": "0800"
+    },
+    {
+      "groups": {
+        "water": {
+          "examples": [
+            {
+              "actual": [
+                1,
+                0
+              ],
+              "col": 1243,
+              "equality_neighbourhood": false,
+              "horizon_deg": 49.9301643371582,
+              "near_tall_structure": true,
+              "reference": [
+                1,
+                0
+              ],
+              "row": 630,
+              "surface": 1,
+              "tile": "14NW19D(e820n807,e821n807).tif"
+            },
+            {
+              "actual": [
+                0,
+                0
+              ],
+              "col": 1223,
+              "equality_neighbourhood": false,
+              "horizon_deg": 38.09674072265625,
+              "near_tall_structure": true,
+              "reference": [
+                0,
+                0
+              ],
+              "row": 661,
+              "surface": 1,
+              "tile": "14NW19D(e820n807,e821n807).tif"
+            },
+            {
+              "actual": [
+                1,
+                0
+              ],
+              "col": 1036,
+              "equality_neighbourhood": false,
+              "horizon_deg": 61.167266845703125,
+              "near_tall_structure": true,
+              "reference": [
+                1,
+                0
+              ],
+              "row": 695,
+              "surface": 1,
+              "tile": "14NW19D(e820n807,e821n807).tif"
+            },
+            {
+              "actual": [
+                1,
+                0
+              ],
+              "col": 1106,
+              "equality_neighbourhood": false,
+              "horizon_deg": 57.213783264160156,
+              "near_tall_structure": true,
+              "reference": [
+                1,
+                0
+              ],
+              "row": 685,
+              "surface": 1,
+              "tile": "14NW19D(e820n807,e821n807).tif"
+            }
+          ],
+          "mismatch_examples": [],
+          "mismatches": 0,
+          "mismatches_outside_equality": 0,
+          "near_tall_structure": 120,
+          "sample_sha256": "195d886a5190f44c8a11a8175c522f4d18c651c53aedbb0be11f641ad3fe2288",
+          "samples": 1080,
+          "surface_counts": {
+            "1": 1080
+          }
+        }
+      },
+      "time": "1230"
+    },
+    {
+      "groups": {
+        "water": {
+          "examples": [
+            {
+              "actual": [
+                0,
+                0
+              ],
+              "col": 1243,
+              "equality_neighbourhood": false,
+              "horizon_deg": 14.480460166931152,
+              "near_tall_structure": true,
+              "reference": [
+                0,
+                0
+              ],
+              "row": 630,
+              "surface": 1,
+              "tile": "14NW19D(e820n807,e821n807).tif"
+            },
+            {
+              "actual": [
+                0,
+                0
+              ],
+              "col": 1223,
+              "equality_neighbourhood": false,
+              "horizon_deg": 21.84749984741211,
+              "near_tall_structure": true,
+              "reference": [
+                0,
+                0
+              ],
+              "row": 661,
+              "surface": 1,
+              "tile": "14NW19D(e820n807,e821n807).tif"
+            },
+            {
+              "actual": [
+                1,
+                0
+              ],
+              "col": 1036,
+              "equality_neighbourhood": false,
+              "horizon_deg": 37.6238899230957,
+              "near_tall_structure": true,
+              "reference": [
+                1,
+                0
+              ],
+              "row": 695,
+              "surface": 1,
+              "tile": "14NW19D(e820n807,e821n807).tif"
+            },
+            {
+              "actual": [
+                1,
+                0
+              ],
+              "col": 1106,
+              "equality_neighbourhood": false,
+              "horizon_deg": 22.438993453979492,
+              "near_tall_structure": true,
+              "reference": [
+                1,
+                0
+              ],
+              "row": 685,
+              "surface": 1,
+              "tile": "14NW19D(e820n807,e821n807).tif"
+            }
+          ],
+          "mismatch_examples": [],
+          "mismatches": 0,
+          "mismatches_outside_equality": 0,
+          "near_tall_structure": 120,
+          "sample_sha256": "0059dd4c7cd881555226a466f51ca3465fcf17b397157fe25a2c6b8af078b233",
+          "samples": 1080,
+          "surface_counts": {
+            "1": 1080
+          }
+        }
+      },
+      "time": "1600"
+    }
+  ],
+  "method": "Independent NumPy rays, canonical 0.25 m steps and ties to even, 1 km radial cutoff",
+  "near_tall_structure": "water within 8 m of observed DSM height >= 10 m",
+  "observational_accuracy": "NOT VERIFIED",
+  "passed": true,
+  "run_id": "973c25d16ae0d080efe0f36fc27fcdd04755186f0b45bb01829605ba13c642e4",
+  "seed": 20261106,
+  "view_id": "8ee51b017411bd60e833e97fef10577546ba97f61e601df0fb21ecbfc0a4cbd1"
+}

@@ -1,0 +1,21 @@
+{
+  "central_reference": {
+    "candidate": "83cfba55f3efc971e78bda142636b6883c977d21989e63f3cb791e323d9898ce",
+    "historical": "83cfba55f3efc971e78bda142636b6883c977d21989e63f3cb791e323d9898ce",
+    "matches": true
+  },
+  "default": {
+    "candidate": "c196a09a3a213e0720b8dcb5ea5b4edb32ad217fcabcb70a930a9b17b458878e",
+    "expected": "c196a09a3a213e0720b8dcb5ea5b4edb32ad217fcabcb70a930a9b17b458878e",
+    "f1": "c196a09a3a213e0720b8dcb5ea5b4edb32ad217fcabcb70a930a9b17b458878e",
+    "frames": 65,
+    "matches": true
+  },
+  "f1_reference": {
+    "candidate": "e608af7ffe4181f3d097ce3f776f464b5b79fc67f1c1e5dc12bc6806a421b1ca",
+    "expected": "e608af7ffe4181f3d097ce3f776f464b5b79fc67f1c1e5dc12bc6806a421b1ca",
+    "f1": "e608af7ffe4181f3d097ce3f776f464b5b79fc67f1c1e5dc12bc6806a421b1ca",
+    "frames": 65,
+    "matches": true
+  }
+}

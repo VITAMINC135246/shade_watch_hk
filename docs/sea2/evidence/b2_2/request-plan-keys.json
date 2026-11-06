@@ -1,0 +1,32 @@
+{
+  "checks": {
+    "central": {
+      "disjoint": true,
+      "raw": [
+        "d243ba0efbe5b49331bdd81a24231935565d246f7365a8be1e5f85b55c038372"
+      ],
+      "sea": [
+        "9111ed26d6bb7a804e25783278da682acd47ce3c3ea6f92ec474871e12d87761"
+      ]
+    },
+    "cheung_chau": {
+      "disjoint": true,
+      "raw": [
+        "81c2b4e93f888c4969b25a6e75181c0ae53d0f51a8d2452cc1a5243e88cb6655"
+      ],
+      "sea": [
+        "ffa807172de436e0535c4aca37212fb1e2d560b8862d1c4c46b2ce297553c71d"
+      ]
+    },
+    "five_class": {
+      "disjoint": true,
+      "raw": [
+        "f97bc0d66193a1b9707fd6cdf3f88bd49afc7fe586c07ed69d754239554d58a4"
+      ],
+      "sea": [
+        "b22492e13d5b318735c4496188180427eca3e0f62821fa04f37ad75fcbb7ca4d"
+      ]
+    }
+  },
+  "view_id": "8ee51b017411bd60e833e97fef10577546ba97f61e601df0fb21ecbfc0a4cbd1"
+}

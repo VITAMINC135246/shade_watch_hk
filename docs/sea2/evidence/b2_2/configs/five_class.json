@@ -1,0 +1,23 @@
+{
+  "crs": "hk1980",
+  "dsm_source": "sea-2.2",
+  "full_image": "auto",
+  "lower_left": [
+    811250,
+    833000
+  ],
+  "name": "sea2_2_five_class",
+  "schema": "shade-map-region-1.0",
+  "time": {
+    "instants": [
+      "2026-01-07T08:00",
+      "2026-01-07T12:30",
+      "2026-01-07T16:00"
+    ],
+    "mode": "instants"
+  },
+  "upper_right": [
+    812750,
+    833600
+  ]
+}

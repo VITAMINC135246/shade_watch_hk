@@ -1,0 +1,274 @@
+{
+  "frames": [
+    {
+      "cross_counts": [
+        {
+          "pixels": 6151598,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 874903,
+          "quality": 3,
+          "shade": 255,
+          "surface": 0
+        },
+        {
+          "pixels": 25296,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        },
+        {
+          "pixels": 148203,
+          "quality": 3,
+          "shade": 255,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 7026501,
+          "shade_bounds": [
+            0.8754852521902438,
+            1.0
+          ],
+          "shaded": 6151598,
+          "sunlit": 0,
+          "sunlit_bounds": [
+            0.0,
+            0.12451474780975623
+          ],
+          "uncertain": 874903,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 874903,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 173499,
+          "shade_bounds": [
+            0.14579911123407052,
+            1.0
+          ],
+          "shaded": 25296,
+          "sunlit": 0,
+          "sunlit_bounds": [
+            0.0,
+            0.8542008887659295
+          ],
+          "uncertain": 148203,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 148203,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "0830",
+      "utc_time": "2026-01-07T00:30:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 2342120,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 4684381,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 166947,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 6552,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 7026501,
+          "shade_bounds": [
+            0.6666733556289254,
+            0.6666733556289254
+          ],
+          "shaded": 4684381,
+          "sunlit": 2342120,
+          "sunlit_bounds": [
+            0.3333266443710746,
+            0.3333266443710746
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 173499,
+          "shade_bounds": [
+            0.037763906420209915,
+            0.037763906420209915
+          ],
+          "shaded": 6552,
+          "sunlit": 166947,
+          "sunlit_bounds": [
+            0.9622360935797901,
+            0.9622360935797901
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1230",
+      "utc_time": "2026-01-07T04:30:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1306052,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 5720449,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 161900,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 11599,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 7026501,
+          "shade_bounds": [
+            0.8141248396605936,
+            0.8141248396605936
+          ],
+          "shaded": 5720449,
+          "sunlit": 1306052,
+          "sunlit_bounds": [
+            0.1858751603394065,
+            0.1858751603394065
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 173499,
+          "shade_bounds": [
+            0.06685341125885452,
+            0.06685341125885452
+          ],
+          "shaded": 11599,
+          "sunlit": 161900,
+          "sunlit_bounds": [
+            0.9331465887411455,
+            0.9331465887411455
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1510",
+      "utc_time": "2026-01-07T07:10:00+00:00"
+    }
+  ],
+  "missing_data_check": true,
+  "provenance": {
+    "adapter_sidecar_sha256": "6c34bb44c35cd5136cba123e9d774271b9934dd066439e7fc7492458d432a0ca",
+    "cache_namespace": "sea_fill_v2_2_8ee51b017411",
+    "files": 60,
+    "manifest_sha256": "0ea3f4cb66542429242cfed410189659a82725716a48be818eaf7d673f6db346",
+    "policies": {
+      "engine": "SW-V1-POLICY-1.0",
+      "sea": "SW-SEA-POLICY-2.2"
+    },
+    "raw_spatial_keys": {
+      "11SW13B(e833n815,e834n815).tif": "191341fdbde44d3b3a46f2545ca571f2718383235ca327e4ac15f1bb2651c194",
+      "11SW14A(e834n815,e835n815).tif": "1c317141ecf190f703409b2be943b64a0c565d13726eec4acc0e760b39da1088",
+      "11SW8D(e833n815,e834n816).tif": "69e5d17ac860bff12bf7f2f18cba711ecc0c981e771ecaf649a9b366ec18bfdb",
+      "11SW9C(e834n815,e835n816).tif": "2487fbedd2fcf2a22db5cd33a91b7367a6c0352e861141a1163453323ac9d5ea"
+    },
+    "request_local_source_directory": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/region_views/3a9bc9e181fdafa3654bdb4398799a973711339f675aa18a4b3ec5ed0b60252b",
+    "sea_spatial_keys": {
+      "11SW13B(e833n815,e834n815).tif": "cd1fc429081990ec2ed97cca887bbd09d3d2f95b73e4b18fc82e1b9c532e9a26",
+      "11SW14A(e834n815,e835n815).tif": "15a0bee0374fec914cc56031be9579de29781d27060f247d920fe3c66be0c25c",
+      "11SW8D(e833n815,e834n816).tif": "5cf3162994127a245d3e4dcbcadd31bcc3a7634f064e87010701407154773578",
+      "11SW9C(e834n815,e835n816).tif": "b169e82434a9d3604d0d36b3f94e321dffe5f88fa4b8e798a26a826348e3f470"
+    },
+    "source": "sea-2.2",
+    "v1_request_keys": [
+      "9111ed26d6bb7a804e25783278da682acd47ce3c3ea6f92ec474871e12d87761"
+    ]
+  },
+  "run_id": "0a7e9a446b66844714464280cb9612267eb134b5609022b7ed0df1362a09614e",
+  "view_id": "8ee51b017411bd60e833e97fef10577546ba97f61e601df0fb21ecbfc0a4cbd1"
+}

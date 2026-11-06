@@ -1,0 +1,77 @@
+warning: could not open directory 'data/raw/coastline/': Permission denied
+Computing V2 batch eaa3bfe49ab0
+Publishing 20260107/0710
+Publishing 20260107/0720
+Publishing 20260107/0730
+Publishing 20260107/0740
+Publishing 20260107/0750
+Publishing 20260107/0800
+Publishing 20260107/0810
+Publishing 20260107/0820
+Publishing 20260107/0830
+Publishing 20260107/0840
+Publishing 20260107/0850
+Publishing 20260107/0900
+Publishing 20260107/0910
+Publishing 20260107/0920
+Publishing 20260107/0930
+Publishing 20260107/0940
+Publishing 20260107/0950
+Publishing 20260107/1000
+Publishing 20260107/1010
+Publishing 20260107/1020
+Publishing 20260107/1030
+Publishing 20260107/1040
+Publishing 20260107/1050
+Publishing 20260107/1100
+Publishing 20260107/1110
+Publishing 20260107/1120
+Publishing 20260107/1130
+Publishing 20260107/1140
+Publishing 20260107/1150
+Publishing 20260107/1200
+Publishing 20260107/1210
+Publishing 20260107/1220
+Publishing 20260107/1230
+Publishing 20260107/1240
+Publishing 20260107/1250
+Publishing 20260107/1300
+Publishing 20260107/1310
+Publishing 20260107/1320
+Publishing 20260107/1330
+Publishing 20260107/1340
+Publishing 20260107/1350
+Publishing 20260107/1400
+Publishing 20260107/1410
+Publishing 20260107/1420
+Publishing 20260107/1430
+Publishing 20260107/1440
+Publishing 20260107/1450
+Publishing 20260107/1500
+Publishing 20260107/1510
+Publishing 20260107/1520
+Publishing 20260107/1530
+Publishing 20260107/1540
+Publishing 20260107/1550
+Publishing 20260107/1600
+Publishing 20260107/1610
+Publishing 20260107/1620
+Publishing 20260107/1630
+Publishing 20260107/1640
+Publishing 20260107/1650
+Publishing 20260107/1700
+Publishing 20260107/1710
+Publishing 20260107/1720
+Publishing 20260107/1730
+Publishing 20260107/1740
+Publishing 20260107/1750
+{
+  "schema": "shade-map-result-1.0",
+  "run_id": "973c25d16ae0d080efe0f36fc27fcdd04755186f0b45bb01829605ba13c642e4",
+  "name": "sea2_2_cheung_chau",
+  "status": "complete",
+  "published_frames": 65,
+  "reused_frames": 0,
+  "computed_batches": 1,
+  "verified_only": false
+}

@@ -1,4 +1,4 @@
-"""Immutable view identity and surface windows, including cells without tiles."""
+"""Immutable view identity and surface windows, with explicit outside-domain NoData."""
 from pathlib import Path
 import re
 
@@ -28,13 +28,15 @@ def read_surface_window(view,bounds,*,manifest=None):
     grid=doc['grid']; res=grid['resolution']; origin=grid['origin']
     l,b,r,t=map(float,bounds)
     addresses=[(l-origin[0])/res,(b-origin[1])/res,(r-origin[0])/res,(t-origin[1])/res]
-    if any(abs(x-round(x))>1e-7 for x in addresses) or not l<r or not b<t:
+    if not np.isfinite(addresses).all() or any(abs(x-round(x))>1e-7 for x in addresses):
+        raise InvalidInput('surface window: bounds must be ordered and native-grid aligned')
+    l,b,r,t = [origin[i%2]+round(v)*res for i,v in enumerate(addresses)]
+    if not l<r or not b<t:
         raise InvalidInput('surface window: bounds must be ordered and native-grid aligned')
     dl,db,dr,dt=grid['domain_bounds']
-    if l<dl or b<db or r>dr or t>dt:
-        raise InvalidInput('surface window: bounds outside sea view domain')
-    shape=(round((t-b)/res),round((r-l)/res))
-    out=np.full(shape,254,np.uint8)
+    inside_width=max(0,round((min(r,dr)-max(l,dl))/res))
+    inside_height=max(0,round((min(t,dt)-max(b,db))/res))
+    out=np.full((round((t-b)/res),round((r-l)/res)),255,np.uint8)
     seen=0
     for cell in doc['cells']:
         cl,cb,cr,ct=cell['bounds']
@@ -51,7 +53,7 @@ def read_surface_window(view,bounds,*,manifest=None):
         row,col=round((t-y1)/res),round((x0-l)/res)
         out[row:row+height,col:col+width]=a
         seen+=height*width
-    if seen!=out.size:
+    if seen!=inside_width*inside_height:
         raise RuntimeError('sea view: surface cells do not cover window')
     return out
 

@@ -1,6 +1,8 @@
 """F1 provider integration, implemented outside F's frozen orchestration."""
 from contextvars import ContextVar
-from pathlib import Path
+import re
+
+from . import POINTER_SCHEMA, POLICY, SOURCE_NAME, VIEW_NAMESPACE, VIEW_SCHEMA
 
 MISSING = 'sea view missing or built from a different catalogue; run python -m tools.sea2 build'
 
@@ -17,17 +19,18 @@ class SeaSource:
         from .profile import load_profile
         from .view import read_manifest
         profile=load_profile(machine)
-        root=v1.ROOT/'data/processed/dsm_views/sea_fill_v2'
+        root=v1.ROOT/'data/processed/dsm_views'/VIEW_NAMESPACE
         pointer=root/f'current-{profile["profile_id"]}.json'
         try:
-            if pointer.is_symlink(): raise ValueError('pointer symlink')
+            if root.resolve()!=root or pointer.is_symlink(): raise ValueError('pointer symlink')
             doc=read_json(pointer)
-            import re
             if not re.fullmatch('[0-9a-f]{64}',doc['view_id']): raise ValueError('invalid view ID')
-            view=root/doc['view_id']; manifest=read_manifest(view)
-            from . import POLICY
-            if (doc['schema']!='sea-view-pointer-2.0' or manifest['diagnostic']
-                    or manifest['schema']!='sea-view-2.0' or manifest['policy']!=POLICY
+            view=root/doc['view_id']
+            if view.is_symlink() or (view/'tiles').is_symlink():
+                raise ValueError('view symlink')
+            manifest=read_manifest(view)
+            if (doc['schema']!=POINTER_SCHEMA
+                    or manifest['schema']!=VIEW_SCHEMA or manifest['policy']!=POLICY
                     or manifest['view_id']!=doc['view_id'] or manifest['profile']!=profile
                     or doc['profile_id']!=profile['profile_id']
                     or doc['header_inventory']!=header_inventory(machine['dsm_dir'])
@@ -44,11 +47,10 @@ class SeaSource:
 
     def cache_namespace(self,machine):
         self.catalogue(machine)
-        return 'sea_fill_v2_'+self._active.get()[1]['view_id'][:12]
+        return VIEW_NAMESPACE+'_'+self._active.get()[1]['view_id'][:12]
 
     def policies(self):
         from src import v1
-        from . import POLICY
         return dict(engine=v1.POLICY,sea=POLICY)
 
     def source_identity(self,records):
@@ -59,11 +61,14 @@ class SeaSource:
         view,manifest=active
         raw=RawSource.source_identity(self,records)
         expected={r['name']:r['output_sha256'] for r in manifest['tiles']}
-        if any(expected.get(s['name'])!=s['sha256'] for s in raw['sources']):
+        auxiliaries=manifest['auxiliary_outputs']
+        if any(expected.get(s['name'])!=s['sha256'] or
+               any(auxiliaries.get(a['name'])!=a['sha256'] for a in s['auxiliary'])
+               for s in raw['sources']):
             raise InvalidInput('sea view: selected tile hashes differ from manifest')
         # Bind publication records to their immutable view, independent of later plans.
         for record in records: record['_sea2_view']=str(view)
-        return dict(provider='sea-2.0',view_id=manifest['view_id'],
+        return dict(provider=SOURCE_NAME,view_id=manifest['view_id'],
                     profile_sha256=manifest['profile_sha256'],sources=raw['sources'])
 
     def preview_identity(self,region,machine):

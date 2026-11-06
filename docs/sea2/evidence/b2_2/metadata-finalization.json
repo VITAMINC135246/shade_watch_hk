@@ -1,0 +1,27 @@
+{
+  "final_build_code_sha256": {
+    "tools/sea2/__init__.py": "3c47ddd3fc19d8a0c8019c3222657873d14cf64992393e0a89b3ac7425eaf3d5",
+    "tools/sea2/__main__.py": "09664e195a7c90a00a066362ccdcb1bbd6c5dbdb699b7087d51339cf225f21eb",
+    "tools/sea2/build.py": "a5a5cddbd85497fcd725aa9847e166f4f5925173ce3533ed86393d544803faf9",
+    "tools/sea2/catalogue.py": "9c18ae57eeb384bb08d2af9048fcc3066b7570ee24fb48b85dfac3cc93342d0a",
+    "tools/sea2/profile.py": "1c48e1b8fa60f05343e78944184305aad1c9180c93e8553d8b8105d6d93ba2ea",
+    "tools/sea2/provider.py": "9fa18de494464053084cbf37ddb8aa03c544b5fdf7d36d71b4b86112ee35079f",
+    "tools/sea2/rule.py": "751dde428a1d0a3b26ada11f0b49f77edfb2b816f4a5f28e278c050905466774",
+    "tools/sea2/view.py": "2c4e83ee87ac81f982f7aa8768535336d1e3f24c29983d4a1c264d38c0372875"
+  },
+  "final_manifest_sha256": "1a7a43bda6e82157cd30d5775d8c4e3d0194bc807efb16017c1d5c5cc7de1c52",
+  "final_view_id": "8ee51b017411bd60e833e97fef10577546ba97f61e601df0fb21ecbfc0a4cbd1",
+  "note": "F package initialization imports the provider. Only its inclusion in BUILD_MODULES changed after the raster build. Raster files and all raster records were carried forward unchanged.",
+  "original_build_code_sha256": {
+    "tools/sea2/__init__.py": "3c47ddd3fc19d8a0c8019c3222657873d14cf64992393e0a89b3ac7425eaf3d5",
+    "tools/sea2/__main__.py": "09664e195a7c90a00a066362ccdcb1bbd6c5dbdb699b7087d51339cf225f21eb",
+    "tools/sea2/build.py": "36b4f1210976b0ebdc58e89ee8bcd2df0da85edf9a91c0347801c58e4e1bf4bd",
+    "tools/sea2/catalogue.py": "9c18ae57eeb384bb08d2af9048fcc3066b7570ee24fb48b85dfac3cc93342d0a",
+    "tools/sea2/profile.py": "1c48e1b8fa60f05343e78944184305aad1c9180c93e8553d8b8105d6d93ba2ea",
+    "tools/sea2/rule.py": "751dde428a1d0a3b26ada11f0b49f77edfb2b816f4a5f28e278c050905466774",
+    "tools/sea2/view.py": "2c4e83ee87ac81f982f7aa8768535336d1e3f24c29983d4a1c264d38c0372875"
+  },
+  "previous_manifest_sha256": "c2f8763f0ef5e47be21d65e1cade47b55017f1db21ec6f1ebf93eb40c0516732",
+  "previous_view_id": "2109e9d9a8043caeaeb44c54da2a5b080627363c15bad5b8a7f7761679cbb7b9",
+  "tile_and_surface_records_sha256": "bbc6db4316d5ac8c2d32b1f546ec8d45cf22a1d4af8e481a9745c11f3677c4ff"
+}

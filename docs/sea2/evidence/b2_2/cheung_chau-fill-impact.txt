@@ -1,0 +1,12 @@
+{
+  "report": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/sea2_2_development/_diagnostics/fill_impact/sea2_2_cheung_chau/fill_impact.json",
+  "work": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/sea2_2_diagnostic_work/sea2_2_cheung_chau-51d38f2c03c2",
+  "frames": 3,
+  "events": [
+    {
+      "id": "c1c804b0098ce7ecb3c44a32ecfe69f709de961b794e8172c68f95d979c761cb",
+      "action": "submit_run",
+      "state": "SUCCEEDED"
+    }
+  ]
+}

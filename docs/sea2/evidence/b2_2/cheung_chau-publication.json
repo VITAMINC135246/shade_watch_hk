@@ -1,0 +1,5234 @@
+{
+  "frames": [
+    {
+      "cross_counts": [
+        {
+          "pixels": 3276281,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 46032,
+          "quality": 3,
+          "shade": 255,
+          "surface": 0
+        },
+        {
+          "pixels": 2841285,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        },
+        {
+          "pixels": 1036402,
+          "quality": 3,
+          "shade": 255,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.9861445926377196,
+            1.0
+          ],
+          "shaded": 3276281,
+          "sunlit": 0,
+          "sunlit_bounds": [
+            0.0,
+            0.013855407362280435
+          ],
+          "uncertain": 46032,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 46032,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.7327267517981725,
+            1.0
+          ],
+          "shaded": 2841285,
+          "sunlit": 0,
+          "sunlit_bounds": [
+            0.0,
+            0.2672732482018275
+          ],
+          "uncertain": 1036402,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 1036402,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "0710",
+      "utc_time": "2026-01-06T23:10:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 3223830,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 98483,
+          "quality": 3,
+          "shade": 255,
+          "surface": 0
+        },
+        {
+          "pixels": 2395202,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        },
+        {
+          "pixels": 1482485,
+          "quality": 3,
+          "shade": 255,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.9703570976003766,
+            1.0
+          ],
+          "shaded": 3223830,
+          "sunlit": 0,
+          "sunlit_bounds": [
+            0.0,
+            0.029642902399623396
+          ],
+          "uncertain": 98483,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 98483,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.6176883281193144,
+            1.0
+          ],
+          "shaded": 2395202,
+          "sunlit": 0,
+          "sunlit_bounds": [
+            0.0,
+            0.3823116718806856
+          ],
+          "uncertain": 1482485,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 1482485,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "0720",
+      "utc_time": "2026-01-06T23:20:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 3140174,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 182139,
+          "quality": 3,
+          "shade": 255,
+          "surface": 0
+        },
+        {
+          "pixels": 1367028,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        },
+        {
+          "pixels": 2510659,
+          "quality": 3,
+          "shade": 255,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.9451770498444909,
+            1.0
+          ],
+          "shaded": 3140174,
+          "sunlit": 0,
+          "sunlit_bounds": [
+            0.0,
+            0.05482295015550913
+          ],
+          "uncertain": 182139,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 182139,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.3525369634011203,
+            1.0
+          ],
+          "shaded": 1367028,
+          "sunlit": 0,
+          "sunlit_bounds": [
+            0.0,
+            0.6474630365988797
+          ],
+          "uncertain": 2510659,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 2510659,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "0730",
+      "utc_time": "2026-01-06T23:30:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 294507,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 3027806,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 2917113,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 960574,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.9113548302041379,
+            0.9113548302041379
+          ],
+          "shaded": 3027806,
+          "sunlit": 294507,
+          "sunlit_bounds": [
+            0.0886451697958621,
+            0.0886451697958621
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.24771829185800712,
+            0.24771829185800712
+          ],
+          "shaded": 960574,
+          "sunlit": 2917113,
+          "sunlit_bounds": [
+            0.7522817081419929,
+            0.7522817081419929
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "0740",
+      "utc_time": "2026-01-06T23:40:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 400507,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 2921806,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3214266,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 663421,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.8794493474877292,
+            0.8794493474877292
+          ],
+          "shaded": 2921806,
+          "sunlit": 400507,
+          "sunlit_bounds": [
+            0.12055065251227082,
+            0.12055065251227082
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.17108678446713207,
+            0.17108678446713207
+          ],
+          "shaded": 663421,
+          "sunlit": 3214266,
+          "sunlit_bounds": [
+            0.8289132155328679,
+            0.8289132155328679
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "0750",
+      "utc_time": "2026-01-06T23:50:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 504320,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 2817993,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3392596,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 485091,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.8482021410986864,
+            0.8482021410986864
+          ],
+          "shaded": 2817993,
+          "sunlit": 504320,
+          "sunlit_bounds": [
+            0.15179785890131364,
+            0.15179785890131364
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.1250980287991269,
+            0.1250980287991269
+          ],
+          "shaded": 485091,
+          "sunlit": 3392596,
+          "sunlit_bounds": [
+            0.8749019712008731,
+            0.8749019712008731
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "0800",
+      "utc_time": "2026-01-07T00:00:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 606325,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 2715988,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3505626,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 372061,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.8174991338865423,
+            0.8174991338865423
+          ],
+          "shaded": 2715988,
+          "sunlit": 606325,
+          "sunlit_bounds": [
+            0.1825008661134577,
+            0.1825008661134577
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.09594920889695326,
+            0.09594920889695326
+          ],
+          "shaded": 372061,
+          "sunlit": 3505626,
+          "sunlit_bounds": [
+            0.9040507911030468,
+            0.9040507911030468
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "0810",
+      "utc_time": "2026-01-07T00:10:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 698101,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 2624212,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3588412,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 289275,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.7898750057565317,
+            0.7898750057565317
+          ],
+          "shaded": 2624212,
+          "sunlit": 698101,
+          "sunlit_bounds": [
+            0.21012499424346834,
+            0.21012499424346834
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.07459988389986093,
+            0.07459988389986093
+          ],
+          "shaded": 289275,
+          "sunlit": 3588412,
+          "sunlit_bounds": [
+            0.9254001161001391,
+            0.9254001161001391
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "0820",
+      "utc_time": "2026-01-07T00:20:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 817131,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 2505182,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3644062,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 233625,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.7540475566269644,
+            0.7540475566269644
+          ],
+          "shaded": 2505182,
+          "sunlit": 817131,
+          "sunlit_bounds": [
+            0.2459524433730356,
+            0.2459524433730356
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.0602485450733904,
+            0.0602485450733904
+          ],
+          "shaded": 233625,
+          "sunlit": 3644062,
+          "sunlit_bounds": [
+            0.9397514549266096,
+            0.9397514549266096
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "0830",
+      "utc_time": "2026-01-07T00:30:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 899053,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 2423260,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3689516,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 188171,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.7293894344091,
+            0.7293894344091
+          ],
+          "shaded": 2423260,
+          "sunlit": 899053,
+          "sunlit_bounds": [
+            0.2706105655909001,
+            0.2706105655909001
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.04852660877476702,
+            0.04852660877476702
+          ],
+          "shaded": 188171,
+          "sunlit": 3689516,
+          "sunlit_bounds": [
+            0.951473391225233,
+            0.951473391225233
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "0840",
+      "utc_time": "2026-01-07T00:40:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 975532,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 2346781,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3723073,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 154614,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.706369628629211,
+            0.706369628629211
+          ],
+          "shaded": 2346781,
+          "sunlit": 975532,
+          "sunlit_bounds": [
+            0.29363037137078896,
+            0.29363037137078896
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.03987273856812063,
+            0.03987273856812063
+          ],
+          "shaded": 154614,
+          "sunlit": 3723073,
+          "sunlit_bounds": [
+            0.9601272614318793,
+            0.9601272614318793
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "0850",
+      "utc_time": "2026-01-07T00:50:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1035334,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 2286979,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3746429,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 131258,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.6883695184649972,
+            0.6883695184649972
+          ],
+          "shaded": 2286979,
+          "sunlit": 1035334,
+          "sunlit_bounds": [
+            0.3116304815350029,
+            0.3116304815350029
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.03384956031778738,
+            0.03384956031778738
+          ],
+          "shaded": 131258,
+          "sunlit": 3746429,
+          "sunlit_bounds": [
+            0.9661504396822126,
+            0.9661504396822126
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "0900",
+      "utc_time": "2026-01-07T01:00:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1104812,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 2217501,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3766611,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 111076,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.6674569795199911,
+            0.6674569795199911
+          ],
+          "shaded": 2217501,
+          "sunlit": 1104812,
+          "sunlit_bounds": [
+            0.33254302048000894,
+            0.33254302048000894
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.028644911257664687,
+            0.028644911257664687
+          ],
+          "shaded": 111076,
+          "sunlit": 3766611,
+          "sunlit_bounds": [
+            0.9713550887423353,
+            0.9713550887423353
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "0910",
+      "utc_time": "2026-01-07T01:10:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1171630,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 2150683,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3782262,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 95425,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.6473450875940948,
+            0.6473450875940948
+          ],
+          "shaded": 2150683,
+          "sunlit": 1171630,
+          "sunlit_bounds": [
+            0.3526549124059052,
+            0.3526549124059052
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.024608742273422274,
+            0.024608742273422274
+          ],
+          "shaded": 95425,
+          "sunlit": 3782262,
+          "sunlit_bounds": [
+            0.9753912577265778,
+            0.9753912577265778
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "0920",
+      "utc_time": "2026-01-07T01:20:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1307652,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 2014661,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3796635,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 81052,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.6064031293860632,
+            0.6064031293860632
+          ],
+          "shaded": 2014661,
+          "sunlit": 1307652,
+          "sunlit_bounds": [
+            0.3935968706139367,
+            0.3935968706139367
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.02090215120508695,
+            0.02090215120508695
+          ],
+          "shaded": 81052,
+          "sunlit": 3796635,
+          "sunlit_bounds": [
+            0.979097848794913,
+            0.979097848794913
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "0930",
+      "utc_time": "2026-01-07T01:30:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1369235,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 1953078,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3807136,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 70551,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.5878669469131897,
+            0.5878669469131897
+          ],
+          "shaded": 1953078,
+          "sunlit": 1369235,
+          "sunlit_bounds": [
+            0.4121330530868103,
+            0.4121330530868103
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.01819409354081441,
+            0.01819409354081441
+          ],
+          "shaded": 70551,
+          "sunlit": 3807136,
+          "sunlit_bounds": [
+            0.9818059064591856,
+            0.9818059064591856
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "0940",
+      "utc_time": "2026-01-07T01:40:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1428624,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 1893689,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3815854,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 61833,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.5699911477335218,
+            0.5699911477335218
+          ],
+          "shaded": 1893689,
+          "sunlit": 1428624,
+          "sunlit_bounds": [
+            0.4300088522664782,
+            0.4300088522664782
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.01594584606751396,
+            0.01594584606751396
+          ],
+          "shaded": 61833,
+          "sunlit": 3815854,
+          "sunlit_bounds": [
+            0.9840541539324861,
+            0.9840541539324861
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "0950",
+      "utc_time": "2026-01-07T01:50:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1409917,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 1912396,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3821896,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 55791,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.575621863442728,
+            0.575621863442728
+          ],
+          "shaded": 1912396,
+          "sunlit": 1409917,
+          "sunlit_bounds": [
+            0.424378136557272,
+            0.424378136557272
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.014387700709211445,
+            0.014387700709211445
+          ],
+          "shaded": 55791,
+          "sunlit": 3821896,
+          "sunlit_bounds": [
+            0.9856122992907885,
+            0.9856122992907885
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1000",
+      "utc_time": "2026-01-07T02:00:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1462506,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 1859807,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3828251,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 49436,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.5597928310788297,
+            0.5597928310788297
+          ],
+          "shaded": 1859807,
+          "sunlit": 1462506,
+          "sunlit_bounds": [
+            0.4402071689211703,
+            0.4402071689211703
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.012748837128937946,
+            0.012748837128937946
+          ],
+          "shaded": 49436,
+          "sunlit": 3828251,
+          "sunlit_bounds": [
+            0.9872511628710621,
+            0.9872511628710621
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1010",
+      "utc_time": "2026-01-07T02:10:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1529013,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 1793300,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3833638,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 44049,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.539774548635243,
+            0.539774548635243
+          ],
+          "shaded": 1793300,
+          "sunlit": 1529013,
+          "sunlit_bounds": [
+            0.460225451364757,
+            0.460225451364757
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.011359606899680144,
+            0.011359606899680144
+          ],
+          "shaded": 44049,
+          "sunlit": 3833638,
+          "sunlit_bounds": [
+            0.9886403931003198,
+            0.9886403931003198
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1020",
+      "utc_time": "2026-01-07T02:20:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1575601,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 1746712,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3838341,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 39346,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.5257517879862614,
+            0.5257517879862614
+          ],
+          "shaded": 1746712,
+          "sunlit": 1575601,
+          "sunlit_bounds": [
+            0.4742482120137386,
+            0.4742482120137386
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.010146770484569797,
+            0.010146770484569797
+          ],
+          "shaded": 39346,
+          "sunlit": 3838341,
+          "sunlit_bounds": [
+            0.9898532295154302,
+            0.9898532295154302
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1030",
+      "utc_time": "2026-01-07T02:30:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1618790,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 1703523,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3842210,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 35477,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.5127521097500446,
+            0.5127521097500446
+          ],
+          "shaded": 1703523,
+          "sunlit": 1618790,
+          "sunlit_bounds": [
+            0.48724789024995535,
+            0.48724789024995535
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.009149010737586607,
+            0.009149010737586607
+          ],
+          "shaded": 35477,
+          "sunlit": 3842210,
+          "sunlit_bounds": [
+            0.9908509892624134,
+            0.9908509892624134
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1040",
+      "utc_time": "2026-01-07T02:40:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1636192,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 1686121,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3844999,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 32688,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.5075141926723942,
+            0.5075141926723942
+          ],
+          "shaded": 1686121,
+          "sunlit": 1636192,
+          "sunlit_bounds": [
+            0.4924858073276058,
+            0.4924858073276058
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.008429767539257295,
+            0.008429767539257295
+          ],
+          "shaded": 32688,
+          "sunlit": 3844999,
+          "sunlit_bounds": [
+            0.9915702324607427,
+            0.9915702324607427
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1050",
+      "utc_time": "2026-01-07T02:50:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1651399,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 1670914,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3848383,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 29304,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.5029369598830694,
+            0.5029369598830694
+          ],
+          "shaded": 1670914,
+          "sunlit": 1651399,
+          "sunlit_bounds": [
+            0.4970630401169306,
+            0.4970630401169306
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.007557082353475152,
+            0.007557082353475152
+          ],
+          "shaded": 29304,
+          "sunlit": 3848383,
+          "sunlit_bounds": [
+            0.9924429176465248,
+            0.9924429176465248
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1100",
+      "utc_time": "2026-01-07T03:00:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1684791,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 1637522,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3850638,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 27049,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.49288613083716076,
+            0.49288613083716076
+          ],
+          "shaded": 1637522,
+          "sunlit": 1684791,
+          "sunlit_bounds": [
+            0.5071138691628393,
+            0.5071138691628393
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.006975550115313587,
+            0.006975550115313587
+          ],
+          "shaded": 27049,
+          "sunlit": 3850638,
+          "sunlit_bounds": [
+            0.9930244498846864,
+            0.9930244498846864
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1110",
+      "utc_time": "2026-01-07T03:10:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1714283,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 1608030,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3852998,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 24689,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.4840091827591199,
+            0.4840091827591199
+          ],
+          "shaded": 1608030,
+          "sunlit": 1714283,
+          "sunlit_bounds": [
+            0.51599081724088,
+            0.51599081724088
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.00636693987936623,
+            0.00636693987936623
+          ],
+          "shaded": 24689,
+          "sunlit": 3852998,
+          "sunlit_bounds": [
+            0.9936330601206338,
+            0.9936330601206338
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1120",
+      "utc_time": "2026-01-07T03:20:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1740250,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 1582063,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3854419,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 23268,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.47619324247895967,
+            0.47619324247895967
+          ],
+          "shaded": 1582063,
+          "sunlit": 1740250,
+          "sunlit_bounds": [
+            0.5238067575210403,
+            0.5238067575210403
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.006000484309331826,
+            0.006000484309331826
+          ],
+          "shaded": 23268,
+          "sunlit": 3854419,
+          "sunlit_bounds": [
+            0.9939995156906681,
+            0.9939995156906681
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1130",
+      "utc_time": "2026-01-07T03:30:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1840824,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 1481489,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3856582,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 21105,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.44592095928348713,
+            0.44592095928348713
+          ],
+          "shaded": 1481489,
+          "sunlit": 1840824,
+          "sunlit_bounds": [
+            0.5540790407165128,
+            0.5540790407165128
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.005442677554944481,
+            0.005442677554944481
+          ],
+          "shaded": 21105,
+          "sunlit": 3856582,
+          "sunlit_bounds": [
+            0.9945573224450556,
+            0.9945573224450556
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1140",
+      "utc_time": "2026-01-07T03:40:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1859266,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 1463047,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3857389,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 20298,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.44037000728107195,
+            0.44037000728107195
+          ],
+          "shaded": 1463047,
+          "sunlit": 1859266,
+          "sunlit_bounds": [
+            0.559629992718928,
+            0.559629992718928
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.005234563800533668,
+            0.005234563800533668
+          ],
+          "shaded": 20298,
+          "sunlit": 3857389,
+          "sunlit_bounds": [
+            0.9947654361994663,
+            0.9947654361994663
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1150",
+      "utc_time": "2026-01-07T03:50:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1885384,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 1436929,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3858876,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 18811,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.43250861673779684,
+            0.43250861673779684
+          ],
+          "shaded": 1436929,
+          "sunlit": 1885384,
+          "sunlit_bounds": [
+            0.5674913832622032,
+            0.5674913832622032
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.004851087774748194,
+            0.004851087774748194
+          ],
+          "shaded": 18811,
+          "sunlit": 3858876,
+          "sunlit_bounds": [
+            0.9951489122252518,
+            0.9951489122252518
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1200",
+      "utc_time": "2026-01-07T04:00:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1914397,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 1407916,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3860638,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 17049,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.4237758453222198,
+            0.4237758453222198
+          ],
+          "shaded": 1407916,
+          "sunlit": 1914397,
+          "sunlit_bounds": [
+            0.5762241546777802,
+            0.5762241546777802
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.00439669318333326,
+            0.00439669318333326
+          ],
+          "shaded": 17049,
+          "sunlit": 3860638,
+          "sunlit_bounds": [
+            0.9956033068166668,
+            0.9956033068166668
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1210",
+      "utc_time": "2026-01-07T04:10:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1920525,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 1401788,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3860879,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 16808,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.42193134722706743,
+            0.42193134722706743
+          ],
+          "shaded": 1401788,
+          "sunlit": 1920525,
+          "sunlit_bounds": [
+            0.5780686527729326,
+            0.5780686527729326
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.004334542731272534,
+            0.004334542731272534
+          ],
+          "shaded": 16808,
+          "sunlit": 3860879,
+          "sunlit_bounds": [
+            0.9956654572687275,
+            0.9956654572687275
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1220",
+      "utc_time": "2026-01-07T04:20:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1845223,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 1477090,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3861088,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 16599,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.4445968817507562,
+            0.4445968817507562
+          ],
+          "shaded": 1477090,
+          "sunlit": 1845223,
+          "sunlit_bounds": [
+            0.5554031182492438,
+            0.5554031182492438
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.0042806446213941455,
+            0.0042806446213941455
+          ],
+          "shaded": 16599,
+          "sunlit": 3861088,
+          "sunlit_bounds": [
+            0.9957193553786059,
+            0.9957193553786059
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1230",
+      "utc_time": "2026-01-07T04:30:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1916286,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 1406027,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3862116,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 15571,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.4232072655406038,
+            0.4232072655406038
+          ],
+          "shaded": 1406027,
+          "sunlit": 1916286,
+          "sunlit_bounds": [
+            0.5767927344593962,
+            0.5767927344593962
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.004015538128786568,
+            0.004015538128786568
+          ],
+          "shaded": 15571,
+          "sunlit": 3862116,
+          "sunlit_bounds": [
+            0.9959844618712135,
+            0.9959844618712135
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1240",
+      "utc_time": "2026-01-07T04:40:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1909564,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 1412749,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3861902,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 15785,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.42523055473701604,
+            0.42523055473701604
+          ],
+          "shaded": 1412749,
+          "sunlit": 1909564,
+          "sunlit_bounds": [
+            0.5747694452629839,
+            0.5747694452629839
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.004070725667130947,
+            0.004070725667130947
+          ],
+          "shaded": 15785,
+          "sunlit": 3861902,
+          "sunlit_bounds": [
+            0.995929274332869,
+            0.995929274332869
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1250",
+      "utc_time": "2026-01-07T04:50:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1877444,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 1444869,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3861158,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 16529,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.4348985179903278,
+            0.4348985179903278
+          ],
+          "shaded": 1444869,
+          "sunlit": 1877444,
+          "sunlit_bounds": [
+            0.5651014820096721,
+            0.5651014820096721
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.004262592622870283,
+            0.004262592622870283
+          ],
+          "shaded": 16529,
+          "sunlit": 3861158,
+          "sunlit_bounds": [
+            0.9957374073771297,
+            0.9957374073771297
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1300",
+      "utc_time": "2026-01-07T05:00:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1850416,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 1471897,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3861433,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 16254,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.4430338140927721,
+            0.4430338140927721
+          ],
+          "shaded": 1471897,
+          "sunlit": 1850416,
+          "sunlit_bounds": [
+            0.5569661859072279,
+            0.5569661859072279
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.004191674057240824,
+            0.004191674057240824
+          ],
+          "shaded": 16254,
+          "sunlit": 3861433,
+          "sunlit_bounds": [
+            0.9958083259427591,
+            0.9958083259427591
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1310",
+      "utc_time": "2026-01-07T05:10:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1831444,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 1490869,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3860865,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 16822,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.4487442935087693,
+            0.4487442935087693
+          ],
+          "shaded": 1490869,
+          "sunlit": 1831444,
+          "sunlit_bounds": [
+            0.5512557064912307,
+            0.5512557064912307
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.004338153130977307,
+            0.004338153130977307
+          ],
+          "shaded": 16822,
+          "sunlit": 3860865,
+          "sunlit_bounds": [
+            0.9956618468690227,
+            0.9956618468690227
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1320",
+      "utc_time": "2026-01-07T05:20:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1735652,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 1586661,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3860537,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 17150,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.4775772180405639,
+            0.4775772180405639
+          ],
+          "shaded": 1586661,
+          "sunlit": 1735652,
+          "sunlit_bounds": [
+            0.5224227819594361,
+            0.5224227819594361
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.0044227396383462615,
+            0.0044227396383462615
+          ],
+          "shaded": 17150,
+          "sunlit": 3860537,
+          "sunlit_bounds": [
+            0.9955772603616537,
+            0.9955772603616537
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1330",
+      "utc_time": "2026-01-07T05:30:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1708949,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 1613364,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3859716,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 17971,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.4856146907290192,
+            0.4856146907290192
+          ],
+          "shaded": 1613364,
+          "sunlit": 1708949,
+          "sunlit_bounds": [
+            0.5143853092709808,
+            0.5143853092709808
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.004634463792461846,
+            0.004634463792461846
+          ],
+          "shaded": 17971,
+          "sunlit": 3859716,
+          "sunlit_bounds": [
+            0.9953655362075382,
+            0.9953655362075382
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1340",
+      "utc_time": "2026-01-07T05:40:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1680174,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 1642139,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3859655,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 18032,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.4942758253060443,
+            0.4942758253060443
+          ],
+          "shaded": 1642139,
+          "sunlit": 1680174,
+          "sunlit_bounds": [
+            0.5057241746939557,
+            0.5057241746939557
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.0046501948197469264,
+            0.0046501948197469264
+          ],
+          "shaded": 18032,
+          "sunlit": 3859655,
+          "sunlit_bounds": [
+            0.9953498051802531,
+            0.9953498051802531
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1350",
+      "utc_time": "2026-01-07T05:50:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1707141,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 1615172,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3858757,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 18930,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.48615888990591793,
+            0.48615888990591793
+          ],
+          "shaded": 1615172,
+          "sunlit": 1707141,
+          "sunlit_bounds": [
+            0.5138411100940821,
+            0.5138411100940821
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.00488177617223876,
+            0.00488177617223876
+          ],
+          "shaded": 18930,
+          "sunlit": 3858757,
+          "sunlit_bounds": [
+            0.9951182238277613,
+            0.9951182238277613
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1400",
+      "utc_time": "2026-01-07T06:00:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1669895,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 1652418,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3857548,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 20139,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.49736975414417606,
+            0.49736975414417606
+          ],
+          "shaded": 1652418,
+          "sunlit": 1669895,
+          "sunlit_bounds": [
+            0.5026302458558239,
+            0.5026302458558239
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.005193559975315181,
+            0.005193559975315181
+          ],
+          "shaded": 20139,
+          "sunlit": 3857548,
+          "sunlit_bounds": [
+            0.9948064400246848,
+            0.9948064400246848
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1410",
+      "utc_time": "2026-01-07T06:10:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1627743,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 1694570,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3857081,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 20606,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.510057300440988,
+            0.510057300440988
+          ],
+          "shaded": 1694570,
+          "sunlit": 1627743,
+          "sunlit_bounds": [
+            0.48994269955901204,
+            0.48994269955901204
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.005313992594038663,
+            0.005313992594038663
+          ],
+          "shaded": 20606,
+          "sunlit": 3857081,
+          "sunlit_bounds": [
+            0.9946860074059614,
+            0.9946860074059614
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1420",
+      "utc_time": "2026-01-07T06:20:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1584617,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 1737696,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3854819,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 22868,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.5230380159846468,
+            0.5230380159846468
+          ],
+          "shaded": 1737696,
+          "sunlit": 1584617,
+          "sunlit_bounds": [
+            0.47696198401535317,
+            0.47696198401535317
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.005897330032052612,
+            0.005897330032052612
+          ],
+          "shaded": 22868,
+          "sunlit": 3854819,
+          "sunlit_bounds": [
+            0.9941026699679474,
+            0.9941026699679474
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1430",
+      "utc_time": "2026-01-07T06:30:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1526502,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 1795811,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3853031,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 24656,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.5405303473814779,
+            0.5405303473814779
+          ],
+          "shaded": 1795811,
+          "sunlit": 1526502,
+          "sunlit_bounds": [
+            0.4594696526185221,
+            0.4594696526185221
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.006358429651490695,
+            0.006358429651490695
+          ],
+          "shaded": 24656,
+          "sunlit": 3853031,
+          "sunlit_bounds": [
+            0.9936415703485093,
+            0.9936415703485093
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1440",
+      "utc_time": "2026-01-07T06:40:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1477054,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 1845259,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3850338,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 27349,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.5554139540735626,
+            0.5554139540735626
+          ],
+          "shaded": 1845259,
+          "sunlit": 1477054,
+          "sunlit_bounds": [
+            0.4445860459264374,
+            0.4445860459264374
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.007052915823272997,
+            0.007052915823272997
+          ],
+          "shaded": 27349,
+          "sunlit": 3850338,
+          "sunlit_bounds": [
+            0.9929470841767271,
+            0.9929470841767271
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1450",
+      "utc_time": "2026-01-07T06:50:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1424814,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 1897499,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3846399,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 31288,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.5711379391405927,
+            0.5711379391405927
+          ],
+          "shaded": 1897499,
+          "sunlit": 1424814,
+          "sunlit_bounds": [
+            0.4288620608594073,
+            0.4288620608594073
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.008068727568780049,
+            0.008068727568780049
+          ],
+          "shaded": 31288,
+          "sunlit": 3846399,
+          "sunlit_bounds": [
+            0.9919312724312199,
+            0.9919312724312199
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1500",
+      "utc_time": "2026-01-07T07:00:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1452984,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 1869329,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3843227,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 34460,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.5626589066111471,
+            0.5626589066111471
+          ],
+          "shaded": 1869329,
+          "sunlit": 1452984,
+          "sunlit_bounds": [
+            0.4373410933888529,
+            0.4373410933888529
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.008886740987604209,
+            0.008886740987604209
+          ],
+          "shaded": 34460,
+          "sunlit": 3843227,
+          "sunlit_bounds": [
+            0.9911132590123958,
+            0.9911132590123958
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1510",
+      "utc_time": "2026-01-07T07:10:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1394853,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 1927460,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3837062,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 40625,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.5801560539298977,
+            0.5801560539298977
+          ],
+          "shaded": 1927460,
+          "sunlit": 1394853,
+          "sunlit_bounds": [
+            0.4198439460701024,
+            0.4198439460701024
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.01047660628617008,
+            0.01047660628617008
+          ],
+          "shaded": 40625,
+          "sunlit": 3837062,
+          "sunlit_bounds": [
+            0.9895233937138299,
+            0.9895233937138299
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1520",
+      "utc_time": "2026-01-07T07:20:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1285747,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 2036566,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3830680,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 47007,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.6129964274889211,
+            0.6129964274889211
+          ],
+          "shaded": 2036566,
+          "sunlit": 1285747,
+          "sunlit_bounds": [
+            0.38700357251107886,
+            0.38700357251107886
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.012122432780159925,
+            0.012122432780159925
+          ],
+          "shaded": 47007,
+          "sunlit": 3830680,
+          "sunlit_bounds": [
+            0.9878775672198401,
+            0.9878775672198401
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1530",
+      "utc_time": "2026-01-07T07:30:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1199193,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 2123120,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3820646,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 57041,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.6390487591024687,
+            0.6390487591024687
+          ],
+          "shaded": 2123120,
+          "sunlit": 1199193,
+          "sunlit_bounds": [
+            0.36095124089753133,
+            0.36095124089753133
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.014710057825708986,
+            0.014710057825708986
+          ],
+          "shaded": 57041,
+          "sunlit": 3820646,
+          "sunlit_bounds": [
+            0.985289942174291,
+            0.985289942174291
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1540",
+      "utc_time": "2026-01-07T07:40:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1132000,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 2190313,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3808515,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 69172,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.6592735241983522,
+            0.6592735241983522
+          ],
+          "shaded": 2190313,
+          "sunlit": 1132000,
+          "sunlit_bounds": [
+            0.34072647580164783,
+            0.34072647580164783
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.01783846916989432,
+            0.01783846916989432
+          ],
+          "shaded": 69172,
+          "sunlit": 3808515,
+          "sunlit_bounds": [
+            0.9821615308301057,
+            0.9821615308301057
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1550",
+      "utc_time": "2026-01-07T07:50:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1060898,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 2261415,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3791942,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 85745,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.6806748792181833,
+            0.6806748792181833
+          ],
+          "shaded": 2261415,
+          "sunlit": 1060898,
+          "sunlit_bounds": [
+            0.31932512078181674,
+            0.31932512078181674
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.02211240876326532,
+            0.02211240876326532
+          ],
+          "shaded": 85745,
+          "sunlit": 3791942,
+          "sunlit_bounds": [
+            0.9778875912367346,
+            0.9778875912367346
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1600",
+      "utc_time": "2026-01-07T08:00:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 1005202,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 2317111,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3776043,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 101644,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.6974391034198163,
+            0.6974391034198163
+          ],
+          "shaded": 2317111,
+          "sunlit": 1005202,
+          "sunlit_bounds": [
+            0.30256089658018376,
+            0.30256089658018376
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.02621253339942084,
+            0.02621253339942084
+          ],
+          "shaded": 101644,
+          "sunlit": 3776043,
+          "sunlit_bounds": [
+            0.9737874666005791,
+            0.9737874666005791
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1610",
+      "utc_time": "2026-01-07T08:10:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 928903,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 2393410,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3747530,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 130157,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.7204047300781112,
+            0.7204047300781112
+          ],
+          "shaded": 2393410,
+          "sunlit": 928903,
+          "sunlit_bounds": [
+            0.27959526992188877,
+            0.27959526992188877
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.033565628169576346,
+            0.033565628169576346
+          ],
+          "shaded": 130157,
+          "sunlit": 3747530,
+          "sunlit_bounds": [
+            0.9664343718304237,
+            0.9664343718304237
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1620",
+      "utc_time": "2026-01-07T08:20:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 850804,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 2471509,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3708174,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 169513,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.7439121479523453,
+            0.7439121479523453
+          ],
+          "shaded": 2471509,
+          "sunlit": 850804,
+          "sunlit_bounds": [
+            0.2560878520476548,
+            0.2560878520476548
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.043714977511078126,
+            0.043714977511078126
+          ],
+          "shaded": 169513,
+          "sunlit": 3708174,
+          "sunlit_bounds": [
+            0.9562850224889219,
+            0.9562850224889219
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1630",
+      "utc_time": "2026-01-07T08:30:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 785212,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 2537101,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3666554,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 211133,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.763655019861163,
+            0.763655019861163
+          ],
+          "shaded": 2537101,
+          "sunlit": 785212,
+          "sunlit_bounds": [
+            0.236344980138837,
+            0.236344980138837
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.054448180061980246,
+            0.054448180061980246
+          ],
+          "shaded": 211133,
+          "sunlit": 3666554,
+          "sunlit_bounds": [
+            0.9455518199380197,
+            0.9455518199380197
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1640",
+      "utc_time": "2026-01-07T08:40:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 699100,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 2623213,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3596834,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 280853,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.7895743116316856,
+            0.7895743116316856
+          ],
+          "shaded": 2623213,
+          "sunlit": 699100,
+          "sunlit_bounds": [
+            0.2104256883683145,
+            0.2104256883683145
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.07242797059174709,
+            0.07242797059174709
+          ],
+          "shaded": 280853,
+          "sunlit": 3596834,
+          "sunlit_bounds": [
+            0.9275720294082529,
+            0.9275720294082529
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1650",
+      "utc_time": "2026-01-07T08:50:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 606620,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 2715693,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3500430,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 377257,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.8174103403261523,
+            0.8174103403261523
+          ],
+          "shaded": 2715693,
+          "sunlit": 606620,
+          "sunlit_bounds": [
+            0.18258965967384772,
+            0.18258965967384772
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.09728918295881024,
+            0.09728918295881024
+          ],
+          "shaded": 377257,
+          "sunlit": 3500430,
+          "sunlit_bounds": [
+            0.9027108170411897,
+            0.9027108170411897
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1700",
+      "utc_time": "2026-01-07T09:00:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 509452,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 2812861,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3369474,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 508213,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.8466574341430202,
+            0.8466574341430202
+          ],
+          "shaded": 2812861,
+          "sunlit": 509452,
+          "sunlit_bounds": [
+            0.15334256585697975,
+            0.15334256585697975
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.13106086179725182,
+            0.13106086179725182
+          ],
+          "shaded": 508213,
+          "sunlit": 3369474,
+          "sunlit_bounds": [
+            0.8689391382027482,
+            0.8689391382027482
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1710",
+      "utc_time": "2026-01-07T09:10:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 383793,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 2938520,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 3227417,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 650270,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.8844801799228429,
+            0.8844801799228429
+          ],
+          "shaded": 2938520,
+          "sunlit": 383793,
+          "sunlit_bounds": [
+            0.1155198200771571,
+            0.1155198200771571
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.16769532971588474,
+            0.16769532971588474
+          ],
+          "shaded": 650270,
+          "sunlit": 3227417,
+          "sunlit_bounds": [
+            0.8323046702841153,
+            0.8323046702841153
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1720",
+      "utc_time": "2026-01-07T09:20:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 3036326,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 285987,
+          "quality": 3,
+          "shade": 255,
+          "surface": 0
+        },
+        {
+          "pixels": 943255,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        },
+        {
+          "pixels": 2934432,
+          "quality": 3,
+          "shade": 255,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.9139193086262493,
+            1.0
+          ],
+          "shaded": 3036326,
+          "sunlit": 0,
+          "sunlit_bounds": [
+            0.0,
+            0.08608069137375075
+          ],
+          "uncertain": 285987,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 285987,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.24325196953751038,
+            1.0
+          ],
+          "shaded": 943255,
+          "sunlit": 0,
+          "sunlit_bounds": [
+            0.0,
+            0.7567480304624896
+          ],
+          "uncertain": 2934432,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 2934432,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1730",
+      "utc_time": "2026-01-07T09:30:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 3136642,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 185671,
+          "quality": 3,
+          "shade": 255,
+          "surface": 0
+        },
+        {
+          "pixels": 1634619,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        },
+        {
+          "pixels": 2243068,
+          "quality": 3,
+          "shade": 255,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.9441139350807706,
+            1.0
+          ],
+          "shaded": 3136642,
+          "sunlit": 0,
+          "sunlit_bounds": [
+            0.0,
+            0.05588606491922946
+          ],
+          "uncertain": 185671,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 185671,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.4215448539296751,
+            1.0
+          ],
+          "shaded": 1634619,
+          "sunlit": 0,
+          "sunlit_bounds": [
+            0.0,
+            0.5784551460703249
+          ],
+          "uncertain": 2243068,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 2243068,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1740",
+      "utc_time": "2026-01-07T09:40:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 3225884,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 96429,
+          "quality": 3,
+          "shade": 255,
+          "surface": 0
+        },
+        {
+          "pixels": 3096150,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        },
+        {
+          "pixels": 781537,
+          "quality": 3,
+          "shade": 255,
+          "surface": 1
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 3322313,
+          "shade_bounds": [
+            0.970975341576787,
+            1.0
+          ],
+          "shaded": 3225884,
+          "sunlit": 0,
+          "sunlit_bounds": [
+            0.0,
+            0.029024658423212984
+          ],
+          "uncertain": 96429,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 96429,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 0
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 3877687,
+          "shade_bounds": [
+            0.7984527889950891,
+            1.0
+          ],
+          "shaded": 3096150,
+          "sunlit": 0,
+          "sunlit_bounds": [
+            0.0,
+            0.2015472110049109
+          ],
+          "uncertain": 781537,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 781537,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1750",
+      "utc_time": "2026-01-07T09:50:00+00:00"
+    }
+  ],
+  "missing_data_check": true,
+  "provenance": {
+    "adapter_sidecar_sha256": "d21f429e95130fcc87155492f5fa63f2d551f4aca9d8c89c4becc41d9f101c94",
+    "cache_namespace": "sea_fill_v2_2_8ee51b017411",
+    "files": 1238,
+    "manifest_sha256": "2181262d1dbbf10556041bb4effb60dd122b14df9b354961986763f43264bf59",
+    "policies": {
+      "engine": "SW-V1-POLICY-1.0",
+      "sea": "SW-SEA-POLICY-2.2"
+    },
+    "raw_spatial_keys": {
+      "14NW19B(e820n807,e821n808).tif": "e8269ede64114453a5e40ab18594583769699e9b7b665c6fe8420597ea817fa6",
+      "14NW19D(e820n807,e821n807).tif": "4acb39e54248d678d480372681e782817d39c46e9427d410c405c85c06e7cd13",
+      "14NW20A(e821n807,e821n808).tif": "3f7ccd732db25bc1e51da0b4c3111eac1b753dffdfd882d999ea788d4c877667",
+      "14NW20C(e821n807,e821n807).tif": "aa0e09d5ff526c6a2ace95493f93cdf55822d4920af0baec94b7878b5dffe242"
+    },
+    "request_local_source_directory": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/region_views/393c8a21787754c2b5711e9776237a3f95f5dbdb20cebb3fc7e6aec8992831b0",
+    "sea_spatial_keys": {
+      "14NW19B(e820n807,e821n808).tif": "3009e35d9b496358102e732c6cfe3c88aa68e957e679dd5cbfe0f52e5ac501a3",
+      "14NW19D(e820n807,e821n807).tif": "33072205b8b48d6dcf0cde5db10e2c322cdb9d77d55aa88fb416615958519f1f",
+      "14NW20A(e821n807,e821n808).tif": "a7623e91f0dc12c95b81dbd848eca7c5bcd2f47fa7c0136418c51dfe15717ecf",
+      "14NW20C(e821n807,e821n807).tif": "70243cc2099d77ecc2197d25d3f7dd5b60d071a824d93df77154e41546d2fac4"
+    },
+    "source": "sea-2.2",
+    "v1_request_keys": [
+      "ffa807172de436e0535c4aca37212fb1e2d560b8862d1c4c46b2ce297553c71d"
+    ]
+  },
+  "run_id": "973c25d16ae0d080efe0f36fc27fcdd04755186f0b45bb01829605ba13c642e4",
+  "view_id": "8ee51b017411bd60e833e97fef10577546ba97f61e601df0fb21ecbfc0a4cbd1"
+}

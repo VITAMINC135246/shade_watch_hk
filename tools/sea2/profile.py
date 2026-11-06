@@ -5,6 +5,7 @@ from pathlib import Path
 import numpy as np
 
 from tools.shade_map.config import InvalidInput, load_json, validate_schema
+from .rule import NODATA
 
 CODE_ROOT = Path(__file__).resolve().parents[2]
 
@@ -12,8 +13,9 @@ CODE_ROOT = Path(__file__).resolve().parents[2]
 def validate_profile(value):
     value = deepcopy(value)
     validate_schema(value, load_json(CODE_ROOT/'config/schema/sea_profile.schema.json'))
-    if not np.isfinite(np.float32(value['h_sea_m'])):
-        raise InvalidInput('h_sea_m: must be representable as finite float32')
+    fill = np.float32(value['h_sea_m'])
+    if not np.isfinite(fill) or fill == NODATA:
+        raise InvalidInput('h_sea_m: must be a finite float32 height distinct from -9999')
     ids = set()
     for zone in value['exclusions']:
         if zone['id'] in ids:

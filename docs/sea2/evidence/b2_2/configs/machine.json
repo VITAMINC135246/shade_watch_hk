@@ -1,0 +1,10 @@
+{
+  "cache_namespace": "sea2_2_raw_development",
+  "dsm_dir": "data/raw/dsm/2020/D12.DSM.TIFF",
+  "max_output_bytes": null,
+  "memory_budget_mb": 8192,
+  "output_root": "outputs/sea2_2_development",
+  "schema": "shade-map-machine-1.0",
+  "sea_profile": "hk_cedd_2020",
+  "workers": 4
+}

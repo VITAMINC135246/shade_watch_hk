@@ -10,19 +10,24 @@ from rasterio.transform import from_origin
 from rasterio.windows import Window
 
 from tools.shade_map.config import InvalidInput
-from .rule import missing, shore_masks
+from .rule import NODATA, shore_masks
 
+DOMAIN_MARGIN_M = 1000
 SHIFTED = {'14NE15A','14NE15B','14NE15C','14NE15D'}
 
 
 def header_inventory(directory):
     """Include all non-hidden regular catalogue/auxiliary files, without opening."""
-    return [dict(name=p.name,bytes=p.stat().st_size,mtime_ns=p.stat().st_mtime_ns)
-            for p in sorted(Path(directory).iterdir()) if not p.name.startswith('.') and p.is_file()]
+    records = []
+    for path in sorted(Path(directory).iterdir()):
+        if not path.name.startswith('.') and path.is_file():
+            info = path.stat()
+            records.append(dict(name=path.name, bytes=info.st_size, mtime_ns=info.st_mtime_ns))
+    return records
 
 
 class Catalogue:
-    def __init__(self, directory, profile):
+    def __init__(self, directory):
         self.directory=Path(directory).resolve()
         self.records=[]
         for path in sorted(self.directory.glob('*.tif')):
@@ -39,10 +44,6 @@ class Catalogue:
         first=self.records[0]
         self.res=first['transform'][0]; self.width=first['width']; self.height=first['height']
         self.crs=first['crs']
-        ordinary=next((r for r in self.records if r['name'].split('(')[0] not in SHIFTED),first)
-        self.nodata=ordinary['nodata']
-        if self.nodata is None or not math.isfinite(self.nodata):
-            raise InvalidInput('dsm_dir: a finite native NoData sentinel is required')
         self.e0=min(round(r['bounds'][0]/self.res)*self.res for r in self.records)
         self.n0=min(round(r['bounds'][1]/self.res)*self.res for r in self.records)
         self.tiles={}; self.shifted=[]
@@ -61,12 +62,12 @@ class Catalogue:
             if key in self.tiles:
                 raise InvalidInput('dsm_dir: overlapping native cells')
             r['key']=key; self.tiles[key]=r
-            if shifted: self.shifted.append(dict(name=r['name'],offset_pixels=[x-round(x),y-round(y)]))
+            if shifted: self.shifted.append(dict(name=r['name'],offset_pixels=[x-round(x),y-round(y)],declared_nodata=r['nodata']))
         self.raw_width=(max(k[0] for k in self.tiles)+1)*self.width
         self.raw_height=(max(k[1] for k in self.tiles)+1)*self.height
-        distance=profile['max_shore_distance_m']/self.res
+        distance=DOMAIN_MARGIN_M/self.res
         if abs(distance-round(distance))>1e-8:
-            raise InvalidInput('max_shore_distance_m: must be a whole number of native pixels')
+            raise InvalidInput('domain margin must be a whole number of native pixels')
         halo=round(distance)
         self.domain=(-halo,-halo,self.raw_width+halo,self.raw_height+halo)
         l,b,r,t=self.domain
@@ -110,7 +111,7 @@ class Catalogue:
         x,y,w,h=window
         # Every empty-cell pixel is NoData by definition, independently of a
         # supplied tile's metadata sentinel. -9999 is the rule's finite marker.
-        result=np.full((h,w),-9999,np.float32)
+        result=np.full((h,w),NODATA,np.float32)
         for iy in range(y//self.height,math.ceil((y+h)/self.height)):
             for ix in range(x//self.width,math.ceil((x+w)/self.width)):
                 r=self.tiles.get((ix,iy))
@@ -126,7 +127,7 @@ class Catalogue:
     def data_and_shores(self,key,profile):
         x,y,w,h=self.window(key)
         if key not in self.tiles:
-            return np.full((h,w),-9999,np.float32),(np.empty((0,2),np.int32),)*2
+            return np.full((h,w),NODATA,np.float32),(np.empty((0,2),np.int32),)*2
         a=self.read((x-1,y-1,w+2,h+2))
         low,high=shore_masks(a,profile)
         output=[]

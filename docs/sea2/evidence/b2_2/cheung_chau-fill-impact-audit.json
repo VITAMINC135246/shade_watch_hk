@@ -1,0 +1,121 @@
+{
+  "checked_frames": [
+    {
+      "fill_dependent_land": 0.0,
+      "group_counts": {
+        "land": {
+          "0": 3223830,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 98483
+        },
+        "other": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "water": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 2395202,
+          "4": 1482485
+        }
+      },
+      "raster_hashes": {
+        "e820250n807200": "fd8e8ff33eea36e069aa7c82e53457c607b9d737fe626f0a6e911a6aa95e103d",
+        "e820250n807800": "7b00e6918f4fd772dcb799ba2975d7f0860467f94ce1e8637fc715b759d36a73",
+        "e821000n807200": "217640f95f3656a45efb147b88f79fef0f13c87cb84b7592509a532a0540507c",
+        "e821000n807800": "0c54b1f7f1e7ab61e5cddf6fc4b367045796abe93c070845a31a8d7a35d59780"
+      },
+      "time": "0720"
+    },
+    {
+      "fill_dependent_land": 0.530392831741019,
+      "group_counts": {
+        "land": {
+          "0": 1560182,
+          "1": 1762131,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "other": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "water": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 3877687,
+          "4": 0
+        }
+      },
+      "raster_hashes": {
+        "e820250n807200": "9d6371dcf9ee66be7e89b5e77b07813b72c83c4ecea66455edd257ce51ed8f51",
+        "e820250n807800": "fd29bf98d217812fb5ea5de3782ecb19b998361a23f996660410606bd4bf235e",
+        "e821000n807200": "4e410386a6fa02ea5e580489689affcbb26b71bc689892c15c5138fe2748ced3",
+        "e821000n807800": "b45f018712a4d0eaa76cdcc83f310659fc8d63952ca024352675da16ab63a97f"
+      },
+      "time": "1230"
+    },
+    {
+      "fill_dependent_land": 0.0,
+      "group_counts": {
+        "land": {
+          "0": 3136642,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 185671
+        },
+        "other": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 0,
+          "4": 0
+        },
+        "water": {
+          "0": 0,
+          "1": 0,
+          "2": 0,
+          "3": 1634619,
+          "4": 2243068
+        }
+      },
+      "raster_hashes": {
+        "e820250n807200": "7e686285c7cdd1aa2faadbc2abb5d76d22b2d65e61aafc34289a9ca7a23b5623",
+        "e820250n807800": "0fb54f465a5ad8b8163bf47b2b0a25f8f675b16f362916b7e45a2acf41a40da3",
+        "e821000n807200": "b445484d482b176f3e1701e01ee782994f565acb6b8ad3e86a831ccd592d74dd",
+        "e821000n807800": "8f4e7bc26da43383542944a83e7c256199997df5f083a116a39192b9f94ae599"
+      },
+      "time": "1740"
+    }
+  ],
+  "counterfactual_id": "51d38f2c03c217a86252fa84db264a77568d8f279f16235ff4a9753de5aa5071",
+  "counterfactual_source": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/raw/dsm/2020/D12.DSM.TIFF",
+  "publication_integrity": {
+    "after_sha256": "22ea5a196327bbcc3c5125e54ba4df67d121ece7e18c985f449004cc3704aa13",
+    "before_sha256": "22ea5a196327bbcc3c5125e54ba4df67d121ece7e18c985f449004cc3704aa13",
+    "files": 1239,
+    "sealed_manifest_sha256": "2181262d1dbbf10556041bb4effb60dd122b14df9b354961986763f43264bf59"
+  },
+  "report_path": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/sea2_2_development/_diagnostics/fill_impact/sea2_2_cheung_chau/fill_impact.json",
+  "report_sha256": "30a5a62ed930a8e1504ace2969ff29e469ee78960f6569f3046ed9e0b2e31fef",
+  "schema_valid": true,
+  "v2_events": [
+    {
+      "action": "submit_run",
+      "id": "c1c804b0098ce7ecb3c44a32ecfe69f709de961b794e8172c68f95d979c761cb",
+      "state": "SUCCEEDED"
+    }
+  ]
+}

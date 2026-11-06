@@ -178,7 +178,7 @@
     },
     "dsm_source": {
       "type": "string",
-      "enum": ["raw", "sea-2.0"],
+      "enum": ["raw", "sea-2.2"],
       "default": "raw"
     },
     "full_image": {

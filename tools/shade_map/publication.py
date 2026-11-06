@@ -138,7 +138,7 @@ def publish_frame(prepared, frame, sidecar, mosaics):
             raise RuntimeError('Logical cell transform differs')
         surface = prepared.source.read_surface(cell['bounds'], prepared.records)
         for layer, array, allowed in zip(LAYERS, (shade,quality,surface),
-                                         ([0,1,255], list(map(int,v1.QUALITY)), [0,1,255])):
+                                         ([0,1,255], list(map(int,v1.QUALITY)), [0,1,2,3,4,255])):
             if array.dtype != np.uint8 or array.shape != shade.shape or not np.all(np.isin(array, allowed)):
                 raise RuntimeError(f'Invalid {layer} provider/engine encoding')
             write_raster(partial/layer/(cell['id']+'.tif'), array, cell['bounds'], layer)

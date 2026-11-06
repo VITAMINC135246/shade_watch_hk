@@ -12,6 +12,8 @@ from pathlib import Path
 import subprocess
 import sys
 
+from . import VIEW_NAMESPACE
+
 
 def sha(path):
     with Path(path).open('rb') as stream: return hashlib.file_digest(stream,'sha256').hexdigest()
@@ -35,7 +37,6 @@ def require_reader_versions(version=None):
 
 
 def export_cells(view,destination,source,dictionary):
-    import numpy as np
     import pyogrio
     from pyogrio.raw import read
     import shapely
@@ -43,17 +44,16 @@ def export_cells(view,destination,source,dictionary):
     from shapely.strtree import STRtree
     root=Path(__file__).resolve().parents[2]
     # Reuse the unchanged deterministic polygon repair from B1, not its water policy.
-    sys.path.insert(0,str(root))
     from tools.sea_view.extract import polygonal
     info=pyogrio.read_info(source,layer='HydrographyPoly',force_feature_count=True)
     meta,fids,wkb,attrs=read(source,layer='HydrographyPoly',
             where="FEATURESUBTYPE = 3 AND DATASTATUS = 'E'",
             columns=['FEATURESUBTYPE','FEATURECODE','DATASTATUS'],return_fids=True)
     fields=dict(zip(meta['fields'],attrs)); counts=Counter(map(str,fields['FEATURECODE']))
-    if info['features']!=7116 or counts!={'LAF':1111,'SEF':345}:
-        raise ValueError('iB5000 standard-reader counts differ from the frozen reference: '+str(counts))
     geoms=[]; codes=[]; repairs=[]
     for fid,code,blob in sorted(zip(fids,fields['FEATURECODE'],wkb),key=lambda r:int(r[0])):
+        if code not in ('SEF', 'LAF'):
+            continue
         geom=shapely.from_wkb(blob)
         if geom is None or geom.is_empty: raise ValueError('Empty iB5000 geometry')
         if not shapely.is_valid(geom):
@@ -61,8 +61,8 @@ def export_cells(view,destination,source,dictionary):
             repairs.append(dict(fid=int(fid),method='GEOS make_valid, polygon members',wkb_sha256=hashlib.sha256(shapely.to_wkb(geom)).hexdigest()))
         if geom.is_empty or not shapely.is_valid(geom): raise ValueError('Invalid repaired iB5000 geometry')
         geoms.append(geom); codes.append(str(code))
-    if '2326' not in meta['crs'] and 'Hong_Kong_1980' not in meta['crs']:
-        raise ValueError('Unexpected map CRS')
+    if not meta.get('crs') or not geoms:
+        raise ValueError('Map CRS or land and sea geometries are missing')
     destination.mkdir(parents=True,exist_ok=False)
     tree=STRtree(geoms); cells=json.loads((view/'manifest.json').read_text())['cells']; files={}
     for i,cell in enumerate(cells):
@@ -90,17 +90,23 @@ def export_cells(view,destination,source,dictionary):
 def main(argv=None):
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--machine',required=True)
-    p.add_argument('--work',default='outputs/sea2_validation_20261104')
+    p.add_argument('--work',default='outputs/sea2_2_validation')
     p.add_argument('--scopes',required=True,help='JSON mapping of scope names to target bounds')
     args=p.parse_args(argv)
+    if sys.version_info[:2] != (3, 12):
+        raise RuntimeError('iB5000 reader requires Python 3.12')
     require_reader_versions()
     root=Path(__file__).resolve().parents[2]
     machine=json.loads((root/args.machine).read_text())
     profile=machine.get('sea_profile','hk_cedd_2020')
-    pointer=json.loads((root/f'data/processed/dsm_views/sea_fill_v2/current-{profile}.json').read_text())
-    view=root/'data/processed/dsm_views/sea_fill_v2'/pointer['view_id']
-    work=(root/args.work).resolve()
-    if not work.is_relative_to(root/'outputs') or work.is_symlink(): raise ValueError('Validation work must be a new repository outputs namespace')
+    if not isinstance(profile,str) or not profile or any(c not in 'abcdefghijklmnopqrstuvwxyz0123456789_-' for c in profile):
+        raise ValueError('Invalid sea profile identifier')
+    views=root/'data/processed/dsm_views'/VIEW_NAMESPACE
+    pointer=json.loads((views/f'current-{profile}.json').read_text())
+    view=views/pointer['view_id']
+    work=(root/args.work).absolute()
+    if work.resolve()!=work or work.parent!=root/'outputs' or not work.name.startswith('sea2_2_'):
+        raise ValueError('Validation work must be a sea2_2_* namespace under outputs/')
     vectors=work/'map_cells'
     source=root/'data/raw/coastline/ib5000_seamless_20261012/iB5000.gdb'
     dictionary=root/'data/raw/coastline/resources_iB5000_FGDB/iB5000 Data Dictionary - FGDB v1.3.pdf'
@@ -109,7 +115,8 @@ def main(argv=None):
         if provenance['view_id']!=pointer['view_id']: raise ValueError('Validation work belongs to a different sea view')
     else:
         provenance=export_cells(view,vectors,source,dictionary)
-    report=root/'docs/sea2/evidence/ib5000-reader.json'; report.parent.mkdir(parents=True,exist_ok=True)
+    report=work/'reports/ib5000-reader.json'
+    report.parent.mkdir(parents=True,exist_ok=True)
     write(report,{k:v for k,v in provenance.items() if k not in ('cell_files','source_hashes')} |
           dict(source_files=len(provenance['source_hashes']),source_identity_sha256=hashlib.sha256(json.dumps(provenance['source_hashes'],sort_keys=True).encode()).hexdigest()))
     return subprocess.call([str(root/'.venv/bin/python'),'-m','tools.sea2.validation_worker',

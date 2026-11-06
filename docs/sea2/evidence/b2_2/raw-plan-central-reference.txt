@@ -1,0 +1,156 @@
+{
+  "schema": "shade-map-plan-1.0",
+  "run_id": "83cfba55f3efc971e78bda142636b6883c977d21989e63f3cb791e323d9898ce",
+  "name": "sea2_central_raw",
+  "resolved_bounds": [
+    833750.0,
+    815000.0,
+    835250.0,
+    816200.0
+  ],
+  "grid": {
+    "width": 3000,
+    "height": 2400,
+    "transform": [
+      0.5,
+      0.0,
+      833750.0,
+      0.0,
+      -0.5,
+      816200.0
+    ],
+    "crs": "EPSG:2326",
+    "mode": "custom",
+    "selected_source": null,
+    "selected_sources": []
+  },
+  "pixel_count": 7200000,
+  "cells": [
+    {
+      "id": "e833750n815000",
+      "native_bounds": [
+        833750.0,
+        815000.0,
+        834500.0,
+        815600.0
+      ],
+      "bounds": [
+        833750.0,
+        815000.0,
+        834500.0,
+        815600.0
+      ],
+      "width": 1500,
+      "height": 1200,
+      "source_tile": "11SW13B(e833n815,e834n815).tif"
+    },
+    {
+      "id": "e834500n815000",
+      "native_bounds": [
+        834500.0,
+        815000.0,
+        835250.0,
+        815600.0
+      ],
+      "bounds": [
+        834500.0,
+        815000.0,
+        835250.0,
+        815600.0
+      ],
+      "width": 1500,
+      "height": 1200,
+      "source_tile": "11SW14A(e834n815,e835n815).tif"
+    },
+    {
+      "id": "e833750n815600",
+      "native_bounds": [
+        833750.0,
+        815600.0,
+        834500.0,
+        816200.0
+      ],
+      "bounds": [
+        833750.0,
+        815600.0,
+        834500.0,
+        816200.0
+      ],
+      "width": 1500,
+      "height": 1200,
+      "source_tile": "11SW8D(e833n815,e834n816).tif"
+    },
+    {
+      "id": "e834500n815600",
+      "native_bounds": [
+        834500.0,
+        815600.0,
+        835250.0,
+        816200.0
+      ],
+      "bounds": [
+        834500.0,
+        815600.0,
+        835250.0,
+        816200.0
+      ],
+      "width": 1500,
+      "height": 1200,
+      "source_tile": "11SW9C(e834n815,e835n816).tif"
+    }
+  ],
+  "frames": [
+    {
+      "local_time": "2026-01-07T08:30:00+08:00",
+      "utc_time": "2026-01-07T00:30:00+00:00",
+      "date": "20260107",
+      "time": "0830"
+    },
+    {
+      "local_time": "2026-01-07T12:30:00+08:00",
+      "utc_time": "2026-01-07T04:30:00+00:00",
+      "date": "20260107",
+      "time": "1230"
+    },
+    {
+      "local_time": "2026-01-07T15:10:00+08:00",
+      "utc_time": "2026-01-07T07:10:00+00:00",
+      "date": "20260107",
+      "time": "1510"
+    }
+  ],
+  "dropped_times": [],
+  "sub_requests": 1,
+  "batches": 1,
+  "distinct_horizon_directions": 3,
+  "estimates": {
+    "label": "estimate",
+    "compute_wall_seconds": 1.0461538461538462,
+    "estimator_models": [
+      {
+        "schema": "shade-watch-v2-estimator-1.0",
+        "sha256": "ad6939e4455d9e80495d27e382438d635f5cb9f0920601959e09bbbe2e721469",
+        "extrapolated": true
+      }
+    ],
+    "published_bytes": {
+      "label": "estimate",
+      "value": 130611712
+    },
+    "working_bytes": {
+      "label": "estimate",
+      "value": 103472128
+    },
+    "file_count": {
+      "label": "estimate",
+      "value": 61
+    }
+  },
+  "full_images": true,
+  "warnings": [],
+  "existing_run": {
+    "status": "new",
+    "published_frames": 0,
+    "total_frames": 3
+  }
+}

@@ -1,0 +1,2860 @@
+{
+  "classification_only": true,
+  "observational_accuracy": "NOT VERIFIED",
+  "profile_sha256": "f958a307dbae3fa8539cadd1d3d1fd30c41633aba15e3fc2afe161d7215f05c5",
+  "report_only": true,
+  "schema": "sea2-label-sensitivity-2.2",
+  "variants": [
+    {
+      "bounds": [
+        832750.0,
+        814000.0,
+        836250.0,
+        817200.0
+      ],
+      "low_shore_margin_m": 4,
+      "report": {
+        "class_3_inside_SEF": 0,
+        "class_counts": {
+          "0": 33789086,
+          "1": 6598242,
+          "2": 303795,
+          "255": 0,
+          "3": 0,
+          "4": 4108877
+        },
+        "dsm_nodata_pixels": 11010914,
+        "dsm_nodata_water_fraction": 0.626835973834688,
+        "false_water": 20883,
+        "false_water_components_over_2500": [
+          {
+            "bounds": [
+              833630.0,
+              816757.5,
+              833676.0,
+              816792.5
+            ],
+            "cells": [
+              "e833000n816200"
+            ],
+            "component_id": 41,
+            "pixels": 4109
+          }
+        ],
+        "false_water_fraction": 0.0030256285209714177,
+        "mapped_sea_nodata": 10855563,
+        "mapped_sea_nodata_water_fraction": 0.6338827382789819,
+        "missed_sea_3": 0,
+        "missed_sea_4": 3974409,
+        "northern_boundary_cells": [],
+        "northern_boundary_definition": {
+          "description": "northernmost 10 km of the raw catalogue plus its northern domain margin",
+          "lower_northing": 837400.0
+        },
+        "unclassified_water_cells": [],
+        "water_inside_SEF_minus_LAF": 6881154,
+        "water_neither_class": 0,
+        "water_neither_class_within_bbox": 0,
+        "water_outside_coverage_bbox": 0,
+        "water_pixels": 6902037
+      },
+      "scope": "central_halo",
+      "shore_preference_m": 0
+    },
+    {
+      "bounds": [
+        819250,
+        806200,
+        822750,
+        809400
+      ],
+      "low_shore_margin_m": 4,
+      "report": {
+        "class_3_inside_SEF": 0,
+        "class_counts": {
+          "0": 10152633,
+          "1": 21870125,
+          "2": 12447511,
+          "255": 0,
+          "3": 0,
+          "4": 329731
+        },
+        "dsm_nodata_pixels": 34647367,
+        "dsm_nodata_water_fraction": 0.9904832306593456,
+        "false_water": 16863,
+        "false_water_components_over_2500": [
+          {
+            "bounds": [
+              821342.5,
+              808583.0,
+              821464.5,
+              808641.5
+            ],
+            "cells": [
+              "e821000n808400"
+            ],
+            "component_id": 269,
+            "pixels": 3222
+          }
+        ],
+        "false_water_fraction": 0.0004913800006503945,
+        "mapped_sea_nodata": 34619684,
+        "mapped_sea_nodata_water_fraction": 0.9907881597070615,
+        "missed_sea_3": 0,
+        "missed_sea_4": 318911,
+        "northern_boundary_cells": [],
+        "northern_boundary_definition": {
+          "description": "northernmost 10 km of the raw catalogue plus its northern domain margin",
+          "lower_northing": 837400.0
+        },
+        "unclassified_water_cells": [],
+        "water_inside_SEF_minus_LAF": 34300773,
+        "water_neither_class": 0,
+        "water_neither_class_within_bbox": 0,
+        "water_outside_coverage_bbox": 0,
+        "water_pixels": 34317636
+      },
+      "scope": "cheung_chau_halo",
+      "shore_preference_m": 0
+    },
+    {
+      "bounds": [
+        810250,
+        832000,
+        813750,
+        834600
+      ],
+      "low_shore_margin_m": 4,
+      "report": {
+        "class_3_inside_SEF": 6,
+        "class_counts": {
+          "0": 10196954,
+          "1": 7122458,
+          "2": 7706524,
+          "255": 0,
+          "3": 51546,
+          "4": 11322518
+        },
+        "dsm_nodata_pixels": 26203046,
+        "dsm_nodata_water_fraction": 0.5659258851051133,
+        "false_water": 0,
+        "false_water_components_over_2500": [],
+        "false_water_fraction": 0.0,
+        "mapped_sea_nodata": 26151506,
+        "mapped_sea_nodata_water_fraction": 0.5670412250827925,
+        "missed_sea_3": 6,
+        "missed_sea_4": 11322518,
+        "northern_boundary_cells": [],
+        "northern_boundary_definition": {
+          "description": "northernmost 10 km of the raw catalogue plus its northern domain margin",
+          "lower_northing": 837400.0
+        },
+        "unclassified_water_cells": [],
+        "water_inside_SEF_minus_LAF": 14828982,
+        "water_neither_class": 0,
+        "water_neither_class_within_bbox": 0,
+        "water_outside_coverage_bbox": 0,
+        "water_pixels": 14828982
+      },
+      "scope": "five_class_halo",
+      "shore_preference_m": 0
+    },
+    {
+      "bounds": [
+        832750.0,
+        814000.0,
+        836250.0,
+        817200.0
+      ],
+      "low_shore_margin_m": 4,
+      "report": {
+        "class_3_inside_SEF": 0,
+        "class_counts": {
+          "0": 33789086,
+          "1": 9810910,
+          "2": 1200000,
+          "255": 0,
+          "3": 0,
+          "4": 4
+        },
+        "dsm_nodata_pixels": 11010914,
+        "dsm_nodata_water_fraction": 0.9999996367240721,
+        "false_water": 155348,
+        "false_water_components_over_2500": [
+          {
+            "bounds": [
+              836183.0,
+              816012.0,
+              836225.0,
+              816095.0
+            ],
+            "cells": [
+              "e836000n815600"
+            ],
+            "component_id": 56,
+            "pixels": 9247
+          },
+          {
+            "bounds": [
+              832815.0,
+              816748.5,
+              833402.5,
+              816852.0
+            ],
+            "cells": [
+              "e832250n816800",
+              "e833000n816200",
+              "e833000n816800"
+            ],
+            "component_id": 68,
+            "pixels": 5535
+          },
+          {
+            "bounds": [
+              833630.0,
+              816709.5,
+              833855.5,
+              816792.5
+            ],
+            "cells": [
+              "e833000n816200",
+              "e833750n816200"
+            ],
+            "component_id": 69,
+            "pixels": 25150
+          },
+          {
+            "bounds": [
+              833604.5,
+              816616.5,
+              833831.0,
+              816705.5
+            ],
+            "cells": [
+              "e833000n816200",
+              "e833750n816200"
+            ],
+            "component_id": 99,
+            "pixels": 37439
+          },
+          {
+            "bounds": [
+              834046.0,
+              816602.5,
+              834108.0,
+              816670.5
+            ],
+            "cells": [
+              "e833750n816200"
+            ],
+            "component_id": 186,
+            "pixels": 7574
+          },
+          {
+            "bounds": [
+              834157.0,
+              816570.0,
+              834201.0,
+              816648.5
+            ],
+            "cells": [
+              "e833750n816200"
+            ],
+            "component_id": 187,
+            "pixels": 7536
+          },
+          {
+            "bounds": [
+              834252.5,
+              816547.0,
+              834296.5,
+              816624.0
+            ],
+            "cells": [
+              "e833750n816200"
+            ],
+            "component_id": 188,
+            "pixels": 7852
+          },
+          {
+            "bounds": [
+              834345.5,
+              816523.0,
+              834392.0,
+              816600.0
+            ],
+            "cells": [
+              "e833750n816200"
+            ],
+            "component_id": 189,
+            "pixels": 8141
+          },
+          {
+            "bounds": [
+              834442.5,
+              816488.5,
+              834488.5,
+              816571.5
+            ],
+            "cells": [
+              "e833750n816200"
+            ],
+            "component_id": 190,
+            "pixels": 7531
+          },
+          {
+            "bounds": [
+              834527.0,
+              816464.0,
+              834584.5,
+              816540.5
+            ],
+            "cells": [
+              "e834500n816200"
+            ],
+            "component_id": 240,
+            "pixels": 7708
+          },
+          {
+            "bounds": [
+              834628.0,
+              816426.5,
+              834678.5,
+              816503.5
+            ],
+            "cells": [
+              "e834500n816200"
+            ],
+            "component_id": 241,
+            "pixels": 7513
+          },
+          {
+            "bounds": [
+              834718.0,
+              816390.5,
+              834771.0,
+              816466.5
+            ],
+            "cells": [
+              "e834500n816200"
+            ],
+            "component_id": 242,
+            "pixels": 7899
+          },
+          {
+            "bounds": [
+              834770.5,
+              816336.0,
+              834835.5,
+              816372.0
+            ],
+            "cells": [
+              "e834500n816200"
+            ],
+            "component_id": 251,
+            "pixels": 4548
+          },
+          {
+            "bounds": [
+              834796.0,
+              816257.0,
+              834863.0,
+              816293.5
+            ],
+            "cells": [
+              "e834500n816200"
+            ],
+            "component_id": 262,
+            "pixels": 4689
+          },
+          {
+            "bounds": [
+              835395.5,
+              817116.0,
+              835445.0,
+              817178.5
+            ],
+            "cells": [
+              "e835250n816800"
+            ],
+            "component_id": 297,
+            "pixels": 3884
+          }
+        ],
+        "false_water_fraction": 0.014108552335819655,
+        "mapped_sea_nodata": 10855563,
+        "mapped_sea_nodata_water_fraction": 0.9999999078813324,
+        "missed_sea_3": 0,
+        "missed_sea_4": 1,
+        "northern_boundary_cells": [],
+        "northern_boundary_definition": {
+          "description": "northernmost 10 km of the raw catalogue plus its northern domain margin",
+          "lower_northing": 837400.0
+        },
+        "unclassified_water_cells": [],
+        "water_inside_SEF_minus_LAF": 10855562,
+        "water_neither_class": 0,
+        "water_neither_class_within_bbox": 0,
+        "water_outside_coverage_bbox": 0,
+        "water_pixels": 11010910
+      },
+      "scope": "central_halo",
+      "shore_preference_m": 50
+    },
+    {
+      "bounds": [
+        819250,
+        806200,
+        822750,
+        809400
+      ],
+      "low_shore_margin_m": 4,
+      "report": {
+        "class_3_inside_SEF": 0,
+        "class_counts": {
+          "0": 10152633,
+          "1": 22047367,
+          "2": 12447511,
+          "255": 0,
+          "3": 0,
+          "4": 152489
+        },
+        "dsm_nodata_pixels": 34647367,
+        "dsm_nodata_water_fraction": 0.9955988286209454,
+        "false_water": 27683,
+        "false_water_components_over_2500": [
+          {
+            "bounds": [
+              820921.0,
+              807762.5,
+              820982.5,
+              807819.5
+            ],
+            "cells": [
+              "e820250n807200",
+              "e820250n807800"
+            ],
+            "component_id": 119,
+            "pixels": 6668
+          },
+          {
+            "bounds": [
+              820661.5,
+              808903.0,
+              820684.0,
+              808951.0
+            ],
+            "cells": [
+              "e820250n808400"
+            ],
+            "component_id": 207,
+            "pixels": 2795
+          },
+          {
+            "bounds": [
+              821342.5,
+              808583.0,
+              821464.5,
+              808644.0
+            ],
+            "cells": [
+              "e821000n808400"
+            ],
+            "component_id": 252,
+            "pixels": 3268
+          }
+        ],
+        "false_water_fraction": 0.0008025249429784909,
+        "mapped_sea_nodata": 34619684,
+        "mapped_sea_nodata_water_fraction": 0.995595309304383,
+        "missed_sea_3": 0,
+        "missed_sea_4": 152489,
+        "northern_boundary_cells": [],
+        "northern_boundary_definition": {
+          "description": "northernmost 10 km of the raw catalogue plus its northern domain margin",
+          "lower_northing": 837400.0
+        },
+        "unclassified_water_cells": [],
+        "water_inside_SEF_minus_LAF": 34467195,
+        "water_neither_class": 0,
+        "water_neither_class_within_bbox": 0,
+        "water_outside_coverage_bbox": 0,
+        "water_pixels": 34494878
+      },
+      "scope": "cheung_chau_halo",
+      "shore_preference_m": 50
+    },
+    {
+      "bounds": [
+        810250,
+        832000,
+        813750,
+        834600
+      ],
+      "low_shore_margin_m": 4,
+      "report": {
+        "class_3_inside_SEF": 6,
+        "class_counts": {
+          "0": 10196954,
+          "1": 7351500,
+          "2": 7897298,
+          "255": 0,
+          "3": 51546,
+          "4": 10902702
+        },
+        "dsm_nodata_pixels": 26203046,
+        "dsm_nodata_water_fraction": 0.5819475338859459,
+        "false_water": 0,
+        "false_water_components_over_2500": [],
+        "false_water_fraction": 0.0,
+        "mapped_sea_nodata": 26151506,
+        "mapped_sea_nodata_water_fraction": 0.5830944497039673,
+        "missed_sea_3": 6,
+        "missed_sea_4": 10902702,
+        "northern_boundary_cells": [],
+        "northern_boundary_definition": {
+          "description": "northernmost 10 km of the raw catalogue plus its northern domain margin",
+          "lower_northing": 837400.0
+        },
+        "unclassified_water_cells": [],
+        "water_inside_SEF_minus_LAF": 15248798,
+        "water_neither_class": 0,
+        "water_neither_class_within_bbox": 0,
+        "water_outside_coverage_bbox": 0,
+        "water_pixels": 15248798
+      },
+      "scope": "five_class_halo",
+      "shore_preference_m": 50
+    },
+    {
+      "bounds": [
+        832750.0,
+        814000.0,
+        836250.0,
+        817200.0
+      ],
+      "low_shore_margin_m": 4,
+      "report": {
+        "class_3_inside_SEF": 0,
+        "class_counts": {
+          "0": 33789086,
+          "1": 9810914,
+          "2": 1200000,
+          "255": 0,
+          "3": 0,
+          "4": 0
+        },
+        "dsm_nodata_pixels": 11010914,
+        "dsm_nodata_water_fraction": 1.0,
+        "false_water": 155351,
+        "false_water_components_over_2500": [
+          {
+            "bounds": [
+              836183.0,
+              816012.0,
+              836225.0,
+              816095.0
+            ],
+            "cells": [
+              "e836000n815600"
+            ],
+            "component_id": 56,
+            "pixels": 9247
+          },
+          {
+            "bounds": [
+              832815.0,
+              816748.5,
+              833402.5,
+              816852.0
+            ],
+            "cells": [
+              "e832250n816800",
+              "e833000n816200",
+              "e833000n816800"
+            ],
+            "component_id": 68,
+            "pixels": 5535
+          },
+          {
+            "bounds": [
+              833630.0,
+              816709.5,
+              833855.5,
+              816792.5
+            ],
+            "cells": [
+              "e833000n816200",
+              "e833750n816200"
+            ],
+            "component_id": 69,
+            "pixels": 25150
+          },
+          {
+            "bounds": [
+              833604.5,
+              816616.5,
+              833831.0,
+              816705.5
+            ],
+            "cells": [
+              "e833000n816200",
+              "e833750n816200"
+            ],
+            "component_id": 99,
+            "pixels": 37439
+          },
+          {
+            "bounds": [
+              834046.0,
+              816602.5,
+              834108.0,
+              816670.5
+            ],
+            "cells": [
+              "e833750n816200"
+            ],
+            "component_id": 186,
+            "pixels": 7574
+          },
+          {
+            "bounds": [
+              834157.0,
+              816570.0,
+              834201.0,
+              816648.5
+            ],
+            "cells": [
+              "e833750n816200"
+            ],
+            "component_id": 187,
+            "pixels": 7536
+          },
+          {
+            "bounds": [
+              834252.5,
+              816547.0,
+              834296.5,
+              816624.0
+            ],
+            "cells": [
+              "e833750n816200"
+            ],
+            "component_id": 188,
+            "pixels": 7852
+          },
+          {
+            "bounds": [
+              834345.5,
+              816523.0,
+              834392.0,
+              816600.0
+            ],
+            "cells": [
+              "e833750n816200"
+            ],
+            "component_id": 189,
+            "pixels": 8141
+          },
+          {
+            "bounds": [
+              834442.5,
+              816488.5,
+              834488.5,
+              816571.5
+            ],
+            "cells": [
+              "e833750n816200"
+            ],
+            "component_id": 190,
+            "pixels": 7531
+          },
+          {
+            "bounds": [
+              834527.0,
+              816464.0,
+              834584.5,
+              816540.5
+            ],
+            "cells": [
+              "e834500n816200"
+            ],
+            "component_id": 240,
+            "pixels": 7708
+          },
+          {
+            "bounds": [
+              834628.0,
+              816426.5,
+              834678.5,
+              816503.5
+            ],
+            "cells": [
+              "e834500n816200"
+            ],
+            "component_id": 241,
+            "pixels": 7513
+          },
+          {
+            "bounds": [
+              834718.0,
+              816390.5,
+              834771.0,
+              816466.5
+            ],
+            "cells": [
+              "e834500n816200"
+            ],
+            "component_id": 242,
+            "pixels": 7899
+          },
+          {
+            "bounds": [
+              834770.5,
+              816336.0,
+              834835.5,
+              816372.0
+            ],
+            "cells": [
+              "e834500n816200"
+            ],
+            "component_id": 251,
+            "pixels": 4548
+          },
+          {
+            "bounds": [
+              834796.0,
+              816257.0,
+              834863.0,
+              816293.5
+            ],
+            "cells": [
+              "e834500n816200"
+            ],
+            "component_id": 262,
+            "pixels": 4689
+          },
+          {
+            "bounds": [
+              835395.5,
+              817116.0,
+              835445.0,
+              817178.5
+            ],
+            "cells": [
+              "e835250n816800"
+            ],
+            "component_id": 297,
+            "pixels": 3884
+          }
+        ],
+        "false_water_fraction": 0.014108819667468114,
+        "mapped_sea_nodata": 10855563,
+        "mapped_sea_nodata_water_fraction": 1.0,
+        "missed_sea_3": 0,
+        "missed_sea_4": 0,
+        "northern_boundary_cells": [],
+        "northern_boundary_definition": {
+          "description": "northernmost 10 km of the raw catalogue plus its northern domain margin",
+          "lower_northing": 837400.0
+        },
+        "unclassified_water_cells": [],
+        "water_inside_SEF_minus_LAF": 10855563,
+        "water_neither_class": 0,
+        "water_neither_class_within_bbox": 0,
+        "water_outside_coverage_bbox": 0,
+        "water_pixels": 11010914
+      },
+      "scope": "central_halo",
+      "shore_preference_m": 100
+    },
+    {
+      "bounds": [
+        819250,
+        806200,
+        822750,
+        809400
+      ],
+      "low_shore_margin_m": 4,
+      "report": {
+        "class_3_inside_SEF": 0,
+        "class_counts": {
+          "0": 10152633,
+          "1": 22047367,
+          "2": 12447511,
+          "255": 0,
+          "3": 0,
+          "4": 152489
+        },
+        "dsm_nodata_pixels": 34647367,
+        "dsm_nodata_water_fraction": 0.9955988286209454,
+        "false_water": 27683,
+        "false_water_components_over_2500": [
+          {
+            "bounds": [
+              820921.0,
+              807762.5,
+              820982.5,
+              807819.5
+            ],
+            "cells": [
+              "e820250n807200",
+              "e820250n807800"
+            ],
+            "component_id": 119,
+            "pixels": 6668
+          },
+          {
+            "bounds": [
+              820661.5,
+              808903.0,
+              820684.0,
+              808951.0
+            ],
+            "cells": [
+              "e820250n808400"
+            ],
+            "component_id": 207,
+            "pixels": 2795
+          },
+          {
+            "bounds": [
+              821342.5,
+              808583.0,
+              821464.5,
+              808644.0
+            ],
+            "cells": [
+              "e821000n808400"
+            ],
+            "component_id": 252,
+            "pixels": 3268
+          }
+        ],
+        "false_water_fraction": 0.0008025249429784909,
+        "mapped_sea_nodata": 34619684,
+        "mapped_sea_nodata_water_fraction": 0.995595309304383,
+        "missed_sea_3": 0,
+        "missed_sea_4": 152489,
+        "northern_boundary_cells": [],
+        "northern_boundary_definition": {
+          "description": "northernmost 10 km of the raw catalogue plus its northern domain margin",
+          "lower_northing": 837400.0
+        },
+        "unclassified_water_cells": [],
+        "water_inside_SEF_minus_LAF": 34467195,
+        "water_neither_class": 0,
+        "water_neither_class_within_bbox": 0,
+        "water_outside_coverage_bbox": 0,
+        "water_pixels": 34494878
+      },
+      "scope": "cheung_chau_halo",
+      "shore_preference_m": 100
+    },
+    {
+      "bounds": [
+        810250,
+        832000,
+        813750,
+        834600
+      ],
+      "low_shore_margin_m": 4,
+      "report": {
+        "class_3_inside_SEF": 6,
+        "class_counts": {
+          "0": 10196954,
+          "1": 7351500,
+          "2": 7897298,
+          "255": 0,
+          "3": 51546,
+          "4": 10902702
+        },
+        "dsm_nodata_pixels": 26203046,
+        "dsm_nodata_water_fraction": 0.5819475338859459,
+        "false_water": 0,
+        "false_water_components_over_2500": [],
+        "false_water_fraction": 0.0,
+        "mapped_sea_nodata": 26151506,
+        "mapped_sea_nodata_water_fraction": 0.5830944497039673,
+        "missed_sea_3": 6,
+        "missed_sea_4": 10902702,
+        "northern_boundary_cells": [],
+        "northern_boundary_definition": {
+          "description": "northernmost 10 km of the raw catalogue plus its northern domain margin",
+          "lower_northing": 837400.0
+        },
+        "unclassified_water_cells": [],
+        "water_inside_SEF_minus_LAF": 15248798,
+        "water_neither_class": 0,
+        "water_neither_class_within_bbox": 0,
+        "water_outside_coverage_bbox": 0,
+        "water_pixels": 15248798
+      },
+      "scope": "five_class_halo",
+      "shore_preference_m": 100
+    },
+    {
+      "bounds": [
+        832750.0,
+        814000.0,
+        836250.0,
+        817200.0
+      ],
+      "low_shore_margin_m": 5,
+      "report": {
+        "class_3_inside_SEF": 0,
+        "class_counts": {
+          "0": 33789086,
+          "1": 7906382,
+          "2": 443024,
+          "255": 0,
+          "3": 0,
+          "4": 2661508
+        },
+        "dsm_nodata_pixels": 11010914,
+        "dsm_nodata_water_fraction": 0.7582845529444695,
+        "false_water": 54311,
+        "false_water_components_over_2500": [
+          {
+            "bounds": [
+              833630.0,
+              816749.0,
+              833698.5,
+              816792.5
+            ],
+            "cells": [
+              "e833000n816200"
+            ],
+            "component_id": 73,
+            "pixels": 7084
+          },
+          {
+            "bounds": [
+              833707.0,
+              816731.5,
+              833763.5,
+              816772.0
+            ],
+            "cells": [
+              "e833000n816200",
+              "e833750n816200"
+            ],
+            "component_id": 77,
+            "pixels": 5818
+          },
+          {
+            "bounds": [
+              833644.5,
+              816652.5,
+              833676.5,
+              816700.5
+            ],
+            "cells": [
+              "e833000n816200"
+            ],
+            "component_id": 110,
+            "pixels": 3765
+          },
+          {
+            "bounds": [
+              833692.5,
+              816634.5,
+              833743.5,
+              816687.5
+            ],
+            "cells": [
+              "e833000n816200"
+            ],
+            "component_id": 116,
+            "pixels": 7332
+          },
+          {
+            "bounds": [
+              833789.5,
+              816712.5,
+              833834.0,
+              816749.5
+            ],
+            "cells": [
+              "e833750n816200"
+            ],
+            "component_id": 201,
+            "pixels": 4027
+          },
+          {
+            "bounds": [
+              833762.0,
+              816618.5,
+              833812.5,
+              816668.5
+            ],
+            "cells": [
+              "e833750n816200"
+            ],
+            "component_id": 214,
+            "pixels": 6607
+          },
+          {
+            "bounds": [
+              832815.0,
+              816823.5,
+              833111.0,
+              816852.0
+            ],
+            "cells": [
+              "e832250n816800",
+              "e833000n816800"
+            ],
+            "component_id": 331,
+            "pixels": 3265
+          }
+        ],
+        "false_water_fraction": 0.006504774112074559,
+        "mapped_sea_nodata": 10855563,
+        "mapped_sea_nodata_water_fraction": 0.7641330993150701,
+        "missed_sea_3": 0,
+        "missed_sea_4": 2560468,
+        "northern_boundary_cells": [],
+        "northern_boundary_definition": {
+          "description": "northernmost 10 km of the raw catalogue plus its northern domain margin",
+          "lower_northing": 837400.0
+        },
+        "unclassified_water_cells": [],
+        "water_inside_SEF_minus_LAF": 8295095,
+        "water_neither_class": 0,
+        "water_neither_class_within_bbox": 0,
+        "water_outside_coverage_bbox": 0,
+        "water_pixels": 8349406
+      },
+      "scope": "central_halo",
+      "shore_preference_m": 0
+    },
+    {
+      "bounds": [
+        819250,
+        806200,
+        822750,
+        809400
+      ],
+      "low_shore_margin_m": 5,
+      "report": {
+        "class_3_inside_SEF": 0,
+        "class_counts": {
+          "0": 10152633,
+          "1": 21923560,
+          "2": 12447511,
+          "255": 0,
+          "3": 0,
+          "4": 276296
+        },
+        "dsm_nodata_pixels": 34647367,
+        "dsm_nodata_water_fraction": 0.992025483494893,
+        "false_water": 19034,
+        "false_water_components_over_2500": [
+          {
+            "bounds": [
+              820661.5,
+              808903.0,
+              820684.0,
+              808951.0
+            ],
+            "cells": [
+              "e820250n808400"
+            ],
+            "component_id": 216,
+            "pixels": 2774
+          },
+          {
+            "bounds": [
+              821342.5,
+              808583.0,
+              821464.5,
+              808641.5
+            ],
+            "cells": [
+              "e821000n808400"
+            ],
+            "component_id": 263,
+            "pixels": 3222
+          }
+        ],
+        "false_water_fraction": 0.0005537796596445889,
+        "mapped_sea_nodata": 34619684,
+        "mapped_sea_nodata_water_fraction": 0.9922689357880909,
+        "missed_sea_3": 0,
+        "missed_sea_4": 267647,
+        "northern_boundary_cells": [],
+        "northern_boundary_definition": {
+          "description": "northernmost 10 km of the raw catalogue plus its northern domain margin",
+          "lower_northing": 837400.0
+        },
+        "unclassified_water_cells": [],
+        "water_inside_SEF_minus_LAF": 34352037,
+        "water_neither_class": 0,
+        "water_neither_class_within_bbox": 0,
+        "water_outside_coverage_bbox": 0,
+        "water_pixels": 34371071
+      },
+      "scope": "cheung_chau_halo",
+      "shore_preference_m": 0
+    },
+    {
+      "bounds": [
+        810250,
+        832000,
+        813750,
+        834600
+      ],
+      "low_shore_margin_m": 5,
+      "report": {
+        "class_3_inside_SEF": 6,
+        "class_counts": {
+          "0": 10196954,
+          "1": 7197400,
+          "2": 7737644,
+          "255": 0,
+          "3": 51546,
+          "4": 11216456
+        },
+        "dsm_nodata_pixels": 26203046,
+        "dsm_nodata_water_fraction": 0.569973582460604,
+        "false_water": 0,
+        "false_water_components_over_2500": [],
+        "false_water_fraction": 0.0,
+        "mapped_sea_nodata": 26151506,
+        "mapped_sea_nodata_water_fraction": 0.5710968997349521,
+        "missed_sea_3": 6,
+        "missed_sea_4": 11216456,
+        "northern_boundary_cells": [],
+        "northern_boundary_definition": {
+          "description": "northernmost 10 km of the raw catalogue plus its northern domain margin",
+          "lower_northing": 837400.0
+        },
+        "unclassified_water_cells": [],
+        "water_inside_SEF_minus_LAF": 14935044,
+        "water_neither_class": 0,
+        "water_neither_class_within_bbox": 0,
+        "water_outside_coverage_bbox": 0,
+        "water_pixels": 14935044
+      },
+      "scope": "five_class_halo",
+      "shore_preference_m": 0
+    },
+    {
+      "bounds": [
+        832750.0,
+        814000.0,
+        836250.0,
+        817200.0
+      ],
+      "low_shore_margin_m": 5,
+      "report": {
+        "class_3_inside_SEF": 0,
+        "class_counts": {
+          "0": 33789086,
+          "1": 9810914,
+          "2": 1200000,
+          "255": 0,
+          "3": 0,
+          "4": 0
+        },
+        "dsm_nodata_pixels": 11010914,
+        "dsm_nodata_water_fraction": 1.0,
+        "false_water": 155351,
+        "false_water_components_over_2500": [
+          {
+            "bounds": [
+              836183.0,
+              816012.0,
+              836225.0,
+              816095.0
+            ],
+            "cells": [
+              "e836000n815600"
+            ],
+            "component_id": 56,
+            "pixels": 9247
+          },
+          {
+            "bounds": [
+              832815.0,
+              816748.5,
+              833402.5,
+              816852.0
+            ],
+            "cells": [
+              "e832250n816800",
+              "e833000n816200",
+              "e833000n816800"
+            ],
+            "component_id": 68,
+            "pixels": 5535
+          },
+          {
+            "bounds": [
+              833630.0,
+              816709.5,
+              833855.5,
+              816792.5
+            ],
+            "cells": [
+              "e833000n816200",
+              "e833750n816200"
+            ],
+            "component_id": 69,
+            "pixels": 25150
+          },
+          {
+            "bounds": [
+              833604.5,
+              816616.5,
+              833831.0,
+              816705.5
+            ],
+            "cells": [
+              "e833000n816200",
+              "e833750n816200"
+            ],
+            "component_id": 99,
+            "pixels": 37439
+          },
+          {
+            "bounds": [
+              834046.0,
+              816602.5,
+              834108.0,
+              816670.5
+            ],
+            "cells": [
+              "e833750n816200"
+            ],
+            "component_id": 186,
+            "pixels": 7574
+          },
+          {
+            "bounds": [
+              834157.0,
+              816570.0,
+              834201.0,
+              816648.5
+            ],
+            "cells": [
+              "e833750n816200"
+            ],
+            "component_id": 187,
+            "pixels": 7536
+          },
+          {
+            "bounds": [
+              834252.5,
+              816547.0,
+              834296.5,
+              816624.0
+            ],
+            "cells": [
+              "e833750n816200"
+            ],
+            "component_id": 188,
+            "pixels": 7852
+          },
+          {
+            "bounds": [
+              834345.5,
+              816523.0,
+              834392.0,
+              816600.0
+            ],
+            "cells": [
+              "e833750n816200"
+            ],
+            "component_id": 189,
+            "pixels": 8141
+          },
+          {
+            "bounds": [
+              834442.5,
+              816488.5,
+              834488.5,
+              816571.5
+            ],
+            "cells": [
+              "e833750n816200"
+            ],
+            "component_id": 190,
+            "pixels": 7531
+          },
+          {
+            "bounds": [
+              834527.0,
+              816464.0,
+              834584.5,
+              816540.5
+            ],
+            "cells": [
+              "e834500n816200"
+            ],
+            "component_id": 240,
+            "pixels": 7708
+          },
+          {
+            "bounds": [
+              834628.0,
+              816426.5,
+              834678.5,
+              816503.5
+            ],
+            "cells": [
+              "e834500n816200"
+            ],
+            "component_id": 241,
+            "pixels": 7513
+          },
+          {
+            "bounds": [
+              834718.0,
+              816390.5,
+              834771.0,
+              816466.5
+            ],
+            "cells": [
+              "e834500n816200"
+            ],
+            "component_id": 242,
+            "pixels": 7899
+          },
+          {
+            "bounds": [
+              834770.5,
+              816336.0,
+              834835.5,
+              816372.0
+            ],
+            "cells": [
+              "e834500n816200"
+            ],
+            "component_id": 251,
+            "pixels": 4548
+          },
+          {
+            "bounds": [
+              834796.0,
+              816257.0,
+              834863.0,
+              816293.5
+            ],
+            "cells": [
+              "e834500n816200"
+            ],
+            "component_id": 262,
+            "pixels": 4689
+          },
+          {
+            "bounds": [
+              835395.5,
+              817116.0,
+              835445.0,
+              817178.5
+            ],
+            "cells": [
+              "e835250n816800"
+            ],
+            "component_id": 297,
+            "pixels": 3884
+          }
+        ],
+        "false_water_fraction": 0.014108819667468114,
+        "mapped_sea_nodata": 10855563,
+        "mapped_sea_nodata_water_fraction": 1.0,
+        "missed_sea_3": 0,
+        "missed_sea_4": 0,
+        "northern_boundary_cells": [],
+        "northern_boundary_definition": {
+          "description": "northernmost 10 km of the raw catalogue plus its northern domain margin",
+          "lower_northing": 837400.0
+        },
+        "unclassified_water_cells": [],
+        "water_inside_SEF_minus_LAF": 10855563,
+        "water_neither_class": 0,
+        "water_neither_class_within_bbox": 0,
+        "water_outside_coverage_bbox": 0,
+        "water_pixels": 11010914
+      },
+      "scope": "central_halo",
+      "shore_preference_m": 50
+    },
+    {
+      "bounds": [
+        819250,
+        806200,
+        822750,
+        809400
+      ],
+      "low_shore_margin_m": 5,
+      "report": {
+        "class_3_inside_SEF": 0,
+        "class_counts": {
+          "0": 10152633,
+          "1": 22047367,
+          "2": 12447511,
+          "255": 0,
+          "3": 0,
+          "4": 152489
+        },
+        "dsm_nodata_pixels": 34647367,
+        "dsm_nodata_water_fraction": 0.9955988286209454,
+        "false_water": 27683,
+        "false_water_components_over_2500": [
+          {
+            "bounds": [
+              820921.0,
+              807762.5,
+              820982.5,
+              807819.5
+            ],
+            "cells": [
+              "e820250n807200",
+              "e820250n807800"
+            ],
+            "component_id": 119,
+            "pixels": 6668
+          },
+          {
+            "bounds": [
+              820661.5,
+              808903.0,
+              820684.0,
+              808951.0
+            ],
+            "cells": [
+              "e820250n808400"
+            ],
+            "component_id": 207,
+            "pixels": 2795
+          },
+          {
+            "bounds": [
+              821342.5,
+              808583.0,
+              821464.5,
+              808644.0
+            ],
+            "cells": [
+              "e821000n808400"
+            ],
+            "component_id": 252,
+            "pixels": 3268
+          }
+        ],
+        "false_water_fraction": 0.0008025249429784909,
+        "mapped_sea_nodata": 34619684,
+        "mapped_sea_nodata_water_fraction": 0.995595309304383,
+        "missed_sea_3": 0,
+        "missed_sea_4": 152489,
+        "northern_boundary_cells": [],
+        "northern_boundary_definition": {
+          "description": "northernmost 10 km of the raw catalogue plus its northern domain margin",
+          "lower_northing": 837400.0
+        },
+        "unclassified_water_cells": [],
+        "water_inside_SEF_minus_LAF": 34467195,
+        "water_neither_class": 0,
+        "water_neither_class_within_bbox": 0,
+        "water_outside_coverage_bbox": 0,
+        "water_pixels": 34494878
+      },
+      "scope": "cheung_chau_halo",
+      "shore_preference_m": 50
+    },
+    {
+      "bounds": [
+        810250,
+        832000,
+        813750,
+        834600
+      ],
+      "low_shore_margin_m": 5,
+      "report": {
+        "class_3_inside_SEF": 6,
+        "class_counts": {
+          "0": 10196954,
+          "1": 7351500,
+          "2": 7897301,
+          "255": 0,
+          "3": 51546,
+          "4": 10902699
+        },
+        "dsm_nodata_pixels": 26203046,
+        "dsm_nodata_water_fraction": 0.5819476483764521,
+        "false_water": 0,
+        "false_water_components_over_2500": [],
+        "false_water_fraction": 0.0,
+        "mapped_sea_nodata": 26151506,
+        "mapped_sea_nodata_water_fraction": 0.5830945644201141,
+        "missed_sea_3": 6,
+        "missed_sea_4": 10902699,
+        "northern_boundary_cells": [],
+        "northern_boundary_definition": {
+          "description": "northernmost 10 km of the raw catalogue plus its northern domain margin",
+          "lower_northing": 837400.0
+        },
+        "unclassified_water_cells": [],
+        "water_inside_SEF_minus_LAF": 15248801,
+        "water_neither_class": 0,
+        "water_neither_class_within_bbox": 0,
+        "water_outside_coverage_bbox": 0,
+        "water_pixels": 15248801
+      },
+      "scope": "five_class_halo",
+      "shore_preference_m": 50
+    },
+    {
+      "bounds": [
+        832750.0,
+        814000.0,
+        836250.0,
+        817200.0
+      ],
+      "low_shore_margin_m": 5,
+      "report": {
+        "class_3_inside_SEF": 0,
+        "class_counts": {
+          "0": 33789086,
+          "1": 9810914,
+          "2": 1200000,
+          "255": 0,
+          "3": 0,
+          "4": 0
+        },
+        "dsm_nodata_pixels": 11010914,
+        "dsm_nodata_water_fraction": 1.0,
+        "false_water": 155351,
+        "false_water_components_over_2500": [
+          {
+            "bounds": [
+              836183.0,
+              816012.0,
+              836225.0,
+              816095.0
+            ],
+            "cells": [
+              "e836000n815600"
+            ],
+            "component_id": 56,
+            "pixels": 9247
+          },
+          {
+            "bounds": [
+              832815.0,
+              816748.5,
+              833402.5,
+              816852.0
+            ],
+            "cells": [
+              "e832250n816800",
+              "e833000n816200",
+              "e833000n816800"
+            ],
+            "component_id": 68,
+            "pixels": 5535
+          },
+          {
+            "bounds": [
+              833630.0,
+              816709.5,
+              833855.5,
+              816792.5
+            ],
+            "cells": [
+              "e833000n816200",
+              "e833750n816200"
+            ],
+            "component_id": 69,
+            "pixels": 25150
+          },
+          {
+            "bounds": [
+              833604.5,
+              816616.5,
+              833831.0,
+              816705.5
+            ],
+            "cells": [
+              "e833000n816200",
+              "e833750n816200"
+            ],
+            "component_id": 99,
+            "pixels": 37439
+          },
+          {
+            "bounds": [
+              834046.0,
+              816602.5,
+              834108.0,
+              816670.5
+            ],
+            "cells": [
+              "e833750n816200"
+            ],
+            "component_id": 186,
+            "pixels": 7574
+          },
+          {
+            "bounds": [
+              834157.0,
+              816570.0,
+              834201.0,
+              816648.5
+            ],
+            "cells": [
+              "e833750n816200"
+            ],
+            "component_id": 187,
+            "pixels": 7536
+          },
+          {
+            "bounds": [
+              834252.5,
+              816547.0,
+              834296.5,
+              816624.0
+            ],
+            "cells": [
+              "e833750n816200"
+            ],
+            "component_id": 188,
+            "pixels": 7852
+          },
+          {
+            "bounds": [
+              834345.5,
+              816523.0,
+              834392.0,
+              816600.0
+            ],
+            "cells": [
+              "e833750n816200"
+            ],
+            "component_id": 189,
+            "pixels": 8141
+          },
+          {
+            "bounds": [
+              834442.5,
+              816488.5,
+              834488.5,
+              816571.5
+            ],
+            "cells": [
+              "e833750n816200"
+            ],
+            "component_id": 190,
+            "pixels": 7531
+          },
+          {
+            "bounds": [
+              834527.0,
+              816464.0,
+              834584.5,
+              816540.5
+            ],
+            "cells": [
+              "e834500n816200"
+            ],
+            "component_id": 240,
+            "pixels": 7708
+          },
+          {
+            "bounds": [
+              834628.0,
+              816426.5,
+              834678.5,
+              816503.5
+            ],
+            "cells": [
+              "e834500n816200"
+            ],
+            "component_id": 241,
+            "pixels": 7513
+          },
+          {
+            "bounds": [
+              834718.0,
+              816390.5,
+              834771.0,
+              816466.5
+            ],
+            "cells": [
+              "e834500n816200"
+            ],
+            "component_id": 242,
+            "pixels": 7899
+          },
+          {
+            "bounds": [
+              834770.5,
+              816336.0,
+              834835.5,
+              816372.0
+            ],
+            "cells": [
+              "e834500n816200"
+            ],
+            "component_id": 251,
+            "pixels": 4548
+          },
+          {
+            "bounds": [
+              834796.0,
+              816257.0,
+              834863.0,
+              816293.5
+            ],
+            "cells": [
+              "e834500n816200"
+            ],
+            "component_id": 262,
+            "pixels": 4689
+          },
+          {
+            "bounds": [
+              835395.5,
+              817116.0,
+              835445.0,
+              817178.5
+            ],
+            "cells": [
+              "e835250n816800"
+            ],
+            "component_id": 297,
+            "pixels": 3884
+          }
+        ],
+        "false_water_fraction": 0.014108819667468114,
+        "mapped_sea_nodata": 10855563,
+        "mapped_sea_nodata_water_fraction": 1.0,
+        "missed_sea_3": 0,
+        "missed_sea_4": 0,
+        "northern_boundary_cells": [],
+        "northern_boundary_definition": {
+          "description": "northernmost 10 km of the raw catalogue plus its northern domain margin",
+          "lower_northing": 837400.0
+        },
+        "unclassified_water_cells": [],
+        "water_inside_SEF_minus_LAF": 10855563,
+        "water_neither_class": 0,
+        "water_neither_class_within_bbox": 0,
+        "water_outside_coverage_bbox": 0,
+        "water_pixels": 11010914
+      },
+      "scope": "central_halo",
+      "shore_preference_m": 100
+    },
+    {
+      "bounds": [
+        819250,
+        806200,
+        822750,
+        809400
+      ],
+      "low_shore_margin_m": 5,
+      "report": {
+        "class_3_inside_SEF": 0,
+        "class_counts": {
+          "0": 10152633,
+          "1": 22047367,
+          "2": 12447511,
+          "255": 0,
+          "3": 0,
+          "4": 152489
+        },
+        "dsm_nodata_pixels": 34647367,
+        "dsm_nodata_water_fraction": 0.9955988286209454,
+        "false_water": 27683,
+        "false_water_components_over_2500": [
+          {
+            "bounds": [
+              820921.0,
+              807762.5,
+              820982.5,
+              807819.5
+            ],
+            "cells": [
+              "e820250n807200",
+              "e820250n807800"
+            ],
+            "component_id": 119,
+            "pixels": 6668
+          },
+          {
+            "bounds": [
+              820661.5,
+              808903.0,
+              820684.0,
+              808951.0
+            ],
+            "cells": [
+              "e820250n808400"
+            ],
+            "component_id": 207,
+            "pixels": 2795
+          },
+          {
+            "bounds": [
+              821342.5,
+              808583.0,
+              821464.5,
+              808644.0
+            ],
+            "cells": [
+              "e821000n808400"
+            ],
+            "component_id": 252,
+            "pixels": 3268
+          }
+        ],
+        "false_water_fraction": 0.0008025249429784909,
+        "mapped_sea_nodata": 34619684,
+        "mapped_sea_nodata_water_fraction": 0.995595309304383,
+        "missed_sea_3": 0,
+        "missed_sea_4": 152489,
+        "northern_boundary_cells": [],
+        "northern_boundary_definition": {
+          "description": "northernmost 10 km of the raw catalogue plus its northern domain margin",
+          "lower_northing": 837400.0
+        },
+        "unclassified_water_cells": [],
+        "water_inside_SEF_minus_LAF": 34467195,
+        "water_neither_class": 0,
+        "water_neither_class_within_bbox": 0,
+        "water_outside_coverage_bbox": 0,
+        "water_pixels": 34494878
+      },
+      "scope": "cheung_chau_halo",
+      "shore_preference_m": 100
+    },
+    {
+      "bounds": [
+        810250,
+        832000,
+        813750,
+        834600
+      ],
+      "low_shore_margin_m": 5,
+      "report": {
+        "class_3_inside_SEF": 6,
+        "class_counts": {
+          "0": 10196954,
+          "1": 7351500,
+          "2": 7897301,
+          "255": 0,
+          "3": 51546,
+          "4": 10902699
+        },
+        "dsm_nodata_pixels": 26203046,
+        "dsm_nodata_water_fraction": 0.5819476483764521,
+        "false_water": 0,
+        "false_water_components_over_2500": [],
+        "false_water_fraction": 0.0,
+        "mapped_sea_nodata": 26151506,
+        "mapped_sea_nodata_water_fraction": 0.5830945644201141,
+        "missed_sea_3": 6,
+        "missed_sea_4": 10902699,
+        "northern_boundary_cells": [],
+        "northern_boundary_definition": {
+          "description": "northernmost 10 km of the raw catalogue plus its northern domain margin",
+          "lower_northing": 837400.0
+        },
+        "unclassified_water_cells": [],
+        "water_inside_SEF_minus_LAF": 15248801,
+        "water_neither_class": 0,
+        "water_neither_class_within_bbox": 0,
+        "water_outside_coverage_bbox": 0,
+        "water_pixels": 15248801
+      },
+      "scope": "five_class_halo",
+      "shore_preference_m": 100
+    },
+    {
+      "bounds": [
+        832750.0,
+        814000.0,
+        836250.0,
+        817200.0
+      ],
+      "low_shore_margin_m": 6,
+      "report": {
+        "class_3_inside_SEF": 0,
+        "class_counts": {
+          "0": 33789086,
+          "1": 8228167,
+          "2": 451132,
+          "255": 0,
+          "3": 0,
+          "4": 2331615
+        },
+        "dsm_nodata_pixels": 11010914,
+        "dsm_nodata_water_fraction": 0.7882450993623236,
+        "false_water": 56935,
+        "false_water_components_over_2500": [
+          {
+            "bounds": [
+              833630.0,
+              816749.0,
+              833698.5,
+              816792.5
+            ],
+            "cells": [
+              "e833000n816200"
+            ],
+            "component_id": 79,
+            "pixels": 7279
+          },
+          {
+            "bounds": [
+              833707.0,
+              816731.5,
+              833763.5,
+              816772.0
+            ],
+            "cells": [
+              "e833000n816200",
+              "e833750n816200"
+            ],
+            "component_id": 83,
+            "pixels": 5818
+          },
+          {
+            "bounds": [
+              833631.0,
+              816652.5,
+              833676.5,
+              816704.0
+            ],
+            "cells": [
+              "e833000n816200"
+            ],
+            "component_id": 121,
+            "pixels": 6159
+          },
+          {
+            "bounds": [
+              833692.5,
+              816634.5,
+              833743.5,
+              816687.5
+            ],
+            "cells": [
+              "e833000n816200"
+            ],
+            "component_id": 128,
+            "pixels": 7332
+          },
+          {
+            "bounds": [
+              833782.0,
+              816712.5,
+              833834.0,
+              816752.0
+            ],
+            "cells": [
+              "e833750n816200"
+            ],
+            "component_id": 212,
+            "pixels": 4987
+          },
+          {
+            "bounds": [
+              833757.5,
+              816618.5,
+              833812.5,
+              816670.5
+            ],
+            "cells": [
+              "e833750n816200"
+            ],
+            "component_id": 226,
+            "pixels": 7576
+          },
+          {
+            "bounds": [
+              832815.0,
+              816823.0,
+              833113.0,
+              816852.0
+            ],
+            "cells": [
+              "e832250n816800",
+              "e833000n816800"
+            ],
+            "component_id": 346,
+            "pixels": 3284
+          }
+        ],
+        "false_water_fraction": 0.006559861574074128,
+        "mapped_sea_nodata": 10855563,
+        "mapped_sea_nodata_water_fraction": 0.7942806835536765,
+        "missed_sea_3": 0,
+        "missed_sea_4": 2233199,
+        "northern_boundary_cells": [],
+        "northern_boundary_definition": {
+          "description": "northernmost 10 km of the raw catalogue plus its northern domain margin",
+          "lower_northing": 837400.0
+        },
+        "unclassified_water_cells": [],
+        "water_inside_SEF_minus_LAF": 8622364,
+        "water_neither_class": 0,
+        "water_neither_class_within_bbox": 0,
+        "water_outside_coverage_bbox": 0,
+        "water_pixels": 8679299
+      },
+      "scope": "central_halo",
+      "shore_preference_m": 0
+    },
+    {
+      "bounds": [
+        819250,
+        806200,
+        822750,
+        809400
+      ],
+      "low_shore_margin_m": 6,
+      "report": {
+        "class_3_inside_SEF": 0,
+        "class_counts": {
+          "0": 10152633,
+          "1": 21939989,
+          "2": 12447511,
+          "255": 0,
+          "3": 0,
+          "4": 259867
+        },
+        "dsm_nodata_pixels": 34647367,
+        "dsm_nodata_water_fraction": 0.9924996609410464,
+        "false_water": 19186,
+        "false_water_components_over_2500": [
+          {
+            "bounds": [
+              820661.5,
+              808903.0,
+              820684.0,
+              808951.0
+            ],
+            "cells": [
+              "e820250n808400"
+            ],
+            "component_id": 212,
+            "pixels": 2795
+          },
+          {
+            "bounds": [
+              821342.5,
+              808583.0,
+              821464.5,
+              808643.0
+            ],
+            "cells": [
+              "e821000n808400"
+            ],
+            "component_id": 258,
+            "pixels": 3232
+          }
+        ],
+        "false_water_fraction": 0.0005579352962559069,
+        "mapped_sea_nodata": 34619684,
+        "mapped_sea_nodata_water_fraction": 0.9927391018358227,
+        "missed_sea_3": 0,
+        "missed_sea_4": 251370,
+        "northern_boundary_cells": [],
+        "northern_boundary_definition": {
+          "description": "northernmost 10 km of the raw catalogue plus its northern domain margin",
+          "lower_northing": 837400.0
+        },
+        "unclassified_water_cells": [],
+        "water_inside_SEF_minus_LAF": 34368314,
+        "water_neither_class": 0,
+        "water_neither_class_within_bbox": 0,
+        "water_outside_coverage_bbox": 0,
+        "water_pixels": 34387500
+      },
+      "scope": "cheung_chau_halo",
+      "shore_preference_m": 0
+    },
+    {
+      "bounds": [
+        810250,
+        832000,
+        813750,
+        834600
+      ],
+      "low_shore_margin_m": 6,
+      "report": {
+        "class_3_inside_SEF": 6,
+        "class_counts": {
+          "0": 10196954,
+          "1": 7309925,
+          "2": 7869208,
+          "255": 0,
+          "3": 51546,
+          "4": 10972367
+        },
+        "dsm_nodata_pixels": 26203046,
+        "dsm_nodata_water_fraction": 0.5792888735149341,
+        "false_water": 0,
+        "false_water_components_over_2500": [],
+        "false_water_fraction": 0.0,
+        "mapped_sea_nodata": 26151506,
+        "mapped_sea_nodata_water_fraction": 0.5804305495828807,
+        "missed_sea_3": 6,
+        "missed_sea_4": 10972367,
+        "northern_boundary_cells": [],
+        "northern_boundary_definition": {
+          "description": "northernmost 10 km of the raw catalogue plus its northern domain margin",
+          "lower_northing": 837400.0
+        },
+        "unclassified_water_cells": [],
+        "water_inside_SEF_minus_LAF": 15179133,
+        "water_neither_class": 0,
+        "water_neither_class_within_bbox": 0,
+        "water_outside_coverage_bbox": 0,
+        "water_pixels": 15179133
+      },
+      "scope": "five_class_halo",
+      "shore_preference_m": 0
+    },
+    {
+      "bounds": [
+        832750.0,
+        814000.0,
+        836250.0,
+        817200.0
+      ],
+      "low_shore_margin_m": 6,
+      "report": {
+        "class_3_inside_SEF": 0,
+        "class_counts": {
+          "0": 33789086,
+          "1": 9810914,
+          "2": 1200000,
+          "255": 0,
+          "3": 0,
+          "4": 0
+        },
+        "dsm_nodata_pixels": 11010914,
+        "dsm_nodata_water_fraction": 1.0,
+        "false_water": 155351,
+        "false_water_components_over_2500": [
+          {
+            "bounds": [
+              836183.0,
+              816012.0,
+              836225.0,
+              816095.0
+            ],
+            "cells": [
+              "e836000n815600"
+            ],
+            "component_id": 56,
+            "pixels": 9247
+          },
+          {
+            "bounds": [
+              832815.0,
+              816748.5,
+              833402.5,
+              816852.0
+            ],
+            "cells": [
+              "e832250n816800",
+              "e833000n816200",
+              "e833000n816800"
+            ],
+            "component_id": 68,
+            "pixels": 5535
+          },
+          {
+            "bounds": [
+              833630.0,
+              816709.5,
+              833855.5,
+              816792.5
+            ],
+            "cells": [
+              "e833000n816200",
+              "e833750n816200"
+            ],
+            "component_id": 69,
+            "pixels": 25150
+          },
+          {
+            "bounds": [
+              833604.5,
+              816616.5,
+              833831.0,
+              816705.5
+            ],
+            "cells": [
+              "e833000n816200",
+              "e833750n816200"
+            ],
+            "component_id": 99,
+            "pixels": 37439
+          },
+          {
+            "bounds": [
+              834046.0,
+              816602.5,
+              834108.0,
+              816670.5
+            ],
+            "cells": [
+              "e833750n816200"
+            ],
+            "component_id": 186,
+            "pixels": 7574
+          },
+          {
+            "bounds": [
+              834157.0,
+              816570.0,
+              834201.0,
+              816648.5
+            ],
+            "cells": [
+              "e833750n816200"
+            ],
+            "component_id": 187,
+            "pixels": 7536
+          },
+          {
+            "bounds": [
+              834252.5,
+              816547.0,
+              834296.5,
+              816624.0
+            ],
+            "cells": [
+              "e833750n816200"
+            ],
+            "component_id": 188,
+            "pixels": 7852
+          },
+          {
+            "bounds": [
+              834345.5,
+              816523.0,
+              834392.0,
+              816600.0
+            ],
+            "cells": [
+              "e833750n816200"
+            ],
+            "component_id": 189,
+            "pixels": 8141
+          },
+          {
+            "bounds": [
+              834442.5,
+              816488.5,
+              834488.5,
+              816571.5
+            ],
+            "cells": [
+              "e833750n816200"
+            ],
+            "component_id": 190,
+            "pixels": 7531
+          },
+          {
+            "bounds": [
+              834527.0,
+              816464.0,
+              834584.5,
+              816540.5
+            ],
+            "cells": [
+              "e834500n816200"
+            ],
+            "component_id": 240,
+            "pixels": 7708
+          },
+          {
+            "bounds": [
+              834628.0,
+              816426.5,
+              834678.5,
+              816503.5
+            ],
+            "cells": [
+              "e834500n816200"
+            ],
+            "component_id": 241,
+            "pixels": 7513
+          },
+          {
+            "bounds": [
+              834718.0,
+              816390.5,
+              834771.0,
+              816466.5
+            ],
+            "cells": [
+              "e834500n816200"
+            ],
+            "component_id": 242,
+            "pixels": 7899
+          },
+          {
+            "bounds": [
+              834770.5,
+              816336.0,
+              834835.5,
+              816372.0
+            ],
+            "cells": [
+              "e834500n816200"
+            ],
+            "component_id": 251,
+            "pixels": 4548
+          },
+          {
+            "bounds": [
+              834796.0,
+              816257.0,
+              834863.0,
+              816293.5
+            ],
+            "cells": [
+              "e834500n816200"
+            ],
+            "component_id": 262,
+            "pixels": 4689
+          },
+          {
+            "bounds": [
+              835395.5,
+              817116.0,
+              835445.0,
+              817178.5
+            ],
+            "cells": [
+              "e835250n816800"
+            ],
+            "component_id": 297,
+            "pixels": 3884
+          }
+        ],
+        "false_water_fraction": 0.014108819667468114,
+        "mapped_sea_nodata": 10855563,
+        "mapped_sea_nodata_water_fraction": 1.0,
+        "missed_sea_3": 0,
+        "missed_sea_4": 0,
+        "northern_boundary_cells": [],
+        "northern_boundary_definition": {
+          "description": "northernmost 10 km of the raw catalogue plus its northern domain margin",
+          "lower_northing": 837400.0
+        },
+        "unclassified_water_cells": [],
+        "water_inside_SEF_minus_LAF": 10855563,
+        "water_neither_class": 0,
+        "water_neither_class_within_bbox": 0,
+        "water_outside_coverage_bbox": 0,
+        "water_pixels": 11010914
+      },
+      "scope": "central_halo",
+      "shore_preference_m": 50
+    },
+    {
+      "bounds": [
+        819250,
+        806200,
+        822750,
+        809400
+      ],
+      "low_shore_margin_m": 6,
+      "report": {
+        "class_3_inside_SEF": 0,
+        "class_counts": {
+          "0": 10152633,
+          "1": 22047367,
+          "2": 12447511,
+          "255": 0,
+          "3": 0,
+          "4": 152489
+        },
+        "dsm_nodata_pixels": 34647367,
+        "dsm_nodata_water_fraction": 0.9955988286209454,
+        "false_water": 27683,
+        "false_water_components_over_2500": [
+          {
+            "bounds": [
+              820921.0,
+              807762.5,
+              820982.5,
+              807819.5
+            ],
+            "cells": [
+              "e820250n807200",
+              "e820250n807800"
+            ],
+            "component_id": 119,
+            "pixels": 6668
+          },
+          {
+            "bounds": [
+              820661.5,
+              808903.0,
+              820684.0,
+              808951.0
+            ],
+            "cells": [
+              "e820250n808400"
+            ],
+            "component_id": 207,
+            "pixels": 2795
+          },
+          {
+            "bounds": [
+              821342.5,
+              808583.0,
+              821464.5,
+              808644.0
+            ],
+            "cells": [
+              "e821000n808400"
+            ],
+            "component_id": 252,
+            "pixels": 3268
+          }
+        ],
+        "false_water_fraction": 0.0008025249429784909,
+        "mapped_sea_nodata": 34619684,
+        "mapped_sea_nodata_water_fraction": 0.995595309304383,
+        "missed_sea_3": 0,
+        "missed_sea_4": 152489,
+        "northern_boundary_cells": [],
+        "northern_boundary_definition": {
+          "description": "northernmost 10 km of the raw catalogue plus its northern domain margin",
+          "lower_northing": 837400.0
+        },
+        "unclassified_water_cells": [],
+        "water_inside_SEF_minus_LAF": 34467195,
+        "water_neither_class": 0,
+        "water_neither_class_within_bbox": 0,
+        "water_outside_coverage_bbox": 0,
+        "water_pixels": 34494878
+      },
+      "scope": "cheung_chau_halo",
+      "shore_preference_m": 50
+    },
+    {
+      "bounds": [
+        810250,
+        832000,
+        813750,
+        834600
+      ],
+      "low_shore_margin_m": 6,
+      "report": {
+        "class_3_inside_SEF": 6,
+        "class_counts": {
+          "0": 10196954,
+          "1": 7351500,
+          "2": 7897305,
+          "255": 0,
+          "3": 51546,
+          "4": 10902695
+        },
+        "dsm_nodata_pixels": 26203046,
+        "dsm_nodata_water_fraction": 0.5819478010304604,
+        "false_water": 0,
+        "false_water_components_over_2500": [],
+        "false_water_fraction": 0.0,
+        "mapped_sea_nodata": 26151506,
+        "mapped_sea_nodata_water_fraction": 0.5830947173749764,
+        "missed_sea_3": 6,
+        "missed_sea_4": 10902695,
+        "northern_boundary_cells": [],
+        "northern_boundary_definition": {
+          "description": "northernmost 10 km of the raw catalogue plus its northern domain margin",
+          "lower_northing": 837400.0
+        },
+        "unclassified_water_cells": [],
+        "water_inside_SEF_minus_LAF": 15248805,
+        "water_neither_class": 0,
+        "water_neither_class_within_bbox": 0,
+        "water_outside_coverage_bbox": 0,
+        "water_pixels": 15248805
+      },
+      "scope": "five_class_halo",
+      "shore_preference_m": 50
+    },
+    {
+      "bounds": [
+        832750.0,
+        814000.0,
+        836250.0,
+        817200.0
+      ],
+      "low_shore_margin_m": 6,
+      "report": {
+        "class_3_inside_SEF": 0,
+        "class_counts": {
+          "0": 33789086,
+          "1": 9810914,
+          "2": 1200000,
+          "255": 0,
+          "3": 0,
+          "4": 0
+        },
+        "dsm_nodata_pixels": 11010914,
+        "dsm_nodata_water_fraction": 1.0,
+        "false_water": 155351,
+        "false_water_components_over_2500": [
+          {
+            "bounds": [
+              836183.0,
+              816012.0,
+              836225.0,
+              816095.0
+            ],
+            "cells": [
+              "e836000n815600"
+            ],
+            "component_id": 56,
+            "pixels": 9247
+          },
+          {
+            "bounds": [
+              832815.0,
+              816748.5,
+              833402.5,
+              816852.0
+            ],
+            "cells": [
+              "e832250n816800",
+              "e833000n816200",
+              "e833000n816800"
+            ],
+            "component_id": 68,
+            "pixels": 5535
+          },
+          {
+            "bounds": [
+              833630.0,
+              816709.5,
+              833855.5,
+              816792.5
+            ],
+            "cells": [
+              "e833000n816200",
+              "e833750n816200"
+            ],
+            "component_id": 69,
+            "pixels": 25150
+          },
+          {
+            "bounds": [
+              833604.5,
+              816616.5,
+              833831.0,
+              816705.5
+            ],
+            "cells": [
+              "e833000n816200",
+              "e833750n816200"
+            ],
+            "component_id": 99,
+            "pixels": 37439
+          },
+          {
+            "bounds": [
+              834046.0,
+              816602.5,
+              834108.0,
+              816670.5
+            ],
+            "cells": [
+              "e833750n816200"
+            ],
+            "component_id": 186,
+            "pixels": 7574
+          },
+          {
+            "bounds": [
+              834157.0,
+              816570.0,
+              834201.0,
+              816648.5
+            ],
+            "cells": [
+              "e833750n816200"
+            ],
+            "component_id": 187,
+            "pixels": 7536
+          },
+          {
+            "bounds": [
+              834252.5,
+              816547.0,
+              834296.5,
+              816624.0
+            ],
+            "cells": [
+              "e833750n816200"
+            ],
+            "component_id": 188,
+            "pixels": 7852
+          },
+          {
+            "bounds": [
+              834345.5,
+              816523.0,
+              834392.0,
+              816600.0
+            ],
+            "cells": [
+              "e833750n816200"
+            ],
+            "component_id": 189,
+            "pixels": 8141
+          },
+          {
+            "bounds": [
+              834442.5,
+              816488.5,
+              834488.5,
+              816571.5
+            ],
+            "cells": [
+              "e833750n816200"
+            ],
+            "component_id": 190,
+            "pixels": 7531
+          },
+          {
+            "bounds": [
+              834527.0,
+              816464.0,
+              834584.5,
+              816540.5
+            ],
+            "cells": [
+              "e834500n816200"
+            ],
+            "component_id": 240,
+            "pixels": 7708
+          },
+          {
+            "bounds": [
+              834628.0,
+              816426.5,
+              834678.5,
+              816503.5
+            ],
+            "cells": [
+              "e834500n816200"
+            ],
+            "component_id": 241,
+            "pixels": 7513
+          },
+          {
+            "bounds": [
+              834718.0,
+              816390.5,
+              834771.0,
+              816466.5
+            ],
+            "cells": [
+              "e834500n816200"
+            ],
+            "component_id": 242,
+            "pixels": 7899
+          },
+          {
+            "bounds": [
+              834770.5,
+              816336.0,
+              834835.5,
+              816372.0
+            ],
+            "cells": [
+              "e834500n816200"
+            ],
+            "component_id": 251,
+            "pixels": 4548
+          },
+          {
+            "bounds": [
+              834796.0,
+              816257.0,
+              834863.0,
+              816293.5
+            ],
+            "cells": [
+              "e834500n816200"
+            ],
+            "component_id": 262,
+            "pixels": 4689
+          },
+          {
+            "bounds": [
+              835395.5,
+              817116.0,
+              835445.0,
+              817178.5
+            ],
+            "cells": [
+              "e835250n816800"
+            ],
+            "component_id": 297,
+            "pixels": 3884
+          }
+        ],
+        "false_water_fraction": 0.014108819667468114,
+        "mapped_sea_nodata": 10855563,
+        "mapped_sea_nodata_water_fraction": 1.0,
+        "missed_sea_3": 0,
+        "missed_sea_4": 0,
+        "northern_boundary_cells": [],
+        "northern_boundary_definition": {
+          "description": "northernmost 10 km of the raw catalogue plus its northern domain margin",
+          "lower_northing": 837400.0
+        },
+        "unclassified_water_cells": [],
+        "water_inside_SEF_minus_LAF": 10855563,
+        "water_neither_class": 0,
+        "water_neither_class_within_bbox": 0,
+        "water_outside_coverage_bbox": 0,
+        "water_pixels": 11010914
+      },
+      "scope": "central_halo",
+      "shore_preference_m": 100
+    },
+    {
+      "bounds": [
+        819250,
+        806200,
+        822750,
+        809400
+      ],
+      "low_shore_margin_m": 6,
+      "report": {
+        "class_3_inside_SEF": 0,
+        "class_counts": {
+          "0": 10152633,
+          "1": 22047367,
+          "2": 12447511,
+          "255": 0,
+          "3": 0,
+          "4": 152489
+        },
+        "dsm_nodata_pixels": 34647367,
+        "dsm_nodata_water_fraction": 0.9955988286209454,
+        "false_water": 27683,
+        "false_water_components_over_2500": [
+          {
+            "bounds": [
+              820921.0,
+              807762.5,
+              820982.5,
+              807819.5
+            ],
+            "cells": [
+              "e820250n807200",
+              "e820250n807800"
+            ],
+            "component_id": 119,
+            "pixels": 6668
+          },
+          {
+            "bounds": [
+              820661.5,
+              808903.0,
+              820684.0,
+              808951.0
+            ],
+            "cells": [
+              "e820250n808400"
+            ],
+            "component_id": 207,
+            "pixels": 2795
+          },
+          {
+            "bounds": [
+              821342.5,
+              808583.0,
+              821464.5,
+              808644.0
+            ],
+            "cells": [
+              "e821000n808400"
+            ],
+            "component_id": 252,
+            "pixels": 3268
+          }
+        ],
+        "false_water_fraction": 0.0008025249429784909,
+        "mapped_sea_nodata": 34619684,
+        "mapped_sea_nodata_water_fraction": 0.995595309304383,
+        "missed_sea_3": 0,
+        "missed_sea_4": 152489,
+        "northern_boundary_cells": [],
+        "northern_boundary_definition": {
+          "description": "northernmost 10 km of the raw catalogue plus its northern domain margin",
+          "lower_northing": 837400.0
+        },
+        "unclassified_water_cells": [],
+        "water_inside_SEF_minus_LAF": 34467195,
+        "water_neither_class": 0,
+        "water_neither_class_within_bbox": 0,
+        "water_outside_coverage_bbox": 0,
+        "water_pixels": 34494878
+      },
+      "scope": "cheung_chau_halo",
+      "shore_preference_m": 100
+    },
+    {
+      "bounds": [
+        810250,
+        832000,
+        813750,
+        834600
+      ],
+      "low_shore_margin_m": 6,
+      "report": {
+        "class_3_inside_SEF": 6,
+        "class_counts": {
+          "0": 10196954,
+          "1": 7351500,
+          "2": 7897305,
+          "255": 0,
+          "3": 51546,
+          "4": 10902695
+        },
+        "dsm_nodata_pixels": 26203046,
+        "dsm_nodata_water_fraction": 0.5819478010304604,
+        "false_water": 0,
+        "false_water_components_over_2500": [],
+        "false_water_fraction": 0.0,
+        "mapped_sea_nodata": 26151506,
+        "mapped_sea_nodata_water_fraction": 0.5830947173749764,
+        "missed_sea_3": 6,
+        "missed_sea_4": 10902695,
+        "northern_boundary_cells": [],
+        "northern_boundary_definition": {
+          "description": "northernmost 10 km of the raw catalogue plus its northern domain margin",
+          "lower_northing": 837400.0
+        },
+        "unclassified_water_cells": [],
+        "water_inside_SEF_minus_LAF": 15248805,
+        "water_neither_class": 0,
+        "water_neither_class_within_bbox": 0,
+        "water_outside_coverage_bbox": 0,
+        "water_pixels": 15248805
+      },
+      "scope": "five_class_halo",
+      "shore_preference_m": 100
+    }
+  ],
+  "view_id": "8ee51b017411bd60e833e97fef10577546ba97f61e601df0fb21ecbfc0a4cbd1"
+}

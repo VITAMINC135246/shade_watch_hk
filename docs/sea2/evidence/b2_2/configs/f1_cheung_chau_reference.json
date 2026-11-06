@@ -1,0 +1,22 @@
+{
+  "crs": "hk1980",
+  "dsm_source": "raw",
+  "full_image": "auto",
+  "lower_left": [
+    820250.0,
+    807200.0
+  ],
+  "name": "f1_cheung_chau",
+  "schema": "shade-map-region-1.0",
+  "time": {
+    "dates": [
+      "2026-01-07"
+    ],
+    "interval_minutes": 10,
+    "mode": "daylight"
+  },
+  "upper_right": [
+    821750.0,
+    808400.0
+  ]
+}

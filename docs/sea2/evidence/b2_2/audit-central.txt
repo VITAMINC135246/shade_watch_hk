@@ -1,0 +1,1 @@
+central 3 frames quality gate True observed guard True

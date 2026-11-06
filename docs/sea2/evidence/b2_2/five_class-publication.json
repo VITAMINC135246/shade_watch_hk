@@ -1,0 +1,341 @@
+{
+  "frames": [
+    {
+      "cross_counts": [
+        {
+          "pixels": 88695,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 217623,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 1445173,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 34405,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        },
+        {
+          "pixels": 1114582,
+          "quality": 0,
+          "shade": 0,
+          "surface": 2
+        },
+        {
+          "pixels": 6189,
+          "quality": 0,
+          "shade": 0,
+          "surface": 3
+        },
+        {
+          "pixels": 7915,
+          "quality": 0,
+          "shade": 1,
+          "surface": 3
+        },
+        {
+          "pixels": 685418,
+          "quality": 0,
+          "shade": 0,
+          "surface": 4
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 320422,
+          "shade_bounds": [
+            0.703878010873161,
+            0.703878010873161
+          ],
+          "shaded": 225538,
+          "sunlit": 94884,
+          "sunlit_bounds": [
+            0.29612198912683896,
+            0.29612198912683896
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 685418
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 2594160,
+          "shade_bounds": [
+            0.013262481882381966,
+            0.013262481882381966
+          ],
+          "shaded": 34405,
+          "sunlit": 2559755,
+          "sunlit_bounds": [
+            0.986737518117618,
+            0.986737518117618
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "0800",
+      "utc_time": "2026-01-07T00:00:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 234147,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 72171,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 1476831,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 2747,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        },
+        {
+          "pixels": 1114582,
+          "quality": 0,
+          "shade": 0,
+          "surface": 2
+        },
+        {
+          "pixels": 12977,
+          "quality": 0,
+          "shade": 0,
+          "surface": 3
+        },
+        {
+          "pixels": 1127,
+          "quality": 0,
+          "shade": 1,
+          "surface": 3
+        },
+        {
+          "pixels": 685418,
+          "quality": 0,
+          "shade": 0,
+          "surface": 4
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 320422,
+          "shade_bounds": [
+            0.22875457989775982,
+            0.22875457989775982
+          ],
+          "shaded": 73298,
+          "sunlit": 247124,
+          "sunlit_bounds": [
+            0.7712454201022402,
+            0.7712454201022402
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 685418
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 2594160,
+          "shade_bounds": [
+            0.0010589169519227804,
+            0.0010589169519227804
+          ],
+          "shaded": 2747,
+          "sunlit": 2591413,
+          "sunlit_bounds": [
+            0.9989410830480773,
+            0.9989410830480773
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1230",
+      "utc_time": "2026-01-07T04:30:00+00:00"
+    },
+    {
+      "cross_counts": [
+        {
+          "pixels": 188746,
+          "quality": 0,
+          "shade": 0,
+          "surface": 0
+        },
+        {
+          "pixels": 117572,
+          "quality": 0,
+          "shade": 1,
+          "surface": 0
+        },
+        {
+          "pixels": 1475818,
+          "quality": 0,
+          "shade": 0,
+          "surface": 1
+        },
+        {
+          "pixels": 3760,
+          "quality": 0,
+          "shade": 1,
+          "surface": 1
+        },
+        {
+          "pixels": 1114582,
+          "quality": 0,
+          "shade": 0,
+          "surface": 2
+        },
+        {
+          "pixels": 8284,
+          "quality": 0,
+          "shade": 0,
+          "surface": 3
+        },
+        {
+          "pixels": 5820,
+          "quality": 0,
+          "shade": 1,
+          "surface": 3
+        },
+        {
+          "pixels": 685418,
+          "quality": 0,
+          "shade": 0,
+          "surface": 4
+        }
+      ],
+      "groups": {
+        "land": {
+          "pixels": 320422,
+          "shade_bounds": [
+            0.38509215971437666,
+            0.38509215971437666
+          ],
+          "shaded": 123392,
+          "sunlit": 197030,
+          "sunlit_bounds": [
+            0.6149078402856233,
+            0.6149078402856233
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        },
+        "other": {
+          "pixels": 685418
+        },
+        "outside": {
+          "pixels": 0
+        },
+        "water": {
+          "pixels": 2594160,
+          "shade_bounds": [
+            0.001449409442748327,
+            0.001449409442748327
+          ],
+          "shaded": 3760,
+          "sunlit": 2590400,
+          "sunlit_bounds": [
+            0.9985505905572517,
+            0.9985505905572517
+          ],
+          "uncertain": 0,
+          "uncertain_by_quality": {
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0
+          }
+        }
+      },
+      "quality_1_or_2": 0,
+      "remaining_255_outside_quality_3_or_4": 0,
+      "time": "1600",
+      "utc_time": "2026-01-07T08:00:00+00:00"
+    }
+  ],
+  "missing_data_check": true,
+  "provenance": {
+    "adapter_sidecar_sha256": "c034621578663dbe8d71a7b454a82da0cab592bcf15f84bde1ddaa799ce6a612",
+    "cache_namespace": "sea_fill_v2_2_8ee51b017411",
+    "files": 42,
+    "manifest_sha256": "003051bda76dd5b2261fa17b265868ddd5f4bc3ff32d83eaa09b573972523638",
+    "policies": {
+      "engine": "SW-V1-POLICY-1.0",
+      "sea": "SW-SEA-POLICY-2.2"
+    },
+    "raw_spatial_keys": {
+      "5NE14A(e812n833,e812n833).tif": "de45fee7f086eeefa0a7657a021f113f68e3ec52dadfb8731ec1885b1d9982a1"
+    },
+    "request_local_source_directory": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/region_views/13104ef39a75e8000127bbcfd7dcddfc85999e62186b56975c6caf752023e27f",
+    "sea_spatial_keys": {
+      "5NE14A(e812n833,e812n833).tif": "5a5d4df7ddcd78e8285bb45479b2b96a640fbbf2f209ed0591680dda5add85b1",
+      "FILL_e811250n833000.tif": "f07260924671f8388f9e2f74166176ccbe9ab12ec08abf219446c1fdcdf64585"
+    },
+    "source": "sea-2.2",
+    "v1_request_keys": [
+      "b22492e13d5b318735c4496188180427eca3e0f62821fa04f37ad75fcbb7ca4d"
+    ]
+  },
+  "run_id": "6fcb5b71ac96ff6c30950dd9861bc52eb805de48e67acbba8c5fd4830786bb17",
+  "view_id": "8ee51b017411bd60e833e97fef10577546ba97f61e601df0fb21ecbfc0a4cbd1"
+}

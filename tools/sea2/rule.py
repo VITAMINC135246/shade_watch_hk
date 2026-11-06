@@ -8,11 +8,12 @@ from scipy import ndimage
 from scipy.spatial import cKDTree
 
 CROSS = ndimage.generate_binary_structure(2, 1)
-CODES = (0, 1, 2, 254, 255)
+CODES = (0, 1, 2, 3, 4, 255)
+NODATA = -9999.0
 
 
 def missing(data):
-    return ~np.isfinite(data) | (data == -9999)
+    return ~np.isfinite(data) | (data == NODATA)
 
 
 def label(mask):
@@ -30,7 +31,7 @@ class Components:
         self.cells = {}
         self.below = {}
         self.left = None
-        self.last_y = None
+        self.previous = None
 
     def find(self, x):
         parent = self.parent
@@ -59,17 +60,15 @@ class Components:
         top, bottom = ids(labels[0]), ids(labels[-1])
         left, right = ids(labels[:, 0]), ids(labels[:, -1])
         x, y = key
-        if y != self.last_y:
-            self.left = None
-        if self.left is not None:
+        if self.previous == (x-1, y):
             self.join(self.left, left)
-        if x in self.below:
-            self.join(self.below[x], bottom)
+        if x in self.below and self.below[x][0] == y-1:
+            self.join(self.below[x][1], bottom)
         for is_edge, edge in [(west,left),(east,right),(south,bottom),(north,top)]:
             if is_edge:
                 for component in np.unique(edge[edge > 0]):
                     self.union(0, component)
-        self.left, self.below[x], self.last_y = right, top, y
+        self.left, self.below[x], self.previous = right, (y, top), key
         return labels
 
     def open_mask(self, key, labels):
@@ -104,7 +103,7 @@ def classify_points(bad, opened, low_points, high_points, profile, *, x0, y0,
                     resolution, supplied=True, origin=(0, 0), pixel_offset=(0, 0)):
     """Points use integer centre addresses (northing, easting), not edge coords."""
     y0+=pixel_offset[0]; x0+=pixel_offset[1]
-    result = np.where(bad, np.where(opened, 254, 255), 0).astype(np.uint8)
+    result = np.where(bad, np.where(opened, 4, 3), 0).astype(np.uint8)
     candidates = bad & opened & ~exclusions_mask(bad.shape, profile, x0=x0, y0=y0,
                                                 resolution=resolution, origin=origin)
     if not candidates.any() or not len(low_points):
@@ -192,7 +191,7 @@ def classify_array(data, profile, *, resolution=1, supplied=None, cell_shape=Non
         dh = ndimage.distance_transform_edt(~high)*resolution if high.any() else np.full(data.shape,np.inf)
         water = bad & opened & (dl <= profile['max_shore_distance_m']) & (dl <= dh+profile['shore_preference_m'])
         water &= ~exclusions_mask(data.shape,profile,x0=0,y0=0,resolution=resolution)
-        result = np.where(bad,np.where(opened,254,255),0).astype(np.uint8)
+        result = np.where(bad,np.where(opened,4,3),0).astype(np.uint8)
         result[water] = np.where(supplied[water],1,2)
         return result
     ch, cw = cell_shape

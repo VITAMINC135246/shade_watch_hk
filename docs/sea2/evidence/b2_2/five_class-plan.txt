@@ -1,0 +1,120 @@
+{
+  "schema": "shade-map-plan-1.0",
+  "run_id": "6fcb5b71ac96ff6c30950dd9861bc52eb805de48e67acbba8c5fd4830786bb17",
+  "name": "sea2_2_five_class",
+  "resolved_bounds": [
+    811250.0,
+    833000.0,
+    812750.0,
+    833600.0
+  ],
+  "grid": {
+    "width": 3000,
+    "height": 1200,
+    "transform": [
+      0.5,
+      0.0,
+      811250.0,
+      0.0,
+      -0.5,
+      833600.0
+    ],
+    "crs": "EPSG:2326",
+    "mode": "custom",
+    "selected_source": null,
+    "selected_sources": []
+  },
+  "pixel_count": 3600000,
+  "cells": [
+    {
+      "id": "e811250n833000",
+      "native_bounds": [
+        811250.0,
+        833000.0,
+        812000.0,
+        833600.0
+      ],
+      "bounds": [
+        811250.0,
+        833000.0,
+        812000.0,
+        833600.0
+      ],
+      "width": 1500,
+      "height": 1200,
+      "source_tile": "FILL_e811250n833000.tif"
+    },
+    {
+      "id": "e812000n833000",
+      "native_bounds": [
+        812000.0,
+        833000.0,
+        812750.0,
+        833600.0
+      ],
+      "bounds": [
+        812000.0,
+        833000.0,
+        812750.0,
+        833600.0
+      ],
+      "width": 1500,
+      "height": 1200,
+      "source_tile": "5NE14A(e812n833,e812n833).tif"
+    }
+  ],
+  "frames": [
+    {
+      "local_time": "2026-01-07T08:00:00+08:00",
+      "utc_time": "2026-01-07T00:00:00+00:00",
+      "date": "20260107",
+      "time": "0800"
+    },
+    {
+      "local_time": "2026-01-07T12:30:00+08:00",
+      "utc_time": "2026-01-07T04:30:00+00:00",
+      "date": "20260107",
+      "time": "1230"
+    },
+    {
+      "local_time": "2026-01-07T16:00:00+08:00",
+      "utc_time": "2026-01-07T08:00:00+00:00",
+      "date": "20260107",
+      "time": "1600"
+    }
+  ],
+  "dropped_times": [],
+  "sub_requests": 1,
+  "batches": 1,
+  "distinct_horizon_directions": 3,
+  "estimates": {
+    "label": "estimate",
+    "compute_wall_seconds": 34.160870209735705,
+    "estimator_models": [
+      {
+        "schema": "shade-watch-v2-estimator-1.0",
+        "sha256": "ad6939e4455d9e80495d27e382438d635f5cb9f0920601959e09bbbe2e721469",
+        "extrapolated": true
+      }
+    ],
+    "published_bytes": {
+      "label": "estimate",
+      "value": 65510656
+    },
+    "working_bytes": {
+      "label": "estimate",
+      "value": 254606592
+    },
+    "file_count": {
+      "label": "estimate",
+      "value": 43
+    }
+  },
+  "full_images": true,
+  "warnings": [],
+  "existing_run": {
+    "status": "new",
+    "published_frames": 0,
+    "total_frames": 3
+  }
+}

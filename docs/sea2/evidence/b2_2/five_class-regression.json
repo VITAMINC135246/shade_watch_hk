@@ -1,0 +1,110 @@
+{
+  "filled_blocker_examples": [],
+  "frames": [
+    {
+      "explained_by_filled_blocker": 0,
+      "explained_by_raised_threshold": 0,
+      "observed_land_pixels": 306318,
+      "raw_255_observed_to_shade": {
+        "1": {
+          "0": 0,
+          "1": 0,
+          "255": 0
+        },
+        "2": {
+          "0": 56915,
+          "1": 0,
+          "255": 0
+        },
+        "3": {
+          "0": 0,
+          "1": 0,
+          "255": 0
+        },
+        "4": {
+          "0": 0,
+          "1": 0,
+          "255": 0
+        }
+      },
+      "shaded_to_sunlit": 0,
+      "sunlit_to_non_sunlit": 0,
+      "time": "0800",
+      "unexplained_sunlit_loss": 0,
+      "utc_time": "2026-01-07T00:00:00+00:00"
+    },
+    {
+      "explained_by_filled_blocker": 0,
+      "explained_by_raised_threshold": 0,
+      "observed_land_pixels": 306318,
+      "raw_255_observed_to_shade": {
+        "1": {
+          "0": 0,
+          "1": 0,
+          "255": 0
+        },
+        "2": {
+          "0": 60313,
+          "1": 0,
+          "255": 0
+        },
+        "3": {
+          "0": 0,
+          "1": 0,
+          "255": 0
+        },
+        "4": {
+          "0": 0,
+          "1": 0,
+          "255": 0
+        }
+      },
+      "shaded_to_sunlit": 0,
+      "sunlit_to_non_sunlit": 0,
+      "time": "1230",
+      "unexplained_sunlit_loss": 0,
+      "utc_time": "2026-01-07T04:30:00+00:00"
+    },
+    {
+      "explained_by_filled_blocker": 0,
+      "explained_by_raised_threshold": 0,
+      "observed_land_pixels": 306318,
+      "raw_255_observed_to_shade": {
+        "1": {
+          "0": 0,
+          "1": 0,
+          "255": 0
+        },
+        "2": {
+          "0": 188746,
+          "1": 0,
+          "255": 0
+        },
+        "3": {
+          "0": 0,
+          "1": 0,
+          "255": 0
+        },
+        "4": {
+          "0": 0,
+          "1": 0,
+          "255": 0
+        }
+      },
+      "shaded_to_sunlit": 0,
+      "sunlit_to_non_sunlit": 0,
+      "time": "1600",
+      "unexplained_sunlit_loss": 0,
+      "utc_time": "2026-01-07T08:00:00+00:00"
+    }
+  ],
+  "passed": true,
+  "raw_identity": "6f979a31d9f675ea3a2cb226858670891b4edad6cfb425f22df24e08ff16fa74",
+  "sea_run_id": "6fcb5b71ac96ff6c30950dd9861bc52eb805de48e67acbba8c5fd4830786bb17",
+  "thresholds": {
+    "5NE14A(e812n833,e812n833).tif": {
+      "new_threshold_deg": 9.90018410445019,
+      "old_threshold_deg": 9.826144319793425
+    }
+  }
+}

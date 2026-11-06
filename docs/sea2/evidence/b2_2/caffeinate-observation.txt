@@ -1,0 +1,12 @@
+   pid 53518(caffeinate): [0x0004d68d0001a35f] 00:45:38 PreventUserIdleSystemSleep named: "caffeinate command-line tool"
+	Details: caffeinate asserting on behalf of '.venv/bin/python' (pid 53491)
+	Localized=THE CAFFEINATE TOOL IS PREVENTING SLEEP.
+   pid 53518(caffeinate): [0x0004d68d0005a360] 00:45:38 PreventUserIdleDisplaySleep named: "caffeinate command-line tool"
+	Details: caffeinate asserting on behalf of '.venv/bin/python' (pid 53491)
+	Localized=THE CAFFEINATE TOOL IS PREVENTING SLEEP.
+   pid 53518(caffeinate): [0x0004d68d0007a361] 00:45:38 PreventSystemSleep named: "caffeinate command-line tool"
+	Details: caffeinate asserting on behalf of '.venv/bin/python' (pid 53491)
+	Localized=THE CAFFEINATE TOOL IS PREVENTING SLEEP.
+   pid 53518(caffeinate): [0x0004d68d000fa362] 00:45:38 PreventDiskIdle named: "caffeinate command-line tool"
+	Details: caffeinate asserting on behalf of '.venv/bin/python' (pid 53491)
+	Localized=THE CAFFEINATE TOOL IS PREVENTING SLEEP.

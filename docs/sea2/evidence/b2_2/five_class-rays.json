@@ -1,0 +1,516 @@
+{
+  "equality_tolerance_deg": 0.0001,
+  "frames": [
+    {
+      "groups": {
+        "filled_3_or_4": {
+          "examples": [
+            {
+              "actual": [
+                0,
+                0
+              ],
+              "col": 86,
+              "equality_neighbourhood": false,
+              "horizon_deg": 0.0,
+              "near_tall_structure": false,
+              "reference": [
+                0,
+                0
+              ],
+              "row": 475,
+              "surface": 4,
+              "tile": "FILL_e811250n833000.tif"
+            },
+            {
+              "actual": [
+                0,
+                0
+              ],
+              "col": 470,
+              "equality_neighbourhood": false,
+              "horizon_deg": 0.0,
+              "near_tall_structure": false,
+              "reference": [
+                0,
+                0
+              ],
+              "row": 931,
+              "surface": 4,
+              "tile": "FILL_e811250n833000.tif"
+            },
+            {
+              "actual": [
+                0,
+                0
+              ],
+              "col": 473,
+              "equality_neighbourhood": false,
+              "horizon_deg": 0.0,
+              "near_tall_structure": false,
+              "reference": [
+                0,
+                0
+              ],
+              "row": 911,
+              "surface": 4,
+              "tile": "FILL_e811250n833000.tif"
+            },
+            {
+              "actual": [
+                0,
+                0
+              ],
+              "col": 100,
+              "equality_neighbourhood": false,
+              "horizon_deg": 0.0,
+              "near_tall_structure": false,
+              "reference": [
+                0,
+                0
+              ],
+              "row": 1168,
+              "surface": 4,
+              "tile": "FILL_e811250n833000.tif"
+            }
+          ],
+          "mismatch_examples": [],
+          "mismatches": 0,
+          "mismatches_outside_equality": 0,
+          "near_tall_structure": 0,
+          "sample_sha256": "624f65851e0c68e2eb0139d23e471bac8c36f6252efc5f63505e71b8d69cadcc",
+          "samples": 440,
+          "surface_counts": {
+            "3": 220,
+            "4": 220
+          }
+        },
+        "observed_within_50m": {
+          "examples": [
+            {
+              "actual": [
+                0,
+                0
+              ],
+              "col": 1176,
+              "equality_neighbourhood": false,
+              "horizon_deg": 5.475101947784424,
+              "near_tall_structure": false,
+              "reference": [
+                0,
+                0
+              ],
+              "row": 503,
+              "surface": 0,
+              "tile": "5NE14A(e812n833,e812n833).tif"
+            },
+            {
+              "actual": [
+                1,
+                0
+              ],
+              "col": 1382,
+              "equality_neighbourhood": false,
+              "horizon_deg": 11.748990058898926,
+              "near_tall_structure": false,
+              "reference": [
+                1,
+                0
+              ],
+              "row": 331,
+              "surface": 0,
+              "tile": "5NE14A(e812n833,e812n833).tif"
+            },
+            {
+              "actual": [
+                1,
+                0
+              ],
+              "col": 1111,
+              "equality_neighbourhood": false,
+              "horizon_deg": 17.77764320373535,
+              "near_tall_structure": false,
+              "reference": [
+                1,
+                0
+              ],
+              "row": 697,
+              "surface": 0,
+              "tile": "5NE14A(e812n833,e812n833).tif"
+            },
+            {
+              "actual": [
+                0,
+                0
+              ],
+              "col": 1204,
+              "equality_neighbourhood": false,
+              "horizon_deg": 8.18056869506836,
+              "near_tall_structure": false,
+              "reference": [
+                0,
+                0
+              ],
+              "row": 1157,
+              "surface": 0,
+              "tile": "5NE14A(e812n833,e812n833).tif"
+            }
+          ],
+          "mismatch_examples": [],
+          "mismatches": 0,
+          "mismatches_outside_equality": 0,
+          "near_tall_structure": 0,
+          "sample_sha256": "4da55f2d2c97d2b3768dee68ea1d1acba534098c95db2392d7c0c198030ba4e6",
+          "samples": 240,
+          "surface_counts": {
+            "0": 240
+          }
+        }
+      },
+      "time": "0800"
+    },
+    {
+      "groups": {
+        "filled_3_or_4": {
+          "examples": [
+            {
+              "actual": [
+                0,
+                0
+              ],
+              "col": 86,
+              "equality_neighbourhood": false,
+              "horizon_deg": 0.0,
+              "near_tall_structure": false,
+              "reference": [
+                0,
+                0
+              ],
+              "row": 475,
+              "surface": 4,
+              "tile": "FILL_e811250n833000.tif"
+            },
+            {
+              "actual": [
+                0,
+                0
+              ],
+              "col": 470,
+              "equality_neighbourhood": false,
+              "horizon_deg": 0.0,
+              "near_tall_structure": false,
+              "reference": [
+                0,
+                0
+              ],
+              "row": 931,
+              "surface": 4,
+              "tile": "FILL_e811250n833000.tif"
+            },
+            {
+              "actual": [
+                0,
+                0
+              ],
+              "col": 473,
+              "equality_neighbourhood": false,
+              "horizon_deg": 0.0,
+              "near_tall_structure": false,
+              "reference": [
+                0,
+                0
+              ],
+              "row": 911,
+              "surface": 4,
+              "tile": "FILL_e811250n833000.tif"
+            },
+            {
+              "actual": [
+                0,
+                0
+              ],
+              "col": 100,
+              "equality_neighbourhood": false,
+              "horizon_deg": 0.0,
+              "near_tall_structure": false,
+              "reference": [
+                0,
+                0
+              ],
+              "row": 1168,
+              "surface": 4,
+              "tile": "FILL_e811250n833000.tif"
+            }
+          ],
+          "mismatch_examples": [],
+          "mismatches": 0,
+          "mismatches_outside_equality": 0,
+          "near_tall_structure": 0,
+          "sample_sha256": "7fe5eff457f624ab01f0456b74d5ee3a061ad762d2753296d151e24c1a1d56bc",
+          "samples": 440,
+          "surface_counts": {
+            "3": 220,
+            "4": 220
+          }
+        },
+        "observed_within_50m": {
+          "examples": [
+            {
+              "actual": [
+                0,
+                0
+              ],
+              "col": 1176,
+              "equality_neighbourhood": false,
+              "horizon_deg": 4.777039051055908,
+              "near_tall_structure": false,
+              "reference": [
+                0,
+                0
+              ],
+              "row": 503,
+              "surface": 0,
+              "tile": "5NE14A(e812n833,e812n833).tif"
+            },
+            {
+              "actual": [
+                0,
+                0
+              ],
+              "col": 1382,
+              "equality_neighbourhood": false,
+              "horizon_deg": 6.809340476989746,
+              "near_tall_structure": false,
+              "reference": [
+                0,
+                0
+              ],
+              "row": 331,
+              "surface": 0,
+              "tile": "5NE14A(e812n833,e812n833).tif"
+            },
+            {
+              "actual": [
+                1,
+                0
+              ],
+              "col": 1111,
+              "equality_neighbourhood": false,
+              "horizon_deg": 51.13587951660156,
+              "near_tall_structure": false,
+              "reference": [
+                1,
+                0
+              ],
+              "row": 697,
+              "surface": 0,
+              "tile": "5NE14A(e812n833,e812n833).tif"
+            },
+            {
+              "actual": [
+                0,
+                0
+              ],
+              "col": 1204,
+              "equality_neighbourhood": false,
+              "horizon_deg": 12.16146183013916,
+              "near_tall_structure": false,
+              "reference": [
+                0,
+                0
+              ],
+              "row": 1157,
+              "surface": 0,
+              "tile": "5NE14A(e812n833,e812n833).tif"
+            }
+          ],
+          "mismatch_examples": [],
+          "mismatches": 0,
+          "mismatches_outside_equality": 0,
+          "near_tall_structure": 0,
+          "sample_sha256": "e700d89c873f6b1bb696dfbaf0a9060292ce8af76d7c6101b777c6f19af4b1b6",
+          "samples": 240,
+          "surface_counts": {
+            "0": 240
+          }
+        }
+      },
+      "time": "1230"
+    },
+    {
+      "groups": {
+        "filled_3_or_4": {
+          "examples": [
+            {
+              "actual": [
+                0,
+                0
+              ],
+              "col": 86,
+              "equality_neighbourhood": false,
+              "horizon_deg": 0.0,
+              "near_tall_structure": false,
+              "reference": [
+                0,
+                0
+              ],
+              "row": 475,
+              "surface": 4,
+              "tile": "FILL_e811250n833000.tif"
+            },
+            {
+              "actual": [
+                0,
+                0
+              ],
+              "col": 470,
+              "equality_neighbourhood": false,
+              "horizon_deg": 0.0,
+              "near_tall_structure": false,
+              "reference": [
+                0,
+                0
+              ],
+              "row": 931,
+              "surface": 4,
+              "tile": "FILL_e811250n833000.tif"
+            },
+            {
+              "actual": [
+                0,
+                0
+              ],
+              "col": 473,
+              "equality_neighbourhood": false,
+              "horizon_deg": 0.0,
+              "near_tall_structure": false,
+              "reference": [
+                0,
+                0
+              ],
+              "row": 911,
+              "surface": 4,
+              "tile": "FILL_e811250n833000.tif"
+            },
+            {
+              "actual": [
+                0,
+                0
+              ],
+              "col": 100,
+              "equality_neighbourhood": false,
+              "horizon_deg": 0.0,
+              "near_tall_structure": false,
+              "reference": [
+                0,
+                0
+              ],
+              "row": 1168,
+              "surface": 4,
+              "tile": "FILL_e811250n833000.tif"
+            }
+          ],
+          "mismatch_examples": [],
+          "mismatches": 0,
+          "mismatches_outside_equality": 0,
+          "near_tall_structure": 0,
+          "sample_sha256": "817a3c8d90f1ea20b23f0caf4c2e6b1ea05a91865475580f73194eed78d0c58a",
+          "samples": 440,
+          "surface_counts": {
+            "3": 220,
+            "4": 220
+          }
+        },
+        "observed_within_50m": {
+          "examples": [
+            {
+              "actual": [
+                0,
+                0
+              ],
+              "col": 1176,
+              "equality_neighbourhood": false,
+              "horizon_deg": 9.097043991088867,
+              "near_tall_structure": false,
+              "reference": [
+                0,
+                0
+              ],
+              "row": 503,
+              "surface": 0,
+              "tile": "5NE14A(e812n833,e812n833).tif"
+            },
+            {
+              "actual": [
+                0,
+                0
+              ],
+              "col": 1382,
+              "equality_neighbourhood": false,
+              "horizon_deg": 17.759836196899414,
+              "near_tall_structure": false,
+              "reference": [
+                0,
+                0
+              ],
+              "row": 331,
+              "surface": 0,
+              "tile": "5NE14A(e812n833,e812n833).tif"
+            },
+            {
+              "actual": [
+                1,
+                0
+              ],
+              "col": 1111,
+              "equality_neighbourhood": false,
+              "horizon_deg": 32.486839294433594,
+              "near_tall_structure": false,
+              "reference": [
+                1,
+                0
+              ],
+              "row": 697,
+              "surface": 0,
+              "tile": "5NE14A(e812n833,e812n833).tif"
+            },
+            {
+              "actual": [
+                0,
+                0
+              ],
+              "col": 1204,
+              "equality_neighbourhood": false,
+              "horizon_deg": 2.8943371772766113,
+              "near_tall_structure": false,
+              "reference": [
+                0,
+                0
+              ],
+              "row": 1157,
+              "surface": 0,
+              "tile": "5NE14A(e812n833,e812n833).tif"
+            }
+          ],
+          "mismatch_examples": [],
+          "mismatches": 0,
+          "mismatches_outside_equality": 0,
+          "near_tall_structure": 0,
+          "sample_sha256": "2f78e09c5624424813837c7498754af676277bbf862c3198ab0dae382e2529be",
+          "samples": 240,
+          "surface_counts": {
+            "0": 240
+          }
+        }
+      },
+      "time": "1600"
+    }
+  ],
+  "method": "Independent NumPy rays, canonical 0.25 m steps and ties to even, 1 km radial cutoff",
+  "near_tall_structure": "water within 8 m of observed DSM height >= 10 m",
+  "observational_accuracy": "NOT VERIFIED",
+  "passed": true,
+  "run_id": "6fcb5b71ac96ff6c30950dd9861bc52eb805de48e67acbba8c5fd4830786bb17",
+  "seed": 20261106,
+  "view_id": "8ee51b017411bd60e833e97fef10577546ba97f61e601df0fb21ecbfc0a4cbd1"
+}

@@ -1,0 +1,257 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "fill_impact.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "diagnostic",
+    "name",
+    "policy_run_id",
+    "sea_view_id",
+    "counterfactual_id",
+    "raw_catalogue_sha256",
+    "frames"
+  ],
+  "properties": {
+    "schema": {
+      "type": "string",
+      "const": "fill-impact-1.0"
+    },
+    "diagnostic": {
+      "type": "boolean",
+      "const": true
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "policy_run_id": {
+      "$ref": "#/$defs/hash"
+    },
+    "sea_view_id": {
+      "$ref": "#/$defs/hash"
+    },
+    "counterfactual_id": {
+      "$ref": "#/$defs/hash"
+    },
+    "raw_catalogue_sha256": {
+      "$ref": "#/$defs/hash"
+    },
+    "frames": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/frame"
+      }
+    }
+  },
+  "$defs": {
+    "hash": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "frame": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "date",
+        "time",
+        "utc_time",
+        "groups",
+        "fill_dependent_land",
+        "observed_transitions"
+      ],
+      "properties": {
+        "date": {
+          "type": "string",
+          "pattern": "^[0-9]{8}$"
+        },
+        "time": {
+          "type": "string",
+          "pattern": "^[0-9]{4}$"
+        },
+        "utc_time": {
+          "type": "string",
+          "minLength": 1
+        },
+        "groups": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "land",
+            "water",
+            "other"
+          ],
+          "properties": {
+            "land": {
+              "$ref": "#/$defs/group"
+            },
+            "water": {
+              "$ref": "#/$defs/group"
+            },
+            "other": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "pixels",
+                "counts"
+              ],
+              "properties": {
+                "pixels": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "counts": {
+                  "$ref": "#/$defs/counts"
+                }
+              }
+            }
+          }
+        },
+        "fill_dependent_land": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "observed_transitions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "raw_shade",
+              "raw_quality",
+              "filled_shade",
+              "filled_quality",
+              "pixels"
+            ],
+            "properties": {
+              "raw_shade": {
+                "type": "integer",
+                "enum": [
+                  0,
+                  1,
+                  255
+                ]
+              },
+              "raw_quality": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4
+              },
+              "filled_shade": {
+                "type": "integer",
+                "enum": [
+                  0,
+                  1,
+                  255
+                ]
+              },
+              "filled_quality": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4
+              },
+              "pixels": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          }
+        }
+      }
+    },
+    "group": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pixels",
+        "counts",
+        "fractions"
+      ],
+      "properties": {
+        "pixels": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "counts": {
+          "$ref": "#/$defs/counts"
+        },
+        "fractions": {
+          "$ref": "#/$defs/fractions"
+        }
+      }
+    },
+    "counts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "properties": {
+        "0": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "1": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "2": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "3": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "4": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "fractions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "0",
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "properties": {
+        "0": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "1": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "2": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "3": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "4": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        }
+      }
+    }
+  }
+}

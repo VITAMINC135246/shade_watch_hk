@@ -1,0 +1,91 @@
+{
+  "build_code_sha256": {
+    "tools/sea2/__init__.py": "3c47ddd3fc19d8a0c8019c3222657873d14cf64992393e0a89b3ac7425eaf3d5",
+    "tools/sea2/__main__.py": "09664e195a7c90a00a066362ccdcb1bbd6c5dbdb699b7087d51339cf225f21eb",
+    "tools/sea2/build.py": "a5a5cddbd85497fcd725aa9847e166f4f5925173ce3533ed86393d544803faf9",
+    "tools/sea2/catalogue.py": "9c18ae57eeb384bb08d2af9048fcc3066b7570ee24fb48b85dfac3cc93342d0a",
+    "tools/sea2/profile.py": "1c48e1b8fa60f05343e78944184305aad1c9180c93e8553d8b8105d6d93ba2ea",
+    "tools/sea2/provider.py": "9fa18de494464053084cbf37ddb8aa03c544b5fdf7d36d71b4b86112ee35079f",
+    "tools/sea2/rule.py": "751dde428a1d0a3b26ada11f0b49f77edfb2b816f4a5f28e278c050905466774",
+    "tools/sea2/view.py": "2c4e83ee87ac81f982f7aa8768535336d1e3f24c29983d4a1c264d38c0372875"
+  },
+  "catalogue_files": 6620,
+  "catalogue_identity": "1e634cca54ca16a5257c90fec4be017adf927bbb98fe07037289f0a9ed7ee6ba",
+  "domain_margin_m": 1000,
+  "exact_native_cell_inventory": true,
+  "grid": {
+    "cell_height": 1200,
+    "cell_width": 1500,
+    "crs": "EPSG:2326",
+    "domain_bounds": [
+      799750.0,
+      800200.0,
+      864750.0,
+      848400.0
+    ],
+    "dtype": "float32",
+    "nodata": -9999.0,
+    "origin": [
+      800750.0,
+      801200.0
+    ],
+    "resolution": 0.5
+  },
+  "literal_definition_exceptions": [
+    {
+      "declared_nodata": -3.4028234663852886e+38,
+      "name": "14NE15A(e828n809,e829n809).tif",
+      "offset_pixels": [
+        1.8766149878501892e-07,
+        2.0023435354232788e-08
+      ]
+    },
+    {
+      "declared_nodata": -3.4028234663852886e+38,
+      "name": "14NE15B(e829n809,e830n809).tif",
+      "offset_pixels": [
+        1.878943294286728e-07,
+        1.979060471057892e-08
+      ]
+    },
+    {
+      "declared_nodata": -3.4028234663852886e+38,
+      "name": "14NE15C(e828n808,e829n809).tif",
+      "offset_pixels": [
+        1.8510036170482635e-07,
+        1.955777406692505e-08
+      ]
+    },
+    {
+      "declared_nodata": -3.4028234663852886e+38,
+      "name": "14NE15D(e829n808,e830n809).tif",
+      "offset_pixels": [
+        1.878943294286728e-07,
+        1.909211277961731e-08
+      ]
+    }
+  ],
+  "manifest_sha256": "1a7a43bda6e82157cd30d5775d8c4e3d0194bc807efb16017c1d5c5cc7de1c52",
+  "partial_synthetic": 334,
+  "strict_bbox_overlaps": [],
+  "totals": {
+    "0": 4384416867,
+    "1": 1453438606,
+    "2": 1315054618,
+    "255": 0,
+    "3": 93109991,
+    "4": 5285979918
+  },
+  "verified_derived": 1656,
+  "verified_links": 1654,
+  "verified_synthetic": 3818,
+  "versions": {
+    "gdal": "3.12.4",
+    "numpy": "2.5.3",
+    "python": "3.12.5",
+    "rasterio": "1.5.1",
+    "scipy": "1.18.1"
+  },
+  "view_id": "8ee51b017411bd60e833e97fef10577546ba97f61e601df0fb21ecbfc0a4cbd1",
+  "view_pointer_inventory_count": 6620
+}

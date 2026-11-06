@@ -17,8 +17,9 @@ cache namespace, policy pair and content identity. A read-only identity preview
 rejects source changes before the adapter can create a new view for a conflicting
 run. It reads catalogue headers and uses engine snapping and the engine's halo
 constant; the adapter still owns all actual planning and view publication.
-The raw implementation reads
-finite DSM observations, with NoData left at 255. Publication uses the protocol
+Raw surface codes are 0 for observed DSM and 255 for missing DSM.
+With `sea-2.2`, codes 0 through 4 describe the surface within the view,
+and 255 describes the area outside the view. See [output codes](../OUTPUT_CODES.md). Publication uses the protocol
 without testing the provider name. Tests substitute a fixture provider.
 
 `planning.py` passes daylight dates directly to the adapter; explicit times are
