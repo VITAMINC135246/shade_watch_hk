@@ -17,5 +17,7 @@ This folder holds dated snapshots of the planning records kept in the Claude pro
 | `reviews/F1_PRECHECK_eb605f5.md` | Static pre-check of the first F1.0 candidate `eb605f5` (later NOT ACCEPTED) |
 | `reviews/F1_PRECHECK_35225fd.md` | Static pre-check of the repaired F1.0 candidate `35225fd` (later ACCEPTED) |
 | `reviews/B2_PRECHECK_5744e23.md` | Static pre-check of the B2.0 candidate `5744e23` (not sent to acceptance; superseded by B2.2) |
+| `reviews/B2_2_BASELINE_20261105.md` | Planner baseline of protected files before B2.2 development (2026-11-05) |
+| `reviews/B2_PRECHECK_7707c51.md` | Static pre-check of the B2.2 candidate `7707c51` (later ACCEPTED) |
 
-Snapshot taken 2026-11-05 (HKT).
+Snapshot taken 2026-11-09 (HKT).

@@ -289,7 +289,7 @@
   - `docs/planning/`：`DECISIONS.zh-TW.md`、`README.md`，以及 `reviews/` 下的審查記錄。
   - `claude/drafts/F1/` 同步為凍結版。
 - **執行者**：Claude（使用者 2026-10-31 17:53 HKT 同意）。
-- **狀態**：已執行。快照第一次隨 `05c66ab` commit（2026-11-04）；2026-11-05 為 B2.2 更新（加入 D-015、D-016 和 `B2_PRECHECK_5744e23.md`），待 commit。
+- **狀態**：已執行。快照第一次隨 `05c66ab` commit（2026-11-04）；2026-11-05 為 B2.2 更新（加入 D-015、D-016 和 `B2_PRECHECK_5744e23.md`），隨 `5b1da9b` commit；2026-11-09 為 B2.2 驗收更新（加入 `B2_PRECHECK_7707c51.md` 和 `B2_2_BASELINE_20261105.md`），隨 B2.2 收尾 commit。
 
 ## D-014｜2026-10-31｜B2.0：只靠 DSM 的海面（SW-SEA-POLICY-2.0）
 
@@ -365,7 +365,7 @@
 - **背景與選項**：遮蔭在模型內是「已證明」的（沒看到的資料只會令地平線角變高），日照可能被沒看到的地形推翻，所以要求較嚴。偏差只在統計：只算有效像素的比例偏向遮蔭。乙（遮蔭也要求資料完整）丟掉已證明的遮蔭；丙（不完整也判日照）違反紅線。
 - **在哪實現**：英文文件 `docs/OUTPUT_CODES.md`（Claude 寫）；`SW-B2.2` 要求 `docs/sea2/POLICY.md`、`GUIDE.md` 和 F GUIDE 的海面一節引用它、不得矛盾。
 - **影響**：不改科學身份。
-- **狀態**：已定。`docs/OUTPUT_CODES.md` 已寫入 repo（2026-11-05，使用者授權寫入；待 commit），SHA-256 `f103c913d6f7f72486023ba8a27dd8c7301969537e252d0fe9369701ce443f93`。
+- **狀態**：已定。`docs/OUTPUT_CODES.md` 已寫入並 commit（`5b1da9b`，2026-11-05），SHA-256 `f103c913d6f7f72486023ba8a27dd8c7301969537e252d0fe9369701ce443f93`。
 
 ## D-016｜2026-11-05｜所有無資料一律填 0 m：B2.2（SW-SEA-POLICY-2.2）
 
@@ -392,8 +392,25 @@
 - **影響**：新的科學身份（政策 `SW-SEA-POLICY-2.2`、新 view_id、新快取命名空間）；`5744e23` 的 view 和運行不是 2.2 的結果；raw 結果和歷史輸出不受影響。水塘和空洞填 0 m 成為深坑（坑內偏向遮蔭、附近陸地可能偏向日照），寫入限制條款。
 - **在哪實現**：`tools/sea2/`、`config/schema/`、`tests/test_sea2_*.py`、`docs/sea2/`，以及 F 的上述小改動。機器：Mac。
 - **執行者**：Claude 寫合約和提示；Codex 開發（起點＝包含 `5744e23` 和合約的規劃 commit）；另一對話獨立驗收。
-- **狀態**：已定；文件已寫入 repo（2026-11-05，待使用者授權 commit）：
+- **狀態**：已定；合約已凍結。使用者 2026-11-05 17:06 HKT 授權 Claude commit：`5b1da9be4246acac53b0488c3587df7884941108`（父節點 `5744e23`，只含以下 8 個檔；作者沿用 Zhengtao0719）。**B2.2 開發起點＝`5b1da9b`。** repo 內 `docs/planning/` 快照是 commit 前寫的，仍寫「待 commit」，以本正本為準。檔案：
   - `docs/prompts/B2/CONTRACT_B2_2.md` SHA-256 `12d79865dda53ce1539560f4d79c047d3c80fd3fd974e4b9f643bf409580f2a9`；
   - `docs/prompts/B2/DEVELOPMENT_PROMPT_B2_2.md` SHA-256 `65552c3319a2ad277fec926a56f35973b9d8a34d44951b89d88da20f753d2f33`；
   - `docs/prompts/B2/INDEPENDENT_ACCEPTANCE_PROMPT_B2_2.md` SHA-256 `4235112259256f5af132f649e9a423edadd28d87bcc3166e1bb576f33acf0d00`；
   - `docs/OUTPUT_CODES.md`（見 D-015）；`docs/prompts/README.md` 加一行；`docs/planning/` 快照更新。
+- **開發候選（2026-11-06 17:08 HKT）**：`7707c511a44233d05914604c4741aefb86701d7a`，父節點 `5b1da9b`，單一本機 commit，未推送。Codex 2026-11-05 17:12 HKT 開工，比 Claude 拍基線早約一分半鐘，當時受保護資料夾還沒有變動；基線記錄：`claude/reviews/B2_2_BASELINE_20261105.md`。
+  - 開發者自評：15 PASS；B2-22 NOT VERIFIED（重建留給驗收對話）。`pytest tests` 275 passed。71 幀的 quality 1／2 全部為零，剩下的 255 全是 quality 3。
+  - 開發者報告的數字（未經獨立驗收）：view `8ee51b01…cbd1`；建置 34.14／60、real-DSM 41.54／60、驗證 15.11／30 分鐘；記憶體峰值 2.36 GiB；新產物峰值 5.17 GiB。
+  - Claude 靜態預檢：`claude/reviews/B2_PRECHECK_7707c51.md`。範圍、F 的改動、各記錄檔都乾淨。寫入範圍對 Claude 基線核對：0 改動、0 缺失，新增 23,506 項全在允許位置。coastline 和規劃檔的 hash 不變。結論：可以交獨立驗收。
+  - 要點：建置完成後，Codex 才把 `provider.py` 加入 manifest 的程式碼 hash 清單，並改寫 view ID（`2109e9d9…` → `8ee51b01…`），柵格沿用。commit 裡的 `build` 從未完整產生過 `8ee51b01…`，所以驗收對話的重建是 B2-22 的決定性證據。
+  - 交接訊息：見預檢記錄的附錄。
+- **獨立驗收（2026-11-09，報告 `docs/sea2/INDEPENDENT_ACCEPTANCE_B2_2_7707c511a442.md`，SHA-256 `abfff0e76e4ed6b1e07a07bb155ea2285a6e0315b7bb9bff13c24703cb97ee8b`，未 commit）**：**ACCEPTED**，B2-16–B2-31 共 16／16 PASS，沒有發現缺陷。
+  - 重建：用 commit 裡的正常 `build` 指令完整重建，得到同一個 view `8ee51b01…cbd1`，14,257 個檔逐一相同（manifest SHA-256 `1a7a43bd…1c52`）。預檢標出的「建置後改寫 manifest」疑點因此解除。
+  - 獨立實作的標籤規則：三個 halo 共 124,800,000 像素全部一致；28 個距離剛好相等的像素也一致，全部列出。
+  - 驗收對話自選的案例：日期 2026-06-21，時刻 05:50、10:00、13:00、16:30；自選五類別小區為 `e809000n831200` 加 `e809000n831800`。83 個填補幀的 quality 1／2 全為零；陸地回歸的兩道關卡全部通過；1,440 條獨立直射線零不符。
+  - B2-17：驗收對話判定通過，依據是真實運行全在封鎖下完成、合成資料的雙權限比對，以及程式碼稽核；沒有另做可讀狀態下的真實建置。
+  - `14NE20B`：26,564 個類別 3 像素屬同一個被包圍的連通塊。即使把 `14NE15*` 宣告的 NoData 也當作缺資料，它仍然被包圍，所以不是字面處理造成的；它離那 4 張瓦片最遠 39.75 m。只作報告。
+  - iB5000：驗收對話用獨立方法重算長洲和中環的數字，完全一致；維港比例 100%。這是和地圖的吻合度，不是觀測精度。
+  - 預算：重建 40.93／60 分鐘（連同全域拓撲稽核 54.15／60）；real-DSM 33.62／45 分鐘；交叉檢查 0.55／20 分鐘；記憶體 5.32／12 GiB；新產物 4.43／30 GiB。
+  - 分開陳述：工程驗收 ACCEPTED；數值一致性 PASS；iB5000 吻合度只作報告；觀測精度 NOT VERIFIED。結果不代表降溫效果，也不代表全港計算已完成。
+  - Claude 核對（2026-11-09 14:40 HKT）：已讀完整份報告。驗收對話只寫入 `outputs/sea2_2_review_7707c511a442_20261109/`（17,535 個檔、2,168 個連結，4.7 GB）、那份報告和兩個 git worktree 登記。原有的 177 個單位沒有改動；coastline 和規劃檔的 hash 不變；已追蹤檔案仍等於 `7707c51`。
+- **狀態：已驗收。** `7707c511a44233d05914604c4741aefb86701d7a` 16／16 PASS。`sea-2.2` 可以作為 F 的來源使用。例外區、全港運行、quality 3／4 改判、延長搜尋距離、V3 和 push 仍各需自己的決定。使用者 2026-11-09 15:27 HKT 確認收尾 commit：驗收報告加 `docs/planning/` 快照（本快照隨該 commit 加入；SHA 見正本或 `git log`）。
