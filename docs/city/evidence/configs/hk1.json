@@ -1,0 +1,22 @@
+{
+  "schema": "shade-map-region-1.0",
+  "name": "g1_dev_hk1",
+  "crs": "hk1980",
+  "lower_left": [
+    820250,
+    807200
+  ],
+  "upper_right": [
+    821750,
+    808400
+  ],
+  "time": {
+    "mode": "daylight",
+    "dates": [
+      "2026-01-07"
+    ],
+    "interval_minutes": 10
+  },
+  "dsm_source": "raw",
+  "full_image": "auto"
+}

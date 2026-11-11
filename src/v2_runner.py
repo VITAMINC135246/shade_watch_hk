@@ -93,12 +93,14 @@ def _current_inputs(definition):
     for name, expected in definition["engine_code"].items():
         if digest_file(Path(__file__).with_name(name)) != expected:
             raise ValueError("V2 execution code changed; replan for a new immutable batch")
-    catalogues = {directory: v1.index_sources(directory) for directory in definition["catalogues"]}
+    catalogues = {}
     signatures = {}
     for value in definition["requests"].values():
         plan = plan_from_dict(value)
         if v1._plan_key(plan.request, plan.grid, plan.tiles) != plan.key:
             raise ValueError("V1 scientific/execution identity changed; replan")
+        if plan.source_directory not in catalogues:
+            catalogues[plan.source_directory] = v1.index_sources(plan.source_directory, plan.grid.crs)
         for tile in plan.tiles:
             key, _, deps = spatial_identity(catalogues[plan.source_directory], tile.source)
             if key != tile.spatial_key:

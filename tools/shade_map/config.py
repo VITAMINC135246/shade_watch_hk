@@ -7,6 +7,7 @@ import json
 import math
 from pathlib import Path
 import re
+from zoneinfo import ZoneInfo
 
 from src import v1
 from tools import region_request as adapter
@@ -16,9 +17,9 @@ HKT = timezone(timedelta(hours=8))
 ROOT_MARKER = '.shade_map_root.json'
 
 
-def hkt_time(utc):
-    """F clock labels are fixed UTC+8, including historical calendar dates."""
-    return datetime.fromisoformat(utc).astimezone(HKT)
+def city_clock(city):
+    # F clock labels for Hong Kong have always used fixed UTC+8.
+    return HKT if city['city_id'] == 'hong_kong' else ZoneInfo(city['timezone'])
 
 
 class InvalidInput(ValueError):
@@ -133,13 +134,17 @@ def _defaults(value, schema_name):
     return value
 
 
-def machine_config(value='config/machine.local.json'):
+def machine_config(value='config/machine.local.json', *, require_dsm=True):
     value = _defaults(load_json(value) if isinstance(value, (str, Path)) else value, 'machine')
     for key in ('dsm_dir', 'output_root'):
         value[key] = str((v1.ROOT / value[key]).resolve())
-    if not Path(value['dsm_dir']).is_dir():
-        raise InvalidInput('dsm_dir: catalogue directory does not exist')
-    validate_output_root(value)
+    if require_dsm:
+        if not Path(value['dsm_dir']).is_dir():
+            raise InvalidInput('dsm_dir: catalogue directory does not exist')
+        validate_output_root(value)
+    for name in value.get('cities', {}):
+        if not re.fullmatch(r'[a-z0-9][a-z0-9_-]{0,63}', name):
+            raise InvalidInput(f'cities: invalid city identifier {name!r}')
     namespace = value['cache_namespace']
     try:
         v1._owned_path(v1.ROOT/'data/processed/shade_v1'/namespace,
@@ -178,7 +183,7 @@ def validate_output_root(machine, source_directories=()):
         ancestor = ancestor.parent
 
 
-def corners(value):
+def corners(value, *, project=True):
     ll, ur = value['lower_left'], value['upper_right']
     if value['crs'] == 'wgs84':
         for key in ('lower_left', 'upper_right'):
@@ -193,6 +198,8 @@ def corners(value):
     for index, label in enumerate(labels):
         if not ll[index] < ur[index]:
             raise InvalidInput(f'lower_left.{label} must be less than upper_right.{label}')
+    if not project:
+        return
     try:
         a, b = adapter.project_corner(ll, value['crs']), adapter.project_corner(ur, value['crs'])
     except ValueError as exc:
@@ -220,9 +227,13 @@ def dates(value):
     return value
 
 
-def region_config(value):
+def region_config(value, *, project_legacy=True):
     value = _defaults(load_json(value) if isinstance(value, (str, Path)) else value, 'region')
-    corners(value)  # Before any catalogue planning or file creation.
+    legacy = value['schema'] == 'shade-map-region-1.0'
+    if legacy and ('city' in value or value['crs'] == 'projected'):
+        raise InvalidInput('city and projected corners require shade-map-region-1.1')
+    value.setdefault('dsm_source', 'raw' if legacy else 'sea-2.2')
+    corners(value, project=legacy and project_legacy)
     value['lower_left'] = [float(v) for v in value['lower_left']]
     value['upper_right'] = [float(v) for v in value['upper_right']]
     time = value['time']
@@ -231,22 +242,39 @@ def region_config(value):
         time.setdefault('interval_minutes', 10)
         if time['mode'] == 'window' and time['end'] < time['start']:
             raise InvalidInput('time.end: must not be earlier than time.start')
-    else:
-        normalized = []
-        for index, instant in enumerate(time['instants']):
-            _day(instant[:10], f'time.instants[{index}]')
-            try:
-                explicit=instant if instant.endswith('+08:00') else instant+'+08:00'
-                normalized.append(hkt_time(v1.normalize_instant(explicit).utc).isoformat(timespec='minutes'))
-            except ValueError as exc:
-                raise InvalidInput(f'time.instants[{index}]: {exc}') from exc
-        if len(set(normalized)) != len(normalized):
-            raise InvalidInput('time.instants: duplicate physical instant')
-        time['instants'] = normalized
+    elif legacy:
+        if any(len(text) != 16 and not text.endswith('+08:00') for text in time['instants']):
+            raise InvalidInput('time.instants: shade-map-region-1.0 accepts only the +08:00 offset')
+        time['instants'] = normalize_instants(time['instants'], HKT)
     return value
 
 
-def expanded_time(time):
+def _local_instant(text, clock):
+    value = datetime.fromisoformat(text)
+    if clock is HKT:
+        local = value.astimezone(clock) if value.tzinfo else value.replace(tzinfo=clock)
+    else:
+        local = datetime.fromisoformat(v1.normalize_instant(value, clock.key).local)
+    if value.tzinfo is not None and value.utcoffset() != local.utcoffset():
+        raise ValueError('explicit UTC offset disagrees with the city time zone')
+    return local
+
+
+def normalize_instants(instants, clock):
+    normalized = []
+    for index, text in enumerate(instants):
+        label = f'time.instants[{index}]'
+        _day(text[:10], label)
+        try:
+            normalized.append(_local_instant(text, clock).isoformat(timespec='minutes'))
+        except ValueError as exc:
+            raise InvalidInput(f'{label}: {exc}') from exc
+    if len({text[:16] for text in normalized}) != len(normalized):
+        raise InvalidInput('time.instants: duplicate physical instant or local frame folder')
+    return normalized
+
+
+def expanded_time(time, *, clock=HKT, daylight_reference=v1.DAYLIGHT_REFERENCE):
     """Daylight stays dates; the engine alone expands its daylight samples."""
     if time['mode'] == 'daylight':
         return dict(dates=time['dates'], interval_minutes=time['interval_minutes']), []
@@ -255,21 +283,24 @@ def expanded_time(time):
     else:
         requested = []
         for day in time['dates']:
-            start = datetime.fromisoformat(f'{day}T{time["start"]}+08:00')
-            end = datetime.fromisoformat(f'{day}T{time["end"]}+08:00')
+            start = datetime.fromisoformat(f'{day}T{time["start"]}')
+            end = datetime.fromisoformat(f'{day}T{time["end"]}')
             while start <= end:
                 requested.append(start.isoformat())
                 start += timedelta(minutes=time['interval_minutes'])
     bounds, kept, dropped = {}, [], []
     for text in requested:
-        instant = v1.normalize_instant(text)
-        local = hkt_time(instant.utc)
+        try:
+            local = _local_instant(text, clock)
+        except ValueError as exc:
+            raise InvalidInput(f'time: {text}: {exc}') from exc
+        utc = local.astimezone(v1.UTC)
         day = local.date()
         if day not in bounds:
-            bounds[day] = v1.daylight_bounds(day, *v1.DAYLIGHT_REFERENCE)
+            bounds[day] = v1.daylight_bounds(day, *daylight_reference, v1.HKT if clock is HKT else clock)
         rise, setting = bounds[day]
-        if rise <= local <= setting:
+        if rise.astimezone(v1.UTC) <= utc <= setting.astimezone(v1.UTC):
             kept.append(local.isoformat())
         else:
-            dropped.append(dict(local_time=local.isoformat(), utc_time=instant.utc, reason='outside daylight'))
+            dropped.append(dict(local_time=local.isoformat(), utc_time=utc.isoformat(), reason='outside daylight'))
     return dict(instants=kept, interval_minutes=time.get('interval_minutes', 10)), dropped

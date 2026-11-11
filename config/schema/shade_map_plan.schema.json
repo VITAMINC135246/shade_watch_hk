@@ -43,7 +43,7 @@
         },
         "crs": {
           "type": "string",
-          "const": "EPSG:2326"
+          "pattern": "^EPSG:[1-9][0-9]*$"
         },
         "mode": {
           "type": "string"
@@ -83,7 +83,7 @@
         "properties": {
           "id": {
             "type": "string",
-            "pattern": "^e-?\\d+n-?\\d+$"
+            "pattern": "^e-?\\d+(?:\\.5)?n-?\\d+(?:\\.5)?$"
           },
           "native_bounds": {
             "type": "array",
@@ -333,6 +333,92 @@
         "total_frames"
       ],
       "additionalProperties": false
+    },
+    "city": {
+      "type": "object",
+      "properties": {
+        "city_id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$"
+        },
+        "profile_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "crs": {
+          "type": "string",
+          "pattern": "^EPSG:[1-9][0-9]*$"
+        },
+        "timezone": {
+          "type": "string"
+        },
+        "daylight_reference": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "number"
+          }
+        },
+        "vertical_datum": {
+          "type": "string"
+        },
+        "ingest_id": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "city_id",
+        "profile_sha256",
+        "crs",
+        "timezone",
+        "daylight_reference",
+        "vertical_datum"
+      ],
+      "additionalProperties": false
+    },
+    "missing_direction_jobs": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "fill_context": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "no_dsm_cells_within_1km": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "no_dsm_cells_within_1km"
+      ]
+    },
+    "projection": {
+      "type": "object",
+      "properties": {
+        "operation": {
+          "type": "string"
+        },
+        "accuracy_m": {
+          "type": "number",
+          "minimum": -1
+        },
+        "pyproj_version": {
+          "type": "string"
+        },
+        "proj_version": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "operation",
+        "accuracy_m",
+        "pyproj_version",
+        "proj_version"
+      ],
+      "additionalProperties": false
     }
   },
   "required": [
@@ -351,7 +437,10 @@
     "estimates",
     "full_images",
     "warnings",
-    "existing_run"
+    "existing_run",
+    "city",
+    "missing_direction_jobs",
+    "fill_context"
   ],
   "additionalProperties": false
 }

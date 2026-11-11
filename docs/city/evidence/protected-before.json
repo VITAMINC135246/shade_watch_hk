@@ -1,0 +1,75 @@
+{
+  "branch": "feature",
+  "data": {
+    "data/processed": {
+      "entries": 33246,
+      "sha256": "e7ff3940c11eb320e197eedc2229c5e107f0664c1c608be2b1732129f5981e39"
+    },
+    "data/processed/dsm_views/sea_fill_v2_2/8ee51b017411bd60e833e97fef10577546ba97f61e601df0fb21ecbfc0a4cbd1": {
+      "entries": 14260,
+      "sha256": "634693e7632e61b6362aec1776f776aaef76154aa30864880f327cd43d4d77f9"
+    },
+    "data/processed/shade_v1": {
+      "entries": 5584,
+      "sha256": "790759e159d790d6be2840b594017d55bb650d6928c07b4d6375889d3c30f5a3"
+    },
+    "data/raw": {
+      "entries": 7188,
+      "sha256": "b17fe94842993f049c2bef7d8e459d65d23e3e046fd7287f0d6777cad82f15cb"
+    },
+    "outputs": {
+      "entries": 114275,
+      "sha256": "d266255d12ce9aa80336307633e94da8dd30f29b250a267ab765c45a44ae076a"
+    }
+  },
+  "head": "35314377986fcb9551db288a62b74d3b743121ef",
+  "origin_feature": "38303b164d107b81c02f50f14da61951f09e9b49",
+  "parent": "839e200b3bc8b53012bd3fc67627717b1ac44a4c",
+  "pinned": {
+    ".gitignore": "1087165e8ec43d7fa6b791e2a40ba3fb2f9a8c0f24e45eadbb6bed9f2a8db0c3",
+    "config/machine.local.json": "e5b37d177132d4fb494e5cd9f83ce8c2369f9e04a16e9e19959196b6d5233238",
+    "data/processed/dsm_views/sea_fill_v2_2/8ee51b017411bd60e833e97fef10577546ba97f61e601df0fb21ecbfc0a4cbd1/manifest.json": "1a7a43bda6e82157cd30d5775d8c4e3d0194bc807efb16017c1d5c5cc7de1c52",
+    "data/processed/dsm_views/sea_fill_v2_2/current-hk_cedd_2020.json": "57bae245ece93063cbff1d97dfab227cbd8bb7a0199f0f0b4d85515164377a5e",
+    "data/raw/dsm/rotterdam_ahn4_dsm05/R_37FZ1.tif": "7a679cf84482cf4397e41992e20a42351a9e266a59e9edf2225b1452e13b3431",
+    "data/raw/dsm/rotterdam_ahn4_dsm05/R_37HN1.tif": "15d2cf2027567128dab7727c2f96ef04d300983752f75be9dff6ad0090269ff5",
+    "docs/prompts/G1/ACCEPTANCE_CONTRACT.md": "1273541776ccfc715fad6eb6ea961b1a3f592b9214e5702db7dcb005783d80ef",
+    "src/horizon.py": "afb46c37742767e7480220d82527873ed389bb184623fef78b4a3a1d19e8144e",
+    "src/shade_watch.py": "cfb5d1185af5a39521ecf4edaeddd375b76e1abc877675c63a428de21e546ea7",
+    "src/spatial.py": "5ecc0495dd102596ab41903b5e174c142888ffc14664b81009164fbf176d3aa7",
+    "src/v1_cache.py": "96a576d12ada9186319e4c8c5f1e626b06ab0aac5f7345a9c6083b9f1b6fe479",
+    "tools/sea2/__init__.py": "3c47ddd3fc19d8a0c8019c3222657873d14cf64992393e0a89b3ac7425eaf3d5",
+    "tools/sea2/__main__.py": "09664e195a7c90a00a066362ccdcb1bbd6c5dbdb699b7087d51339cf225f21eb",
+    "tools/sea2/build.py": "a5a5cddbd85497fcd725aa9847e166f4f5925173ce3533ed86393d544803faf9",
+    "tools/sea2/catalogue.py": "9c18ae57eeb384bb08d2af9048fcc3066b7570ee24fb48b85dfac3cc93342d0a",
+    "tools/sea2/profile.py": "1c48e1b8fa60f05343e78944184305aad1c9180c93e8553d8b8105d6d93ba2ea",
+    "tools/sea2/provider.py": "9fa18de494464053084cbf37ddb8aa03c544b5fdf7d36d71b4b86112ee35079f",
+    "tools/sea2/rule.py": "751dde428a1d0a3b26ada11f0b49f77edfb2b816f4a5f28e278c050905466774",
+    "tools/sea2/view.py": "2c4e83ee87ac81f982f7aa8768535336d1e3f24c29983d4a1c264d38c0372875"
+  },
+  "status": [
+    " M .gitignore",
+    "?? config/regions/measure_central.json",
+    "?? config/regions/measure_cheung_chau.json",
+    "?? config/regions/measure_lo_wu.json",
+    "?? config/regions/measure_mong_kok.json",
+    "?? config/regions/measure_tai_mo_shan.json",
+    "?? data/raw/coastline/",
+    "?? docs/GUIDE.md",
+    "?? docs/GUIDE.zh-TW.md",
+    "?? docs/PROJECT_STATUS_2026-10-29.zh-TW.md",
+    "?? docs/city/",
+    "?? docs/prompts/region/",
+    "?? docs/prompts/runner/",
+    "?? docs/prompts/sea/",
+    "?? docs/ui/",
+    "?? docs/v3/WSL2_SMOKE_TEST.md",
+    "?? presentations/",
+    "?? tools/wsl2_smoke/",
+    "?? web/console/",
+    "?? web/shade_map/"
+  ],
+  "user": {
+    "entries": 259,
+    "sha256": "f0c30e64024a01e10d0a01a2eb28a5c49999bfdc23fb3a9e296727ea8564ec92"
+  }
+}

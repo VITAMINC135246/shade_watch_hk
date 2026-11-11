@@ -1,0 +1,178 @@
+{
+  "batches": 1,
+  "cells": [
+    {
+      "bounds": [
+        92246.5,
+        437228.5,
+        92500.0,
+        437500.0
+      ],
+      "height": 543,
+      "id": "e91875n436875",
+      "native_bounds": [
+        91875.0,
+        436875.0,
+        92500.0,
+        437500.0
+      ],
+      "source_tile": "e91875n436875.tif",
+      "width": 507
+    },
+    {
+      "bounds": [
+        92500.0,
+        437228.5,
+        92595.0,
+        437500.0
+      ],
+      "height": 543,
+      "id": "e92500n436875",
+      "native_bounds": [
+        92500.0,
+        436875.0,
+        93125.0,
+        437500.0
+      ],
+      "source_tile": "e92500n436875.tif",
+      "width": 190
+    },
+    {
+      "bounds": [
+        92246.5,
+        437500.0,
+        92500.0,
+        437558.5
+      ],
+      "height": 117,
+      "id": "e91875n437500",
+      "native_bounds": [
+        91875.0,
+        437500.0,
+        92500.0,
+        438125.0
+      ],
+      "source_tile": "e91875n437500.tif",
+      "width": 507
+    },
+    {
+      "bounds": [
+        92500.0,
+        437500.0,
+        92595.0,
+        437558.5
+      ],
+      "height": 117,
+      "id": "e92500n437500",
+      "native_bounds": [
+        92500.0,
+        437500.0,
+        93125.0,
+        438125.0
+      ],
+      "source_tile": "e92500n437500.tif",
+      "width": 190
+    }
+  ],
+  "city": {
+    "city_id": "rotterdam",
+    "crs": "EPSG:28992",
+    "daylight_reference": [
+      51.92,
+      4.48
+    ],
+    "ingest_id": "7272bb1ae35aa4f04e78b50d0f72548caae1bee8b7d36bbb1760565aab4bd634",
+    "profile_sha256": "49f6030ef97e691d0ae37112a0b8d98904e814140096b13fd6563eabdbcc14f6",
+    "timezone": "Europe/Amsterdam",
+    "vertical_datum": "NAP"
+  },
+  "distinct_horizon_directions": 3,
+  "dropped_times": [],
+  "estimates": {
+    "compute_wall_seconds": 1.0809791523403005,
+    "estimator_models": [
+      {
+        "extrapolated": true,
+        "schema": "shade-watch-v2-estimator-1.0",
+        "sha256": "ad6939e4455d9e80495d27e382438d635f5cb9f0920601959e09bbbe2e721469"
+      }
+    ],
+    "file_count": {
+      "label": "estimate",
+      "value": 61
+    },
+    "label": "estimate",
+    "published_bytes": {
+      "label": "estimate",
+      "value": 9292072
+    },
+    "working_bytes": {
+      "label": "estimate",
+      "value": 94832248
+    }
+  },
+  "existing_run": {
+    "published_frames": 0,
+    "status": "new",
+    "total_frames": 3
+  },
+  "fill_context": {
+    "no_dsm_cells_within_1km": 0
+  },
+  "frames": [
+    {
+      "date": "20260621",
+      "local_time": "2026-06-21T09:00:00+02:00",
+      "time": "0900",
+      "utc_time": "2026-06-21T07:00:00+00:00"
+    },
+    {
+      "date": "20260621",
+      "local_time": "2026-06-21T13:40:00+02:00",
+      "time": "1340",
+      "utc_time": "2026-06-21T11:40:00+00:00"
+    },
+    {
+      "date": "20260621",
+      "local_time": "2026-06-21T18:00:00+02:00",
+      "time": "1800",
+      "utc_time": "2026-06-21T16:00:00+00:00"
+    }
+  ],
+  "full_images": true,
+  "grid": {
+    "crs": "EPSG:28992",
+    "height": 660,
+    "mode": "custom",
+    "selected_source": null,
+    "selected_sources": [],
+    "transform": [
+      0.5,
+      0.0,
+      92246.5,
+      0.0,
+      -0.5,
+      437558.5
+    ],
+    "width": 697
+  },
+  "missing_direction_jobs": 0,
+  "name": "g1_dev_nl2",
+  "pixel_count": 460020,
+  "projection": {
+    "accuracy_m": 1.0,
+    "operation": "Inverse of Amersfoort to WGS 84 (4) + RD New (with axis order normalized for visualization)",
+    "proj_version": "9.8.1",
+    "pyproj_version": "3.8.0"
+  },
+  "resolved_bounds": [
+    92246.5,
+    437228.5,
+    92595.0,
+    437558.5
+  ],
+  "run_id": "896b360fb53ad6d3517edd8d168dba0bd45703626a90d07b7e8218084156a769",
+  "schema": "shade-map-plan-1.0",
+  "sub_requests": 1,
+  "warnings": []
+}

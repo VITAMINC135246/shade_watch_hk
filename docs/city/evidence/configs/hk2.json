@@ -1,0 +1,23 @@
+{
+  "crs": "hk1980",
+  "dsm_source": "sea-2.2",
+  "full_image": "auto",
+  "lower_left": [
+    829250.0,
+    842600.0
+  ],
+  "name": "g1_dev_hk2",
+  "schema": "shade-map-region-1.0",
+  "time": {
+    "dates": [
+      "2026-06-21",
+      "2026-12-22"
+    ],
+    "interval_minutes": 10,
+    "mode": "daylight"
+  },
+  "upper_right": [
+    830750.0,
+    843800.0
+  ]
+}

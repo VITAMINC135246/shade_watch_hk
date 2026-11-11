@@ -1,0 +1,42 @@
+{
+  "schema": "shade-map-city-1.0",
+  "city_id": "rotterdam",
+  "title": "Rotterdam centre (AHN DSM 0.5 m, sheets 37FZ1 and 37HN1)",
+  "crs": "EPSG:28992",
+  "resolution_m": 0.5,
+  "vertical_datum": "NAP",
+  "timezone": "Europe/Amsterdam",
+  "daylight_reference": [
+    51.92,
+    4.48
+  ],
+  "extent": [
+    90000,
+    431250,
+    95000,
+    443750
+  ],
+  "sea_profile": "nl_rotterdam_dsm05",
+  "dsm_source_line": "AHN DSM 0.5 m, sheets R_37FZ1 and R_37HN1; source: PDOK (Actueel Hoogtebestand Nederland); licence CC0",
+  "ingest": {
+    "policy": "SW-INGEST-POLICY-1.0",
+    "cell_pixels": [
+      1250,
+      1250
+    ],
+    "sheets": [
+      {
+        "name": "R_37FZ1.tif",
+        "bytes": 457826580,
+        "sha256": "7a679cf84482cf4397e41992e20a42351a9e266a59e9edf2225b1452e13b3431",
+        "declared_nodata": 3.4028234663852886e+38
+      },
+      {
+        "name": "R_37HN1.tif",
+        "bytes": 422003345,
+        "sha256": "15d2cf2027567128dab7727c2f96ef04d300983752f75be9dff6ad0090269ff5",
+        "declared_nodata": 3.4028234663852886e+38
+      }
+    ]
+  }
+}

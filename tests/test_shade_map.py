@@ -344,8 +344,19 @@ def test_repair_complete_run_discards_orphan_partial(fixture_map, tmp_path, cont
         assert result['verified_only'] and before == listing(final)
 
 
-def test_full_publication_api_cli_resume_prune(fixture_map,tmp_path,capsys):
+def test_full_publication_api_cli_resume_prune(fixture_map,tmp_path,capsys,monkeypatch):
+    from tools.city import profiles
+    from tools.sea2.build import build
+
     _,machine,region=fixture_map
+    city = dict(profiles.load_city('hong_kong'), extent=[800000,820000,800012,820008])
+    profile_dir = tmp_path/'city_profiles'
+    profile_dir.mkdir()
+    (profile_dir/'hong_kong.json').write_text(json.dumps(city))
+    monkeypatch.setattr(profiles, 'CITY_DIR', profile_dir)
+    monkeypatch.setattr('tools.sea2.catalogue.DOMAIN_MARGIN_M', 2)
+    view = build(machine)
+    region.update(schema='shade-map-region-1.1', dsm_source='sea-2.2')
     mp=tmp_path/'machine.json'; mp.write_text(json.dumps(machine))
     assert prepare(region,machine).document['existing_run']['status']=='new'
     result=shade_map(region['lower_left'],region['upper_right'],region['time'],name=region['name'],crs='hk1980',machine=mp)
@@ -353,7 +364,13 @@ def test_full_publication_api_cli_resume_prune(fixture_map,tmp_path,capsys):
     folder=tmp_path/'outputs/published/fixture'
     manifest=verify_run(folder)
     assert prepare(region,machine).document['existing_run']['status']=='complete'
-    assert len(manifest['cells'])==4 and sum(c['source_tile'] is None for c in manifest['cells'])==1
+    assert manifest['region_config']['schema'] == 'shade-map-region-1.1'
+    assert manifest['region_config']['dsm_source'] == 'sea-2.2'
+    assert manifest['source_identity']['view_id'] == view['view_id']
+    synthetic = [c for c in manifest['cells'] if c['source_tile'].startswith('FILL_')]
+    assert len(manifest['cells']) == 4 and len(synthetic) == 1
+    with rasterio.open(folder/'20260107/1230/surface'/(synthetic[0]['id']+'.tif')) as ds:
+        assert np.all(np.isin(ds.read(1), [2, 3, 4]))
     for layer in ('shade','quality','surface'):
         with rasterio.open(folder/'20260107/1230'/f'{layer}.vrt') as ds:
             expected=ds.read(1)

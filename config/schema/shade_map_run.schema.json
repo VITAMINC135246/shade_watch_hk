@@ -111,7 +111,7 @@
         },
         "crs": {
           "type": "string",
-          "const": "EPSG:2326"
+          "pattern": "^EPSG:[1-9][0-9]*$"
         },
         "mode": {
           "type": "string"
@@ -147,7 +147,7 @@
         "properties": {
           "id": {
             "type": "string",
-            "pattern": "^e-?\\d+n-?\\d+$"
+            "pattern": "^e-?\\d+(?:\\.5)?n-?\\d+(?:\\.5)?$"
           },
           "native_bounds": {
             "type": "array",
@@ -298,6 +298,50 @@
     "integrity_sha256": {
       "type": "string",
       "pattern": "^[a-f0-9]{64}$"
+    },
+    "city": {
+      "type": "object",
+      "properties": {
+        "city_id": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$"
+        },
+        "profile_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "crs": {
+          "type": "string",
+          "pattern": "^EPSG:[1-9][0-9]*$"
+        },
+        "timezone": {
+          "type": "string"
+        },
+        "daylight_reference": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": {
+            "type": "number"
+          }
+        },
+        "vertical_datum": {
+          "type": "string"
+        },
+        "ingest_id": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "city_id",
+        "profile_sha256",
+        "crs",
+        "timezone",
+        "daylight_reference",
+        "vertical_datum"
+      ],
+      "additionalProperties": false
     }
   },
   "required": [

@@ -1,0 +1,20 @@
+{
+  "schema": "shade-map-region-1.1",
+  "city": "rotterdam",
+  "name": "g1_dev_nl5_edge",
+  "crs": "projected",
+  "lower_left": [
+    90000,
+    436875
+  ],
+  "upper_right": [
+    90625,
+    437500
+  ],
+  "time": {
+    "mode": "instants",
+    "instants": [
+      "2026-06-21T13:30"
+    ]
+  }
+}

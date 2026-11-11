@@ -66,14 +66,17 @@ def position(instant: datetime, latitude: float, longitude: float) -> Sun:
     return Sun(azimuth, geometric, geometric + correction)
 
 
-def daylight_bounds(day: date, latitude: float, longitude: float) -> tuple[datetime, datetime]:
+def daylight_bounds(day: date, latitude: float, longitude: float, zone=HKT) -> tuple[datetime, datetime]:
     """Sunrise/sunset when geometric solar-centre elevation crosses -0.833°.
 
     NOAA's -0.833° includes typical refraction and the solar disk radius.
     The model does not account for the local DSM horizon or weather.
     """
-    start = datetime(day.year, day.month, day.day, tzinfo=HKT)
-    times = [start + timedelta(minutes=2 * i) for i in range(721)]
+    midnight = datetime(day.year, day.month, day.day, tzinfo=zone)
+    start = midnight.astimezone(timezone.utc)
+    end = (midnight + timedelta(days=1)).astimezone(timezone.utc)
+    step = timedelta(minutes=2)
+    times = [start + step * i for i in range((end - start) // step)] + [end]
     values = [position(t, latitude, longitude).geometric_elevation_deg + 0.833 for t in times]
     crossings = []
     for i in range(len(values) - 1):
@@ -89,17 +92,24 @@ def daylight_bounds(day: date, latitude: float, longitude: float) -> tuple[datet
             crossings.append(lo + (hi - lo) / 2)
     if len(crossings) != 2:
         raise ValueError(f"Expected one sunrise and sunset on {day}; got {len(crossings)}")
-    return crossings[0], crossings[1]
+    return crossings[0].astimezone(zone), crossings[1].astimezone(zone)
 
 
 def daylight_samples(sunrise: datetime, sunset: datetime, minutes: int = 10) -> list[datetime]:
     """Clock-aligned samples inside actual daylight; no nighttime frames."""
-    midnight = sunrise.replace(hour=0, minute=0, second=0, microsecond=0)
+    zone = sunrise.tzinfo
+    midnight = sunrise.replace(hour=0, minute=0, second=0, microsecond=0, tzinfo=None)
+    end = sunset.astimezone(zone).replace(hour=0, minute=0, second=0, microsecond=0, tzinfo=None)
+    end += timedelta(days=1)
+    first, last = sunrise.astimezone(timezone.utc), sunset.astimezone(timezone.utc)
     step = timedelta(minutes=minutes)
-    index = math.ceil((sunrise - midnight) / step)
-    output = []
-    t = midnight + index * step
-    while t <= sunset:
-        output.append(t)
-        t += step
-    return output
+    samples = {}
+    wall = midnight
+    while wall < end:
+        for fold in (0, 1):
+            utc = wall.replace(tzinfo=zone, fold=fold).astimezone(timezone.utc)
+            local = utc.astimezone(zone)
+            if first <= utc <= last and local.replace(tzinfo=None) == wall:
+                samples[utc] = local
+        wall += step
+    return [samples[t] for t in sorted(samples)]

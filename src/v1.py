@@ -30,6 +30,7 @@ from .v1_cache import (POLICY, atomic_json, ensure_directions, entry_paths, excl
                        source_identity, spatial_identity, tile_grid, valid_entry)
 
 UTC = datetime_timezone.utc
+DEFAULT_CRS = "EPSG:2326"
 DAYLIGHT_REFERENCE = (22.3, 114.2)
 MAX_FRAMES = 512
 MAX_OUTPUT_PIXELS = 20_000_000
@@ -62,6 +63,7 @@ class ShadeRequest:
     mp4: bool
     workers: int
     memory_budget_mb: int
+    dsm_source_line: str = SOURCE_LINE
 
 
 @dataclass(frozen=True)
@@ -102,7 +104,7 @@ class ShadeResult:
     performance: dict
 
 
-def normalize_instant(value, local_timezone="Asia/Hong_Kong"):
+def normalize_instant(value, local_timezone=HKT.key):
     requested = value.isoformat() if isinstance(value, datetime) else str(value)
     if not isinstance(value, datetime) and "T" not in requested and " " not in requested:
         raise ValueError("An instant requires a date and time; use dates for daylight sequences")
@@ -116,7 +118,8 @@ def normalize_instant(value, local_timezone="Asia/Hong_Kong"):
         instant = valid[0]
     if instant.utcoffset() is None:
         raise ValueError("Timestamp has no usable UTC offset")
-    return Instant(requested, instant.astimezone(UTC).isoformat(), instant.astimezone(HKT).isoformat())
+    utc = instant.astimezone(UTC)
+    return Instant(requested, utc.isoformat(), utc.astimezone(zone).isoformat())
 
 
 def direction_for(azimuth, method):
@@ -124,11 +127,11 @@ def direction_for(azimuth, method):
     return float(azimuth % 360) if step is None else (math.floor((azimuth % 360 + step / 2) / step) * step) % 360
 
 
-def index_sources(directory):
+def index_sources(directory, crs=DEFAULT_CRS):
     records = include_auxiliary_source_identities(inventory(Path(directory).glob("*.tif")))
     for record in records:
-        if record["crs"] != "EPSG:2326" or record["transform"][0] != .5:
-            raise ValueError("V1 requires native 0.5 m EPSG:2326 DSM")
+        if record["crs"] != crs or record["transform"][0] != .5:
+            raise ValueError(f"V1 requires native 0.5 m {crs} DSM")
         if record["width"] * record["height"] > MAX_TILE_PIXELS:
             raise ValueError("Native tile exceeds V1 bounded memory profile")
         for address in (record["transform"][2] / .5, -record["transform"][5] / .5):
@@ -167,14 +170,15 @@ def _plan_key(request, grid, tiles):
 
 
 def plan_shade(*, instants=None, dates=None, interval_minutes=10,
-               local_timezone="Asia/Hong_Kong", tile=None, tiles=None,
+               local_timezone=HKT.key, tile=None, tiles=None,
                latitude=None, longitude=None, mode="native", bounds=None,
                width_m=None, height_m=None, crop=None, direction_method="nearest5",
                jpg=False, mp4=False, workers=1, memory_budget_mb=8192,
-               output_dir=None, cache_dir=None, dsm_dir=None, _records=None):
+               output_dir=None, cache_dir=None, dsm_dir=None, crs=DEFAULT_CRS,
+               daylight_reference=DAYLIGHT_REFERENCE, dsm_source_line=SOURCE_LINE, _records=None):
     """Inspect inputs/cache without horizon calls or scientific/media writes.
 
-    Locations are WGS84; custom bounds are EPSG:2326. Output/cache paths are
+    Locations are WGS84; custom bounds use the DSM CRS. Output/cache paths are
     isolated project directories. See docs/v1/GUIDE.md for copyable examples.
     """
     started = time.perf_counter()
@@ -190,6 +194,8 @@ def plan_shade(*, instants=None, dates=None, interval_minutes=10,
         raise ValueError(f"Unknown direction method: {direction_method}")
     if type(jpg) is not bool or type(mp4) is not bool:
         raise ValueError("Media switches must be booleans")
+    if (jpg or mp4) and (crs, local_timezone, dsm_source_line) != (DEFAULT_CRS, HKT.key, SOURCE_LINE):
+        raise ValueError("JPG and MP4 output require the Hong Kong DSM and time zone")
     if mode not in ("native", "custom"):
         raise ValueError("mode must be native or custom")
     if (latitude is None) != (longitude is None):
@@ -212,7 +218,7 @@ def plan_shade(*, instants=None, dates=None, interval_minutes=10,
     source_directory = Path(dsm_dir or RAW).resolve()
     # V2 supplies one request-local, freshly indexed catalogue for batch planning.
     # V1 execution still independently rehashes the actual input dependencies.
-    records = index_sources(source_directory) if _records is None else _records
+    records = index_sources(source_directory, crs) if _records is None else _records
     if mode == "native":
         if names is not None:
             grid = native_mosaic_grid(records, names)
@@ -237,7 +243,7 @@ def plan_shade(*, instants=None, dates=None, interval_minutes=10,
                 raise ValueError("Custom mode needs bounds or explicit centre plus width/height")
             if not all(math.isfinite(v) and v > 0 for v in (width_m, height_m)):
                 raise ValueError("Custom dimensions must be finite and positive")
-            x, y = Transformer.from_crs("EPSG:4326", "EPSG:2326", always_xy=True).transform(selector[1], selector[0])
+            x, y = Transformer.from_crs("EPSG:4326", crs, always_xy=True).transform(selector[1], selector[0])
             requested_bounds = (x - width_m / 2, y - height_m / 2, x + width_m / 2, y + height_m / 2)
         grid = _custom_grid(records, requested_bounds)
     if crop is not None:
@@ -260,8 +266,6 @@ def plan_shade(*, instants=None, dates=None, interval_minutes=10,
             instants = [instants]
         times = tuple(normalize_instant(t, local_timezone) for t in instants)
     else:
-        if local_timezone != "Asia/Hong_Kong":
-            raise ValueError("Daylight dates are Hong Kong calendar days; use explicit instants for other zones")
         if isinstance(dates, (str, date)):
             dates = [dates]
         days = [date.fromisoformat(str(d)) for d in dates]
@@ -272,11 +276,11 @@ def plan_shade(*, instants=None, dates=None, interval_minutes=10,
         date_strings = tuple(d.isoformat() for d in days)
         samples = []
         for day in days:
-            sunrise, sunset = daylight_bounds(day, *DAYLIGHT_REFERENCE)
+            sunrise, sunset = daylight_bounds(day, *daylight_reference, ZoneInfo(local_timezone))
             samples.extend(daylight_samples(sunrise, sunset, interval_minutes))
             if len(samples) > MAX_FRAMES:
                 raise ValueError("Daylight sequence exceeds 512-frame V1 limit")
-        times = tuple(normalize_instant(t) for t in samples)
+        times = tuple(normalize_instant(t, local_timezone) for t in samples)
     if not times or len(times) > MAX_FRAMES:
         raise ValueError("Request needs 1..512 instants")
     if len({t.utc for t in times}) != len(times):
@@ -285,7 +289,8 @@ def plan_shade(*, instants=None, dates=None, interval_minutes=10,
     cache = _owned_path(cache_dir, "data/processed/shade_v1", "data/processed/shade_v1/default")
     request = ShadeRequest(times, date_strings, mode, selector, tuple(requested_bounds),
                            tuple(crop) if crop is not None else None, interval_minutes,
-                           local_timezone, direction_method, jpg, mp4, workers, memory_budget_mb)
+                           local_timezone, direction_method, jpg, mp4, workers, memory_budget_mb,
+                           dsm_source_line)
     tile_plans = []
     for owner in owners:
         key, identity, dependencies = spatial_identity(records, owner)
@@ -327,7 +332,7 @@ def plan_shade(*, instants=None, dates=None, interval_minutes=10,
                     limitations=["Footprints do not establish valid DSM or complete sunward support",
                                  "1 km cutoff does not bound unseen farther terrain",
                                  "Solar model and tile references are approximations"],
-                    daylight_reference=dict(latitude=DAYLIGHT_REFERENCE[0], longitude=DAYLIGHT_REFERENCE[1]))
+                    daylight_reference=dict(latitude=daylight_reference[0], longitude=daylight_reference[1]))
     return ShadePlan("shade-watch-v1-plan-1.0", request, grid, tile_plans, str(source_directory),
                      str(out), str(cache), coverage, resources, time.perf_counter() - started,
                      _plan_key(request, grid, tile_plans))
@@ -418,8 +423,10 @@ def _compose_frame(plan, index, thresholds):
                                       reference=tile.reference, threshold_deg=threshold,
                                       **solar))
         tags = dict(policy=POLICY, requested_time=instant.requested, local_time=instant.local, utc_time=instant.utc,
-                    encoding="1=shaded,0=sunlit,255=invalid/uncertain", source_and_owner=SOURCE_LINE,
+                    encoding="1=shaded,0=sunlit,255=invalid/uncertain", source_and_owner=plan.request.dsm_source_line,
                     solar_parameters="per canonical native tile; see frame metadata in result_index.json")
+        if (grid.crs, plan.request.local_timezone, plan.request.dsm_source_line) != (DEFAULT_CRS, HKT.key, SOURCE_LINE):
+            tags["timezone"] = plan.request.local_timezone
         dst.update_tags(**tags)
         qdst.update_tags(**tags, quality_reasons=json.dumps(QUALITY, sort_keys=True))
     for temp, path in zip(temps, (shade_path, quality_path)):
@@ -547,7 +554,7 @@ def run_shade(plan, *, on_direction=None):
     if shutil.disk_usage(ROOT).free < plan.resources["estimated_new_bytes"]:
         raise ValueError("Insufficient free disk for the bounded request estimate")
     with memory_monitor() as memory, exclusive_lock(out / ".writer.lock"):
-        current = index_sources(plan.source_directory)
+        current = index_sources(plan.source_directory, plan.grid.crs)
         for tile in plan.tiles:
             key, _, _ = spatial_identity(current, tile.source)
             if key != tile.spatial_key:
@@ -610,9 +617,13 @@ def main(argv=None):
     parser.add_argument("action", choices=("plan", "query"))
     times = parser.add_mutually_exclusive_group(required=True)
     times.add_argument("--at", action="append", help="ISO timestamp; repeat for an instant list")
-    times.add_argument("--date", action="append", help="Hong Kong date; repeat for multi-date daylight")
+    times.add_argument("--date", action="append", help="Local date; repeat for multi-date daylight")
     parser.add_argument("--interval-minutes", type=int, default=10)
-    parser.add_argument("--timezone", default="Asia/Hong_Kong")
+    parser.add_argument("--timezone", default=HKT.key)
+    parser.add_argument("--crs", default=DEFAULT_CRS)
+    parser.add_argument("--daylight-reference", type=float, nargs=2, default=DAYLIGHT_REFERENCE,
+                        metavar=("LATITUDE", "LONGITUDE"))
+    parser.add_argument("--dsm-source-line", default=SOURCE_LINE)
     parser.add_argument("--tile", action="append", help="Exact native DSM filename; repeat for rectangular selection")
     parser.add_argument("--center-lat", type=float)
     parser.add_argument("--center-lon", type=float)
@@ -631,7 +642,8 @@ def main(argv=None):
     args = parser.parse_args(argv)
     try:
         plan = plan_shade(instants=args.at, dates=args.date, interval_minutes=args.interval_minutes,
-                          local_timezone=args.timezone, tiles=args.tile,
+                          local_timezone=args.timezone, crs=args.crs, daylight_reference=args.daylight_reference,
+                          dsm_source_line=args.dsm_source_line, tiles=args.tile,
                           latitude=args.center_lat, longitude=args.center_lon, mode=args.mode, bounds=args.bounds,
                           width_m=args.width_m, height_m=args.height_m, crop=tuple(args.crop) if args.crop else None,
                           direction_method=args.direction_method, jpg=args.jpg, mp4=args.mp4,

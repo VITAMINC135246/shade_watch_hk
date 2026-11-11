@@ -1,0 +1,203 @@
+{
+  "unknown_city": {
+    "region": {
+      "schema": "shade-map-region-1.1",
+      "city": "absent_city",
+      "name": "g1_dev_nl1",
+      "crs": "projected",
+      "lower_left": [
+        91875,
+        436875
+      ],
+      "upper_right": [
+        93125,
+        438125
+      ],
+      "time": {
+        "mode": "daylight",
+        "dates": [
+          "2026-06-21",
+          "2026-12-22"
+        ],
+        "interval_minutes": 30
+      }
+    },
+    "exit_code": 2,
+    "stderr": "invalid input: city: unknown city 'absent_city'"
+  },
+  "outside": {
+    "region": {
+      "schema": "shade-map-region-1.1",
+      "city": "rotterdam",
+      "name": "g1_dev_nl1",
+      "crs": "projected",
+      "lower_left": [
+        89000,
+        431000
+      ],
+      "upper_right": [
+        93125,
+        438125
+      ],
+      "time": {
+        "mode": "daylight",
+        "dates": [
+          "2026-06-21",
+          "2026-12-22"
+        ],
+        "interval_minutes": 30
+      }
+    },
+    "exit_code": 2,
+    "stderr": "invalid input: corners: rectangle is outside rotterdam extent"
+  },
+  "no_city": {
+    "region": {
+      "schema": "shade-map-region-1.1",
+      "name": "g1_dev_nl1",
+      "crs": "projected",
+      "lower_left": [
+        91875,
+        436875
+      ],
+      "upper_right": [
+        93125,
+        438125
+      ],
+      "time": {
+        "mode": "daylight",
+        "dates": [
+          "2026-06-21",
+          "2026-12-22"
+        ],
+        "interval_minutes": 30
+      }
+    },
+    "exit_code": 2,
+    "stderr": "invalid input: city: projected corners require an explicit city"
+  },
+  "wrong_crs": {
+    "region": {
+      "schema": "shade-map-region-1.1",
+      "city": "rotterdam",
+      "name": "g1_dev_nl1",
+      "crs": "hk1980",
+      "lower_left": [
+        91875,
+        436875
+      ],
+      "upper_right": [
+        93125,
+        438125
+      ],
+      "time": {
+        "mode": "daylight",
+        "dates": [
+          "2026-06-21",
+          "2026-12-22"
+        ],
+        "interval_minutes": 30
+      }
+    },
+    "exit_code": 2,
+    "stderr": "invalid input: crs: hk1980 requires city hong_kong"
+  },
+  "wrong_order": {
+    "region": {
+      "schema": "shade-map-region-1.1",
+      "city": "rotterdam",
+      "name": "g1_dev_nl1",
+      "crs": "projected",
+      "lower_left": [
+        93125,
+        438125
+      ],
+      "upper_right": [
+        91875,
+        436875
+      ],
+      "time": {
+        "mode": "daylight",
+        "dates": [
+          "2026-06-21",
+          "2026-12-22"
+        ],
+        "interval_minutes": 30
+      }
+    },
+    "exit_code": 2,
+    "stderr": "invalid input: lower_left.easting must be less than upper_right.easting"
+  },
+  "offset": {
+    "region": {
+      "schema": "shade-map-region-1.1",
+      "city": "rotterdam",
+      "name": "g1_dev_nl1",
+      "crs": "projected",
+      "lower_left": [
+        91875,
+        436875
+      ],
+      "upper_right": [
+        93125,
+        438125
+      ],
+      "time": {
+        "mode": "instants",
+        "instants": [
+          "2026-06-21T13:30+01:00"
+        ]
+      }
+    },
+    "exit_code": 2,
+    "stderr": "invalid input: time.instants[0]: explicit UTC offset disagrees with the city time zone"
+  },
+  "spring_gap": {
+    "region": {
+      "schema": "shade-map-region-1.1",
+      "city": "rotterdam",
+      "name": "g1_dev_nl1",
+      "crs": "projected",
+      "lower_left": [
+        91875,
+        436875
+      ],
+      "upper_right": [
+        93125,
+        438125
+      ],
+      "time": {
+        "mode": "instants",
+        "instants": [
+          "2026-03-29T02:30"
+        ]
+      }
+    },
+    "exit_code": 2,
+    "stderr": "invalid input: time.instants[0]: Ambiguous or nonexistent local timestamp; supply an explicit UTC offset"
+  },
+  "fall_fold": {
+    "region": {
+      "schema": "shade-map-region-1.1",
+      "city": "rotterdam",
+      "name": "g1_dev_nl1",
+      "crs": "projected",
+      "lower_left": [
+        91875,
+        436875
+      ],
+      "upper_right": [
+        93125,
+        438125
+      ],
+      "time": {
+        "mode": "instants",
+        "instants": [
+          "2026-10-25T02:30"
+        ]
+      }
+    },
+    "exit_code": 2,
+    "stderr": "invalid input: time.instants[0]: Ambiguous or nonexistent local timestamp; supply an explicit UTC offset"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "schema": "shade-map-result-1.0",
+  "run_id": "8173fbe29cefdf2b29214d1fcd47b0ac17becba3d9e0a278e1666587a6198495",
+  "name": "g1_dev_hk1",
+  "status": "complete",
+  "published_frames": 65,
+  "reused_frames": 0,
+  "computed_batches": 1,
+  "verified_only": false
+}

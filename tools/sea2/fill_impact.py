@@ -18,7 +18,8 @@ import rasterio
 from src import v1, v2
 from tools import region_request as adapter
 from tools.shade_map.common import CODE_ROOT, ENGINE_FILES, atomic_json, digest, identity, read_json
-from tools.shade_map.config import ROOT_MARKER, InvalidInput, machine_config, region_config, validate_schema
+from tools.shade_map.config import ROOT_MARKER, InvalidInput, validate_schema
+from tools.shade_map.planning import resolve_request
 from tools.shade_map.publication import raster_profile
 from tools.shade_map.runner import verify_run
 from tools.shade_map.sources import RawSource
@@ -80,7 +81,11 @@ def select_frames(frames, times):
 
 
 def require_run(machine, region, times=None):
-    machine, region = machine_config(machine), region_config(region)
+    return _require_run(resolve_request(region, machine), times)
+
+
+def _require_run(request, times):
+    machine, region = request.machine, request.region
     if region['dsm_source'] != SOURCE_NAME:
         raise InvalidInput(f'fill-impact requires a complete matching {SOURCE_NAME} F run')
     root = Path(machine['output_root'])
@@ -94,6 +99,7 @@ def require_run(machine, region, times=None):
         raise InvalidInput(f'fill-impact requires a complete matching {SOURCE_NAME} F run; run F first') from exc
     source = SeaSource()
     if (manifest.get('status') != 'complete' or manifest.get('region_config') != region
+            or manifest.get('city') != request.city
             or manifest.get('policies') != source.policies()
             or manifest.get('engine_hashes') != {p:digest(CODE_ROOT/p) for p in ENGINE_FILES}):
         raise InvalidInput('fill-impact: F run is incomplete or does not match the region/current sea view')
@@ -102,7 +108,7 @@ def require_run(machine, region, times=None):
         verify_run(folder, manifest)
     except (OSError, ValueError, KeyError, TypeError, RuntimeError) as exc:
         raise InvalidInput(f'fill-impact: F run failed publication verification: {exc}') from exc
-    if manifest.get('source_identity') != source.preview_identity(region, machine):
+    if manifest.get('source_identity') != source.preview_identity(request.projected, machine):
         raise InvalidInput('fill-impact: F run does not match the current sea view')
     view = source.catalogue(machine).parent
     return machine, region, folder, manifest, frames, read_manifest(view)
@@ -128,21 +134,22 @@ def diagnostic_lock(root, name):
         yield
 
 
-def plan_raw(machine, region, frames, view, work, token):
+def plan_raw(request, frames, view, work, token):
     if not frames:
         return dict(source_identity=dict(provider='raw', sources=[]), plans=[], sidecar=None)
     cache = v1.ROOT/'data/processed/shade_v1'/('sea2_2_fill_impact_'+token[:12])
     if cache.resolve() != cache:
         raise InvalidInput('fill-impact: cache namespace cannot use symlinks')
+    machine, region = request.machine, request.projected
     adapted = adapter.plan_region(
-        region['lower_left'], region['upper_right'], crs=region['crs'],
+        region['lower_left'], region['upper_right'], **request.adapter_options(),
         instants=[f['local_time'] for f in frames], dsm_dir=machine['dsm_dir'],
         auto_source_view=True, output_dir=work/'engine', cache_dir=cache,
         memory_budget_mb=min(machine['memory_budget_mb'], 8192))
     sidecar = adapted['sidecar']
     if [t for group in sidecar['time_groups'] for t in group['utc_times']] != [f['utc_time'] for f in frames]:
         raise RuntimeError('Raw counterfactual frames differ from the selected F frames')
-    sources = RawSource().source_identity(v1.index_sources(sidecar['source_directory']))
+    sources = RawSource().source_identity(v1.index_sources(sidecar['source_directory'], request.city['crs']))
     expected = view['catalogue']['files']
     if any(expected.get(s['name']) != s['sha256'] or
            any(expected.get(a['name']) != a['sha256'] for a in s['auxiliary'])
@@ -186,11 +193,11 @@ def run_raw(work, definition):
     return mosaics, events
 
 
-def write_dependency_vrt(path, bounds, cells):
-    profile = raster_profile(bounds)
+def write_dependency_vrt(path, bounds, cells, crs):
+    profile = raster_profile(bounds, crs)
     affine = profile['transform']
     root = ET.Element('VRTDataset', rasterXSize=str(profile['width']), rasterYSize=str(profile['height']))
-    ET.SubElement(root, 'SRS').text = rasterio.crs.CRS.from_epsg(2326).to_wkt()
+    ET.SubElement(root, 'SRS').text = rasterio.crs.CRS.from_string(crs).to_wkt()
     ET.SubElement(root, 'GeoTransform').text = ','.join(map(str, affine.to_gdal()))
     band = ET.SubElement(root, 'VRTRasterBand', dataType='Byte', band='1')
     ET.SubElement(band, 'NoDataValue').text = '255'
@@ -220,6 +227,7 @@ def frame_report(folder, destination, run, frame, raw_sidecar, mosaics):
     target = owned_directory(destination/frame['date']/frame['time']/'dependency')
     totals = {name: np.zeros(5, np.int64) for name in GROUPS}
     transitions = Counter()
+    crs = run['grid']['crs']
     for cell in run['cells']:
         rasters = []
         for layer in ('surface', 'shade', 'quality'):
@@ -229,12 +237,12 @@ def frame_report(folder, destination, run, frame, raw_sidecar, mosaics):
             raw_sidecar, utc_time=frame['utc_time'], bounds=cell['bounds'], logical_mosaics=mosaics)
         dependency, groups, changes = frame_metrics(*rasters, raw, quality)
         path = target/(cell['id']+'.tif')
-        atomic_write(path, lambda temporary: write_raster(temporary, dependency, transform, 'EPSG:2326', 255))
+        atomic_write(path, lambda temporary: write_raster(temporary, dependency, transform, crs, 255))
         for name, counts in groups.items():
             totals[name] += counts
         transitions.update(changes)
     atomic_write(target.parent/'dependency.vrt',
-                 lambda path: write_dependency_vrt(path, run['resolved_bounds'], run['cells']))
+                 lambda path: write_dependency_vrt(path, run['resolved_bounds'], run['cells'], crs))
     groups = {}
     for name, counts in totals.items():
         size = int(counts.sum())
@@ -276,7 +284,8 @@ def publication_listing(folder):
 
 
 def fill_impact(machine, region, *, times=None):
-    machine, region, folder, run, frames, view = require_run(machine, region, times)
+    request = resolve_request(region, machine)
+    machine, region, folder, run, frames, view = _require_run(request, times)
     name = region['name']
     before = publication_listing(folder)
     owner = dict(schema='sea2-fill-impact-work-1.0', name=name, policy_run_id=run['run_id'],
@@ -303,7 +312,7 @@ def fill_impact(machine, region, *, times=None):
         if planned.exists():
             definition = read_json(planned)
         else:
-            definition = plan_raw(machine, region, frames, view, work, token)
+            definition = plan_raw(request, frames, view, work, token)
             atomic_json(planned, definition)
         mosaics, events = run_raw(work, definition)
         owned_directory(destination)

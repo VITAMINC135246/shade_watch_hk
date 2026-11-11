@@ -1,0 +1,29 @@
+{
+  "city_id": "rotterdam",
+  "ingest_id": "7272bb1ae35aa4f04e78b50d0f72548caae1bee8b7d36bbb1760565aab4bd634",
+  "view_id": "4b2c2e76ca8b7d5ee56932deb3c8197471b5d16f6164e8c50024e1ed805be843",
+  "cells": 160,
+  "registration_report": {
+    "ingest_id": "7272bb1ae35aa4f04e78b50d0f72548caae1bee8b7d36bbb1760565aab4bd634",
+    "valid_pixels": 214048125,
+    "nodata_pixels": 35951875,
+    "padding_nodata_pixels": 0,
+    "minimum_m": -10.99590015411377,
+    "maximum_m": 204.65379333496094,
+    "percentiles_m": {
+      "1": -6.1595001220703125,
+      "50": 0.04230000078678131,
+      "99": 26.549100875854492
+    },
+    "extent_centre": [
+      51.922465391164366,
+      4.478633719869183
+    ],
+    "h_fill_m": 0.0,
+    "valid_pixels_below_fill": 106321205,
+    "share_valid_below_fill": 0.4967163575948166,
+    "warnings": [
+      "fill_above_ground"
+    ]
+  }
+}

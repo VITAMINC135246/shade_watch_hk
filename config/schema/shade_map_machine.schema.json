@@ -45,6 +45,22 @@
       ],
       "minimum": 0,
       "default": null
+    },
+    "cities": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "raw_dir"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "raw_dir": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
     }
   },
   "required": [

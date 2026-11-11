@@ -1,0 +1,22 @@
+{
+  "schema": "shade-map-city-1.0",
+  "city_id": "hong_kong",
+  "title": "Hong Kong (CEDD 2020 LiDAR DSM)",
+  "crs": "EPSG:2326",
+  "resolution_m": 0.5,
+  "vertical_datum": "HKPD",
+  "timezone": "Asia/Hong_Kong",
+  "daylight_reference": [
+    22.3,
+    114.2
+  ],
+  "extent": [
+    800750,
+    801200,
+    863750,
+    847400
+  ],
+  "sea_profile": "hk_cedd_2020",
+  "dsm_source_line": "CEDD 2020 LiDAR DSM; source and data owner: Government of the Hong Kong Special Administrative Region",
+  "ingest": null
+}

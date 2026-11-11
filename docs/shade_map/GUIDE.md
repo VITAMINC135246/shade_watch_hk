@@ -1,5 +1,9 @@
 # Shade maps (F1.0)
 
+For the current Python defaults and city-aware configs, see the G1 section
+below and the [city guide](../city/GUIDE.md). The earlier examples describe
+the F1.0 interface and legacy region schema.
+
 Use the repository's existing `.venv` from the repository root. No additional
 packages are required. This package combines the reviewed A1.1 region adapter
 and the accepted V1/V2 scientific engine; it does not change their policies.
@@ -207,3 +211,18 @@ locks support the existing local environment; native Windows is outside F1.0.
 Engineering acceptance is not observational accuracy. Observational accuracy
 remains NOT VERIFIED. Shade is not cooling and not ΔT. This package authorises
 neither territory-scale computation nor V3, sea filling, downloads or web work.
+
+## G1 city-aware requests
+
+The F1.0 examples above describe `shade-map-region-1.0`. That schema retains
+its Hong Kong interpretation and `raw` default. For new configurations, use
+`shade-map-region-1.1`. The Python functions build 1.1 requests and default
+to `sea-2.2`. They accept the optional `city` keyword. A 1.1 config can use
+`projected` corners in the named city’s native metre CRS or `wgs84` corners
+as latitude and longitude. `hk1980` is available for Hong Kong. WGS84
+auto-selection requires both corners to be in exactly one city’s extent.
+
+New runs carry a city block in the run manifest and stay on that city’s native
+grid. The local time and frame folders follow its time zone. Explicit offsets
+must agree with the city clock. Use the [city guide](../city/GUIDE.md) for
+registration, Rotterdam commands and interpretation of 0 m NAP fill.

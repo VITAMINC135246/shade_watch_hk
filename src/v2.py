@@ -185,17 +185,21 @@ def plan_batch(requests, *, workers=1, memory_budget_mb=12288, artifact_budget_b
         if isinstance(item, v1.ShadePlan):
             name, plan = f"request_{i:04d}", item
             directory = plan.source_directory
-            if directory not in catalogues:
-                catalogues[directory] = v1.index_sources(directory)
+            crs = plan.grid.crs
         else:
             kwargs = dict(item)
             name = kwargs.pop("id", f"request_{i:04d}")
             directory = str(Path(kwargs.get("dsm_dir") or v1.RAW).resolve())
+            crs = kwargs.get("crs", v1.DEFAULT_CRS)
             if directory not in catalogues:
-                catalogues[directory] = v1.index_sources(directory)
+                catalogues[directory] = v1.index_sources(directory, crs)
             kwargs.setdefault("cache_dir", "data/processed/shade_v1/v2_default")
             kwargs.setdefault("output_dir", f"outputs/v2_batch/{name}")
             plan = v1.plan_shade(**kwargs, _records=catalogues[directory])
+        if directory not in catalogues:
+            catalogues[directory] = v1.index_sources(directory, crs)
+        if catalogues[directory][0]["crs"] != crs:
+            raise ValueError("One DSM catalogue cannot serve requests in different CRSs")
         if not isinstance(name, str) or not name or name in plans:
             raise ValueError("Request IDs must be distinct nonempty strings")
         if any(p["output_directory"] == plan.output_directory for p in plans.values()):
@@ -223,6 +227,8 @@ def plan_batch(requests, *, workers=1, memory_budget_mb=12288, artifact_budget_b
         if metadata_bytes > 128 * 1024**2:
             raise ValueError("Batch request metadata exceeds the bounded 128 MiB local profile")
         hits[name] = sum(frame_hits)
+    if logical_mosaic and len({p["grid"]["crs"] for p in plans.values()}) != 1:
+        raise ValueError("A logical mosaic requires one projected CRS")
     for directory, records in catalogues.items():
         snapshots[directory] = {r["path"]: signature(r["path"]) for r in records}
         for r in records:

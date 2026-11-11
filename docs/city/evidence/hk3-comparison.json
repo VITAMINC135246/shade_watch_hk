@@ -1,0 +1,2732 @@
+{
+  "run_id": "cfa2a4cd1a630a37064a7047f4cb047c216c788c7115720836db1f186fb9b07d",
+  "reference": "outputs/shade_map/measure_tai_mo_shan",
+  "frames": [
+    {
+      "folder": "20260621/0540",
+      "utc_time": "2026-06-20T21:40:00+00:00",
+      "counts": {
+        "quality": {
+          "4": 7200000
+        },
+        "shade": {
+          "255": 7200000
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/0550",
+      "utc_time": "2026-06-20T21:50:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 6125336,
+          "3": 1074664
+        },
+        "shade": {
+          "1": 6125336,
+          "255": 1074664
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/0600",
+      "utc_time": "2026-06-20T22:00:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 5966801,
+          "3": 1233199
+        },
+        "shade": {
+          "1": 5966801,
+          "255": 1233199
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/0610",
+      "utc_time": "2026-06-20T22:10:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 5810062,
+          "3": 1389938
+        },
+        "shade": {
+          "1": 5810062,
+          "255": 1389938
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/0620",
+      "utc_time": "2026-06-20T22:20:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 5599011,
+          "3": 1600989
+        },
+        "shade": {
+          "1": 5599011,
+          "255": 1600989
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/0630",
+      "utc_time": "2026-06-20T22:30:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 5402841,
+          "3": 1797159
+        },
+        "shade": {
+          "1": 5402841,
+          "255": 1797159
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/0640",
+      "utc_time": "2026-06-20T22:40:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 5224457,
+          "3": 1975543
+        },
+        "shade": {
+          "1": 5224457,
+          "255": 1975543
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/0650",
+      "utc_time": "2026-06-20T22:50:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 5050596,
+          "3": 2149404
+        },
+        "shade": {
+          "1": 5050596,
+          "255": 2149404
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/0700",
+      "utc_time": "2026-06-20T23:00:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 5561691,
+          "3": 1638309
+        },
+        "shade": {
+          "0": 684023,
+          "1": 4877668,
+          "255": 1638309
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/0710",
+      "utc_time": "2026-06-20T23:10:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 5451600,
+          "3": 1748400
+        },
+        "shade": {
+          "0": 745710,
+          "1": 4705890,
+          "255": 1748400
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/0720",
+      "utc_time": "2026-06-20T23:20:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 5338441,
+          "3": 1861559
+        },
+        "shade": {
+          "0": 803067,
+          "1": 4535374,
+          "255": 1861559
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/0730",
+      "utc_time": "2026-06-20T23:30:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 4996893,
+          "3": 2203107
+        },
+        "shade": {
+          "0": 939998,
+          "1": 4056895,
+          "255": 2203107
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/0740",
+      "utc_time": "2026-06-20T23:40:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 4877486,
+          "3": 2322514
+        },
+        "shade": {
+          "0": 993353,
+          "1": 3884133,
+          "255": 2322514
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/0750",
+      "utc_time": "2026-06-20T23:50:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 4760390,
+          "3": 2439610
+        },
+        "shade": {
+          "0": 1044279,
+          "1": 3716111,
+          "255": 2439610
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/0800",
+      "utc_time": "2026-06-21T00:00:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 5324534,
+          "3": 1875466
+        },
+        "shade": {
+          "0": 1771762,
+          "1": 3552772,
+          "255": 1875466
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/0810",
+      "utc_time": "2026-06-21T00:10:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 3805656,
+          "1": 3394344
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/0820",
+      "utc_time": "2026-06-21T00:20:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 3957899,
+          "1": 3242101
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/0830",
+      "utc_time": "2026-06-21T00:30:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 4104192,
+          "1": 3095808
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/0840",
+      "utc_time": "2026-06-21T00:40:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 4245360,
+          "1": 2954640
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/0850",
+      "utc_time": "2026-06-21T00:50:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 4445909,
+          "1": 2754091
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/0900",
+      "utc_time": "2026-06-21T01:00:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 4575037,
+          "1": 2624963
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/0910",
+      "utc_time": "2026-06-21T01:10:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 4700990,
+          "1": 2499010
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/0920",
+      "utc_time": "2026-06-21T01:20:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 4825070,
+          "1": 2374930
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/0930",
+      "utc_time": "2026-06-21T01:30:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 4947511,
+          "1": 2252489
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/0940",
+      "utc_time": "2026-06-21T01:40:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 5069701,
+          "1": 2130299
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/0950",
+      "utc_time": "2026-06-21T01:50:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 5191526,
+          "1": 2008474
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1000",
+      "utc_time": "2026-06-21T02:00:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 5314151,
+          "1": 1885849
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1010",
+      "utc_time": "2026-06-21T02:10:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 5438062,
+          "1": 1761938
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1020",
+      "utc_time": "2026-06-21T02:20:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 5563760,
+          "1": 1636240
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1030",
+      "utc_time": "2026-06-21T02:30:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 5692440,
+          "1": 1507560
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1040",
+      "utc_time": "2026-06-21T02:40:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 5824630,
+          "1": 1375370
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1050",
+      "utc_time": "2026-06-21T02:50:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 5970668,
+          "1": 1229332
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1100",
+      "utc_time": "2026-06-21T03:00:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 6108040,
+          "1": 1091960
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1110",
+      "utc_time": "2026-06-21T03:10:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 6251991,
+          "1": 948009
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1120",
+      "utc_time": "2026-06-21T03:20:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 6402566,
+          "1": 797434
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1130",
+      "utc_time": "2026-06-21T03:30:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 6560557,
+          "1": 639443
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1140",
+      "utc_time": "2026-06-21T03:40:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 6725815,
+          "1": 474185
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1150",
+      "utc_time": "2026-06-21T03:50:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 6896035,
+          "1": 303965
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1200",
+      "utc_time": "2026-06-21T04:00:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 7058589,
+          "1": 141411
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1210",
+      "utc_time": "2026-06-21T04:10:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 7176323,
+          "1": 23677
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1220",
+      "utc_time": "2026-06-21T04:20:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 7199994,
+          "1": 6
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1230",
+      "utc_time": "2026-06-21T04:30:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 7199990,
+          "1": 10
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1240",
+      "utc_time": "2026-06-21T04:40:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 7166846,
+          "1": 33154
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1250",
+      "utc_time": "2026-06-21T04:50:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 7022294,
+          "1": 177706
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1300",
+      "utc_time": "2026-06-21T05:00:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 6831114,
+          "1": 368886
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1310",
+      "utc_time": "2026-06-21T05:10:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 6630708,
+          "1": 569292
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1320",
+      "utc_time": "2026-06-21T05:20:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 6434339,
+          "1": 765661
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1330",
+      "utc_time": "2026-06-21T05:30:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 6244755,
+          "1": 955245
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1340",
+      "utc_time": "2026-06-21T05:40:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 6060700,
+          "1": 1139300
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1350",
+      "utc_time": "2026-06-21T05:50:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 5882470,
+          "1": 1317530
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1400",
+      "utc_time": "2026-06-21T06:00:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 5708829,
+          "1": 1491171
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1410",
+      "utc_time": "2026-06-21T06:10:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 5526572,
+          "1": 1673428
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1420",
+      "utc_time": "2026-06-21T06:20:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 5358029,
+          "1": 1841971
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1430",
+      "utc_time": "2026-06-21T06:30:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 5191313,
+          "1": 2008687
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1440",
+      "utc_time": "2026-06-21T06:40:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 5026377,
+          "1": 2173623
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1450",
+      "utc_time": "2026-06-21T06:50:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 4861810,
+          "1": 2338190
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1500",
+      "utc_time": "2026-06-21T07:00:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 4696400,
+          "1": 2503600
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1510",
+      "utc_time": "2026-06-21T07:10:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 4529229,
+          "1": 2670771
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1520",
+      "utc_time": "2026-06-21T07:20:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 4359563,
+          "1": 2840437
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1530",
+      "utc_time": "2026-06-21T07:30:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 4186386,
+          "1": 3013614
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1540",
+      "utc_time": "2026-06-21T07:40:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 4009646,
+          "1": 3190354
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1550",
+      "utc_time": "2026-06-21T07:50:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 3827680,
+          "1": 3372320
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1600",
+      "utc_time": "2026-06-21T08:00:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 3640687,
+          "1": 3559313
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1610",
+      "utc_time": "2026-06-21T08:10:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 3398509,
+          "1": 3801491
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1620",
+      "utc_time": "2026-06-21T08:20:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 3193668,
+          "1": 4006332
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1630",
+      "utc_time": "2026-06-21T08:30:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 2978808,
+          "1": 4221192
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1640",
+      "utc_time": "2026-06-21T08:40:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 2754083,
+          "1": 4445917
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1650",
+      "utc_time": "2026-06-21T08:50:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 6539383,
+          "3": 660617
+        },
+        "shade": {
+          "0": 1861978,
+          "1": 4677405,
+          "255": 660617
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1700",
+      "utc_time": "2026-06-21T09:00:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 5802766,
+          "3": 1397234
+        },
+        "shade": {
+          "0": 894546,
+          "1": 4908220,
+          "255": 1397234
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1710",
+      "utc_time": "2026-06-21T09:10:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 5945744,
+          "3": 1254256
+        },
+        "shade": {
+          "0": 818363,
+          "1": 5127381,
+          "255": 1254256
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1720",
+      "utc_time": "2026-06-21T09:20:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 6075550,
+          "3": 1124450
+        },
+        "shade": {
+          "0": 736674,
+          "1": 5338876,
+          "255": 1124450
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1730",
+      "utc_time": "2026-06-21T09:30:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 6307766,
+          "3": 892234
+        },
+        "shade": {
+          "0": 576098,
+          "1": 5731668,
+          "255": 892234
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1740",
+      "utc_time": "2026-06-21T09:40:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 6427942,
+          "3": 772058
+        },
+        "shade": {
+          "0": 488115,
+          "1": 5939827,
+          "255": 772058
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1750",
+      "utc_time": "2026-06-21T09:50:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 6541663,
+          "3": 658337
+        },
+        "shade": {
+          "0": 405845,
+          "1": 6135818,
+          "255": 658337
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1800",
+      "utc_time": "2026-06-21T10:00:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 6318240,
+          "3": 881760
+        },
+        "shade": {
+          "1": 6318240,
+          "255": 881760
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1810",
+      "utc_time": "2026-06-21T10:10:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 6491304,
+          "3": 708696
+        },
+        "shade": {
+          "1": 6491304,
+          "255": 708696
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1820",
+      "utc_time": "2026-06-21T10:20:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 6639545,
+          "3": 560455
+        },
+        "shade": {
+          "1": 6639545,
+          "255": 560455
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1830",
+      "utc_time": "2026-06-21T10:30:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 6769867,
+          "3": 430133
+        },
+        "shade": {
+          "1": 6769867,
+          "255": 430133
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1840",
+      "utc_time": "2026-06-21T10:40:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 6943276,
+          "3": 256724
+        },
+        "shade": {
+          "1": 6943276,
+          "255": 256724
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1850",
+      "utc_time": "2026-06-21T10:50:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7058189,
+          "3": 141811
+        },
+        "shade": {
+          "1": 7058189,
+          "255": 141811
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20260621/1900",
+      "utc_time": "2026-06-21T11:00:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7139896,
+          "3": 60104
+        },
+        "shade": {
+          "1": 7139896,
+          "255": 60104
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/0700",
+      "utc_time": "2026-12-21T23:00:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 5960942,
+          "3": 1239058
+        },
+        "shade": {
+          "1": 5960942,
+          "255": 1239058
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/0710",
+      "utc_time": "2026-12-21T23:10:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 5754471,
+          "3": 1445529
+        },
+        "shade": {
+          "1": 5754471,
+          "255": 1445529
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/0720",
+      "utc_time": "2026-12-21T23:20:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 5553957,
+          "3": 1646043
+        },
+        "shade": {
+          "1": 5553957,
+          "255": 1646043
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/0730",
+      "utc_time": "2026-12-21T23:30:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 5340947,
+          "3": 1859053
+        },
+        "shade": {
+          "1": 5340947,
+          "255": 1859053
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/0740",
+      "utc_time": "2026-12-21T23:40:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 5145483,
+          "3": 2054517
+        },
+        "shade": {
+          "1": 5145483,
+          "255": 2054517
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/0750",
+      "utc_time": "2026-12-21T23:50:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 4961945,
+          "3": 2238055
+        },
+        "shade": {
+          "1": 4961945,
+          "255": 2238055
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/0800",
+      "utc_time": "2026-12-22T00:00:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 4786522,
+          "3": 2413478
+        },
+        "shade": {
+          "1": 4786522,
+          "255": 2413478
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/0810",
+      "utc_time": "2026-12-22T00:10:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 4331210,
+          "3": 2868790
+        },
+        "shade": {
+          "1": 4331210,
+          "255": 2868790
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/0820",
+      "utc_time": "2026-12-22T00:20:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 4177472,
+          "3": 3022528
+        },
+        "shade": {
+          "1": 4177472,
+          "255": 3022528
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/0830",
+      "utc_time": "2026-12-22T00:30:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 5025536,
+          "3": 2174464
+        },
+        "shade": {
+          "0": 991663,
+          "1": 4033873,
+          "255": 2174464
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/0840",
+      "utc_time": "2026-12-22T00:40:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 4928780,
+          "3": 2271220
+        },
+        "shade": {
+          "0": 1029266,
+          "1": 3899514,
+          "255": 2271220
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/0850",
+      "utc_time": "2026-12-22T00:50:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 4869715,
+          "3": 2330285
+        },
+        "shade": {
+          "0": 1057189,
+          "1": 3812526,
+          "255": 2330285
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/0900",
+      "utc_time": "2026-12-22T01:00:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 4784417,
+          "3": 2415583
+        },
+        "shade": {
+          "0": 1088879,
+          "1": 3695538,
+          "255": 2415583
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/0910",
+      "utc_time": "2026-12-22T01:10:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 4703748,
+          "3": 2496252
+        },
+        "shade": {
+          "0": 1118387,
+          "1": 3585361,
+          "255": 2496252
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/0920",
+      "utc_time": "2026-12-22T01:20:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 4422398,
+          "3": 2777602
+        },
+        "shade": {
+          "0": 1207079,
+          "1": 3215319,
+          "255": 2777602
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/0930",
+      "utc_time": "2026-12-22T01:30:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 5344321,
+          "3": 1855679
+        },
+        "shade": {
+          "0": 2223189,
+          "1": 3121132,
+          "255": 1855679
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/0940",
+      "utc_time": "2026-12-22T01:40:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 5304032,
+          "3": 1895968
+        },
+        "shade": {
+          "0": 2271300,
+          "1": 3032732,
+          "255": 1895968
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/0950",
+      "utc_time": "2026-12-22T01:50:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 3979441,
+          "1": 3220559
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1000",
+      "utc_time": "2026-12-22T02:00:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 4060077,
+          "1": 3139923
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1010",
+      "utc_time": "2026-12-22T02:10:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 4178553,
+          "1": 3021447
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1020",
+      "utc_time": "2026-12-22T02:20:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 4249799,
+          "1": 2950201
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1030",
+      "utc_time": "2026-12-22T02:30:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 4170957,
+          "1": 3029043
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1040",
+      "utc_time": "2026-12-22T02:40:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 4233748,
+          "1": 2966252
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1050",
+      "utc_time": "2026-12-22T02:50:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 4174244,
+          "1": 3025756
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1100",
+      "utc_time": "2026-12-22T03:00:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 4227229,
+          "1": 2972771
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1110",
+      "utc_time": "2026-12-22T03:10:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 4248558,
+          "1": 2951442
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1120",
+      "utc_time": "2026-12-22T03:20:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 4291013,
+          "1": 2908987
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1130",
+      "utc_time": "2026-12-22T03:30:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 4536572,
+          "1": 2663428
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1140",
+      "utc_time": "2026-12-22T03:40:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 4566760,
+          "1": 2633240
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1150",
+      "utc_time": "2026-12-22T03:50:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 4574792,
+          "1": 2625208
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1200",
+      "utc_time": "2026-12-22T04:00:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 4578363,
+          "1": 2621637
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1210",
+      "utc_time": "2026-12-22T04:10:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 4589577,
+          "1": 2610423
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1220",
+      "utc_time": "2026-12-22T04:20:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 4327461,
+          "1": 2872539
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1230",
+      "utc_time": "2026-12-22T04:30:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 4557185,
+          "1": 2642815
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1240",
+      "utc_time": "2026-12-22T04:40:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 4547908,
+          "1": 2652092
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1250",
+      "utc_time": "2026-12-22T04:50:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 4470780,
+          "1": 2729220
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1300",
+      "utc_time": "2026-12-22T05:00:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 4446305,
+          "1": 2753695
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1310",
+      "utc_time": "2026-12-22T05:10:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 4343604,
+          "1": 2856396
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1320",
+      "utc_time": "2026-12-22T05:20:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 4032863,
+          "1": 3167137
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1330",
+      "utc_time": "2026-12-22T05:30:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 3985155,
+          "1": 3214845
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1340",
+      "utc_time": "2026-12-22T05:40:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 3915463,
+          "1": 3284537
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1350",
+      "utc_time": "2026-12-22T05:50:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 3852370,
+          "1": 3347630
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1400",
+      "utc_time": "2026-12-22T06:00:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 3832108,
+          "1": 3367892
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1410",
+      "utc_time": "2026-12-22T06:10:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 3751761,
+          "1": 3448239
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1420",
+      "utc_time": "2026-12-22T06:20:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 3614367,
+          "1": 3585633
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1430",
+      "utc_time": "2026-12-22T06:30:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 3518245,
+          "1": 3681755
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1440",
+      "utc_time": "2026-12-22T06:40:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 3329299,
+          "1": 3870701
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1450",
+      "utc_time": "2026-12-22T06:50:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 7200000
+        },
+        "shade": {
+          "0": 3217182,
+          "1": 3982818
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1500",
+      "utc_time": "2026-12-22T07:00:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 6682439,
+          "3": 517561
+        },
+        "shade": {
+          "0": 2712197,
+          "1": 3970242,
+          "255": 517561
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1510",
+      "utc_time": "2026-12-22T07:10:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 6356384,
+          "3": 843616
+        },
+        "shade": {
+          "0": 2251436,
+          "1": 4104948,
+          "255": 843616
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1520",
+      "utc_time": "2026-12-22T07:20:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 5341171,
+          "3": 1858829
+        },
+        "shade": {
+          "0": 1092973,
+          "1": 4248198,
+          "255": 1858829
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1530",
+      "utc_time": "2026-12-22T07:30:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 5643192,
+          "3": 1556808
+        },
+        "shade": {
+          "0": 988586,
+          "1": 4654606,
+          "255": 1556808
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1540",
+      "utc_time": "2026-12-22T07:40:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 5748281,
+          "3": 1451719
+        },
+        "shade": {
+          "0": 947215,
+          "1": 4801066,
+          "255": 1451719
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1550",
+      "utc_time": "2026-12-22T07:50:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 5852659,
+          "3": 1347341
+        },
+        "shade": {
+          "0": 903233,
+          "1": 4949426,
+          "255": 1347341
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1600",
+      "utc_time": "2026-12-22T08:00:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 5962264,
+          "3": 1237736
+        },
+        "shade": {
+          "0": 853087,
+          "1": 5109177,
+          "255": 1237736
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1610",
+      "utc_time": "2026-12-22T08:10:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 6038918,
+          "3": 1161082
+        },
+        "shade": {
+          "0": 800800,
+          "1": 5238118,
+          "255": 1161082
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1620",
+      "utc_time": "2026-12-22T08:20:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 6106754,
+          "3": 1093246
+        },
+        "shade": {
+          "0": 746044,
+          "1": 5360710,
+          "255": 1093246
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1630",
+      "utc_time": "2026-12-22T08:30:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 5483560,
+          "3": 1716440
+        },
+        "shade": {
+          "1": 5483560,
+          "255": 1716440
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1640",
+      "utc_time": "2026-12-22T08:40:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 5633003,
+          "3": 1566997
+        },
+        "shade": {
+          "1": 5633003,
+          "255": 1566997
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1650",
+      "utc_time": "2026-12-22T08:50:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 5758463,
+          "3": 1441537
+        },
+        "shade": {
+          "1": 5758463,
+          "255": 1441537
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1700",
+      "utc_time": "2026-12-22T09:00:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 5882550,
+          "3": 1317450
+        },
+        "shade": {
+          "1": 5882550,
+          "255": 1317450
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1710",
+      "utc_time": "2026-12-22T09:10:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 6004512,
+          "3": 1195488
+        },
+        "shade": {
+          "1": 6004512,
+          "255": 1195488
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1720",
+      "utc_time": "2026-12-22T09:20:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 6119335,
+          "3": 1080665
+        },
+        "shade": {
+          "1": 6119335,
+          "255": 1080665
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1730",
+      "utc_time": "2026-12-22T09:30:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 6464348,
+          "3": 735652
+        },
+        "shade": {
+          "1": 6464348,
+          "255": 735652
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    },
+    {
+      "folder": "20261222/1740",
+      "utc_time": "2026-12-22T09:40:00+00:00",
+      "counts": {
+        "quality": {
+          "0": 6564409,
+          "3": 635591
+        },
+        "shade": {
+          "1": 6564409,
+          "255": 635591
+        },
+        "surface": {
+          "0": 7200000
+        }
+      },
+      "compared_rasters": 18,
+      "differing_pixels": 0
+    }
+  ],
+  "jobs": {
+    "computed": 0,
+    "reused": 156,
+    "horizon_calls": 0
+  },
+  "differing_pixels": 0
+}

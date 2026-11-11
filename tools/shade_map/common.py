@@ -13,7 +13,7 @@ import tempfile
 from .config import InvalidInput, canonical
 
 CONTRACT = 'SW-F1.0'
-FORMAT = 'shade-map-publication-1.0'
+FORMAT = 'shade-map-publication-1.1'
 ENGINE_FILES = tuple('src/' + n + '.py' for n in (
     'v1', 'v1_cache', 'horizon', 'solar', 'spatial', 'shade_watch',
     'v2', 'v2_worker', 'v2_runner', 'v2_state'))

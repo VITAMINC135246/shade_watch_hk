@@ -22,17 +22,17 @@ LAYERS = ('shade', 'quality', 'surface')
 NODATA = dict(shade=255, quality=None, surface=255)
 
 
-def raster_profile(bounds):
+def raster_profile(bounds, crs=v1.DEFAULT_CRS):
     l, b, r, t = bounds
     return dict(driver='GTiff', width=round((r-l)/.5), height=round((t-b)/.5), count=1,
-                dtype='uint8', crs='EPSG:2326', transform=from_origin(l,t,.5,.5),
+                dtype='uint8', crs=crs, transform=from_origin(l,t,.5,.5),
                 compress='DEFLATE', tiled=True, blockxsize=256, blockysize=256,
                 predictor=2)
 
 
-def write_raster(path, values, bounds, layer):
+def write_raster(path, values, bounds, layer, crs=v1.DEFAULT_CRS):
     path.parent.mkdir(parents=True, exist_ok=True)
-    with rasterio.open(path, 'w', **raster_profile(bounds), nodata=NODATA[layer]) as dst:
+    with rasterio.open(path, 'w', **raster_profile(bounds, crs), nodata=NODATA[layer]) as dst:
         dst.write(values, 1)
         dst.update_tags(layer=layer, policy=v1.POLICY)
         if layer == 'quality':
@@ -40,10 +40,10 @@ def write_raster(path, values, bounds, layer):
             dst.update_tags(quality_reasons=json.dumps(v1.QUALITY, sort_keys=True))
 
 
-def write_vrt(path, bounds, cells, layer):
-    profile = raster_profile(bounds)
+def write_vrt(path, bounds, cells, layer, crs=v1.DEFAULT_CRS):
+    profile = raster_profile(bounds, crs)
     root = ET.Element('VRTDataset', rasterXSize=str(profile['width']), rasterYSize=str(profile['height']))
-    ET.SubElement(root, 'SRS').text = rasterio.crs.CRS.from_epsg(2326).to_wkt()
+    ET.SubElement(root, 'SRS').text = rasterio.crs.CRS.from_string(crs).to_wkt()
     a = profile['transform']
     ET.SubElement(root, 'GeoTransform').text = ','.join(map(str, (a.c,a.a,a.b,a.f,a.d,a.e)))
     band = ET.SubElement(root, 'VRTRasterBand', dataType='Byte', band='1')
@@ -88,29 +88,30 @@ def verify_frame(folder, expected_frame=None):
     return record
 
 
-def _check_raster(path, expected, bounds, layer):
+def _check_raster(path, expected, bounds, layer, crs):
     with rasterio.open(path) as ds:
-        profile = raster_profile(bounds)
-        if (ds.count != 1 or ds.dtypes != ('uint8',) or ds.crs.to_epsg() != 2326
+        profile = raster_profile(bounds, crs)
+        if (ds.count != 1 or ds.dtypes != ('uint8',) or ds.crs.to_string() != crs
                 or ds.transform != profile['transform'] or ds.nodata != NODATA[layer]
                 or ds.compression.value != 'DEFLATE' or not ds.is_tiled
                 or not np.array_equal(ds.read(1), expected)):
             raise RuntimeError(f'Published cell differs from engine/source: {path.name}')
 
 
-def _verify_views(directory, bounds, cells, sidecar, mosaics, utc, source, records, full):
+def _verify_views(directory, bounds, cells, sidecar, mosaics, utc, source, records, full, crs):
+    profile = raster_profile(bounds, crs)
     for cell in cells:
         shade, quality, transform = adapter.read_region_window(sidecar, utc_time=utc,
                                                               bounds=cell['bounds'], logical_mosaics=mosaics)
         surface = source.read_surface(cell['bounds'], records)
-        if transform != raster_profile(cell['bounds'])['transform']:
+        if transform != raster_profile(cell['bounds'], crs)['transform']:
             raise RuntimeError('Engine logical transform differs')
         for layer, expected in zip(LAYERS, (shade,quality,surface)):
-            _check_raster(directory/layer/(cell['id']+'.tif'), expected, cell['bounds'], layer)
+            _check_raster(directory/layer/(cell['id']+'.tif'), expected, cell['bounds'], layer, crs)
             for name in [layer+'.vrt'] + ([layer+'.tif'] if full else []):
                 with rasterio.open(directory/name) as ds:
-                    if (ds.transform != raster_profile(bounds)['transform'] or ds.crs.to_epsg() != 2326
-                            or ds.width != raster_profile(bounds)['width'] or ds.height != raster_profile(bounds)['height']
+                    if (ds.transform != profile['transform'] or ds.crs.to_string() != crs
+                            or ds.width != profile['width'] or ds.height != profile['height']
                             or ds.dtypes != ('uint8',) or ds.nodata != NODATA[layer]
                             or not np.array_equal(ds.read(1, window=from_bounds(*cell['bounds'], ds.transform)), expected)):
                         raise RuntimeError(f'Published view differs: {name}')
@@ -131,32 +132,33 @@ def publish_frame(prepared, frame, sidecar, mosaics):
     counts = {layer: Counter() for layer in LAYERS}
     combinations = Counter()
     plan = prepared.document
+    crs = plan['grid']['crs']
     for cell in plan['cells']:
         shade, quality, transform = adapter.read_region_window(sidecar, utc_time=frame['utc_time'],
                                                                bounds=cell['bounds'], logical_mosaics=mosaics)
-        if transform != raster_profile(cell['bounds'])['transform']:
+        if transform != raster_profile(cell['bounds'], crs)['transform']:
             raise RuntimeError('Logical cell transform differs')
         surface = prepared.source.read_surface(cell['bounds'], prepared.records)
         for layer, array, allowed in zip(LAYERS, (shade,quality,surface),
                                          ([0,1,255], list(map(int,v1.QUALITY)), [0,1,2,3,4,255])):
             if array.dtype != np.uint8 or array.shape != shade.shape or not np.all(np.isin(array, allowed)):
                 raise RuntimeError(f'Invalid {layer} provider/engine encoding')
-            write_raster(partial/layer/(cell['id']+'.tif'), array, cell['bounds'], layer)
+            write_raster(partial/layer/(cell['id']+'.tif'), array, cell['bounds'], layer, crs)
             values, amounts = np.unique(array, return_counts=True)
             counts[layer].update({str(int(v)):int(n) for v,n in zip(values,amounts)})
         encoded = (surface.astype(np.uint32)<<16) | (shade.astype(np.uint32)<<8) | quality
         values, amounts = np.unique(encoded, return_counts=True)
         combinations.update({int(v):int(n) for v,n in zip(values,amounts)})
     for layer in LAYERS:
-        write_vrt(partial/(layer+'.vrt'), plan['resolved_bounds'], plan['cells'], layer)
+        write_vrt(partial/(layer+'.vrt'), plan['resolved_bounds'], plan['cells'], layer, crs)
         if plan['full_images']:
             with rasterio.open(partial/(layer+'.vrt')) as src, rasterio.open(
-                    partial/(layer+'.tif'), 'w', **raster_profile(plan['resolved_bounds']), nodata=NODATA[layer]) as dst:
+                    partial/(layer+'.tif'), 'w', **raster_profile(plan['resolved_bounds'], crs), nodata=NODATA[layer]) as dst:
                 for _, window in dst.block_windows(1):
                     dst.write(src.read(1, window=window), 1, window=window)
                 dst.update_tags(layer=layer, policy=v1.POLICY)
     _verify_views(partial, plan['resolved_bounds'], plan['cells'], sidecar, mosaics,
-                  frame['utc_time'], prepared.source, prepared.records, plan['full_images'])
+                  frame['utc_time'], prepared.source, prepared.records, plan['full_images'], crs)
     files = {safe_relative(p.relative_to(partial).as_posix()):digest(p)
              for p in sorted(partial.rglob('*')) if p.is_file()}
     record = dict(schema='shade-map-frame-1.0', **frame, solar_by_tile=_solar(sidecar, frame['utc_time']),

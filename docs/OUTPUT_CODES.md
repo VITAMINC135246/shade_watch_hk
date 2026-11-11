@@ -102,3 +102,12 @@ Written by `python -m tools.sea2 fill-impact` from a sea-filled run and a raw co
 | 3 | Filled target (surface 1 to 4) with a 0 or 1 label: the label exists only because the target was filled. |
 | 4 | Uncertain (255) in the sea-filled run. |
 | 255 | Not computed. GeoTIFF NoData value. |
+
+## G1 city metadata
+
+Publication format `shade-map-publication-1.1` records the city and vertical
+datum in the run manifest. Rotterdam uses 0.00 m NAP. The output codes
+above apply on its native EPSG:28992 grid. A plan’s
+`fill_context.no_dsm_cells_within_1km` counts native cells without an
+unfilled DSM tile in the 1 km dependency area. The warning of the same name
+signals a positive count. It describes source coverage before filling.

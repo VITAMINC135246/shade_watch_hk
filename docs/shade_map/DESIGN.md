@@ -98,3 +98,18 @@ Real computations are restricted to contract runs (a), (b), (c). The campaign
 watchdog charges all real-DSM jobs against 3600 seconds, 12 GiB sampled process
 tree RSS and 20 GiB new artifacts. Exhausted checks are NOT VERIFIED; no budget
 extension or additional region is implied. Independent acceptance remains separate.
+
+## G1 native city grids
+
+G1 adds `shade-map-region-1.1` and `shade-map-publication-1.1`. City
+resolution and clock validation precede adapter calls. The selected city
+supplies the projected CRS, time zone, daylight reference and source line to
+the adapter and engine. WGS84 plans record the local PROJ operation and
+versions. The run identity includes the city record and snapped bounds.
+
+The source provider receives a machine dictionary scoped to the city’s
+catalogue and fill profile. Raster and VRT georeferencing comes from the
+resolved grid. The plan reports missing native cells in the 1 km dependency
+area and exposes the number of missing directional jobs. The legacy 1.0
+region schema keeps its Hong Kong interpretation and raw default. The
+[city design](../city/DESIGN.md) describes registration, identity and limits.

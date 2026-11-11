@@ -1,0 +1,52 @@
+{
+  "schema": "sea-profile-1.0",
+  "profile_id": "nl_rotterdam_dsm05",
+  "vertical_datum": "NAP",
+  "h_sea_m": 0.0,
+  "low_shore_margin_m": 5.0,
+  "max_shore_distance_m": 1000,
+  "shore_preference_m": 50,
+  "connectivity": 4,
+  "exclusions": [
+    {
+      "id": "ring_south",
+      "bounds": [
+        89000,
+        430250,
+        96000,
+        431250
+      ],
+      "reason": "outside the registered sheets: no data, not water"
+    },
+    {
+      "id": "ring_north",
+      "bounds": [
+        89000,
+        443750,
+        96000,
+        444750
+      ],
+      "reason": "outside the registered sheets: no data, not water"
+    },
+    {
+      "id": "ring_west",
+      "bounds": [
+        89000,
+        431250,
+        90000,
+        443750
+      ],
+      "reason": "outside the registered sheets: no data, not water"
+    },
+    {
+      "id": "ring_east",
+      "bounds": [
+        95000,
+        431250,
+        96000,
+        443750
+      ],
+      "reason": "outside the registered sheets: no data, not water"
+    }
+  ]
+}

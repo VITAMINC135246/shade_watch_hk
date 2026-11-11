@@ -123,7 +123,7 @@ def execute_task(kind, payload, plans, batch, store_directory, cancel, send, mem
                                    bounds=plan.grid.bounds(), policy=v1.POLICY))
         path = Path(store_directory) / f"{batch}.logical_mosaic.json"
         atomic_json(path, dict(schema="shade-watch-v2-logical-mosaic-1.0", batch=batch,
-                    crs="EPSG:2326", resolution_m=.5, layers=layers,
+                    crs=layers[0]["grid"]["crs"], resolution_m=.5, layers=layers,
                     note="logical source view; no physical whole-region copy"))
         return dict(artifacts=[artifact(path, "logical_mosaic")], metrics={})
     plan = plan_from_dict(plans[payload["request"]])
@@ -291,7 +291,8 @@ def read_logical_window(path, *, utc_time, bounds):
                 slice(round((a-left)/.5), round((a-left)/.5)+iw))
         with rasterio.open(layer["raster"]) as ds, rasterio.open(layer["quality_raster"]) as qs:
             expected = Grid(**{**layer["grid"], "transform": tuple(layer["grid"]["transform"])})
-            if ds.transform != expected.affine or qs.transform != expected.affine or ds.crs.to_string() != "EPSG:2326":
+            if (ds.transform != expected.affine or qs.transform != expected.affine
+                    or ds.crs.to_string() != manifest["crs"] or qs.crs != ds.crs):
                 raise ValueError("Logical source georeferencing changed")
             avalues, qvalues = ds.read(1, window=source), qs.read(1, window=source)
         overlap = seen[dest]

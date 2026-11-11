@@ -1,0 +1,172 @@
+{
+  "schema": "shade-map-plan-1.0",
+  "run_id": "4d4029869301161c1267c693d5d15fc9c2995f35b2312a7112696b9cab354da0",
+  "name": "g1_dev_nl3",
+  "resolved_bounds": [
+    91875.0,
+    436875.0,
+    93125.0,
+    438125.0
+  ],
+  "grid": {
+    "width": 2500,
+    "height": 2500,
+    "transform": [
+      0.5,
+      0.0,
+      91875.0,
+      0.0,
+      -0.5,
+      438125.0
+    ],
+    "crs": "EPSG:28992",
+    "mode": "custom",
+    "selected_source": null,
+    "selected_sources": []
+  },
+  "pixel_count": 6250000,
+  "cells": [
+    {
+      "id": "e91875n436875",
+      "native_bounds": [
+        91875.0,
+        436875.0,
+        92500.0,
+        437500.0
+      ],
+      "bounds": [
+        91875.0,
+        436875.0,
+        92500.0,
+        437500.0
+      ],
+      "width": 1250,
+      "height": 1250,
+      "source_tile": "e91875n436875.tif"
+    },
+    {
+      "id": "e92500n436875",
+      "native_bounds": [
+        92500.0,
+        436875.0,
+        93125.0,
+        437500.0
+      ],
+      "bounds": [
+        92500.0,
+        436875.0,
+        93125.0,
+        437500.0
+      ],
+      "width": 1250,
+      "height": 1250,
+      "source_tile": "e92500n436875.tif"
+    },
+    {
+      "id": "e91875n437500",
+      "native_bounds": [
+        91875.0,
+        437500.0,
+        92500.0,
+        438125.0
+      ],
+      "bounds": [
+        91875.0,
+        437500.0,
+        92500.0,
+        438125.0
+      ],
+      "width": 1250,
+      "height": 1250,
+      "source_tile": "e91875n437500.tif"
+    },
+    {
+      "id": "e92500n437500",
+      "native_bounds": [
+        92500.0,
+        437500.0,
+        93125.0,
+        438125.0
+      ],
+      "bounds": [
+        92500.0,
+        437500.0,
+        93125.0,
+        438125.0
+      ],
+      "width": 1250,
+      "height": 1250,
+      "source_tile": "e92500n437500.tif"
+    }
+  ],
+  "frames": [
+    {
+      "local_time": "2026-06-21T09:00:00+02:00",
+      "utc_time": "2026-06-21T07:00:00+00:00",
+      "date": "20260621",
+      "time": "0900"
+    },
+    {
+      "local_time": "2026-06-21T13:30:00+02:00",
+      "utc_time": "2026-06-21T11:30:00+00:00",
+      "date": "20260621",
+      "time": "1330"
+    },
+    {
+      "local_time": "2026-06-21T18:00:00+02:00",
+      "utc_time": "2026-06-21T16:00:00+00:00",
+      "date": "20260621",
+      "time": "1800"
+    }
+  ],
+  "dropped_times": [],
+  "sub_requests": 1,
+  "batches": 1,
+  "distinct_horizon_directions": 3,
+  "city": {
+    "city_id": "rotterdam",
+    "crs": "EPSG:28992",
+    "timezone": "Europe/Amsterdam",
+    "daylight_reference": [
+      51.92,
+      4.48
+    ],
+    "vertical_datum": "NAP",
+    "profile_sha256": "49f6030ef97e691d0ae37112a0b8d98904e814140096b13fd6563eabdbcc14f6",
+    "ingest_id": "7272bb1ae35aa4f04e78b50d0f72548caae1bee8b7d36bbb1760565aab4bd634"
+  },
+  "fill_context": {
+    "no_dsm_cells_within_1km": 0
+  },
+  "missing_direction_jobs": 12,
+  "estimates": {
+    "label": "estimate",
+    "compute_wall_seconds": 45.53924533941826,
+    "estimator_models": [
+      {
+        "schema": "shade-watch-v2-estimator-1.0",
+        "sha256": "ad6939e4455d9e80495d27e382438d635f5cb9f0920601959e09bbbe2e721469",
+        "extrapolated": true
+      }
+    ],
+    "published_bytes": {
+      "label": "estimate",
+      "value": 113511712
+    },
+    "working_bytes": {
+      "label": "estimate",
+      "value": 354572128
+    },
+    "file_count": {
+      "label": "estimate",
+      "value": 61
+    }
+  },
+  "full_images": true,
+  "warnings": [],
+  "existing_run": {
+    "status": "new",
+    "published_frames": 0,
+    "total_frames": 3
+  }
+}

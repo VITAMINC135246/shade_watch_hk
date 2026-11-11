@@ -14,8 +14,8 @@ from src import v1, v2
 from tools import region_request as adapter
 from .common import (CODE_ROOT, CONTRACT, ENGINE_FILES, FORMAT, atomic_json, digest, identity, name_lock,
                      read_json, seal, verify_files, verify_seal)
-from .config import InvalidInput, check_document, machine_config, region_config, validate_output_root
-from .planning import ROOT_MARKER, ownership, prepare
+from .config import InvalidInput, check_document, validate_output_root
+from .planning import ROOT_MARKER, ownership, prepare_request, resolve_request
 from .publication import publish_frame, verify_frame, write_summaries
 from .sources import provider
 
@@ -113,6 +113,7 @@ def _guard(prepared):
 def _new_manifest(prepared, sidecar_hash):
     plan = prepared.document
     return dict(schema='shade-map-run-1.0',contract=CONTRACT,run_id=plan['run_id'],name=plan['name'],
+                city=plan['city'],
                 region_config=prepared.region,region_config_sha256=identity(prepared.region),
                 identity_document=prepared.identity_document,tool=_tool_record(),
                 engine_hashes=prepared.identity_document['engine_hashes'],policies=prepared.source.policies(),
@@ -171,26 +172,30 @@ def _engine(prepared, manifest):
 
 def run_region(region, machine='config/machine.local.json'):
     started=time.perf_counter()
-    region,machine=region_config(region),machine_config(machine)
+    request = resolve_request(region, machine)
+    region, machine = request.region, request.machine
     validate_output_root(machine, (provider(region['dsm_source']).catalogue(machine),))
     ownership(machine,region)
     work_root=v1.ROOT/'outputs/shade_map_work'
     if (work_root/'.locks'/(region['name']+'.lock')).exists():
         # Refuse a concurrent controller before catalogue reads or source views.
         with name_lock(work_root,region['name'],create=False):
-            return _run_region(region,machine,started,lock_held=True)
-    return _run_region(region,machine,started,lock_held=False)
+            return _run_region(request,started,lock_held=True)
+    return _run_region(request,started,lock_held=False)
 
 
-def _run_region(region,machine,started,*,lock_held):
+def _run_region(request,started,*,lock_held):
+    region, machine = request.region, request.machine
     # Reject known config/foreign-folder conflicts before even creating a source view.
     prior=ownership(machine,region)
     if prior:
         source=provider(region['dsm_source'])
-        if (prior['source_identity'] != source.preview_identity(region,machine)
+        if (prior['identity_document']['publication_format'] != FORMAT
+                or prior.get('city') != request.city
+                or prior['resolved_bounds'] != request.snapped_bounds
+                or prior['source_identity'] != source.preview_identity(request.projected,machine)
                 or prior['policies'] != source.policies()
-                or prior['engine_hashes'] != {p:digest(CODE_ROOT/p) for p in ENGINE_FILES}
-                or prior['identity_document']['publication_format'] != FORMAT):
+                or prior['engine_hashes'] != {p:digest(CODE_ROOT/p) for p in ENGINE_FILES}):
             raise InvalidInput('name: existing run has a different source, engine or publication identity')
         if prior['status']=='complete':
             with (nullcontext() if lock_held else name_lock(v1.ROOT/'outputs/shade_map_work',region['name'],create=False)):
@@ -201,7 +206,7 @@ def _run_region(region,machine,started,*,lock_held):
                     return dict(schema='shade-map-result-1.0',run_id=prior['run_id'],name=region['name'],
                                 status='complete',published_frames=len(prior['frames']),reused_frames=len(prior['frames']),
                                 computed_batches=0,verified_only=True)
-    prepared=prepare(region,machine)
+    prepared=prepare_request(request)
     if prepared.document['existing_run']['status']=='conflict':
         raise InvalidInput(prepared.document['existing_run']['reason'])
     work_root=v1.ROOT/'outputs/shade_map_work'
@@ -293,7 +298,8 @@ def _size(path):
 
 
 def prune_region(region, machine='config/machine.local.json', *, yes=False):
-    region,machine=region_config(region),machine_config(machine)
+    request = resolve_request(region, machine)
+    region, machine = request.region, request.machine
     validate_output_root(machine, (provider(region['dsm_source']).catalogue(machine),))
     manifest=ownership(machine,region)
     if manifest is None:

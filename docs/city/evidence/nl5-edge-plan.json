@@ -1,0 +1,108 @@
+{
+  "schema": "shade-map-plan-1.0",
+  "run_id": "fdb8d029f7f471114b9ce0d1ba0876df89912ff1585aa16f1fd7b77286270d09",
+  "name": "g1_dev_nl5_edge",
+  "resolved_bounds": [
+    90000.0,
+    436875.0,
+    90625.0,
+    437500.0
+  ],
+  "grid": {
+    "width": 1250,
+    "height": 1250,
+    "transform": [
+      0.5,
+      0.0,
+      90000.0,
+      0.0,
+      -0.5,
+      437500.0
+    ],
+    "crs": "EPSG:28992",
+    "mode": "custom",
+    "selected_source": null,
+    "selected_sources": []
+  },
+  "pixel_count": 1562500,
+  "cells": [
+    {
+      "id": "e90000n436875",
+      "native_bounds": [
+        90000.0,
+        436875.0,
+        90625.0,
+        437500.0
+      ],
+      "bounds": [
+        90000.0,
+        436875.0,
+        90625.0,
+        437500.0
+      ],
+      "width": 1250,
+      "height": 1250,
+      "source_tile": "e90000n436875.tif"
+    }
+  ],
+  "frames": [
+    {
+      "local_time": "2026-06-21T13:30:00+02:00",
+      "utc_time": "2026-06-21T11:30:00+00:00",
+      "date": "20260621",
+      "time": "1330"
+    }
+  ],
+  "dropped_times": [],
+  "sub_requests": 1,
+  "batches": 1,
+  "distinct_horizon_directions": 1,
+  "city": {
+    "city_id": "rotterdam",
+    "crs": "EPSG:28992",
+    "timezone": "Europe/Amsterdam",
+    "daylight_reference": [
+      51.92,
+      4.48
+    ],
+    "vertical_datum": "NAP",
+    "profile_sha256": "49f6030ef97e691d0ae37112a0b8d98904e814140096b13fd6563eabdbcc14f6",
+    "ingest_id": "7272bb1ae35aa4f04e78b50d0f72548caae1bee8b7d36bbb1760565aab4bd634"
+  },
+  "fill_context": {
+    "no_dsm_cells_within_1km": 10
+  },
+  "missing_direction_jobs": 1,
+  "estimates": {
+    "label": "estimate",
+    "compute_wall_seconds": 10.503474838648117,
+    "estimator_models": [
+      {
+        "schema": "shade-watch-v2-estimator-1.0",
+        "sha256": "ad6939e4455d9e80495d27e382438d635f5cb9f0920601959e09bbbe2e721469",
+        "extrapolated": true
+      }
+    ],
+    "published_bytes": {
+      "label": "estimate",
+      "value": 9605400
+    },
+    "working_bytes": {
+      "label": "estimate",
+      "value": 113783288
+    },
+    "file_count": {
+      "label": "estimate",
+      "value": 14
+    }
+  },
+  "full_images": true,
+  "warnings": [
+    "no_dsm_cells_within_1km"
+  ],
+  "existing_run": {
+    "status": "new",
+    "published_frames": 0,
+    "total_frames": 1
+  }
+}

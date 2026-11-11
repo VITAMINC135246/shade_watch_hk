@@ -28,10 +28,12 @@ from src.v1_cache import BUFFER_M
 _HEADER_CACHE = {}
 
 
-def project_corner(corner, crs):
+def project_corner(corner, crs, *, dsm_crs=v1.DEFAULT_CRS):
     """WGS84 pairs are (latitude, longitude); HK1980 pairs are (east, north)."""
-    if crs not in ("wgs84", "hk1980"):
-        raise ValueError("CRS must explicitly be wgs84 or hk1980")
+    if crs not in ("wgs84", "hk1980", "projected"):
+        raise ValueError("CRS must explicitly be wgs84, hk1980 or projected")
+    if crs == "hk1980" and dsm_crs != v1.DEFAULT_CRS:
+        raise ValueError("hk1980 requires an EPSG:2326 DSM")
     if len(corner) != 2:
         raise ValueError("Each corner needs exactly two coordinates")
     try:
@@ -43,7 +45,7 @@ def project_corner(corner, crs):
     if crs == "wgs84":
         if not -90 <= a <= 90 or not -180 <= b <= 180:
             raise ValueError("WGS84 latitude must be -90..90 and longitude -180..180")
-        x, y = Transformer.from_crs("EPSG:4326", "EPSG:2326", always_xy=True).transform(b, a)
+        x, y = Transformer.from_crs("EPSG:4326", dsm_crs, always_xy=True).transform(b, a)
     else:
         x, y = a, b
     if not all(math.isfinite(x) for x in (x, y)):
@@ -265,10 +267,13 @@ def _time_groups(instants, dates, interval_minutes, probe):
 def plan_region(corner1, corner2, *, crs, instants=None, dates=None, interval_minutes=10,
                 dsm_dir=None, auto_source_view=False, output_dir='outputs/region_request',
                 cache_dir='data/processed/shade_v1/region_dev', max_pixels_per_request=None,
-                memory_budget_mb=8192, artifact_budget_bytes=v2.ARTIFACT_CEILING):
+                memory_budget_mb=8192, artifact_budget_bytes=v2.ARTIFACT_CEILING,
+                dsm_crs=v1.DEFAULT_CRS, local_timezone=v1.HKT.key,
+                daylight_reference=v1.DAYLIGHT_REFERENCE, dsm_source_line=v1.SOURCE_LINE):
     """Resolve inputs and validate engine plans. Only the opt-in source view writes."""
     started = time.perf_counter()
-    first, second = project_corner(corner1, crs), project_corner(corner2, crs)
+    first = project_corner(corner1, crs, dsm_crs=dsm_crs)
+    second = project_corner(corner2, crs, dsm_crs=dsm_crs)
     bounds = (min(first[0], second[0]), min(first[1], second[1]),
               max(first[0], second[0]), max(first[1], second[1]))
     if bounds[0] == bounds[2] or bounds[1] == bounds[3]:
@@ -285,7 +290,7 @@ def plan_region(corner1, corner2, *, crs, instants=None, dates=None, interval_mi
     if auto_source_view:
         source_directory, view = source_view(source_directory, bounds)
     indexed = time.perf_counter()
-    records = v1.index_sources(source_directory)
+    records = v1.index_sources(source_directory, dsm_crs)
     indexing_seconds = time.perf_counter()-indexed
     if not any(intersects(bounds, r['bounds']) for r in records):
         raise ValueError('Requested rectangle intersects no DSM tile in the catalogue')
@@ -293,6 +298,14 @@ def plan_region(corner1, corner2, *, crs, instants=None, dates=None, interval_mi
     out = v1._owned_path(output_dir, 'outputs', 'outputs/region_request')
     cache = v1._owned_path(cache_dir, 'data/processed/shade_v1', 'data/processed/shade_v1/region_dev')
     base = dict(mode='custom', dsm_dir=str(source_directory), cache_dir=str(cache), memory_budget_mb=memory_budget_mb)
+    if dsm_crs != v1.DEFAULT_CRS:
+        base['crs'] = dsm_crs
+    if local_timezone != v1.HKT.key:
+        base['local_timezone'] = local_timezone
+    if tuple(daylight_reference) != v1.DAYLIGHT_REFERENCE:
+        base['daylight_reference'] = tuple(daylight_reference)
+    if dsm_source_line != v1.SOURCE_LINE:
+        base['dsm_source_line'] = dsm_source_line
     target = next(r for r in records if intersects(grid.bounds(), r['bounds']))
     def probe(time_input):
         return v1.plan_shade(**base, **time_input, bounds=target['bounds'], output_dir=out/'temporal_probe', _records=records)
@@ -358,8 +371,8 @@ def plan_region(corner1, corner2, *, crs, instants=None, dates=None, interval_mi
                               resources=batch.definition['resources'], request_ids=[request_parts[i]['id'] for i in indices],
                               utc_times=sorted({t for i in indices for t in request_parts[i]['utc_times']}),
                               horizon_tasks=sum(t['kind']=='horizon' for t in batch.definition['tasks'])))
-    transformer = Transformer.from_crs('EPSG:4326', 'EPSG:2326', always_xy=True)
-    transformer.transform(114.2, 22.3)
+    transformer = Transformer.from_crs('EPSG:4326', dsm_crs, always_xy=True)
+    transformer.transform(daylight_reference[1], daylight_reference[0])
     sidecar = dict(schema='shade-watch-region-request-1.1', contract='SW-RGN-AC-1.1',
                    original_corners=[list(map(float, corner1)), list(map(float, corner2))], crs=crs,
                    coordinate_order='latitude,longitude' if crs=='wgs84' else 'easting,northing',
@@ -380,6 +393,11 @@ def plan_region(corner1, corner2, *, crs, instants=None, dates=None, interval_mi
         args = [sys.executable, '-m', 'src.v1', 'query', '--mode', 'custom', '--bounds', *map(str, req['bounds']),
                 '--dsm-dir', req['dsm_dir'], '--cache', req['cache_dir'], '--output', req['output_dir'],
                 '--memory-budget-mb', str(memory_budget_mb), '--interval-minutes', str(interval_minutes)]
+        for key, flag in [('crs', '--crs'), ('local_timezone', '--timezone'), ('dsm_source_line', '--dsm-source-line')]:
+            if key in req:
+                args.extend([flag, req[key]])
+        if 'daylight_reference' in req:
+            args.extend(['--daylight-reference', *map(str, req['daylight_reference'])])
         for kind, flag in [('instants', '--at'), ('dates', '--date')]:
             for value in req.get(kind, []):
                 args.extend([flag, str(value)])
@@ -413,7 +431,7 @@ def read_region_window(region, *, utc_time, bounds, logical_mosaics):
     instant = v1.normalize_instant(utc_time).utc
     if instant not in {t for g in sidecar['time_groups'] for t in g['utc_times']}:
         raise ValueError('Instant is not part of this region request')
-    grid = v1._custom_grid([dict(crs='EPSG:2326')], bounds)
+    grid = v1._custom_grid([dict(crs=sidecar['resolved_grid']['crs'])], bounds)
     if tuple(bounds) != grid.bounds() or grid.width*grid.height > v1.MAX_OUTPUT_PIXELS:
         raise ValueError('Region window must be aligned and within the V1 area limit')
     l, b, r, t = sidecar['resolved_bounds']
@@ -435,6 +453,8 @@ def read_region_window(region, *, utc_time, bounds, logical_mosaics):
         if batch['id'] not in manifests:
             raise ValueError(f"Missing completed logical mosaic for {batch['request_file']}")
         path, value = manifests[batch['id']]
+        if value['crs'] != grid.crs:
+            raise ValueError('Logical mosaic CRS differs from the region')
         present = {layer['request'] for layer in value['layers'] if layer['utc_time']==instant}
         expected = {q['engine_request_id'] for q in sidecar['requests'] if q['batch']==idx and instant in q['utc_times']}
         if not expected <= present:

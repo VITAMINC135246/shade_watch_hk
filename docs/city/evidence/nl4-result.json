@@ -1,0 +1,12 @@
+{
+  "report": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/shade_map_g1_dev_20261111/_diagnostics/fill_impact/g1_dev_nl1/fill_impact.json",
+  "work": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/outputs/sea2_2_diagnostic_work/g1_dev_nl1-4e4d45dfd153",
+  "frames": 5,
+  "events": [
+    {
+      "id": "437216241047d27a77cf09966898d5a21fe13258b7b4d9b97396d342b4d161cb",
+      "action": "submit_run",
+      "state": "SUCCEEDED"
+    }
+  ]
+}

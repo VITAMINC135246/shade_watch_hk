@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "shade_map_city.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema", "city_id", "title", "crs", "resolution_m", "vertical_datum", "timezone",
+    "daylight_reference", "extent", "sea_profile", "dsm_source_line", "ingest"
+  ],
+  "properties": {
+    "schema": {"const": "shade-map-city-1.0"},
+    "city_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$"},
+    "title": {"type": "string", "minLength": 1},
+    "crs": {"type": "string", "pattern": "^EPSG:[1-9][0-9]*$"},
+    "resolution_m": {"type": "number", "minimum": 0.5, "maximum": 0.5},
+    "vertical_datum": {"type": "string", "minLength": 1},
+    "timezone": {"type": "string", "minLength": 1},
+    "daylight_reference": {
+      "type": "array", "minItems": 2, "maxItems": 2, "items": {"type": "number"}
+    },
+    "extent": {
+      "type": "array", "minItems": 4, "maxItems": 4, "items": {"type": "number"}
+    },
+    "sea_profile": {"type": "string", "pattern": "^[a-z0-9][a-z0-9_-]{0,63}$"},
+    "dsm_source_line": {"type": "string", "minLength": 1},
+    "ingest": {
+      "oneOf": [
+        {"type": "null"},
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["policy", "cell_pixels", "sheets"],
+          "properties": {
+            "policy": {"const": "SW-INGEST-POLICY-1.0"},
+            "cell_pixels": {
+              "type": "array", "minItems": 2, "maxItems": 2,
+              "items": {"type": "integer", "minimum": 1}
+            },
+            "sheets": {
+              "type": "array",
+              "minItems": 1,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["name", "bytes", "sha256", "declared_nodata"],
+                "properties": {
+                  "name": {"type": "string", "pattern": "^[A-Za-z0-9_][A-Za-z0-9._-]*\\.[Tt][Ii][Ff]$"},
+                  "bytes": {"type": "integer", "minimum": 1},
+                  "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+                  "declared_nodata": {
+                    "oneOf": [
+                      {"type": ["number", "null"]},
+                      {"enum": ["NaN", "Infinity", "-Infinity"]}
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

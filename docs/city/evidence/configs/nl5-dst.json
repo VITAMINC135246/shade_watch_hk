@@ -1,0 +1,24 @@
+{
+  "schema": "shade-map-region-1.1",
+  "city": "rotterdam",
+  "name": "g1_dev_nl5_dst",
+  "crs": "projected",
+  "lower_left": [
+    91875,
+    436875
+  ],
+  "upper_right": [
+    93125,
+    438125
+  ],
+  "time": {
+    "mode": "daylight",
+    "interval_minutes": 30,
+    "dates": [
+      "2026-03-28",
+      "2026-03-29",
+      "2026-10-24",
+      "2026-10-25"
+    ]
+  }
+}
