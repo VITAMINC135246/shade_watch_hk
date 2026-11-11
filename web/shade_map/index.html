@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shade Watch HK — shade maps</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-row">
+      <div class="brand">Shade Watch HK <span>shade maps</span></div>
+      <nav aria-label="Pages">
+        <a href="#/results" data-page="results">Results</a>
+        <a href="#/request" data-page="request">New request</a>
+      </nav>
+      <div class="badges">
+        <span class="badge">read-only · local</span>
+        <span class="badge warn">observational accuracy NOT VERIFIED</span>
+      </div>
+    </div>
+  </header>
+  <main class="wrap" id="app">
+    <noscript>This page needs JavaScript.</noscript>
+    <div class="alert" id="file-warning" hidden>Open this page through the local server, not as a file. From the repository root run
+      <span class="mono">python3 -m http.server 8765 --bind 127.0.0.1</span> and open
+      <span class="mono">http://127.0.0.1:8765/web/shade_map/</span>.</div>
+  </main>
+  <footer class="wrap footer small muted">
+    Shade is not cooling and not ΔT. Grey (255) is invalid or uncertain, never shade or sunlight. Engine policy SW-V1-POLICY-1.0; reporting rules in docs/OUTPUT_CODES.md.
+  </footer>
+</body>
+</html>

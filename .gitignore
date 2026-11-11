@@ -29,6 +29,8 @@ config/*local*
 !/data/raw/validation/README.md
 /data/raw/basemap/*
 !/data/raw/basemap/README.md
+/data/raw/coastline/*
+!/data/raw/coastline/README.md
 
 # Derived data and generated deliverables
 /data/processed/*
