@@ -1,34 +1,34 @@
 # Package H1.0 development prompt
 
-Implement package H1.0 for `shade_watch_hk`, as defined in `docs/packages/H1.0/CONTRACT.md` (`SW-H1.0`). Bring the repository and its data folders to the layout and names of `docs/CONVENTIONS.md`. This package changes names and locations only. Results must not change.
+Implement package H1.0 for `shade_watch_hk`, as defined in `docs/packages/H1.0/CONTRACT.md` (`SW-H1.0`) with `docs/packages/H1.0/AMENDMENT_1.md` (`SW-H1.1`). Bring the repository and its data folders to the layout and names of `docs/CONVENTIONS.md`. This package changes names and locations only. Results must not change.
 
 Three things must hold at the end:
 
-- The three files that define the horizon cache key are byte-identical, and every regression run computes zero directions.
+- The three files that define the horizon cache key are byte-identical, and R-1 to R-6 compute zero directions. R-7 computes the directions of its counterfactual again, as the contract authorizes.
 - The rebuilt Hong Kong view and the re-registered Rotterdam catalogue and view have the same file content as the accepted ones.
-- Every regression run is pixel-identical to its baseline.
+- R-1 to R-6 are pixel-identical to their baselines, R-7 reproduces the `frames` of its reference report, and R-8 plans as the contract says.
 
 ## Preconditions
 
 - **Branch and baseline.**
   - Work in `/Volumes/My Passport for Mac/Projects/shade_watch_hk` on branch `feature`, with the repository's `.venv`.
-  - The starting commit's full SHA is given in the handoff message. It must contain `docs/packages/H1.0/CONTRACT.md` and `docs/CONVENTIONS.md`, and its parent must be `cfb6e3c52001103a206c256c1af46bcdce30f01c`.
-  - Before changing anything, record: the actual HEAD; the branch; the dirty files; the SHA-256 of the contract, compared with the value given in the handoff message.
+  - The starting commit's full SHA is given in the handoff message. It must contain `docs/packages/H1.0/CONTRACT.md`, `docs/packages/H1.0/AMENDMENT_1.md` and `docs/CONVENTIONS.md`. Its parent must be `fda9985a259bff640237d4fb80c9c0a7e3fba0a8`, whose parent is `cfb6e3c52001103a206c256c1af46bcdce30f01c`.
+  - Before changing anything, record: the actual HEAD; the branch; the dirty files; the SHA-256 of the contract and of the amendment, compared with the values given in the handoff message.
 - **Stop and report** if any of the following differ:
   - the three SHA-256 values of the cache-key files listed in the contract;
-  - tracked files under `src/`, `tools/`, `config/` or `tests/`, compared with `af6fca9e3025b9c5e8447ca06d13065e8ba86c3d`, apart from the files added by `8d7a0d3` (four `config/regions/measure_*.json` and `tools/wsl2_smoke/`);
+  - tracked files under `src/`, `tools/`, `config/` or `tests/`, compared with `af6fca9e3025b9c5e8447ca06d13065e8ba86c3d`, apart from the eight files added by `8d7a0d3` (five `config/regions/measure_*.json` and three files in `tools/wsl2_smoke/`);
   - the content of `data/processed/`, compared with the list in the contract's starting facts;
   - the view IDs named by the two pointers in `data/processed/dsm_views/sea_fill_v2_2/`.
 - **Read first:**
-  - the whole contract and `docs/CONVENTIONS.md`;
-  - `docs/planning/DECISIONS.zh-TW.md` (D-022 to D-025);
+  - the whole contract, the amendment and `docs/CONVENTIONS.md`;
+  - `docs/planning/DECISIONS.zh-TW.md` (D-022 to D-026);
   - every Python file under `src/` and `tools/` for its imports and its hard-coded paths, before moving anything.
 - **Not authorized:**
   - any change to `horizon.py`, `spatial.py`, `v1_cache.py`, or to the source text of `fingerprint` and `profile`;
   - any change of behaviour, rule, policy value, schema name, profile or region config;
   - splitting `pipeline.py` or the engine module `shade_watch.py`;
   - deleting data, apart from the exceptions in the contract's write scope;
-  - editing a record, `docs/planning/`, the contract, the prompts or `docs/CONVENTIONS.md`;
+  - editing a record, `docs/planning/`, the contract, the amendment, the prompts or `docs/CONVENTIONS.md`;
   - computation outside V-1, V-2 and R-1 to R-8;
   - Windows work, new living documentation, downloads, push or PR.
 
@@ -36,8 +36,8 @@ Three things must hold at the end:
 
 The order matters because old paths stop working once things move.
 
-1. **Inventory first.** Take a listing of `data/raw`, `data/processed`, `outputs` and `archive` (path, type, size, modification time) and the SHA-256 of every tracked file. Keep it as evidence, and compare it with the planner baseline `archive/baseline_h1_0_20261112/listing.tsv`; report every difference before moving anything. Write the move table (old path → new path) for tracked files and for data folders before moving anything.
-2. **Code.** Create the `shade_watch` package with `git mv`, keep the three cache-key files untouched, update imports, module names, entry points and hard-coded paths. Move retired code and tests to `legacy/` unchanged. Move `estimator.json`, `study_area.md` and `processing.json` to `config/engine/`. Run the remaining tests with synthetic fixtures until they pass.
+1. **Inventory first.** Take a listing of `data/raw`, `data/processed`, `outputs` and `archive` (path, type, size, modification time) and the SHA-256 of every tracked file. Keep it as evidence, and compare it with the planner baseline `archive/baseline_h1_0_20261112/listing.tsv`. Expected differences: the baseline folder itself, which the baseline does not list, and `.DS_Store`, `__pycache__` and `.pytest_cache` entries. Report these and continue. For any other difference, stop and report. Write the move table (old path → new path) for tracked files and for data folders before moving anything.
+2. **Code.** Create the `shade_watch` package with `git mv`, keep the three cache-key files untouched, update imports, module names, entry points and hard-coded paths. Move retired code and tests to `legacy/` unchanged; `checks.py` of `tools/sea2/` is not retired (amendment A4), and `polygonal` is copied as amendment A5 says. Move `estimator.json`, `study_area.md` and `processing.json` to `config/engine/`; `estimator.json` stays byte-identical, and `processing.json` changes only in the two values that the amendment names. Run the remaining tests with synthetic fixtures until they pass.
 3. **Records.** `git mv` the record folders and files to `docs/records/`. Write `docs/packages/H1.0/evidence/records_manifest.json` and confirm that every record is byte-identical.
 4. **Raw data, baselines and archive.** Perform the moves of contract design item 4 with renames. Confirm sizes and modification times against the inventory. Run `git worktree prune` after the archive move. Update `.gitignore`.
 5. **Views.** With the moved code and the moved raw catalogue: rebuild the Hong Kong view once (V-1) and register Rotterdam once (V-2). Compare every file with the archived accepted view and catalogue (H1-08, H1-09). If a file differs, stop and report; do not continue to the cache move.
@@ -61,6 +61,7 @@ Verify them as you go.
 - The G1.0 evidence records the spatial keys of HK-2 to HK-4 (`cache_gates` in `docs/records/city/evidence/hk*-plan.json`). R-2 to R-4 must use the same keys.
 - Durations in the G1.0 development ledger (`docs/records/city/evidence/resources.jsonl`, four workers): HK-1 6.8 min with directions computed, HK-2 12.3, HK-3 11.8, HK-4 9.1, NL-1 11.6 with directions computed, NL-2 0.3, NL-4 1.1; Rotterdam registration 2.1 min. These are measurements of that day, not guarantees.
 - `tests/test_shade_map.py` holds one test that loads the F1 campaign file; it is retired with that file.
+- `tests/test_sea2_diagnostic.py` imports `RawCounterfactual` from `tools/sea2/checks.py`, and `tools/sea2/validate_ib5000.py` imports `polygonal` from `tools/sea_view/extract.py`. The amendment (A4, A5) says how each is handled.
 - Six worktrees are registered under `outputs/`. Move their parent folders, then prune.
 - The user's `config/machine.local.json` is ignored by Git and holds old paths.
 

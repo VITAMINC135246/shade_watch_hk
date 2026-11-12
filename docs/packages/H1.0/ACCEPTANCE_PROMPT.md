@@ -1,6 +1,6 @@
 # Package H1.0 independent acceptance prompt
 
-Independently assess the H1.0 implementation of `shade_watch_hk` against `docs/packages/H1.0/CONTRACT.md` (`SW-H1.0`). This is a review, not a second development pass. Re-running the developer's checks is not enough.
+Independently assess the H1.0 implementation of `shade_watch_hk` against `docs/packages/H1.0/CONTRACT.md` (`SW-H1.0`) with `docs/packages/H1.0/AMENDMENT_1.md` (`SW-H1.1`). This is a review, not a second development pass. Re-running the developer's checks is not enough.
 
 H1.0 claims that only names and locations changed. Your task is to try to show the opposite: a changed rule, a changed pixel, a lost file, an edited record, a changed cache key.
 
@@ -8,7 +8,7 @@ H1.0 claims that only names and locations changed. Your task is to try to show t
 
 - **Project:** `/Volumes/My Passport for Mac/Projects/shade_watch_hk`, with the repository's `.venv`.
 - **Identities to record.** Resolve the supplied `TARGET_COMMIT` to a full SHA, then record:
-  - the candidate SHA and its parent (the H1.0 planning commit, whose own parent is `cfb6e3c52001103a206c256c1af46bcdce30f01c`);
+  - the candidate SHA and its parent (the commit that adds `AMENDMENT_1.md`; its parent is `fda9985a259bff640237d4fb80c9c0a7e3fba0a8`, whose parent is `cfb6e3c52001103a206c256c1af46bcdce30f01c`);
   - the SHA-256 of the contract and of any amendment, compared with the values given in the handoff message;
   - the accepted G1.0 commit `af6fca9e3025b9c5e8447ca06d13065e8ba86c3d`;
   - the environment and its lock;
@@ -34,12 +34,12 @@ H1.0 claims that only names and locations changed. Your task is to try to show t
 
 1. **Scope and diff** (H1-01, H1-02).
    - `git diff -M --name-status <parent> <TARGET_COMMIT>`. Classify every entry: pure rename, rename with edits, new file, deleted file. No file may be deleted unless the contract names it or it reappears at a mapped path.
-   - Read every rename with edits. Each edit must be an import, a module name, a path, or an item the contract names. Report anything else, however small.
+   - Read every rename with edits. Each edit must be an import, a module name, a path, or an item that the contract or the amendment names. Report anything else, however small. Compare the source text of `polygonal` in `shade_watch/fill/validate_ib5000.py` with the function in `tools/sea_view/extract.py` at the starting commit (amendment A5).
    - Confirm the three cache-key hashes, and that `fingerprint` and `profile` are textually unchanged.
-   - Confirm that `docs/planning/`, the contract, the prompts and `docs/CONVENTIONS.md` are unchanged.
+   - Confirm that `docs/planning/`, the contract, the amendment, the prompts and `docs/CONVENTIONS.md` are unchanged.
 2. **Records** (H1-04). With your own script, compare every blob under `docs/records/` and `config/engine/estimator.json` with its origin at the parent commit. Confirm that no file that the contract lists as a record is missing.
 3. **Data moves** (H1-05). Check the SHA-256 of the planner baseline `archive/baseline_h1_0_20261112/listing.tsv` against the contract. Compare it, and the developer's inventory, with the present state under the move table: every file and symlink present, same size, same modification time. Hash the two Rotterdam sheets and at least 300 Hong Kong tiles of your own random choice (record the seed) and compare with the hashes in the archived Hong Kong view manifest's catalogue record.
-4. **Layout** (H1-03). Check rules 1 to 6 of contract design item 9 with a script of your own, written from the contract text. Then run `tests/test_layout.py`.
+4. **Layout** (H1-03). Check rules 1 to 6 of contract design item 9, with the exclusion that the amendment adds to rule 4, with a script of your own, written from the contract text. Then run `tests/test_layout.py`.
 5. **Tests** (H1-06). Run `pytest --collect-only -q` at the parent (in a second detached worktree under the same review folder, used for collection only) and at the candidate. Map module paths and compare the sets of test IDs. Run the full suite. Read the diff of every remaining test file.
 6. **Behaviour** (H1-07). Compare `config/cities/`, `config/sea_profiles/` and `config/regions/` byte for byte. Read the schema diffs. Search for the policy IDs, source names, schema names and the publication format. Run R-8. Repeat the rejections of G1-06 with the new commands.
 7. **Views and catalogue** (H1-08, H1-09).

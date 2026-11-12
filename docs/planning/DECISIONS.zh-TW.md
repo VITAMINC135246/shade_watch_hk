@@ -656,5 +656,32 @@
 - **執行者**：Codex 開發；另一個對話獨立驗收；Claude 做靜態預檢、通過後寫現行文件、收尾 commit 並打標記 `mac-v1.0`；使用者推送。
 - **驗收標準**：H1-01 至 H1-14 全部 PASS。通過代表版面和名字符合規範、結果不變（四個香港區域和兩個鹿特丹運行逐像素相同、快取鍵不變、view 內容相同）；不代表觀測精度、鹿特丹地表標籤已驗證、Windows 可用，也不代表 `pipeline.py` 和 `shade_watch.py` 已整理乾淨。
 - **影響**：view ID、切格 ID、運行 ID 各變一次；快取鍵、政策版本、設定檔內容和像素不變。舊的 view、切格和輸出原樣留在 `archive/`。
-- **狀態**：合約已凍結，待 Codex 開發。
-  - 本 commit 加入合約、兩份提示、規範和基線摘要，並更新本快照（SHA 見正本或 `git log`）。
+- **狀態**：合約已凍結。Codex 在預檢停下，修訂見 D-026。
+  - commit `fda9985a259bff640237d4fb80c9c0a7e3fba0a8`（父節點 `cfb6e3c`，2026-11-12 20:53 HKT，本地，未推送）凍結合約。SHA-256：合約 `b45f0565d7601540e36329b843ae2eba85fe7a03ca03968d89d61f90f02edf8c`；開發提示 `0390d4ff848409c897386e53ce5eaaa04605636b5bff40311cd91e0e1ab351a4`；驗收提示 `2b86753bc9d45783a027709cbd41070741d0d15ca77caf2447e0b4d05b4ed4e3`；規範 `75377354fd5b5bc13ab213ef024ca679e818eda24d78f64e36f113d05224929f`。commit 前（20:52 HKT）把基線重新列了一次，雜湊相同。
+
+## D-026｜2026-11-12｜H1.0 修訂 1（SW-H1.1）：Codex 在預檢停下；改正提示和合約裡的一處衝突
+
+- **經過**：Codex 依交接訊息開始 H1.0，在只讀的預檢階段停下並回報（使用者 2026-11-12 21:16 HKT 轉交）。沒有改動任何檔案，沒有執行任何計算。它核對過 HEAD `fda9985`、標記、四個交接雜湊、三個快取鍵雜湊和兩個 view 指標，都相符。回報的兩處不一致都在開發提示裡，都是 Claude 的錯：
+  1. 提示寫 `8d7a0d3` 新增了四個 `config/regions/measure_*.json`，實際是五個。原因：Claude 核對時只看了 `git diff --stat` 的最後八行，第一行（`measure_central.json`）被截掉。
+  2. 提示開頭寫「每個回歸都不重算方向」，但合約規定 R-7（填補影響）要重算反事實的方向。合約是對的，提示的摘要寫得太籠統。
+- **Claude 複查時另外發現的五處**（重新搜尋了整個 repo，找合約裡不能同時成立的要求）：
+  3. 合約要求 `config/engine/estimator.json` 逐位元不變，但這個檔裡記著四個校準記錄的舊路徑（`outputs/v2_development/evidence/…`），而版面檢查第 4 條不允許已追蹤的檔案出現 `outputs/`。兩條要求互相衝突。
+  4. `config/processing.json`（舊管線入口的預設值）裡有兩個舊版面的路徑，合約沒有說要改成什麼。
+  5. 合約把 `tools/sea2/checks.py` 列為退役，但保留下來的測試 `tests/test_sea2_diagnostic.py` 要從它匯入 `RawCounterfactual`。
+  6. 留在套件裡的 iB5000 驗證工具 `tools/sea2/validate_ib5000.py` 要從退役的 `tools/sea_view/extract.py` 匯入函式 `polygonal`。
+  7. 開發提示開頭還有一句「每個回歸都逐像素相同」，但 R-7 是填補影響報告、R-8 只做計畫。
+- **決定（Claude 依使用者的 commit 規則先寫入並 commit，同時向使用者說明；使用者把交接訊息貼給 Codex 之前可以否決）**：出修訂 `SW-H1.1`（`docs/packages/H1.0/AMENDMENT_1.md`），合約檔本身不動。目標、不做的事、授權的計算、預算和 H1-01 至 H1-14 的條文都不變；A2、A4、A5 調整的是合約「設計」一節的細節，其中 A5 是 Claude 的判斷，已請使用者留意。
+  - A1：起點改為加入修訂的這個 commit（父節點 `fda9985`）。
+  - A2：`estimator.json` 維持逐位元不變，並列入版面檢查第 4 條的例外。
+  - A3：`processing.json` 只改兩個值：`output_directory` 改為 `work/engine/pipeline`，`cache_directory` 改為 `data/cache/horizon/pipeline_1km`。
+  - A4：`checks.py` 不退役，搬到 `shade_watch/fill/checks.py`；`tests/test_sea2_checks.py` 留在 `tests/`。退役的測試只剩 `test_sea_masks.py` 全部和 `test_shade_map.py` 裡的一個。`resources.py` 照舊退役。
+  - A5：把 `polygonal`（11 行）原文複製進 `shade_watch/fill/validate_ib5000.py`，取代那一行匯入。這是 H1.0 裡唯一不屬於「匯入、模組名、路徑」的既有程式改動；驗證工具在 H1.0 不執行，靠比對原文和既有測試檢查。
+  - B1–B5：改正兩份提示（五個設定檔；R-1 至 R-6 零重算、R-7 重算；清單比對時哪些差異屬於預期；逐像素那一句；起點和修訂的寫法）。
+- **為什麼用修訂而不是改寫 `fda9985`**：`fda9985` 已經交給 Codex，雜湊也記在 D-025。改寫 commit 會讓記錄對不上；修訂是規範裡定的做法。
+- **另記：R-1 用 `raw` 的原因**（使用者 2026-11-12 20:58 HKT 提問）：E2.0 是引擎版本，`raw` 和 `sea-2.2` 是 DSM 來源。E2.0 已驗收的長洲結果是在填補政策之前用原始 DSM 算的，要和它逐像素相同只能用 `raw`。合約裡 `raw`（R-1）和 `sea-2.2`（R-2 至 R-6）都跑，符合使用者「最差也應該兩個都跑」的要求。這也符合 D-020 的規則：新的測試和設定用 `sea-2.2`，`raw` 只留作和填補前的已驗收結果比對。Claude 說明後使用者沒有提出異議。
+- **另記：使用者 home 目錄裡的 17 個檔**（`plan_measure_*.json`、`run_measure_*.json`、`run_measure_*.log`、`fill_measure_tai_mo_shan.*`，2026-11-10 22:51 至 2026-11-11 00:55）：依檔名和時間判斷是五區量測當晚終端機輸出的存檔。Claude 沒有看到內容（home 沒有連結）。repo 的已追蹤檔案和 `outputs/` 裡沒有任何地方引用它們，正式結果在 `outputs/shade_map/`。Claude 告知使用者可以刪除；是否已刪未核實。
+- **教訓**：凍結前的核對要涵蓋提示，不只合約；用 `tail` 截斷的輸出不能當作完整清單；「逐位元不變」和「不得出現舊路徑」這類成對的要求，要對每個相關的檔案實際搜尋一次；把檔案列為退役之前，要搜尋還有誰匯入它。
+- **在哪實現**：`docs/packages/H1.0/AMENDMENT_1.md`、`DEVELOPMENT_PROMPT.md`、`ACCEPTANCE_PROMPT.md`。
+- **影響**：不改科學身份。合約雜湊不變。
+- **狀態**：修訂已凍結，待 Codex 重新開始。
+  - 本 commit 加入修訂、改正兩份提示，並更新本快照（SHA 見正本或 `git log`）。
