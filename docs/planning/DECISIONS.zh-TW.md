@@ -620,4 +620,41 @@
 - **在哪實現**：規範草稿第 2 版 `claude/drafts/H1/CONVENTIONS_DRAFT.zh-TW.md`；清理清單 `claude/drafts/H1/CLEANUP_LIST_20261112.zh-TW.md`。
 - **影響**：H1.0 會讓 view ID、切格 ID 和運行 ID 各變一次；快取鍵和像素不變。
 - **狀態**：範圍已定。待使用者確認三件事（套件和子套件的名字、清理清單、兩個混合檔不拆）後，執行清理並凍結 H1.0 合約。
-  - 本 commit 把 `presentations/` 加進 `.gitignore`，並更新本快照；標記 `pre-h1.0` 打在本 commit（SHA 見正本或 `git log`）。
+  - commit `cfb6e3c52001103a206c256c1af46bcdce30f01c`（父節點 `7dbb644`）：`.gitignore` 加入 `presentations/`，並更新 `docs/planning/` 快照。標記 `pre-h1.0` 打在這個 commit。使用者已推送（2026-11-12 14:29 HKT 告知；已核對 `origin/feature` 等於 `cfb6e3c`，遠端有標記 `pre-h1.0`）。
+
+## D-025｜2026-11-12｜H1.0 定案：名字、清理的結果、合約凍結（SW-H1.0）
+
+- **使用者的決定（2026-11-12 14:29 HKT）**：確認 D-024 留下的三件事，並告知已推送。
+  1. 套件叫 `shade_watch`，子套件是 `engine`（引擎）、`region`（兩個角點）、`publish`（`shade_map` 函式、命令列、發布）、`fill`（填補）、`city`（城市）。
+  2. 清理清單 `claude/drafts/H1/CLEANUP_LIST_20261112.zh-TW.md` 照列出的執行。
+  3. `pipeline.py` 和引擎的 `shade_watch.py` 在 H1.0 不拆，原樣搬進 `shade_watch/engine/`，拆分留給 C2.0。
+  - 推送已核對：`origin/feature` 等於 `cfb6e3c`，遠端有標記 `pre-h1.0`。
+- **清理的結果（Claude 執行，2026-11-12 14:31–14:33 HKT）**：
+  - 刪除 160 個單位，共 21.28 GB、27,581 個檔案和連結：填補影響的反事實快取、V1 之前的快取、歷次開發和驗收用過的快取、引擎和診斷的工作目錄、請求專用的來源 view，以及從未通過驗收的候選（B1.0、B2.0）的 view 和快取。
+  - 這些候選的清單檔（manifest）和指標檔留在 `archive/removed/`（未納入 Git）。
+  - 核對：清單以外沒有任何單位被刪，保留的 100 個單位沒有變化。
+- **合約 `SW-H1.0`（`docs/packages/H1.0/CONTRACT.md`，項目 H1-01 至 H1-14）的要點**：
+  - **只改名字和位置，不改規則、政策值和像素。**
+  - 程式：`src/` 和 `tools/` 併成一個套件 `shade_watch/`；退役的程式和測試原樣搬到 `legacy/`。
+  - 執行時的位置：發布結果預設在 `runs/`，工作檔在 `work/`，快取在 `data/cache/horizon/`，view 和切格在 `data/derived/`；`outputs/` 和 `data/processed/` 不再存在。
+  - 資料：原始資料按城市分（`data/raw/hong_kong/`、`data/raw/rotterdam/`）；三組已驗收的結果搬到 `baselines/`；其餘歷史輸出搬到 `archive/`。全部是同一個磁碟上的改名，不複製、不刪除。
+  - 記錄：H1.0 之前各階段的文件整批搬到 `docs/records/`，逐位元不變。
+  - 身份：決定快取鍵的三個檔逐位元不動，既有快取改名後直接沿用；香港的 view 重建一次、鹿特丹重新登記一次，新舊內容要逐檔相同；運行 ID 會變。
+  - 授權的計算：重建香港 view 一次（上限 60 分鐘）、登記鹿特丹一次（上限 10 分鐘）、八項回歸 R-1 至 R-8（開發和驗收各上限 90 分鐘）。回歸重做 G1.0 的 HK-1 至 HK-4 和 NL-1、NL-2、NL-4，和基線逐像素比對。
+  - 使用者的 `config/machine.local.json` 只改四個值：`dsm_dir`、`output_root`、`cache_namespace`、`cities.rotterdam.raw_dir`。
+- **凍結前 Claude 對照實際程式和資料改正的草稿錯誤（2026-11-12 18:15–18:50 HKT）**：
+  - 填補影響的參照寫錯了檔：`nl4-result.json` 裡沒有依賴數，正確的是 `fill_impact.json` 的 `frames`（五幀）。
+  - 「鹿特丹切格的每個檔雜湊相同」做不到：`manifest.json`、`registration_report.json`、`current.json` 都含切格 ID。改為格子檔雜湊相同，三個 JSON 除指定欄位外相同。
+  - `outputs/README.md` 和 `data/processed/README.md` 原本會搬到同一個檔名，改為兩個不同的檔名。
+  - 補上 `shade_watch/__init__.py` 不得在匯入時載入子套件的要求，否則 `python -m shade_watch.engine.v1` 會把同一個模組載入兩次。
+  - R-1 的基線是 E2.0（V2）的舊目錄結構，改為按 UTC 時間配對 `combined/` 下的柵格。
+  - 驗收的計算上限由 75 分鐘改為 90 分鐘（G1.0 開發帳本裡同樣幾項合計約 53 分鐘，G1.0 第一次驗收曾因計算上限用完而未驗完）。
+  - 使用者的機器設定檔現在的值是 `cache_namespace: shade_map_raw`、沒有 `cities`，合約裡寫明四個新值。
+  - 三個一位元組的 `.gitkeep` 列入可刪除的例外。
+- **基線（Claude，2026-11-12 18:20 HKT）**：`archive/baseline_h1_0_20261112/listing.tsv`（SHA-256 `c82d5ed7644927d8384177254ccba4960117d5d482ebd1a2e27f13571b6b5afb`）列出 `data/raw`、`data/processed`、`outputs`、`archive` 的每個項目；同一資料夾有使用者機器設定檔的副本。摘要在 `claude/reviews/H1_BASELINE_20261112.md`。
+- **在哪實現**：repo `shade_watch_hk`，Mac；合約、兩份提示在 `docs/packages/H1.0/`，規範在 `docs/CONVENTIONS.md`。
+- **執行者**：Codex 開發；另一個對話獨立驗收；Claude 做靜態預檢、通過後寫現行文件、收尾 commit 並打標記 `mac-v1.0`；使用者推送。
+- **驗收標準**：H1-01 至 H1-14 全部 PASS。通過代表版面和名字符合規範、結果不變（四個香港區域和兩個鹿特丹運行逐像素相同、快取鍵不變、view 內容相同）；不代表觀測精度、鹿特丹地表標籤已驗證、Windows 可用，也不代表 `pipeline.py` 和 `shade_watch.py` 已整理乾淨。
+- **影響**：view ID、切格 ID、運行 ID 各變一次；快取鍵、政策版本、設定檔內容和像素不變。舊的 view、切格和輸出原樣留在 `archive/`。
+- **狀態**：合約已凍結，待 Codex 開發。
+  - 本 commit 加入合約、兩份提示、規範和基線摘要，並更新本快照（SHA 見正本或 `git log`）。
