@@ -39,3 +39,6 @@ config/*local*
 !/outputs/README.md
 /web/dist/
 /web/build/
+
+# Presentation working files stay local
+/presentations/
