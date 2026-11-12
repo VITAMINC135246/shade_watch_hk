@@ -1,0 +1,37 @@
+2026-11-13T06:06:45+0800
+## feature...origin/feature [ahead 7]
+Pre-write status from the pinned preflight was clean, including untracked files.
+This transcript directory had been created when the status above was recorded.
+bf30c1820df00d565f1815e05ebdef6c68b0698a a70132cd7194b9a5961a18ef4b8b110b41c0b832 Freeze SW-H1.3 (amendment 3 to the H1.0 contract): runtime write scope
+a70132cd7194b9a5961a18ef4b8b110b41c0b832 2442f2e2a93c0118ec5bc7a8697042928087639b Freeze SW-H1.2 (amendment 2 to the H1.0 contract): repair and targeted re-acceptance
+2442f2e2a93c0118ec5bc7a8697042928087639b 25c018d67d2bf685e51c741da4a0520b5efce7eb Record the first H1.0 independent acceptance (NOT ACCEPTED); refresh planning snapshot
+25c018d67d2bf685e51c741da4a0520b5efce7eb 84dc81fddb3b297881d921fe0125f6783780bbae Record the static pre-check of the H1.0 candidate 84dc81f; refresh planning snapshot
+84dc81fddb3b297881d921fe0125f6783780bbae dc7ad088cc3739aa4d54f6415088629328f92140 Implement H1.0 repository and data layout
+dc7ad088cc3739aa4d54f6415088629328f92140 fda9985a259bff640237d4fb80c9c0a7e3fba0a8 Freeze SW-H1.1 (amendment 1 to the H1.0 contract); correct the two H1.0 prompts
+fda9985a259bff640237d4fb80c9c0a7e3fba0a8 cfb6e3c52001103a206c256c1af46bcdce30f01c Freeze SW-H1.0 (one layout and one naming scheme, unchanged results); add conventions
+cfb6e3c52001103a206c256c1af46bcdce30f01c 7dbb644d6ebc01a64165238c9aa8c028a08c03d8 Ignore presentations/; record H1.0 scope decision (D-024); refresh planning snapshot
+cfb6e3c52001103a206c256c1af46bcdce30f01c
+80151b31c9e77c71dd0872f9d08a26a2f62532971344b7454ef48d31139945b5  docs/packages/H1.0/AMENDMENT_3.md
+5d1728681b126d44cedc9b4cd9b3556ea154bfce7eb5ce44744491d9de9a5077  docs/packages/H1.0/AMENDMENT_2.md
+8df2c93139687835ec21a0eaa98a4c89ae21cbe5949e6adb8c17138ed9bd13e7  docs/packages/H1.0/ACCEPTANCE_REPORT_84dc81fddb3b.md
+b45f0565d7601540e36329b843ae2eba85fe7a03ca03968d89d61f90f02edf8c  docs/packages/H1.0/CONTRACT.md
+b07551ce74958863e709625a980e0d727f05e3382902d566771f0830b22976ea  docs/packages/H1.0/AMENDMENT_1.md
+49dc90cba8738fd9907abbb6e0aadd3b0428b25c91fd4186a15d824029c21cba  docs/CONVENTIONS.md
+afb46c37742767e7480220d82527873ed389bb184623fef78b4a3a1d19e8144e  shade_watch/engine/horizon.py
+5ecc0495dd102596ab41903b5e174c142888ffc14664b81009164fbf176d3aa7  shade_watch/engine/spatial.py
+96a576d12ada9186319e4c8c5f1e626b06ab0aac5f7345a9c6083b9f1b6fe479  shade_watch/engine/v1_cache.py
+ffcc5e7fb9bc57c599c1b76778f10d7edb23f4cf6d301530dccc2126526451e0  requirements.lock.txt
+98c673a8f17f24ffd629dd8febe223f80687a5ce24c2a578355c34784621cf0e  requirements.tools.lock.txt
+c82d5ed7644927d8384177254ccba4960117d5d482ebd1a2e27f13571b6b5afb  archive/baseline_h1_0_20261112/listing.tsv
+0e7d500bb6c6400a1567d4a75baa02704e6cdb92fff8880b74f54c24dc68a2a9  data/derived/views/current-hk_cedd_2020.json
+764bffc9db24379f913f56bd64f8f66c36b1cc5430035a4210eca5b8c8843306  data/derived/views/current-nl_rotterdam_dsm05.json
+b48987b96107bfe9ab8d079fb6feddfd7ecc9cb5d26aefec175b6555d14b166e  data/derived/catalogues/rotterdam/current.json
+{"profile_id":"hk_cedd_2020","view_id":"412eae7951535ccf4f747be461ebcfe64f4e812d67a4d93f558150a718277d5e"}
+{"profile_id":"nl_rotterdam_dsm05","view_id":"11004a24a611e773a72b08cbc30e31cfda15ec462a18654105956bcdf15193eb"}
+{"city_id":"rotterdam","ingest_id":"ce865fa2895066d03fba441ec6a6ce80d0c8f41c387a1e21e0614136baeb36a3"}
+Network policy for the jobs is PROJ_NETWORK=OFF.
+ProductName:		macOS
+ProductVersion:		15.7.4
+BuildVersion:		24G517
+Python 3.12.5 (main, Sep 24 2026, 01:05:04) [Clang 17.0.0 (clang-1700.0.13.5)]
+numpy 2.5.3 rasterio 1.5.1 GDAL 3.12.4 PROJ 9.8.1

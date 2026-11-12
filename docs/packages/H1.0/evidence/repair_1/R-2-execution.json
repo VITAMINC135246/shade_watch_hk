@@ -1,0 +1,65 @@
+{
+  "run_id": "a561a8f6393cc1d98c44170481dd919e9929a5b19d442c0f6e631dff391a5bf5",
+  "frames": 146,
+  "name": "h1_0_dev2_lo_wu",
+  "work": "work/runs/h1_0_dev2_lo_wu-a561a8f6393c",
+  "publication": "runs/h1_0_dev2_20261113/h1_0_dev2_lo_wu",
+  "publication_format": "shade-map-publication-1.1",
+  "cache_gates": [
+    {
+      "spatial_key": "1fa3dce7426fab78241c205a2850c615a614eda95664168cd0ff8b138f14b72f",
+      "cache": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/cache/horizon/view_412eae795153",
+      "missing": [],
+      "lock_exists": true
+    },
+    {
+      "spatial_key": "541c148fa1e66b9d554f49702b055349f427203bf5e119ba68f03eb75e1cdf4f",
+      "cache": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/cache/horizon/view_412eae795153",
+      "missing": [],
+      "lock_exists": true
+    },
+    {
+      "spatial_key": "1b6da664057e2528b254f9461338b53a14fbafa207a3c7a686f5c19bc1190aed",
+      "cache": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/cache/horizon/view_412eae795153",
+      "missing": [],
+      "lock_exists": true
+    },
+    {
+      "spatial_key": "2db972332594da28337c5c9b21a3640e330fa8b5529ccc2a5355ff2049756fec",
+      "cache": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/cache/horizon/view_412eae795153",
+      "missing": [],
+      "lock_exists": true
+    }
+  ],
+  "source_view": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/work/source_views/3ef01721dd7177fab50aca95dc5faa06ad00bb91b8b72e4f5e7edb20ef70497f",
+  "computed": 0,
+  "reused": 156,
+  "batch_metrics": [
+    {
+      "action": "submit_run",
+      "attempts": 156,
+      "batch_id": "d830c4e14d7b2c36658cbdc81b0920bd713cad388d677678fb18013aef58b5f2",
+      "metrics": {
+        "computed": 0,
+        "final_result_hits": 0,
+        "horizon_calls": 0,
+        "input_inventory_calls": 1,
+        "max_in_flight": 4,
+        "media_peak_rss_bytes": 0,
+        "media_tracking": "known worker-reported PIDs; sub-sample spikes may be missed",
+        "memory_sample_seconds": 0.02,
+        "monitoring_gaps": "input admission sampled at start/end; continuous 20 ms loop starts after spawn",
+        "parent_peak_rss_bytes": 343441408,
+        "peak_new_disk_bytes": 81511214,
+        "peak_tree_rss_bytes": 1650425856,
+        "reused": 156,
+        "run_wall_seconds": 213.43575162498746,
+        "workers_peak_rss_bytes": 1308344320
+      },
+      "state": "SUCCEEDED",
+      "tasks": {
+        "SUCCEEDED": 152
+      }
+    }
+  ]
+}

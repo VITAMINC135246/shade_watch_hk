@@ -1,0 +1,17 @@
+{
+  "hong_kong": {
+    "id": "412eae7951535ccf4f747be461ebcfe64f4e812d67a4d93f558150a718277d5e",
+    "sha256": "c915c1061d58f46b1f798585ed7ae88ed1530564ee4935e8548cf7b407178af8",
+    "files_hashed_in_first_review": 14256
+  },
+  "rotterdam": {
+    "id": "11004a24a611e773a72b08cbc30e31cfda15ec462a18654105956bcdf15193eb",
+    "sha256": "1e8f2fa618e0ec9568ad7b974853250d4f565a3cf2316ee8415bf02a3241213c",
+    "files_hashed_in_first_review": 576
+  },
+  "catalogue": {
+    "id": "ce865fa2895066d03fba441ec6a6ce80d0c8f41c387a1e21e0614136baeb36a3",
+    "sha256": "8b7371e1f0274cf0f23ed0e9615491f1dc8fd0699f452eaca5fb8d85c0347dcc",
+    "files_hashed_in_first_review": 160
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "case": "R-2",
+  "frames": 146,
+  "rasters": 2628,
+  "different_pixels": 0,
+  "verified_sha256": 2628,
+  "reference": "baselines/measure_5regions_20261110/measure_lo_wu",
+  "publication": "runs/h1_0_dev2_20261113/h1_0_dev2_lo_wu",
+  "frame_counts_match": true,
+  "frame_folders_match": true,
+  "manifest_sha256": "0f87e8f7d2931e7a787f7ba5550b7ce12927a3f7e1c41ca1003cf2731832f626",
+  "table": "archive/reviews/h1_0_dev2_20261113/R-2-rasters.tsv"
+}

@@ -433,7 +433,7 @@ def _run_locked(config, out, cache_root, workers, started):
         grid, spatial_reference, placement = resolve_output(config, records, study)
         size, core_layout = resolve_core_layout(config, records, placement, grid)
         code_files = ['horizon.py', 'spatial.py']
-        identity = dict(algorithm=ALGORITHM, code={p:digest_file(ROOT/'src'/p) for p in code_files},
+        identity = dict(algorithm=ALGORITHM, code={p:digest_file(ROOT/'shade_watch/engine'/p) for p in code_files},
                         sources=records, grid=asdict(grid), search_m=1000, buffer_m=1000,
                         ray_step_m=.25, azimuth_step_deg=5, nodata_policy=NODATA_POLICY)
         key = fingerprint(identity)

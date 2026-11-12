@@ -1,0 +1,38 @@
+{
+  "pipeline": {
+    "reference_commit": "dc7ad088cc3739aa4d54f6415088629328f92140",
+    "fixture_sha256": "56b07fc1f3ac637d7e2d25cc484cc2016f6aecf5ce93b670a13b62af03644800",
+    "frames": 65,
+    "publication_rasters": 196,
+    "horizon_rasters": 27,
+    "different_pixels": 0,
+    "parent_module_names": [
+      "__main__",
+      "src.shade_watch"
+    ],
+    "candidate_module_names": [
+      "__main__",
+      "shade_watch.engine.shade_watch"
+    ],
+    "report_stdout": "archive/reviews/h1_0_dev2_20261113/synthetic-evidence/pipeline.stdout"
+  },
+  "publication": {
+    "nested": "runs/synthetic_nested",
+    "default": "runs/main",
+    "published_in_order": true,
+    "marked_roots": [
+      "runs/synthetic_nested",
+      "runs/main"
+    ],
+    "container_marker": false,
+    "used_manual_marker": false
+  },
+  "names": {
+    "probes": 13,
+    "no_runpy_double_import_warning": true,
+    "v2_missing_state_module_names": [
+      "__main__",
+      "shade_watch.engine.v2"
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "run_id": "119ff67c619aea729eb9252980e16237841290713dc3aff78c16e7977c1aba1d",
+  "frames": 146,
+  "name": "h1_0_dev2_tai_mo_shan",
+  "work": "work/runs/h1_0_dev2_tai_mo_shan-119ff67c619a",
+  "publication": "runs/h1_0_dev2_20261113/h1_0_dev2_tai_mo_shan",
+  "publication_format": "shade-map-publication-1.1",
+  "cache_gates": [
+    {
+      "spatial_key": "67cd7d98dbce0a4b3b5bca810be2f43b3278cfcc977671f9fa387e01bdf5fc25",
+      "cache": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/cache/horizon/view_412eae795153",
+      "missing": [],
+      "lock_exists": true
+    },
+    {
+      "spatial_key": "2a7c0516b89cc31e4f6bdc8d25a6d8359f4ba3eacbe8642f9d86a17b41598afe",
+      "cache": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/cache/horizon/view_412eae795153",
+      "missing": [],
+      "lock_exists": true
+    },
+    {
+      "spatial_key": "2d5ae633872ac96557a8a6bbd5dbea51e0687e6e6942299ec4a3bfa34768a7aa",
+      "cache": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/cache/horizon/view_412eae795153",
+      "missing": [],
+      "lock_exists": true
+    },
+    {
+      "spatial_key": "61c37c720487d41209973947f4c7f7d6ce63f801b4eba4494ec4e95462477259",
+      "cache": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/data/cache/horizon/view_412eae795153",
+      "missing": [],
+      "lock_exists": true
+    }
+  ],
+  "source_view": "/Volumes/My Passport for Mac/Projects/shade_watch_hk/work/source_views/465a3c1131dd13200e4bab43bd9da3c085e3b7437599bdc021bb360631900bff",
+  "computed": 0,
+  "reused": 156,
+  "batch_metrics": [
+    {
+      "action": "submit_run",
+      "attempts": 160,
+      "batch_id": "3b46647bd1615861ce37eb8758b58fff588300af81f754db8929aa7149e9423a",
+      "metrics": {
+        "computed": 0,
+        "final_result_hits": 0,
+        "horizon_calls": 0,
+        "input_inventory_calls": 1,
+        "max_in_flight": 4,
+        "media_peak_rss_bytes": 0,
+        "media_tracking": "known worker-reported PIDs; sub-sample spikes may be missed",
+        "memory_sample_seconds": 0.02,
+        "monitoring_gaps": "input admission sampled at start/end; continuous 20 ms loop starts after spawn",
+        "parent_peak_rss_bytes": 338788352,
+        "peak_new_disk_bytes": 145814100,
+        "peak_tree_rss_bytes": 1590951936,
+        "reused": 156,
+        "run_wall_seconds": 202.34094154200284,
+        "workers_peak_rss_bytes": 1252163584
+      },
+      "state": "SUCCEEDED",
+      "tasks": {
+        "SUCCEEDED": 152
+      }
+    }
+  ]
+}

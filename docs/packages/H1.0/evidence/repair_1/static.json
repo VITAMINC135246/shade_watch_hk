@@ -1,0 +1,60 @@
+{
+  "changed_product_files": [
+    "config/engine/study_area.md",
+    "config/machine.example.json",
+    "config/schema/shade_map_machine.schema.json",
+    "shade_watch/engine/pipeline.py",
+    "shade_watch/engine/shade_watch.py",
+    "shade_watch/engine/v2.py",
+    "tests/test_layout.py",
+    "web/viewer/README.md",
+    "web/viewer/request.js",
+    "web/viewer/results.js"
+  ],
+  "protected_cache_hashes": {
+    "horizon.py": "afb46c37742767e7480220d82527873ed389bb184623fef78b4a3a1d19e8144e",
+    "spatial.py": "5ecc0495dd102596ab41903b5e174c142888ffc14664b81009164fbf176d3aa7",
+    "v1_cache.py": "96a576d12ada9186319e4c8c5f1e626b06ab0aac5f7345a9c6083b9f1b6fe479"
+  },
+  "protected_function_sha256": {
+    "fingerprint": "d14d5472fa490180377783f43b51e5c25367518e7795f095474b6e22b31a9eb1",
+    "profile": "9e714de2199f4bafec4b481e435c1fd29499648959ea10aba857883f0bdacadf"
+  },
+  "unchanged_scopes": [
+    "shade_watch/fill",
+    "shade_watch/city",
+    "shade_watch/publish",
+    "docs/records",
+    "legacy",
+    "config/cities",
+    "config/sea_profiles",
+    "config/regions",
+    "config/engine/estimator.json",
+    "config/engine/processing.json",
+    "web/viewer/data/cells.json"
+  ],
+  "pointer_identities": {
+    "data/derived/views/current-hk_cedd_2020.json": "412eae7951535ccf4f747be461ebcfe64f4e812d67a4d93f558150a718277d5e",
+    "data/derived/views/current-nl_rotterdam_dsm05.json": "11004a24a611e773a72b08cbc30e31cfda15ec462a18654105956bcdf15193eb",
+    "data/derived/catalogues/rotterdam/current.json": "ce865fa2895066d03fba441ec6a6ce80d0c8f41c387a1e21e0614136baeb36a3"
+  },
+  "viewer_provenance": {
+    "view_id": "412eae7951535ccf4f747be461ebcfe64f4e812d67a4d93f558150a718277d5e",
+    "policy": "SW-SEA-POLICY-2.2",
+    "manifest_sha256": "c915c1061d58f46b1f798585ed7ae88ed1530564ee4935e8548cf7b407178af8"
+  },
+  "layout_reference_patterns": [
+    "\\b(?:from|import)[ \\t]+(?:src|tools)(?=\\s|\\.|,|$)",
+    "(?<![\\w.-])(?:src/|tools/|outputs/|data/processed\\b|data/raw/dsm\\b)",
+    "\\b(?:shade_map_work|region_views|sea2_2_diagnostic_work|dsm_views|shade_v1)\\b",
+    "'(?:src|tools|outputs)'|\"(?:src|tools|outputs)\""
+  ],
+  "layout_reference_hits": [],
+  "machine_default": "runs/main",
+  "machine_changed_keys_from_planner": [
+    "cache_namespace",
+    "cities",
+    "dsm_dir",
+    "output_root"
+  ]
+}

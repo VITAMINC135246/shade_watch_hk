@@ -1,0 +1,13 @@
+{
+  "case": "R-4",
+  "frames": 146,
+  "rasters": 2628,
+  "different_pixels": 0,
+  "verified_sha256": 2628,
+  "reference": "baselines/measure_5regions_20261110/measure_central",
+  "publication": "runs/h1_0_dev2_20261113/h1_0_dev2_central",
+  "frame_counts_match": true,
+  "frame_folders_match": true,
+  "manifest_sha256": "bc14176e51049d938fb5568d8e97c2089654ba96fcd8238b6390d1abecad57e9",
+  "table": "archive/reviews/h1_0_dev2_20261113/R-4-rasters.tsv"
+}

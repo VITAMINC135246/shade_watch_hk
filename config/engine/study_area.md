@@ -21,17 +21,17 @@ below with their CRS and ask Codex to transform them before proceeding.
 
 ## 2. Spatial Scope — native tile default, preserved custom extent
 
-- Default output mode: **native_tile**, controlled by `config/processing.json`; read tile bounds, dimensions, resolution and CRS from GeoTIFF metadata. The saved location selects the tile. The effective output centre and shared solar reference are the selected native tile’s geometric centre; original coordinates above are preserved. West/north edges are included; east/south edges are excluded.
+- Default output mode: **native_tile**, controlled by `config/engine/processing.json`; read tile bounds, dimensions, resolution and CRS from GeoTIFF metadata. The saved location selects the tile. The effective output centre and shared solar reference are the selected native tile’s geometric centre; original coordinates above are preserved. West/north edges are included; east/south edges are excluded.
 - Preserved custom output area: **600 m east–west × 450 m north–south**
 - Custom output area size: **270,000 m² (0.27 km²)**
 - Custom placement: Explicit custom mode only; centred on the location specified above unless `custom_center_wgs84` or `--center-lat` / `--center-lon` overrides it
-- Native mosaic example: `config/mosaic_6tiles.json`, six contiguous tiles in 2 columns × 3 rows; complete native bounds, one native tile per task, one shared union-centre solar reference
+- Native mosaic example: `legacy/config/mosaic_6tiles.json`, six contiguous tiles in 2 columns × 3 rows; complete native bounds, one native tile per task, one shared union-centre solar reference
 - Target DSM resolution: **0.5 m**, preferably the native source resolution
 - Custom output dimensions at 0.5 m: **1,200 × 900 pixels**
 - Maximum horizontal ray-search distance: **1,000 m**
 - DSM input buffer: **1,000 m on every side of each computational core**, or 2,000 pixels at 0.5 m
 - Computational work unit: **one native tile's dimensions**, read from the study-centre tile metadata (currently 1,500 columns × 1,200 rows). A native-tile output is one spatial task.
-- Worker count: **1** by default; see `config/processing.json`. Fixed-size cores remain an explicit optional mode.
+- Worker count: **1** by default; see `config/engine/processing.json`. Fixed-size cores remain an explicit optional mode.
 - Custom single-region input bounding extent: **2.6 km east–west × 2.45 km north–south**
 - Scope expansion: Expanded from 100 m × 100 m to 600 m × 450 m at the user's request.
 

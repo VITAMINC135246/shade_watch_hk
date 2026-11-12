@@ -1,0 +1,11 @@
+--- before/config/machine.local.json
++++ after/config/machine.local.json
+@@ -2,7 +2,7 @@
+   "schema": "shade-map-machine-1.0",
+   "dsm_dir": "data/raw/hong_kong/dsm_cedd_2020/D12.DSM.TIFF",
+   "sea_profile": "hk_cedd_2020",
+-  "output_root": "runs",
++  "output_root": "runs/main",
+   "cache_namespace": "raw",
+   "workers": 4,
+   "memory_budget_mb": 8192,

@@ -1,0 +1,38 @@
+{
+  "baseline_entries": 213911,
+  "current_entries": 228588,
+  "added_entries": 14678,
+  "added_roots": [
+    "runs/h1_0_dev2_20261113",
+    "work/locks/h1_0_dev2_central.lock",
+    "work/locks/h1_0_dev2_hk1.lock",
+    "work/locks/h1_0_dev2_lo_wu.lock",
+    "work/locks/h1_0_dev2_nl1.lock",
+    "work/locks/h1_0_dev2_nl2.lock",
+    "work/locks/h1_0_dev2_tai_mo_shan.lock",
+    "work/runs/h1_0_dev2_central-5226f8841ad3",
+    "work/runs/h1_0_dev2_hk1-f4ff2f6fc96d",
+    "work/runs/h1_0_dev2_lo_wu-a561a8f6393c",
+    "work/runs/h1_0_dev2_nl1-2b88ec43767a",
+    "work/runs/h1_0_dev2_nl2-21b8ae490d46",
+    "work/runs/h1_0_dev2_tai_mo_shan-119ff67c619a"
+  ],
+  "prior_cache_namespaces": [
+    "data/cache/horizon/fill_impact_31a77c5711f1",
+    "data/cache/horizon/fill_impact_d22f3d259b66",
+    "data/cache/horizon/raw_hong_kong",
+    "data/cache/horizon/raw_rotterdam",
+    "data/cache/horizon/view_11004a24a611",
+    "data/cache/horizon/view_412eae795153"
+  ],
+  "prior_cache_entries": 2310,
+  "changed_existing_cache_entries": [],
+  "changed_existing_paths": [],
+  "removed_paths": [
+    "runs/.shade_map_root.json"
+  ],
+  "unexpected_additions": [],
+  "forbidden_paths": [],
+  "checked_utc": "2026-11-12T23:03:17.670603+00:00",
+  "new_fill_impact_namespace": null
+}

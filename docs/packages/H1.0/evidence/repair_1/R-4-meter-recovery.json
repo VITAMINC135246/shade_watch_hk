@@ -1,0 +1,13 @@
+{
+  "label": "R-4",
+  "start_utc": "2026-11-12T22:48:02.235000+00:00",
+  "start_source": "meter launch transcript",
+  "observed_complete_utc": "2026-11-12T22:56:52+00:00",
+  "stdout_mtime_utc": "2026-11-12T22:56:48+00:00",
+  "conservative_budget_seconds": 530.765,
+  "recorded_invocation_seconds": 522.8489416670054,
+  "measured_engine_phase_peak_rss_bytes": 1611104256,
+  "whole_job_peak_rss_bytes": null,
+  "full_meter_row_available": false,
+  "detail": "The publication and CLI result were complete after the tool connection reset. The meter's final row was absent. The debit includes the first confirmed-complete time rounded up by one second. RSS is the measured engine phase only."
+}

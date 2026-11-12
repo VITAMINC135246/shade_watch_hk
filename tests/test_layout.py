@@ -18,6 +18,7 @@ OLD_REFERENCES = re.compile(
     r'|(?<![\w.-])(?:src|tools|outputs)/'
     r'|(?<![\w.-])(?:data/processed|data/raw/dsm)(?![\w-])'
     r'|(?<![\w-])(?:shade_map_work|region_views|sea2_2_diagnostic_work|dsm_views|shade_v1)(?![\w-])'
+    r"""|(?P<quote>['"])(?:src|tools|outputs)(?P=quote)"""
 )
 HISTORICAL_DIRECTORIES = (
     'docs/records/', 'docs/planning/', 'docs/packages/', 'legacy/',

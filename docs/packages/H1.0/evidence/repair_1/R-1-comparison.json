@@ -1,0 +1,13 @@
+{
+  "case": "R-1",
+  "frames": 65,
+  "rasters": 780,
+  "different_pixels": 0,
+  "pixel_read": 780,
+  "reference": "baselines/e2_cheung_chau_20260107/combined",
+  "publication": "runs/h1_0_dev2_20261113/h1_0_dev2_hk1",
+  "frame_counts_match": true,
+  "frame_folders_match": true,
+  "manifest_sha256": "65f8e8f1b3008a1e4fa39de88b3b0e0b0a8569c5554e39346a839700cb455c91",
+  "table": "archive/reviews/h1_0_dev2_20261113/R-1-rasters.tsv"
+}

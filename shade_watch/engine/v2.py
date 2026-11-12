@@ -7,7 +7,6 @@ import json
 import math
 from pathlib import Path
 import shutil
-import sys
 import time
 
 import psutil
@@ -17,9 +16,6 @@ from .pipeline import fingerprint
 from .spatial import Grid, digest_file
 from .v1_cache import entry_paths, source_identity
 from .v2_state import Store, local_filesystem
-
-if __name__ in ("__main__", "__mp_main__") and __spec__ is not None:
-    sys.modules[__spec__.name] = sys.modules[__name__]
 
 SCHEMA = "shade-watch-v2-batch-1.0"
 MEMORY_CEILING = 12 * 1024**3

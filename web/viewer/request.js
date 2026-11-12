@@ -97,7 +97,7 @@ export async function renderRequest(root) {
                 <label class="field">Machine config<input name="machine" class="mono" value="config/machine.local.json"></label>
                 <label class="field">Save the region config as<input name="path" class="mono" value=""></label>
               </div>
-              <label class="field"><span>Output folder (the machine config's <code>output_root</code>)</span><input name="output_root" class="mono" value="runs"></label>
+              <label class="field"><span>Output folder (the machine config's <code>output_root</code>)</span><input name="output_root" class="mono" value="runs/main"></label>
             </fieldset>
           </form>
         </section>
@@ -213,7 +213,7 @@ export async function renderRequest(root) {
       + `<dl class="facts">${facts.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>`;
     $('#json').textContent = errors.length ? '// Fix the errors above first.' : configText(cfg);
     $('#download').disabled = errors.length > 0;
-    $('#commands').textContent = commands(cfg, path, form.machine.value.trim() || 'config/machine.local.json', form.output_root.value.trim() || 'runs');
+    $('#commands').textContent = commands(cfg, path, form.machine.value.trim() || 'config/machine.local.json', form.output_root.value.trim() || 'runs/main');
   }
 
   function estimateSpace(rect, cfg, facts, warnings, errors) {

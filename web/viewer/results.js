@@ -48,7 +48,7 @@ export async function renderResults(root) {
           <h2>Run</h2>
           <div class="grid-run">
             <label class="field"><span>Output folder (the machine config's <code>output_root</code>)</span>
-              <input id="root-input" class="mono" value="${esc(params.root || 'runs')}">
+              <input id="root-input" class="mono" value="${esc(params.root || 'runs/main')}">
             </label>
             <div class="actions tight">
               <button type="button" id="list-runs">List runs</button>
@@ -325,7 +325,7 @@ export async function renderResults(root) {
       <details><summary>Dependency codes</summary>${Object.entries(DEPENDENCY).map(([k, v]) => `<div class="small"><span class="mono">${k}</span> ${esc(v)}</div>`).join('')}</details>`;
   }
 
-  if (params.run) loadRun(params.root || 'runs', params.run, params.frame);
+  if (params.run) loadRun(params.root || 'runs/main', params.run, params.frame);
   else listRuns($('#root-input').value.trim());
 }
 

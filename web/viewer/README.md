@@ -24,7 +24,7 @@ Open <http://127.0.0.1:8765/web/viewer/>. Stop the server with Ctrl-C.
 
 ## Results page
 
-Address form: `#/results?root=<output_root>&run=<name>&frame=<YYYYMMDD>/<HHMM>&layer=shade|quality|surface`.
+Address form: `#/results?root=<output_root>&run=<name>&frame=<YYYYMMDD>/<HHMM>&layer=shade|quality|surface`. The default output root is `runs/main`.
 
 **Files read:** `run_manifest.json`, `summary.json`, `<date>/<time>/frame.json`, `<date>/<time>/<layer>/<cell>.tif`, and `<output_root>/_diagnostics/fill_impact/<name>/fill_impact.json`. It never reads JPG or MP4 files.
 
@@ -62,7 +62,7 @@ Address form: `#/results?root=<output_root>&run=<name>&frame=<YYYYMMDD>/<HHMM>&l
 | `codes.js`, `stats.js` | Codes, colours and groups from `docs/OUTPUT_CODES.md`; group statistics and bounds |
 | `sun.js`, `hk1980.js` | Port of `shade_watch/engine/solar.py` daylight logic; WGS84 ↔ HK1980 approximation |
 | `util.js` | Fetch, directory listing of `http.server`, hash state, download |
-| `data/cells.json` | Native cell index derived from B2.2 view `8ee51b01…` (manifest SHA-256 `1a7a43bd…1c52`) |
+| `data/cells.json` | Native cell index derived from B2.2 view `412eae7951535ccf4f747be461ebcfe64f4e812d67a4d93f558150a718277d5e` (manifest SHA-256 `c915c1061d58f46b1f798585ed7ae88ed1530564ee4935e8548cf7b407178af8`) |
 | `make_cells_index.py` | Rebuilds `data/cells.json` from the current view: `python3 web/viewer/make_cells_index.py` |
 
 There are no external libraries, fonts or network requests. `window.shadeMapResults` is a test hook used by the automated checks.

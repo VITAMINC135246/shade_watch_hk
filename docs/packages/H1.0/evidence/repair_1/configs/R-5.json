@@ -1,0 +1,22 @@
+{
+  "schema": "shade-map-region-1.1",
+  "city": "rotterdam",
+  "name": "h1_0_dev2_nl1",
+  "crs": "projected",
+  "lower_left": [
+    91875,
+    436875
+  ],
+  "upper_right": [
+    93125,
+    438125
+  ],
+  "time": {
+    "mode": "daylight",
+    "dates": [
+      "2026-06-21",
+      "2026-12-22"
+    ],
+    "interval_minutes": 30
+  }
+}

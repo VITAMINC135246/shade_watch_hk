@@ -32,9 +32,6 @@ from rasterio.transform import from_origin
 from .horizon import direct_ray_reference, horizon_at_output, pixel_centred_horizon
 from .solar import HKT, daylight_bounds, daylight_samples, position
 
-if __name__ in ("__main__", "__mp_main__") and __spec__ is not None:
-    sys.modules[__spec__.name] = sys.modules[__name__]
-
 ROOT = Path(__file__).resolve().parents[2]
 RAW = ROOT / "data/raw/hong_kong/dsm_cedd_2020/D12.DSM.TIFF"
 OUT = ROOT / "work/engine/600x450"

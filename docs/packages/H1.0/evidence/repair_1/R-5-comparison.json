@@ -1,0 +1,13 @@
+{
+  "case": "R-5",
+  "frames": 50,
+  "rasters": 900,
+  "different_pixels": 0,
+  "verified_sha256": 900,
+  "reference": "baselines/g1_dev_20261111/g1_dev_nl1",
+  "publication": "runs/h1_0_dev2_20261113/h1_0_dev2_nl1",
+  "frame_counts_match": true,
+  "frame_folders_match": true,
+  "manifest_sha256": "b8b411b30d224471898cfeb14a53950b5e6d34029495dfa9acef90f9acfeb62e",
+  "table": "archive/reviews/h1_0_dev2_20261113/R-5-rasters.tsv"
+}

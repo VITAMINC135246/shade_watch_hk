@@ -19,7 +19,7 @@
     "output_root": {
       "type": "string",
       "minLength": 1,
-      "default": "runs"
+      "default": "runs/main"
     },
     "cache_namespace": {
       "type": "string",

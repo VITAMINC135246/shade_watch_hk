@@ -1,0 +1,23 @@
+{
+  "schema": "shade-map-region-1.0",
+  "name": "h1_0_dev2_tai_mo_shan",
+  "crs": "hk1980",
+  "lower_left": [
+    830750,
+    828800
+  ],
+  "upper_right": [
+    832250,
+    830000
+  ],
+  "time": {
+    "mode": "daylight",
+    "dates": [
+      "2026-06-21",
+      "2026-12-22"
+    ],
+    "interval_minutes": 10
+  },
+  "dsm_source": "sea-2.2",
+  "full_image": "auto"
+}
