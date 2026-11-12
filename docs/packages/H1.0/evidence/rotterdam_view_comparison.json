@@ -1,0 +1,59 @@
+{
+  "ingestion": {
+    "current_equal_except": [
+      "ingest_id"
+    ],
+    "ingest_id": "ce865fa2895066d03fba441ec6a6ce80d0c8f41c387a1e21e0614136baeb36a3",
+    "manifest_equal_except": [
+      "ingest_id",
+      "ingestion_code_sha256"
+    ],
+    "old_ingest_id": "7272bb1ae35aa4f04e78b50d0f72548caae1bee8b7d36bbb1760565aab4bd634",
+    "raw_sheet_hashes": [
+      {
+        "bytes": 457826580,
+        "declared_nodata": 3.4028234663852886e+38,
+        "name": "R_37FZ1.tif",
+        "sha256": "7a679cf84482cf4397e41992e20a42351a9e266a59e9edf2225b1452e13b3431"
+      },
+      {
+        "bytes": 422003345,
+        "declared_nodata": 3.4028234663852886e+38,
+        "name": "R_37HN1.tif",
+        "sha256": "15d2cf2027567128dab7727c2f96ef04d300983752f75be9dff6ad0090269ff5"
+      }
+    ],
+    "report_equal_except": [
+      "ingest_id"
+    ],
+    "tile_hashes": 160
+  },
+  "view": {
+    "auxiliary_hashes": 0,
+    "manifest_equal_except": [
+      "view_id",
+      "build_code_sha256"
+    ],
+    "manifest_sha256": "1e8f2fa618e0ec9568ad7b974853250d4f565a3cf2316ee8415bf02a3241213c",
+    "old_manifest_sha256": "10cb4e383fe99fa440679d7b70d6219510af071b2d531367f6236fbcd5813dbf",
+    "old_view_id": "4b2c2e76ca8b7d5ee56932deb3c8197471b5d16f6164e8c50024e1ed805be843",
+    "pointer_equal_except": [
+      "view_id",
+      "header_inventory[*].mtime_ns"
+    ],
+    "profile": "nl_rotterdam_dsm05",
+    "raw_catalogue_entries": 160,
+    "raw_sample_sha256": {},
+    "surface_hashes": 288,
+    "tile_hashes": 288,
+    "totals": {
+      "0": 214048125,
+      "1": 18211404,
+      "2": 0,
+      "255": 0,
+      "3": 17691564,
+      "4": 156048907
+    },
+    "view_id": "11004a24a611e773a72b08cbc30e31cfda15ec462a18654105956bcdf15193eb"
+  }
+}

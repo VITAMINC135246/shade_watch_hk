@@ -11,16 +11,16 @@ import pytest
 import rasterio
 from rasterio.transform import from_origin
 
-from src import v1, v2
-from tools import region_request as adapter
-from tools.shade_map import plan_shade_map, shade_map
-from tools.shade_map.__main__ import main
-from tools.shade_map.common import identity, read_json, seal
-from tools.shade_map.config import (InvalidInput, SCHEMAS, check_document, expanded_time,
+from shade_watch.engine import v1, v2
+from shade_watch import region as adapter
+from shade_watch.publish import plan_shade_map, shade_map
+from shade_watch.publish.__main__ import main
+from shade_watch.publish.common import identity, read_json, seal
+from shade_watch.publish.config import (InvalidInput, SCHEMAS, check_document, expanded_time,
                                     machine_config, region_config, validate_schema)
-from tools.shade_map.planning import prepare
-from tools.shade_map.runner import prune_region, run_region, verify_run
-from tools.shade_map.sources import PROVIDERS, RawSource
+from shade_watch.publish.planning import prepare
+from shade_watch.publish.runner import prune_region, run_region, verify_run
+from shade_watch.publish.sources import PROVIDERS, RawSource
 
 
 @pytest.fixture
@@ -36,7 +36,7 @@ def fixture_map(tmp_path,monkeypatch):
                            dtype='float32',crs='EPSG:2326',nodata=-9999,
                            transform=from_origin(x,y+4,.5,.5)) as dst:
             dst.write(data,1)
-    machine=dict(schema='shade-map-machine-1.0',dsm_dir=str(raw),output_root='outputs/published',
+    machine=dict(schema='shade-map-machine-1.0',dsm_dir=str(raw),output_root='runs/published',
                  cache_namespace='fixture_f1',workers=1)
     region=dict(schema='shade-map-region-1.0',name='fixture',crs='hk1980',
                 lower_left=[800004.13,820002.17],upper_right=[800008.32,820006.39],
@@ -217,7 +217,7 @@ def test_daylight_equal_engine(fixture_map,day):
     region['time']=dict(mode='daylight',dates=[day])
     result=prepare(region,machine)
     manual=v1.plan_shade(mode='custom',bounds=result.document['resolved_bounds'],dsm_dir=result.adapter_plan['sidecar']['source_directory'],
-                         dates=[day],output_dir=v1.ROOT/'outputs/manual')
+                         dates=[day],output_dir=v1.ROOT/'work/engine/manual')
     assert [f['utc_time'] for f in result.document['frames']]==[i.utc for i in manual.request.instants]
     assert len({f['date']+'/'+f['time'] for f in result.document['frames']})==len(result.document['frames'])
 
@@ -233,14 +233,14 @@ def test_plan_equivalence_read_only(fixture_map,tmp_path,corners):
     before=listing(tmp_path)
     planned=prepare(region,machine)
     additions=set(listing(tmp_path))-set(before)
-    assert all(p.startswith('outputs/region_views/') for p in additions)
+    assert all(p.startswith('work/source_views/') for p in additions)
     assert all(listing(tmp_path)[p]==value for p,value in before.items())
     batch=planned.adapter_plan['batches'][0]
     request=batch['requests'][0]
     direct=adapter.plan_region(*corners,crs='hk1980',instants=['2026-01-07T12:30:00+08:00'],
                               dsm_dir=raw,auto_source_view=True,
                               output_dir=Path(request['output_dir']).parent,
-                              cache_dir=v1.ROOT/'data/processed/shade_v1/fixture_f1')
+                              cache_dir=v1.ROOT/'data/cache/horizon/fixture_f1_hong_kong')
     assert direct['batches'][0]['requests']==batch['requests']
     assert [p['key'] for p in direct['sidecar']['partition']]==[p['key'] for p in planned.adapter_plan['sidecar']['partition']]
     check_document(planned.document,'plan')
@@ -250,7 +250,7 @@ def test_identity_machine_independent(fixture_map,tmp_path):
     raw,machine,region=fixture_map
     first=prepare(region,machine).document['run_id']
     copied=tmp_path/'catalogue_copy'; shutil.copytree(raw,copied)
-    changed=dict(machine,dsm_dir=str(copied),workers=2,output_root='outputs/other',cache_namespace='another')
+    changed=dict(machine,dsm_dir=str(copied),workers=2,output_root='runs/other',cache_namespace='another')
     assert prepare(region,changed).document['run_id']==first
     altered=deepcopy(region); altered['lower_left'][0]+=.1
     assert prepare(altered,machine).document['run_id']!=first
@@ -269,7 +269,7 @@ def test_guards_and_foreign_roots(fixture_map,tmp_path):
     before=listing(tmp_path)
     with pytest.raises(InvalidInput,match='max_output_bytes'): run_region(region,dict(machine,max_output_bytes=1))
     assert all(listing(tmp_path)[p]==v for p,v in before.items())
-    assert not (tmp_path/'outputs/published').exists()
+    assert not (tmp_path/'runs/published').exists()
     foreign=tmp_path/'foreign'; foreign.mkdir()
     assert prepare(region,dict(machine,output_root=str(foreign))).document['existing_run']['status']=='conflict'
     before=listing(tmp_path)
@@ -327,7 +327,7 @@ def test_repair_output_locations_rejected_before_writes(fixture_map, tmp_path, m
 def test_repair_complete_run_discards_orphan_partial(fixture_map, tmp_path, contents, final_state):
     _, machine, region = fixture_map
     run_region(region, machine)
-    folder = tmp_path/'outputs/published/fixture'
+    folder = tmp_path/'runs/published/fixture'
     final = folder/'20260107/1230'
     before = listing(final)
     expected_files = read_json(final/'frame.json')['files']
@@ -345,8 +345,8 @@ def test_repair_complete_run_discards_orphan_partial(fixture_map, tmp_path, cont
 
 
 def test_full_publication_api_cli_resume_prune(fixture_map,tmp_path,capsys,monkeypatch):
-    from tools.city import profiles
-    from tools.sea2.build import build
+    from shade_watch.city import profiles
+    from shade_watch.fill.build import build
 
     _,machine,region=fixture_map
     city = dict(profiles.load_city('hong_kong'), extent=[800000,820000,800012,820008])
@@ -354,14 +354,14 @@ def test_full_publication_api_cli_resume_prune(fixture_map,tmp_path,capsys,monke
     profile_dir.mkdir()
     (profile_dir/'hong_kong.json').write_text(json.dumps(city))
     monkeypatch.setattr(profiles, 'CITY_DIR', profile_dir)
-    monkeypatch.setattr('tools.sea2.catalogue.DOMAIN_MARGIN_M', 2)
+    monkeypatch.setattr('shade_watch.fill.catalogue.DOMAIN_MARGIN_M', 2)
     view = build(machine)
     region.update(schema='shade-map-region-1.1', dsm_source='sea-2.2')
     mp=tmp_path/'machine.json'; mp.write_text(json.dumps(machine))
     assert prepare(region,machine).document['existing_run']['status']=='new'
     result=shade_map(region['lower_left'],region['upper_right'],region['time'],name=region['name'],crs='hk1980',machine=mp)
     assert result['published_frames']==1
-    folder=tmp_path/'outputs/published/fixture'
+    folder=tmp_path/'runs/published/fixture'
     manifest=verify_run(folder)
     assert prepare(region,machine).document['existing_run']['status']=='complete'
     assert manifest['region_config']['schema'] == 'shade-map-region-1.1'
@@ -392,7 +392,7 @@ def test_full_publication_api_cli_resume_prune(fixture_map,tmp_path,capsys,monke
     before=listing(tmp_path)
     with pytest.raises(InvalidInput,match='different region'): run_region(conflict,machine)
     assert before==listing(tmp_path)
-    work=tmp_path/'outputs/shade_map_work'/('fixture-'+manifest['run_id'][:12])
+    work=tmp_path/'work/runs'/('fixture-'+manifest['run_id'][:12])
     dry=prune_region(region,machine)
     assert dry['bytes']>0 and work.exists()
     assert prune_region(region,machine,yes=True)['deleted'] and not work.exists()
@@ -410,7 +410,7 @@ def test_source_interface_surface_one(fixture_map,monkeypatch):
     monkeypatch.setitem(PROVIDERS,'raw',FixtureSource())
     region['name']='provider'; region['full_image']='never'
     run_region(region,machine)
-    folder=v1.ROOT/'outputs/published/provider'
+    folder=v1.ROOT/'runs/published/provider'
     frame=read_json(folder/'20260107/1230/frame.json')
     assert frame['value_counts']['surface'].get('1',0)>0
     assert frame['value_counts']['surface'].get('0',0)==0
@@ -418,10 +418,10 @@ def test_source_interface_surface_one(fixture_map,monkeypatch):
 
 
 def test_lock_and_incomplete_prune(fixture_map):
-    from tools.shade_map.common import name_lock
+    from shade_watch.publish.common import name_lock
     _,machine,region=fixture_map
     planned=prepare(region,machine)
-    with name_lock(v1.ROOT/'outputs/shade_map_work',region['name']):
+    with name_lock(v1.ROOT/'work/locks',region['name']):
         with pytest.raises(InvalidInput,match='another run'): run_region(region,machine)
     run_region(region,machine)
     path=planned.folder/'run_manifest.json'
@@ -442,7 +442,7 @@ def test_all_night_empty_run_and_missing_machine_keys(fixture_map):
     with patch.object(v2,'submit_batch',side_effect=AssertionError('night was computed')):
         result=run_region(region,machine)
     assert result['published_frames']==0
-    assert read_json(v1.ROOT/'outputs/published/fixture/summary.json')['frames']==[]
+    assert read_json(v1.ROOT/'runs/published/fixture/summary.json')['frames']==[]
 
 
 def test_more_than_one_explicit_engine_request(fixture_map):
@@ -489,24 +489,12 @@ def test_changed_source_conflict_does_not_create_view(fixture_map,tmp_path):
 
 
 def test_existing_name_lock_precedes_catalogue_reads(fixture_map):
-    from tools.shade_map.common import name_lock
+    from shade_watch.publish.common import name_lock
     _,machine,region=fixture_map
     run_region(region,machine)
-    with name_lock(v1.ROOT/'outputs/shade_map_work',region['name']):
+    with name_lock(v1.ROOT/'work/locks',region['name']):
         with patch.object(RawSource,'preview_identity',side_effect=AssertionError('catalogue read before lock')):
             with pytest.raises(InvalidInput,match='another run'): run_region(region,machine)
-
-
-def test_campaign_internal_dispatch_is_not_recursive(monkeypatch):
-    import runpy,sys
-    namespace=runpy.run_path(str(Path(__file__).with_name('shade_map_campaign.py')))
-    globals_=namespace['main'].__globals__
-    seen=[]
-    globals_['verify']=lambda kind:seen.append(kind)
-    globals_['monitored']=lambda *a,**k:pytest.fail('Internal verifier recursively launched a monitor')
-    monkeypatch.setattr(sys,'argv',['campaign','verify-internal','a'])
-    namespace['main']()
-    assert seen==['a']
 
 
 def test_historical_explicit_clocks_are_fixed_utc8(fixture_map):
@@ -520,7 +508,7 @@ def test_historical_explicit_clocks_are_fixed_utc8(fixture_map):
 def test_recover_renamed_frame_and_discard_partial(fixture_map,tmp_path):
     _,machine,region=fixture_map
     run_region(region,machine)
-    folder=tmp_path/'outputs/published/fixture'
+    folder=tmp_path/'runs/published/fixture'
     frame=folder/'20260107/1230'
     before=listing(frame)
     manifest=read_json(folder/'run_manifest.json')

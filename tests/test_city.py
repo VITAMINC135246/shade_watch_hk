@@ -11,17 +11,17 @@ import pytest
 import rasterio
 from rasterio.transform import from_origin
 
-from src import v1
-from src.solar import daylight_bounds, daylight_samples
-from tools.city import profiles
-from tools.city.__main__ import main as register_cli
-from tools.city.ingest import register
-from tools.sea2.fill_impact import fill_impact
-from tools.shade_map import plan_shade_map, shade_map
-from tools.shade_map.__main__ import main as shade_cli
-from tools.shade_map.common import digest, read_json
-from tools.shade_map.config import InvalidInput
-from tools.shade_map.planning import prepare
+from shade_watch.engine import v1
+from shade_watch.engine.solar import daylight_bounds, daylight_samples
+from shade_watch.city import profiles
+from shade_watch.city.__main__ import main as register_cli
+from shade_watch.city.ingest import register
+from shade_watch.fill.fill_impact import fill_impact
+from shade_watch.publish import plan_shade_map, shade_map
+from shade_watch.publish.__main__ import main as shade_cli
+from shade_watch.publish.common import digest, read_json
+from shade_watch.publish.config import InvalidInput
+from shade_watch.publish.planning import prepare
 
 LEFT, BOTTOM = 92500, 437500
 SENTINEL = 32768.0
@@ -47,13 +47,13 @@ def city_fixture(tmp_path, monkeypatch):
     city_path = directory / 'rotterdam.json'
     monkeypatch.setattr(profiles, 'CITY_DIR', directory)
     monkeypatch.setattr(v1, 'ROOT', tmp_path)
-    monkeypatch.setattr('tools.sea2.catalogue.DOMAIN_MARGIN_M', 2)
+    monkeypatch.setattr('shade_watch.fill.catalogue.DOMAIN_MARGIN_M', 2)
 
     raw = tmp_path / 'data/raw/nl'
     raw.mkdir(parents=True)
     (raw / '.hidden.tif').write_bytes(b'hidden')
     machine = dict(schema='shade-map-machine-1.0', dsm_dir='missing_hk',
-                   output_root='outputs/maps', cache_namespace='fixture',
+                   output_root='runs/maps', cache_namespace='fixture',
                    cities={'rotterdam': {'raw_dir': 'data/raw/nl'}})
     machine_path = write_json(tmp_path / 'machine.json', machine)
 
@@ -90,7 +90,7 @@ def region(**changes):
 
 
 def test_frozen_profiles():
-    contract = Path('docs/prompts/G1/ACCEPTANCE_CONTRACT.md').read_text()
+    contract = Path('docs/records/prompts/G1/ACCEPTANCE_CONTRACT.md').read_text()
     hk, nl, sea = [json.loads(block.split('```')[0]) for block in contract.split('```json')[1:]]
     assert profiles.load_city('hong_kong') == hk
     assert profiles.load_city('rotterdam') == nl
@@ -104,8 +104,8 @@ def test_lossless_registration_and_repeat(city_fixture, tmp_path, capsys):
     captured = capsys.readouterr()
     first = json.loads(captured.out)
     assert 'warning: fill_above_ground' in captured.err
-    root = tmp_path / 'data/processed'
-    destination = root / 'dsm_catalogues/rotterdam' / first['ingest_id']
+    root = tmp_path / 'data/derived'
+    destination = root / 'catalogues/rotterdam' / first['ingest_id']
     assert first['cells'] == 2
     expected = np.full((5, 10), -9999, np.float32)
     expected[:, :8] = np.where(np.isfinite(original) & (original != SENTINEL), original, -9999)
@@ -182,7 +182,7 @@ def test_reject_sheets(city_fixture, tmp_path, case):
     with pytest.raises(InvalidInput):
         register('rotterdam', machine)
     assert file_state(raw) == before
-    assert not list((tmp_path / 'data/processed').rglob('*.json'))
+    assert not list((tmp_path / 'data/derived').rglob('*.json'))
 
 
 @pytest.mark.parametrize('case, message', [
@@ -254,7 +254,7 @@ def test_native_grid_and_fill_impact(city_fixture, tmp_path):
     assert auto['projection']['accuracy_m'] >= -1
     result = shade_map(*corners, TIME, **kwargs)
     assert result['status'] == 'complete'
-    folder = tmp_path / 'outputs/maps/fixture'
+    folder = tmp_path / 'runs/maps/fixture'
     run = read_json(folder / 'run_manifest.json')
     assert run['city'] == run['identity_document']['city'] == plan['city']
     assert run['identity_document']['publication_format'] == 'shade-map-publication-1.1'
@@ -267,7 +267,7 @@ def test_native_grid_and_fill_impact(city_fixture, tmp_path):
         if path.suffix in ('.tif', '.vrt'):
             with rasterio.open(path) as ds:
                 assert ds.crs.to_epsg() == 28992 and ds.res == (.5, .5)
-    work = next((tmp_path / 'outputs/shade_map_work').glob('fixture-*'))
+    work = next((tmp_path / 'work/runs').glob('fixture-*'))
     engine = next(work.glob('engine/*/shade/*.tif'))
     with rasterio.open(engine) as ds:
         assert ds.tags()['source_and_owner'] == profiles.load_city('rotterdam')['dsm_source_line']

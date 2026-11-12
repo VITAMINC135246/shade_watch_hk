@@ -1,0 +1,24 @@
+{
+  "baseline": "baselines/measure_5regions_20261110/measure_lo_wu",
+  "case": "R-2",
+  "changed_published_file_hashes": 0,
+  "compared_pixels": {
+    "quality": 3153600000,
+    "shade": 3153600000,
+    "surface": 3153600000
+  },
+  "compared_rasters": {
+    "quality": 876,
+    "shade": 876,
+    "surface": 876
+  },
+  "computed_directions": 0,
+  "differing_pixels": 0,
+  "frames": 146,
+  "horizon_calls": 0,
+  "pixel_table": "archive/reviews/h1_0_dev_20261112/R-2-pixel-comparison.tsv",
+  "publication": "runs/h1_0_dev_20261112/measure_lo_wu",
+  "reference_utc_order_equal": true,
+  "reused_directions": 156,
+  "run_id": "10cbc9b479911bb13195bbdae26c4465bcc6bc896d29adec3c68b163c4f14dfb"
+}

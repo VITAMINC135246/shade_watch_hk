@@ -7,25 +7,25 @@ import pytest
 import rasterio
 from rasterio.transform import from_origin
 
-from src import v1
-from tools.sea2.build import build, assert_fill
-from tools.sea2.provider import SeaSource
-from tools.sea2.rule import CODES
-from tools.sea2.view import read_manifest, read_surface_window, verify_view
-from tools.shade_map.common import digest
-from tools.shade_map.config import InvalidInput, load_json, machine_config
-from tools.shade_map.planning import prepare
+from shade_watch.engine import v1
+from shade_watch.fill.build import build, assert_fill
+from shade_watch.fill.provider import SeaSource
+from shade_watch.fill.rule import CODES
+from shade_watch.fill.view import read_manifest, read_surface_window, verify_view
+from shade_watch.publish.common import digest
+from shade_watch.publish.config import InvalidInput, load_json, machine_config
+from shade_watch.publish.planning import prepare
 
 
 @pytest.fixture
 def catalogue(tmp_path,monkeypatch):
     monkeypatch.setattr(v1,'ROOT',tmp_path)
-    monkeypatch.setattr('tools.sea2.catalogue.DOMAIN_MARGIN_M', 2)
-    raw=tmp_path/'data/raw/dsm'; raw.mkdir(parents=True)
+    monkeypatch.setattr('shade_watch.fill.catalogue.DOMAIN_MARGIN_M', 2)
+    raw=tmp_path/'data/raw/hong_kong/dsm_cedd_2020'; raw.mkdir(parents=True)
     p=load_json('config/sea_profiles/hk_cedd_2020.json')
     p.update(profile_id='fixture',max_shore_distance_m=2,shore_preference_m=.5)
-    monkeypatch.setattr('tools.sea2.profile.load_profile',lambda machine: deepcopy(p))
-    machine=dict(schema='shade-map-machine-1.0',dsm_dir=str(raw),output_root='outputs/published',cache_namespace='fixture_raw')
+    monkeypatch.setattr('shade_watch.fill.profile.load_profile',lambda machine: deepcopy(p))
+    machine=dict(schema='shade-map-machine-1.0',dsm_dir=str(raw),output_root='runs/published',cache_namespace='fixture_raw')
     def put(ix,iy,data):
         path=raw/f'tile_{ix}_{iy}.tif'
         with rasterio.open(path,'w',driver='GTiff',height=6,width=8,count=1,dtype='float32',
@@ -57,7 +57,7 @@ def test_view_fill_synthetic_totals_and_rebuild(catalogue):
     second=build(machine,profile=p)
     assert second['reproduced'] and second['view_id']==first['view_id']
     assert read_manifest(view)==doc
-    assert doc['build_code_sha256']['tools/sea2/build.py']==digest('tools/sea2/build.py')
+    assert doc['build_code_sha256']['shade_watch/fill/build.py']==digest('shade_watch/fill/build.py')
 
 
 def test_enclosed_empty_cell_is_synthetic(catalogue):
@@ -78,10 +78,10 @@ def test_provider_stale_inventory_profile_and_window_overlap(catalogue):
     raw,p,machine,put=catalogue
     a=np.ones((6,8),np.float32); a[:,4:]=-9999; source=put(0,0,a)
     provider=SeaSource(); normalized=machine_config(machine)
-    with pytest.raises(InvalidInput,match='run python -m tools.sea2 build'): provider.catalogue(normalized)
+    with pytest.raises(InvalidInput,match='run python -m shade_watch.fill build'): provider.catalogue(normalized)
     result=build(machine,profile=p); view=Path(result['path'])
     assert provider.catalogue(normalized)==view/'tiles'
-    assert provider.cache_namespace(normalized)=='sea_fill_v2_2_'+result['view_id'][:12]
+    assert provider.cache_namespace(normalized)=='view_'+result['view_id'][:12]
     full=read_surface_window(view,[800000,820000,800004,820003])
     crop=read_surface_window(view,[800001,820001,800003,820002])
     assert np.array_equal(crop,full[2:4,2:6])
@@ -168,7 +168,7 @@ def test_provider_refuses_missing_or_unexpected_view_tiles(catalogue):
 
 
 def test_F_publication_preserves_all_six_surface_classes(catalogue):
-    from tools.shade_map.runner import run_region
+    from shade_watch.publish.runner import run_region
 
     raw,p,machine,put=catalogue
     a=np.ones((6,8),np.float32);a[:,7]=20;a[-1,7]=1;a[0,0]=-9999;a[2,2]=-9999

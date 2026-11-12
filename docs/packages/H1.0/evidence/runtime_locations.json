@@ -1,0 +1,81 @@
+{
+  "old_runtime_roots_absent": true,
+  "runs": {
+    "R-1": {
+      "caches": [
+        "data/cache/horizon/raw_hong_kong"
+      ],
+      "engine_outputs": [
+        "work/runs/h1_0_dev_hk1-995146aa5c60/engine/part_0000"
+      ],
+      "frames": 65,
+      "publication": "runs/h1_0_dev_20261112/h1_0_dev_hk1",
+      "source_view": "work/source_views/a776d758c53ba7bff262331c7095404d8fabae89aa35604f207b5a6957245480",
+      "work": "work/runs/h1_0_dev_hk1-995146aa5c60"
+    },
+    "R-2": {
+      "caches": [
+        "data/cache/horizon/view_412eae795153"
+      ],
+      "engine_outputs": [
+        "work/runs/measure_lo_wu-10cbc9b47991/engine/part_0000"
+      ],
+      "frames": 146,
+      "publication": "runs/h1_0_dev_20261112/measure_lo_wu",
+      "source_view": "work/source_views/3ef01721dd7177fab50aca95dc5faa06ad00bb91b8b72e4f5e7edb20ef70497f",
+      "work": "work/runs/measure_lo_wu-10cbc9b47991"
+    },
+    "R-3": {
+      "caches": [
+        "data/cache/horizon/view_412eae795153"
+      ],
+      "engine_outputs": [
+        "work/runs/measure_tai_mo_shan-602a09cd85b9/engine/part_0000"
+      ],
+      "frames": 146,
+      "publication": "runs/h1_0_dev_20261112/measure_tai_mo_shan",
+      "source_view": "work/source_views/465a3c1131dd13200e4bab43bd9da3c085e3b7437599bdc021bb360631900bff",
+      "work": "work/runs/measure_tai_mo_shan-602a09cd85b9"
+    },
+    "R-4": {
+      "caches": [
+        "data/cache/horizon/view_412eae795153"
+      ],
+      "engine_outputs": [
+        "work/runs/measure_central-48efb59b9b1a/engine/part_0000"
+      ],
+      "frames": 146,
+      "publication": "runs/h1_0_dev_20261112/measure_central",
+      "source_view": "work/source_views/ea20877b7e660575e1fd8919491cda56a8ace423cdf9056f65e9de6c34b3214a",
+      "work": "work/runs/measure_central-48efb59b9b1a"
+    },
+    "R-5": {
+      "caches": [
+        "data/cache/horizon/view_11004a24a611"
+      ],
+      "engine_outputs": [
+        "work/runs/h1_0_dev_nl1-d7de174df2d5/engine/part_0000"
+      ],
+      "frames": 50,
+      "publication": "runs/h1_0_dev_20261112/h1_0_dev_nl1",
+      "source_view": "work/source_views/2dbe691fadd0a4af0ae7c4523f09a9d03487b93900f4daa793272ae7194f698d",
+      "work": "work/runs/h1_0_dev_nl1-d7de174df2d5"
+    },
+    "R-6": {
+      "caches": [
+        "data/cache/horizon/view_11004a24a611"
+      ],
+      "engine_outputs": [
+        "work/runs/h1_0_dev_nl2-0d3549d2251f/engine/part_0000"
+      ],
+      "frames": 3,
+      "publication": "runs/h1_0_dev_20261112/h1_0_dev_nl2",
+      "source_view": "work/source_views/2dbe691fadd0a4af0ae7c4523f09a9d03487b93900f4daa793272ae7194f698d",
+      "work": "work/runs/h1_0_dev_nl2-0d3549d2251f"
+    },
+    "R-7": {
+      "publication": "runs/h1_0_dev_20261112/_diagnostics/fill_impact/h1_0_dev_nl1",
+      "work": "work/fill_impact/h1_0_dev_nl1-d22f3d259b66"
+    }
+  }
+}

@@ -6,10 +6,10 @@ import numpy as np
 import pytest
 import rasterio
 from rasterio.transform import from_origin
-from src.spatial import Grid, inventory, cores, read_window, target_grid, region_stats, seam_audit, digest_file
-from src.pipeline import calculate_core, process_core, valid_cache, cache_paths, execute
-from src.shade_watch import classify
-from src.horizon import pixel_centred_horizon
+from shade_watch.engine.spatial import Grid, inventory, cores, read_window, target_grid, region_stats, seam_audit, digest_file
+from shade_watch.engine.pipeline import calculate_core, process_core, valid_cache, cache_paths, execute
+from shade_watch.engine.shade_watch import classify
+from shade_watch.engine.horizon import pixel_centred_horizon
 
 
 def fixture_tiles(tmp_path):
@@ -74,7 +74,7 @@ def test_native_boundary_and_exact_custom_alignment(tmp_path):
     study = dict(longitude=lon,latitude=lat)
     # Roundtrip can differ by nanometres; use exact projected test via patch.
     from unittest.mock import patch
-    with patch('src.spatial.Transformer.from_crs') as trans:
+    with patch('shade_watch.engine.spatial.Transformer.from_crs') as trans:
         trans.return_value.transform.return_value = (800017.5,819990.)
         native = target_grid(records,study)
         assert native.selected_source == records[1]['path']
@@ -155,9 +155,9 @@ def test_parallel_equal_to_single_and_failure_propagation(tmp_path, workers):
 
 def test_large_png_pieces_and_window_assembly(tmp_path):
     from datetime import datetime
-    from src.pipeline import profile,assemble_frame,export_pngs,render_frame
-    from src.solar import HKT,position,daylight_bounds
-    from src.shade_watch import nearest_bin
+    from shade_watch.engine.pipeline import profile,assemble_frame,export_pngs,render_frame
+    from shade_watch.engine.solar import HKT,position,daylight_bounds
+    from shade_watch.engine.shade_watch import nearest_bin
     from PIL import Image
     # Deliberately synthetic labels/horizons test publication only, not real inputs.
     grid=Grid(2051,2001,tuple(from_origin(800000,820000,.5,.5))[:6],'EPSG:2326')
@@ -196,7 +196,7 @@ def test_large_png_pieces_and_window_assembly(tmp_path):
 
 
 def test_external_mask_is_part_of_cache_source_identity(tmp_path):
-    from src.pipeline import include_auxiliary_source_identities, fingerprint
+    from shade_watch.engine.pipeline import include_auxiliary_source_identities, fingerprint
     records,grid=fixture_tiles(tmp_path)
     before=fingerprint(include_auxiliary_source_identities(records))
     with rasterio.Env(GDAL_TIFF_INTERNAL_MASK=False):
@@ -209,20 +209,20 @@ def test_external_mask_is_part_of_cache_source_identity(tmp_path):
 
 
 def test_unmanaged_existing_results_are_protected(tmp_path, monkeypatch):
-    import src.pipeline as pipeline
-    config=json.loads((pipeline.ROOT/'config/processing.json').read_text())
+    import shade_watch.engine.pipeline as pipeline
+    config=json.loads((pipeline.ROOT/'config/engine/processing.json').read_text())
     monkeypatch.setattr(pipeline,'ROOT',tmp_path)
-    old=tmp_path/'outputs/old_results';old.mkdir(parents=True)
+    old=tmp_path/'work/engine/old_results';old.mkdir(parents=True)
     original=old/'previous.jpg';original.write_bytes(b'user-owned previous output')
-    config['output_directory']='outputs/old_results'
+    config['output_directory']='work/engine/old_results'
     with pytest.raises(ValueError,match='unmanaged existing results'):
         pipeline.run(config)
     assert original.read_bytes()==b'user-owned previous output'
 
 
 def test_native_tile_is_one_spatial_unit_and_neighbor_output_has_one_owner(tmp_path):
-    from src.pipeline import resolve_core_layout
-    from src.spatial import expand, intersects
+    from shade_watch.engine.pipeline import resolve_core_layout
+    from shade_watch.engine.spatial import expand, intersects
     from pyproj import Transformer
     records, larger = fixture_tiles(tmp_path)
     lon, lat = Transformer.from_crs('EPSG:2326','EPSG:4326',always_xy=True).transform(800005,819995)
@@ -248,8 +248,8 @@ def test_native_tile_is_one_spatial_unit_and_neighbor_output_has_one_owner(tmp_p
 
 
 def test_2048_is_a_per_axis_limit_not_a_total_pixel_limit():
-    from src.pipeline import resolve_core_layout
-    from src.spatial import core_dimensions
+    from shade_watch.engine.pipeline import resolve_core_layout
+    from shade_watch.engine.spatial import core_dimensions
     grid = Grid(1500,1200,tuple(from_origin(845000,822800,.5,.5))[:6],'EPSG:2326')
     size, _ = resolve_core_layout({'core_mode':'fixed','core_size_px':2048}, [], {}, grid)
     assert size == (2048,2048)
@@ -260,7 +260,7 @@ def test_2048_is_a_per_axis_limit_not_a_total_pixel_limit():
 
 
 def test_geometric_default_center_and_explicit_custom_override(tmp_path):
-    from src.pipeline import resolve_output
+    from shade_watch.engine.pipeline import resolve_output
     from pyproj import Transformer
     records, _ = fixture_tiles(tmp_path)
     lon, lat = Transformer.from_crs('EPSG:2326','EPSG:4326',always_xy=True).transform(800002,819998)
@@ -283,8 +283,8 @@ def test_geometric_default_center_and_explicit_custom_override(tmp_path):
 
 
 def test_native_mosaic_preserves_source_bounds_and_shared_center(tmp_path):
-    from src.pipeline import resolve_output, resolve_core_layout
-    from src.spatial import native_mosaic_grid, output_reference
+    from shade_watch.engine.pipeline import resolve_output, resolve_core_layout
+    from shade_watch.engine.spatial import native_mosaic_grid, output_reference
     records, whole = fixture_tiles(tmp_path)
     names = [Path(r['path']).name for r in reversed(records)]
     config = dict(output_mode='native_mosaic',native_tile_names=names,core_mode='native_tile')
@@ -307,7 +307,7 @@ def test_native_mosaic_preserves_source_bounds_and_shared_center(tmp_path):
 
 
 def test_explicit_native_filename_selects_its_own_bounds_and_center(tmp_path):
-    from src.pipeline import resolve_output, resolve_core_layout
+    from shade_watch.engine.pipeline import resolve_output, resolve_core_layout
     records, _ = fixture_tiles(tmp_path)
     config = dict(output_mode='native_tile',native_tile_name=Path(records[1]['path']).name,core_mode='native_tile')
     # The selector is deliberately outside the source grid: filename selection wins.

@@ -1,0 +1,28 @@
+{
+  "cache_key_files": {
+    "horizon.py": "afb46c37742767e7480220d82527873ed389bb184623fef78b4a3a1d19e8144e",
+    "spatial.py": "5ecc0495dd102596ab41903b5e174c142888ffc14664b81009164fbf176d3aa7",
+    "v1_cache.py": "96a576d12ada9186319e4c8c5f1e626b06ab0aac5f7345a9c6083b9f1b6fe479"
+  },
+  "estimator_sha256": "ad6939e4455d9e80495d27e382438d635f5cb9f0920601959e09bbbe2e721469",
+  "legacy_tracked_files_verified_before_web_move": 29,
+  "polygonal_sha256": "ba34823ad929e742512a3a45c0242698b342aac32553a117b7f0bcc637bb1922",
+  "preserved_pipeline_functions": {
+    "fingerprint": "28047d2eee3b30058413ccc7ae05a1c068c81bd8a9e9a007da88a28049b63268",
+    "profile": "238b22a1b6525fb5d8b68b9f6ac1c77a6ddcdfa6f00b72430b53cd64732e511f"
+  },
+  "processing_path_changes": {
+    "cache_directory": [
+      "data/processed/horizon_cache_1km",
+      "data/cache/horizon/pipeline_1km"
+    ],
+    "output_directory": [
+      "outputs/native_tile_geometric_1km_20260929",
+      "work/engine/pipeline"
+    ]
+  },
+  "schema_default_path_changes": [
+    "properties.output_root.default",
+    "properties.cache_namespace.default"
+  ]
+}

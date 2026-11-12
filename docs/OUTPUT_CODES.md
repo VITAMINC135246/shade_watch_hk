@@ -24,7 +24,7 @@ Every published frame folder `<output_root>/<name>/<YYYYMMDD>/<HHMM>/` holds thr
 | 3 | No obstruction found and support complete, but the apparent elevation is not above the tile's distant-obstruction threshold (sensitivity to obstructions beyond 1 km). |
 | 4 | Apparent solar-centre elevation ≤ 0. The label is 255 even if a blocker exists. |
 
-Source: `src/shade_watch.py::classify` and `docs/v1/POLICY.md`. The quality layer has no GeoTIFF NoData value.
+Source: `shade_watch/engine/shade_watch.py::classify` and `docs/records/v1/POLICY.md`. The quality layer has no GeoTIFF NoData value.
 
 ## `surface` (source provider output)
 

@@ -4,14 +4,14 @@ import numpy as np
 import pytest
 import rasterio
 
-from src import v1
-from tools.sea2.__main__ import main
-from tools.sea2.build import build
-from tools.sea2.checks import RawCounterfactual
-from tools.sea2.fill_impact import fill_impact, frame_metrics, require_run
-from tools.shade_map.common import atomic_json, digest, seal
-from tools.shade_map.config import InvalidInput, validate_schema, load_json
-from tools.shade_map.runner import run_region
+from shade_watch.engine import v1
+from shade_watch.fill.__main__ import main
+from shade_watch.fill.build import build
+from shade_watch.fill.checks import RawCounterfactual
+from shade_watch.fill.fill_impact import fill_impact, frame_metrics, require_run
+from shade_watch.publish.common import atomic_json, digest, seal
+from shade_watch.publish.config import InvalidInput, validate_schema, load_json
+from shade_watch.publish.runner import run_region
 from test_sea2_view import catalogue
 
 
@@ -116,14 +116,14 @@ def test_diagnostic_refuses_mismatched_engine_identity(catalogue):
     run_region(region,machine)
     path = v1.ROOT/machine['output_root']/region['name']/'run_manifest.json'
     manifest = load_json(path)
-    manifest['engine_hashes']['src/v1.py'] = '0'*64
+    manifest['engine_hashes']['shade_watch/engine/v1.py'] = '0'*64
     atomic_json(path,seal(manifest))
     with pytest.raises(InvalidInput,match='does not match'):
         fill_impact(machine,region)
 
 
 def test_dsm_only_results_equal_with_coastline_denied(catalogue):
-    from tools.shade_map.planning import prepare
+    from shade_watch.publish.planning import prepare
 
     raw,p,machine,put = catalogue
     data = np.ones((6,8),np.float32)
@@ -149,7 +149,7 @@ def test_dsm_only_results_equal_with_coastline_denied(catalogue):
             marker.read_bytes()
         denied = build(machine,profile=p)
         assert denied['view_id']==readable['view_id'] and denied['reproduced']
-        second = dict(machine,output_root='outputs/denied')
+        second = dict(machine,output_root='runs/denied')
         assert prepare(region,second).document['run_id']==plan.document['run_id']
         run_region(region,second)
         folder = v1.ROOT/second['output_root']/region['name']

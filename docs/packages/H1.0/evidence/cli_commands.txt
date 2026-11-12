@@ -1,0 +1,154 @@
+argv=['-c', "import sys\nimport shade_watch\nassert set(sys.modules).isdisjoint({\n    'shade_watch.engine','shade_watch.fill','shade_watch.publish','shade_watch.city','shade_watch.region'})\nfrom shade_watch import shade_map, plan_shade_map\nassert callable(shade_map) and callable(plan_shade_map)\nassert shade_map.__module__ == plan_shade_map.__module__ == 'shade_watch.publish'\nprint('Package import is lazy and both functions resolve to shade_watch.publish.')\n"]; exit=0
+Package import is lazy and both functions resolve to shade_watch.publish.
+argv=['-m', 'shade_watch', '--help']; exit=0
+usage: __main__.py [-h] [--machine MACHINE] [--yes] {plan,run,prune} region
+
+python -m shade_watch {plan,run,prune} --machine machine.json region.json
+
+positional arguments:
+  {plan,run,prune}
+  region
+
+options:
+  -h, --help         show this help message and exit
+  --machine MACHINE
+  --yes              Delete this verified run's work folder (prune only)
+argv=['-m', 'shade_watch.fill', '--help']; exit=0
+usage: __main__.py [-h] {build,fill-impact} ...
+
+Build the DSM-only sea view or measure dependence on its fill.
+
+positional arguments:
+  {build,fill-impact}
+
+options:
+  -h, --help           show this help message and exit
+argv=['-m', 'shade_watch.city', '--help']; exit=0
+usage: __main__.py [-h] [--machine MACHINE] {register} city
+
+Register a city's native DSM catalogue and build its 0 m fill view.
+
+positional arguments:
+  {register}
+  city
+
+options:
+  -h, --help         show this help message and exit
+  --machine MACHINE
+argv=['-m', 'shade_watch.region', '--help']; exit=0
+usage: region.py [-h] --crs {wgs84,hk1980} --corner1 CORNER1 CORNER1 --corner2
+                 CORNER2 CORNER2 (--at AT | --date DATE)
+                 [--interval-minutes INTERVAL_MINUTES] [--dsm-dir DSM_DIR]
+                 [--auto-source-view] --output OUTPUT [--cache CACHE]
+                 [--directory DIRECTORY]
+                 {plan,write}
+
+Two-corner region adapter (SW-RGN-AC-1.1); never starts shade computation.
+
+positional arguments:
+  {plan,write}
+
+options:
+  -h, --help            show this help message and exit
+  --crs {wgs84,hk1980}
+  --corner1 CORNER1 CORNER1
+  --corner2 CORNER2 CORNER2
+  --at AT
+  --date DATE
+  --interval-minutes INTERVAL_MINUTES
+  --dsm-dir DSM_DIR
+  --auto-source-view
+  --output OUTPUT
+  --cache CACHE
+  --directory DIRECTORY
+                        Fresh request directory
+argv=['-m', 'shade_watch.engine.v1', '--help']; exit=0
+usage: v1.py [-h] (--at AT | --date DATE)
+             [--interval-minutes INTERVAL_MINUTES] [--timezone TIMEZONE]
+             [--crs CRS] [--daylight-reference LATITUDE LONGITUDE]
+             [--dsm-source-line DSM_SOURCE_LINE] [--tile TILE]
+             [--center-lat CENTER_LAT] [--center-lon CENTER_LON]
+             [--mode {native,custom}] [--bounds LEFT BOTTOM RIGHT TOP]
+             [--width-m WIDTH_M] [--height-m HEIGHT_M]
+             [--crop COL ROW WIDTH HEIGHT]
+             [--direction-method {nearest5,nearest2_5,direct}] [--jpg] [--mp4]
+             [--output OUTPUT] [--cache CACHE] [--dsm-dir DSM_DIR]
+             [--memory-budget-mb MEMORY_BUDGET_MB]
+             {plan,query}
+
+V1 arbitrary-instant API and CLI. Example: python -m shade_watch.engine.v1
+plan --at ...
+
+positional arguments:
+  {plan,query}
+
+options:
+  -h, --help            show this help message and exit
+  --at AT               ISO timestamp; repeat for an instant list
+  --date DATE           Local date; repeat for multi-date daylight
+  --interval-minutes INTERVAL_MINUTES
+  --timezone TIMEZONE
+  --crs CRS
+  --daylight-reference LATITUDE LONGITUDE
+  --dsm-source-line DSM_SOURCE_LINE
+  --tile TILE           Exact native DSM filename; repeat for rectangular
+                        selection
+  --center-lat CENTER_LAT
+  --center-lon CENTER_LON
+  --mode {native,custom}
+  --bounds LEFT BOTTOM RIGHT TOP
+  --width-m WIDTH_M
+  --height-m HEIGHT_M
+  --crop COL ROW WIDTH HEIGHT
+  --direction-method {nearest5,nearest2_5,direct}
+  --jpg
+  --mp4
+  --output OUTPUT
+  --cache CACHE
+  --dsm-dir DSM_DIR
+  --memory-budget-mb MEMORY_BUDGET_MB
+argv=['-m', 'shade_watch.engine.v2', '--help']; exit=0
+usage: v2.py [-h] [--requests REQUESTS] [--batch BATCH] [--state STATE]
+             [--reverse-order]
+             {plan,submit,run,status,cancel,resume}
+
+Reliable local V2 batches: plan, submit, run, status, cancel and resume.
+
+positional arguments:
+  {plan,submit,run,status,cancel,resume}
+
+options:
+  -h, --help            show this help message and exit
+  --requests REQUESTS   JSON object with requests plus optional batch settings
+  --batch BATCH
+  --state STATE
+  --reverse-order
+argv=['-m', 'shade_watch.engine.shade_watch', '--help']; exit=0
+usage: shade_watch.py [-h] [--config CONFIG]
+                      [--output-mode {native_tile,native_mosaic,custom}]
+                      [--tile TILE] [--width-m WIDTH_M] [--height-m HEIGHT_M]
+                      [--center-lat CENTER_LAT] [--center-lon CENTER_LON]
+                      [--core-mode {native_tile,fixed}]
+                      [--core-size CORE_SIZE] [--workers WORKERS]
+                      [--output OUTPUT]
+
+Bounded task scheduling, date-independent horizon cache, and streaming export.
+
+options:
+  -h, --help            show this help message and exit
+  --config CONFIG
+  --output-mode {native_tile,native_mosaic,custom}
+  --tile TILE           Exact native DSM filename; selects native_tile output
+  --width-m WIDTH_M
+  --height-m HEIGHT_M
+  --center-lat CENTER_LAT
+  --center-lon CENTER_LON
+  --core-mode {native_tile,fixed}
+  --core-size CORE_SIZE
+                        Explicit square core side in pixels; switches to fixed
+                        mode
+  --workers WORKERS
+  --output OUTPUT
+argv=['-c', "from multiprocessing.spawn import _fixup_main_from_name\n_fixup_main_from_name('shade_watch.engine.v2')\nfrom shade_watch.engine import v2\nfrom shade_watch.engine import v2_worker\nassert v2.__name__ == '__mp_main__'\nprint('The V2 worker bootstrap and canonical import share a single loaded module.')\n"]; exit=0
+The V2 worker bootstrap and canonical import share a single loaded module.
+147 process/module pairs. No module file executed twice.

@@ -1,7 +1,7 @@
 import numpy as np
 import pytest
-from src.horizon import pixel_centred_horizon
-from tools.sea2.checks import independent_rays, reference_labels
+from shade_watch.engine.horizon import pixel_centred_horizon
+from shade_watch.fill.checks import independent_rays, reference_labels
 
 
 @pytest.mark.parametrize('azimuth',[0,45,90,125,180,270,315])

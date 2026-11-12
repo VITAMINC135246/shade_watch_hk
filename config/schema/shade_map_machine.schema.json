@@ -19,12 +19,12 @@
     "output_root": {
       "type": "string",
       "minLength": 1,
-      "default": "outputs/shade_map"
+      "default": "runs"
     },
     "cache_namespace": {
       "type": "string",
       "minLength": 1,
-      "default": "shade_map_raw"
+      "default": "raw"
     },
     "workers": {
       "type": "integer",

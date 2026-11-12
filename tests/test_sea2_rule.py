@@ -2,8 +2,8 @@
 import numpy as np
 import pytest
 
-from tools.sea2.profile import validate_profile
-from tools.shade_map.config import InvalidInput, load_json
+from shade_watch.fill.profile import validate_profile
+from shade_watch.publish.config import InvalidInput, load_json
 
 
 def profile(**changes):
@@ -29,7 +29,7 @@ def test_frozen_profile():
 
 
 def classify(a, p=None, supplied=None, tiled=False, shape=(3, 4)):
-    from tools.sea2.rule import classify_array
+    from shade_watch.fill.rule import classify_array
     return classify_array(np.array(a, dtype=np.float32), p or profile(),
                           resolution=1, supplied=supplied, cell_shape=shape if tiled else None)
 
@@ -41,7 +41,7 @@ def test_low_shore_and_exact_range():
 
 
 def test_frozen_one_kilometre_limit_inclusive():
-    from tools.sea2.rule import classify_array
+    from shade_watch.fill.rule import classify_array
     a=np.full((1,2003),np.nan,np.float32); a[0,0]=2
     p=load_json('config/sea_profiles/hk_cedd_2020.json')
     result=classify_array(a,p,resolution=.5,cell_shape=(1,200))
@@ -50,7 +50,7 @@ def test_frozen_one_kilometre_limit_inclusive():
 
 
 def test_distance_retains_actual_subpixel_native_centres():
-    from tools.sea2.rule import classify_points
+    from shade_watch.fill.rule import classify_points
     p=load_json('config/sea_profiles/hk_cedd_2020.json')
     bad=np.ones((1,1),bool);empty=np.empty((0,2));delta=1.9e-7
     beyond=classify_points(bad,bad,np.array([[0,-2000-delta]]),empty,p,x0=0,y0=0,resolution=.5)
@@ -119,7 +119,7 @@ def test_one_pass_equals_tiled(shape):
 
 @pytest.mark.parametrize('preference',[0,50,100])
 def test_certified_distance_blocks_equal_independent_EDT(preference):
-    from tools.sea2.rule import classify_array
+    from shade_watch.fill.rule import classify_array
     rng=np.random.default_rng(4)
     a=np.full((300,600),np.nan,np.float32); a[:,0]=2; a[0,200:]=20
     a[120:140,200:230]=3; a[125:135,205:225]=np.nan

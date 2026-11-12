@@ -7,11 +7,11 @@ from rasterio.merge import merge
 from rasterio.transform import from_origin
 from zoneinfo import ZoneInfo
 
-from src.horizon import _scan_columns, direct_ray_reference, horizon_at_output, pixel_centred_horizon
-from src.shade_watch import (OUTPUT_HEIGHT_PX, OUTPUT_WIDTH_PX, classify,
+from shade_watch.engine.horizon import _scan_columns, direct_ray_reference, horizon_at_output, pixel_centred_horizon
+from shade_watch.engine.shade_watch import (OUTPUT_HEIGHT_PX, OUTPUT_WIDTH_PX, classify,
                              load_study_area, nearest_bin, parse_coordinate,
                              presentation_frame)
-from src.solar import daylight_bounds, daylight_samples, position
+from shade_watch.engine.solar import daylight_bounds, daylight_samples, position
 
 
 def test_config_dms_and_required_date():

@@ -1,0 +1,39 @@
+{
+  "runs": {
+    "allowed": true
+  },
+  "runs/example": {
+    "allowed": true
+  },
+  "direct_root_child": {
+    "allowed": true
+  },
+  "data": {
+    "allowed": false,
+    "message": "output_root: must not lie inside data/"
+  },
+  "data/example": {
+    "allowed": false,
+    "message": "output_root: must not lie inside data/"
+  },
+  "work": {
+    "allowed": false,
+    "message": "output_root: must not lie inside work/, baselines/ or archive/"
+  },
+  "work/example": {
+    "allowed": false,
+    "message": "output_root: must not lie inside work/, baselines/ or archive/"
+  },
+  "baselines/example": {
+    "allowed": false,
+    "message": "output_root: must not lie inside work/, baselines/ or archive/"
+  },
+  "archive/example": {
+    "allowed": false,
+    "message": "output_root: must not lie inside work/, baselines/ or archive/"
+  },
+  "other/nested": {
+    "allowed": false,
+    "message": "output_root: must lie under runs/ or directly under the repository root"
+  }
+}

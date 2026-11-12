@@ -10,9 +10,9 @@ import pytest
 import rasterio
 from rasterio.transform import from_origin
 
-from src import v1, v2
-from src.v2_worker import read_logical_window
-from tools.region_request import header_catalogue, main, plan_region, read_region_window, write_region
+from shade_watch.engine import v1, v2
+from shade_watch.engine.v2_worker import read_logical_window
+from shade_watch.region import header_catalogue, main, plan_region, read_region_window, write_region
 
 AT = ['2026-01-07T09:17:23+08:00']
 
@@ -58,7 +58,7 @@ def execute(result, name):
     for i, payload in enumerate(result['batches']):
         batch = v2.plan_batch(**payload)
         assert batch.id == result['sidecar']['batches'][i]['id']
-        state = f'outputs/{name}_{i}'
+        state = f'work/engine/{name}_{i}'
         identifier = v2.submit_batch(batch, state_dir=state)
         run = v2.run_batch(identifier, state_dir=state)
         assert run['state'] == 'SUCCEEDED', run['failures']
@@ -82,7 +82,7 @@ def test_no_dsm_interior_edge_and_added_tile(sparse):
     with pytest.raises(ValueError, match='Missing completed'):
         read_region_window(sc, utc_time=AT[0], bounds=sc['resolved_bounds'], logical_mosaics=[])
     tile(sparse, 1, 0)
-    changed = request(sparse, output_dir='outputs/added', cache_dir='data/processed/shade_v1/region_dev_added')
+    changed = request(sparse, output_dir='work/engine/added', cache_dir='data/cache/horizon/region_dev_added')
     arrays = read_region_window(changed['sidecar'], utc_time=AT[0], bounds=sc['resolved_bounds'],
                                 logical_mosaics=execute(changed, 'added'))
     assert np.all(arrays[1][:4, 4:8] != 1) and np.any(arrays[0][:4, 4:8] != 255)
@@ -197,7 +197,7 @@ def test_source_view_shift_guard_header_invalidation_and_masks(sparse):
 def test_date_cli_and_batch_name_provenance(sparse, tmp_path, capsys):
     args = ['write', '--crs', 'hk1980', '--corner1', '800000', '819998', '--corner2', '800002', '820000',
             '--date', '2026-01-07', '--interval-minutes', '120', '--auto-source-view',
-            '--dsm-dir', str(sparse), '--output', 'outputs/dates_cli', '--directory', str(tmp_path/'requests')]
+            '--dsm-dir', str(sparse), '--output', 'work/engine/dates_cli', '--directory', str(tmp_path/'requests')]
     main(args)
     sidecar = json.loads(capsys.readouterr().out)
     assert sidecar['time_groups'][0]['input'] == dict(dates=['2026-01-07'], interval_minutes=120)
@@ -216,12 +216,12 @@ def test_multi_batch_engine_readback_and_one_shot_admission(sparse):
     assert len(planned['sidecar']['partition'])==2
     assert admission.call_count==1 and index.call_count==2
     assert all(isinstance(p, v1.ShadePlan) for p in admission.call_args.args[0])
-    result = request(sparse, artifact_budget_bytes=17_000_000, output_dir='outputs/multi_parts')
+    result = request(sparse, artifact_budget_bytes=17_000_000, output_dir='work/engine/multi_parts')
     assert len(result['batches'])>1
     shade, quality, transform = read_region_window(result['sidecar'], utc_time=AT[0],
         bounds=result['sidecar']['resolved_bounds'], logical_mosaics=execute(result, 'multi'))
     reference = v1.run_shade(v1.plan_shade(mode='custom', bounds=result['sidecar']['requested_bounds'], instants=AT,
-                         dsm_dir=sparse, output_dir='outputs/multi_ref', cache_dir='data/processed/shade_v1/region_dev_multi_ref'))
+                         dsm_dir=sparse, output_dir='work/engine/multi_ref', cache_dir='data/cache/horizon/region_dev_multi_ref'))
     for key, actual in [('raster', shade), ('quality_raster', quality)]:
         with rasterio.open(reference.frames[0][key]) as ds:
             assert np.array_equal(actual, ds.read(1)) and transform==ds.transform

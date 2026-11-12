@@ -1,15 +1,15 @@
 {
   "schema": "shade-map-machine-1.0",
-  "dsm_dir": "data/raw/dsm/2020/D12.DSM.TIFF",
+  "dsm_dir": "data/raw/hong_kong/dsm_cedd_2020/D12.DSM.TIFF",
   "sea_profile": "hk_cedd_2020",
-  "output_root": "outputs/shade_map",
-  "cache_namespace": "shade_map_raw",
+  "output_root": "runs",
+  "cache_namespace": "raw",
   "workers": 1,
   "memory_budget_mb": 8192,
   "max_output_bytes": null,
   "cities": {
     "rotterdam": {
-      "raw_dir": "data/raw/dsm/rotterdam_ahn4_dsm05"
+      "raw_dir": "data/raw/rotterdam/dsm_ahn_05m"
     }
   }
 }

@@ -8,8 +8,8 @@ import pytest
 import rasterio
 from rasterio.transform import from_origin
 
-from src import v1, v2
-from tools.region_request import main, plan_region, project_corner, write_region
+from shade_watch.engine import v1, v2
+from shade_watch.region import main, plan_region, project_corner, write_region
 
 AT=['2026-01-07T14:31:27+08:00']
 
@@ -39,7 +39,7 @@ def region(raw,a=(800002,819992),b=(800018,820008),**kwargs):
 ])
 def test_equivalence_order_and_read_only(catalogue,a,b):
     before=set(v1.ROOT.rglob('*'))
-    with patch('src.v1_cache.pixel_centred_horizon',side_effect=AssertionError('computed')):
+    with patch('shade_watch.engine.v1_cache.pixel_centred_horizon',side_effect=AssertionError('computed')):
         result=region(catalogue,a,b)
     assert before==set(v1.ROOT.rglob('*'))
     req=result['batches'][0]['requests'][0]
@@ -121,7 +121,7 @@ def test_multiple_budget_checked_batches(catalogue):
 
 def test_cli(catalogue,tmp_path,capsys):
     args=['--crs','hk1980','--corner1','800001','819991','--corner2','800003','819993',
-          '--at',AT[0],'--dsm-dir',str(catalogue),'--output','outputs/cli']
+          '--at',AT[0],'--dsm-dir',str(catalogue),'--output','work/engine/cli']
     main(['plan',*args])
     assert json.loads(capsys.readouterr().out)['requested_bounds']==[800001,819991,800003,819993]
     main(['write',*args,'--directory',str(tmp_path/'cli_requests')])

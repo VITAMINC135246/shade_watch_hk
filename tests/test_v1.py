@@ -13,11 +13,11 @@ import pytest
 import rasterio
 from rasterio.transform import from_origin
 
-from src import v1
-from src.horizon import pixel_centred_horizon
-from src.shade_watch import classify
-from src.spatial import digest_file, read_window
-from src.v1_cache import (canonical_origin, diagnostic_horizon, entry_paths, exclusive_lock,
+from shade_watch.engine import v1
+from shade_watch.engine.horizon import pixel_centred_horizon
+from shade_watch.engine.shade_watch import classify
+from shade_watch.engine.spatial import digest_file, read_window
+from shade_watch.engine.v1_cache import (canonical_origin, diagnostic_horizon, entry_paths, exclusive_lock,
                           spatial_identity, tile_grid, valid_entry)
 from v1_oracle import ray_oracle, classification_oracle, meeus_solar
 
@@ -40,7 +40,7 @@ def scene(tmp_path, monkeypatch):
 
 
 def request(scene, name="query", **kwargs):
-    return v1.plan_shade(dsm_dir=scene, output_dir=f"outputs/{name}", **kwargs)
+    return v1.plan_shade(dsm_dir=scene, output_dir=f"work/engine/{name}", **kwargs)
 
 
 def arrays(result, index=0):
@@ -51,7 +51,7 @@ def arrays(result, index=0):
 
 def test_planner_zero_horizons_and_writes_and_model_validation(scene):
     before = set(scene.parent.parent.rglob("*"))
-    with patch("src.v1_cache.pixel_centred_horizon", side_effect=AssertionError("planning computed")):
+    with patch("shade_watch.engine.v1_cache.pixel_centred_horizon", side_effect=AssertionError("planning computed")):
         plan = request(scene, tile="tile_0.tif", instants=["2026-01-07T14:31:27+08:00"])
     assert plan.resources["missing_direction_jobs"] == 1
     assert set(scene.parent.parent.rglob("*")) == before
@@ -120,7 +120,7 @@ def test_spatial_odd_crop_composition_invariance_and_custom(scene):
 
 
 def test_coordinate_selector_preserved_and_native_center(scene):
-    with patch("src.spatial.Transformer.from_crs") as transform:
+    with patch("shade_watch.engine.spatial.Transformer.from_crs") as transform:
         transform.return_value.transform.return_value = (800002., 819999.)
         plan = request(scene, latitude=22.3, longitude=114.2, instants="2026-01-07T12:00")
     assert plan.request.selector == (22.3, 114.2)
@@ -211,7 +211,7 @@ def test_dependency_add_remove_change_distant_mask_corruption_relocation(scene):
             ds.write_mask(mask)
     assert request(scene, tile="tile_0.tif", instants=at).tiles[0].spatial_key != original
     records = v1.index_sources(scene)
-    with patch("src.v1_cache.ALGORITHM", "new-numerical-settings"):
+    with patch("shade_watch.engine.v1_cache.ALGORITHM", "new-numerical-settings"):
         assert spatial_identity(records, records[0])[0] != original
 
 
@@ -220,7 +220,7 @@ def test_cross_date_reuse_new_direction_and_final_hit(scene):
     result = v1.run_shade(first)
     same = request(scene, "otherdate", tile="tile_0.tif", instants="2026-01-08T14:31:27+08:00")
     assert first.tiles[0].directions == same.tiles[0].directions
-    with patch("src.v1_cache.pixel_centred_horizon", side_effect=AssertionError("did not reuse")):
+    with patch("shade_watch.engine.v1_cache.pixel_centred_horizon", side_effect=AssertionError("did not reuse")):
         assert v1.run_shade(same).jobs["computed"] == 0
         hit = v1.run_shade(first)
     assert hit.jobs["final_result_hits"] == 1 and hit.jobs["horizon_calls"] == 0
@@ -242,9 +242,9 @@ def test_cache_conflicting_writers_and_interruption_resume(scene):
         with pytest.raises(RuntimeError, match="Another V1 writer"):
             v1.run_shade(plan)
     # A real child exits immediately after the first atomic completed entry.
-    code = ("from pathlib import Path; import os; from src import v1; "
+    code = ("from pathlib import Path; import os; from shade_watch.engine import v1; "
             f"v1.ROOT=Path({str(scene.parent.parent)!r}); "
-            f"p=v1.plan_shade(dsm_dir={str(scene)!r},tile='tile_0.tif',output_dir='outputs/interrupted',"
+            f"p=v1.plan_shade(dsm_dir={str(scene)!r},tile='tile_0.tif',output_dir='work/engine/interrupted',"
             "instants=['2026-01-07T08:17:23+08:00','2026-01-07T14:31:27+08:00']); "
             "v1.run_shade(p,on_direction=lambda e: os._exit(19))")
     process = subprocess.run([sys.executable, "-c", code], capture_output=True, text=True)
@@ -274,13 +274,13 @@ def test_outputs_media_and_night(scene):
 
 
 def test_public_api_flat_known_blocker_missing_support_and_target(scene):
-    from src.solar import Sun
+    from shade_watch.engine.solar import Sun
     (scene / "tile_35.tif").unlink()  # sunward footprint is deliberately unavailable
     flat = np.zeros((32, 35), np.float32)
     flat[0, 0] = -9999
     with rasterio.open(scene / "tile_0.tif", "r+") as ds:
         ds.write(flat, 1)
-    with patch("src.v1.position", return_value=Sun(90., 20., 20.)):
+    with patch("shade_watch.engine.v1.position", return_value=Sun(90., 20., 20.)):
         result = v1.run_shade(request(scene, "flat_missing", tile="tile_0.tif", instants="2026-01-07T12:00"))
     labels, quality = arrays(result)
     assert labels[15, 10] == 255 and quality[15, 10] == 2
@@ -288,7 +288,7 @@ def test_public_api_flat_known_blocker_missing_support_and_target(scene):
     flat[15, 14] = 30
     with rasterio.open(scene / "tile_0.tif", "r+") as ds:
         ds.write(flat, 1)
-    with patch("src.v1.position", return_value=Sun(90., 20., 20.)):
+    with patch("shade_watch.engine.v1.position", return_value=Sun(90., 20., 20.)):
         result = v1.run_shade(request(scene, "blocked_missing", tile="tile_0.tif", instants="2026-01-07T12:00"))
     labels, quality = arrays(result)
     assert labels[15, 10] == 1 and quality[15, 10] == 0

@@ -23,20 +23,20 @@ config/*local*
 # Papers, supplementary files, and source data stay local
 /references/*
 !/references/README.md
-/data/raw/dsm/*
-!/data/raw/dsm/README.md
-/data/raw/validation/*
-!/data/raw/validation/README.md
-/data/raw/basemap/*
-!/data/raw/basemap/README.md
-/data/raw/coastline/*
-!/data/raw/coastline/README.md
+/data/raw/**
+!/data/raw/**/
+!/data/raw/hong_kong/dsm_cedd_2020_docs/README.md
+!/data/raw/hong_kong/validation/README.md
+!/data/raw/hong_kong/basemap/README.md
+!/data/raw/hong_kong/coastline/README.md
 
 # Derived data and generated deliverables
-/data/processed/*
-!/data/processed/README.md
-/outputs/*
-!/outputs/README.md
+/data/derived/
+/data/cache/
+/runs/
+/work/
+/baselines/
+/archive/
 /web/dist/
 /web/build/
 

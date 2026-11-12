@@ -1,0 +1,16 @@
+{
+  "derived_entries": 15001,
+  "new_entries": 44,
+  "new_namespaces": [
+    "fill_impact_d22f3d259b66"
+  ],
+  "protected_entries": 2174,
+  "protected_entries_changed": 0,
+  "protected_namespaces": [
+    "raw_hong_kong",
+    "raw_rotterdam",
+    "view_11004a24a611",
+    "view_412eae795153"
+  ],
+  "stage": "after_r8"
+}

@@ -1,8 +1,8 @@
 import numpy as np
 import pytest
 
-from tools.sea2.validation_worker import enclosed_components, metrics, report_scope
-from tools.sea2.validate_ib5000 import require_reader_versions
+from shade_watch.fill.validation_worker import enclosed_components, metrics, report_scope
+from shade_watch.fill.validate_ib5000 import require_reader_versions
 
 
 def test_map_counts_denominators_and_enclosed():

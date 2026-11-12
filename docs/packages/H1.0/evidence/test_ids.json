@@ -1,0 +1,24 @@
+{
+  "added": [
+    "tests/test_layout.py::test_repository_top_level",
+    "tests/test_layout.py::test_docs_top_level",
+    "tests/test_layout.py::test_old_locations_are_absent",
+    "tests/test_layout.py::test_tracked_files_use_current_locations",
+    "tests/test_layout.py::test_frozen_cache_key_files",
+    "tests/test_layout.py::test_moved_records_match_manifest"
+  ],
+  "candidate_count": 308,
+  "mapped_path_parameters": [],
+  "missing": [],
+  "retired": [
+    "tests/test_sea_masks.py::test_hole_overlap_and_nodata",
+    "tests/test_sea_masks.py::test_sliver_and_exact_centre_edge",
+    "tests/test_sea_masks.py::test_vector_integrity",
+    "tests/test_sea_masks.py::test_eight_neighbour_boundary_and_valid_samples",
+    "tests/test_sea_masks.py::test_fill_bit_invariants_and_synthetic_lattice",
+    "tests/test_sea_masks.py::test_rebuild_and_surface_helpers",
+    "tests/test_shade_map.py::test_campaign_internal_dispatch_is_not_recursive"
+  ],
+  "starting_count": 309,
+  "unexpected": []
+}

@@ -1,0 +1,10 @@
+{
+  "cache_namespace": "fill_impact_d22f3d259b66",
+  "computed_counterfactual_directions": 20,
+  "counterfactual_batch_ids": [
+    "710ec2f1315db3ad70f122ce8f46b33ac7e674667ed8460f526fd25ac64c6088"
+  ],
+  "frames": 5,
+  "frames_equal": true,
+  "raw_catalogue_sha256": "4b44b22b73f1da3809d9994d6e81f7134fb29e6d21b11f60a4b5a3e153753718"
+}

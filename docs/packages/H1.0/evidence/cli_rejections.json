@@ -1,0 +1,42 @@
+{
+  "unknown_city": {
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "invalid input: city: unknown city 'absent_city'"
+  },
+  "outside": {
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "invalid input: corners: rectangle is outside rotterdam extent"
+  },
+  "no_city": {
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "invalid input: city: projected corners require an explicit city"
+  },
+  "wrong_crs": {
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "invalid input: crs: hk1980 requires city hong_kong"
+  },
+  "wrong_order": {
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "invalid input: lower_left.easting must be less than upper_right.easting"
+  },
+  "offset": {
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "invalid input: time.instants[0]: explicit UTC offset disagrees with the city time zone"
+  },
+  "spring_gap": {
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "invalid input: time.instants[0]: Ambiguous or nonexistent local timestamp; supply an explicit UTC offset"
+  },
+  "fall_fold": {
+    "exit_code": 2,
+    "stdout": "",
+    "stderr": "invalid input: time.instants[0]: Ambiguous or nonexistent local timestamp; supply an explicit UTC offset"
+  }
+}

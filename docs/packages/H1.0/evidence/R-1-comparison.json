@@ -1,0 +1,22 @@
+{
+  "baseline": "baselines/e2_cheung_chau_20260107/combined",
+  "case": "R-1",
+  "changed_published_file_hashes": null,
+  "compared_pixels": {
+    "quality": 1404000000,
+    "shade": 1404000000
+  },
+  "compared_rasters": {
+    "quality": 390,
+    "shade": 390
+  },
+  "computed_directions": 0,
+  "differing_pixels": 0,
+  "frames": 65,
+  "horizon_calls": 0,
+  "pixel_table": "archive/reviews/h1_0_dev_20261112/R-1-pixel-comparison.tsv",
+  "publication": "runs/h1_0_dev_20261112/h1_0_dev_hk1",
+  "reference_utc_order_equal": true,
+  "reused_directions": 108,
+  "run_id": "995146aa5c602f01644985a06625c63dc59a1cdd27462a7b96d2a32865fee1d8"
+}

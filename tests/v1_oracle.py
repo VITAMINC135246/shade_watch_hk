@@ -68,7 +68,7 @@ def meeus_solar(instant, latitude, longitude):
     """Independent Julian-century NOAA/Meeus reference, geometric elevation.
 
     Equations sourced from NOAA calculator main.js and calculation details;
-    separately transcribed, no calls into src.solar. Shared spherical geometry
+    separately transcribed, no calls into shade_watch.engine.solar. Shared spherical geometry
     and NOAA provenance remain limitations. Not an observational reference.
     """
     from datetime import timezone

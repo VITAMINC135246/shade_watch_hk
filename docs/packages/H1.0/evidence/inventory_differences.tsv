@@ -1,0 +1,6 @@
+expected	change	path	baseline	actual
+planner baseline folder	added	archive/baseline_h1_0_20261112	None	('d', '', '', '')
+planner baseline folder	added	archive/baseline_h1_0_20261112/README.md	None	('f', '655', '1794478998000000000', '')
+planner baseline folder	added	archive/baseline_h1_0_20261112/list.py	None	('f', '1232', '1794487316000000000', '')
+planner baseline folder	added	archive/baseline_h1_0_20261112/listing.tsv	None	('f', '23799740', '1794487316000000000', '')
+planner baseline folder	added	archive/baseline_h1_0_20261112/machine.local.json	None	('f', '268', '1794321454000000000', '')

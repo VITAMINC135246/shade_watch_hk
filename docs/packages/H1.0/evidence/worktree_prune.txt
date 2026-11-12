@@ -1,0 +1,13 @@
+Removing worktrees/f1_worktree: gitdir file points to non-existent location
+Removing worktrees/worktree: gitdir file points to non-existent location
+Removing worktrees/worktree1: gitdir file points to non-existent location
+Removing worktrees/worktree2: gitdir file points to non-existent location
+Removing worktrees/worktree3: gitdir file points to non-existent location
+Removing worktrees/worktree4: gitdir file points to non-existent location
+
+Removing worktrees/f1_worktree: gitdir file points to non-existent location
+Removing worktrees/worktree: gitdir file points to non-existent location
+Removing worktrees/worktree1: gitdir file points to non-existent location
+Removing worktrees/worktree2: gitdir file points to non-existent location
+Removing worktrees/worktree3: gitdir file points to non-existent location
+Removing worktrees/worktree4: gitdir file points to non-existent location

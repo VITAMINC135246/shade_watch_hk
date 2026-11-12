@@ -1,0 +1,14 @@
+{
+  "derived_entries": 15001,
+  "new_entries": 0,
+  "new_namespaces": [],
+  "protected_entries": 2174,
+  "protected_entries_changed": 0,
+  "protected_namespaces": [
+    "raw_hong_kong",
+    "raw_rotterdam",
+    "view_11004a24a611",
+    "view_412eae795153"
+  ],
+  "stage": "before_regression"
+}

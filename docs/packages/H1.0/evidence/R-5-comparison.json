@@ -1,0 +1,24 @@
+{
+  "baseline": "baselines/g1_dev_20261111/g1_dev_nl1",
+  "case": "R-5",
+  "changed_published_file_hashes": 0,
+  "compared_pixels": {
+    "quality": 937500000,
+    "shade": 937500000,
+    "surface": 937500000
+  },
+  "compared_rasters": {
+    "quality": 300,
+    "shade": 300,
+    "surface": 300
+  },
+  "computed_directions": 0,
+  "differing_pixels": 0,
+  "frames": 50,
+  "horizon_calls": 0,
+  "pixel_table": "archive/reviews/h1_0_dev_20261112/R-5-pixel-comparison.tsv",
+  "publication": "runs/h1_0_dev_20261112/h1_0_dev_nl1",
+  "reference_utc_order_equal": true,
+  "reused_directions": 180,
+  "run_id": "d7de174df2d5f34d4461f712ccb6416a24a010b28179b9de0c8f4e96e5ef5e88"
+}
