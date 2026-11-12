@@ -12,7 +12,7 @@ These are English execution prompts and predeclared acceptance contracts, not ev
 | F1.0 — `shade_map` function and CLI (no science change) | [Develop](F1/DEVELOPMENT_PROMPT.md) | [Review](F1/INDEPENDENT_ACCEPTANCE_PROMPT.md) | [F1-01–F1-14](F1/ACCEPTANCE_CONTRACT.md) |
 | B2.0 — DSM-only sea surface `SW-SEA-POLICY-2.0` (starts after F1.0 acceptance) | [Develop](B2/DEVELOPMENT_PROMPT.md) | [Review](B2/INDEPENDENT_ACCEPTANCE_PROMPT.md) | [B2-01–B2-15](B2/ACCEPTANCE_CONTRACT.md) |
 | B2.2 — fill every NoData pixel at 0 m `SW-SEA-POLICY-2.2` (supersedes B2.0; codes in [OUTPUT_CODES](../OUTPUT_CODES.md)) | [Develop](B2/DEVELOPMENT_PROMPT_B2_2.md) | [Review](B2/INDEPENDENT_ACCEPTANCE_PROMPT_B2_2.md) | [B2-16–B2-31](B2/CONTRACT_B2_2.md) |
-| G1.0 — cities other than Hong Kong; first city Rotterdam (engine inputs instead of Hong Kong constants; Hong Kong pixels unchanged) | [Develop](G1/DEVELOPMENT_PROMPT.md) | [Review](G1/INDEPENDENT_ACCEPTANCE_PROMPT.md) | [G1-01–G1-16](G1/ACCEPTANCE_CONTRACT.md), amended by [SW-G1.1](G1/AMENDMENT_G1_1.md) |
+| G1.0 — cities other than Hong Kong; first city Rotterdam (engine inputs instead of Hong Kong constants; Hong Kong pixels unchanged) | [Develop](G1/DEVELOPMENT_PROMPT.md) | [Review](G1/INDEPENDENT_ACCEPTANCE_PROMPT.md) | [G1-01–G1-16](G1/ACCEPTANCE_CONTRACT.md), amended by [SW-G1.1](G1/AMENDMENT_G1_1.md) and [SW-G1.2](G1/AMENDMENT_G1_2.md) |
 
 ## Numbering rule (from 2026-10-31, decision D-011)
 
