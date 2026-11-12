@@ -1,6 +1,6 @@
 # Project conventions
 
-Adopted 2026-11-12 (decisions D-023 to D-025). They apply from package H1.0 on. Package H1.0 brings the repository to this layout; until it is accepted, the tree still has the old layout.
+Adopted 2026-11-12 (decisions D-023 to D-025); the output-root rule of section 3 was changed on 2026-11-13 (D-029). They apply from package H1.0 on. Package H1.0 brings the repository to this layout; until it is accepted, the tree still has the old layout.
 
 These conventions answer four questions: what things are called, where they live, what may be changed or deleted, and how "clean" is checked.
 
@@ -65,7 +65,7 @@ Next packages: H1.0 (this clean-up) and C2.0 (other operating systems).
 
 - Code, config and folders: lower case with underscores.
 - Documents: upper case with underscores (`GUIDE.md`, `DESIGN.md`).
-- From H1.0 on, each package version has one folder `docs/packages/<version>/` with fixed names: `CONTRACT.md`, `AMENDMENT_<n>.md`, `DEVELOPMENT_PROMPT.md`, `ACCEPTANCE_PROMPT.md`, `DEVELOPMENT_REPORT.md`, `ACCEPTANCE_REPORT_<sha12>.md`, `ACCEPTANCE_REPORT_<sha12>_ADDENDUM_<n>.md`, `evidence/`.
+- From H1.0 on, each package version has one folder `docs/packages/<version>/` with fixed names: `CONTRACT.md`, `AMENDMENT_<n>.md`, `DEVELOPMENT_PROMPT.md`, `ACCEPTANCE_PROMPT.md`, `DEVELOPMENT_REPORT.md`, `DEVELOPMENT_REPORT_REPAIR_<n>.md`, `ACCEPTANCE_REPORT_<sha12>.md`, `ACCEPTANCE_REPORT_<sha12>_ADDENDUM_<n>.md`, `evidence/`.
 - A published run keeps the accepted structure `<name>/<YYYYMMDD>/<HHMM>/`.
 - Language: repository documents, contracts, prompts and comments are in English. The user guide also has a Traditional Chinese version. The decision log is in Traditional Chinese.
 
@@ -95,13 +95,14 @@ shade_watch_hk/
 │   ├── raw/<city>/          raw data, read-only
 │   ├── derived/             catalogues/<city>/<ingest_id>/, views/<view_id>/
 │   └── cache/horizon/       horizon caches, recomputable
-├── runs/                    published results (default output root)
+├── runs/                    published results, one folder per output root (default: runs/main)
 ├── baselines/               accepted results used by regression tests
 ├── work/                    engine work folders, locks, source views, diagnostics
 └── archive/                 earlier outputs and review folders, as they were
 ```
 
 - `data/`, `runs/`, `work/`, `baselines/` and `archive/` are not in Git, apart from `README.md` files under `data/raw/`.
+- Every output root is a folder directly under `runs/`. `runs/` itself is a container and is never used as an output root.
 - Records keep their content. A link inside a record refers to the tree at the commit the record was written for; after a move it may not resolve. `docs/INDEX.md` gives the present locations.
 
 ## 4. Identity
