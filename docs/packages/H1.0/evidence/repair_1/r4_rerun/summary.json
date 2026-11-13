@@ -1,0 +1,22 @@
+{
+  "archive_new_evidence_excluded_from_scope_diff": true,
+  "artifact_limit_bytes": 10737418240,
+  "combined_artifact_ceiling_bytes": 1766858752,
+  "complete_meter_rows": [
+    "R-4-plan",
+    "R-4",
+    "R-4-compare"
+  ],
+  "conservative_combined_artifact_ceiling_bytes": 1772321178,
+  "ended_utc": "2026-11-13T03:33:51.564+00:00",
+  "memory_limit_bytes": 12884901888,
+  "new_evidence_accounting_reserve_bytes": 1048576,
+  "peak_measured_memory_bytes": 2420473856,
+  "prior_artifact_allowance_bytes": 1503238554,
+  "prior_budget_seconds": 3178.2,
+  "prior_recorded_artifact_peak_bytes": 1498824704,
+  "recovery_debit_seconds": 530.765,
+  "status": "complete",
+  "total_regression_seconds": 3760.6226728749925,
+  "wall_limit_seconds": 5400
+}
