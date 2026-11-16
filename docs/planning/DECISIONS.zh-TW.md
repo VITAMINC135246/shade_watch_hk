@@ -816,5 +816,21 @@
   - 乙：只刪掉 `docs/.DS_Store`（合約允許刪 `.DS_Store`），請驗收方補一份附錄重做 H1-03。不用新 commit，但測試仍然很脆弱：下次 Finder 打開 `docs/` 又會失敗，`mac-v1.0` 會帶著一個在自己 Mac 上日常使用就會失敗的測試。
 - **教訓**：同一份清單裡的規則要用同一套例外；在 macOS 上要預期 Finder 會在任何打開過的資料夾裡寫 `.DS_Store`。
 - **在哪實現**：報告和本條的快照已 commit；這一輪的驗收證據在 `archive/reviews/h1_0_6afbb444ddd7_20261113/`，不動。
-- **狀態**：未通過。待使用者在甲、乙之間選一個。
-  - 本 commit 加入驗收報告（原樣）並更新本快照（SHA 見正本或 `git log`）。
+- **狀態**：未通過。使用者選甲，見 D-035。
+  - commit `7499dbfbe9a002f04b6b9127de8708e2d2aae9bd`（父節點 `6afbb44`，2026-11-16 12:39 HKT，本地，未推送）：加入驗收報告（原樣）和本條的快照。
+
+## D-035｜2026-11-16｜H1.0 修訂 5（SW-H1.5）：`docs/` 的版面規則排除系統檔；C2.0 的方向定為 Linux
+
+- **使用者的決定（2026-11-16 12:41 HKT）**：
+  1. D-034 選甲：改規則，不只刪檔。
+  2. C2.0 只做 **Linux**。教授上週同意由學校負責的 Sunny 開帳號，之後把工作搬到學校的 Linux 機器上跑；機器的具體資訊之後由使用者提供。Windows 原生不在 C2.0 範圍內。
+  3. 先收尾 H1.0。
+- **修訂 5（`docs/packages/H1.0/AMENDMENT_5.md`）**：
+  - G1：版面規則第 2 條（`docs/`）和第 1 條（頂層）用同一套例外，不計 `.DS_Store`、`__pycache__`、`.pytest_cache`、`.mypy_cache`、`.ruff_cache`、`.ipynb_checkpoints`、`node_modules`。
+  - G2（給 Codex）：只改 `tests/test_layout.py` 的 `test_docs_top_level`；不刪 `docs/.DS_Store`，讓它留著當作測試要接受的實例；在主工作目錄跑全部測試；寫 `DEVELOPMENT_REPORT_REPAIR_2.md`；不跑任何讀真實 DSM 的作業；一個本地 commit。
+  - G3（給驗收方）：重做 H1-01（差異只有測試檔那幾行）、H1-03（在有 `.DS_Store` 的主工作目錄跑版面測試和自己的檢查）、H1-06、H1-14；其餘十項沿用第二份驗收報告，前提是產品、設定、網頁、記錄、退役程式和其他測試檔都沒有變。
+- **同一個 commit 裡 Claude 改了規範**（`docs/CONVENTIONS.md`）：第 6 節寫明同樣的例外；第 2 節把 C2.0 寫成「在 Linux 機器上運行」。
+- **C2.0 先記下的事實（2026-11-13 Claude 只讀掃描）**：Linux 已有的支援：`fcntl` 檔案鎖、`/proc/mounts` 的本地檔案系統檢查（只接受 ext2/3/4、xfs、btrfs、overlay、tmpfs、exfat、vfat）、`resource` 的記憶體單位換算、`spawn` 啟動方式。要處理的：repo 沒有 `.gitattributes`（換行符號若被轉換，快取鍵檔的雜湊會變）；學校機器多半是 x86-64，和 Mac 的 arm64 之間能否逐像素相同要實測；資料（香港 26 GB、鹿特丹 0.9 GB）的搬法；學校機器的檔案系統類型（網路檔案系統會被拒絕）。起草 C2.0 前要先拿到機器的資訊。
+- **影響**：H1.0 不改科學身份。
+- **狀態**：修訂 5 已凍結，待 Codex 修復。
+  - 本 commit 加入修訂 5、更新規範和本快照（SHA 見正本或 `git log`）。

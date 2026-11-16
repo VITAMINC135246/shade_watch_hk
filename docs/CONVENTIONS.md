@@ -1,6 +1,6 @@
 # Project conventions
 
-Adopted 2026-11-12 (decisions D-023 to D-025); the output-root rule of section 3 was changed on 2026-11-13 (D-029). They apply from package H1.0 on. Package H1.0 brings the repository to this layout; until it is accepted, the tree still has the old layout.
+Adopted 2026-11-12 (decisions D-023 to D-025); the output-root rule of section 3 was changed on 2026-11-13 (D-029), and section 6 on 2026-11-16 (D-035). They apply from package H1.0 on. Package H1.0 brings the repository to this layout; until it is accepted, the tree still has the old layout.
 
 These conventions answer four questions: what things are called, where they live, what may be changed or deleted, and how "clean" is checked.
 
@@ -59,7 +59,7 @@ Old files keep their names. This table is the mapping.
 | `SW-F1.0` | F1.0 | Accepted |
 | `SW-G1.0`, `SW-G1.1`, `SW-G1.2` | G1.0 to G1.2 | Accepted |
 
-Next packages: H1.0 (this clean-up) and C2.0 (other operating systems).
+Next packages: H1.0 (this clean-up) and C2.0 (running on a Linux machine).
 
 ### 2.3 Files
 
@@ -127,7 +127,7 @@ A change that touches one of these is planned, stated in the contract, and verif
 
 ## 6. What "clean" means
 
-`tests/test_layout.py` checks the layout as part of the test suite: the top level and `docs/` hold only the entries of section 3; the old top-level names do not exist; no living file refers to an old location or import; records match their manifest; the cache-key files have their recorded hashes.
+`tests/test_layout.py` checks the layout as part of the test suite: the top level and `docs/` hold only the entries of section 3, not counting operating-system and tool metadata such as `.DS_Store` and `__pycache__`; the old top-level names do not exist; no living file refers to an old location or import; records match their manifest; the cache-key files have their recorded hashes.
 
 ## 7. Commits and versions
 
