@@ -48,6 +48,8 @@ def test_docs_top_level():
     allowed = {
         'CONVENTIONS.md', 'OUTPUT_CODES.md', 'packages', 'planning', 'records',
         'INDEX.md', 'ARCHITECTURE.md', 'GUIDE.md', 'GUIDE.zh-TW.md', 'design',
+        '.DS_Store', '__pycache__', '.pytest_cache', '.mypy_cache', '.ruff_cache',
+        '.ipynb_checkpoints', 'node_modules',
     }
     assert {entry.name for entry in (ROOT / 'docs').iterdir()} <= allowed
 

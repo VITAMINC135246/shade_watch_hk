@@ -1,0 +1,13 @@
+{
+  "reference_commit": "6afbb444ddd77d4a4e46ea57ffa810633882b52c",
+  "reference_collected": 308,
+  "repair_collected": 308,
+  "unique_ids": 308,
+  "same_ids_in_order": true,
+  "added_ids": [],
+  "missing_ids": [],
+  "log_sha256": {
+    "collect-6afbb44.txt": "56ae8e42b37ba16727c4cc41634c731d53b655f401fbc040f1b0b1261139ac95",
+    "collect-repair-2.txt": "6f572e6c588c8eb6b409236e0094bcd5b5f20d6abfa0e63e9fea415109041888"
+  }
+}

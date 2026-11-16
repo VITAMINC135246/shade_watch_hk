@@ -1,0 +1,15 @@
+Main checkout: /Volumes/My Passport for Mac/Projects/shade_watch_hk
+Reference: git archive 6afbb444ddd77d4a4e46ea57ffa810633882b52c extracted to /private/tmp/shade-h15.1gDf5n/reference
+Python: /Volumes/My Passport for Mac/Projects/shade_watch_hk/.venv/bin/python
+Environment: PYTHONDONTWRITEBYTECODE=1 PROJ_NETWORK=OFF GIT_OPTIONAL_LOCKS=0
+TMPDIR=/private/tmp/shade-h15.1gDf5n/tmp
+NUMBA_CACHE_DIR=/private/tmp/shade-h15.1gDf5n/numba
+XDG_CACHE_HOME=/private/tmp/shade-h15.1gDf5n/xdg-cache
+Reference collection: in the source archive, set PYTHONPATH to its root and run python -B -m pytest -p no:cacheprovider --collect-only -q tests
+Main collection: in the main checkout, set PYTHONPATH to its root and run python -B -m pytest -p no:cacheprovider --collect-only -q tests
+Main full suite: python -B -m pytest -p no:cacheprovider -q --basetemp /private/tmp/shade-h15.1gDf5n/pytest tests
+The initial suite wrapper stopped before launching pytest when zsh rejected assignment to its status parameter. The collection results above completed.
+Suite TMPDIR=/private/tmp/shade-h15-run.TI9JbA/tmp
+Suite NUMBA_CACHE_DIR=/private/tmp/shade-h15-run.TI9JbA/numba
+Suite XDG_CACHE_HOME=/private/tmp/shade-h15-run.TI9JbA/xdg-cache
+Executed full suite in the main checkout: python -B -m pytest -p no:cacheprovider -q --basetemp /private/tmp/shade-h15-run.TI9JbA/pytest tests

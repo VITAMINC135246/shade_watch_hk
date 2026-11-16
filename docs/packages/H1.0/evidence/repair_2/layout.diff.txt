@@ -1,0 +1,7 @@
+diff --git a/tests/test_layout.py b/tests/test_layout.py
+index eb445d2..080174f 100644
+--- a/tests/test_layout.py
++++ b/tests/test_layout.py
+@@ -50,0 +51,2 @@ def test_docs_top_level():
++        '.DS_Store', '__pycache__', '.pytest_cache', '.mypy_cache', '.ruff_cache',
++        '.ipynb_checkpoints', 'node_modules',

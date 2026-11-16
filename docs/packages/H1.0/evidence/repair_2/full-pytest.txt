@@ -1,0 +1,57 @@
+........................................................................ [ 23%]
+........................................................................ [ 46%]
+........................................................................ [ 70%]
+........................................................................ [ 93%]
+....................                                                     [100%]
+=============================== warnings summary ===============================
+tests/test_chunking.py: 60 warnings
+tests/test_city.py: 286 warnings
+tests/test_core.py: 2 warnings
+tests/test_region_request.py: 135 warnings
+tests/test_region_request_v1_1.py: 195 warnings
+tests/test_sea2_diagnostic.py: 261 warnings
+tests/test_sea2_view.py: 318 warnings
+tests/test_shade_map.py: 1685 warnings
+tests/test_v1.py: 59 warnings
+tests/test_v2.py: 113 warnings
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/.venv/lib/python3.12/site-packages/rasterio/transform.py:178: PendingDeprecationWarning: Use `@` matmul instead of `*` mul operator for matrix multiplication
+    return Affine.translation(west, north) * Affine.scale(xsize, -ysize)
+
+tests/test_chunking.py: 30 warnings
+tests/test_region_request_v1_1.py: 6 warnings
+tests/test_v1.py: 70 warnings
+tests/test_v2.py: 53 warnings
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/shade_watch/engine/spatial.py:49: PendingDeprecationWarning: Use `@` matmul instead of `*` mul operator for matrix multiplication
+    return self.affine * Affine.translation(core[0], core[1])
+
+tests/test_city.py: 6 warnings
+tests/test_sea2_diagnostic.py: 12 warnings
+tests/test_sea2_view.py: 6 warnings
+tests/test_shade_map.py: 192 warnings
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/shade_watch/publish/publication.py:96: PendingDeprecationWarning: is_tiled will be removed in a future version. Please consider copying the body of this function into your program or module.
+    or ds.compression.value != 'DEFLATE' or not ds.is_tiled
+
+tests/test_core.py::test_cross_tile_blocker_and_nodata
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/.venv/lib/python3.12/site-packages/rasterio/merge.py:341: PendingDeprecationWarning: Use `@` matmul instead of `*` mul operator for matrix multiplication
+    output_transform = Affine.translation(dst_w, dst_n) * Affine.scale(
+
+tests/test_core.py::test_cross_tile_blocker_and_nodata
+tests/test_core.py::test_cross_tile_blocker_and_nodata
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/.venv/lib/python3.12/site-packages/rasterio/windows.py:387: PendingDeprecationWarning: Use `@` matmul instead of `*` mul operator for matrix multiplication
+    left, bottom = transform * (col_min, row_max)
+
+tests/test_core.py::test_cross_tile_blocker_and_nodata
+tests/test_core.py::test_cross_tile_blocker_and_nodata
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/.venv/lib/python3.12/site-packages/rasterio/windows.py:388: PendingDeprecationWarning: Use `@` matmul instead of `*` mul operator for matrix multiplication
+    right, top = transform * (col_max, row_min)
+
+tests/test_core.py::test_cross_tile_blocker_and_nodata
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/.venv/lib/python3.12/site-packages/rasterio/windows.py:360: PendingDeprecationWarning: Use `@` matmul instead of `*` mul operator for matrix multiplication
+    x, y = transform * (window.col_off or 0.0, window.row_off or 0.0)
+
+tests/test_core.py::test_cross_tile_blocker_and_nodata
+  /Volumes/My Passport for Mac/Projects/shade_watch_hk/.venv/lib/python3.12/site-packages/rasterio/windows.py:361: PendingDeprecationWarning: Use `@` matmul instead of `*` mul operator for matrix multiplication
+    return Affine.translation(
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+308 passed, 3496 warnings in 75.86s (0:01:15)

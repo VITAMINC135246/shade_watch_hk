@@ -1,0 +1,23 @@
+{
+  "start": "991eb81c7fc8a4517d4a426967f636ef1195e382",
+  "reference_commit": "6afbb444ddd77d4a4e46ea57ffa810633882b52c",
+  "change_since_start_before_documentation_is_staged": "tests/test_layout.py",
+  "reference_diff_before_documentation_is_staged": [
+    "M\tdocs/CONVENTIONS.md",
+    "A\tdocs/packages/H1.0/ACCEPTANCE_REPORT_6afbb444ddd7.md",
+    "A\tdocs/packages/H1.0/AMENDMENT_5.md",
+    "M\tdocs/planning/DECISIONS.zh-TW.md",
+    "M\tdocs/planning/README.md",
+    "M\ttests/test_layout.py"
+  ],
+  "added_docs_metadata_names": [
+    ".DS_Store",
+    ".ipynb_checkpoints",
+    ".mypy_cache",
+    ".pytest_cache",
+    ".ruff_cache",
+    "__pycache__",
+    "node_modules"
+  ],
+  "all_other_test_file_bytes_match_reference": true
+}
