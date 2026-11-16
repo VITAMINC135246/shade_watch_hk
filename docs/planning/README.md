@@ -9,7 +9,7 @@ This folder holds dated snapshots of the planning records kept in the Claude pro
 
 | File | Content |
 | --- | --- |
-| `DECISIONS.zh-TW.md` | Decision log D-001 to D-032 |
+| `DECISIONS.zh-TW.md` | Decision log D-001 to D-034 |
 | `reviews/REGION_REVIEW_precommit_20261029.md` | Static pre-commit review of package A1.0 (working tree, 2026-10-29) |
 | `reviews/REGION_REVIEW_374a70d.md` | Review of A1.0 at `374a70d` |
 | `reviews/SEA_PRECHECK_86dbee6.md` | Static pre-check of B1.0 at `86dbee6` (not an acceptance) |
@@ -25,4 +25,4 @@ This folder holds dated snapshots of the planning records kept in the Claude pro
 | `reviews/H1_PRECHECK_84dc81f.md` | Static pre-check of the H1.0 candidate `84dc81f` (not an acceptance; the candidate was later NOT ACCEPTED) |
 | `reviews/H1_PRECHECK_555c4fc.md` | Static pre-check of the H1.0 repair candidate `555c4fc` (not an acceptance) |
 
-Snapshot taken 2026-11-13 (HKT).
+Snapshot taken 2026-11-16 (HKT).
