@@ -87,6 +87,7 @@ The tools refuse an output root inside `data/`, `work/`, `baselines/`, `archive/
 
 - macOS with the repository's `.venv` (Python 3.12, `requirements.lock.txt`).
 - File locks use `fcntl`. Batch state requires a local file system: on macOS a local volume; on Linux ext2/3/4, xfs, btrfs, overlay, tmpfs, exfat or vfat. Network file systems are refused.
+- Exploration switch on branch `c2-explore-nfs-switch` (C2.0 discovery, not accepted): on Linux, `SHADE_WATCH_ALLOW_NFS=1` in the environment lets batch state, cache and output live on NFS (`nfs`, `nfs4`) and prints a warning. Other network file systems stay refused. With the switch on, run at most one V2 job (`shade_watch run` or `fill-impact`) at a time in the repository; `fill build` and `city register` do not use batch state.
 - Source views and the Hong Kong view use symbolic links to raw tiles.
 - Linux support is package C2.0. Native Windows is not supported.
 

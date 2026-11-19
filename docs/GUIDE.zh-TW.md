@@ -203,6 +203,7 @@ caffeinate -dims .venv/bin/python -m shade_watch run config/regions/rotterdam_pr
 | 名字衝突 | 用新的區域名字；工具不會覆蓋設定不同的運行。 |
 | `output_root` 被拒絕 | 用 `runs/` 底下直接的一個資料夾，而且是工具建立的或還不存在的。 |
 | 運行中斷 | 再執行同一個 `run` 指令，會接著跑。 |
+| `Unsupported filesystem for V2 local state: nfs4`（Linux） | repo 在 NFS 上。把它移到本地磁碟；或者只在分支 `c2-explore-nfs-switch`（未驗收）上，在指令前加 `SHADE_WATCH_ALLOW_NFS=1`，並且同一時間最多只跑一個 `run` 或 `fill-impact`。 |
 
 ## 11. 限制
 

@@ -21,8 +21,27 @@ TRANSITIONS = {
 }
 
 
+LOCAL_FILESYSTEMS = {"ext4", "ext3", "ext2", "xfs", "btrfs", "overlay", "tmpfs", "exfat", "vfat"}
+# Exploration switch (C2.0 discovery, not accepted): NFS only, opted in per process.
+NFS_SWITCH = "SHADE_WATCH_ALLOW_NFS"
+NFS_KINDS = {"nfs", "nfs4"}
+_nfs_warned = False
+
+
+def _warn_nfs(kind, path):
+    global _nfs_warned
+    if not _nfs_warned:
+        _nfs_warned = True
+        print(f"WARNING: {kind} at {path} allowed by {NFS_SWITCH}=1 (exploration switch, not accepted). "
+              "Run at most one V2 job (shade_watch run or fill-impact) at a time in this repository.", file=sys.stderr, flush=True)
+
+
 def local_filesystem(path):
-    """Do not infer that SQLite/flock on NFS/SMB is a local coordination primitive."""
+    """Do not infer that SQLite/flock on NFS/SMB is a local coordination primitive.
+
+    On Linux, NFS is accepted only when the environment sets SHADE_WATCH_ALLOW_NFS=1;
+    the user then promises a single writer: at most one V2 job (run or fill-impact) at a time.
+    """
     path = Path(path).resolve()
     while not path.exists():
         path = path.parent
@@ -49,8 +68,12 @@ def local_filesystem(path):
             if path.is_relative_to(mount):
                 mounts.append((len(mount), kind))
         kind = max(mounts)[1]
-        if kind not in {"ext4", "ext3", "ext2", "xfs", "btrfs", "overlay", "tmpfs", "exfat", "vfat"}:
-            raise ValueError(f"Unsupported filesystem for V2 local state: {kind}")
+        if kind not in LOCAL_FILESYSTEMS:
+            if kind in NFS_KINDS and os.environ.get(NFS_SWITCH) == "1":
+                _warn_nfs(kind, path)
+                return kind
+            hint = f"; set {NFS_SWITCH}=1 to allow NFS with one V2 job at a time" if kind in NFS_KINDS else ""
+            raise ValueError(f"Unsupported filesystem for V2 local state: {kind}{hint}")
         return kind
     raise ValueError("V2 local coordination supports POSIX macOS/Linux only")
 
